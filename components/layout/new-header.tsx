@@ -7,7 +7,7 @@ import { SearchBar } from "../ui/search"
 import { 
   Menu, X, ChevronDown, ChevronUp, Search, Phone, BarChart3, 
   Building2, Target, Users, TrendingUp, Globe, Code, Palette, 
-  Zap, Building2, BookOpen, Info, Monitor, PenTool, Settings, 
+  Zap, BookOpen, Info, Monitor, PenTool, Settings, 
   Lightbulb, Smartphone, ShoppingCart, Mail, Eye, TrendingDown, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
   MessageSquare, Bot, Factory, Shield, Wrench, Layers, Star

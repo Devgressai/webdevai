@@ -6,7 +6,7 @@ import { Button } from "../ui/button"
 import { 
   Menu, X, ChevronDown, ChevronUp, Phone, BarChart3, 
   Building2, Target, Users, TrendingUp, Globe, Code, Palette, 
-  Zap, Building2 as Building, BookOpen, Info, Monitor, PenTool, Settings, 
+  Zap, BookOpen, Info, Monitor, PenTool, Settings, 
   Lightbulb, Smartphone, ShoppingCart, Mail, Eye, TrendingDown, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
   MessageSquare, Bot, Factory, Shield, Wrench, Layers, Star
