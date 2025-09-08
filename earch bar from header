@@ -1,5 +1,0 @@
-[33me4d8dc5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Update speed-test API route and remove software development page
-[33m61965e2[m Remove confusing showcase play button from website design service page
-[33m428ee69[m Add comprehensive SEO audit tools and fix PageSpeed API integration
-[33m38ed151[m Fix remaining @/ imports in components directory - 6 files updated
-[33m3f77080[m Fix all @/ imports to relative paths for Vercel deployment - 45 files updated
