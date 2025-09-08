@@ -3,9 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { SearchBar } from "../ui/search"
 import { 
-  Menu, X, ChevronDown, ChevronUp, Search, Phone, BarChart3, 
+  Menu, X, ChevronDown, ChevronUp, Phone, BarChart3, 
   Rocket, Target, Users, TrendingUp, Globe, Code, Palette, 
   Zap, Building2, BookOpen, Info, Monitor, PenTool, Settings, 
   Lightbulb, Smartphone, ShoppingCart, Mail, Eye, TrendingDown, 
@@ -324,10 +323,6 @@ export function Header() {
               </div>
             </div>
             <div className="flex items-center space-x-6 text-sm">
-              <button className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-                <Search className="h-4 w-4" />
-                <span>Smart Search</span>
-              </button>
               <Link href="/contact" className="hover:opacity-80 transition-opacity">
                 Partner Portal
               </Link>
@@ -356,10 +351,6 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Search Bar - Desktop */}
-          <div className="hidden lg:flex flex-1 max-w-md mx-8">
-            <SearchBar />
-          </div>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:gap-x-1">
