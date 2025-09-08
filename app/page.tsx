@@ -7,64 +7,42 @@ import { SocialProof } from '../components/sections/social-proof'
 import { Button } from '../components/ui/button'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Target as TargetIcon, Star } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 // import { useConversionTracking } from '../hooks/useConversionTracking'
 // import ScrollTracker from '../components/analytics/scroll-tracker'
 
 const services = [
   {
-    name: "AI-Powered SEO Services",
-    description: "Revolutionize your search rankings with artificial intelligence SEO that analyzes millions of data points to identify opportunities your competitors miss. Get 300%+ organic traffic growth in 6 months with our advanced AI SEO strategies.",
+    name: "AI-Powered SEO",
+    description: "Get 300%+ organic traffic growth in 6 months with our advanced AI SEO strategies that analyze millions of data points.",
     icon: Zap,
     href: "/services/ai-seo",
-    features: ["AI keyword research and analysis", "Machine learning content optimization", "Automated performance tracking", "Competitive intelligence analysis"],
-    gradient: "from-blue-400 to-indigo-500"
+    features: ["AI keyword research", "Content optimization", "Performance tracking"],
+    gradient: "from-blue-400 to-indigo-500",
+    popular: true
   },
   {
-    name: "Local SEO & Geo-Targeting",
-    description: "Dominate local search results and drive qualified foot traffic to your business. Our geo-targeted local SEO strategies help you rank #1 in your local market and capture nearby customers searching for your services.",
+    name: "Local SEO",
+    description: "Dominate local search results and rank #1 in your market with geo-targeted strategies.",
     icon: Globe,
     href: "/services/local-seo",
-    features: ["Local keyword optimization", "Google My Business management", "Local citation building", "Online review management"],
+    features: ["Google My Business", "Local citations", "Review management"],
     gradient: "from-blue-400 to-cyan-500"
   },
   {
-    name: "Custom Web Development",
-    description: "Professional custom websites that convert visitors into customers. We build fast, mobile-optimized, SEO-friendly sites with conversion-focused design that drives measurable business results.",
+    name: "Web Development",
+    description: "Custom websites that convert visitors into customers with conversion-focused design.",
     icon: Code,
     href: "/services/web-development",
-    features: ["Custom responsive design", "Mobile-first optimization", "Built-in SEO integration", "Performance optimization"],
+    features: ["Mobile-first design", "SEO integration", "Performance optimization"],
     gradient: "from-indigo-400 to-blue-500"
-  },
-  {
-    name: "UI/UX Design Services",
-    description: "User-centered design that creates seamless digital experiences and drives engagement. Our conversion-focused UI/UX designs prioritize user satisfaction and business growth.",
-    icon: BarChart3,
-    href: "/services/ui-ux-design",
-    features: ["User research and testing", "Wireframing and prototyping", "Usability optimization", "Conversion rate optimization"],
-    gradient: "from-cyan-400 to-blue-500"
-  },
-  {
-    name: "Traditional SEO Services",
-    description: "Proven search engine optimization strategies that stand the test of time. We use data-driven SEO approaches to improve rankings and drive sustainable organic traffic growth for long-term success.",
-    icon: Target,
-    href: "/services/seo",
-    features: ["Technical SEO audits", "On-page optimization", "Link building campaigns", "Content marketing strategy"],
-    gradient: "from-slate-400 to-blue-500"
-  },
-  {
-    name: "Custom Software Development",
-    description: "Professional custom software solutions that streamline operations and create competitive advantages. We build scalable web applications and software that grows with your business needs.",
-    icon: Code,
-    href: "/services/software-development",
-    features: ["Custom web applications", "API development and integration", "Database design and optimization", "Cloud deployment and scaling"],
-    gradient: "from-indigo-400 to-purple-500"
   }
 ]
 
 const stats = [
-  { id: 1, name: "Revenue Generated for Clients", value: "$2.4B+", icon: TrendingUp },
+  { id: 1, name: "Revenue Generated for Clients", value: "$2.4M+", icon: TrendingUp },
   { id: 2, name: "Satisfied Business Clients", value: "500+", icon: Users },
-  { id: 3, name: "Average ROI Delivered", value: "1,200%", icon: Award },
+  { id: 3, name: "Average ROI Delivered", value: "340%", icon: Award },
   { id: 4, name: "Organic Traffic Growth", value: "300%+", icon: BarChart3 }
 ]
 
@@ -168,9 +146,11 @@ export default function HomePage() {
             
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&crop=center" 
                   alt="Professional digital marketing team collaborating on strategy"
+                  width={800}
+                  height={600}
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -221,10 +201,13 @@ export default function HomePage() {
           {/* Hero Image */}
           <div className="mb-16">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&crop=center" 
                 alt="Digital marketing team working on analytics and strategy"
+                width={1200}
+                height={600}
                 className="w-full h-96 object-cover"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
@@ -242,9 +225,16 @@ export default function HomePage() {
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-secondary-900 mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                    {service.name}
-                  </h3>
+                  <div className="flex items-center gap-2 mb-4">
+                    <h3 className="text-xl font-bold text-secondary-900 group-hover:text-primary-600 transition-colors duration-300">
+                      {service.name}
+                    </h3>
+                    {service.popular && (
+                      <span className="inline-flex items-center rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800">
+                        Most Popular
+                      </span>
+                    )}
+                  </div>
                   <p className="text-secondary-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
@@ -506,7 +496,7 @@ export default function HomePage() {
                   className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse text-base"
                   onClick={() => handleProposalRequest('homepage_input')}
                 >
-                  🎯 Get FREE Proposal
+                  🎯 Get Free SEO Audit
                 </Button>
               </div>
               
