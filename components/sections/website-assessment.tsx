@@ -184,7 +184,7 @@ export function WebsiteAssessment() {
 
   if (!isStarted) {
     return (
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-gray-50/80 to-blue-50/20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
@@ -261,7 +261,7 @@ export function WebsiteAssessment() {
     const result = getAssessmentResult(totalScore)
 
     return (
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-gray-50/80 to-blue-50/20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
@@ -359,7 +359,7 @@ export function WebsiteAssessment() {
   const currentQ = assessmentQuestions[currentQuestion]
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+    <section className="py-24 bg-gradient-to-br from-gray-50 via-gray-50/80 to-blue-50/20">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">

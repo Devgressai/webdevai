@@ -3,9 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { SearchBar } from "../ui/search"
 import { 
-  Menu, X, ChevronDown, ChevronUp, Search, Phone, BarChart3, 
+  Menu, X, ChevronDown, ChevronUp, Phone, BarChart3, 
   Building2, Target, Users, TrendingUp, Globe, Code, Palette, 
   Zap, BookOpen, Info, Monitor, PenTool, Settings, 
   Lightbulb, Smartphone, ShoppingCart, Mail, Eye, TrendingDown, 
@@ -290,10 +289,6 @@ export function NewHeader() {
               </div>
             </div>
             <div className="flex items-center space-x-6 text-sm">
-              <button className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-                <Search className="h-4 w-4" />
-                <span>Smart Search</span>
-              </button>
               <Link href="/contact" className="hover:opacity-80 transition-opacity">
                 Partner Portal
               </Link>
@@ -322,10 +317,6 @@ export function NewHeader() {
             </Link>
           </div>
 
-          {/* Search Bar - Desktop */}
-          <div className="hidden lg:flex flex-1 max-w-md mx-8">
-            <SearchBar />
-          </div>
           
                      {/* Desktop Navigation */}
            <div className="hidden lg:flex lg:gap-x-1">
@@ -337,19 +328,22 @@ export function NewHeader() {
                      onMouseEnter={() => handleMouseEnter(item.name)}
                      onMouseLeave={handleMouseLeave}
                    >
-                     <div className="flex items-center gap-x-1 px-4 py-3 text-sm font-semibold leading-6 text-secondary-900 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50 cursor-pointer">
+                     <div 
+                       className="flex items-center gap-x-1 px-4 py-3 text-sm font-semibold leading-6 text-secondary-900 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50 cursor-pointer"
+                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                     >
                        {item.name}
-                       <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                       <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                      </div>
                      
                      {openDropdown === item.name && (
                        <div 
-                         className="absolute left-1/2 z-[9999] mt-2 flex w-screen max-w-4xl -translate-x-1/2 px-4"
+                         className="absolute left-1/2 z-[9999] mt-2 flex w-[90vw] max-w-6xl -translate-x-1/2 px-4"
                          onMouseEnter={() => handleMouseEnter(item.name)}
                          onMouseLeave={handleMouseLeave}
                        >
-                         <div className="w-screen max-w-4xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-2xl ring-1 ring-secondary-900/5 border border-gray-100">
-                           <div className="p-8">
+                         <div className="w-[90vw] max-w-6xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-2xl ring-1 ring-secondary-900/5 border border-gray-100">
+                           <div className="p-6">
                              {/* Header */}
                              <div className="mb-6">
                                <h3 className="text-lg font-bold text-secondary-900 mb-2">{item.name}</h3>
@@ -357,7 +351,7 @@ export function NewHeader() {
                              </div>
                              
                              {/* Grid Layout */}
-                             <div className="grid grid-cols-2 gap-6">
+                             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
                                {item.children.map((child) => (
                                  <div key={child.name} className="group relative flex gap-x-4 rounded-xl p-4 hover:bg-secondary-50 transition-all duration-200 hover:shadow-md border border-transparent hover:border-secondary-200">
                                    <div className={cn(

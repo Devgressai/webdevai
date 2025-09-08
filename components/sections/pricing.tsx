@@ -120,7 +120,7 @@ export function Pricing() {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="inline-flex items-center rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-white">
+                  <span className="inline-flex items-center rounded-full bg-blue-400 px-4 py-1 text-sm font-medium text-white">
                     <Star className="mr-1 h-4 w-4" />
                     Most Popular
                   </span>
@@ -150,14 +150,14 @@ export function Pricing() {
                   size="lg"
                   className={`w-full ${
                     plan.popular
-                      ? 'bg-blue-600 hover:bg-blue-700'
+                      ? 'bg-blue-500 hover:bg-blue-600'
                       : 'bg-gray-900 hover:bg-gray-800'
                   }`}
                   asChild
                 >
                   <a href={plan.href}>
+                    <ArrowRight className="mr-2 h-4 w-4" />
                     {plan.cta}
-                    <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
               </div>
@@ -187,7 +187,7 @@ export function Pricing() {
                 </h4>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-blue-600">{service.price}</span>
+                  <span className="text-lg font-bold text-blue-500">{service.price}</span>
                   <Button variant="outline" size="sm" asChild>
                     <a href="/contact">Learn More</a>
                   </Button>
@@ -222,7 +222,7 @@ export function Pricing() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-white">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -232,13 +232,11 @@ export function Pricing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="animate-pulse" asChild>
                 <a href="/contact">
-                  <Zap className="mr-2 h-5 w-5" />
                   Get FREE Strategy Session (Worth $500)
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
                 <a href="/case-studies">
-                  <TrendingUp className="mr-2 h-5 w-5" />
                   See 300%+ Results
                 </a>
               </Button>

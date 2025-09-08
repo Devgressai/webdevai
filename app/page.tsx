@@ -17,7 +17,7 @@ const services = [
     icon: Zap,
     href: "/services/ai-seo",
     features: ["AI keyword research and analysis", "Machine learning content optimization", "Automated performance tracking", "Competitive intelligence analysis"],
-    gradient: "from-purple-500 to-indigo-600"
+    gradient: "from-blue-400 to-indigo-500"
   },
   {
     name: "Local SEO & Geo-Targeting",
@@ -25,7 +25,7 @@ const services = [
     icon: Globe,
     href: "/services/local-seo",
     features: ["Local keyword optimization", "Google My Business management", "Local citation building", "Online review management"],
-    gradient: "from-blue-500 to-cyan-600"
+    gradient: "from-blue-400 to-cyan-500"
   },
   {
     name: "Custom Web Development",
@@ -33,7 +33,7 @@ const services = [
     icon: Code,
     href: "/services/web-development",
     features: ["Custom responsive design", "Mobile-first optimization", "Built-in SEO integration", "Performance optimization"],
-    gradient: "from-orange-500 to-red-600"
+    gradient: "from-indigo-400 to-blue-500"
   },
   {
     name: "UI/UX Design Services",
@@ -41,7 +41,7 @@ const services = [
     icon: BarChart3,
     href: "/services/ui-ux-design",
     features: ["User research and testing", "Wireframing and prototyping", "Usability optimization", "Conversion rate optimization"],
-    gradient: "from-green-500 to-emerald-600"
+    gradient: "from-cyan-400 to-blue-500"
   },
   {
     name: "Traditional SEO Services",
@@ -49,7 +49,7 @@ const services = [
     icon: Target,
     href: "/services/seo",
     features: ["Technical SEO audits", "On-page optimization", "Link building campaigns", "Content marketing strategy"],
-    gradient: "from-teal-500 to-blue-600"
+    gradient: "from-slate-400 to-blue-500"
   },
   {
     name: "Custom Software Development",
@@ -57,7 +57,7 @@ const services = [
     icon: Code,
     href: "/services/software-development",
     features: ["Custom web applications", "API development and integration", "Database design and optimization", "Cloud deployment and scaling"],
-    gradient: "from-indigo-500 to-purple-600"
+    gradient: "from-indigo-400 to-purple-500"
   }
 ]
 
@@ -166,32 +166,17 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-secondary-900 mb-6">Our Digital Marketing Expertise</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-secondary-700">Search Engine Optimization (SEO)</span>
-                  <span className="text-primary-600 font-semibold">Expert</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-secondary-700">Local SEO Services</span>
-                  <span className="text-primary-600 font-semibold">Expert</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-secondary-700">Web Development</span>
-                  <span className="text-primary-600 font-semibold">Expert</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-secondary-700">UI/UX Design</span>
-                  <span className="text-primary-600 font-semibold">Expert</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-secondary-700">Conversion Rate Optimization</span>
-                  <span className="text-primary-600 font-semibold">Expert</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-secondary-700">Digital Marketing Strategy</span>
-                  <span className="text-primary-600 font-semibold">Expert</span>
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&crop=center" 
+                  alt="Professional digital marketing team collaborating on strategy"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h3 className="text-xl font-bold mb-2">Expert Team</h3>
+                  <p className="text-sm opacity-90">Our experienced professionals deliver results</p>
                 </div>
               </div>
               
@@ -219,7 +204,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 text-sm font-semibold mb-6 shadow-lg">
+            <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 text-sm font-semibold mb-6 shadow-lg">
               <Sparkles className="w-4 h-4 mr-2" />
               Our Core Services
             </div>
@@ -231,6 +216,22 @@ export default function HomePage() {
               We combine cutting-edge technology with proven strategies to deliver measurable results for professional services firms. 
               From AI-powered SEO to custom web development, we have the expertise to transform your digital presence.
             </p>
+          </div>
+
+          {/* Hero Image */}
+          <div className="mb-16">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&crop=center" 
+                alt="Digital marketing team working on analytics and strategy"
+                className="w-full h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">Data-Driven Results</h3>
+                <p className="text-lg opacity-90">Our team analyzes real-time data to optimize your digital presence</p>
+              </div>
+            </div>
           </div>
 
           {/* Services Grid */}
@@ -269,6 +270,15 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 relative overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&crop=center" 
+            alt="Business analytics dashboard with charts and graphs"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/80 via-primary-700/80 to-secondary-800/80"></div>
+        </div>
         {/* Background pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30"></div>
         
@@ -446,167 +456,70 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
-        {/* Background gradient flow */}
+        {/* Background image and gradient flow */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-blue-500/20 opacity-30"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&h=1080&fit=crop&crop=center" 
+            alt="Modern office workspace with digital marketing tools and analytics"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-blue-500/40"></div>
           <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
         </div>
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div className="max-w-5xl mx-auto text-center">
             
-            {/* Left Side - Text and CTA */}
+            {/* Text and CTA - Golden Ratio Layout */}
             <div className="text-white">
-              <div className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white/90 mb-4 sm:mb-6 border border-white/20">
+              {/* Badge - Golden ratio spacing */}
+              <div className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-sm px-4 py-2.5 text-sm font-medium text-white/90 mb-8 border border-white/20">
                 <span className="hidden sm:inline">DIGITAL MARKETING THAT DELIVERS RESULTS</span>
                 <span className="sm:hidden">RESULTS-DRIVEN MARKETING</span>
               </div>
               
-              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+              {/* Main Headline - Golden ratio typography */}
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-10 leading-tight">
                 Transform Your Website into a Lead Generation Machine with{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
                   Web Vello
                 </span>
               </h2>
               
-              <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 leading-relaxed">
+              {/* Description - Golden ratio line height and spacing */}
+              <p className="text-lg sm:text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto">
                 Professional services firms must effectively differentiate themselves to attract and retain clients. 
                 Over 500+ professional services clients trust us to create tailored marketing strategies that enhance 
                 credibility, foster client relationships, and drive lead generation. Let us help you establish your 
                 firm as a trusted authority in your industry while achieving your unique business goals.
               </p>
               
-              {/* CTA Input & Button */}
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md">
+              {/* CTA Input & Button - Golden ratio proportions */}
+              <div className="flex flex-col sm:flex-row gap-6 max-w-2xl mx-auto mb-12">
                 <input
                   type="text"
                   placeholder="Enter your website URL"
-                  className="flex-1 px-3 sm:px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm sm:text-base"
+                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-base"
                 />
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse text-sm sm:text-base"
+                  className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse text-base"
                   onClick={() => handleProposalRequest('homepage_input')}
                 >
                   🎯 Get FREE Proposal
                 </Button>
               </div>
               
-              {/* Urgency & Value Props */}
-              <div className="mt-4 text-center">
-                <p className="text-xs sm:text-sm text-white/80 mb-2">
+              {/* Urgency & Value Props - Golden ratio spacing */}
+              <div className="space-y-4">
+                <p className="text-sm sm:text-base text-white/80">
                   ⚡ <span className="font-semibold">Instant Response:</span> Get your custom proposal in 24 hours
                 </p>
-                <p className="text-xs text-white/60">
+                <p className="text-xs sm:text-sm text-white/60">
                   <span className="hidden sm:inline">No obligation • Free consultation included • 500+ successful projects</span>
                   <span className="sm:hidden">No obligation • Free consultation</span>
                 </p>
               </div>
-            </div>
-            
-            {/* Right Side - Engaging Marketing Funnel Graph */}
-            <div className="relative w-full h-[500px] flex items-center justify-center">
-              {/* Background Grid Pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30"></div>
-              
-              {/* Top Level - Awareness */}
-              <div className="absolute top-8 left-1/2 -translate-x-1/2">
-                <div className="flex items-center gap-6">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg mb-3 animate-bounce">
-                      <Globe className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xs text-blue-200 font-medium">Digital Presence</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg mb-3 animate-bounce" style={{animationDelay: '0.5s'}}>
-                      <TargetIcon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xs text-purple-200 font-medium">Business Goals</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Flow Arrows Down */}
-              <div className="absolute top-28 left-1/2 -translate-x-1/2 w-1 h-16">
-                <div className="w-full h-full bg-gradient-to-b from-blue-400 to-purple-500 rounded-full animate-pulse"></div>
-              </div>
-
-              {/* Middle Level - Web Vello Processing */}
-              <div className="absolute top-44 left-1/2 -translate-x-1/2">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-white to-gray-100 rounded-3xl flex flex-col items-center justify-center shadow-2xl mb-4 relative overflow-hidden">
-                    {/* Animated background elements */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-50"></div>
-                    <div className="absolute top-2 right-2 w-3 h-3 bg-blue-400 rounded-full animate-ping"></div>
-                    <div className="absolute bottom-2 left-2 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
-                    
-                    <div className="relative z-10">
-                      <div className="text-2xl font-bold text-primary-600 mb-1">Web</div>
-                      <div className="text-2xl font-bold text-secondary-600">Vello</div>
-                      <div className="text-xs text-gray-500 mt-1">AI-Powered</div>
-                    </div>
-                  </div>
-                  
-                  {/* Processing indicators */}
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></div>
-                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Flow Arrows Down */}
-              <div className="absolute top-76 left-1/2 -translate-x-1/2 w-1 h-16">
-                <div className="w-full h-full bg-gradient-to-b from-purple-500 to-green-500 rounded-full animate-pulse"></div>
-              </div>
-
-              {/* Bottom Level - Results */}
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-                <div className="flex items-center gap-6">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg mb-3 animate-bounce" style={{animationDelay: '1s'}}>
-                      <Building2 className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xs text-green-200 font-medium">Advanced Tech</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg mb-3 animate-bounce" style={{animationDelay: '1.5s'}}>
-                      <BarChart className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xs text-teal-200 font-medium">Revenue Growth</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Success Indicator */}
-              <div className="absolute bottom-20 left-1/2 -translate-x-1/2">
-                <div className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg animate-pulse">
-                  <CheckCircle className="w-4 h-4 inline mr-2" />
-                  Proven Results
-                </div>
-              </div>
-
-              {/* Animated Connection Lines */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                {/* Top to middle connections */}
-                <line x1="50%" y1="88" x2="50%" y2="172" stroke="url(#gradient1)" strokeWidth="2" className="animate-pulse"/>
-                {/* Middle to bottom connections */}
-                <line x1="50%" y1="316" x2="50%" y2="400" stroke="url(#gradient2)" strokeWidth="2" className="animate-pulse"/>
-                
-                {/* Gradient definitions */}
-                <defs>
-                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.8"/>
-                    <stop offset="100%" stopColor="#A855F7" stopOpacity="0.8"/>
-                  </linearGradient>
-                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#A855F7" stopOpacity="0.8"/>
-                    <stop offset="100%" stopColor="#10B981" stopOpacity="0.8"/>
-                  </linearGradient>
-                </defs>
-              </svg>
             </div>
           </div>
         </div>
