@@ -83,12 +83,15 @@ export function Hero() {
 
           {/* Main H1 Heading for SEO */}
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
-            Professional Digital Marketing Services
+            Stop Losing Customers to Competitors
+            <span className="block text-2xl sm:text-3xl lg:text-4xl text-blue-300 mt-2">
+              Get Found First with AI-Powered SEO
+            </span>
           </h1>
-
+          
           {/* Subheading */}
           <p className="text-lg sm:text-xl leading-7 sm:leading-8 text-white/90 max-w-3xl mx-auto">
-            Transform your business with AI-powered SEO, conversion-focused web development, and proven digital marketing strategies that deliver measurable results.
+            We help professional services firms dominate search results and generate 300%+ more qualified leads in 6 months. Our AI-powered strategies have generated $2.4M+ in client revenue.
           </p>
 
           {/* CTA Buttons */}
@@ -100,7 +103,7 @@ export function Hero() {
               asChild
             >
               <Link href="/contact">
-                Get FREE Strategy Session (Worth $500)
+                Audit My Website Now (Free)
               </Link>
             </Button>
             <Button 
@@ -112,7 +115,7 @@ export function Hero() {
             >
               <Link href="/case-studies" className="flex items-center">
                 <Play className="mr-2 h-5 w-5" />
-                See 300%+ Results
+                See Client Results
               </Link>
             </Button>
           </div>
@@ -120,7 +123,7 @@ export function Hero() {
           {/* Urgency & Scarcity */}
           <div className="mt-6 text-center">
             <p className="text-xs sm:text-sm text-white mb-2">
-              ⏰ <span className="font-semibold">Limited Time:</span> Free strategy session (normally $500)
+              ⚡ <span className="font-semibold">Limited Time:</span> Free website audit (normally $500)
             </p>
             <p className="text-xs text-white/90">
               <span className="hidden sm:inline">Only 3 spots available this week • 500+ businesses trust us</span>
