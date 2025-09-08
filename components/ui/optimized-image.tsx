@@ -1,78 +1,101 @@
-'use client'
-
-import Image from 'next/image'
-import { useState } from 'react'
+import Image from 'next/image';
+import { useState } from 'react';
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+  priority?: boolean;
+  fallback?: string;
+  quality?: number;
 }
 
-export function OptimizedImage({
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = '',
+export function OptimizedImage({ 
+  src, 
+  alt, 
+  width, 
+  height, 
+  className = '', 
   priority = false,
-  quality = 85,
-  placeholder = 'empty',
-  blurDataURL,
+  fallback,
+  quality = 85
 }: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
-
-  const handleLoad = () => {
-    setIsLoading(false)
-  }
+  const [imgSrc, setImgSrc] = useState(src);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleError = () => {
-    setIsLoading(false)
-    setHasError(true)
-  }
+    if (fallback) {
+      setImgSrc(fallback);
+    }
+    setIsLoading(false);
+  };
 
-  if (hasError) {
-    return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
-      </div>
-    )
-  }
+  const handleLoad = () => {
+    setIsLoading(false);
+  };
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative ${className}`}>
       {isLoading && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{ width, height }}
-        />
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+        </div>
       )}
       <Image
-        src={src}
+        src={imgSrc}
         alt={alt}
         width={width}
         height={height}
+        className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
         priority={priority}
         quality={quality}
-        placeholder={placeholder}
-        blurDataURL={blurDataURL}
-        onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
+        onLoad={handleLoad}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
-  )
+  );
+}
+
+// Pre-configured image components for common use cases
+export function HeroImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  return (
+    <OptimizedImage
+      src={src}
+      alt={alt}
+      width={1920}
+      height={1080}
+      className={`w-full h-96 object-cover ${className}`}
+      priority={true}
+      quality={90}
+    />
+  );
+}
+
+export function ServiceImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  return (
+    <OptimizedImage
+      src={src}
+      alt={alt}
+      width={800}
+      height={600}
+      className={`w-full h-64 object-cover ${className}`}
+      quality={85}
+    />
+  );
+}
+
+export function BackgroundImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  return (
+    <OptimizedImage
+      src={src}
+      alt={alt}
+      width={1920}
+      height={1080}
+      className={`w-full h-full object-cover ${className}`}
+      quality={75}
+    />
+  );
 }

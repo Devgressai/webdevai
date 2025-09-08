@@ -1,3 +1,4 @@
+
 'use client'
 
 import { Hero } from '../components/sections/hero'
@@ -8,6 +9,7 @@ import { Button } from '../components/ui/button'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Target as TargetIcon, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { HeroImage, BackgroundImage } from '../components/ui/optimized-image'
 // import { useConversionTracking } from '../hooks/useConversionTracking'
 // import ScrollTracker from '../components/analytics/scroll-tracker'
 
@@ -146,12 +148,10 @@ export default function HomePage() {
             
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image 
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&crop=center" 
+                <HeroImage 
+                  src="/images/hero-team-collaboration.webp"
                   alt="Professional digital marketing team collaborating on strategy"
-                  width={800}
-                  height={600}
-                  className="w-full h-96 object-cover"
+                  className="w-full h-96"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
@@ -201,13 +201,10 @@ export default function HomePage() {
           {/* Hero Image */}
           <div className="mb-16">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&crop=center" 
+              <HeroImage 
+                src="/images/hero-analytics.webp"
                 alt="Digital marketing team working on analytics and strategy"
-                width={1200}
-                height={600}
-                className="w-full h-96 object-cover"
-                priority
+                className="w-full h-96"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
@@ -261,14 +258,13 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 relative overflow-hidden">
         {/* Background image */}
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&crop=center" 
-            alt="Business analytics dashboard with charts and graphs"
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/80 via-primary-700/80 to-secondary-800/80"></div>
-        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{ 
+            backgroundImage: "url('/images/hero-data-analysis.webp')"
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600/80 via-primary-700/80 to-secondary-800/80"></div>
         {/* Background pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30"></div>
         
@@ -447,15 +443,14 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
         {/* Background image and gradient flow */}
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&h=1080&fit=crop&crop=center" 
-            alt="Modern office workspace with digital marketing tools and analytics"
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-blue-500/40"></div>
-          <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
-        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{ 
+            backgroundImage: "url('/images/hero-business-meeting.webp')"
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-blue-500/40"></div>
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">

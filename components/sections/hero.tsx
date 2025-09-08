@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award } from "lucide-react"
+import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Shield } from "lucide-react"
 // import { useConversionTracking } from "../../hooks/useConversionTracking"
 // import ScrollTracker from "../analytics/scroll-tracker"
 
@@ -40,7 +40,7 @@ export function Hero() {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=2070&h=1200&fit=crop&crop=center')"
+            backgroundImage: "url('/images/hero-office.webp')"
           }}
         ></div>
         {/* Light overlay for text readability */}
@@ -82,20 +82,20 @@ export function Hero() {
           </div>
 
           {/* Main H1 Heading for SEO */}
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white leading-tight mb-4 sm:mb-6">
             Stop Losing Customers to Competitors
-            <span className="block text-2xl sm:text-3xl lg:text-4xl text-blue-300 mt-2">
+            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-blue-300 mt-1 sm:mt-2">
               Get Found First with AI-Powered SEO
             </span>
           </h1>
           
           {/* Subheading */}
-          <p className="text-lg sm:text-xl leading-7 sm:leading-8 text-white/90 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 text-white/90 max-w-3xl mx-auto px-4 sm:px-0">
             We help professional services firms dominate search results and generate 300%+ more qualified leads in 6 months. Our AI-powered strategies have generated $2.4M+ in client revenue.
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
             <Button 
               size="xl" 
               className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-400/25 transition-all duration-300" 
@@ -120,8 +120,22 @@ export function Hero() {
             </Button>
           </div>
           
-          {/* Urgency & Scarcity */}
+          {/* Trust Signals & Urgency */}
           <div className="mt-6 text-center">
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-3">
+              <div className="flex items-center text-xs sm:text-sm text-white/80">
+                <Award className="w-4 h-4 mr-1 text-yellow-400" />
+                Google Partner Certified
+              </div>
+              <div className="flex items-center text-xs sm:text-sm text-white/80">
+                <Shield className="w-4 h-4 mr-1 text-green-400" />
+                30-Day Guarantee
+              </div>
+              <div className="flex items-center text-xs sm:text-sm text-white/80">
+                <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                4.9/5 Rating
+              </div>
+            </div>
             <p className="text-xs sm:text-sm text-white mb-2">
               ⚡ <span className="font-semibold">Limited Time:</span> Free website audit (normally $500)
             </p>
