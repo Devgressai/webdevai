@@ -4,7 +4,7 @@ import {
   Smartphone, Globe, Clock, Award, CheckCircle, Star, ArrowUpRight, 
   PieChart, DollarSign, Eye, MousePointer, Filter, Search, Heart, 
   Truck, CreditCard, Lock, RefreshCw, TrendingDown, AlertTriangle, 
-  Lightbulb, Rocket, Calculator, Calendar, UserCheck, MessageSquare, 
+  Lightbulb, Building2, Calculator, Calendar, UserCheck, MessageSquare, 
   Phone, Mail, MapPin, FileText, UserPlus, Brain, Code, Bot, 
   Sparkles, Layers, Palette, Monitor, Settings, Server, Cloud 
 } from 'lucide-react'

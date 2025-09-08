@@ -4,7 +4,7 @@ import {
   Smartphone, Globe, Clock, Award, CheckCircle, Star, ArrowUpRight, 
   PieChart, DollarSign, Eye, MousePointer, Filter, Search, Heart, 
   Truck, CreditCard, Lock, RefreshCw, TrendingDown, AlertTriangle, 
-  Lightbulb, Rocket, Calculator, Calendar, UserCheck, MessageSquare, 
+  Lightbulb, Building2, Calculator, Calendar, UserCheck, MessageSquare, 
   Phone, Mail, MapPin, FileText, UserPlus, Brain, Cpu, Network, 
   Database, Code, Bot, Sparkles, Layers 
 } from 'lucide-react'
@@ -276,7 +276,7 @@ export default function GenerativeEngineOptimizationPage() {
                   <span className="font-medium text-secondary-900">Semantic Search Evolution</span>
                 </div>
                 <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <Rocket className="h-5 w-5 text-blue-600" />
+                  <Building2 className="h-5 w-5 text-blue-600" />
                   <span className="font-medium text-secondary-900">Future-Proof Strategy</span>
                 </div>
               </div>

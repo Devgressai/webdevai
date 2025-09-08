@@ -1,5 +1,5 @@
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Zap, Clock, Target, CheckCircle, Eye, TrendingUp, Users, Rocket, BarChart3, DollarSign, Award, Code, FileText, ShoppingBag } from 'lucide-react'
+import { ArrowRight, Zap, Clock, Target, CheckCircle, Eye, TrendingUp, Users, Building2, BarChart3, DollarSign, Award, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 
 const features = [
@@ -12,7 +12,7 @@ const features = [
   {
     title: "Agile Development",
     description: "Flexible, iterative approach that adapts to your changing needs.",
-    icon: Rocket,
+    icon: Building2,
     benefits: ["Continuous feedback", "Quick adjustments", "Scalable solutions", "Future-proof design"]
   },
   {

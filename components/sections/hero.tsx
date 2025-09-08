@@ -99,7 +99,8 @@ export function Hero() {
               asChild
             >
               <Link href="/contact">
-                🚀 Get FREE Strategy Session (Worth $500)
+                <Star className="mr-2 h-5 w-5" />
+                Get FREE Strategy Session (Worth $500)
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

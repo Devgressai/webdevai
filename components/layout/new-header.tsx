@@ -6,7 +6,7 @@ import { Button } from "../ui/button"
 import { SearchBar } from "../ui/search"
 import { 
   Menu, X, ChevronDown, ChevronUp, Search, Phone, BarChart3, 
-  Rocket, Target, Users, TrendingUp, Globe, Code, Palette, 
+  Building2, Target, Users, TrendingUp, Globe, Code, Palette, 
   Zap, Building2, BookOpen, Info, Monitor, PenTool, Settings, 
   Lightbulb, Smartphone, ShoppingCart, Mail, Eye, TrendingDown, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
@@ -313,7 +313,7 @@ export function NewHeader() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <Rocket className="h-7 w-7 text-white" />
+                <Building2 className="h-7 w-7 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-primary-600 group-hover:text-primary-700 transition-colors">Web</span>
@@ -434,7 +434,7 @@ export function NewHeader() {
                 <span className="sr-only">Web Vello</span>
                 <div className="flex items-center space-x-3">
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center">
-                    <Rocket className="h-6 w-6 text-white" />
+                    <Building2 className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-lg font-bold text-primary-600">Web</span>

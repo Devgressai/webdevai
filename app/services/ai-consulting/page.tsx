@@ -1,5 +1,5 @@
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Brain, Zap, Target, TrendingUp, CheckCircle, Users, BarChart3, Rocket, Globe, Cpu, Network, Code, FileText, ShoppingBag } from 'lucide-react'
+import { ArrowRight, Brain, Zap, Target, TrendingUp, CheckCircle, Users, BarChart3, Building2, Globe, Cpu, Network, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 
 const services = [
@@ -18,7 +18,7 @@ const services = [
   {
     title: "AI Implementation Support",
     description: "Hands-on assistance with AI system deployment and integration into existing workflows.",
-    icon: Rocket,
+    icon: Building2,
     benefits: ["System integration", "Training programs", "Change management", "Ongoing support"]
   },
   {

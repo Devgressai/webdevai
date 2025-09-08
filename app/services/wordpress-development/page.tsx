@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Code, Smartphone, Zap, TrendingUp, Users, Shield, BarChart3, Globe, ShoppingBag, Database, Cloud, Server, Layers, FileText, Palette, Cpu, HardDrive, Wrench, Settings, Monitor, Smartphone as Mobile, CheckCircle, Star, Award, Clock, DollarSign, Target, Lightbulb, Rocket, Eye, Search, Lock, RefreshCw } from 'lucide-react'
+import { ArrowRight, Code, Smartphone, Zap, TrendingUp, Users, Shield, BarChart3, Globe, ShoppingBag, Database, Cloud, Server, Layers, FileText, Palette, Cpu, HardDrive, Wrench, Settings, Monitor, Smartphone as Mobile, CheckCircle, Star, Award, Clock, DollarSign, Target, Lightbulb, Building2, Eye, Search, Lock, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
 
 const customFeatures = [

@@ -5,8 +5,8 @@ import Link from "next/link"
 import { Button } from "../ui/button"
 import { 
   Menu, X, ChevronDown, ChevronUp, Phone, BarChart3, 
-  Rocket, Target, Users, TrendingUp, Globe, Code, Palette, 
-  Zap, Building2, BookOpen, Info, Monitor, PenTool, Settings, 
+  Building2, Target, Users, TrendingUp, Globe, Code, Palette, 
+  Zap, Building2 as Building, BookOpen, Info, Monitor, PenTool, Settings, 
   Lightbulb, Smartphone, ShoppingCart, Mail, Eye, TrendingDown, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
   MessageSquare, Bot, Factory, Shield, Wrench, Layers, Star
@@ -342,7 +342,7 @@ export function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <Rocket className="h-7 w-7 text-white" />
+                <Building2 className="h-7 w-7 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-primary-600 group-hover:text-primary-700 transition-colors">Web</span>
@@ -487,7 +487,7 @@ export function Header() {
                 <span className="sr-only">Digital Wagon</span>
                 <div className="flex items-center space-x-3">
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center">
-                    <Rocket className="h-6 w-6 text-white" />
+                    <Building2 className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-lg font-bold text-primary-600">Web</span>

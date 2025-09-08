@@ -5,7 +5,7 @@ import { Pricing } from '../components/sections/pricing'
 import { WebsiteAssessment } from '../components/sections/website-assessment'
 import { SocialProof } from '../components/sections/social-proof'
 import { Button } from '../components/ui/button'
-import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Rocket, Target as TargetIcon, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Target as TargetIcon, Star } from 'lucide-react'
 import Link from 'next/link'
 // import { useConversionTracking } from '../hooks/useConversionTracking'
 // import ScrollTracker from '../components/analytics/scroll-tracker'
@@ -256,7 +256,8 @@ export default function HomePage() {
                     ))}
                   </div>
                   <div className="mt-6 flex items-center text-primary-600 font-semibold group-hover:text-primary-700 transition-colors duration-300">
-                    🚀 Get Started Today
+                    <Zap className="w-4 h-4 mr-2" />
+                    Get Started Today
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
@@ -566,7 +567,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-6">
                   <div className="text-center">
                     <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg mb-3 animate-bounce" style={{animationDelay: '1s'}}>
-                      <Rocket className="w-8 h-8 text-white" />
+                      <Building2 className="w-8 h-8 text-white" />
                     </div>
                     <div className="text-xs text-green-200 font-medium">Advanced Tech</div>
                   </div>
