@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
-import { SEOAuditTool } from '../../components/tools/seo-audit-tool'
-import { SEOAuditBenefits } from '../../components/tools/seo-audit-benefits'
-import { SEOAuditExamples } from '../../components/tools/seo-audit-examples'
+import { SEOAuditTool } from '@/components/tools/seo-audit-tool'
+import { SEOAuditBenefits } from '@/components/tools/seo-audit-benefits'
+import { SEOAuditExamples } from '@/components/tools/seo-audit-examples'
 
 export const metadata: Metadata = {
   title: 'Free SEO Audit Tool - Website Analysis & Optimization | Web Vello',
