@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Search, TrendingUp, BarChart3, Target, Zap, Globe, Users, FileText, Settings, Code, ShoppingBag, Link as LinkIcon, CheckCircle, Clock, Shield, Award, Star, Eye, MousePointer, Filter, Heart, Truck, CreditCard, Lock, RefreshCw, TrendingDown, AlertTriangle, Lightbulb, Building2, Calculator, Calendar, UserCheck, MessageSquare, Phone, UserPlus, Palette, Monitor, ShoppingCart, Send, Building2, Bot, Factory, Wrench, Layers, Crown, Gem, Share2, MessageCircle, Cloud, Smartphone } from 'lucide-react'
+import { ArrowRight, Search, TrendingUp, BarChart3, Target, Zap, Globe, Users, FileText, Settings, Code, ShoppingBag, Link as LinkIcon, CheckCircle, Clock, Shield, Award, Star, Eye, MousePointer, Filter, Heart, Truck, CreditCard, Lock, RefreshCw, TrendingDown, AlertTriangle, Lightbulb, Building2, Calculator, Calendar, UserCheck, MessageSquare, Phone, UserPlus, Palette, Monitor, ShoppingCart, Send, Bot, Factory, Wrench, Layers, Crown, Gem, Share2, MessageCircle, Cloud, Smartphone } from 'lucide-react'
 import Link from 'next/link'
 
 const features = [
