@@ -284,8 +284,8 @@ export function NewHeader() {
                 <span className="font-semibold text-sm">SUCCESS DELIVERED FOR OUR CLIENTS</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-3xl font-bold">$50M+</span>
-                <span className="text-sm opacity-90">Revenue Generated</span>
+                <span className="text-3xl font-bold">{require('../../lib/site-metrics').METRICS.revenue}</span>
+                <span className="text-sm opacity-90">{require('../../lib/site-metrics').METRICS.revenueLabel}</span>
               </div>
             </div>
             <div className="flex items-center space-x-6 text-sm">

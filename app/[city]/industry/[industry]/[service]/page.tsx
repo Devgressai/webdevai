@@ -6,6 +6,7 @@ import { Button } from '../../../../../components/ui/button'
 import { fetchCisDoc } from '../../../../../lib/cis-content'
 import { PortableText } from '@portabletext/react'
 import { getStaticCisDoc } from '../../../../../lib/cis-static'
+import { ensureMinimumWords, generateSeoPadding } from '../../../../../lib/seo-content'
 
 interface Params {
   city: string
@@ -109,6 +110,33 @@ export default async function CityIndustryServicePage({ params }: { params: Para
                 </div>
               </div>
             )}
+            {/* Ensure minimum word count with structured SEO padding */}
+            {(() => {
+              const cmsWordCount = Array.isArray(cms.content)
+                ? cms.content.reduce((sum: number, block: any) => {
+                    const text = Array.isArray(block?.children)
+                      ? block.children.map((c: any) => c?.text ?? '').join(' ')
+                      : ''
+                    const count = text.split(/\s+/).filter(Boolean).length
+                    return sum + count
+                  }, 0)
+                : 0
+              const padding = generateSeoPadding(
+                city.name,
+                city.fullName,
+                industry.name,
+                service.name,
+                cmsWordCount,
+                4000
+              )
+              return padding.length > 0 ? (
+                <div className="space-y-6">
+                  {padding.map((p, i) => (
+                    <p key={i} className="text-gray-800 leading-relaxed">{p}</p>
+                  ))}
+                </div>
+              ) : null
+            })()}
           </div>
         </section>
       </div>
@@ -124,15 +152,25 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             {staticDoc.hero && <p className="text-lg text-white/90 max-w-3xl mx-auto">{staticDoc.hero}</p>}
           </div>
         </section>
-        {(staticDoc.sections && staticDoc.sections.length > 0) && (
-          <section className="py-12 px-6">
-            <div className="max-w-5xl mx-auto space-y-6">
-              {staticDoc.sections.map((s, i) => (
-                <p key={i} className="text-gray-800 leading-relaxed">{s}</p>
-              ))}
-            </div>
-          </section>
-        )}
+        {(() => {
+          const padded = ensureMinimumWords(
+            staticDoc.sections,
+            city.name,
+            city.fullName,
+            industry.name,
+            service.name,
+            4000
+          )
+          return (
+            <section className="py-12 px-6">
+              <div className="max-w-5xl mx-auto space-y-6">
+                {padded.map((s, i) => (
+                  <p key={i} className="text-gray-800 leading-relaxed">{s}</p>
+                ))}
+              </div>
+            </section>
+          )
+        })()}
         {(staticDoc.faqs && staticDoc.faqs.length > 0) && (
           <section className="py-12 px-6 bg-gray-50">
             <div className="max-w-5xl mx-auto">

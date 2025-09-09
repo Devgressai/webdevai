@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, ArrowLeft, Globe, Users, TrendingUp } from 'lucide-react'
+import { cities as cityMap } from '../../lib/cities'
 import { Button } from '../../components/ui/button'
 
 export const metadata: Metadata = {
@@ -10,54 +11,19 @@ export const metadata: Metadata = {
 }
 
 export default function LocationsPage() {
-  const cities = [
-    { name: 'New York, NY', slug: 'new-york-ny', state: 'NY' },
-    { name: 'Los Angeles, CA', slug: 'los-angeles-ca', state: 'CA' },
-    { name: 'Chicago, IL', slug: 'chicago-il', state: 'IL' },
-    { name: 'Houston, TX', slug: 'houston-tx', state: 'TX' },
-    { name: 'Phoenix, AZ', slug: 'phoenix-az', state: 'AZ' },
-    { name: 'Philadelphia, PA', slug: 'philadelphia-pa', state: 'PA' },
-    { name: 'San Antonio, TX', slug: 'san-antonio-tx', state: 'TX' },
-    { name: 'San Diego, CA', slug: 'san-diego-ca', state: 'CA' },
-    { name: 'Dallas, TX', slug: 'dallas-tx', state: 'TX' },
-    { name: 'San Jose, CA', slug: 'san-jose-ca', state: 'CA' },
-    { name: 'Austin, TX', slug: 'austin-tx', state: 'TX' },
-    { name: 'Jacksonville, FL', slug: 'jacksonville-fl', state: 'FL' },
-    { name: 'Fort Worth, TX', slug: 'fort-worth-tx', state: 'TX' },
-    { name: 'Columbus, OH', slug: 'columbus-oh', state: 'OH' },
-    { name: 'Indianapolis, IN', slug: 'indianapolis-in', state: 'IN' },
-    { name: 'Charlotte, NC', slug: 'charlotte-nc', state: 'NC' },
-    { name: 'San Francisco, CA', slug: 'san-francisco-ca', state: 'CA' },
-    { name: 'Seattle, WA', slug: 'seattle-wa', state: 'WA' },
-    { name: 'Denver, CO', slug: 'denver-co', state: 'CO' },
-    { name: 'Washington, DC', slug: 'washington-dc', state: 'DC' },
-    { name: 'Nashville, TN', slug: 'nashville-tn', state: 'TN' },
-    { name: 'Oklahoma City, OK', slug: 'oklahoma-city-ok', state: 'OK' },
-    { name: 'El Paso, TX', slug: 'el-paso-tx', state: 'TX' },
-    { name: 'Boston, MA', slug: 'boston-ma', state: 'MA' },
-    { name: 'Portland, OR', slug: 'portland-or', state: 'OR' },
-    { name: 'Las Vegas, NV', slug: 'las-vegas-nv', state: 'NV' },
-    { name: 'Detroit, MI', slug: 'detroit-mi', state: 'MI' },
-    { name: 'Memphis, TN', slug: 'memphis-tn', state: 'TN' },
-    { name: 'Louisville, KY', slug: 'louisville-ky', state: 'KY' },
-    { name: 'Baltimore, MD', slug: 'baltimore-md', state: 'MD' },
-    { name: 'Milwaukee, WI', slug: 'milwaukee-wi', state: 'WI' },
-    { name: 'Albuquerque, NM', slug: 'albuquerque-nm', state: 'NM' },
-    { name: 'Tucson, AZ', slug: 'tucson-az', state: 'AZ' },
-    { name: 'Fresno, CA', slug: 'fresno-ca', state: 'CA' },
-    { name: 'Sacramento, CA', slug: 'sacramento-ca', state: 'CA' },
-    { name: 'Kansas City, MO', slug: 'kansas-city-mo', state: 'MO' },
-    { name: 'Mesa, AZ', slug: 'mesa-az', state: 'AZ' }
-  ]
+  const cityList = Object.values(cityMap)
+
+  const toIndustrySlug = (name: string | undefined) =>
+    (name || '').toLowerCase().replace(/\s+/g, '')
 
   // Group cities by state
-  const citiesByState = cities.reduce((acc, city) => {
+  const citiesByState = cityList.reduce((acc, city) => {
     if (!acc[city.state]) {
       acc[city.state] = []
     }
     acc[city.state].push(city)
     return acc
-  }, {} as Record<string, typeof cities>)
+  }, {} as Record<string, typeof cityList>)
 
   const stats = [
     { number: '38+', label: 'Cities Served', icon: MapPin },
@@ -125,20 +91,38 @@ export default function LocationsPage() {
                   {state}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {stateCities.map((city) => (
-                    <Link
-                      key={city.slug}
-                      href={`/${city.slug}`}
-                      className="group p-4 rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all duration-200"
-                    >
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 text-primary-600 mr-3 flex-shrink-0" />
-                        <span className="text-gray-900 group-hover:text-primary-600 transition-colors font-medium">
-                          {city.name}
-                        </span>
+                  {stateCities.map((city) => {
+                    const primaryIndustrySlug = toIndustrySlug(city.industries?.[0]) || 'technology'
+                    const serviceLinks = [
+                      { label: 'Web Development', slug: 'web-development' },
+                      { label: 'SEO', slug: 'seo' },
+                      { label: 'Website Design', slug: 'website-design' },
+                    ]
+                    const baseHref = `/${city.slug}/industry/${primaryIndustrySlug}`
+                    return (
+                      <div
+                        key={city.slug}
+                        className="group p-4 rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all duration-200"
+                      >
+                        <Link href={`${baseHref}/web-development`} className="flex items-center">
+                          <MapPin className="h-4 w-4 text-primary-600 mr-3 flex-shrink-0" />
+                          <span className="text-gray-900 group-hover:text-primary-600 transition-colors font-medium">
+                            {city.fullName}
+                          </span>
+                        </Link>
+                        <div className="mt-3 flex flex-wrap gap-3">
+                          {serviceLinks.map((s) => (
+                            <Link
+                              key={s.slug}
+                              href={`${baseHref}/${s.slug}`}
+                              className="text-sm text-primary-700 hover:text-primary-800 underline underline-offset-2"
+                            >
+                              {s.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </Link>
-                  ))}
+                    )})}
                 </div>
               </div>
             ))}
