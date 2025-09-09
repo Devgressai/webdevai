@@ -66,6 +66,34 @@ A comprehensive content strategy to establish Web Vello as an authority in digit
 4. **WordPress Development** - WordPress customization and optimization
 5. **UI/UX Design Services** - User experience design
 
+### City + Industry + Service Pages (4,000+ words each)
+
+Purpose: Rank for long-tail, high-intent queries like "Web Development in New York for Finance Companies".
+
+Recommended structure:
+- H1: {Service} in {City, State} for {Industry} Companies
+- Executive Summary (150–250 words)
+- Market Context in {City} (250–400 words)
+- {Industry} Pain Points and Buyer Journey (600–900 words)
+- How Our {Service} Solves {Industry} Challenges (800–1,200 words)
+- Local SEO + Compliance Considerations (400–700 words)
+- Case Studies/Outcomes (600–900 words)
+- Implementation Process and Timeline (400–700 words)
+- FAQs specific to {Service} × {Industry} × {City} (8–12 items)
+- CTA with value prop and next steps
+
+SEO specifics:
+- One primary H1, descriptive H2/H3s, internal links to related services and case studies.
+- Include city and industry entities (schema where applicable), and tightly scoped keyword variants.
+- Add unique examples, stats, and local references to avoid duplication and thin content.
+
+Production workflow:
+1) Brief and outline approval per page
+2) Draft with sources and unique insights
+3) Review for compliance, brand, and SEO
+4) Publish with internal links and schema
+5) Monitor rankings and iterate
+
 ## 3. Content Calendar
 
 ### Month 1: Foundation

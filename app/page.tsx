@@ -2,8 +2,9 @@
 'use client'
 
 import { Hero } from '../components/sections/hero'
-import { Pricing } from '../components/sections/pricing'
-import { WebsiteAssessment } from '../components/sections/website-assessment'
+import dynamic from 'next/dynamic'
+const Pricing = dynamic(() => import('../components/sections/pricing').then(m => m.Pricing), { ssr: true })
+const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment').then(m => m.WebsiteAssessment), { ssr: true })
 import { SocialProof } from '../components/sections/social-proof'
 import { Button } from '../components/ui/button'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Target as TargetIcon, Star } from 'lucide-react'

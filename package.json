@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed:cis": "ts-node scripts/seed-cis-pages.ts"
   },
   "dependencies": {
+    "@portabletext/react": "^4.0.3",
     "@sanity/client": "^6.12.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^4.6.0",
