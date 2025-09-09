@@ -5,6 +5,7 @@ import { getService, serviceSlugs } from '../../../../../lib/services'
 import { Button } from '../../../../../components/ui/button'
 import { fetchCisDoc } from '../../../../../lib/cis-content'
 import { PortableText } from '@portabletext/react'
+import { getStaticCisDoc } from '../../../../../lib/cis-static'
 
 interface Params {
   city: string
@@ -66,6 +67,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
   const city = getCity(params.city)
   const industry = getIndustry(params.industry)
   const service = getService(params.service)
+  const staticDoc = getStaticCisDoc(params.city, params.industry, params.service)
   const cms = await fetchCisDoc(params.city, params.industry, params.service)
 
   if (!city || !industry || !service) {
@@ -109,6 +111,43 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             )}
           </div>
         </section>
+      </div>
+    )
+  }
+
+  if (staticDoc) {
+    return (
+      <div className="min-h-screen bg-white">
+        <section className="py-16 px-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4">{staticDoc.title}</h1>
+            {staticDoc.hero && <p className="text-lg text-white/90 max-w-3xl mx-auto">{staticDoc.hero}</p>}
+          </div>
+        </section>
+        {(staticDoc.sections && staticDoc.sections.length > 0) && (
+          <section className="py-12 px-6">
+            <div className="max-w-5xl mx-auto space-y-6">
+              {staticDoc.sections.map((s, i) => (
+                <p key={i} className="text-gray-800 leading-relaxed">{s}</p>
+              ))}
+            </div>
+          </section>
+        )}
+        {(staticDoc.faqs && staticDoc.faqs.length > 0) && (
+          <section className="py-12 px-6 bg-gray-50">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {staticDoc.faqs.map((f, i) => (
+                  <div key={i} className="bg-white rounded-lg shadow p-4 border">
+                    <h3 className="font-semibold mb-2">{f.question}</h3>
+                    <p className="text-gray-700">{f.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </div>
     )
   }
