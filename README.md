@@ -227,3 +227,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 Built with ❤️ using modern web technologies and best practices for digital marketing agencies.
+
+Note: Deployment is managed by Vercel; pushing to main triggers a production build.
