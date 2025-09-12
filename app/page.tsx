@@ -7,6 +7,7 @@ const Pricing = dynamic(() => import('../components/sections/pricing').then(m =>
 const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment').then(m => m.WebsiteAssessment), { ssr: true })
 import { SocialProof } from '../components/sections/social-proof'
 import { Button } from '../components/ui/button'
+import { METRICS } from '@/lib/site-metrics'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Target as TargetIcon, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -43,7 +44,7 @@ const services = [
 ]
 
 const stats = [
-  { id: 1, name: "Revenue Generated for Clients", value: "$2.4M+", icon: TrendingUp },
+  { id: 1, name: METRICS.revenueLabel, value: METRICS.revenue, icon: TrendingUp },
   { id: 2, name: "Satisfied Business Clients", value: "500+", icon: Users },
   { id: 3, name: "Average ROI Delivered", value: "340%", icon: Award },
   { id: 4, name: "Organic Traffic Growth", value: "300%+", icon: BarChart3 }

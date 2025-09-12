@@ -1,4 +1,5 @@
 import { Star, Quote, Award, Users, TrendingUp, CheckCircle } from 'lucide-react'
+import { METRICS } from '@/lib/site-metrics'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 
@@ -32,7 +33,7 @@ const testimonials = [
 ]
 
 const stats = [
-  { number: '$2.4B+', label: 'Revenue Generated', icon: TrendingUp },
+  { number: METRICS.revenue, label: METRICS.revenueLabel, icon: TrendingUp },
   { number: '500+', label: 'Happy Clients', icon: Users },
   { number: '1,200%', label: 'Average ROI', icon: Award },
   { number: '300%+', label: 'Traffic Growth', icon: TrendingUp }
