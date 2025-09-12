@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     canonical: '/seo-audit',
   },
 }
-
 export default function SEOAuditPage() {
   return (
     <div className="min-h-screen bg-white">
