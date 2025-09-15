@@ -1,0 +1,5233 @@
+{
+  "links": [
+    {
+      "url": "https://www.webvello.com/",
+      "status": 200,
+      "state": "OK",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/media/eafabf029ad39a43-s.p.woff2",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/media/0484562807a97172-s.p.woff2",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/css/66703797a1a28b18.css",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/media/7db6c35d839a711c-s.p.woff2",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/media/b957ea75a84b6ea7-s.p.woff2",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/media/8888a3826f4a3af4-s.p.woff2",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-c0d76f48-80b8f9d86bdeeb58.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-0925edb1-397975742f8adc1b.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/webpack-ec41cef8d2d879b4.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-406ec44c-7575a5f121bc66ea.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-9001ba5f-25fecc03e61d16b3.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/css/d68483cbd6d6a930.css",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-7ed88d88-03957f8ac2b808b7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-8683d2bf-03aba1db2141f8fb.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-e4614fd3-4ea9ac9960341265.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-597a5888-4f25f5b0101b8064.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-687d5bd9-d156c8ae5c7d01cf.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-14134ed5-b655ae8f8fd88bb3.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-ad6a2f20-3ddbfa7b9c0318f9.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-88153be5-b3094988435ee070.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-c0d6a49e-7b1f2304159c9c09.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-c27df4fa-4db82c053782a626.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-63a4feb4-78dd316dca3232ac.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-00833fa6-7966a25c478aea06.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-5dac3da6-97e03c1fae7b7552.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-d929e15b-97ef5ce2328e1f25.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-8efb0ee9-1632bd04d04b7e0c.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-dfc0d3ba-89bfbc34d3ace7fb.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-6185be05-7e930ea01863cc49.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-b9fa02b6-08a767d49ccc144c.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-a7b0f5a6-44a583890a5b6bdc.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-e5c9f7bd-3c3dde5dffb39fec.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-2285aa12-2bd9d8039a724604.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-0bc5b059-45214ee6c32ff559.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-6aecbf01-e73ad3aaf02cb719.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-3f88d8a8-6c0d21077903b7a7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-7cf5bab0-aa2dd2e954ec430f.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-4708c7b7-0d3aad954bc94c05.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-80c85bc6-a1b756d83c6aafc8.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-ac2f7d71-75c16293c5f0525b.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-7fd0e43c-6c871839d48b9203.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-1867baaf-06aef705901a4db7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-9e16eec6-855b81ae8ec251e8.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-2ce5ad9b-f8988cfd93fb5cf1.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-9c587c8a-8559d2ebc2709fe3.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-362d063c-33f752205ebcc467.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-6808aa01-4d22c800581aad0e.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-4a7382ad-a36409a48d47fc5e.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-d7c15829-32e52cbe7d180c07.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-05e245ef-5d642d5db75222a3.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-cfb98476-8366373fca3bc0f7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-a6f90180-11e950f1594e0c66.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-b9f70e77-fd4c45551fa321a3.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-2898f16f-7f9d939263d08d2f.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-8bb010c3-6a896e0b230113f3.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-889ff8a5-64595954d8c7f45e.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-d91c2bd6-6d959433469afe06.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-abc1714d-50908075e5033df5.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-876896d3-eec78e22c1b47144.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-9bcfb94a-9aa804aa5fc86137.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-267eb649-bf07d01c5d714fd6.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-d93c7bd7-3e2433b711c3b290.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-f2a4a9b6-5d29e760fa1837e5.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-cca472bf-fb48f5db57483521.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-4df474b3-295efc4e9a65a293.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-2f6dde1d-b80d4208909daa1e.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-03bfaa2e-bc7ea91c9b465ec6.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-e9bb27a0-22d0ff6bddead14e.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-c80ea36a-37b6bf817ee0d426.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-bf6e8d65-06ac1303c0ef25a9.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-22116c04-de83dc18e605d23d.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-4f8236e9-183759d9796a0e7c.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-d7efda54-5535a74763246fcb.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/page-55565de194993e90.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-eb2fbf4c-00dbd76b7722d5da.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-6f6a9260-13d8b7f6fca77117.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-48b8d778-90931287e62c3979.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/site.webmanifest",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/main-app-bf053cd92452315c.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/vendors-8cbd2506-c5f30714eeff5d49.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/ui-0785b241771e691e.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/layout-5dc13af5c2af142d.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/case-studies",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/pricing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/about",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/industries",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/contact",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=256&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/resources",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=384&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=3840&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=640&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=1080&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=1200&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=750&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=828&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=1920&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-team-collaboration.webp&w=2048&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=256&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=384&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=3840&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=640&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=750&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=828&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=1080&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=1200&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=1920&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/image?url=%2Fimages%2Fhero-analytics.webp&w=2048&q=90",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/terms",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/case-studies/page-9937c67edc54d6d7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/case-studies",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/content-strategy",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/case-studies",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/review-management",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/case-studies",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/technical-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/case-studies",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/privacy",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/google-my-business",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/case-studies",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/pricing/page-a456a0cd9ba2ee17.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/pricing",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/locations",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/about/page-3d3e2b651e09c041.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/about",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/industries/page-9f9c942d2026210a.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/industries",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/service-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/industries",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/social-media-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/industries",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/contact/page-029b4a3e00580e68.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/contact",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/about",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/about",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/ecommerce-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/industries",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/about",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/resources/page-de767a6339864fdc.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/resources",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/about",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/contact",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/contact",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/analytics-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/resources",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/page-d16c46a3f49cbc73.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://maps.google.com/?q=Austin,+Texas",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/contact",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/web-development/page-02e8e257e0a03d2a.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/ai-seo/page-f95b61dbbc80be13.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/ai-seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/ai-consulting/page-6b1cd1b32f140cd0.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/ai-consulting",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/website-design/page-1b4f0d022629a4ee.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/seo/page-5fb7b7525fda0522.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/local-seo/page-d64c2959524d48ae.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/local-seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/website-redesign",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/rapid-web-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/software-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/shopify-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/wordpress-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/ai-digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/ai-gpt-integration",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/chatgpt-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/generative-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/ai-agent-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/answer-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/enterprise-geo-services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/social-media-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il"
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/rapid-web-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/website-redesign",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca"
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/software-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/wordpress-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/shopify-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/ai-agent-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/ai-digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/ai-gpt-integration",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/chatgpt-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/generative-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/enterprise-geo-services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/answer-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/social-media-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/locations/page-ce3d72ed15ffa43b.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/tucson-az/industry/education/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/mesa-az/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/tucson-az/industry/education/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/tucson-az/industry/education/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/mesa-az/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/mesa-az/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/los-angeles-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-diego-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-jose-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-diego-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-diego-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-jose-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-jose-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-francisco-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-francisco-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/fresno-ca/industry/agriculture/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/fresno-ca/industry/agriculture/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/fresno-ca/industry/agriculture/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-francisco-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/sacramento-ca/industry/government/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/sacramento-ca/industry/government/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/denver-co/industry/energy/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/denver-co/industry/energy/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/sacramento-ca/industry/government/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/washington-dc/industry/government/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/denver-co/industry/energy/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/washington-dc/industry/government/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/jacksonville-fl/industry/logistics/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/washington-dc/industry/government/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/jacksonville-fl/industry/logistics/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/indianapolis-in/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/chicago-il/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/indianapolis-in/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/indianapolis-in/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/louisville-ky/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/jacksonville-fl/industry/logistics/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/louisville-ky/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/louisville-ky/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/boston-ma/industry/education/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/boston-ma/industry/education/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/baltimore-md/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/baltimore-md/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/boston-ma/industry/education/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/detroit-mi/industry/automotive/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/baltimore-md/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/detroit-mi/industry/automotive/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/detroit-mi/industry/automotive/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/kansas-city-mo/industry/logistics/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/charlotte-nc/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/charlotte-nc/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/kansas-city-mo/industry/logistics/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/charlotte-nc/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/kansas-city-mo/industry/logistics/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/albuquerque-nm/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/albuquerque-nm/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/albuquerque-nm/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/las-vegas-nv/industry/tourism/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/las-vegas-nv/industry/tourism/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/las-vegas-nv/industry/tourism/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/columbus-oh/industry/education/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/columbus-oh/industry/education/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/oklahoma-city-ok/industry/energy/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/columbus-oh/industry/education/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/oklahoma-city-ok/industry/energy/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/oklahoma-city-ok/industry/energy/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/portland-or/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/portland-or/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/portland-or/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/nashville-tn/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/nashville-tn/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/memphis-tn/industry/logistics/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/memphis-tn/industry/logistics/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/nashville-tn/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/memphis-tn/industry/logistics/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/industry/energy/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-antonio-tx/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/industry/energy/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/industry/energy/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/dallas-tx/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-antonio-tx/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/san-antonio-tx/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/dallas-tx/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/dallas-tx/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/fort-worth-tx/industry/aerospace/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/fort-worth-tx/industry/aerospace/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/fort-worth-tx/industry/aerospace/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/el-paso-tx/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/seattle-wa/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/el-paso-tx/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/el-paso-tx/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/milwaukee-wi/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/seattle-wa/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/milwaukee-wi/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/milwaukee-wi/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/website-redesign",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/seattle-wa/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/locations",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/rapid-web-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny"
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/software-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/shopify-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/wordpress-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/ai-digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/chatgpt-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/ai-gpt-integration",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/ai-agent-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/generative-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/answer-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/enterprise-geo-services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/social-media-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/new-york-ny/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/rapid-web-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa"
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/website-redesign",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/shopify-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/software-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/wordpress-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/ai-digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/ai-agent-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/ai-gpt-integration",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/generative-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/enterprise-geo-services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/answer-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/chatgpt-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/social-media-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/philadelphia-pa/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/website-redesign",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/rapid-web-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx"
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/software-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/shopify-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/wordpress-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/ai-digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/ai-gpt-integration",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/ai-agent-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/generative-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/chatgpt-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/enterprise-geo-services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/answer-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/social-media-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/houston-tx/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/website-redesign",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/rapid-web-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az"
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/software-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/shopify-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/ai-digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/ai-agent-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/ai-gpt-integration",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/answer-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/chatgpt-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/generative-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/wordpress-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/enterprise-geo-services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/phoenix-az/social-media-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/digital-marketing/page-258cd928c427bfd6.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/digital-marketing",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/website-redesign",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/rapid-web-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/ui-ux-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/ecommerce-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx"
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/software-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/software-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/ai-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/ai-consulting",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/shopify-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/ai-digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/ai-gpt-integration",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/wordpress-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/ai-agent-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/generative-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/chatgpt-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/enterprise-geo-services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/digital-marketing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/local-seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/answer-engine-optimization",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/social-media-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/cro-lead-generation/page-f5a47e0b89aa5b19.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/cro-lead-generation",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/ui-ux-design/page-585eb2609827669b.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/ui-ux-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/austin-tx/cro-lead-generation",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/ecommerce-design/page-52f3a94b5b573559.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/ecommerce-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/cro-ecommerce",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/cro-lead-generation",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/app-design-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/ui-ux-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/services/email-marketing-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/cro-lead-generation",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/website-redesign",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/website-redesign"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/ui-ux-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/ui-ux-design"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/app-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/app-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/website-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/website-design"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/ecommerce-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/ecommerce-design"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/rapid-web-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/rapid-web-design"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/software-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/software-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/shopify-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/shopify-development"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/wordpress-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/wordpress-development"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/ai-consulting",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/ai-consulting"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/ai-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/ai-seo"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/web-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/web-development"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/ai-gpt-integration",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/ai-gpt-integration"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/software-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/software-development"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/ai-agent-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/ai-agent-development"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/ai-digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/ai-digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/chatgpt-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/chatgpt-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/generative-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/generative-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/answer-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/answer-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/enterprise-geo-services",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/enterprise-geo-services"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/cro-ecommerce",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/cro-ecommerce"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/social-media-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/social-media-design"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/local-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/local-seo"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/seo"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/email-marketing-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/email-marketing-design"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/website-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/website-design"
+    },
+    {
+      "url": "https://yourdomain.com/chicago-il/cro-lead-generation",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/chicago-il/cro-lead-generation"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/website-redesign",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/website-redesign"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/rapid-web-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/rapid-web-design"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/ui-ux-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/ui-ux-design"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/ecommerce-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/ecommerce-design"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/web-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/web-development"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/app-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/app-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/wordpress-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/wordpress-development"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/software-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/software-development"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/software-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/software-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/shopify-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/shopify-development"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/ai-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/ai-seo"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/ai-consulting",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/ai-consulting"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/ai-digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/ai-digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/ai-agent-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/ai-agent-development"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/ai-gpt-integration",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/ai-gpt-integration"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/chatgpt-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/chatgpt-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/answer-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/answer-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/generative-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/generative-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/seo"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/enterprise-geo-services",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/enterprise-geo-services"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/local-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/local-seo"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/email-marketing-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/email-marketing-design"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/social-media-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/social-media-design"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/cro-ecommerce",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/cro-ecommerce"
+    },
+    {
+      "url": "https://yourdomain.com/los-angeles-ca/cro-lead-generation",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/los-angeles-ca/cro-lead-generation"
+    },
+    {
+      "url": "https://webvello.com/phoenix-az/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/phoenix-az/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/tucson-az/industry/education/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/tucson-az/industry/education/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/tucson-az/industry/education/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/tucson-az/industry/education/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/mesa-az/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/mesa-az/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/phoenix-az/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/phoenix-az/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/mesa-az/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/mesa-az/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/los-angeles-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/los-angeles-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-diego-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-diego-ca/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/los-angeles-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/los-angeles-ca/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/tucson-az/industry/education/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/tucson-az/industry/education/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-jose-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-jose-ca/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-diego-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-diego-ca/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/mesa-az/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/mesa-az/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-diego-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-diego-ca/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-jose-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-jose-ca/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-jose-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-jose-ca/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-francisco-ca/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-francisco-ca/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/fresno-ca/industry/agriculture/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/fresno-ca/industry/agriculture/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-francisco-ca/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-francisco-ca/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/fresno-ca/industry/agriculture/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/fresno-ca/industry/agriculture/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/sacramento-ca/industry/government/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/sacramento-ca/industry/government/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/fresno-ca/industry/agriculture/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/fresno-ca/industry/agriculture/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-francisco-ca/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-francisco-ca/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/denver-co/industry/energy/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/denver-co/industry/energy/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/denver-co/industry/energy/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/denver-co/industry/energy/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/sacramento-ca/industry/government/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/sacramento-ca/industry/government/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/sacramento-ca/industry/government/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/sacramento-ca/industry/government/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/washington-dc/industry/government/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/washington-dc/industry/government/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/denver-co/industry/energy/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/denver-co/industry/energy/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/washington-dc/industry/government/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/washington-dc/industry/government/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/jacksonville-fl/industry/logistics/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/jacksonville-fl/industry/logistics/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/chicago-il/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il/industry/finance/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/jacksonville-fl/industry/logistics/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/jacksonville-fl/industry/logistics/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/washington-dc/industry/government/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/washington-dc/industry/government/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/indianapolis-in/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/indianapolis-in/industry/manufacturing/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/chicago-il/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il/industry/finance/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/indianapolis-in/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/indianapolis-in/industry/manufacturing/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/indianapolis-in/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/indianapolis-in/industry/manufacturing/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/chicago-il/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/chicago-il/industry/finance/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/jacksonville-fl/industry/logistics/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/jacksonville-fl/industry/logistics/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/louisville-ky/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/louisville-ky/industry/manufacturing/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/louisville-ky/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/louisville-ky/industry/manufacturing/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/louisville-ky/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/louisville-ky/industry/manufacturing/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/boston-ma/industry/education/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/boston-ma/industry/education/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/boston-ma/industry/education/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/boston-ma/industry/education/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/baltimore-md/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/baltimore-md/industry/healthcare/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/boston-ma/industry/education/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/boston-ma/industry/education/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/detroit-mi/industry/automotive/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/detroit-mi/industry/automotive/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/baltimore-md/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/baltimore-md/industry/healthcare/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/baltimore-md/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/baltimore-md/industry/healthcare/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/detroit-mi/industry/automotive/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/detroit-mi/industry/automotive/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/charlotte-nc/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/charlotte-nc/industry/finance/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/detroit-mi/industry/automotive/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/detroit-mi/industry/automotive/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/kansas-city-mo/industry/logistics/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/kansas-city-mo/industry/logistics/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/charlotte-nc/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/charlotte-nc/industry/finance/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/kansas-city-mo/industry/logistics/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/kansas-city-mo/industry/logistics/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/albuquerque-nm/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/albuquerque-nm/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/kansas-city-mo/industry/logistics/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/kansas-city-mo/industry/logistics/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/charlotte-nc/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/charlotte-nc/industry/finance/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/albuquerque-nm/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/albuquerque-nm/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/albuquerque-nm/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/albuquerque-nm/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/las-vegas-nv/industry/tourism/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/las-vegas-nv/industry/tourism/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/las-vegas-nv/industry/tourism/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/las-vegas-nv/industry/tourism/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/new-york-ny/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny/industry/finance/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/new-york-ny/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny/industry/finance/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/new-york-ny/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/new-york-ny/industry/finance/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/columbus-oh/industry/education/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/columbus-oh/industry/education/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/las-vegas-nv/industry/tourism/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/las-vegas-nv/industry/tourism/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/columbus-oh/industry/education/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/columbus-oh/industry/education/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/columbus-oh/industry/education/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/columbus-oh/industry/education/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/oklahoma-city-ok/industry/energy/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/oklahoma-city-ok/industry/energy/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/oklahoma-city-ok/industry/energy/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/oklahoma-city-ok/industry/energy/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/portland-or/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/portland-or/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/oklahoma-city-ok/industry/energy/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/oklahoma-city-ok/industry/energy/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/portland-or/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/portland-or/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/philadelphia-pa/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa/industry/healthcare/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/portland-or/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/portland-or/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/philadelphia-pa/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa/industry/healthcare/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/philadelphia-pa/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/philadelphia-pa/industry/healthcare/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/nashville-tn/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/nashville-tn/industry/healthcare/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/memphis-tn/industry/logistics/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/memphis-tn/industry/logistics/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/memphis-tn/industry/logistics/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/memphis-tn/industry/logistics/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/nashville-tn/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/nashville-tn/industry/healthcare/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/nashville-tn/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/nashville-tn/industry/healthcare/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/memphis-tn/industry/logistics/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/memphis-tn/industry/logistics/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/houston-tx/industry/energy/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx/industry/energy/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-antonio-tx/industry/healthcare/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-antonio-tx/industry/healthcare/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/houston-tx/industry/energy/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx/industry/energy/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/houston-tx/industry/energy/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/houston-tx/industry/energy/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-antonio-tx/industry/healthcare/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-antonio-tx/industry/healthcare/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/dallas-tx/industry/finance/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/dallas-tx/industry/finance/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/dallas-tx/industry/finance/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/dallas-tx/industry/finance/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/san-antonio-tx/industry/healthcare/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/san-antonio-tx/industry/healthcare/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/austin-tx/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/austin-tx/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/austin-tx/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/austin-tx/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/dallas-tx/industry/finance/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/dallas-tx/industry/finance/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/fort-worth-tx/industry/aerospace/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/fort-worth-tx/industry/aerospace/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/fort-worth-tx/industry/aerospace/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/fort-worth-tx/industry/aerospace/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/fort-worth-tx/industry/aerospace/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/fort-worth-tx/industry/aerospace/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/el-paso-tx/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/el-paso-tx/industry/manufacturing/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/el-paso-tx/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/el-paso-tx/industry/manufacturing/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/seattle-wa/industry/technology/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/seattle-wa/industry/technology/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/el-paso-tx/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/el-paso-tx/industry/manufacturing/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/milwaukee-wi/industry/manufacturing/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/milwaukee-wi/industry/manufacturing/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/milwaukee-wi/industry/manufacturing/seo",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/milwaukee-wi/industry/manufacturing/seo",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/seattle-wa/industry/technology/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/seattle-wa/industry/technology/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/seattle-wa/industry/technology/web-development",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/seattle-wa/industry/technology/web-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://webvello.com/milwaukee-wi/industry/manufacturing/website-design",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/milwaukee-wi/industry/manufacturing/website-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/website-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/website-design"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/website-redesign",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/website-redesign"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/rapid-web-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/rapid-web-design"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/ui-ux-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/ui-ux-design"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/app-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/app-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/software-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/software-development"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/software-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/software-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/web-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/web-development"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/ecommerce-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/ecommerce-design"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/ai-consulting",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/ai-consulting"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/shopify-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/shopify-development"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/wordpress-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/wordpress-development"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/ai-digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/ai-digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/ai-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/ai-seo"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/ai-gpt-integration",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/ai-gpt-integration"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/chatgpt-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/chatgpt-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/ai-agent-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/ai-agent-development"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/answer-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/answer-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/generative-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/generative-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/enterprise-geo-services",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/enterprise-geo-services"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/local-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/local-seo"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/seo"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/email-marketing-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/email-marketing-design"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/social-media-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/social-media-design"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/cro-ecommerce",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/cro-ecommerce"
+    },
+    {
+      "url": "https://yourdomain.com/new-york-ny/cro-lead-generation",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/new-york-ny/cro-lead-generation"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/website-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/website-design"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/rapid-web-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/rapid-web-design"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/ecommerce-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/ecommerce-design"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/ui-ux-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/ui-ux-design"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/web-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/web-development"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/software-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/software-development"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/app-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/app-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/website-redesign",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/website-redesign"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/wordpress-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/wordpress-development"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/shopify-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/shopify-development"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/software-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/software-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/ai-digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/ai-digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/ai-consulting",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/ai-consulting"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/ai-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/ai-seo"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/ai-agent-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/ai-agent-development"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/answer-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/answer-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/generative-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/generative-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/enterprise-geo-services",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/enterprise-geo-services"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/ai-gpt-integration",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/ai-gpt-integration"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/seo"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/local-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/local-seo"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/chatgpt-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/chatgpt-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/email-marketing-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/email-marketing-design"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/cro-lead-generation",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/cro-lead-generation"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/social-media-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/social-media-design"
+    },
+    {
+      "url": "https://yourdomain.com/philadelphia-pa/cro-ecommerce",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/philadelphia-pa/cro-ecommerce"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/website-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/website-design"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/website-redesign",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/website-redesign"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/app-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/app-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/ecommerce-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/ecommerce-design"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/rapid-web-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/rapid-web-design"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/ui-ux-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/ui-ux-design"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/web-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/web-development"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/software-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/software-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/software-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/software-development"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/shopify-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/shopify-development"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/wordpress-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/wordpress-development"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/ai-digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/ai-digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/ai-agent-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/ai-agent-development"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/ai-consulting",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/ai-consulting"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/ai-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/ai-seo"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/ai-gpt-integration",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/ai-gpt-integration"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/chatgpt-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/chatgpt-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/generative-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/generative-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/enterprise-geo-services",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/enterprise-geo-services"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/seo"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/local-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/local-seo"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/answer-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/answer-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/email-marketing-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/email-marketing-design"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/social-media-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/social-media-design"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/cro-lead-generation",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/cro-lead-generation"
+    },
+    {
+      "url": "https://yourdomain.com/houston-tx/cro-ecommerce",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/houston-tx/cro-ecommerce"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/website-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/website-design"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/ecommerce-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/ecommerce-design"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/ui-ux-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/ui-ux-design"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/rapid-web-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/rapid-web-design"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/website-redesign",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/website-redesign"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/web-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/web-development"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/software-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/software-development"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/app-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/app-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/ai-consulting",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/ai-consulting"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/ai-digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/ai-digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/software-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/software-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/ai-agent-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/ai-agent-development"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/shopify-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/shopify-development"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/ai-gpt-integration",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/ai-gpt-integration"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/answer-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/answer-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/chatgpt-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/chatgpt-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/wordpress-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/wordpress-development"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/ai-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/ai-seo"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/seo"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/generative-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/generative-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/email-marketing-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/email-marketing-design"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/enterprise-geo-services",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/enterprise-geo-services"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/local-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/local-seo"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/cro-lead-generation",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/cro-lead-generation"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/cro-ecommerce",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/cro-ecommerce"
+    },
+    {
+      "url": "https://yourdomain.com/phoenix-az/social-media-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/phoenix-az/social-media-design"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/website-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/website-design"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/rapid-web-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/rapid-web-design"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/website-redesign",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/website-redesign"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/web-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/web-development"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/ecommerce-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/ecommerce-design"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/software-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/software-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/app-design-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/app-design-development"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/software-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/software-development"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/ui-ux-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/ui-ux-design"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/ai-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/ai-seo"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/shopify-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/shopify-development"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/ai-gpt-integration",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/ai-gpt-integration"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/generative-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/generative-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/wordpress-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/wordpress-development"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/ai-agent-development",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/ai-agent-development"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/ai-consulting",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/ai-consulting"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/ai-digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/ai-digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/enterprise-geo-services",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/enterprise-geo-services"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/chatgpt-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/chatgpt-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/answer-engine-optimization",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/answer-engine-optimization"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/local-seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/local-seo"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/digital-marketing",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/digital-marketing"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/seo",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/seo"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/email-marketing-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/email-marketing-design"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/social-media-design",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/social-media-design"
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/cro-ecommerce/page-e387bc1a1ec2fd67.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/cro-ecommerce",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/app-design-development/page-fa9ecd198ba8f3a6.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/app-design-development",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.webvello.com/_next/static/chunks/app/services/email-marketing-design/page-ef303434d852f757.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://www.webvello.com/services/email-marketing-design",
+      "failureDetails": []
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/cro-ecommerce",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/cro-ecommerce"
+    },
+    {
+      "url": "https://yourdomain.com/austin-tx/cro-lead-generation",
+      "status": 307,
+      "state": "BROKEN",
+      "parent": "https://www.webvello.com/austin-tx/cro-lead-generation"
+    }
+  ],
+  "passed": false
+}
