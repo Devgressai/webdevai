@@ -45,6 +45,8 @@ export function Hero() {
         ></div>
         {/* Light overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/65 via-slate-950/45 to-slate-950/65"></div>
+        {/* Radial focus scrim behind headline */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.6)_0%,rgba(0,0,0,0)_60%)]"></div>
       </div>
       
       {/* Background Elements */}
@@ -64,11 +66,11 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-28 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-3xl text-center">
           {/* Simplified headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4 sm:mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4 sm:mb-6 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
             Design. Develop. Dominate.
           </h1>
           {/* Short supporting line */}
-          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto px-4 sm:px-0">
+          <p className="text-lg sm:text-xl text-white/95 max-w-2xl mx-auto px-4 sm:px-0 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
             High-converting websites and SEO that grow revenue—fast.
           </p>
 
