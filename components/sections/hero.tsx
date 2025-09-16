@@ -44,7 +44,7 @@ export function Hero() {
           }}
         ></div>
         {/* Light overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-slate-800/20 to-slate-900/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/65 via-slate-950/45 to-slate-950/65"></div>
       </div>
       
       {/* Background Elements */}
