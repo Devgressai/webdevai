@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 
 type ContactPayload = {
   name: string
@@ -32,16 +33,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Invalid name or email' }, { status: 400 })
     }
 
-    const RESEND_API_KEY = process.env.RESEND_API_KEY
     const TO_EMAIL = process.env.CONTACT_TO_EMAIL
     const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'no-reply@webvello.com'
-
-    if (!RESEND_API_KEY || !TO_EMAIL) {
-      return NextResponse.json({ ok: false, error: 'Email service not configured' }, { status: 500 })
-    }
-
     const subject = `New Contact Form Submission: ${name}${service ? ` • ${service}` : ''}`
-
     const html = `
       <h2>New Contact Form Submission</h2>
       <p><strong>Name:</strong> ${name}</p>
@@ -55,28 +49,59 @@ export async function POST(req: NextRequest) {
       <hr />
       <p>Submitted at ${new Date().toISOString()}</p>
     `
-
-    const resp = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        from: FROM_EMAIL,
-        to: [TO_EMAIL],
-        subject,
-        html,
-        reply_to: email,
-      })
-    })
-
-    if (!resp.ok) {
-      const text = await resp.text()
-      return NextResponse.json({ ok: false, error: 'Failed to send email', detail: text }, { status: 502 })
+    if (!TO_EMAIL) {
+      return NextResponse.json({ ok: false, error: 'CONTACT_TO_EMAIL not set' }, { status: 500 })
     }
 
-    return NextResponse.json({ ok: true })
+    // 1) Try SMTP first if credentials exist
+    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env
+    if (SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: SMTP_HOST,
+          port: Number(SMTP_PORT),
+          secure: Number(SMTP_PORT) === 465, // true for 465, false for others
+          auth: { user: SMTP_USER, pass: SMTP_PASS },
+        })
+
+        await transporter.sendMail({
+          from: FROM_EMAIL,
+          to: TO_EMAIL,
+          subject,
+          html,
+          replyTo: email,
+        })
+
+        return NextResponse.json({ ok: true, via: 'smtp' })
+      } catch (smtpErr) {
+        // fall through to Resend
+      }
+    }
+
+    // 2) Fallback to Resend if configured
+    const RESEND_API_KEY = process.env.RESEND_API_KEY
+    if (RESEND_API_KEY) {
+      const resp = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${RESEND_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from: FROM_EMAIL,
+          to: [TO_EMAIL],
+          subject,
+          html,
+          reply_to: email,
+        })
+      })
+
+      if (resp.ok) {
+        return NextResponse.json({ ok: true, via: 'resend' })
+      }
+    }
+
+    return NextResponse.json({ ok: false, error: 'Email delivery not configured' }, { status: 500 })
   } catch (err) {
     return NextResponse.json({ ok: false, error: 'Unexpected error' }, { status: 500 })
   }

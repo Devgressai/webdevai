@@ -62,36 +62,14 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-28 lg:px-10 lg:py-36">
-        <div className="mx-auto max-w-2xl text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-6 sm:mb-8 shadow-2xl">
-            <Star className="mr-2 h-4 w-4 sm:h-5 sm:w-5 fill-white" />
-            <span className="hidden sm:inline">Trusted by 500+ businesses nationwide</span>
-            <span className="sm:hidden">500+ businesses trust us</span>
-          </div>
-
-          {/* Slogan */}
-          <div className="mb-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide text-white">
-              <span className="text-white">Design</span>
-              <span className="text-white/70 mx-2">•</span>
-              <span className="text-white">Develop</span>
-              <span className="text-white/70 mx-2">•</span>
-              <span className="text-white">Dominate</span>
-            </h2>
-          </div>
-
-          {/* Main H1 Heading for SEO */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white leading-tight mb-4 sm:mb-6">
-            Stop Losing Customers to Competitors
-            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-blue-300 mt-1 sm:mt-2">
-              Get Found First with AI-Powered SEO
-            </span>
+        <div className="mx-auto max-w-3xl text-center">
+          {/* Simplified headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4 sm:mb-6">
+            Design. Develop. Dominate.
           </h1>
-          
-          {/* Subheading */}
-          <p className="text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 text-white/90 max-w-3xl mx-auto px-4 sm:px-0">
-            We help professional services firms dominate search results and generate 300%+ more qualified leads in 6 months. Our AI-powered strategies have generated $2.4M+ in client revenue.
+          {/* Short supporting line */}
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto px-4 sm:px-0">
+            High-converting websites and SEO that grow revenue—fast.
           </p>
 
           {/* CTA Buttons */}
@@ -110,40 +88,16 @@ export function Hero() {
               variant="outline" 
               size="xl" 
               className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold backdrop-blur-sm" 
-              onClick={() => handleCTAClick('See 300%+ Results', 'hero_section')}
+              onClick={() => handleCTAClick('See Work', 'hero_section')}
               asChild
             >
               <Link href="/case-studies" className="flex items-center">
                 <Play className="mr-2 h-5 w-5" />
-                See Client Results
+                See Our Work
               </Link>
             </Button>
           </div>
-          
-          {/* Trust Signals & Urgency */}
-          <div className="mt-6 text-center">
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-3">
-              <div className="flex items-center text-xs sm:text-sm text-white/80">
-                <Award className="w-4 h-4 mr-1 text-yellow-400" />
-                Google Partner Certified
-              </div>
-              <div className="flex items-center text-xs sm:text-sm text-white/80">
-                <Shield className="w-4 h-4 mr-1 text-green-400" />
-                30-Day Guarantee
-              </div>
-              <div className="flex items-center text-xs sm:text-sm text-white/80">
-                <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                4.9/5 Rating
-              </div>
-            </div>
-            <p className="text-xs sm:text-sm text-white mb-2">
-              ⚡ <span className="font-semibold">Limited Time:</span> Free website audit (normally $500)
-            </p>
-            <p className="text-xs text-white/90">
-              <span className="hidden sm:inline">Only 3 spots available this week • 500+ businesses trust us</span>
-              <span className="sm:hidden">Only 3 spots this week</span>
-            </p>
-          </div>
+
 
 
         </div>
