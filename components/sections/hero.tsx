@@ -40,7 +40,7 @@ export function Hero() {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/hero-night-orbit.webp')"
+            backgroundImage: "url('/images/hero-night-orbit.webp?v=1')"
           }}
         ></div>
         {/* Light overlay for text readability */}
