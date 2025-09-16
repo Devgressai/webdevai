@@ -338,11 +338,11 @@ export function NewHeader() {
                      
                      {openDropdown === item.name && (
                        <div 
-                         className="absolute left-1/2 z-[9999] mt-2 flex w-[90vw] max-w-6xl -translate-x-1/2 px-4"
+                         className="absolute inset-x-0 z-[9999] mt-2 px-4"
                          onMouseEnter={() => handleMouseEnter(item.name)}
                          onMouseLeave={handleMouseLeave}
                        >
-                         <div className="w-[90vw] max-w-6xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-2xl ring-1 ring-secondary-900/5 border border-gray-100">
+                         <div className="mx-auto w-full max-w-5xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-2xl ring-1 ring-secondary-900/5 border border-gray-100">
                            <div className="p-6">
                              {/* Header */}
                              <div className="mb-6">
