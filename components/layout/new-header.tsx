@@ -320,7 +320,7 @@ export function NewHeader() {
           
                      {/* Desktop Navigation */}
            <div className="hidden lg:flex lg:gap-x-1">
-             {navigation.map((item) => (
+             {navigation.map((item, idx) => (
                <div key={item.name} className="relative">
                  {item.children ? (
                    <div 
@@ -338,11 +338,11 @@ export function NewHeader() {
                      
                      {openDropdown === item.name && (
                        <div 
-                         className="absolute inset-x-0 z-[9999] mt-2 px-4"
+                         className={`${idx < 2 ? 'absolute left-0 -translate-x-0' : 'absolute left-1/2 -translate-x-1/2'} z-[9999] mt-2 flex w-screen max-w-6xl px-4`}
                          onMouseEnter={() => handleMouseEnter(item.name)}
                          onMouseLeave={handleMouseLeave}
                        >
-                         <div className="mx-auto w-full max-w-5xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-2xl ring-1 ring-secondary-900/5 border border-gray-100">
+                         <div className="w-full max-w-6xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-2xl ring-1 ring-secondary-900/5 border border-gray-100">
                            <div className="p-6">
                              {/* Header */}
                              <div className="mb-6">
