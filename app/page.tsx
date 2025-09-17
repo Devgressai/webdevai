@@ -5,7 +5,7 @@ import { Hero } from '../components/sections/hero'
 import dynamic from 'next/dynamic'
 const Pricing = dynamic(() => import('../components/sections/pricing').then(m => m.Pricing), { ssr: true })
 const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment').then(m => m.WebsiteAssessment), { ssr: true })
-import { SocialProof } from '../components/sections/social-proof'
+const SocialProof = dynamic(() => import('../components/sections/social-proof').then(m => m.SocialProof), { ssr: false })
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Target as TargetIcon, Star } from 'lucide-react'
@@ -111,22 +111,39 @@ export default function HomePage() {
               Clear focus, senior expertise, measurable results, and transparent reporting—every engagement.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl p-6 shadow-sm border">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Focus</h3>
-              <p className="text-secondary-700">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+          <div className="relative grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-gray-200 to-gray-300 -translate-y-1/2"></div>
+            {/* Step 1 */}
+            <div className="relative text-center md:text-left">
+              <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">1</div>
+              <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Focus</h3>
+                <p className="text-secondary-700">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-sm border">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Expertise</h3>
-              <p className="text-secondary-700">Certified senior team combining strategy, UX, engineering, and data science.</p>
+            {/* Step 2 */}
+            <div className="relative text-center md:text-left">
+              <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">2</div>
+              <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Expertise</h3>
+                <p className="text-secondary-700">Certified senior team combining strategy, UX, engineering, and data science.</p>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-sm border">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Results</h3>
-              <p className="text-secondary-700">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+            {/* Step 3 */}
+            <div className="relative text-center md:text-left">
+              <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">3</div>
+              <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Results</h3>
+                <p className="text-secondary-700">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-sm border">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Transparency</h3>
-              <p className="text-secondary-700">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+            {/* Step 4 */}
+            <div className="relative text-center md:text-left">
+              <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">4</div>
+              <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Transparency</h3>
+                <p className="text-secondary-700">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -290,12 +307,9 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 relative overflow-hidden">
         {/* Background image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{ 
-            backgroundImage: "url('/images/hero-data-analysis.webp')"
-          }}
-        ></div>
+        <div className="absolute inset-0 opacity-20">
+          <Image src="/images/hero-data-analysis.webp" alt="" fill sizes="100vw" className="object-cover" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-br from-primary-600/80 via-primary-700/80 to-secondary-800/80"></div>
         {/* Background pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30"></div>
@@ -475,14 +489,11 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
         {/* Background image and gradient flow */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{ 
-            backgroundImage: "url('/images/hero-business-meeting.webp')"
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-blue-500/40"></div>
-        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 opacity-20">
+          <Image src="/images/hero-business-meeting.webp" alt="" fill sizes="100vw" className="object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/25 via-pink-500/25 to-blue-500/25"></div>
+        {/* Removed pulsing/blurred orb for performance */}
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
@@ -490,7 +501,7 @@ export default function HomePage() {
             {/* Text and CTA - Golden Ratio Layout */}
             <div className="text-white">
               {/* Badge - Golden ratio spacing */}
-              <div className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-sm px-4 py-2.5 text-sm font-medium text-white/90 mb-8 border border-white/20">
+              <div className="inline-flex items-center rounded-full bg-white/10 px-4 py-2.5 text-sm font-medium text-white/90 mb-8 border border-white/20">
                 <span className="hidden sm:inline">DIGITAL MARKETING THAT DELIVERS RESULTS</span>
                 <span className="sm:hidden">RESULTS-DRIVEN MARKETING</span>
               </div>
@@ -520,8 +531,9 @@ export default function HomePage() {
                 />
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse text-base"
+                  className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                   onClick={() => handleProposalRequest('homepage_input')}
+                  aria-label="Get a free SEO audit"
                 >
                   🎯 Get Free SEO Audit
                 </Button>

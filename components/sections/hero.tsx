@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Shield } from "lucide-react"
+import Image from 'next/image'
 // import { useConversionTracking } from "../../hooks/useConversionTracking"
 // import ScrollTracker from "../analytics/scroll-tracker"
 
@@ -37,12 +38,14 @@ export function Hero() {
       {/* <ScrollTracker /> */}
       {/* Background Image */}
       <div className="absolute inset-0">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/images/hero-night-orbit.webp?v=1')"
-          }}
-        ></div>
+        <Image 
+          src="/images/hero-night-orbit.webp?v=1" 
+          alt="" 
+          fill 
+          priority 
+          sizes="100vw" 
+          className="object-cover"
+        />
         {/* Light overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-slate-950/10 to-slate-950/20"></div>
       </div>
@@ -76,22 +79,22 @@ export function Hero() {
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
             <Button 
               size="xl" 
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-400/25 transition-all duration-300" 
+              className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-400/25 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white" 
               onClick={handleStrategySessionClick}
               asChild
             >
-              <Link href="/contact">
+              <Link href="/contact" aria-label="Get a free website audit">
                 Audit My Website Now (Free)
               </Link>
             </Button>
             <Button 
               variant="outline" 
               size="xl" 
-              className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold" 
+              className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white" 
               onClick={() => handleCTAClick('See Work', 'hero_section')}
               asChild
             >
-              <Link href="/case-studies" className="flex items-center">
+              <Link href="/case-studies" className="flex items-center" aria-label="View case studies">
                 <Play className="mr-2 h-5 w-5" />
                 See Our Work
               </Link>

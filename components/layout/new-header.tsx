@@ -399,7 +399,7 @@ export function NewHeader() {
            </div>
           
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button asChild className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transition-all duration-200 px-8 py-3 text-base font-semibold">
+            <Button asChild className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transition-all duration-200 px-6 sm:px-8 py-3 text-base font-semibold">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
