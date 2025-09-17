@@ -75,6 +75,20 @@ const results = [
 export default function AISeOPage() {
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'AI SEO',
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://webvello.com', logo: 'https://webvello.com/logo.png' },
+            areaServed: 'US',
+            audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
+            brand: { '@type': 'Brand', name: 'Web Vello' }
+          })
+        }}
+      />
       {/* Hero Section with AI Visualization */}
       <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 relative overflow-hidden">
         {/* Animated AI Background Elements */}
@@ -178,6 +192,34 @@ export default function AISeOPage() {
               <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{animationDelay: '0.6s'}}></div>
               <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-orange-400 rounded-full animate-ping" style={{animationDelay: '0.9s'}}></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Page-level FAQs */}
+      <section className="py-24 bg-gray-50">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-8">AI SEO FAQs</h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: 'What is AI SEO? ',
+                a: 'AI SEO uses machine learning to analyze large data sets, identify opportunities faster, and continuously improve content, internal links, and metadata.'
+              },
+              {
+                q: 'How fast will we see results?',
+                a: 'Most clients see leading indicators within 30–45 days and significant growth by months 3–6, depending on competition and content velocity.'
+              },
+              {
+                q: 'Will AI replace human content?',
+                a: 'No. We pair AI research/briefs with expert human editing, brand voice guidelines, and fact‑checking to ensure quality and originality.'
+              }
+            ].map((f, i) => (
+              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="font-semibold text-secondary-900 mb-2">{f.q}</h3>
+                <p className="text-secondary-700">{f.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

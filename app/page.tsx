@@ -102,6 +102,36 @@ export default function HomePage() {
       {/* Social Proof Section */}
       <SocialProof />
       
+      {/* How We Work (aligns with AI Overview facets) */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">How We Work</h2>
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+              Clear focus, senior expertise, measurable results, and transparent reporting—every engagement.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-2xl p-6 shadow-sm border">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Focus</h3>
+              <p className="text-secondary-700">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm border">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Expertise</h3>
+              <p className="text-secondary-700">Certified senior team combining strategy, UX, engineering, and data science.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm border">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Results</h3>
+              <p className="text-secondary-700">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm border">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Transparency</h3>
+              <p className="text-secondary-700">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SEO-Optimized Content Section */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

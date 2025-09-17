@@ -131,6 +131,25 @@ export default function WebsiteDesignPage() {
 
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Website Design',
+            provider: {
+              '@type': 'Organization',
+              name: 'Web Vello',
+              url: 'https://webvello.com',
+              logo: 'https://webvello.com/logo.png'
+            },
+            areaServed: 'US',
+            audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
+            brand: { '@type': 'Brand', name: 'Web Vello' }
+          })
+        }}
+      />
       <section className="py-32 bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
@@ -205,6 +224,34 @@ export default function WebsiteDesignPage() {
                     ))}
                   </ul>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Page-level FAQs */}
+      <section className="py-24 bg-gray-50">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-8">Website Design FAQs</h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: 'How long does a custom website design take?',
+                a: 'Most projects take 4–8 weeks depending on scope, pages, and integrations. We provide a clear timeline after discovery.'
+              },
+              {
+                q: 'Do you provide copywriting and SEO with design?',
+                a: 'Yes. We include on‑page SEO, technical best practices, and can provide conversion‑focused copy as part of the engagement.'
+              },
+              {
+                q: 'Can you redesign my current site without losing SEO?',
+                a: 'We preserve URLs or set proper 301 redirects, migrate metadata, and monitor rankings to ensure a smooth transition.'
+              }
+            ].map((f, i) => (
+              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="font-semibold text-secondary-900 mb-2">{f.q}</h3>
+                <p className="text-secondary-700">{f.a}</p>
               </div>
             ))}
           </div>

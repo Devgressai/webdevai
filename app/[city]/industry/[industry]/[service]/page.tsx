@@ -243,6 +243,34 @@ export default async function CityIndustryServicePage({ params }: { params: Para
         </div>
       </section>
 
+      {/* Localized FAQs */}
+      <section className="py-12 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">FAQs – {service.name} in {city.name}</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: `How is ${service.name.toLowerCase()} different for ${industry.name.toLowerCase()} companies in ${city.name}?`,
+                a: `We tailor UX, messaging, and local SEO to ${city.name} customers while addressing ${industry.name.toLowerCase()} specifics like regulations, product catalogs, and decision cycles.`
+              },
+              {
+                q: 'How long does a project take?',
+                a: 'Most engagements run 4–8 weeks depending on scope. We share a detailed timeline after discovery.'
+              },
+              {
+                q: 'Will this help organic rankings?',
+                a: 'Yes. We implement technical SEO, structured data, and content strategy aligned to local intent, improving visibility and conversions.'
+              }
+            ].map((f, i) => (
+              <div key={i} className="bg-white rounded-lg shadow p-4 border">
+                <h3 className="font-semibold mb-2">{f.q}</h3>
+                <p className="text-gray-700">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>

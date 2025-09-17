@@ -107,6 +107,20 @@ const results = [
 export default function WordPressDevelopmentPage() {
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'WordPress Development',
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://webvello.com', logo: 'https://webvello.com/logo.png' },
+            areaServed: 'US',
+            audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
+            brand: { '@type': 'Brand', name: 'Web Vello' }
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-blue-50 to-cyan-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

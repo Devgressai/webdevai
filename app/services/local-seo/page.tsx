@@ -78,6 +78,20 @@ const results = [
 export default function LocalSeOPage() {
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Local SEO',
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://webvello.com', logo: 'https://webvello.com/logo.png' },
+            areaServed: 'US',
+            audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
+            brand: { '@type': 'Brand', name: 'Web Vello' }
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-primary-50 to-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

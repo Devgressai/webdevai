@@ -210,6 +210,33 @@ export default function RootLayout({
             })
           }}
         />
+        {/* ProfessionalService subtype for clearer entity signals */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Web Vello",
+              "url": "https://webvello.com",
+              "image": "https://webvello.com/logo.png",
+              "slogan": "Design. Develop. Dominate.",
+              "serviceType": [
+                "AI SEO",
+                "Local SEO",
+                "Website Design",
+                "Web Development"
+              ],
+              "areaServed": "US",
+              "telephone": "+1-737-888-5723",
+              "sameAs": [
+                "https://twitter.com/webvello",
+                "https://linkedin.com/company/webvello",
+                "https://facebook.com/webvello"
+              ]
+            })
+          }}
+        />
       </head>
       <body className="antialiased bg-white">
         {/* <GoogleAnalytics /> */}

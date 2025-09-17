@@ -89,6 +89,23 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* What is Web Vello? entity copy */}
+      <section className="py-24 bg-gray-50">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">What is Web Vello?</h2>
+          <p className="text-lg text-secondary-700 mb-4">
+            Web Vello is a professional digital marketing agency and technology partner for B2B organizations in the
+            United States. We specialize in AI‑powered SEO, Local SEO, website design, and custom web development.
+            Our methodology blends data, experimentation, and creative strategy to deliver measurable growth.
+          </p>
+          <p className="text-secondary-700">
+            Clients choose us for transparent reporting, a senior expert team, and proven results—often 300%+ traffic
+            growth within 6 months. We operate nationwide with deep experience across regulated and competitive
+            industries.
+          </p>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
