@@ -56,11 +56,9 @@ export default async function HtmlSitemap() {
 
       <section className="mt-10">
         <h2 className="text-2xl font-semibold mb-3">City × Industry × Service</h2>
-        <p className="text-secondary-600 mb-3">Browse per‑city sitemaps:</p>
-        <ul className="columns-2 md:columns-3 gap-4 [&_a]:break-words">
-          {['new-york-ny','los-angeles-ca','chicago-il','houston-tx','phoenix-az','philadelphia-pa','austin-tx','dallas-tx','san-diego-ca','san-jose-ca'].map((c)=> (
-            <li key={c}><Link className="text-primary-600 hover:underline" href={`/sitemap/city/${c}`}>{c}</Link></li>
-          ))}
+        <p className="text-secondary-600 mb-3">Browse per‑city sitemaps or by A–Z index:</p>
+        <ul className="list-disc pl-6">
+          <li><Link className="text-primary-600 hover:underline" href="/sitemap/locations">Locations A–Z</Link></li>
         </ul>
       </section>
     </div>
