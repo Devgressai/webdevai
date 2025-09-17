@@ -13,6 +13,8 @@ async function main() {
   const brightness = parseFloat(process.argv[4] || '0.95')
   const saturation = parseFloat(process.argv[5] || '1.05')
   const gammaVal = parseFloat(process.argv[6] || '1.05')
+  const width = parseInt(process.argv[7] || '2000', 10)
+  const quality = parseInt(process.argv[8] || '65', 10)
 
   if (!input) {
     console.error('Missing image URL. Usage: node scripts/process-hero-image.js <url> [outPath]')
@@ -42,10 +44,10 @@ async function main() {
   // Tone adjustments for hero: parametric brightness/saturation/gamma
   // Convert to WebP, target wide hero width
   const processed = await sharp(buffer)
-    .resize({ width: 2400, withoutEnlargement: true })
+    .resize({ width, withoutEnlargement: true })
     .modulate({ brightness, saturation })
     .gamma(gammaVal)
-    .webp({ quality: 80 })
+    .webp({ quality })
     .toBuffer()
 
   fs.writeFileSync(outPath, processed)
