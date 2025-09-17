@@ -143,6 +143,9 @@ export function Footer() {
               <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Terms of Service
               </Link>
+              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
+                HTML Sitemap
+              </Link>
               <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Contact
               </Link>
