@@ -44,9 +44,7 @@ export function Hero() {
           }}
         ></div>
         {/* Light overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/65 via-slate-950/45 to-slate-950/65"></div>
-        {/* Radial focus scrim behind headline */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.6)_0%,rgba(0,0,0,0)_60%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-slate-950/10 to-slate-950/20"></div>
       </div>
       
       {/* Background Elements */}
@@ -55,7 +53,7 @@ export function Hero() {
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-500/5 via-slate-500/5 to-indigo-500/5 opacity-40"></div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/8 to-indigo-600/8 blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-slate-600/8 to-gray-600/8 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-indigo-600/8 to-blue-600/8 blur-3xl"></div>
+        {/* Removed central blur circle for a cleaner, sharper center */}
         
         {/* Subtle geometric shapes */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 rounded-full blur-2xl"></div>

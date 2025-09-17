@@ -10,6 +10,9 @@ const sharp = require('sharp')
 async function main() {
   const input = process.argv[2]
   const outPath = process.argv[3] || 'public/images/hero-night-orbit.webp'
+  const brightness = parseFloat(process.argv[4] || '0.95')
+  const saturation = parseFloat(process.argv[5] || '1.05')
+  const gammaVal = parseFloat(process.argv[6] || '1.05')
 
   if (!input) {
     console.error('Missing image URL. Usage: node scripts/process-hero-image.js <url> [outPath]')
@@ -36,12 +39,12 @@ async function main() {
   const dir = path.dirname(outPath)
   fs.mkdirSync(dir, { recursive: true })
 
-  // Tone adjustments for hero: slightly lift contrast, keep saturation controlled
+  // Tone adjustments for hero: parametric brightness/saturation/gamma
   // Convert to WebP, target wide hero width
   const processed = await sharp(buffer)
     .resize({ width: 2400, withoutEnlargement: true })
-    .modulate({ brightness: 0.95, saturation: 1.05 })
-    .gamma(1.05)
+    .modulate({ brightness, saturation })
+    .gamma(gammaVal)
     .webp({ quality: 80 })
     .toBuffer()
 
@@ -53,5 +56,3 @@ main().catch((err) => {
   console.error(err)
   process.exit(1)
 })
-
-
