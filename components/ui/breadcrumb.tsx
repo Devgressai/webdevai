@@ -13,8 +13,26 @@ interface BreadcrumbProps {
 }
 
 export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
+  // Build JSON-LD BreadcrumbList
+  const itemList = items.map((item, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: item.label,
+    item: item.href ? `https://webvello.com${item.href}` : undefined,
+  }))
+
   return (
     <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: itemList,
+          }),
+        }}
+      />
       <ol className="flex items-center space-x-2 text-sm text-gray-600">
         {/* Home Icon */}
         <li>
