@@ -12,6 +12,7 @@ import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Spa
 import Link from 'next/link'
 import Image from 'next/image'
 import { HeroImage, BackgroundImage } from '../components/ui/optimized-image'
+import { LazySection } from '../components/ui/lazy-section'
 // import { useConversionTracking } from '../hooks/useConversionTracking'
 // import ScrollTracker from '../components/analytics/scroll-tracker'
 
@@ -97,10 +98,14 @@ export default function HomePage() {
       <Hero />
       
       {/* Website Assessment Section */}
-      <WebsiteAssessment />
+      <LazySection>
+        <WebsiteAssessment />
+      </LazySection>
       
       {/* Social Proof Section */}
-      <SocialProof />
+      <LazySection>
+        <SocialProof />
+      </LazySection>
       
       {/* How We Work (aligns with AI Overview facets) */}
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
@@ -223,6 +228,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
+      <LazySection>
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -303,6 +309,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </LazySection>
 
       {/* Stats Section */}
       <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 relative overflow-hidden">
@@ -340,6 +347,7 @@ export default function HomePage() {
       </section>
 
       {/* SEO-Optimized Content Section */}
+      <LazySection>
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-secondary-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -485,8 +493,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </LazySection>
 
       {/* CTA Section */}
+      <LazySection>
       <section className="py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
         {/* Background image and gradient flow */}
         <div className="absolute inset-0 opacity-20">
@@ -553,8 +563,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </LazySection>
 
-      <Pricing />
+      <LazySection>
+        <Pricing />
+      </LazySection>
     </div>
   )
 }
