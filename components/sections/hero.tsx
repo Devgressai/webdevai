@@ -87,7 +87,7 @@ export function Hero() {
             <Button 
               variant="outline" 
               size="xl" 
-              className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold backdrop-blur-sm" 
+              className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold" 
               onClick={() => handleCTAClick('See Work', 'hero_section')}
               asChild
             >
