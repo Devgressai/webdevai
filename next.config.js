@@ -6,7 +6,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   // Enable experimental features for better performance
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@sanity/client', 'next-sanity', 'tailwind-merge', 'clsx'],
     // Enable modern bundling
     esmExternals: true,
