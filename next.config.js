@@ -93,12 +93,6 @@ const nextConfig = {
   
   // Webpack optimization
   webpack: (config, { dev, isServer }) => {
-    // Inline critical CSS with Critters during production build
-    if (!dev && !isServer) {
-      const Critters = require('critters')
-      config.optimization.minimizer = config.optimization.minimizer || []
-      config.plugins.push(new Critters({ preload: 'swap', pruneSource: true }))
-    }
     // Optimize bundle size
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
