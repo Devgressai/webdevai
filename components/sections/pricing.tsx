@@ -1,7 +1,5 @@
-'use client'
-
 import { Button } from '../ui/button'
-import { CheckCircle, Star, ArrowRight, Zap, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, Star, ArrowRight, Target } from 'lucide-react'
 
 export function Pricing() {
   const plans = [
@@ -230,7 +228,7 @@ export function Pricing() {
               Get a free strategy session and discover how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="animate-pulse" asChild>
+              <Button size="lg" variant="secondary" asChild>
                 <a href="/contact">
                   Get FREE Strategy Session (Worth $500)
                 </a>

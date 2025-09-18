@@ -1,13 +1,19 @@
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable experimental features for better performance
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react'],
+    optimizePackageImports: ['lucide-react', '@sanity/client', 'next-sanity', 'tailwind-merge', 'clsx'],
     // Enable modern bundling
     esmExternals: true,
     // Enable SWC minification
     swcMinify: true,
+    // Enable modern output
+    outputFileTracingRoot: process.cwd(),
   },
   
   // Image optimization
@@ -110,20 +116,21 @@ const nextConfig = {
           ui: {
             test: /[\\/]node_modules[\\/](lucide-react|class-variance-authority|clsx|tailwind-merge)[\\/]/,
             name: 'ui',
-            chunks: 'all',
+            chunks: 'async',
             priority: 15,
           },
           cms: {
-            test: /[\\/]node_modules[\\/](@sanity|sanity)[\\/]/,
+            test: /[\\/]node_modules[\\/](@sanity|sanity|next-sanity)[\\/]/,
             name: 'cms',
-            chunks: 'all',
+            chunks: 'async',
             priority: 10,
           },
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-            chunks: 'all',
+            chunks: 'async',
             priority: 5,
+            maxSize: 200000,
           },
         },
       }
@@ -133,4 +140,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer(nextConfig)

@@ -1,12 +1,25 @@
 
 import { Hero } from '../components/sections/hero'
 import dynamic from 'next/dynamic'
-const Pricing = dynamic(() => import('../components/sections/pricing').then(m => m.Pricing), { ssr: true })
-const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment').then(m => m.WebsiteAssessment), { ssr: true })
-const SocialProof = dynamic(() => import('../components/sections/social-proof').then(m => m.SocialProof), { ssr: false })
+
+// Lazy load heavy components to reduce initial bundle
+const Pricing = dynamic(() => import('../components/sections/pricing').then(m => ({ default: m.Pricing })), { 
+  ssr: true,
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-lg" />
+})
+
+const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment').then(m => ({ default: m.WebsiteAssessment })), { 
+  ssr: true,
+  loading: () => <div className="h-64 animate-pulse bg-gray-100 rounded-lg" />
+})
+
+const SocialProof = dynamic(() => import('../components/sections/social-proof').then(m => ({ default: m.SocialProof })), { 
+  ssr: false,
+  loading: () => <div className="h-48 animate-pulse bg-gray-100 rounded-lg" />
+})
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
-import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Target, TrendingUp, Play, DollarSign, Building2, Star } from '@/lib/icons'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HeroImage, BackgroundImage } from '../components/ui/optimized-image'
@@ -227,7 +240,7 @@ export default function HomePage() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 text-sm font-semibold mb-6 shadow-lg">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Star className="w-4 h-4 mr-2" />
               Our Core Services
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
