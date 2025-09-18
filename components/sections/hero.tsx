@@ -1,5 +1,3 @@
-'use client'
-
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Shield } from "lucide-react"

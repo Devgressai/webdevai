@@ -241,7 +241,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-white">
         {/* <GoogleAnalytics /> */}
-        <PerformanceMonitor />
+        {process.env.NEXT_PUBLIC_ENABLE_PERF_MONITOR === 'true' ? <PerformanceMonitor /> : null}
         <Header />
         <main>{children}</main>
         <Footer />
