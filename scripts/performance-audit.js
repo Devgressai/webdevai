@@ -107,8 +107,7 @@ const auditPerformance = () => {
         'react',
         'react-dom',
         'lucide-react',
-        '@next/bundle-analyzer',
-        'critters'
+        '@next/bundle-analyzer'
       ];
 
       perfDeps.forEach(dep => {
