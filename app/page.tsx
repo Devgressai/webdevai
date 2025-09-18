@@ -19,7 +19,7 @@ const SocialProof = dynamic(() => import('../components/sections/social-proof'),
 })
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
-import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Target, TrendingUp, Play, DollarSign, Building2, Star } from '@/lib/icons'
+import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Target, TrendingUp, Play, DollarSign, Building2, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HeroImage, BackgroundImage } from '../components/ui/optimized-image'
