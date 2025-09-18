@@ -143,9 +143,9 @@ export default function RootLayout({
         <link 
           rel="preload" 
           as="image" 
-          href="/images/nasa-1lfI7wkGWZ4-unsplash.webp" 
+          href="/images/hero-night-orbit.webp" 
           fetchPriority="high"
-          imageSrcSet="/images/nasa-1lfI7wkGWZ4-unsplash.webp 1920w"
+          imageSrcSet="/images/hero-night-orbit.webp 1920w"
           imageSizes="100vw"
         />
         
