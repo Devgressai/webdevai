@@ -38,17 +38,14 @@ export function Hero() {
       {/* <ScrollTracker /> */}
       {/* Background Image */}
       <div className="absolute inset-0">
-        <picture>
-          <source media="(max-width: 640px)" srcSet="/images/hero-night-orbit.webp?v=1" />
-          <Image 
-            src="/images/hero-night-orbit.webp?v=1" 
-            alt="" 
-            fill 
-            priority 
-            sizes="100vw" 
-            className="object-cover"
-          />
-        </picture>
+        <Image 
+          src="/images/hero-night-orbit.webp?v=1" 
+          alt="" 
+          fill 
+          priority 
+          sizes="100vw" 
+          className="object-cover"
+        />
         {/* Light overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-slate-950/10 to-slate-950/20"></div>
       </div>

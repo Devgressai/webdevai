@@ -134,7 +134,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="preload" as="image" href="/images/hero-night-orbit.webp?v=1" imageSrcSet="/images/hero-night-orbit.webp?v=1 1920w" />
+        <link rel="preload" as="image" href="/images/hero-night-orbit.webp?v=1" fetchPriority="high" />
         
         {/* Structured Data */}
         <script
