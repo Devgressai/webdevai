@@ -43,7 +43,7 @@ export function Hero() {
           alt="" 
           fill 
           priority 
-          sizes="100vw" 
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" 
           className="object-cover"
         />
         {/* Light overlay for text readability */}
