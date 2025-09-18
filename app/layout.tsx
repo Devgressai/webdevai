@@ -15,6 +15,7 @@ const inter = Inter({
   display: 'swap',
   preload: true,
   fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
 })
 
 const poppins = Poppins({ 
@@ -24,6 +25,7 @@ const poppins = Poppins({
   display: 'swap',
   preload: true,
   fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
@@ -136,7 +138,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="preload" as="image" href="/images/hero-night-orbit.webp?v=1" fetchPriority="high" />
+        <link rel="dns-prefetch" href="//cdn.sanity.io" />
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/nasa-1lfI7wkGWZ4-unsplash.webp" 
+          fetchPriority="high"
+          imageSrcSet="/images/nasa-1lfI7wkGWZ4-unsplash.webp 1920w"
+          imageSizes="100vw"
+        />
         
         {/* Critical CSS for above-the-fold content */}
         <style dangerouslySetInnerHTML={{__html: `
