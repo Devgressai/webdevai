@@ -60,7 +60,7 @@ export function OptimizedImage({
 }
 
 // Pre-configured image components for common use cases
-export function HeroImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+export function HeroImage({ src, alt, className = '', priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return (
     <OptimizedImage
       src={src}
@@ -68,7 +68,7 @@ export function HeroImage({ src, alt, className = '' }: { src: string; alt: stri
       width={1920}
       height={1080}
       className={`w-full h-96 object-cover ${className}`}
-      priority={true}
+      priority={priority}
       quality={90}
     />
   );
