@@ -1,7 +1,7 @@
 import { Button } from '../ui/button'
 import { CheckCircle, Star, ArrowRight, Target } from 'lucide-react'
 
-export function Pricing() {
+function Pricing() {
   const plans = [
     {
       name: 'Starter',
@@ -258,3 +258,4 @@ export function Pricing() {
 }
 
 export default Pricing
+export { Pricing }

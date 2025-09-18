@@ -46,7 +46,7 @@ const awards = [
   { name: 'Client Satisfaction Excellence', issuer: 'Industry Recognition' }
 ]
 
-export function SocialProof() {
+function SocialProof() {
   return (
     <section className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -169,3 +169,6 @@ export function SocialProof() {
     </section>
   )
 }
+
+export default SocialProof
+export { SocialProof }

@@ -143,7 +143,7 @@ const getAssessmentResult = (totalScore: number): AssessmentResult => {
   }
 }
 
-export function WebsiteAssessment() {
+function WebsiteAssessment() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [showResults, setShowResults] = useState(false)
@@ -426,3 +426,6 @@ export function WebsiteAssessment() {
     </section>
   )
 }
+
+export default WebsiteAssessment
+export { WebsiteAssessment }

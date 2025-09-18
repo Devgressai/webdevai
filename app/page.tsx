@@ -3,17 +3,17 @@ import { Hero } from '../components/sections/hero'
 import dynamic from 'next/dynamic'
 
 // Lazy load heavy components to reduce initial bundle
-const Pricing = dynamic(() => import('../components/sections/pricing').then(m => ({ default: m.Pricing })), { 
+const Pricing = dynamic(() => import('../components/sections/pricing'), { 
   ssr: true,
   loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-lg" />
 })
 
-const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment').then(m => ({ default: m.WebsiteAssessment })), { 
+const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment'), { 
   ssr: true,
   loading: () => <div className="h-64 animate-pulse bg-gray-100 rounded-lg" />
 })
 
-const SocialProof = dynamic(() => import('../components/sections/social-proof').then(m => ({ default: m.SocialProof })), { 
+const SocialProof = dynamic(() => import('../components/sections/social-proof'), { 
   ssr: false,
   loading: () => <div className="h-48 animate-pulse bg-gray-100 rounded-lg" />
 })
