@@ -3,13 +3,13 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "../ui/button"
+// Import only essential icons to reduce bundle size
 import { 
-  Menu, X, ChevronDown, ChevronUp, Phone, BarChart3, 
-  Building2, Target, Users, TrendingUp, Globe, Code, Palette, 
-  Zap, BookOpen, Info, Monitor, PenTool, Settings, 
-  Lightbulb, Smartphone, ShoppingCart, Mail, Eye, TrendingDown, 
+  Menu, X, ChevronDown, Phone, BarChart3, 
+  Building2, Target, Users, TrendingUp, Globe, Code, 
+  Zap, Monitor, Smartphone, ShoppingCart, Mail, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
-  MessageSquare, Bot, Factory, Shield, Wrench, Layers, Star
+  MessageSquare, Star
 } from "lucide-react"
 import { cn } from "../../lib/utils"
 
@@ -31,7 +31,7 @@ const navigation = [
         name: "Website Redesign", 
         href: "/services/website-redesign",
         description: "Transform your existing website for better performance",
-        icon: Palette,
+        icon: Code,
         color: "from-purple-500 to-indigo-600"
       },
       { 
@@ -152,14 +152,14 @@ const navigation = [
         name: "Software Development", 
         href: "/services/software-development",
         description: "Custom software and application development",
-        icon: Settings,
+        icon: Code,
         color: "from-gray-500 to-slate-600"
       },
       { 
         name: "UI/UX Design", 
         href: "/services/ui-ux-design",
         description: "User experience and interface design services",
-        icon: Eye,
+        icon: Monitor,
         color: "from-orange-500 to-red-600"
       },
       { 
@@ -208,7 +208,7 @@ const navigation = [
         name: "Declining Website Traffic", 
         href: "/solutions/declining-traffic",
         description: "Reverse declining traffic with proven strategies",
-        icon: TrendingDown,
+        icon: TrendingUp,
         color: "from-orange-500 to-red-600"
       },
       { 

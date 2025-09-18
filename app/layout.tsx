@@ -138,6 +138,19 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="preload" as="image" href="/images/hero-night-orbit.webp?v=1" fetchPriority="high" />
         
+        {/* Critical CSS for above-the-fold content */}
+        <style dangerouslySetInnerHTML={{__html: `
+          .hero-section{position:relative;overflow:hidden;background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 50%,#1f2937 100%)}
+          .hero-bg{position:absolute;inset:0}
+          .hero-bg img{object-fit:cover;width:100%;height:100%}
+          .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,23,42,0.2) 0%,rgba(15,23,42,0.1) 50%,rgba(15,23,42,0.2) 100%)}
+          .hero-content{position:relative;z-index:10;color:white;text-align:center;padding:5rem 1.5rem}
+          .hero-title{font-size:2.25rem;font-weight:800;line-height:1.2;margin-bottom:1rem;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.6))}
+          .hero-subtitle{font-size:1.125rem;opacity:0.95;max-width:32rem;margin:0 auto 2rem;filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6))}
+          @media(min-width:640px){.hero-title{font-size:3rem}.hero-subtitle{font-size:1.25rem}}
+          @media(min-width:1024px){.hero-title{font-size:3.75rem}.hero-content{padding:9rem 2.5rem}}
+        `}} />
+        
         {/* Structured Data */}
         <script
           type="application/ld+json"

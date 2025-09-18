@@ -24,20 +24,22 @@ export function Hero() {
   // No-op handlers removed to reduce client JS
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900">
-      {/* <ScrollTracker /> */}
+    <section className="hero-section">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="hero-bg">
         <Image 
           src="/images/hero-night-orbit.webp?v=1" 
           alt="" 
           fill 
           priority 
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" 
+          sizes="100vw" 
           className="object-cover"
+          quality={85}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
         {/* Light overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-slate-950/10 to-slate-950/20"></div>
+        <div className="hero-overlay"></div>
       </div>
       
       {/* Background Elements */}
@@ -54,14 +56,14 @@ export function Hero() {
         <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-28 lg:px-10 lg:py-36">
-        <div className="mx-auto max-w-3xl text-center">
+      <div className="hero-content">
+        <div className="mx-auto max-w-3xl">
           {/* Simplified headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4 sm:mb-6 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+          <h1 className="hero-title">
             Design. Develop. Dominate.
           </h1>
           {/* Short supporting line */}
-          <p className="text-lg sm:text-xl text-white/95 max-w-2xl mx-auto px-4 sm:px-0 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+          <p className="hero-subtitle">
             High-converting websites and SEO that grow revenue—fast.
           </p>
 
