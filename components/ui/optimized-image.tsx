@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useState } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -10,6 +9,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   fallback?: string;
   quality?: number;
+  sizes?: string;
 }
 
 export function OptimizedImage({ 
@@ -19,43 +19,22 @@ export function OptimizedImage({
   height, 
   className = '', 
   priority = false,
+  // fallback is intentionally unused to keep this component server-compatible
   fallback,
-  quality = 85
+  quality = 85,
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 }: OptimizedImageProps) {
-  const [imgSrc, setImgSrc] = useState(src);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const handleError = () => {
-    if (fallback) {
-      setImgSrc(fallback);
-    }
-    setIsLoading(false);
-  };
-
-  const handleLoad = () => {
-    setIsLoading(false);
-  };
-
   return (
-    <div className={`relative ${className}`}>
-      {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-        </div>
-      )}
-      <Image
-        src={imgSrc}
-        alt={alt}
-        width={width}
-        height={height}
-        className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
-        priority={priority}
-        quality={quality}
-        onError={handleError}
-        onLoad={handleLoad}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-    </div>
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      priority={priority}
+      quality={quality}
+      sizes={sizes}
+    />
   );
 }
 
@@ -70,6 +49,7 @@ export function HeroImage({ src, alt, className = '', priority = false }: { src:
       className={`w-full h-96 object-cover ${className}`}
       priority={priority}
       quality={90}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
     />
   );
 }
@@ -83,6 +63,7 @@ export function ServiceImage({ src, alt, className = '' }: { src: string; alt: s
       height={600}
       className={`w-full h-64 object-cover ${className}`}
       quality={85}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
     />
   );
 }
@@ -96,6 +77,7 @@ export function BackgroundImage({ src, alt, className = '' }: { src: string; alt
       height={1080}
       className={`w-full h-full object-cover ${className}`}
       quality={75}
+      sizes="100vw"
     />
   );
 }
