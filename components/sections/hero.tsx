@@ -23,15 +23,7 @@ export function Hero() {
   // Temporarily disabled conversion tracking to fix build error
   // const { trackCTAClick, trackStrategySession } = useConversionTracking()
 
-  const handleCTAClick = (buttonText: string, location: string) => {
-    // trackCTAClick(buttonText, location)
-    console.log('CTA clicked:', buttonText, 'at', location)
-  }
-
-  const handleStrategySessionClick = () => {
-    // trackStrategySession('hero_section')
-    console.log('Strategy session requested from hero section')
-  }
+  // No-op handlers removed to reduce client JS
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900">
@@ -80,7 +72,6 @@ export function Hero() {
             <Button 
               size="xl" 
               className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-400/25 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white" 
-              onClick={handleStrategySessionClick}
               asChild
             >
               <Link href="/contact" aria-label="Get a free website audit">
@@ -91,7 +82,6 @@ export function Hero() {
               variant="outline" 
               size="xl" 
               className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white" 
-              onClick={() => handleCTAClick('See Work', 'hero_section')}
               asChild
             >
               <Link href="/case-studies" className="flex items-center" aria-label="View case studies">

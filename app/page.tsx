@@ -1,6 +1,4 @@
 
-'use client'
-
 import { Hero } from '../components/sections/hero'
 import dynamic from 'next/dynamic'
 const Pricing = dynamic(() => import('../components/sections/pricing').then(m => m.Pricing), { ssr: true })
@@ -79,18 +77,7 @@ const testimonials = [
 ]
 
 export default function HomePage() {
-  // Temporarily disabled conversion tracking to fix build error
-  // const { trackProposalRequest, trackCTAClick } = useConversionTracking()
-
-  const handleProposalRequest = (website: string) => {
-    // trackProposalRequest(website, 'homepage_main_cta')
-    console.log('Proposal requested for:', website)
-  }
-
-  const handleCTAClick = (buttonText: string, location: string) => {
-    // trackCTAClick(buttonText, location)
-    console.log('CTA clicked:', buttonText, 'at', location)
-  }
+  // Server component: no client handlers to minimize JS shipped
 
   return (
     <div className="min-h-screen">
@@ -542,10 +529,9 @@ export default function HomePage() {
                 <Button 
                   size="lg" 
                   className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
-                  onClick={() => handleProposalRequest('homepage_input')}
-                  aria-label="Get a free SEO audit"
+                  asChild
                 >
-                  🎯 Get Free SEO Audit
+                  <Link href="/contact" aria-label="Get a free SEO audit">🎯 Get Free SEO Audit</Link>
                 </Button>
               </div>
               
