@@ -6,7 +6,7 @@ const WebsiteAssessment = dynamic(() => import('../components/sections/website-a
 const SocialProof = dynamic(() => import('../components/sections/social-proof').then(m => m.SocialProof), { ssr: false })
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
-import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Target as TargetIcon, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Sparkles, Target, TrendingUp, Play, DollarSign, BarChart, Building2, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HeroImage, BackgroundImage } from '../components/ui/optimized-image'

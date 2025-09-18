@@ -14,6 +14,7 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
   preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 const poppins = Poppins({ 
@@ -22,6 +23,7 @@ const poppins = Poppins({
   variable: '--font-poppins',
   display: 'swap',
   preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 export const metadata: Metadata = {
