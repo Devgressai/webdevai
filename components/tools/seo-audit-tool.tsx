@@ -30,19 +30,22 @@ interface SEOAuditResult {
     passed: number
   }
   checks: {
-    title: { status: 'pass' | 'warning' | 'fail'; message: string; value?: string }
-    description: { status: 'pass' | 'warning' | 'fail'; message: string; value?: string }
-    headings: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number }
-    images: { status: 'pass' | 'warning' | 'fail'; message: string; altCount?: number; totalCount?: number }
-    mobile: { status: 'pass' | 'warning' | 'fail'; message: string }
-    speed: { status: 'pass' | 'warning' | 'fail'; message: string; score?: number }
-    ssl: { status: 'pass' | 'warning' | 'fail'; message: string }
-    internalLinks: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number }
-    externalLinks: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number }
-    schema: { status: 'pass' | 'warning' | 'fail'; message: string }
+    title: { status: 'pass' | 'warning' | 'fail'; message: string; value?: string; length?: number }
+    description: { status: 'pass' | 'warning' | 'fail'; message: string; value?: string; length?: number }
+    headings: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number; structure?: any[] }
+    images: { status: 'pass' | 'warning' | 'fail'; message: string; altCount?: number; totalCount?: number; missingAlt?: string[] }
+    mobile: { status: 'pass' | 'warning' | 'fail'; message: string; viewport?: string }
+    speed: { status: 'pass' | 'warning' | 'fail'; message: string; score?: number; loadTime?: number }
+    ssl: { status: 'pass' | 'warning' | 'fail'; message: string; valid?: boolean }
+    internalLinks: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number; broken?: number }
+    externalLinks: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number; nofollow?: number }
+    schema: { status: 'pass' | 'warning' | 'fail'; message: string; types?: string[] }
+    robots: { status: 'pass' | 'warning' | 'fail'; message: string; hasRobots?: boolean }
+    sitemap: { status: 'pass' | 'warning' | 'fail'; message: string; hasSitemap?: boolean }
   }
   recommendations: string[]
   generatedAt: string
+  lighthouse?: any
 }
 
 export function SEOAuditTool() {
@@ -66,82 +69,25 @@ export function SEOAuditTool() {
     setResult(null)
 
     try {
-      // Simulate API call - in production, this would call your backend
-      await new Promise(resolve => setTimeout(resolve, 3000))
-      
-      // Mock SEO audit results
-      const mockResult: SEOAuditResult = {
-        url: websiteUrl,
-        overallScore: Math.floor(Math.random() * 40) + 60, // Score between 60-100
-        issues: {
-          critical: Math.floor(Math.random() * 3),
-          warning: Math.floor(Math.random() * 5) + 2,
-          passed: Math.floor(Math.random() * 8) + 5
+      // Call the real SEO audit API
+      const response = await fetch('/api/seo-audit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        checks: {
-          title: {
-            status: Math.random() > 0.3 ? 'pass' : 'warning',
-            message: Math.random() > 0.3 ? 'Title tag is optimized' : 'Title tag could be improved',
-            value: Math.random() > 0.3 ? 'Your Website Title - Perfect Length' : 'Your Website'
-          },
-          description: {
-            status: Math.random() > 0.4 ? 'pass' : 'warning',
-            message: Math.random() > 0.4 ? 'Meta description is well-written' : 'Meta description needs improvement',
-            value: Math.random() > 0.4 ? 'A compelling meta description that describes your business and encourages clicks.' : 'Short description'
-          },
-          headings: {
-            status: Math.random() > 0.2 ? 'pass' : 'warning',
-            message: Math.random() > 0.2 ? 'Heading structure is good' : 'Heading structure needs improvement',
-            count: Math.floor(Math.random() * 10) + 5
-          },
-          images: {
-            status: Math.random() > 0.3 ? 'pass' : 'warning',
-            message: Math.random() > 0.3 ? 'Most images have alt text' : 'Some images missing alt text',
-            altCount: Math.floor(Math.random() * 8) + 3,
-            totalCount: Math.floor(Math.random() * 3) + 10
-          },
-          mobile: {
-            status: Math.random() > 0.1 ? 'pass' : 'warning',
-            message: Math.random() > 0.1 ? 'Website is mobile-friendly' : 'Mobile optimization needed'
-          },
-          speed: {
-            status: Math.random() > 0.4 ? 'pass' : 'warning',
-            message: Math.random() > 0.4 ? 'Page speed is good' : 'Page speed needs improvement',
-            score: Math.floor(Math.random() * 40) + 60
-          },
-          ssl: {
-            status: Math.random() > 0.1 ? 'pass' : 'fail',
-            message: Math.random() > 0.1 ? 'SSL certificate is valid' : 'SSL certificate issues detected'
-          },
-          internalLinks: {
-            status: Math.random() > 0.2 ? 'pass' : 'warning',
-            message: Math.random() > 0.2 ? 'Good internal linking structure' : 'Internal linking could be improved',
-            count: Math.floor(Math.random() * 20) + 10
-          },
-          externalLinks: {
-            status: Math.random() > 0.3 ? 'pass' : 'warning',
-            message: Math.random() > 0.3 ? 'External links are properly configured' : 'External links need attention',
-            count: Math.floor(Math.random() * 10) + 2
-          },
-          schema: {
-            status: Math.random() > 0.6 ? 'pass' : 'warning',
-            message: Math.random() > 0.6 ? 'Schema markup detected' : 'Schema markup not found'
-          }
-        },
-        recommendations: [
-          'Optimize your title tags to be between 50-60 characters',
-          'Improve your meta descriptions to be more compelling',
-          'Add alt text to images for better accessibility',
-          'Implement structured data markup',
-          'Optimize page loading speed',
-          'Improve internal linking structure'
-        ],
-        generatedAt: new Date().toISOString()
+        body: JSON.stringify({ url: websiteUrl }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to analyze website')
       }
 
-      setResult(mockResult)
+      const auditResult = await response.json()
+      setResult(auditResult)
     } catch (err) {
-      setError('Failed to analyze website. Please try again.')
+      console.error('SEO Audit Error:', err)
+      setError(err instanceof Error ? err.message : 'Failed to analyze website. Please try again.')
     } finally {
       setIsLoading(false)
     }
@@ -328,6 +274,11 @@ export function SEOAuditTool() {
                       "{result.checks.title.value}"
                     </div>
                   )}
+                  {result.checks.title.length !== undefined && (
+                    <div className="text-sm text-secondary-500">
+                      Length: {result.checks.title.length} characters
+                    </div>
+                  )}
                 </div>
 
                 {/* Meta Description */}
@@ -345,6 +296,11 @@ export function SEOAuditTool() {
                   {result.checks.description.value && (
                     <div className="text-sm bg-gray-50 p-2 rounded">
                       "{result.checks.description.value}"
+                    </div>
+                  )}
+                  {result.checks.description.length !== undefined && (
+                    <div className="text-sm text-secondary-500">
+                      Length: {result.checks.description.length} characters
                     </div>
                   )}
                 </div>
@@ -420,6 +376,11 @@ export function SEOAuditTool() {
                       Speed Score: {result.checks.speed.score}/100
                     </div>
                   )}
+                  {result.checks.speed.loadTime && (
+                    <div className="text-sm text-secondary-500">
+                      Load Time: {result.checks.speed.loadTime}ms
+                    </div>
+                  )}
                 </div>
 
                 {/* SSL Certificate */}
@@ -449,6 +410,39 @@ export function SEOAuditTool() {
                     </Badge>
                   </div>
                   <p className="text-sm text-secondary-600">{result.checks.schema.message}</p>
+                  {result.checks.schema.types && result.checks.schema.types.length > 0 && (
+                    <div className="text-sm text-secondary-500">
+                      Types: {result.checks.schema.types.join(', ')}
+                    </div>
+                  )}
+                </div>
+
+                {/* Robots.txt */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      {getStatusIcon(result.checks.robots.status)}
+                      <span className="font-semibold">Robots.txt</span>
+                    </div>
+                    <Badge className={getStatusColor(result.checks.robots.status)}>
+                      {result.checks.robots.status}
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-secondary-600">{result.checks.robots.message}</p>
+                </div>
+
+                {/* Sitemap.xml */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      {getStatusIcon(result.checks.sitemap.status)}
+                      <span className="font-semibold">Sitemap.xml</span>
+                    </div>
+                    <Badge className={getStatusColor(result.checks.sitemap.status)}>
+                      {result.checks.sitemap.status}
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-secondary-600">{result.checks.sitemap.message}</p>
                 </div>
               </div>
             </CardContent>
