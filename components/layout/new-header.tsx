@@ -2,11 +2,12 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "../ui/button"
 // Import only essential icons to reduce bundle size
 import { 
   Menu, X, ChevronDown, Phone, BarChart3, 
-  Building2, Target, Users, TrendingUp, Globe, Code, 
+  Target, Users, TrendingUp, Globe, Code, 
   Zap, Monitor, Smartphone, ShoppingCart, Mail, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
   MessageSquare, Star
@@ -273,7 +274,8 @@ export function NewHeader() {
   }
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
+    <header className="relative sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur supports-[backdrop-filter]:bg-white/75">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600/80" aria-hidden="true" />
       {/* Top Revenue Bar */}
       <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 text-white py-3">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -302,24 +304,27 @@ export function NewHeader() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-5">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <Building2 className="h-7 w-7 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold text-primary-600 group-hover:text-primary-700 transition-colors">Web</span>
-                <span className="text-2xl font-bold text-secondary-900 group-hover:text-secondary-800 transition-colors">Vello</span>
-              </div>
+            <Link
+              href="/"
+              className="group flex items-center gap-3 rounded-full px-3 py-2 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+            >
+              <span className="sr-only">Web Vello</span>
+              <Image
+                src="/newlogo.png"
+                alt="Web Vello logo"
+                width={150}
+                height={48}
+                priority
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
-
-          
-                     {/* Desktop Navigation */}
-           <div className="hidden lg:flex lg:gap-x-1">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex lg:items-center lg:gap-x-1.5 xl:gap-x-2">
              {navigation.map((item, idx) => (
                <div key={item.name} className="relative">
                  {item.children ? (
@@ -329,11 +334,24 @@ export function NewHeader() {
                      onMouseLeave={handleMouseLeave}
                    >
                      <div 
-                       className="flex items-center gap-x-1 px-4 py-3 text-sm font-semibold leading-6 text-secondary-900 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50 cursor-pointer"
+                       className={cn(
+                         "flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium tracking-tight transition-all duration-200 hover:bg-slate-100 hover:text-primary-600 cursor-pointer",
+                         openDropdown === item.name ? "bg-slate-100 text-primary-600 shadow-[0_6px_18px_rgba(15,23,42,0.08)]" : "text-slate-600"
+                       )}
+                       role="button"
+                       tabIndex={0}
+                       aria-expanded={openDropdown === item.name}
+                       aria-haspopup="true"
                        onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                       onKeyDown={(event) => {
+                         if (event.key === 'Enter' || event.key === ' ') {
+                           event.preventDefault()
+                           setOpenDropdown(openDropdown === item.name ? null : item.name)
+                         }
+                       }}
                      >
                        {item.name}
-                       <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
+                       <ChevronDown className={cn("h-4 w-4 text-slate-400 transition-transform duration-200", openDropdown === item.name && "rotate-180 text-primary-500")} />
                      </div>
                      
                      {openDropdown === item.name && (
@@ -342,18 +360,18 @@ export function NewHeader() {
                          onMouseEnter={() => handleMouseEnter(item.name)}
                          onMouseLeave={handleMouseLeave}
                        >
-                         <div className="w-full max-w-6xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-2xl ring-1 ring-secondary-900/5 border border-gray-100">
+                         <div className="w-full max-w-6xl flex-auto overflow-hidden rounded-3xl bg-white/95 text-sm leading-6 shadow-[0_28px_60px_rgba(15,23,42,0.12)] ring-1 ring-slate-200/60 border border-slate-100/80 backdrop-blur">
                            <div className="p-6">
                              {/* Header */}
                              <div className="mb-6">
-                               <h3 className="text-lg font-bold text-secondary-900 mb-2">{item.name}</h3>
-                               <p className="text-secondary-600">{item.description}</p>
+                               <h3 className="text-lg font-semibold text-slate-900 mb-1">{item.name}</h3>
+                               <p className="text-sm text-slate-500">{item.description}</p>
                              </div>
                              
                              {/* Grid Layout */}
                              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
                                {item.children.map((child) => (
-                                 <div key={child.name} className="group relative flex gap-x-4 rounded-xl p-4 hover:bg-secondary-50 transition-all duration-200 hover:shadow-md border border-transparent hover:border-secondary-200">
+                                 <div key={child.name} className="group relative flex gap-x-4 rounded-2xl p-4 border border-transparent bg-white/90 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-100 hover:bg-slate-50/90 hover:shadow-[0_18px_32px_rgba(15,23,42,0.08)]">
                                    <div className={cn(
                                      "flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-gradient-to-r",
                                      child.color
@@ -399,7 +417,7 @@ export function NewHeader() {
            </div>
           
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button asChild className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transition-all duration-200 px-6 sm:px-8 py-3 text-base font-semibold">
+            <Button asChild className="rounded-full bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 px-6 py-2.5 text-sm font-semibold tracking-wide text-white shadow-[0_14px_30px_rgba(30,64,175,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(30,64,175,0.28)]">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
@@ -408,7 +426,7 @@ export function NewHeader() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary-700 hover:bg-gray-100"
+              className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-slate-600 ring-1 ring-slate-200/60 hover:bg-slate-100"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -426,19 +444,19 @@ export function NewHeader() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Web Vello</span>
-                <div className="flex items-center space-x-3">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center">
-                    <Building2 className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-lg font-bold text-primary-600">Web</span>
-                    <span className="text-lg font-bold text-secondary-900">Vello</span>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/newlogo.png"
+                    alt="Web Vello logo"
+                    width={132}
+                    height={40}
+                    className="h-9 w-auto"
+                  />
                 </div>
               </Link>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-secondary-700"
+                className="-m-2.5 rounded-full p-2.5 text-slate-600 ring-1 ring-slate-200/60"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -454,7 +472,7 @@ export function NewHeader() {
                                                  <div>
                            <button
                              onClick={() => handleMobileDropdownToggle(item.name)}
-                             className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 text-secondary-900 hover:bg-secondary-50"
+                             className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-base font-semibold text-slate-800 transition hover:bg-slate-100"
                            >
                              {item.name}
                              <ChevronDown className={`h-5 w-5 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
@@ -465,7 +483,7 @@ export function NewHeader() {
                                 <Link
                                   key={child.name}
                                   href={child.href}
-                                  className="block rounded-lg px-3 py-2 text-sm leading-7 text-secondary-600 hover:bg-secondary-50 hover:text-secondary-900"
+                                  className="block rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
                                   onClick={() => setMobileMenuOpen(false)}
                                 >
                                   {child.name}
@@ -477,7 +495,7 @@ export function NewHeader() {
                       ) : (
                         <Link
                           href={item.href}
-                          className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-secondary-900 hover:bg-secondary-50"
+                          className="block rounded-xl px-3 py-2 text-base font-semibold text-slate-800 transition hover:bg-slate-100"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {item.name}
@@ -487,7 +505,7 @@ export function NewHeader() {
                   ))}
                 </div>
                 <div className="py-6">
-                  <Button asChild className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800">
+                  <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-2.5 text-sm font-semibold tracking-wide text-white shadow-[0_14px_30px_rgba(30,64,175,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(30,64,175,0.28)]">
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                       Get Started
                     </Link>
