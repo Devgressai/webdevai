@@ -24,8 +24,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { HeroImage, BackgroundImage } from '../components/ui/optimized-image'
 import { LazySection } from '../components/ui/lazy-section'
-// import { useConversionTracking } from '../hooks/useConversionTracking'
-// import ScrollTracker from '../components/analytics/scroll-tracker'
+import { useConversionTracking } from '../hooks/useConversionTracking'
+import ScrollTracker from '../components/analytics/scroll-tracker'
+import { CTAWithTracking } from '../components/sections/cta-with-tracking'
 
 const services = [
   {
@@ -94,7 +95,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* <ScrollTracker /> */}
+      <ScrollTracker />
       <Hero />
       
       {/* Website Assessment Section */}
