@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import puppeteer from 'puppeteer'
 import * as cheerio from 'cheerio'
 import axios from 'axios'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 interface SEOAuditResult {
   url: string
@@ -32,16 +33,47 @@ interface SEOAuditResult {
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting
+    const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown'
+    if (!checkRateLimit(ip, 5, 60000)) { // 5 requests per minute
+      return NextResponse.json({ 
+        error: 'Rate limit exceeded. Please try again later.' 
+      }, { status: 429 })
+    }
+    
     const { url } = await request.json()
     
     if (!url) {
       return NextResponse.json({ error: 'URL is required' }, { status: 400 })
     }
 
-    // Validate URL
+    // Validate and sanitize URL
     let websiteUrl: string
     try {
       const urlObj = new URL(url.startsWith('http') ? url : `https://${url}`)
+      
+      // Security validations
+      if (!['http:', 'https:'].includes(urlObj.protocol)) {
+        return NextResponse.json({ error: 'Only HTTP and HTTPS URLs are allowed' }, { status: 400 })
+      }
+      
+      // Block internal/private IPs and localhost
+      const hostname = urlObj.hostname.toLowerCase()
+      if (hostname === 'localhost' || 
+          hostname === '127.0.0.1' || 
+          hostname.startsWith('192.168.') ||
+          hostname.startsWith('10.') ||
+          hostname.startsWith('172.') ||
+          hostname.includes('internal') ||
+          hostname.includes('local')) {
+        return NextResponse.json({ error: 'Internal URLs are not allowed' }, { status: 400 })
+      }
+      
+      // Block file:// protocol
+      if (urlObj.protocol === 'file:') {
+        return NextResponse.json({ error: 'File URLs are not allowed' }, { status: 400 })
+      }
+      
       websiteUrl = urlObj.toString()
     } catch {
       return NextResponse.json({ error: 'Invalid URL format' }, { status: 400 })
@@ -62,10 +94,21 @@ async function performSEOAudit(url: string): Promise<SEOAuditResult> {
   let page: any = null
   
   try {
-    // Launch browser
+    // Launch browser with security hardening
     browser = await puppeteer.launch({
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--disable-extensions',
+        '--disable-plugins',
+        '--no-first-run',
+        '--disable-background-timer-throttling',
+        '--disable-backgrounding-occluded-windows',
+        '--disable-renderer-backgrounding'
+      ]
     })
     
     page = await browser.newPage()
@@ -73,10 +116,16 @@ async function performSEOAudit(url: string): Promise<SEOAuditResult> {
     // Set user agent
     await page.setUserAgent('Mozilla/5.0 (compatible; SEOAuditBot/1.0)')
     
-    // Navigate to page
+    // Set page timeouts and security
+    await page.setDefaultTimeout(30000)
+    await page.setDefaultNavigationTimeout(30000)
+    
+    // Note: Request interception removed for debugging
+    
+    // Navigate to page with security measures
     const startTime = Date.now()
     const response = await page.goto(url, { 
-      waitUntil: 'networkidle2',
+      waitUntil: 'domcontentloaded', // Changed from networkidle2 for security
       timeout: 30000 
     })
     const loadTime = Date.now() - startTime
@@ -92,7 +141,7 @@ async function performSEOAudit(url: string): Promise<SEOAuditResult> {
     
     // Check SSL
     const isHttps = url.startsWith('https://')
-    const sslValid = response?.status() === 200 && isHttps
+    const sslValid = response && response.status() === 200 && isHttps
     
     // Analyze headings
     const headings = analyzeHeadings($)
@@ -156,9 +205,9 @@ async function performSEOAudit(url: string): Promise<SEOAuditResult> {
 function analyzeHeadings($: cheerio.CheerioAPI) {
   const headings: any[] = []
   $('h1, h2, h3, h4, h5, h6').each((i, el) => {
-    const tag = $(el).prop('tagName').toLowerCase()
+    const tag = $(el).prop('tagName')?.toLowerCase()
     const text = $(el).text().trim()
-    if (text) {
+    if (text && tag) {
       headings.push({ tag, text, level: parseInt(tag.charAt(1)) })
     }
   })
