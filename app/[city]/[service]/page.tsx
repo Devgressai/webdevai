@@ -731,12 +731,26 @@ export async function generateMetadata({ params }: CityServicePageProps): Promis
     description: `Professional ${service.name.toLowerCase()} services in ${city.fullName}. ${service.shortDesc} tailored for ${city.name} businesses. Get expert solutions and local expertise.`,
     keywords: `${service.name.toLowerCase()}, ${city.name}, ${city.state}, business services, professional services, ${service.category.toLowerCase()}`,
     openGraph: {
-      title: `${service.name} in ${city.fullName}`,
+      title: `${service.name} in ${city.fullName} | Web Vello`,
       description: `Professional ${service.name.toLowerCase()} services in ${city.fullName} - Expert solutions for local businesses.`,
-      url: `https://yourdomain.com/${params.city}/${params.service}`,
-      siteName: 'Professional Business Services',
+      url: `https://webvello.com/${params.city}/${params.service}`,
+      siteName: 'Web Vello',
       locale: 'en_US',
       type: 'website',
+      images: [
+        {
+          url: `https://webvello.com/og-${service.name.toLowerCase().replace(/\s+/g, '-')}.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `${service.name} in ${city.fullName} - Web Vello`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.name} in ${city.fullName} | Web Vello`,
+      description: `Professional ${service.name.toLowerCase()} services in ${city.fullName} - Expert solutions for local businesses.`,
+      images: [`https://webvello.com/og-${service.name.toLowerCase().replace(/\s+/g, '-')}.jpg`],
     },
   }
 }

@@ -5,7 +5,7 @@ import { industrySlugs } from '../lib/industries'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://webvello.com'
   
-  // Core pages
+  // Core pages - high priority, high traffic potential
   const corePages = [
     '', // Homepage
     '/about',
@@ -19,39 +19,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/seo-audit',
     '/website-speed-test',
-    '/enhanced-demo',
-    '/sitemap'
+    '/enhanced-demo'
   ]
 
-  // All 28 services
-  const allServices = [
+  // Top performing services - focus on high-value, high-traffic services
+  const topServices = [
     'website-design',
-    'website-redesign',
     'web-development',
-    'rapid-web-design',
-    'ui-ux-design',
-    'ecommerce-design',
-    'app-design-development',
-    'software-design-development',
-    'software-development',
-    'shopify-development',
-    'wordpress-development',
-    'ai-consulting',
-    'ai-seo',
-    'ai-digital-marketing',
-    'ai-gpt-integration',
-    'ai-agent-development',
-    'chatgpt-optimization',
-    'generative-engine-optimization',
-    'answer-engine-optimization',
-    'enterprise-geo-services',
     'seo',
-    'local-seo',
+    'ai-consulting',
     'digital-marketing',
-    'email-marketing-design',
-    'social-media-design',
-    'cro-ecommerce',
-    'cro-lead-generation'
+    'ecommerce-design',
+    'ui-ux-design',
+    'local-seo',
+    'website-redesign',
+    'ai-seo'
+  ]
+
+  // Top cities - major metropolitan areas with high search volume
+  const topCities = [
+    'new-york-ny',
+    'los-angeles-ca',
+    'chicago-il',
+    'houston-tx',
+    'phoenix-az',
+    'philadelphia-pa',
+    'san-antonio-tx',
+    'san-diego-ca',
+    'dallas-tx',
+    'san-jose-ca',
+    'austin-tx',
+    'jacksonville-fl',
+    'fort-worth-tx',
+    'columbus-oh',
+    'charlotte-nc',
+    'san-francisco-ca',
+    'seattle-wa',
+    'denver-co',
+    'washington-dc',
+    'boston-ma'
   ]
 
   // Solutions pages
@@ -84,25 +90,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
               0.7,
   }))
 
-  // Generate service page entries
-  const serviceEntries = allServices.map((service) => ({
+  // Generate top service page entries
+  const serviceEntries = topServices.map((service) => ({
     url: `${baseUrl}/services/${service}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // Generate city hub page entries
-  const cityEntries = citySlugs.map((city) => ({
+  // Generate top city hub page entries
+  const cityEntries = topCities.map((city) => ({
     url: `${baseUrl}/${city}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // Generate city-service page entries (all 28 services × 40 cities)
-  const cityServiceEntries = citySlugs.flatMap((city) =>
-    allServices.map((service) => ({
+  // Generate strategic city-service combinations (top cities × top services only)
+  const cityServiceEntries = topCities.flatMap((city) =>
+    topServices.slice(0, 5).map((service) => ({ // Only top 5 services per city
       url: `${baseUrl}/${city}/${service}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
@@ -126,25 +132,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  // Generate city-industry-service entries (if they exist)
-  const cityIndustryServiceEntries = citySlugs.flatMap((city) =>
-    industrySlugs.flatMap((industry) =>
-      ['web-development', 'seo', 'website-design'].map((service) => ({
-        url: `${baseUrl}/${city}/industry/${industry}/${service}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.6,
-      }))
-    )
-  )
-
   return [
     ...coreEntries,
     ...serviceEntries,
     ...cityEntries,
     ...cityServiceEntries,
     ...solutionsEntries,
-    ...blogEntries,
-    ...cityIndustryServiceEntries
+    ...blogEntries
   ]
 }

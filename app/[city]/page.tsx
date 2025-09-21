@@ -117,6 +117,20 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       siteName: 'Web Vello',
       locale: 'en_US',
       type: 'website',
+      images: [
+        {
+          url: `https://webvello.com/og-${city.name.toLowerCase().replace(/\s+/g, '-')}.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `Web Vello Digital Growth Partner in ${city.fullName}`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Web Vello | Digital Growth Partner in ${city.fullName}`,
+      description: `Full-funnel web design and SEO agency serving ${city.fullName}. Schedule a strategy session with Web Vello to accelerate growth.`,
+      images: [`https://webvello.com/og-${city.name.toLowerCase().replace(/\s+/g, '-')}.jpg`],
     },
     alternates: {
       canonical: `https://webvello.com/${params.city}`,
