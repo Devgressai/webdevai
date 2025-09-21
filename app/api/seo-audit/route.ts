@@ -40,8 +40,7 @@ export async function POST(request: NextRequest) {
         error: 'Rate limit exceeded. Please try again later.' 
       }, { status: 429 })
     }
-    
-    const { url } = await request.json()
+        const { url } = await request.json()
     
     if (!url) {
       return NextResponse.json({ error: 'URL is required' }, { status: 400 })
