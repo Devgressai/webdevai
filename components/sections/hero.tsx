@@ -10,9 +10,9 @@ import Image from 'next/image'
 // import ScrollTracker from "../analytics/scroll-tracker"
 
 const stats = [
-  { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-orange-500 to-orange-600" },
+  { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-[#1FC0DA] to-[#0083DC]" },
   { id: 2, name: "Happy Clients", value: "500+", icon: Users, color: "from-slate-600 to-slate-700" },
-  { id: 3, name: "ROI Average", value: "1,200%", icon: Zap, color: "from-orange-500 to-orange-600" },
+  { id: 3, name: "ROI Average", value: "1,200%", icon: Zap, color: "from-[#1FC0DA] to-[#0083DC]" },
 ]
 
 export function Hero() {
@@ -105,16 +105,16 @@ export function Hero() {
       </div>
       
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden bg-blue-800">
+      <div className="absolute inset-0 overflow-hidden bg-gradient-to-br from-[#003B45] via-[#00667D] to-[#008FB4]">
         {/* Subtle professional overlays */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-700/20 via-blue-800/20 to-blue-900/20 opacity-60"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/15 to-blue-700/15 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-blue-700/15 to-blue-800/15 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#00667D]/20 via-[#008FB4]/20 to-[#00A8D5]/20 opacity-60"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-[#0083DC]/15 to-[#00A8D5]/15 blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-[#008FB4]/15 to-[#00667D]/15 blur-3xl"></div>
         
         {/* Subtle geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/10 to-blue-700/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-blue-700/10 to-blue-800/10 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-blue-600/10 to-blue-700/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-[#1FC0DA]/10 to-[#0083DC]/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-[#008FB4]/10 to-[#00667D]/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-[#7AD0E4]/10 to-[#1FC0DA]/10 rounded-full blur-2xl"></div>
       </div>
 
       <div className="hero-content">
@@ -124,7 +124,7 @@ export function Hero() {
               High-Impact Web & SEO Growth Programs
             </p>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Transform your website into a lead generation machine with <span className="text-orange-400 drop-shadow-lg">Web Vello</span>
+              Transform your website into a lead generation machine with <span className="text-[#7AD0E4] drop-shadow-lg">Web Vello</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-3xl mx-auto">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
@@ -146,14 +146,14 @@ export function Hero() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="sm:w-auto h-12 px-8 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
+                    className="sm:w-auto h-12 px-8 bg-[#0083DC] hover:bg-[#00A8D5] text-white font-semibold shadow-lg hover:shadow-[#0083DC]/25 transition-all duration-300"
                   >
                     Get My Proposal
                   </Button>
                 </form>
                 <p className="text-center text-sm text-white/80">
                   Don’t have a site?{' '}
-                  <Link href="/contact" className="font-semibold text-white hover:text-blue-200 underline">
+                  <Link href="/contact" className="font-semibold text-white hover:text-[#7AD0E4] underline">
                     Click here
                   </Link>
                 </p>
@@ -216,7 +216,7 @@ export function Hero() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
+                    className="w-full h-12 bg-[#0083DC] hover:bg-[#00A8D5] text-white font-semibold shadow-lg hover:shadow-[#0083DC]/25 transition-all duration-300"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Submitting…' : 'Send my proposal'}
@@ -259,7 +259,7 @@ export function Hero() {
                   <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
                 <dt className="text-sm sm:text-base leading-7 text-white/80">{stat.name}</dt>
-                <dd className="order-first text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-orange-300 transition-colors">
+                <dd className="order-first text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-[#7AD0E4] transition-colors">
                   {stat.value}
                 </dd>
               </div>
