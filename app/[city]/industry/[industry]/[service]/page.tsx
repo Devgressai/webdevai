@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       siteName: 'Web Vello',
       type: 'website'
     },
-    robots: { index: true, follow: true }
+    robots: { index: false, follow: true }
   }
 }
 

@@ -12,6 +12,11 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /_next/
 Disallow: /api/
+Disallow: /studio/
+
+# Disallow potentially duplicate city-industry-service pages
+# These can cause "Alternate page with proper canonical tag" errors
+Disallow: /*/industry/*/
 
 # Allow important pages
 Allow: /services/
@@ -19,3 +24,7 @@ Allow: /contact
 Allow: /pricing
 Allow: /about
 Allow: /case-studies
+Allow: /blog/
+Allow: /solutions/
+Allow: /seo-audit
+Allow: /website-speed-test
