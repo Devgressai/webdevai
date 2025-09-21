@@ -62,16 +62,16 @@ export function Hero() {
     <section className="hero-section">
       
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <div className="absolute inset-0 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
         {/* Subtle professional overlays */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-slate-500/10 to-indigo-500/10 opacity-60"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-slate-600/20 to-gray-600/20 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-500/20 via-blue-600/20 to-blue-700/20 opacity-80"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-400/30 to-blue-600/30 blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-700/30 blur-3xl"></div>
         
         {/* Subtle geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/15 to-indigo-600/15 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-slate-600/15 to-gray-600/15 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-indigo-600/15 to-blue-600/15 rounded-full blur-2xl"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-400/25 to-blue-600/25 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-blue-500/25 to-blue-700/25 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-blue-500/25 to-blue-600/25 rounded-full blur-2xl"></div>
       </div>
 
       <div className="hero-content">
@@ -81,7 +81,7 @@ export function Hero() {
               High-Impact Web & SEO Growth Programs
             </p>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Transform your <span className="px-3 py-1 rounded-lg bg-gradient-to-r from-rose-500 to-red-500 text-white shadow-lg">website</span><br className="hidden sm:block" />
+              Transform your <span className="px-3 py-1 rounded-lg bg-white/20 text-white shadow-lg">website</span><br className="hidden sm:block" />
               <span className="text-blue-100">into a growth engine</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-3xl mx-auto">
@@ -104,7 +104,7 @@ export function Hero() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="sm:w-auto h-12 px-8 bg-gradient-to-r from-rose-500 to-red-500 hover:from-rose-600 hover:to-red-600 font-semibold shadow-lg"
+                    className="sm:w-auto h-12 px-8 bg-white text-blue-700 hover:bg-blue-50 border border-blue-200 font-semibold shadow-lg"
                   >
                     Send Me A Proposal
                   </Button>
