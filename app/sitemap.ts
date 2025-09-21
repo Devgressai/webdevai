@@ -22,43 +22,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/enhanced-demo'
   ]
 
-  // Top performing services - focus on high-value, high-traffic services
-  const topServices = [
+  // All services - comprehensive coverage for better SEO
+  const allServices = [
     'website-design',
-    'web-development',
-    'seo',
-    'ai-consulting',
-    'digital-marketing',
-    'ecommerce-design',
-    'ui-ux-design',
-    'local-seo',
     'website-redesign',
-    'ai-seo'
+    'web-development',
+    'rapid-web-design',
+    'ui-ux-design',
+    'ecommerce-design',
+    'app-design-development',
+    'software-design-development',
+    'software-development',
+    'shopify-development',
+    'wordpress-development',
+    'ai-consulting',
+    'ai-seo',
+    'ai-digital-marketing',
+    'ai-gpt-integration',
+    'ai-agent-development',
+    'chatgpt-optimization',
+    'generative-engine-optimization',
+    'answer-engine-optimization',
+    'enterprise-geo-services',
+    'seo',
+    'local-seo',
+    'digital-marketing',
+    'email-marketing-design',
+    'social-media-design',
+    'cro-ecommerce',
+    'cro-lead-generation'
   ]
 
-  // Top cities - major metropolitan areas with high search volume
-  const topCities = [
-    'new-york-ny',
-    'los-angeles-ca',
-    'chicago-il',
-    'houston-tx',
-    'phoenix-az',
-    'philadelphia-pa',
-    'san-antonio-tx',
-    'san-diego-ca',
-    'dallas-tx',
-    'san-jose-ca',
-    'austin-tx',
-    'jacksonville-fl',
-    'fort-worth-tx',
-    'columbus-oh',
-    'charlotte-nc',
-    'san-francisco-ca',
-    'seattle-wa',
-    'denver-co',
-    'washington-dc',
-    'boston-ma'
-  ]
+  // All cities - include all for comprehensive coverage
+  const allCities = citySlugs
 
   // Solutions pages
   const solutionsPages = [
@@ -90,25 +86,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
               0.7,
   }))
 
-  // Generate top service page entries
-  const serviceEntries = topServices.map((service) => ({
+  // Generate all service page entries
+  const serviceEntries = allServices.map((service) => ({
     url: `${baseUrl}/services/${service}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // Generate top city hub page entries
-  const cityEntries = topCities.map((city) => ({
+  // Generate all city hub page entries
+  const cityEntries = allCities.map((city) => ({
     url: `${baseUrl}/${city}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // Generate strategic city-service combinations (top cities × top services only)
-  const cityServiceEntries = topCities.flatMap((city) =>
-    topServices.slice(0, 5).map((service) => ({ // Only top 5 services per city
+  // Generate all city-service combinations for comprehensive coverage
+  const cityServiceEntries = allCities.flatMap((city) =>
+    allServices.map((service) => ({
       url: `${baseUrl}/${city}/${service}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
