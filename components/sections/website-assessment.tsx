@@ -232,7 +232,7 @@ function WebsiteAssessment() {
     setSeoResult(null)
 
     try {
-      const response = await fetch('/api/seo-audit', {
+      const response = await fetch('/api/seo-audit-secure', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

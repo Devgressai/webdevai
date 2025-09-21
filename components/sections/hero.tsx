@@ -105,16 +105,16 @@ export function Hero() {
       </div>
       
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
+      <div className="absolute inset-0 overflow-hidden bg-blue-800">
         {/* Subtle professional overlays */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-800/30 via-indigo-800/30 to-blue-800/30 opacity-70"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-purple-600/20 to-indigo-600/20 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-indigo-600/20 to-blue-600/20 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-700/20 via-blue-800/20 to-blue-900/20 opacity-60"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/15 to-blue-700/15 blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-blue-700/15 to-blue-800/15 blur-3xl"></div>
         
         {/* Subtle geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-purple-600/15 to-indigo-600/15 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-indigo-600/15 to-blue-600/15 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-indigo-600/15 to-purple-600/15 rounded-full blur-2xl"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/10 to-blue-700/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-blue-700/10 to-blue-800/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-blue-600/10 to-blue-700/10 rounded-full blur-2xl"></div>
       </div>
 
       <div className="hero-content">

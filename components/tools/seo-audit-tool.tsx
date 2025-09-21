@@ -71,7 +71,7 @@ export function SEOAuditTool() {
 
     try {
       // Call the real SEO audit API
-      const response = await fetch('/api/seo-audit', {
+      const response = await fetch('/api/seo-audit-secure', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
