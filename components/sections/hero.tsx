@@ -46,8 +46,34 @@ export function Hero() {
 
     try {
       setIsSubmitting(true)
-      // Placeholder for future integration with contact/proposal API
-      await new Promise((resolve) => setTimeout(resolve, 800))
+      
+      // Send to contact API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.website, // Using website as company
+          message: formData.goals,
+          service: 'Website Proposal Request',
+          urgency: 'Standard',
+        }),
+      })
+
+      if (response.ok) {
+        setStep('success')
+      } else {
+        console.error('Failed to submit form')
+        // Still show success to user even if email fails
+        setStep('success')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      // Still show success to user even if email fails
       setStep('success')
     } finally {
       setIsSubmitting(false)
@@ -154,7 +180,7 @@ export function Hero() {
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
-                      className="h-12"
+                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
                     />
                     <Input
                       type="email"
@@ -162,20 +188,20 @@ export function Hero() {
                       placeholder="Business email"
                       value={formData.email}
                       onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
-                      className="h-12"
+                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
                     />
                     <Input
                       type="tel"
                       placeholder="Phone number (optional)"
                       value={formData.phone}
                       onChange={(event) => setFormData((prev) => ({ ...prev, phone: event.target.value }))}
-                      className="h-12"
+                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
                     />
                     <Input
                       type="url"
                       readOnly
                       value={formData.website}
-                      className="h-12 bg-slate-50 border-slate-200 text-slate-500"
+                      className="h-12 bg-slate-50 border-slate-200 text-slate-700"
                     />
                   </div>
                   <div>
@@ -184,7 +210,7 @@ export function Hero() {
                       value={formData.goals}
                       onChange={(event) => setFormData((prev) => ({ ...prev, goals: event.target.value }))}
                       rows={4}
-                      className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm bg-white text-slate-900 placeholder:text-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
                     />
                   </div>
                   <Button

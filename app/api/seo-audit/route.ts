@@ -32,6 +32,8 @@ interface SEOAuditResult {
 }
 
 export async function POST(request: NextRequest) {
+  let websiteUrl: string = ''
+  
   try {
     // Rate limiting
     const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown'
@@ -47,7 +49,6 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate and sanitize URL
-    let websiteUrl: string
     try {
       const urlObj = new URL(url.startsWith('http') ? url : `https://${url}`)
       
@@ -79,12 +80,27 @@ export async function POST(request: NextRequest) {
     }
 
     // Perform SEO audit
-    const auditResult = await performSEOAudit(websiteUrl)
-    
-    return NextResponse.json(auditResult)
+    try {
+      const auditResult = await performSEOAudit(websiteUrl)
+      return NextResponse.json(auditResult)
+    } catch (auditError) {
+      console.error('Puppeteer audit failed, trying fallback:', auditError)
+      
+      // Fallback: Basic analysis without Puppeteer
+      const fallbackResult = await performBasicAudit(websiteUrl)
+      return NextResponse.json(fallbackResult)
+    }
   } catch (error) {
     console.error('SEO Audit Error:', error)
-    return NextResponse.json({ error: 'Failed to perform SEO audit' }, { status: 500 })
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      url: websiteUrl
+    })
+    return NextResponse.json({ 
+      error: 'Failed to perform SEO audit',
+      details: error instanceof Error ? error.message : 'Unknown error occurred'
+    }, { status: 500 })
   }
 }
 
@@ -193,10 +209,133 @@ async function performSEOAudit(url: string): Promise<SEOAuditResult> {
     
   } catch (error) {
     console.error('Audit error:', error)
+    console.error('Audit error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      url: url
+    })
     throw error
   } finally {
     if (page) await page.close()
     if (browser) await browser.close()
+  }
+}
+
+// Fallback function for basic analysis without Puppeteer
+async function performBasicAudit(url: string): Promise<SEOAuditResult> {
+  try {
+    console.log('Performing basic audit for:', url)
+    
+    // Basic HTTP request to get page content
+    const response = await axios.get(url, {
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; SEOAuditBot/1.0)'
+      }
+    })
+    
+    const $ = cheerio.load(response.data)
+    
+    // Basic analysis
+    const title = $('title').text().trim()
+    const description = $('meta[name="description"]').attr('content') || ''
+    const viewport = $('meta[name="viewport"]').attr('content') || ''
+    const hasRobots = $('meta[name="robots"]').length > 0
+    const hasSitemap = $('link[rel="sitemap"]').length > 0 || $('a[href*="sitemap"]').length > 0
+    
+    // Basic checks
+    const checks = {
+      title: {
+        status: (title.length > 0 && title.length <= 60 ? 'pass' : title.length === 0 ? 'fail' : 'warning') as 'pass' | 'warning' | 'fail',
+        message: title.length === 0 ? 'No title tag found' : 
+                 title.length > 60 ? 'Title is too long' : 'Title tag is good',
+        value: title,
+        length: title.length
+      },
+      description: {
+        status: (description.length > 0 && description.length <= 160 ? 'pass' : 
+                description.length === 0 ? 'fail' : 'warning') as 'pass' | 'warning' | 'fail',
+        message: description.length === 0 ? 'No meta description found' :
+                 description.length > 160 ? 'Meta description is too long' : 'Meta description is good',
+        value: description,
+        length: description.length
+      },
+      headings: {
+        status: 'warning' as 'pass' | 'warning' | 'fail',
+        message: 'Basic analysis - detailed heading structure not available',
+        count: $('h1, h2, h3, h4, h5, h6').length
+      },
+      images: {
+        status: 'warning' as 'pass' | 'warning' | 'fail',
+        message: 'Basic analysis - detailed image analysis not available',
+        altCount: $('img[alt]').length,
+        totalCount: $('img').length
+      },
+      mobile: {
+        status: (viewport.includes('width=device-width') ? 'pass' : 'fail') as 'pass' | 'warning' | 'fail',
+        message: viewport.includes('width=device-width') ? 'Mobile viewport detected' : 'No mobile viewport found',
+        viewport: viewport
+      },
+      speed: {
+        status: 'warning' as 'pass' | 'warning' | 'fail',
+        message: 'Speed analysis not available in basic mode'
+      },
+      ssl: {
+        status: (url.startsWith('https://') ? 'pass' : 'fail') as 'pass' | 'warning' | 'fail',
+        message: url.startsWith('https://') ? 'HTTPS enabled' : 'HTTPS not detected',
+        valid: url.startsWith('https://')
+      },
+      internalLinks: {
+        status: 'warning' as 'pass' | 'warning' | 'fail',
+        message: 'Basic analysis - detailed link analysis not available',
+        count: $('a[href^="/"], a[href*="' + new URL(url).hostname + '"]').length
+      },
+      externalLinks: {
+        status: 'warning' as 'pass' | 'warning' | 'fail',
+        message: 'Basic analysis - detailed link analysis not available',
+        count: $('a[href^="http"]').not('[href*="' + new URL(url).hostname + '"]').length
+      },
+      schema: {
+        status: 'warning' as 'pass' | 'warning' | 'fail',
+        message: 'Basic analysis - schema markup not analyzed'
+      },
+      robots: {
+        status: (hasRobots ? 'pass' : 'warning') as 'pass' | 'warning' | 'fail',
+        message: hasRobots ? 'Robots meta tag found' : 'No robots meta tag found',
+        hasRobots: hasRobots
+      },
+      sitemap: {
+        status: (hasSitemap ? 'pass' : 'warning') as 'pass' | 'warning' | 'fail',
+        message: hasSitemap ? 'Sitemap reference found' : 'No sitemap reference found',
+        hasSitemap: hasSitemap
+      }
+    }
+    
+    // Calculate basic score
+    const passedChecks = Object.values(checks).filter(check => check.status === 'pass').length
+    const totalChecks = Object.keys(checks).length
+    const overallScore = Math.round((passedChecks / totalChecks) * 100)
+    
+    const issues = {
+      critical: Object.values(checks).filter(check => check.status === 'fail').length,
+      warning: Object.values(checks).filter(check => check.status === 'warning').length,
+      passed: passedChecks
+    }
+    
+    const recommendations = generateRecommendations(checks)
+    
+    return {
+      url,
+      overallScore,
+      issues,
+      checks,
+      recommendations,
+      generatedAt: new Date().toISOString()
+    }
+    
+  } catch (error) {
+    console.error('Basic audit failed:', error)
+    throw new Error('Both Puppeteer and basic analysis failed')
   }
 }
 
