@@ -274,7 +274,7 @@ function analyzeHeadings($: cheerio.CheerioAPI) {
 function analyzeImages($: cheerio.CheerioAPI) {
   const images = $('img')
   const totalCount = images.length
-  const altCount = images.filter((i, el) => $(el).attr('alt')).length
+  const altCount = images.filter((i, el) => !!$(el).attr('alt')).length
   const missingAlt: string[] = []
   
   images.each((i, el) => {
