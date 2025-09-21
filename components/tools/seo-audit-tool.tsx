@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
@@ -485,11 +486,11 @@ export function SEOAuditTool() {
                   competitor analysis, and a custom SEO strategy tailored to your business.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
-                    Get Detailed Report
+                  <Button size="lg" asChild className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
+                    <Link href="/contact">Get Detailed Report</Link>
                   </Button>
-                  <Button size="lg" variant="outline">
-                    Schedule Free Consultation
+                  <Button size="lg" variant="outline" asChild>
+                    <Link href="/contact">Schedule Free Consultation</Link>
                   </Button>
                 </div>
               </div>

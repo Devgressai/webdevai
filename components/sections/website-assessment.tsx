@@ -307,7 +307,7 @@ function WebsiteAssessment() {
               Free Website Assessment
             </h2>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-              Get a comprehensive analysis of your website's performance and discover opportunities to increase traffic, conversions, and revenue.
+              Get a comprehensive analysis of your website&apos;s performance and discover opportunities to increase traffic, conversions, and revenue.
             </p>
           </div>
 
@@ -365,7 +365,7 @@ function WebsiteAssessment() {
                   Technical SEO Audit
                 </h3>
                 <p className="text-secondary-600 text-sm">
-                  Get a detailed technical analysis of your website's SEO performance
+                  Get a detailed technical analysis of your website&apos;s SEO performance
                 </p>
               </div>
               
@@ -475,7 +475,7 @@ function WebsiteAssessment() {
                 <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-green-500" />
                 <h3 className="text-xl font-semibold mb-2">Analyzing Your Website</h3>
                 <p className="text-secondary-600">
-                  We're checking your website's SEO performance, page speed, mobile optimization, and more...
+                  We&apos;re checking your website&apos;s SEO performance, page speed, mobile optimization, and more...
                 </p>
                 <div className="mt-6 space-y-2">
                   <div className="flex items-center justify-center text-sm text-secondary-500">
@@ -552,7 +552,7 @@ function WebsiteAssessment() {
                     <p className="text-sm text-secondary-600">{seoResult.checks.title.message}</p>
                     {seoResult.checks.title.value && (
                       <div className="text-sm bg-gray-50 p-2 rounded">
-                        "{seoResult.checks.title.value}"
+                        &quot;{seoResult.checks.title.value}&quot;
                       </div>
                     )}
                     {seoResult.checks.title.length !== undefined && (
@@ -576,7 +576,7 @@ function WebsiteAssessment() {
                     <p className="text-sm text-secondary-600">{seoResult.checks.description.message}</p>
                     {seoResult.checks.description.value && (
                       <div className="text-sm bg-gray-50 p-2 rounded">
-                        "{seoResult.checks.description.value}"
+                        &quot;{seoResult.checks.description.value}&quot;
                       </div>
                     )}
                     {seoResult.checks.description.length !== undefined && (
@@ -648,8 +648,8 @@ function WebsiteAssessment() {
                     Get a comprehensive SEO strategy and implementation plan tailored to your business goals.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700">
-                      Get Free SEO Strategy
+                    <Button size="lg" asChild className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700">
+                      <Link href="/contact">Get Free SEO Strategy</Link>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
                       <Link href="/contact">Schedule Consultation</Link>
