@@ -146,9 +146,9 @@ export function Hero() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="sm:w-auto h-12 px-8 bg-gradient-to-r from-rose-500 to-red-500 hover:from-rose-600 hover:to-red-600 text-white font-semibold shadow-lg"
+                    className="sm:w-auto h-12 px-8 bg-white text-blue-700 hover:bg-blue-50 font-semibold shadow-lg"
                   >
-                    Get Free SEO Audit
+                    Get My Proposal
                   </Button>
                 </form>
                 <p className="text-center text-sm text-white/80">
