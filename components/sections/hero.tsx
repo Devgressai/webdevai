@@ -5,7 +5,6 @@ import Link from "next/link"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { ArrowLeft, ArrowRight, CheckCircle, Star, Users, TrendingUp, Zap } from "lucide-react"
-import Image from 'next/image'
 // import { useConversionTracking } from "../../hooks/useConversionTracking"
 // import ScrollTracker from "../analytics/scroll-tracker"
 
@@ -29,6 +28,14 @@ export function Hero() {
   const handleWebsiteSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (!formData.website.trim()) return
+    
+    // Normalize the website input to ensure it has a proper URL format
+    let normalizedWebsite = formData.website.trim()
+    if (!normalizedWebsite.startsWith('http://') && !normalizedWebsite.startsWith('https://')) {
+      normalizedWebsite = 'https://' + normalizedWebsite
+    }
+    
+    setFormData(prev => ({ ...prev, website: normalizedWebsite }))
     setStep('details')
   }
 
@@ -53,35 +60,18 @@ export function Hero() {
 
   return (
     <section className="hero-section">
-      {/* Background Image */}
-      <div className="hero-bg">
-        <Image 
-          src="/images/hero-night-orbit.webp" 
-          alt="" 
-          fill 
-          priority 
-          sizes="100vw" 
-          className="object-cover"
-          quality={85}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-        />
-        {/* Light overlay for text readability */}
-        <div className="hero-overlay"></div>
-      </div>
       
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Subtle professional overlays */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-500/5 via-slate-500/5 to-indigo-500/5 opacity-40"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/8 to-indigo-600/8 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-slate-600/8 to-gray-600/8 blur-3xl"></div>
-        {/* Removed central blur circle for a cleaner, sharper center */}
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-slate-500/10 to-indigo-500/10 opacity-60"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-slate-600/20 to-gray-600/20 blur-3xl"></div>
         
         {/* Subtle geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-slate-600/10 to-gray-600/10 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/15 to-indigo-600/15 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-slate-600/15 to-gray-600/15 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-indigo-600/15 to-blue-600/15 rounded-full blur-2xl"></div>
       </div>
 
       <div className="hero-content">
@@ -91,8 +81,8 @@ export function Hero() {
               High-Impact Web & SEO Growth Programs
             </p>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Make your <span className="px-3 py-1 rounded-lg bg-gradient-to-r from-rose-500 to-red-500 text-white shadow-lg">website</span><br className="hidden sm:block" />
-              <span className="text-blue-100">competitive</span>
+              Transform your <span className="px-3 py-1 rounded-lg bg-gradient-to-r from-rose-500 to-red-500 text-white shadow-lg">website</span><br className="hidden sm:block" />
+              <span className="text-blue-100">into a growth engine</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-3xl mx-auto">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
@@ -104,9 +94,9 @@ export function Hero() {
               <div className="space-y-6">
                 <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-white/90 backdrop-blur-sm rounded-2xl p-2 shadow-xl">
                   <Input
-                    type="url"
+                    type="text"
                     required
-                    placeholder="Enter your website"
+                    placeholder="Enter your website (e.g., webvello.com)"
                     value={formData.website}
                     onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
                     className="h-12 flex-1 border-none focus-visible:ring-0 text-base"
