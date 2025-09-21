@@ -10,9 +10,9 @@ import Image from 'next/image'
 // import ScrollTracker from "../analytics/scroll-tracker"
 
 const stats = [
-  { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-blue-500 to-blue-600" },
+  { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-orange-500 to-orange-600" },
   { id: 2, name: "Happy Clients", value: "500+", icon: Users, color: "from-slate-600 to-slate-700" },
-  { id: 3, name: "ROI Average", value: "1,200%", icon: Zap, color: "from-indigo-500 to-indigo-600" },
+  { id: 3, name: "ROI Average", value: "1,200%", icon: Zap, color: "from-orange-500 to-orange-600" },
 ]
 
 export function Hero() {
@@ -124,7 +124,7 @@ export function Hero() {
               High-Impact Web & SEO Growth Programs
             </p>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Transform your website into a lead generation machine with <span className="text-blue-400">Web Vello</span>
+              Transform your website into a lead generation machine with <span className="text-orange-400 drop-shadow-lg">Web Vello</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-3xl mx-auto">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
@@ -146,7 +146,7 @@ export function Hero() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="sm:w-auto h-12 px-8 bg-white text-blue-700 hover:bg-blue-50 font-semibold shadow-lg"
+                    className="sm:w-auto h-12 px-8 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
                   >
                     Get My Proposal
                   </Button>
@@ -216,7 +216,7 @@ export function Hero() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full h-12 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-semibold"
+                    className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Submitting…' : 'Send my proposal'}
@@ -259,7 +259,7 @@ export function Hero() {
                   <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
                 <dt className="text-sm sm:text-base leading-7 text-white/80">{stat.name}</dt>
-                <dd className="order-first text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">
+                <dd className="order-first text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-orange-300 transition-colors">
                   {stat.value}
                 </dd>
               </div>
