@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import Link from 'next/link'
-import { CheckCircle, AlertTriangle, TrendingUp, Target, Users, DollarSign, BarChart3, Zap, Search, XCircle, Globe, Smartphone, Loader2 } from 'lucide-react'
+import { CheckCircle, AlertTriangle, TrendingUp, Target, Users, DollarSign, BarChart3, Zap, Search, XCircle, Globe, Smartphone, Loader2, Share2 } from 'lucide-react'
 
 interface AssessmentQuestion {
   id: string
@@ -102,13 +102,13 @@ interface SEOAuditResult {
     headings: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number; structure?: any[] }
     images: { status: 'pass' | 'warning' | 'fail'; message: string; altCount?: number; totalCount?: number; missingAlt?: string[] }
     mobile: { status: 'pass' | 'warning' | 'fail'; message: string; viewport?: string }
-    speed: { status: 'pass' | 'warning' | 'fail'; message: string; score?: number; loadTime?: number }
     ssl: { status: 'pass' | 'warning' | 'fail'; message: string; valid?: boolean }
     internalLinks: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number; broken?: number }
     externalLinks: { status: 'pass' | 'warning' | 'fail'; message: string; count?: number; nofollow?: number }
     schema: { status: 'pass' | 'warning' | 'fail'; message: string; types?: string[] }
     robots: { status: 'pass' | 'warning' | 'fail'; message: string; hasRobots?: boolean }
     sitemap: { status: 'pass' | 'warning' | 'fail'; message: string; hasSitemap?: boolean }
+    social: { status: 'pass' | 'warning' | 'fail'; message: string; ogTags?: number; twitterTags?: number }
   }
   recommendations: string[]
   generatedAt: string
@@ -605,18 +605,18 @@ function WebsiteAssessment() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        {getStatusIcon(seoResult.checks.speed.status)}
-                        <Zap className="w-5 h-5" />
-                        <span className="font-semibold">Page Speed</span>
+                        {getStatusIcon(seoResult.checks.social.status)}
+                        <Share2 className="w-5 h-5" />
+                        <span className="font-semibold">Social Media</span>
                       </div>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(seoResult.checks.speed.status)}`}>
-                        {seoResult.checks.speed.status}
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(seoResult.checks.social.status)}`}>
+                        {seoResult.checks.social.status}
                       </span>
                     </div>
-                    <p className="text-sm text-secondary-600">{seoResult.checks.speed.message}</p>
-                    {seoResult.checks.speed.score && (
+                    <p className="text-sm text-secondary-600">{seoResult.checks.social.message}</p>
+                    {seoResult.checks.social.ogTags && (
                       <div className="text-sm text-secondary-500">
-                        Speed Score: {seoResult.checks.speed.score}/100
+                        Open Graph: {seoResult.checks.social.ogTags}, Twitter: {seoResult.checks.social.twitterTags}
                       </div>
                     )}
                   </div>
