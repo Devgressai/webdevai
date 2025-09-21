@@ -1,8 +1,22 @@
-'use client'
-
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Code, Smartphone, Zap, TrendingUp, Users, Shield, BarChart3, Globe, ShoppingBag, Database, Cloud, Server, Layers, FileText, Palette, Cpu, HardDrive, Wrench, Settings, Monitor, Smartphone as Mobile, CheckCircle, Star, Award, Clock, DollarSign, Target, Lightbulb, Building2, Eye, Search, Lock, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'WordPress Development Services | Secure, Scalable Builds | Web Vello',
+  description: 'Upgrade your WordPress site with Web Vello’s senior developers. We craft custom themes, secure infrastructures, and performance-tuned experiences.',
+  keywords: ['wordpress development agency', 'custom wordpress theme', 'wordpress performance optimization', 'web vello wordpress', 'wordpress security services'],
+  alternates: {
+    canonical: 'https://webvello.com/services/wordpress-development',
+  },
+  openGraph: {
+    title: 'WordPress Development Services | Web Vello',
+    description: 'Partner with Web Vello to design, build, and optimize WordPress sites that are fast, secure, and conversion-focused.',
+    url: 'https://webvello.com/services/wordpress-development',
+    type: 'website',
+  }
+}
 
 const customFeatures = [
   {
@@ -98,7 +112,7 @@ const process = [
 ]
 
 const results = [
-  { metric: "Page Load Speed", value: "< 2 seconds", description: "Optimized for Google's Core Web Vitals" },
+  { metric: "Page Load Speed", value: "< 2 seconds", description: "Optimized for Google’s Core Web Vitals" },
   { metric: "Mobile Performance", value: "95+ Score", description: "Perfect mobile experience across all devices" },
   { metric: "SEO Score", value: "90+ Score", description: "Built-in SEO optimization and best practices" },
   { metric: "Security Rating", value: "A+ Grade", description: "Enterprise-level security and protection" }
@@ -671,7 +685,7 @@ export default function WordPressDevelopmentPage() {
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-secondary-900 mb-3">
-                  What's the difference between custom WordPress and Elementor development?
+                  What’s the difference between custom WordPress and Elementor development?
                 </h3>
                 <p className="text-secondary-600">
                   Custom WordPress development involves building themes and functionality from scratch, 
@@ -750,7 +764,7 @@ export default function WordPressDevelopmentPage() {
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Whether you need a custom WordPress solution or an Elementor-based website, 
-            we'll help you choose the perfect approach and deliver exceptional results.
+            we’ll help you choose the perfect approach and deliver exceptional results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
@@ -765,4 +779,3 @@ export default function WordPressDevelopmentPage() {
     </div>
   )
 }
-

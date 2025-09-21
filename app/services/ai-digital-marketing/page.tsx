@@ -2,6 +2,22 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Zap, Brain, Target, TrendingUp, CheckCircle, Eye, BarChart3, Users, Shield, MessageSquare, Globe, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '../../../lib/utils'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI Digital Marketing Services | Intelligent Campaign Automation | Web Vello',
+  description: 'Automate, personalize, and optimize every marketing touchpoint with Web Vello’s AI digital marketing team. Predictive analytics, AI content, and smart targeting powered by experts.',
+  keywords: ['ai digital marketing', 'marketing automation agency', 'predictive marketing', 'ai-driven campaigns', 'web vello ai marketing'],
+  alternates: {
+    canonical: 'https://webvello.com/services/ai-digital-marketing',
+  },
+  openGraph: {
+    title: 'AI Digital Marketing Services | Web Vello',
+    description: 'Web Vello combines AI innovation with senior strategists to deliver multi-channel campaigns that continuously learn and scale.',
+    url: 'https://webvello.com/services/ai-digital-marketing',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -98,7 +114,7 @@ export default function AIDigitalMarketingPage() {
             </h1>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
               Transform your digital marketing with AI-powered strategies that deliver unprecedented results. 
-              Our AI systems don't just automate—they learn, adapt, and continuously improve your marketing performance.
+              Our AI systems don’t just automate—they learn, adapt, and continuously improve your marketing performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-primary hover:shadow-glow">
@@ -123,7 +139,7 @@ export default function AIDigitalMarketingPage() {
               Why Choose AI-Powered Digital Marketing?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              AI doesn't just make marketing easier—it makes it smarter, more efficient, 
+              AI doesn’t just make marketing easier—it makes it smarter, more efficient, 
               and more effective than traditional methods.
             </p>
           </div>
@@ -221,8 +237,8 @@ export default function AIDigitalMarketingPage() {
               Ready to Harness the Power of AI Marketing?
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
-              Don't get left behind. Our AI-powered marketing services will transform 
-              your digital marketing and deliver results that traditional methods can't match.
+              Don’t get left behind. Our AI-powered marketing services will transform 
+              your digital marketing and deliver results that traditional methods can’t match.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">

@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Layers, Zap, Database, Shield, Users, BarChart3, Globe, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI & GPT Integration Services | Connect Models to Your Stack | Web Vello',
+  description: 'Integrate GPT and AI capabilities into your products and workflows. Web Vello architects secure, scalable integrations with custom prompts, APIs, and data pipelines.',
+  keywords: ['gpt integration services', 'ai integration agency', 'chatgpt api integration', 'web vello gpt', 'ai system integration'],
+  alternates: {
+    canonical: 'https://webvello.com/services/ai-gpt-integration',
+  },
+  openGraph: {
+    title: 'AI & GPT Integration | Web Vello',
+    description: 'Web Vello connects GPT and AI systems to your applications with secure infrastructure, data governance, and UX best practices.',
+    url: 'https://webvello.com/services/ai-gpt-integration',
+    type: 'website',
+  }
+}
 
 export default function AIGPTIntegrationPage() {
   return (
@@ -127,4 +143,3 @@ export default function AIGPTIntegrationPage() {
     </div>
   )
 }
-

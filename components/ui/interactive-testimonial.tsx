@@ -1,8 +1,9 @@
 "use client"
 
-import { forwardRef, useState, useEffect } from 'react'
+import { forwardRef, useState, useEffect, useCallback } from 'react'
 import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react'
 import { EnhancedCard } from './enhanced-card'
+import Image from 'next/image'
 
 export interface Testimonial {
   id: string
@@ -42,13 +43,13 @@ const InteractiveTestimonial = forwardRef<HTMLDivElement, InteractiveTestimonial
 
     const currentTestimonial = testimonials[currentIndex]
 
-    const nextTestimonial = () => {
+    const nextTestimonial = useCallback(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    }
+    }, [testimonials.length])
 
-    const prevTestimonial = () => {
+    const prevTestimonial = useCallback(() => {
       setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-    }
+    }, [testimonials.length])
 
     const goToTestimonial = (index: number) => {
       setCurrentIndex(index)
@@ -67,7 +68,7 @@ const InteractiveTestimonial = forwardRef<HTMLDivElement, InteractiveTestimonial
       }, 5000)
 
       return () => clearInterval(interval)
-    }, [autoPlay, isPlaying, currentIndex])
+    }, [autoPlay, isPlaying, nextTestimonial])
 
     const renderStars = (rating: number) => {
       return Array.from({ length: 5 }, (_, i) => (
@@ -94,15 +95,17 @@ const InteractiveTestimonial = forwardRef<HTMLDivElement, InteractiveTestimonial
 
           {/* Content */}
           <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed">
-            "{currentTestimonial.content}"
+            “{currentTestimonial.content}”
           </blockquote>
 
           {/* Author info */}
           <div className="flex flex-col items-center">
             {currentTestimonial.avatar && (
-              <img
+              <Image
                 src={currentTestimonial.avatar}
                 alt={currentTestimonial.name}
+                width={48}
+                height={48}
                 className="h-12 w-12 rounded-full mb-3 object-cover"
               />
             )}

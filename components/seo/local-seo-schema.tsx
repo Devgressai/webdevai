@@ -120,7 +120,7 @@ export function LocalBusinessSchema({
           "@type": "Person",
           "name": "Sarah Mitchell",
         },
-        "reviewBody": "Web Vello's local SEO services helped us dominate our local market. We're now ranking #1 for all our target keywords in our city.",
+        "reviewBody": "Web Vello’s local SEO services helped us dominate our local market. We’re now ranking #1 for all our target keywords in our city.",
       },
       {
         "@type": "Review",

@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Zap, Clock, Target, CheckCircle, Eye, TrendingUp, Users, Building2, BarChart3, DollarSign, Award, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Rapid Web Design Services | Launch in Days | Web Vello',
+  description: 'Need a conversion-ready website fast? Web Vello’s rapid web design sprints deliver polished, high-performing sites in days without sacrificing quality.',
+  keywords: ['rapid web design', 'fast website launch', 'web design sprint', 'web vello rapid', 'quick website development'],
+  alternates: {
+    canonical: 'https://webvello.com/services/rapid-web-design',
+  },
+  openGraph: {
+    title: 'Rapid Web Design | Web Vello',
+    description: 'Launch a high-performing website in record time with Web Vello’s rapid design and development framework.',
+    url: 'https://webvello.com/services/rapid-web-design',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -118,7 +134,7 @@ export default function RapidWebDesignPage() {
               Why Choose Rapid Web Design?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              Speed doesn't mean sacrificing quality. Our rapid development process 
+              Speed doesn’t mean sacrificing quality. Our rapid development process 
               delivers professional results quickly and efficiently.
             </p>
           </div>
@@ -211,7 +227,7 @@ export default function RapidWebDesignPage() {
               Ready to Launch Fast?
             </h2>
             <p className="text-xl text-yellow-100 max-w-2xl mx-auto mb-8">
-              Don't wait months for a website. Our rapid web design services 
+              Don’t wait months for a website. Our rapid web design services 
               get you online quickly with professional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

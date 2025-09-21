@@ -36,9 +36,9 @@ const leadGenerationChallenges = [
   },
   {
     title: "Weak Content Strategy",
-    description: "Content that doesn't address user needs or guide visitors toward conversion",
+    description: "Content that doesn’t address user needs or guide visitors toward conversion",
     symptoms: [
-      "Content doesn't match user intent",
+      "Content doesn’t match user intent",
       "Missing educational resources",
       "Poor content quality",
       "No lead nurturing content",
@@ -64,7 +64,7 @@ const leadGenerationChallenges = [
   },
   {
     title: "Insufficient Traffic Quality",
-    description: "Website attracts the wrong type of visitors who aren't interested in your offerings",
+    description: "Website attracts the wrong type of visitors who aren’t interested in your offerings",
     symptoms: [
       "High bounce rates",
       "Low time on site",
@@ -95,7 +95,7 @@ const leadGenerationChallenges = [
 const leadGenerationStrategies = [
   {
     title: "Conversion Rate Optimization (CRO)",
-    description: "Systematically improve your website's ability to convert visitors into leads",
+    description: "Systematically improve your website’s ability to convert visitors into leads",
     tactics: [
       "A/B testing of headlines and CTAs",
       "User experience optimization",
@@ -407,11 +407,11 @@ export default function WebsiteLeadsPage() {
               <span className="bg-gradient-to-r from-green-600 to-blue-500 bg-clip-text text-transparent">
                 Not Generating Leads?
               </span>{" "}
-              Let's Fix That
+              Let’s Fix That
             </h1>
             
             <p className="text-xl lg:text-2xl leading-8 text-secondary-600 mb-12 max-w-3xl mx-auto">
-              Don't let valuable website traffic go to waste. Our proven lead generation strategies have helped 
+              Don’t let valuable website traffic go to waste. Our proven lead generation strategies have helped 
               hundreds of businesses transform their websites into lead-generating machines. We identify the 
               barriers and implement solutions that capture, nurture, and convert visitors into customers.
             </p>
@@ -448,7 +448,7 @@ export default function WebsiteLeadsPage() {
               Common Lead Generation Challenges
             </h2>
             <p className="text-xl text-secondary-600">
-              Understanding why your website isn't generating leads is the first step to solving the problem. 
+              Understanding why your website isn’t generating leads is the first step to solving the problem. 
               These are the most common challenges we encounter and their impact on lead generation.
             </p>
           </div>
@@ -742,7 +742,7 @@ export default function WebsiteLeadsPage() {
             </h2>
             <p className="text-xl text-secondary-600">
               Get answers to the most common questions about website lead generation, conversion optimization, 
-              and how to maximize your website's lead generation potential.
+              and how to maximize your website’s lead generation potential.
             </p>
           </div>
 
@@ -753,7 +753,7 @@ export default function WebsiteLeadsPage() {
                 answer: "Most businesses see initial improvements within 2-4 weeks, with significant results typically appearing within 2-3 months. The timeline depends on the strategies implemented, your industry, and the scope of changes. We provide weekly progress reports so you can track improvements in real-time."
               },
               {
-                question: "What's the typical improvement in lead generation businesses see?",
+                question: "What’s the typical improvement in lead generation businesses see?",
                 answer: "Our clients typically see 200-800% increases in lead generation, with conversion rate improvements of 25-150%. The exact improvement depends on your starting point, industry, and the specific strategies implemented. We focus on sustainable, long-term improvements rather than quick fixes."
               },
               {
@@ -762,10 +762,10 @@ export default function WebsiteLeadsPage() {
               },
               {
                 question: "How do you measure lead generation success?",
-                answer: "We track multiple metrics including lead conversion rates, cost per lead, lead quality scores, and lead-to-customer conversion rates. Success is measured by both quantity and quality of leads, ensuring you're generating the right type of leads for your business."
+                answer: "We track multiple metrics including lead conversion rates, cost per lead, lead quality scores, and lead-to-customer conversion rates. Success is measured by both quantity and quality of leads, ensuring you’re generating the right type of leads for your business."
               },
               {
-                question: "What's included in your lead generation services?",
+                question: "What’s included in your lead generation services?",
                 answer: "Our comprehensive service includes lead generation audit, conversion rate optimization, lead magnet creation, landing page optimization, lead nurturing strategy, and ongoing optimization. We work as an extension of your team to continuously improve your lead generation performance."
               }
             ].map((faq, index) => (
@@ -802,7 +802,7 @@ export default function WebsiteLeadsPage() {
             Ready to Generate More Leads?
           </h2>
           <p className="text-xl text-green-100 mb-10 max-w-3xl mx-auto">
-            Don't let valuable website traffic go to waste. Our proven lead generation strategies have helped 
+            Don’t let valuable website traffic go to waste. Our proven lead generation strategies have helped 
             hundreds of businesses transform their websites into lead-generating machines.
           </p>
           

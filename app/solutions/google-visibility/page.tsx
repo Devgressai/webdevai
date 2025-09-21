@@ -178,7 +178,7 @@ const faqs = [
     answer: "Initial improvements can be seen within 2-4 weeks, but significant and sustainable visibility gains typically take 3-6 months. The timeline depends on your current technical foundation, content quality, and competitive landscape."
   },
   {
-    question: "What's the most important factor for Google visibility?",
+    question: "What’s the most important factor for Google visibility?",
     answer: "User experience and content quality are the most critical factors. Google prioritizes websites that provide valuable, relevant content and excellent user experience across all devices. Technical SEO provides the foundation, but content and UX drive rankings."
   },
   {
@@ -190,7 +190,7 @@ const faqs = [
     answer: "Yes, local SEO can significantly improve overall visibility, especially for businesses serving specific geographic areas. Local signals like citations, reviews, and Google My Business optimization contribute to both local and general search rankings."
   },
   {
-    question: "What's the best way to target featured snippets?",
+    question: "What’s the best way to target featured snippets?",
     answer: "Focus on creating comprehensive, well-structured content that directly answers user questions. Use clear headings, bullet points, and numbered lists. Research what questions your target audience is asking and provide authoritative, helpful answers."
   }
 ]

@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Users, Smartphone, Zap, TrendingUp, Eye, BarChart3, Palette, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'UI/UX Design Services | Research-Backed Experiences | Web Vello',
+  description: 'Deliver intuitive, conversion-focused digital experiences. Web Vello’s UI/UX team blends research, prototyping, and testing to launch products customers love.',
+  keywords: ['ui ux design agency', 'user experience design', 'product design services', 'web vello ux', 'ux research company'],
+  alternates: {
+    canonical: 'https://webvello.com/services/ui-ux-design',
+  },
+  openGraph: {
+    title: 'UI/UX Design Services | Web Vello',
+    description: 'Partner with Web Vello to create modern, research-driven interfaces that increase engagement and conversions.',
+    url: 'https://webvello.com/services/ui-ux-design',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -93,7 +109,7 @@ export default function UIUXDesignPage() {
               That Delights
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              We create intuitive, engaging user experiences that don't just look beautiful—they 
+              We create intuitive, engaging user experiences that don’t just look beautiful—they 
               drive results. Our UI/UX design focuses on user satisfaction, conversion optimization, 
               and creating digital experiences that users love to interact with.
             </p>
@@ -411,7 +427,7 @@ export default function UIUXDesignPage() {
             Ready to Transform Your User Experience?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Let's create digital experiences that delight your users and drive 
+            Let’s create digital experiences that delight your users and drive 
             measurable business results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

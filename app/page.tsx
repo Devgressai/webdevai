@@ -68,7 +68,7 @@ const testimonials = [
     id: 1,
     name: "Sarah Mitchell",
     role: "CEO, TechStart Solutions",
-    content: "Web Vello's digital marketing services transformed our online presence completely. We went from 50 qualified leads per month to over 200, and our revenue increased by 150% in just 6 months with their SEO and web development expertise.",
+    content: "Web Vello’s digital marketing services transformed our online presence completely. We went from 50 qualified leads per month to over 200, and our revenue increased by 150% in just 6 months with their SEO and web development expertise.",
     rating: 5,
     company: "TechStart Solutions"
   },
@@ -76,7 +76,7 @@ const testimonials = [
     id: 2,
     name: "Michael Rodriguez",
     role: "Marketing Director, GrowthCo",
-    content: "The AI-powered SEO strategies are incredible. We're ranking for high-value keywords we never thought possible, and our organic search traffic has grown 400% year-over-year with their advanced SEO techniques.",
+    content: "The AI-powered SEO strategies are incredible. We’re ranking for high-value keywords we never thought possible, and our organic search traffic has grown 400% year-over-year with their advanced SEO techniques.",
     rating: 5,
     company: "GrowthCo"
   },

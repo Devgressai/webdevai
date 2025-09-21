@@ -1,6 +1,10 @@
+"use client"
+
+import { useState } from 'react'
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Shield } from "lucide-react"
+import { Input } from "../ui/input"
+import { ArrowLeft, ArrowRight, CheckCircle, Star, Users, TrendingUp, Zap } from "lucide-react"
 import Image from 'next/image'
 // import { useConversionTracking } from "../../hooks/useConversionTracking"
 // import ScrollTracker from "../analytics/scroll-tracker"
@@ -11,17 +15,41 @@ const stats = [
   { id: 3, name: "ROI Average", value: "1,200%", icon: Zap, color: "from-indigo-500 to-indigo-600" },
 ]
 
-const reviews = [
-  { id: 1, rating: 5, text: "Outstanding results and professional service", author: "Sarah M." },
-  { id: 2, rating: 5, text: "Transformed our online presence completely", author: "Mike R." },
-  { id: 3, rating: 5, text: "Best investment we've made this year", author: "Jennifer L." },
-]
-
 export function Hero() {
-  // Temporarily disabled conversion tracking to fix build error
-  // const { trackCTAClick, trackStrategySession } = useConversionTracking()
+  const [step, setStep] = useState<'url' | 'details' | 'success'>('url')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formData, setFormData] = useState({
+    website: '',
+    name: '',
+    email: '',
+    phone: '',
+    goals: ''
+  })
 
-  // No-op handlers removed to reduce client JS
+  const handleWebsiteSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    if (!formData.website.trim()) return
+    setStep('details')
+  }
+
+  const handleDetailsSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    if (!formData.name || !formData.email) return
+
+    try {
+      setIsSubmitting(true)
+      // Placeholder for future integration with contact/proposal API
+      await new Promise((resolve) => setTimeout(resolve, 800))
+      setStep('success')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const resetFlow = () => {
+    setFormData({ website: '', name: '', email: '', phone: '', goals: '' })
+    setStep('url')
+  }
 
   return (
     <section className="hero-section">
@@ -57,46 +85,141 @@ export function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="mx-auto max-w-3xl">
-          {/* Simplified headline */}
-          <h1 className="hero-title">
-            Design. Develop. Dominate.
-          </h1>
-          {/* Short supporting line */}
-          <p className="hero-subtitle">
-            High-converting websites and SEO that grow revenue—fast.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
-            <Button 
-              size="xl" 
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-400/25 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white" 
-              asChild
-            >
-              <Link href="/contact" aria-label="Get a free website audit">
-                Audit My Website Now (Free)
-              </Link>
-            </Button>
-            <Button 
-              variant="outline" 
-              size="xl" 
-              className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white" 
-              asChild
-            >
-              <Link href="/case-studies" className="flex items-center" aria-label="View case studies">
-                <Play className="mr-2 h-5 w-5" />
-                See Our Work
-              </Link>
-            </Button>
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="text-center">
+            <p className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white/80">
+              High-Impact Web & SEO Growth Programs
+            </p>
+            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Make your <span className="px-3 py-1 rounded-lg bg-gradient-to-r from-rose-500 to-red-500 text-white shadow-lg">website</span><br className="hidden sm:block" />
+              <span className="text-blue-100">competitive</span>
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-3xl mx-auto">
+              Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
+            </p>
           </div>
 
+          <div className="mt-10 max-w-2xl mx-auto w-full">
+            {step === 'url' && (
+              <div className="space-y-6">
+                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-white/90 backdrop-blur-sm rounded-2xl p-2 shadow-xl">
+                  <Input
+                    type="url"
+                    required
+                    placeholder="Enter your website"
+                    value={formData.website}
+                    onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
+                    className="h-12 flex-1 border-none focus-visible:ring-0 text-base"
+                  />
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="sm:w-auto h-12 px-8 bg-gradient-to-r from-rose-500 to-red-500 hover:from-rose-600 hover:to-red-600 font-semibold shadow-lg"
+                  >
+                    Send Me A Proposal
+                  </Button>
+                </form>
+                <p className="text-center text-sm text-white/80">
+                  Don’t have a site?{' '}
+                  <Link href="/contact" className="font-semibold text-white hover:text-blue-200 underline">
+                    Click here
+                  </Link>
+                </p>
+              </div>
+            )}
 
+            {step === 'details' && (
+              <div className="relative bg-white rounded-3xl shadow-2xl border border-slate-100 p-6 sm:p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <p className="font-semibold text-slate-900">Almost there—tell us how to reach you.</p>
+                  <button
+                    type="button"
+                    onClick={() => setStep('url')}
+                    className="inline-flex items-center text-sm text-slate-500 hover:text-slate-700"
+                  >
+                    <ArrowLeft className="mr-1 h-4 w-4" /> Back
+                  </button>
+                </div>
+                <form className="space-y-4" onSubmit={handleDetailsSubmit}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Input
+                      type="text"
+                      required
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
+                      className="h-12"
+                    />
+                    <Input
+                      type="email"
+                      required
+                      placeholder="Business email"
+                      value={formData.email}
+                      onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
+                      className="h-12"
+                    />
+                    <Input
+                      type="tel"
+                      placeholder="Phone number (optional)"
+                      value={formData.phone}
+                      onChange={(event) => setFormData((prev) => ({ ...prev, phone: event.target.value }))}
+                      className="h-12"
+                    />
+                    <Input
+                      type="url"
+                      readOnly
+                      value={formData.website}
+                      className="h-12 bg-slate-50 border-slate-200 text-slate-500"
+                    />
+                  </div>
+                  <div>
+                    <textarea
+                      placeholder="What are you looking for? (goals, challenges, timeline)"
+                      value={formData.goals}
+                      onChange={(event) => setFormData((prev) => ({ ...prev, goals: event.target.value }))}
+                      rows={4}
+                      className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full h-12 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-semibold"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Submitting…' : 'Send my proposal'}
+                  </Button>
+                </form>
+              </div>
+            )}
 
+            {step === 'success' && (
+              <div className="rounded-3xl bg-emerald-100 border border-emerald-200 p-6 text-emerald-900 shadow-lg">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 mt-1 text-emerald-600" />
+                  <div>
+                    <h3 className="text-lg font-semibold">Thank you! We’ll be in touch shortly.</h3>
+                    <p className="mt-2 text-sm leading-relaxed">
+                      One of our specialists will reach out with a tailored proposal. Need to talk sooner?{' '}
+                      <Link href="/contact" className="underline font-semibold text-emerald-700">
+                        Schedule a strategy call
+                      </Link>
+                      {' '}or email us at{' '}
+                      <a href="mailto:hello@webvello.com" className="underline">hello@webvello.com</a>.
+                    </p>
+                    <div className="mt-4">
+                      <Button variant="outline" onClick={resetFlow} className="text-emerald-700 border-emerald-300">
+                        Start another request
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="mx-auto mt-16 max-w-4xl">
+        <div className="mx-auto mt-16 max-w-4xl px-4">
           <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 text-center">
             {stats.map((stat) => (
               <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-3 group">

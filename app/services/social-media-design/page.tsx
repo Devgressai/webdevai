@@ -2,11 +2,27 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Users, Palette, TrendingUp, CheckCircle, Eye, Target, BarChart3, Zap, Share2, Heart, MessageCircle, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '../../../lib/utils'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Social Media Design Services | Scroll-Stopping Creative | Web Vello',
+  description: 'Stand out in every feed. Web Vello’s social media designers craft platform-specific creative that increases engagement, followers, and conversions.',
+  keywords: ['social media design agency', 'social content design', 'instagram design services', 'web vello social media', 'social creative studio'],
+  alternates: {
+    canonical: 'https://webvello.com/services/social-media-design',
+  },
+  openGraph: {
+    title: 'Social Media Design Services | Web Vello',
+    description: 'Boost engagement with eye-catching, on-brand social media graphics produced by Web Vello’s creative team.',
+    url: 'https://webvello.com/services/social-media-design',
+    type: 'website',
+  }
+}
 
 const features = [
   {
     title: "Platform-Specific Design",
-    description: "Custom graphics optimized for each social media platform's unique requirements.",
+    description: "Custom graphics optimized for each social media platform’s unique requirements.",
     icon: Share2,
     benefits: ["Instagram-optimized", "Facebook-friendly", "LinkedIn professional", "Twitter engaging"]
   },
@@ -98,7 +114,7 @@ export default function SocialMediaDesignPage() {
             </h1>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
               Transform your social media presence with eye-catching, conversion-focused graphics. 
-              Our designs don't just look good—they drive engagement, build your brand, and convert followers to customers.
+              Our designs don’t just look good—they drive engagement, build your brand, and convert followers to customers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-primary hover:shadow-glow">
@@ -123,7 +139,7 @@ export default function SocialMediaDesignPage() {
               Why Choose Our Social Media Design Services?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              We create social media graphics that don't just look professional—they perform, 
+              We create social media graphics that don’t just look professional—they perform, 
               engaging your audience and driving real business results.
             </p>
           </div>

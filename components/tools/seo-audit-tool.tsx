@@ -189,7 +189,7 @@ export function SEOAuditTool() {
               <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-primary-500" />
               <h3 className="text-xl font-semibold mb-2">Analyzing Your Website</h3>
               <p className="text-secondary-600">
-                We're checking your website's SEO performance, page speed, mobile optimization, and more...
+                We’re checking your website’s SEO performance, page speed, mobile optimization, and more...
               </p>
               <div className="mt-6 space-y-2">
                 <div className="flex items-center justify-center text-sm text-secondary-500">
@@ -252,7 +252,7 @@ export function SEOAuditTool() {
             <CardHeader>
               <CardTitle>Detailed SEO Analysis</CardTitle>
               <CardDescription>
-                Comprehensive breakdown of your website's SEO performance
+                Comprehensive breakdown of your website’s SEO performance
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -271,7 +271,7 @@ export function SEOAuditTool() {
                   <p className="text-sm text-secondary-600">{result.checks.title.message}</p>
                   {result.checks.title.value && (
                     <div className="text-sm bg-gray-50 p-2 rounded">
-                      "{result.checks.title.value}"
+                      “{result.checks.title.value}”
                     </div>
                   )}
                   {result.checks.title.length !== undefined && (
@@ -295,7 +295,7 @@ export function SEOAuditTool() {
                   <p className="text-sm text-secondary-600">{result.checks.description.message}</p>
                   {result.checks.description.value && (
                     <div className="text-sm bg-gray-50 p-2 rounded">
-                      "{result.checks.description.value}"
+                      “{result.checks.description.value}”
                     </div>
                   )}
                   {result.checks.description.length !== undefined && (
@@ -456,7 +456,7 @@ export function SEOAuditTool() {
                 SEO Recommendations
               </CardTitle>
               <CardDescription>
-                Actionable steps to improve your website's SEO performance
+                Actionable steps to improve your website’s SEO performance
               </CardDescription>
             </CardHeader>
             <CardContent>

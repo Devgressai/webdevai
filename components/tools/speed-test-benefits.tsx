@@ -14,7 +14,7 @@ const benefits = [
   {
     icon: Zap,
     title: "Core Web Vitals Analysis",
-    description: "Get detailed insights into Google's Core Web Vitals metrics including LCP, FID, and CLS to understand your site's user experience."
+    description: "Get detailed insights into Google’s Core Web Vitals metrics including LCP, FID, and CLS to understand your site’s user experience."
   },
   {
     icon: TrendingUp,
@@ -53,7 +53,7 @@ export function SpeedTestBenefits() {
           </h2>
           <p className="mt-4 text-lg leading-8 text-secondary-600">
             Website speed directly impacts user experience, search rankings, and business success. 
-            Our free speed test tool helps you understand and improve your site's performance.
+            Our free speed test tool helps you understand and improve your site’s performance.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export function SpeedTestBenefits() {
             </h3>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
               Research shows that website speed has a direct correlation with user behavior, 
-              search rankings, and business metrics. Here's what the data tells us:
+              search rankings, and business metrics. Here’s what the data tells us:
             </p>
           </div>
           

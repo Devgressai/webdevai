@@ -2,6 +2,7 @@
 
 import { Button } from '../ui/button'
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useConversionTracking } from '@/hooks/useConversionTracking'
 
@@ -28,7 +29,14 @@ export function CTAWithTracking({ className = "" }: CTAWithTrackingProps) {
     <section className={`py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden ${className}`}>
       {/* Background image and gradient flow */}
       <div className="absolute inset-0 opacity-20">
-        <img src="/images/hero-business-meeting.webp" alt="" className="w-full h-full object-cover" />
+        <Image
+          src="/images/hero-business-meeting.webp"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/25 via-pink-500/25 to-blue-500/25"></div>
       

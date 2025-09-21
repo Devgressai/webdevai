@@ -165,7 +165,7 @@ export default function BlogPost() {
           
           <p className="text-xl text-gray-600 leading-relaxed">
             Discover the must-have features that can make or break your business website. 
-            From mobile optimization to AI integration, learn what your customers expect in today's digital landscape.
+            From mobile optimization to AI integration, learn what your customers expect in today’s digital landscape.
           </p>
         </div>
 
@@ -179,14 +179,14 @@ export default function BlogPost() {
         {/* Article Content */}
         <div className="prose prose-lg max-w-none">
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            In today's competitive digital landscape, having a professional website is no longer optional—it's essential. 
-            But simply having a website isn't enough. Your website needs to be equipped with the right features to 
+            In today’s competitive digital landscape, having a professional website is no longer optional—it’s essential. 
+            But simply having a website isn’t enough. Your website needs to be equipped with the right features to 
             attract visitors, engage them, and convert them into customers.
           </p>
 
           <p className="text-lg text-gray-700 leading-relaxed mb-12">
             As we move through 2024, customer expectations continue to evolve. What worked last year might not be 
-            sufficient today. That's why we've compiled this comprehensive list of 10 essential features every 
+            sufficient today. That’s why we’ve compiled this comprehensive list of 10 essential features every 
             business website needs to succeed in 2024.
           </p>
 
@@ -218,7 +218,7 @@ export default function BlogPost() {
               Ready to Implement These Features?
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Implementing these essential features can seem overwhelming, but you don't have to do it alone. 
+              Implementing these essential features can seem overwhelming, but you don’t have to do it alone. 
               Our team at Web Vello specializes in creating professional websites that incorporate all these 
               features and more.
             </p>

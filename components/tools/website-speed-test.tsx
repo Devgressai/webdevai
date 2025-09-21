@@ -224,7 +224,7 @@ export function WebsiteSpeedTest() {
               <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-primary-500" />
               <h3 className="text-xl font-semibold mb-2">Checking Website Speed</h3>
               <p className="text-secondary-600">
-                We're analyzing your website's performance, Core Web Vitals, and loading speed...
+                We’re analyzing your website’s performance, Core Web Vitals, and loading speed...
               </p>
               <div className="mt-6 space-y-2">
                 <div className="flex items-center justify-center text-sm text-secondary-500">
@@ -294,7 +294,7 @@ export function WebsiteSpeedTest() {
                 Core Web Vitals
               </CardTitle>
               <CardDescription>
-                Google's key metrics for measuring user experience
+                Google’s key metrics for measuring user experience
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -494,7 +494,7 @@ export function WebsiteSpeedTest() {
                 </h3>
                 <p className="text-secondary-600 mb-6 max-w-2xl mx-auto">
                   Our performance experts can help you implement speed optimizations, improve 
-                  Core Web Vitals, and create a comprehensive strategy to boost your website's performance.
+                  Core Web Vitals, and create a comprehensive strategy to boost your website’s performance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">

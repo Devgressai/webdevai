@@ -97,7 +97,7 @@ export default function IndustriesPage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              Every industry has unique challenges and opportunities. We've developed specialized 
+              Every industry has unique challenges and opportunities. We’ve developed specialized 
               digital marketing strategies that work specifically for your business type and market.
             </p>
           </div>
@@ -196,7 +196,7 @@ export default function IndustriesPage() {
               All Industries We Serve
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              While we have deep expertise in featured industries, we've successfully helped 
+              While we have deep expertise in featured industries, we’ve successfully helped 
               businesses across all sectors achieve remarkable growth.
             </p>
           </div>
@@ -254,8 +254,8 @@ export default function IndustriesPage() {
                 Why Industry Expertise Matters
               </h2>
               <p className="text-lg text-secondary-600 mb-6">
-                Generic digital marketing strategies don't work in competitive industries. 
-                We've spent years understanding the unique challenges, regulations, and 
+                Generic digital marketing strategies don’t work in competitive industries. 
+                We’ve spent years understanding the unique challenges, regulations, and 
                 opportunities in each sector we serve.
               </p>
               <div className="space-y-4">
@@ -537,7 +537,7 @@ export default function IndustriesPage() {
             Ready for Industry-Specific Results?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Don't settle for generic digital marketing. Get strategies designed specifically 
+            Don’t settle for generic digital marketing. Get strategies designed specifically 
             for your industry and market challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

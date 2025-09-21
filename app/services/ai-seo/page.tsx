@@ -1,7 +1,23 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Zap, Brain, TrendingUp, Target, BarChart3, Users, Clock, CheckCircle, Cpu, Network, Database, Globe, Sparkles, Play, Pause, RotateCcw, Code, FileText } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'AI SEO Agency | Predictive Search Growth Strategies | Web Vello',
+  description: 'Unlock 300%+ organic growth with AI-powered SEO. Web Vello blends machine learning, predictive analytics, and expert strategy to win competitive keywords faster.',
+  keywords: ['ai seo services', 'machine learning seo agency', 'ai keyword research', 'predictive seo analytics', 'ai content optimization'],
+  alternates: {
+    canonical: 'https://webvello.com/services/ai-seo',
+  },
+  openGraph: {
+    title: 'AI SEO Agency | Web Vello',
+    description: 'Combine AI-driven insights with senior strategists to dominate search results, launch intelligent content, and outrank category leaders.',
+    url: 'https://webvello.com/services/ai-seo',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -121,7 +137,7 @@ export default function AISeOPage() {
               
               <p className="text-lg leading-8 text-secondary-600 mb-8">
                 Leverage cutting-edge AI technology to identify opportunities, optimize content, and achieve 
-                search rankings that traditional SEO methods can't match. Our AI analyzes millions of data 
+                search rankings that traditional SEO methods can’t match. Our AI analyzes millions of data 
                 points to uncover hidden keywords, predict content performance, and outmaneuver your competition.
               </p>
 

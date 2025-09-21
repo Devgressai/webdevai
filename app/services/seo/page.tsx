@@ -1,8 +1,22 @@
-'use client'
-
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Search, TrendingUp, BarChart3, Target, Zap, Globe, Users, FileText, Settings, Code, ShoppingBag, Link as LinkIcon, CheckCircle, Clock, Shield, Award, Star, Eye, MousePointer, Filter, Heart, Truck, CreditCard, Lock, RefreshCw, TrendingDown, AlertTriangle, Lightbulb, Building2, Calculator, Calendar, UserCheck, MessageSquare, Phone, UserPlus, Palette, Monitor, ShoppingCart, Send, Bot, Factory, Wrench, Layers, Crown, Gem, Share2, MessageCircle, Cloud, Smartphone } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SEO Services | Technical, On-Page, & Link Building Experts | Web Vello',
+  description: 'Increase rankings, traffic, and revenue with Web Vello’s SEO services. We combine audits, technical fixes, strategic content, and authoritative links to deliver predictable organic growth.',
+  keywords: ['seo agency', 'technical seo services', 'on-page optimization', 'link building services', 'web vello seo'],
+  alternates: {
+    canonical: 'https://webvello.com/services/seo',
+  },
+  openGraph: {
+    title: 'Comprehensive SEO Services | Web Vello',
+    description: 'Partner with Web Vello to execute audits, content strategy, technical fixes, and link acquisition that drive sustainable organic growth.',
+    url: 'https://webvello.com/services/seo',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -517,8 +531,8 @@ export default function SEOPage() {
               Modern SEO Factors We Optimize
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              We stay current with Google's latest algorithm updates and optimize for 
-              the factors that matter most in today's search landscape. Our team 
+              We stay current with Google’s latest algorithm updates and optimize for 
+              the factors that matter most in today’s search landscape. Our team 
               continuously monitors search engine changes and adapts strategies accordingly.
             </p>
           </div>
@@ -841,7 +855,7 @@ export default function SEOPage() {
                 Technical SEO
               </h3>
               <p className="text-secondary-600 mb-4">
-                Optimize your website's technical foundation for maximum search engine performance.
+                Optimize your website’s technical foundation for maximum search engine performance.
               </p>
               <Link 
                 href="/services/web-development" 
@@ -902,7 +916,7 @@ export default function SEOPage() {
             Ready to Dominate Search Results?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Let's implement proven SEO strategies that drive sustainable organic growth 
+            Let’s implement proven SEO strategies that drive sustainable organic growth 
             and help you capture more search traffic than ever before. Get started with 
             a free SEO audit and discover your optimization opportunities.
           </p>

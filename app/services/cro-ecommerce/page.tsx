@@ -8,6 +8,22 @@ import {
   Phone, Mail, MapPin 
 } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'E-commerce CRO Services | Increase AOV & Conversion Rate | Web Vello',
+  description: 'Boost revenue per visitor with Web Vello’s e-commerce CRO program. We optimize product pages, checkout flows, and retention journeys to drive continuous growth.',
+  keywords: ['ecommerce cro services', 'shop conversion optimization', 'increase average order value', 'web vello ecommerce', 'shopify conversion optimization'],
+  alternates: {
+    canonical: 'https://webvello.com/services/cro-ecommerce',
+  },
+  openGraph: {
+    title: 'E-commerce Conversion Optimization | Web Vello',
+    description: 'Partner with Web Vello to analyze buyer behavior, test improvements, and lift e-commerce conversion metrics.',
+    url: 'https://webvello.com/services/cro-ecommerce',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -138,7 +154,7 @@ const faqs = [
     answer: "While some improvements can be seen within 2-4 weeks, significant and sustainable results typically appear within 3-6 months. This timeframe allows for proper A/B testing, data collection, and iterative optimization. We provide regular progress reports and can often identify early positive trends that indicate the direction of improvement."
   },
   {
-    question: "What's the difference between CRO and traditional SEO?",
+    question: "What’s the difference between CRO and traditional SEO?",
     answer: "SEO focuses on getting more visitors to your website, while CRO focuses on converting those visitors into customers. SEO is about visibility and traffic generation, whereas CRO is about optimizing the user experience and conversion funnel to maximize the value of your existing traffic. Both are essential for e-commerce success and work together synergistically."
   },
   {
@@ -154,7 +170,7 @@ const faqs = [
     answer: "CRO is an ongoing process that requires regular updates and optimization. We recommend monthly strategy reviews and quarterly comprehensive audits. However, the frequency depends on your traffic volume, seasonality, and business goals. High-traffic sites may benefit from weekly optimizations, while smaller sites might need monthly updates. We continuously monitor performance and recommend updates based on data insights."
   },
   {
-    question: "What's the ROI of investing in CRO optimization?",
+    question: "What’s the ROI of investing in CRO optimization?",
     answer: "CRO typically delivers exceptional ROI, often ranging from 300% to 1000% or higher. Since CRO focuses on converting existing traffic rather than acquiring new traffic, the costs are generally lower while the impact is immediate and measurable. Most of our clients see ROI within 3-6 months, with ongoing benefits that compound over time. The key is that CRO improvements are permanent and continue to deliver value long after implementation."
   }
 ]
@@ -206,7 +222,7 @@ export default function CROEcommercePage() {
               </h2>
               <p className="text-lg text-secondary-600 mb-6">
                 E-commerce Conversion Rate Optimization (CRO) is the systematic process of improving your 
-                online store's ability to convert visitors into customers. Unlike traditional marketing that 
+                online store’s ability to convert visitors into customers. Unlike traditional marketing that 
                 focuses on driving traffic, CRO optimizes the user experience to maximize the value of every 
                 visitor who lands on your site.
               </p>
@@ -268,7 +284,7 @@ export default function CROEcommercePage() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
               We combine cutting-edge technology with proven conversion principles to create 
-              e-commerce experiences that don't just look great—they perform exceptionally.
+              e-commerce experiences that don’t just look great—they perform exceptionally.
             </p>
           </div>
 
@@ -502,7 +518,7 @@ export default function CROEcommercePage() {
             Ready to Transform Your E-Commerce Conversion Rates?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Let's optimize your online store to convert more visitors into customers and 
+            Let’s optimize your online store to convert more visitors into customers and 
             dramatically increase your revenue. Get started with a free CRO audit today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

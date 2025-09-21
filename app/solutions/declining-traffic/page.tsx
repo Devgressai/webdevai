@@ -8,7 +8,7 @@ import Link from 'next/link'
 const trafficDeclineCauses = [
   {
     title: "Google Algorithm Updates",
-    description: "Major search engine algorithm changes that can significantly impact your website's search rankings and traffic",
+    description: "Major search engine algorithm changes that can significantly impact your website’s search rankings and traffic",
     examples: [
       "Core Web Vitals updates",
       "BERT and natural language processing changes",
@@ -78,7 +78,7 @@ const trafficDeclineCauses = [
   },
   {
     title: "Link Profile Issues",
-    description: "Problems with your website's backlink profile that can harm search engine rankings",
+    description: "Problems with your website’s backlink profile that can harm search engine rankings",
     examples: [
       "Lost valuable backlinks",
       "Toxic or spammy backlinks",
@@ -240,7 +240,7 @@ const monitoringMetrics = [
   },
   {
     title: "Core Web Vitals",
-    description: "Google's metrics for measuring user experience",
+    description: "Google’s metrics for measuring user experience",
     target: "All metrics in the 'Good' range",
     tools: ["Google PageSpeed Insights", "Google Search Console", "Web Vitals"],
     icon: Activity,
@@ -335,11 +335,11 @@ export default function DecliningTrafficPage() {
               <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
                 Declining?
               </span>{" "}
-              Let's Fix That
+              Let’s Fix That
             </h1>
             
             <p className="text-xl lg:text-2xl leading-8 text-secondary-600 mb-12 max-w-3xl mx-auto">
-              Don't let declining traffic destroy your business. Our proven recovery strategies have helped 
+              Don’t let declining traffic destroy your business. Our proven recovery strategies have helped 
               hundreds of businesses regain and exceed their previous traffic levels. We identify the root causes 
               and implement solutions that deliver lasting results.
             </p>
@@ -569,7 +569,7 @@ export default function DecliningTrafficPage() {
               Prevention Strategies for Future Traffic Declines
             </h2>
             <p className="text-xl text-secondary-600">
-              Don't wait for traffic to decline again. These proactive strategies will help you maintain 
+              Don’t wait for traffic to decline again. These proactive strategies will help you maintain 
               strong search rankings and prevent future traffic drops before they happen.
             </p>
           </div>
@@ -624,7 +624,7 @@ export default function DecliningTrafficPage() {
                 answer: "Recovery time varies depending on the cause and severity of the decline. Minor technical issues may resolve in 2-4 weeks, while major algorithm updates can take 3-6 months. Our clients typically see initial improvements within 30-60 days, with full recovery usually achieved within 4-6 months."
               },
               {
-                question: "What's the most common cause of traffic decline?",
+                question: "What’s the most common cause of traffic decline?",
                 answer: "Google algorithm updates are the most common cause, followed by technical SEO issues and content quality problems. Algorithm updates can cause sudden drops, while technical and content issues typically cause gradual declines. The key is identifying the specific cause to implement the right recovery strategy."
               },
               {
@@ -636,7 +636,7 @@ export default function DecliningTrafficPage() {
                 answer: "We track multiple metrics including organic traffic, search rankings, click-through rates, bounce rates, and conversion rates. Success is measured by returning to pre-decline levels and often exceeding them. We provide monthly reports showing progress and ROI of recovery efforts."
               },
               {
-                question: "What's included in your traffic recovery services?",
+                question: "What’s included in your traffic recovery services?",
                 answer: "Our comprehensive service includes traffic decline analysis, technical SEO audit and fixes, content optimization, user experience improvements, ongoing monitoring, and monthly reporting. We work as an extension of your team to ensure sustainable traffic recovery and growth."
               }
             ].map((faq, index) => (
@@ -673,7 +673,7 @@ export default function DecliningTrafficPage() {
             Ready to Recover Your Traffic?
           </h2>
           <p className="text-xl text-red-100 mb-10 max-w-3xl mx-auto">
-            Don't let declining traffic destroy your business. Our proven recovery strategies have helped 
+            Don’t let declining traffic destroy your business. Our proven recovery strategies have helped 
             hundreds of businesses regain and exceed their previous traffic levels.
           </p>
           

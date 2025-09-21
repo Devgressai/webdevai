@@ -14,7 +14,7 @@ const benefits = [
   {
     icon: Search,
     title: "Comprehensive SEO Analysis",
-    description: "Get a complete audit of your website's SEO health including meta tags, headings, content structure, and technical SEO factors."
+    description: "Get a complete audit of your website’s SEO health including meta tags, headings, content structure, and technical SEO factors."
   },
   {
     icon: TrendingUp,
@@ -24,7 +24,7 @@ const benefits = [
   {
     icon: Target,
     title: "Keyword Optimization",
-    description: "Analyze your keyword usage, density, and placement to ensure you're targeting the right terms for maximum visibility."
+    description: "Analyze your keyword usage, density, and placement to ensure you’re targeting the right terms for maximum visibility."
   },
   {
     icon: Eye,
@@ -34,7 +34,7 @@ const benefits = [
   {
     icon: Smartphone,
     title: "Mobile SEO Check",
-    description: "Ensure your website is optimized for mobile devices and follows Google's mobile-first indexing requirements."
+    description: "Ensure your website is optimized for mobile devices and follows Google’s mobile-first indexing requirements."
   },
   {
     icon: Zap,
@@ -44,7 +44,7 @@ const benefits = [
   {
     icon: BarChart3,
     title: "Performance Insights",
-    description: "Get detailed metrics on your website's search performance and identify opportunities for growth and improvement."
+    description: "Get detailed metrics on your website’s search performance and identify opportunities for growth and improvement."
   },
   {
     icon: CheckCircle,
@@ -94,8 +94,8 @@ export function SEOAuditBenefits() {
               The Impact of SEO Optimization
             </h3>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              SEO optimization has a direct impact on your website's visibility, traffic, and business success. 
-              Here's what proper SEO can do for your business:
+              SEO optimization has a direct impact on your website’s visibility, traffic, and business success. 
+              Here’s what proper SEO can do for your business:
             </p>
           </div>
           

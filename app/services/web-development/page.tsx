@@ -1,8 +1,22 @@
-'use client'
-
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Code, Smartphone, Zap, TrendingUp, Users, Shield, BarChart3, Globe, ShoppingBag, Database, Cloud, Server, Layers, FileText, Palette, Cpu, HardDrive } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Web Development Services | Conversion-Driven Websites | Web Vello',
+  description: 'Launch a custom, high-speed website that converts. Web Vello builds SEO-ready, secure, and scalable web experiences tailored to your funnels and revenue goals.',
+  keywords: ['custom web development', 'conversion focused websites', 'web vello web design', 'seo-friendly web development', 'next.js agency'],
+  alternates: {
+    canonical: 'https://webvello.com/services/web-development',
+  },
+  openGraph: {
+    title: 'Custom Web Development Services | Web Vello',
+    description: 'Partner with Web Vello to build lightning-fast, conversion-first websites engineered to grow revenue.',
+    url: 'https://webvello.com/services/web-development',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -66,7 +80,7 @@ const process = [
 
 const results = [
   { metric: "Average Conversion Rate", value: "3x Higher", description: "Than industry standard" },
-  { metric: "Page Load Speed", value: "< 2 seconds", description: "Google's recommended speed" },
+  { metric: "Page Load Speed", value: "< 2 seconds", description: "Google’s recommended speed" },
   { metric: "Mobile Performance", value: "95+ Score", description: "Google PageSpeed Insights" },
   { metric: "SEO Score", value: "90+ Score", description: "Technical SEO optimization" }
 ]
@@ -100,7 +114,7 @@ export default function WebDevelopmentPage() {
               That Converts
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              We don't just build websites—we build digital assets that drive business growth. 
+              We don’t just build websites—we build digital assets that drive business growth. 
               Our custom web development focuses on conversions, performance, and results that 
               transform your online presence and boost your bottom line.
             </p>
@@ -182,7 +196,7 @@ export default function WebDevelopmentPage() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
               We combine cutting-edge technology with proven conversion principles to create 
-              websites that don't just look great—they perform exceptionally.
+              websites that don’t just look great—they perform exceptionally.
             </p>
           </div>
 
@@ -668,7 +682,7 @@ export default function WebDevelopmentPage() {
                 </h3>
                 <p className="text-secondary-600">
                   Development time varies based on complexity. A simple 5-8 page website takes 4-6 weeks, 
-                  while complex applications can take 8-12 weeks. We'll provide a detailed timeline during 
+                  while complex applications can take 8-12 weeks. We’ll provide a detailed timeline during 
                   our initial consultation.
                 </p>
               </div>
@@ -723,7 +737,7 @@ export default function WebDevelopmentPage() {
                   What if I need changes after the website is launched?
                 </h3>
                 <p className="text-secondary-600">
-                  We're here to help! We offer flexible maintenance packages and can make updates, 
+                  We’re here to help! We offer flexible maintenance packages and can make updates, 
                   add new features, or modify existing functionality. We believe in building long-term 
                   partnerships with our clients.
                 </p>
@@ -877,7 +891,7 @@ export default function WebDevelopmentPage() {
             Ready to Transform Your Online Presence?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Let's build a website that doesn't just look great—it drives real business results 
+            Let’s build a website that doesn’t just look great—it drives real business results 
             and helps you dominate your market.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

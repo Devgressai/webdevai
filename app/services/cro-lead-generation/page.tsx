@@ -8,6 +8,22 @@ import {
   Phone, Mail, MapPin, FileText, UserPlus, Code, ShoppingBag 
 } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'CRO Services for Lead Generation | Optimize Funnels & Forms | Web Vello',
+  description: 'Convert more visitors into qualified leads. Web Vello’s CRO specialists optimize landing pages, forms, and funnels to improve pipeline and ROI.',
+  keywords: ['cro lead generation', 'conversion rate optimization services', 'lead gen optimization', 'web vello cro', 'landing page optimization'],
+  alternates: {
+    canonical: 'https://webvello.com/services/cro-lead-generation',
+  },
+  openGraph: {
+    title: 'Lead Generation CRO Services | Web Vello',
+    description: 'Work with Web Vello to audit funnels, run experiments, and lift conversion rates across your lead-generation journey.',
+    url: 'https://webvello.com/services/cro-lead-generation',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -161,7 +177,7 @@ const faqs = [
     answer: "Lead generation optimization typically shows initial results within 2-4 weeks, with significant improvements appearing within 3-6 months. The timeline depends on your current traffic volume, the complexity of your lead generation system, and the specific optimizations implemented. We provide regular progress reports and can often identify early positive trends that indicate the direction of improvement."
   },
   {
-    question: "What's the difference between lead generation and lead nurturing?",
+    question: "What’s the difference between lead generation and lead nurturing?",
     answer: "Lead generation focuses on attracting and capturing new prospects, while lead nurturing involves developing relationships with those prospects over time to guide them through the sales funnel. Both are essential components of a successful marketing strategy. Lead generation brings prospects in, while lead nurturing converts them into customers. Our CRO services optimize both aspects for maximum effectiveness."
   },
   {
@@ -177,7 +193,7 @@ const faqs = [
     answer: "Lead generation optimization requires regular updates and refinement. We recommend monthly strategy reviews and quarterly comprehensive audits. However, the frequency depends on your industry dynamics, competitive landscape, and business goals. High-growth industries may benefit from weekly optimizations, while more stable markets might need monthly updates. We continuously monitor performance and recommend updates based on data insights."
   },
   {
-    question: "What's the ROI of investing in lead generation optimization?",
+    question: "What’s the ROI of investing in lead generation optimization?",
     answer: "Lead generation optimization typically delivers exceptional ROI, often ranging from 400% to 1200% or higher. Since optimization focuses on improving the efficiency of your existing marketing efforts rather than increasing spend, the costs are generally lower while the impact is immediate and measurable. Most of our clients see ROI within 2-4 months, with ongoing benefits that compound over time."
   }
 ]
@@ -229,7 +245,7 @@ export default function CROLeadGenerationPage() {
               </h2>
               <p className="text-lg text-secondary-600 mb-6">
                 Lead Generation Conversion Rate Optimization (CRO) is the systematic process of improving your 
-                website's ability to convert visitors into leads. Unlike traditional marketing that focuses on 
+                website’s ability to convert visitors into leads. Unlike traditional marketing that focuses on 
                 driving traffic, lead generation CRO optimizes the user experience to maximize the number of 
                 qualified prospects you capture from your existing website traffic.
               </p>
@@ -292,7 +308,7 @@ export default function CROLeadGenerationPage() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
               We combine cutting-edge technology with proven conversion principles to create 
-              lead generation systems that don't just attract visitors—they convert them into leads.
+              lead generation systems that don’t just attract visitors—they convert them into leads.
             </p>
           </div>
 
@@ -695,7 +711,7 @@ export default function CROLeadGenerationPage() {
             Ready to Transform Your Lead Generation?
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            Let's optimize your lead generation system to capture more qualified prospects and 
+            Let’s optimize your lead generation system to capture more qualified prospects and 
             dramatically increase your sales pipeline. Get started with a free audit today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

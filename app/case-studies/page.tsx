@@ -77,8 +77,8 @@ export default function CaseStudiesPage() {
               from Real Clients
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              Don't just take our word for it. See the actual results we've delivered for businesses 
-              across industries. These aren't case studies—they're success stories with real numbers.
+              Don’t just take our word for it. See the actual results we’ve delivered for businesses 
+              across industries. These aren’t case studies—they’re success stories with real numbers.
             </p>
           </div>
         </div>
@@ -357,7 +357,7 @@ export default function CaseStudiesPage() {
                 Google My Business
               </h3>
               <p className="text-secondary-600 mb-4">
-                Optimize your local business presence and dominate Google's local search results.
+                Optimize your local business presence and dominate Google’s local search results.
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm text-secondary-600">
@@ -386,8 +386,8 @@ export default function CaseStudiesPage() {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            These results aren't outliers—they're what we deliver consistently for our clients. 
-            Let's make your business the next case study.
+            These results aren’t outliers—they’re what we deliver consistently for our clients. 
+            Let’s make your business the next case study.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>

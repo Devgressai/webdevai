@@ -5,6 +5,7 @@ import { Button } from '../ui/button'
 import { EnhancedButton } from '../ui/enhanced-button'
 import { ArrowRight, Play, CheckCircle, Star, TrendingUp, Users, Award, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface EnhancedHeroProps {
   title: string
@@ -161,9 +162,11 @@ export function EnhancedHero({
               <div className={`animate-slide-up`} style={{ animationDelay: '1.2s' }}>
                 <div className="relative group cursor-pointer" onClick={() => setIsVideoPlaying(true)}>
                   <div className="w-80 h-48 rounded-2xl overflow-hidden shadow-2xl">
-                    <img
+                    <Image
                       src={video.thumbnail}
                       alt="Video thumbnail"
+                      width={320}
+                      height={192}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center">

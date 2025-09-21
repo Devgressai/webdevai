@@ -84,7 +84,7 @@ export function PerformanceMonitor() {
     }
   }, [pathname])
 
-  return null // This component doesn't render anything visible
+  return null // This component doesn’t render anything visible
 }
 
 // Performance budget monitoring

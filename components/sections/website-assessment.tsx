@@ -191,7 +191,7 @@ function WebsiteAssessment() {
               Free Website Assessment
             </h2>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-              Get a comprehensive analysis of your website's performance and discover opportunities to increase traffic, conversions, and revenue.
+              Get a comprehensive analysis of your website’s performance and discover opportunities to increase traffic, conversions, and revenue.
             </p>
           </div>
 
@@ -201,10 +201,10 @@ function WebsiteAssessment() {
                 <Target className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-secondary-900 mb-2">
-                What You'll Discover
+                What You’ll Discover
               </h3>
               <p className="text-secondary-600">
-                Get insights into your website's strengths and areas for improvement
+                Get insights into your website’s strengths and areas for improvement
               </p>
             </div>
 
@@ -268,7 +268,7 @@ function WebsiteAssessment() {
               Your Website Assessment Results
             </h2>
             <p className="text-lg text-secondary-600">
-              Here's what we discovered about your website's performance
+              Here’s what we discovered about your website’s performance
             </p>
           </div>
 

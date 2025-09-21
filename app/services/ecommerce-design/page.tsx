@@ -2,6 +2,22 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, ShoppingCart, CreditCard, TrendingUp, CheckCircle, Eye, Target, BarChart3, Zap, Users, Shield, Truck, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '../../../lib/utils'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'E-commerce Design Services | Conversion-First Storefronts | Web Vello',
+  description: 'Web Vello designs beautiful, conversion-optimized e-commerce experiences. From product pages to checkout, every detail is engineered to boost revenue.',
+  keywords: ['ecommerce design agency', 'shopify design services', 'conversion focused ecommerce design', 'web vello ecommerce', 'online store design'],
+  alternates: {
+    canonical: 'https://webvello.com/services/ecommerce-design',
+  },
+  openGraph: {
+    title: 'E-commerce Design Services | Web Vello',
+    description: 'Partner with Web Vello to craft persuasive e-commerce experiences that increase conversions and lifetime value.',
+    url: 'https://webvello.com/services/ecommerce-design',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -97,7 +113,7 @@ export default function EcommerceDesignPage() {
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> Convert Visitors to Customers</span>
             </h1>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
-              Transform your online store with conversion-focused ecommerce design. Our designs don't just look good—they 
+              Transform your online store with conversion-focused ecommerce design. Our designs don’t just look good—they 
               drive sales, reduce cart abandonment, and maximize your revenue potential.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -123,7 +139,7 @@ export default function EcommerceDesignPage() {
               Why Choose Our Ecommerce Design Services?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              We specialize in creating ecommerce experiences that don't just look professional—they perform, 
+              We specialize in creating ecommerce experiences that don’t just look professional—they perform, 
               converting browsers into buyers and maximizing your online revenue.
             </p>
           </div>
@@ -221,7 +237,7 @@ export default function EcommerceDesignPage() {
               Ready to Boost Your Online Sales?
             </h2>
             <p className="text-xl text-green-100 max-w-2xl mx-auto mb-8">
-              Don't let poor design cost you customers and revenue. Our ecommerce designs 
+              Don’t let poor design cost you customers and revenue. Our ecommerce designs 
               are built to convert and maximize your online business potential.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -131,7 +131,7 @@ export default function LocationsPage() {
         {/* CTA Section */}
         <div className="mt-16 bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Don't See Your City?
+            Don’t See Your City?
           </h3>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
             We provide digital marketing services to businesses nationwide, regardless of location. 

@@ -9,6 +9,22 @@ import {
   Database, Code, Bot, Sparkles, Layers 
 } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Generative Engine Optimization (GEO) Services | Web Vello',
+  description: 'Prepare your brand for AI-driven search. Web Vello’s GEO program optimizes content for AI engines, chat results, and multimodal generative experiences.',
+  keywords: ['generative engine optimization', 'geo services', 'ai search optimization', 'web vello geo', 'ai overview optimization'],
+  alternates: {
+    canonical: 'https://webvello.com/services/generative-engine-optimization',
+  },
+  openGraph: {
+    title: 'Generative Engine Optimization | Web Vello',
+    description: 'Ensure your brand appears in AI-powered SERPs with Web Vello’s GEO strategy for structured data, intent modeling, and conversational relevance.',
+    url: 'https://webvello.com/services/generative-engine-optimization',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -559,7 +575,7 @@ export default function GenerativeEngineOptimizationPage() {
             Ready to Optimize for the Future of Search?
           </h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Let's optimize your website for AI-powered search engines and ensure you're 
+            Let’s optimize your website for AI-powered search engines and ensure you’re 
             ready for the future of digital discovery. Get started with a free GEO audit today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

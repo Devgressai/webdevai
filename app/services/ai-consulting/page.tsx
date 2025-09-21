@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Brain, Zap, Target, TrendingUp, CheckCircle, Users, BarChart3, Building2, Globe, Cpu, Network, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI Consulting Services | Strategy, Roadmaps & Implementation | Web Vello',
+  description: 'Translate AI into business outcomes. Web Vello’s AI consultants build roadmaps, select tech, and guide implementations that deliver measurable ROI.',
+  keywords: ['ai consulting services', 'ai strategy firm', 'ai roadmap development', 'web vello ai', 'enterprise ai consulting'],
+  alternates: {
+    canonical: 'https://webvello.com/services/ai-consulting',
+  },
+  openGraph: {
+    title: 'AI Consulting Services | Web Vello',
+    description: 'Work with Web Vello’s AI consultants to prioritize use cases, select platforms, and successfully deploy AI across your organization.',
+    url: 'https://webvello.com/services/ai-consulting',
+    type: 'website',
+  }
+}
 
 const services = [
   {
@@ -42,7 +58,7 @@ const process = [
   {
     step: "01",
     title: "AI Readiness Assessment",
-    description: "Evaluate your organization's current AI capabilities and identify opportunities."
+    description: "Evaluate your organization’s current AI capabilities and identify opportunities."
   },
   {
     step: "02",

@@ -2,11 +2,27 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, MessageSquare, Brain, Target, TrendingUp, CheckCircle, Eye, BarChart3, Zap, Users, Shield, Cpu, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '../../../lib/utils'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'ChatGPT Optimization Services | Prompt Engineering & Automation | Web Vello',
+  description: 'Maximize ChatGPT ROI. Web Vello engineers prompts, workflows, and QA systems that produce on-brand, high-quality AI output for content, support, and operations.',
+  keywords: ['chatgpt optimization', 'prompt engineering services', 'chatgpt automation', 'web vello chatgpt', 'chatgpt workflow design'],
+  alternates: {
+    canonical: 'https://webvello.com/services/chatgpt-optimization',
+  },
+  openGraph: {
+    title: 'ChatGPT Optimization | Web Vello',
+    description: 'Partner with Web Vello to optimize prompts, integrate ChatGPT into workflows, and maintain consistent, accurate AI output.',
+    url: 'https://webvello.com/services/chatgpt-optimization',
+    type: 'website',
+  }
+}
 
 const features = [
   {
     title: "Prompt Engineering Excellence",
-    description: "Expertly crafted prompts that maximize ChatGPT's capabilities and output quality.",
+    description: "Expertly crafted prompts that maximize ChatGPT’s capabilities and output quality.",
     icon: Brain,
     benefits: ["Optimized prompts", "Better responses", "Consistent output", "Professional results"]
   },
@@ -93,12 +109,12 @@ export default function ChatGPTOptimizationPage() {
               ChatGPT Optimization Services
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-secondary-900 mb-6">
-              Unlock ChatGPT's Full
+              Unlock ChatGPT’s Full
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> Business Potential</span>
             </h1>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
               Transform your business operations with expertly optimized ChatGPT implementations. 
-              Our optimization services don't just improve ChatGPT usage—they maximize ROI and drive real business results.
+              Our optimization services don’t just improve ChatGPT usage—they maximize ROI and drive real business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-primary hover:shadow-glow">
@@ -123,7 +139,7 @@ export default function ChatGPTOptimizationPage() {
               Why Choose Our ChatGPT Optimization Services?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              We don't just help you use ChatGPT—we help you use it strategically to 
+              We don’t just help you use ChatGPT—we help you use it strategically to 
               transform your business operations and maximize your investment.
             </p>
           </div>
@@ -221,7 +237,7 @@ export default function ChatGPTOptimizationPage() {
               Ready to Optimize Your ChatGPT Usage?
             </h2>
             <p className="text-xl text-green-100 max-w-2xl mx-auto mb-8">
-              Don't settle for basic ChatGPT usage. Our optimization services will 
+              Don’t settle for basic ChatGPT usage. Our optimization services will 
               transform how you use AI to drive business growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, BarChart3, Target, Users, TrendingUp, Mail, Globe, Zap, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Digital Marketing Agency Services | Full-Funnel Growth | Web Vello',
+  description: 'Coordinate SEO, content, ads, and lifecycle marketing under one roof. Web Vello’s digital marketing team delivers data-backed campaigns that scale pipeline and revenue.',
+  keywords: ['digital marketing agency', 'full funnel marketing', 'integrated marketing services', 'web vello marketing', 'growth marketing agency'],
+  alternates: {
+    canonical: 'https://webvello.com/services/digital-marketing',
+  },
+  openGraph: {
+    title: 'Digital Marketing Agency Services | Web Vello',
+    description: 'Work with Web Vello to build multi-channel campaigns that grow traffic, leads, and customer value.',
+    url: 'https://webvello.com/services/digital-marketing',
+    type: 'website',
+  }
+}
 
 export default function DigitalMarketingPage() {
   return (
@@ -127,4 +143,3 @@ export default function DigitalMarketingPage() {
     </div>
   )
 }
-

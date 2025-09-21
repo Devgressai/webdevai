@@ -22,7 +22,7 @@ const conversionChallenges = [
   },
   {
     title: "Weak Call-to-Actions",
-    description: "Unclear or ineffective buttons and links that don't drive action",
+    description: "Unclear or ineffective buttons and links that don’t drive action",
     impact: "High",
     symptoms: ["Low click-through rates", "Confused users", "Poor conversion funnel"],
     solutions: ["CTA optimization", "Button design improvement", "Copy refinement"]
@@ -178,15 +178,15 @@ const faqs = [
     answer: "Initial improvements can be seen within 2-4 weeks of implementing changes, but significant and sustainable conversion rate improvements typically take 3-6 months. The timeline depends on your current conversion rate, traffic volume, and the scope of optimization efforts."
   },
   {
-    question: "What's the most important factor for improving website conversion?",
-    answer: "User experience is the most critical factor. A website that's easy to navigate, loads quickly, and provides a clear path to conversion will significantly outperform one with poor UX. Focus on reducing friction, improving clarity, and creating compelling user journeys."
+    question: "What’s the most important factor for improving website conversion?",
+    answer: "User experience is the most critical factor. A website that’s easy to navigate, loads quickly, and provides a clear path to conversion will significantly outperform one with poor UX. Focus on reducing friction, improving clarity, and creating compelling user journeys."
   },
   {
     question: "How important is mobile optimization for conversion rates?",
     answer: "Mobile optimization is absolutely critical. With over 60% of web traffic coming from mobile devices, poor mobile experience directly hurts conversion rates. Mobile users expect fast, intuitive, and touch-friendly experiences. Neglecting mobile optimization can cost you significant conversions."
   },
   {
-    question: "What's the best way to test conversion improvements?",
+    question: "What’s the best way to test conversion improvements?",
     answer: "A/B testing is the gold standard for conversion optimization. Test one element at a time (headlines, CTAs, forms, layouts) with statistically significant sample sizes. Use tools like Google Optimize, Optimizely, or VWO to run controlled experiments and measure results accurately."
   },
   {
@@ -345,7 +345,7 @@ export default function WebsiteConversionPage() {
               Proven Strategies for Conversion Optimization
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Implement these strategic approaches to overcome conversion challenges and maximize your website's performance
+              Implement these strategic approaches to overcome conversion challenges and maximize your website’s performance
             </p>
           </div>
           
@@ -437,7 +437,7 @@ export default function WebsiteConversionPage() {
               Frequently Asked Questions About Website Conversion
             </h2>
             <p className="text-xl text-gray-600">
-              Get answers to common questions about improving your website's conversion rates and user experience
+              Get answers to common questions about improving your website’s conversion rates and user experience
             </p>
           </div>
           
@@ -474,7 +474,7 @@ export default function WebsiteConversionPage() {
               <Building2 className="h-12 w-12 text-white" />
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              Ready to Transform Your Website's Conversion Rate?
+              Ready to Transform Your Website’s Conversion Rate?
             </h2>
             <p className="text-xl text-blue-100">
               Get a comprehensive conversion audit and actionable strategies to optimize your website, 

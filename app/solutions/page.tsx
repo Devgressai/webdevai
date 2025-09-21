@@ -62,7 +62,7 @@ const solutions = [
   {
     title: "Declining Traffic Recovery",
     icon: BarChart3,
-    description: "Reverse declining traffic trends and restore your website's search performance with emergency SEO recovery strategies.",
+    description: "Reverse declining traffic trends and restore your website’s search performance with emergency SEO recovery strategies.",
     problem: "Traffic declining and rankings dropping",
     solution: "Emergency SEO recovery and traffic restoration",
     results: ["150%+ traffic recovery", "200%+ ranking restoration", "180%+ improvement in search performance"],
@@ -101,7 +101,7 @@ export default function SolutionsPage() {
               That Deliver Results
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              Every business challenge has a proven solution. We've helped hundreds of companies 
+              Every business challenge has a proven solution. We’ve helped hundreds of companies 
               overcome their digital marketing obstacles and achieve remarkable growth.
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function SolutionsPage() {
               All Business Solutions
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              While we have deep expertise in featured solutions, we've successfully solved 
+              While we have deep expertise in featured solutions, we’ve successfully solved 
               digital marketing challenges across all business types and industries.
             </p>
           </div>
@@ -492,7 +492,7 @@ export default function SolutionsPage() {
             Ready to Solve Your Business Challenges?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Every solution starts with understanding your unique challenges. Let's identify 
+            Every solution starts with understanding your unique challenges. Let’s identify 
             the right services to solve your specific problems and achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

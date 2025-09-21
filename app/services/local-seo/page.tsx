@@ -1,7 +1,23 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Globe, MapPin, Star, Users, TrendingUp, Target, CheckCircle, Phone, Mail, Zap, Code, ShoppingBag, FileText } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'Local SEO Services | Rank #1 in Your Market | Web Vello',
+  description: 'Dominate Google Maps and local search with Web Vello’s Local SEO campaigns. We optimize Google Business Profiles, build citations, and launch review programs that convert nearby customers.',
+  keywords: ['local seo agency', 'google business profile optimization', 'local citations', 'review management services', 'local seo campaigns'],
+  alternates: {
+    canonical: 'https://webvello.com/services/local-seo',
+  },
+  openGraph: {
+    title: 'Local SEO Services | Web Vello',
+    description: 'Increase calls, foot traffic, and revenue with a proven local SEO playbook driven by data, reviews, and conversion-focused landing pages.',
+    url: 'https://webvello.com/services/local-seo',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -116,7 +132,7 @@ export default function LocalSeOPage() {
             <p className="mt-6 text-lg leading-8 text-secondary-600">
               Get found by customers in your area with targeted local SEO strategies that drive foot traffic, 
               phone calls, and local business growth. While your competitors struggle with basic listings, 
-              we'll help you dominate the local pack and capture every customer searching for your services.
+              we’ll help you dominate the local pack and capture every customer searching for your services.
             </p>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">

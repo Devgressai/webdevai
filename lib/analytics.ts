@@ -145,7 +145,7 @@ export const AB_TEST_CONFIG = {
 }
 
 // Export all configurations
-export default {
+const analyticsConfig = {
   GA_TRACKING_ID,
   CONVERSION_GOALS,
   EVENT_CATEGORIES,
@@ -160,3 +160,5 @@ export default {
   ERROR_TYPES,
   AB_TEST_CONFIG
 }
+
+export default analyticsConfig

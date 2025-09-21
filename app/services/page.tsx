@@ -74,7 +74,7 @@ export default function ServicesPage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
               From AI-powered SEO to custom web development, we provide comprehensive digital 
-              marketing solutions that help businesses grow and succeed online. We don't just 
+              marketing solutions that help businesses grow and succeed online. We don’t just 
               offer services—we deliver results that transform your business and dominate your market.
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function ServicesPage() {
                 </p>
 
                 <div className="mt-6">
-                  <h4 className="font-semibold text-secondary-900 mb-3">What's Included:</h4>
+                  <h4 className="font-semibold text-secondary-900 mb-3">What’s Included:</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center text-sm text-secondary-600">
@@ -243,7 +243,7 @@ export default function ServicesPage() {
 
           <div className="text-center mt-12">
             <p className="text-secondary-600 mb-4">
-              Don't see your city? We can still help! Our services are available nationwide.
+              Don’t see your city? We can still help! Our services are available nationwide.
             </p>
             <Button variant="outline" asChild>
               <Link href="/contact">Contact Us</Link>
@@ -259,8 +259,8 @@ export default function ServicesPage() {
             Ready to Transform Your Digital Presence?
           </h2>
                       <p className="text-xl text-primary-100 mb-8">
-              Let's discuss your goals and create a custom strategy that drives real results. 
-              Your competitors are already working on their digital presence—don't let them 
+              Let’s discuss your goals and create a custom strategy that drives real results. 
+              Your competitors are already working on their digital presence—don’t let them 
               capture your market share while you wait.
             </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

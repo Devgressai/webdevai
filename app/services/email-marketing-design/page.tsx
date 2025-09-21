@@ -2,6 +2,22 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Mail, Target, TrendingUp, CheckCircle, Eye, BarChart3, Zap, Users, Shield, MessageSquare, Send, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '../../../lib/utils'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Email Marketing Design Services | Conversion-Focused Campaigns | Web Vello',
+  description: 'Increase open rates and revenue with Web Vello’s email marketing design studio. We craft on-brand, high-converting templates backed by testing and automation strategy.',
+  keywords: ['email marketing design', 'email campaign design', 'responsive email templates', 'web vello email marketing', 'email conversion design'],
+  alternates: {
+    canonical: 'https://webvello.com/services/email-marketing-design',
+  },
+  openGraph: {
+    title: 'Email Marketing Design Services | Web Vello',
+    description: 'Partner with Web Vello to design on-brand, conversion-driven email campaigns that nurture and close customers.',
+    url: 'https://webvello.com/services/email-marketing-design',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -98,7 +114,7 @@ export default function EmailMarketingDesignPage() {
             </h1>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
               Transform your email marketing with conversion-focused design and data-driven testing. 
-              Our emails don't just get opened—they get clicked, convert, and drive real business results.
+              Our emails don’t just get opened—they get clicked, convert, and drive real business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-primary hover:shadow-glow">
@@ -123,7 +139,7 @@ export default function EmailMarketingDesignPage() {
               Why Choose Our Email Marketing Design Services?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              We create email campaigns that don't just look professional—they perform, 
+              We create email campaigns that don’t just look professional—they perform, 
               engaging subscribers and driving measurable business results.
             </p>
           </div>

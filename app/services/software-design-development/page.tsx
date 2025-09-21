@@ -9,6 +9,22 @@ import {
   Sparkles, Layers, Palette, Monitor, Settings, Server, Cloud 
 } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Software Design & Development Services | Enterprise-Ready Builds | Web Vello',
+  description: 'Architect, design, and develop secure enterprise software with Web Vello. We deliver modern cloud-native platforms that automate workflows and scale with your business.',
+  keywords: ['software design development', 'enterprise software agency', 'custom software solutions', 'web vello software', 'cloud native development'],
+  alternates: {
+    canonical: 'https://webvello.com/services/software-design-development',
+  },
+  openGraph: {
+    title: 'Software Design & Development | Web Vello',
+    description: 'Web Vello builds robust, scalable software products that combine UX, engineering, and security for measurable ROI.',
+    url: 'https://webvello.com/services/software-design-development',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -159,10 +175,10 @@ const technologies = [
 const faqs = [
   {
     question: "How long does it take to develop custom enterprise software?",
-    answer: "The development timeline for custom enterprise software typically ranges from 4-8 months for a basic system to 8-18 months for a complex enterprise solution. The timeline depends on several factors including the software's complexity, number of features, integration requirements, and the development approach chosen. We use agile development methodologies to ensure rapid iteration and timely delivery, with regular check-ins and milestone reviews throughout the process."
+    answer: "The development timeline for custom enterprise software typically ranges from 4-8 months for a basic system to 8-18 months for a complex enterprise solution. The timeline depends on several factors including the software’s complexity, number of features, integration requirements, and the development approach chosen. We use agile development methodologies to ensure rapid iteration and timely delivery, with regular check-ins and milestone reviews throughout the process."
   },
   {
-    question: "What's the difference between custom software and off-the-shelf solutions?",
+    question: "What’s the difference between custom software and off-the-shelf solutions?",
     answer: "Custom software is specifically designed and built for your business needs, offering perfect alignment with your processes and requirements. Off-the-shelf solutions are pre-built software packages that may require workarounds or compromises to fit your business needs. Custom software provides better integration, scalability, and competitive advantage, while off-the-shelf solutions offer faster deployment and lower initial costs. The choice depends on your specific business requirements and long-term goals."
   },
   {
@@ -293,7 +309,7 @@ export default function SoftwareDesignDevelopmentPage() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
               We combine cutting-edge technology with proven development practices to create 
-              software solutions that don't just work—they transform your business.
+              software solutions that don’t just work—they transform your business.
             </p>
           </div>
 
@@ -557,7 +573,7 @@ export default function SoftwareDesignDevelopmentPage() {
             Ready to Transform Your Business with Custom Software?
           </h2>
           <p className="text-xl text-orange-100 mb-8">
-            Let's build powerful software solutions that streamline your operations, 
+            Let’s build powerful software solutions that streamline your operations, 
             automate your processes, and drive business growth. Get started with a free consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

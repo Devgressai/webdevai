@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, ShoppingCart, Zap, Shield, Users, BarChart3, Globe, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Shopify Development Agency | Custom Themes & Growth Support | Web Vello',
+  description: 'Scale your Shopify store with Web Vello. We build custom themes, optimize performance, and integrate revenue-driving automations for e-commerce brands.',
+  keywords: ['shopify development agency', 'custom shopify theme', 'shopify experts', 'web vello shopify', 'shopify optimization services'],
+  alternates: {
+    canonical: 'https://webvello.com/services/shopify-development',
+  },
+  openGraph: {
+    title: 'Shopify Development Services | Web Vello',
+    description: 'Partner with Web Vello’s Shopify experts to launch high-converting stores with custom features and ongoing optimization.',
+    url: 'https://webvello.com/services/shopify-development',
+    type: 'website',
+  }
+}
 
 export default function ShopifyDevelopmentPage() {
   return (
@@ -123,4 +139,3 @@ export default function ShopifyDevelopmentPage() {
     </div>
   )
 }
-

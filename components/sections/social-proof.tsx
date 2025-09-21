@@ -56,7 +56,7 @@ function SocialProof() {
             Results That Speak for Themselves
           </h2>
           <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-            We've helped hundreds of businesses achieve remarkable growth through strategic digital marketing.
+            We’ve helped hundreds of businesses achieve remarkable growth through strategic digital marketing.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ function SocialProof() {
                 </div>
                 
                 <p className="text-secondary-700 mb-4 italic">
-                  "{testimonial.content}"
+                  “{testimonial.content}”
                 </p>
                 
                 <div className="mb-4">
@@ -153,7 +153,7 @@ function SocialProof() {
               Ready to Join Our Success Stories?
             </h3>
             <p className="text-secondary-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can help your business achieve similar results. Get a free consultation and discover your growth potential.
+              Let’s discuss how we can help your business achieve similar results. Get a free consultation and discover your growth potential.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-gradient-primary hover:shadow-glow px-8 py-3">

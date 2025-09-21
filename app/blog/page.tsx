@@ -30,70 +30,10 @@ const blogPosts = [
     readTime: '8 min read',
     image: '/api/placeholder/800/400',
     featured: true
-  },
-  {
-    id: 2,
-    title: 'AI-Powered SEO: How Machine Learning is Revolutionizing Search',
-    excerpt: 'Explore how artificial intelligence is transforming SEO strategies and learn how to leverage AI tools for better search rankings.',
-    slug: 'ai-powered-seo-machine-learning',
-    category: 'Digital Marketing',
-    author: 'Web Vello Team',
-    date: '2024-01-12',
-    readTime: '6 min read',
-    image: '/api/placeholder/800/400',
-    featured: true
-  },
-  {
-    id: 3,
-    title: 'Local SEO Checklist: 25 Steps to Dominate Local Search',
-    excerpt: 'Complete guide to local SEO optimization. Learn proven strategies to help your business rank higher in local search results.',
-    slug: 'local-seo-checklist-25-steps',
-    category: 'SEO',
-    author: 'Web Vello Team',
-    date: '2024-01-10',
-    readTime: '12 min read',
-    image: '/api/placeholder/800/400',
-    featured: false
-  },
-  {
-    id: 4,
-    title: 'Custom vs. Template Websites: Which is Right for Your Business?',
-    excerpt: 'Compare custom and template website solutions to make the best choice for your business needs and budget.',
-    slug: 'custom-vs-template-websites',
-    category: 'Web Development',
-    author: 'Web Vello Team',
-    date: '2024-01-08',
-    readTime: '7 min read',
-    image: '/api/placeholder/800/400',
-    featured: false
-  },
-  {
-    id: 5,
-    title: 'ChatGPT for Business: 10 Practical Applications',
-    excerpt: 'Discover how businesses are using ChatGPT to improve productivity, customer service, and content creation.',
-    slug: 'chatgpt-business-applications',
-    category: 'AI Consulting',
-    author: 'Web Vello Team',
-    date: '2024-01-05',
-    readTime: '9 min read',
-    image: '/api/placeholder/800/400',
-    featured: false
-  },
-  {
-    id: 6,
-    title: 'Conversion Rate Optimization: 15 Strategies That Actually Work',
-    excerpt: 'Learn proven CRO strategies that can significantly increase your website conversions and boost your bottom line.',
-    slug: 'conversion-rate-optimization-strategies',
-    category: 'Digital Marketing',
-    author: 'Web Vello Team',
-    date: '2024-01-03',
-    readTime: '10 min read',
-    image: '/api/placeholder/800/400',
-    featured: false
   }
 ]
 
-const categories = ['All', 'Web Development', 'Digital Marketing', 'SEO', 'AI Consulting']
+const categories = ['All', 'Web Development']
 
 export default function BlogPage() {
   const featuredPosts = blogPosts.filter(post => post.featured)

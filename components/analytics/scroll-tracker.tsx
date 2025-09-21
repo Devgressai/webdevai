@@ -82,8 +82,10 @@ export default function ScrollTracker({ onScrollDepth, onTimeOnPage }: ScrollTra
 
   // Track time on page when component unmounts
   useEffect(() => {
+    const mountedAt = startTime.current
+
     return () => {
-      const timeOnPage = Math.round((Date.now() - startTime.current) / 1000)
+      const timeOnPage = Math.round((Date.now() - mountedAt) / 1000)
       trackUserBehavior({ timeOnPage })
       
       if (onTimeOnPage) {
@@ -92,5 +94,5 @@ export default function ScrollTracker({ onScrollDepth, onTimeOnPage }: ScrollTra
     }
   }, [trackUserBehavior, onTimeOnPage])
 
-  return null // This component doesn't render anything
+  return null // This component doesn’t render anything
 }

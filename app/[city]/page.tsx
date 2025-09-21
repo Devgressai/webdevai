@@ -107,16 +107,19 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   if (!city) return { title: 'City Not Found' }
 
   return {
-    title: `Professional Services in ${city.fullName} | Expert Business Solutions`,
-    description: `Discover professional business services in ${city.fullName}. From website design to AI consulting, we provide expert solutions to help your business grow in ${city.name}.`,
-    keywords: `business services, ${city.name}, ${city.state}, website design, web development, AI consulting, SEO services, digital marketing`,
+    title: `Web Vello in ${city.fullName} | Web Design, SEO, & AI Growth`,
+    description: `Partner with Web Vello in ${city.fullName} for high-converting web design, SEO, and AI-powered marketing programs that help ${city.name} businesses scale revenue.`,
+    keywords: `web design ${city.name}, seo agency ${city.name}, digital marketing ${city.state}, AI marketing ${city.name}, Web Vello ${city.fullName}`,
     openGraph: {
-      title: `Professional Services in ${city.fullName}`,
-      description: `Expert business solutions in ${city.fullName} - Website design, web development, AI consulting, and more.`,
-      url: `https://yourdomain.com/${params.city}`,
-      siteName: 'Professional Business Services',
+      title: `Web Vello | Digital Growth Partner in ${city.fullName}`,
+      description: `Full-funnel web design and SEO agency serving ${city.fullName}. Schedule a strategy session with Web Vello to accelerate growth.`,
+      url: `https://webvello.com/${params.city}`,
+      siteName: 'Web Vello',
       locale: 'en_US',
       type: 'website',
+    },
+    alternates: {
+      canonical: `https://webvello.com/${params.city}`,
     },
   }
 }
@@ -272,7 +275,7 @@ export default function CityPage({ params }: CityPageProps) {
             Ready to Transform Your Business in {city.name}?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our professional services can help your {city.name} business reach new heights. Get started with a free consultation today.
+            Let’s discuss how our professional services can help your {city.name} business reach new heights. Get started with a free consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

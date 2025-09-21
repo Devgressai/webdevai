@@ -34,7 +34,7 @@ const contactInfo = [
     icon: Clock,
     title: "Hours",
     value: "Mon-Fri: 9AM-6PM CST",
-    description: "We're here to help during business hours",
+    description: "We’re here to help during business hours",
     href: null
   }
 ]
@@ -75,7 +75,7 @@ const testimonials = [
     name: "Michael Chen",
     company: "LocalBiz Solutions",
     role: "Founder",
-    content: "Their local SEO strategies helped us dominate our market. We're now the #1 result for all our target keywords.",
+    content: "Their local SEO strategies helped us dominate our market. We’re now the #1 result for all our target keywords.",
     rating: 5,
     avatar: "/testimonials/michael-chen.jpg"
   },
@@ -99,7 +99,7 @@ const faqs = [
     answer: "Yes! We work with businesses worldwide. Our digital marketing strategies are effective regardless of location."
   },
   {
-    question: "What's included in your free strategy session?",
+    question: "What’s included in your free strategy session?",
     answer: "Our free strategy session includes a comprehensive audit of your current digital presence, competitive analysis, and a customized roadmap for growth."
   },
   {
@@ -183,7 +183,7 @@ export function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Let's Grow Your Business
+              Let’s Grow Your Business
               <span className="block text-blue-600">Together</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -247,7 +247,7 @@ export function ContactPageClient() {
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Get Your Free Strategy Session</h2>
                 <p className="text-gray-600">
-                  Fill out the form below and we'll get back to you within 24 hours with a customized growth strategy for your business.
+                  Fill out the form below and we’ll get back to you within 24 hours with a customized growth strategy for your business.
                 </p>
               </div>
 
@@ -396,7 +396,7 @@ export function ContactPageClient() {
                 {submitStatus === 'success' && (
                   <div className="flex items-center p-4 bg-green-50 border border-green-200 rounded-lg">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
-                    <p className="text-green-800">Thank you! We'll be in touch within 24 hours.</p>
+                    <p className="text-green-800">Thank you! We’ll be in touch within 24 hours.</p>
                   </div>
                 )}
 
@@ -497,7 +497,7 @@ export function ContactPageClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about working with Web Vello.
+              Don’t just take our word for it. Here’s what our clients have to say about working with Web Vello.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -508,7 +508,7 @@ export function ContactPageClient() {
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-700 mb-4 italic">“{testimonial.content}”</p>
                 <div className="flex items-center">
                   <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-blue-600 font-semibold text-lg">
@@ -532,7 +532,7 @@ export function ContactPageClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-gray-600">
-              Got questions? We've got answers. Here are some common questions we receive.
+              Got questions? We’ve got answers. Here are some common questions we receive.
             </p>
           </div>
           <div className="space-y-6">

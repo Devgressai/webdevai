@@ -9,6 +9,22 @@ import {
   Sparkles, Layers, Palette 
 } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'App Design & Development Services | End-to-End Product Builds | Web Vello',
+  description: 'Design, build, and launch high-performance web or mobile apps with Web Vello. We handle UX, engineering, QA, and iteration across the full product lifecycle.',
+  keywords: ['app design and development', 'mobile app development agency', 'product design firm', 'web vello apps', 'end to end app development'],
+  alternates: {
+    canonical: 'https://webvello.com/services/app-design-development',
+  },
+  openGraph: {
+    title: 'App Design & Development | Web Vello',
+    description: 'Partner with Web Vello to ship beautifully designed, scalable applications built around user insight and modern engineering.',
+    url: 'https://webvello.com/services/app-design-development',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -159,10 +175,10 @@ const technologies = [
 const faqs = [
   {
     question: "How long does it take to develop a mobile app from start to finish?",
-    answer: "The development timeline for a mobile app typically ranges from 3-6 months for a basic app to 6-12 months for a complex application. The timeline depends on several factors including the app's complexity, number of features, platform requirements (iOS, Android, or both), and the development approach chosen. We use agile development methodologies to ensure rapid iteration and timely delivery, with regular check-ins and milestone reviews throughout the process."
+    answer: "The development timeline for a mobile app typically ranges from 3-6 months for a basic app to 6-12 months for a complex application. The timeline depends on several factors including the app’s complexity, number of features, platform requirements (iOS, Android, or both), and the development approach chosen. We use agile development methodologies to ensure rapid iteration and timely delivery, with regular check-ins and milestone reviews throughout the process."
   },
   {
-    question: "What's the difference between native and cross-platform app development?",
+    question: "What’s the difference between native and cross-platform app development?",
     answer: "Native app development involves building separate applications for each platform (iOS and Android) using platform-specific languages and tools. This approach provides the best performance and access to platform-specific features but requires more development time and resources. Cross-platform development uses frameworks like React Native or Flutter to build a single codebase that works on multiple platforms. This approach is faster and more cost-effective but may have some performance limitations and reduced access to platform-specific features."
   },
   {
@@ -171,7 +187,7 @@ const faqs = [
   },
   {
     question: "Can you help with app store optimization and marketing?",
-    answer: "Yes, we provide comprehensive app store optimization (ASO) services including keyword optimization, compelling app descriptions, high-quality screenshots and videos, and user review management. We also offer marketing support including social media promotion, influencer partnerships, and paid advertising campaigns. Our team works with you to develop a comprehensive marketing strategy that maximizes your app's visibility and user acquisition."
+    answer: "Yes, we provide comprehensive app store optimization (ASO) services including keyword optimization, compelling app descriptions, high-quality screenshots and videos, and user review management. We also offer marketing support including social media promotion, influencer partnerships, and paid advertising campaigns. Our team works with you to develop a comprehensive marketing strategy that maximizes your app’s visibility and user acquisition."
   },
   {
     question: "What ongoing support and maintenance do you provide after launch?",
@@ -293,7 +309,7 @@ export default function AppDesignDevelopmentPage() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
               We combine cutting-edge technology with proven development practices to create 
-              applications that don't just work—they excel.
+              applications that don’t just work—they excel.
             </p>
           </div>
 
@@ -557,7 +573,7 @@ export default function AppDesignDevelopmentPage() {
             Ready to Build Your Next Great App?
           </h2>
           <p className="text-xl text-emerald-100 mb-8">
-            Let's transform your ideas into powerful applications that drive business growth 
+            Let’s transform your ideas into powerful applications that drive business growth 
             and deliver exceptional user experiences. Get started with a free consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

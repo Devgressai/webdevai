@@ -207,7 +207,7 @@ export function SpeedTestExamples() {
             </h3>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
               Here are the most common website speed issues we find and the solutions 
-              that can help improve your site's performance.
+              that can help improve your site’s performance.
             </p>
           </div>
           

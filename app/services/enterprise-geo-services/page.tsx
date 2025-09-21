@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Globe, MapPin, Users, BarChart3, Target, Building2, TrendingUp, Code, FileText, ShoppingBag, Zap } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Enterprise GEO Services | Location Intelligence & Expansion Strategy | Web Vello',
+  description: 'Use data-driven location intelligence to expand faster. Web Vello’s enterprise GEO team analyzes markets, territories, and site selection with AI-backed insights.',
+  keywords: ['enterprise geo services', 'location intelligence consulting', 'market expansion strategy', 'web vello geo', 'site selection analytics'],
+  alternates: {
+    canonical: 'https://webvello.com/services/enterprise-geo-services',
+  },
+  openGraph: {
+    title: 'Enterprise GEO Services | Web Vello',
+    description: 'Plan expansions with confidence using Web Vello’s AI-powered location intelligence and market analysis services.',
+    url: 'https://webvello.com/services/enterprise-geo-services',
+    type: 'website',
+  }
+}
 
 export default function EnterpriseGEOServicesPage() {
   return (
@@ -17,7 +33,7 @@ export default function EnterpriseGEOServicesPage() {
               Powered by AI
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              Optimize your enterprise's geographic presence with AI-powered location intelligence 
+              Optimize your enterprise’s geographic presence with AI-powered location intelligence 
               that drives market expansion and customer acquisition at scale.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -127,4 +143,3 @@ export default function EnterpriseGEOServicesPage() {
     </div>
   )
 }
-

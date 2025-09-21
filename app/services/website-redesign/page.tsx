@@ -1,6 +1,22 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Palette, Monitor, TrendingUp, CheckCircle, Eye, Target, BarChart3, Zap, Users, Clock, Award, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Website Redesign Services | Modernize & Improve Conversions | Web Vello',
+  description: 'Refresh your outdated website with Web Vello’s redesign team. We preserve SEO equity, improve performance, and launch conversion-focused experiences.',
+  keywords: ['website redesign agency', 'website refresh services', 'web vello redesign', 'conversion focused redesign', 'modernize website'],
+  alternates: {
+    canonical: 'https://webvello.com/services/website-redesign',
+  },
+  openGraph: {
+    title: 'Website Redesign Services | Web Vello',
+    description: 'Partner with Web Vello to transform your site into a high-performing, modern experience that accelerates growth.',
+    url: 'https://webvello.com/services/website-redesign',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -33,7 +49,7 @@ const process = [
   {
     step: "01",
     title: "Current Site Analysis",
-    description: "Comprehensive audit of your existing website's performance and opportunities."
+    description: "Comprehensive audit of your existing website’s performance and opportunities."
   },
   {
     step: "02",
@@ -92,7 +108,7 @@ export default function WebsiteRedesignPage() {
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent"> Outdated to Outstanding</span>
             </h1>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
-              Don't let an outdated website hold your business back. Our strategic redesign services 
+              Don’t let an outdated website hold your business back. Our strategic redesign services 
               modernize your online presence while preserving your SEO value and improving performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -118,7 +134,7 @@ export default function WebsiteRedesignPage() {
               Why Choose Our Website Redesign Services?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              We don't just make your website look better—we make it perform better, 
+              We don’t just make your website look better—we make it perform better, 
               converting more visitors into customers while improving your search rankings.
             </p>
           </div>
@@ -211,7 +227,7 @@ export default function WebsiteRedesignPage() {
               Ready to Transform Your Website?
             </h2>
             <p className="text-xl text-purple-100 max-w-2xl mx-auto mb-8">
-              Don't let an outdated website cost you customers and revenue. 
+              Don’t let an outdated website cost you customers and revenue. 
               Let us redesign your website for better performance and results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

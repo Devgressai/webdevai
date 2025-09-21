@@ -809,7 +809,7 @@ export default function CityServicePage({ params }: CityServicePageProps) {
                 Professional {service.name} Services in {city.name}
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                {city.name} businesses face unique challenges and opportunities in today's competitive market. Our {service.name.toLowerCase()} services are specifically designed to address these local needs while leveraging global best practices.
+                {city.name} businesses face unique challenges and opportunities in today’s competitive market. Our {service.name.toLowerCase()} services are specifically designed to address these local needs while leveraging global best practices.
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 With a population of {city.population} and thriving industries including {city.industries.slice(0, 3).join(', ')}, and more, {city.name} offers incredible potential for businesses ready to establish a strong digital presence.
@@ -949,7 +949,7 @@ export default function CityServicePage({ params }: CityServicePageProps) {
             Ready to Get Started with {service.name} in {city.name}?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join the growing number of {city.name} businesses that trust us with their {service.name.toLowerCase()} needs. Let's discuss how we can help your business succeed.
+            Join the growing number of {city.name} businesses that trust us with their {service.name.toLowerCase()} needs. Let’s discuss how we can help your business succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

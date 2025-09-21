@@ -110,7 +110,7 @@ export default function HomePage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600"> Digital Marketing Needs?</span>
               </h2>
               <p className="text-xl text-secondary-600 mb-8 leading-relaxed">
-                We're not just another digital marketing agency. We're your strategic partner in growth, 
+                We’re not just another digital marketing agency. We’re your strategic partner in growth, 
                 combining cutting-edge technology with proven strategies to deliver measurable results 
                 that transform your business.
               </p>
@@ -230,7 +230,7 @@ export default function HomePage() {
               Success Metrics That Prove Our Value
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Our track record speaks for itself. We've helped hundreds of businesses achieve 
+              Our track record speaks for itself. We’ve helped hundreds of businesses achieve 
               remarkable growth through strategic digital marketing and web development.
             </p>
           </div>

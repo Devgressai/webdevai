@@ -340,10 +340,10 @@ export default function ResourcesPage() {
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  href="/services/review-management" 
+                  href="/services/digital-marketing" 
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:underline text-sm"
                 >
-                  Review Management
+                  Digital Marketing Services
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -377,10 +377,10 @@ export default function ResourcesPage() {
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  href="/services/technical-seo" 
+                  href="/services/seo" 
                   className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium group-hover:underline text-sm"
                 >
-                  Technical SEO
+                  Technical SEO Services
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -451,10 +451,10 @@ export default function ResourcesPage() {
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  href="/services/analytics-consulting" 
+                  href="/services/digital-marketing" 
                   className="inline-flex items-center text-green-600 hover:text-green-700 font-medium group-hover:underline text-sm"
                 >
-                  Analytics Consulting
+                  Marketing Analytics
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -488,10 +488,10 @@ export default function ResourcesPage() {
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  href="/services/content-strategy" 
+                  href="/services/digital-marketing" 
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium group-hover:underline text-sm"
                 >
-                  Content Strategy
+                  Content Strategy Services
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -518,17 +518,17 @@ export default function ResourcesPage() {
               </div>
               <div className="flex space-x-3">
                 <Link 
-                  href="/services/content-strategy" 
+                  href="/services/digital-marketing" 
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium group-hover:underline text-sm"
                 >
-                  Content Strategy
+                  Content Strategy Services
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  href="/services/social-media-marketing" 
+                  href="/services/social-media-design" 
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium group-hover:underline text-sm"
                 >
-                  Social Media Marketing
+                  Social Media Design
                   <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

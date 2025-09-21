@@ -44,7 +44,7 @@ const roiMetrics = [
 const optimizationStrategies = [
   {
     title: "Conversion Rate Optimization (CRO)",
-    description: "Systematically improve your website's ability to convert visitors into customers",
+    description: "Systematically improve your website’s ability to convert visitors into customers",
     tactics: [
       "A/B testing of headlines, CTAs, and layouts",
       "User experience optimization",
@@ -58,7 +58,7 @@ const optimizationStrategies = [
   },
   {
     title: "Search Engine Optimization (SEO)",
-    description: "Improve your website's visibility in search results to attract qualified traffic",
+    description: "Improve your website’s visibility in search results to attract qualified traffic",
     tactics: [
       "Keyword research and optimization",
       "Content creation and optimization",
@@ -169,7 +169,7 @@ const commonMistakes = [
   },
   {
     mistake: "Poor Value Proposition",
-    description: "Website doesn't clearly communicate what makes your business unique and valuable",
+    description: "Website doesn’t clearly communicate what makes your business unique and valuable",
     impact: "Visitors leave without understanding why they should choose your business",
     solution: "Create compelling, clear value propositions that address customer pain points",
     icon: Target,
@@ -185,7 +185,7 @@ const commonMistakes = [
   },
   {
     mistake: "Weak Call-to-Actions",
-    description: "Unclear or unappealing CTAs that don't motivate visitors to take action",
+    description: "Unclear or unappealing CTAs that don’t motivate visitors to take action",
     impact: "Low conversion rates and missed opportunities to capture leads",
     solution: "Create compelling, action-oriented CTAs with clear value propositions",
     icon: ArrowRight,
@@ -266,12 +266,12 @@ export default function WebsiteROIPage() {
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Not Driving ROI?
               </span>{" "}
-              Let's Fix That
+              Let’s Fix That
             </h1>
             
             <p className="text-xl lg:text-2xl leading-8 text-secondary-600 mb-12 max-w-3xl mx-auto">
               Transform your website from a cost center into a revenue-generating asset with our 
-              proven ROI optimization strategies. We've helped businesses achieve 300-800% returns 
+              proven ROI optimization strategies. We’ve helped businesses achieve 300-800% returns 
               on their website investments through data-driven optimization.
             </p>
             
@@ -383,8 +383,8 @@ export default function WebsiteROIPage() {
               Key ROI Metrics You Need to Track
             </h2>
             <p className="text-xl text-secondary-600">
-              Understanding these critical metrics is essential for measuring and improving your website's return on investment. 
-              Each metric provides insights into different aspects of your website's performance and revenue generation.
+              Understanding these critical metrics is essential for measuring and improving your website’s return on investment. 
+              Each metric provides insights into different aspects of your website’s performance and revenue generation.
             </p>
           </div>
 
@@ -414,11 +414,11 @@ export default function WebsiteROIPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
-              Why Your Website Isn't Driving ROI
+              Why Your Website Isn’t Driving ROI
             </h2>
             <p className="text-xl text-secondary-600">
               Identify the key issues preventing your website from delivering measurable returns on your investment. 
-              These common problems can significantly impact your website's ability to generate revenue and provide ROI.
+              These common problems can significantly impact your website’s ability to generate revenue and provide ROI.
             </p>
           </div>
 
@@ -429,7 +429,7 @@ export default function WebsiteROIPage() {
               </div>
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">No Lead Generation</h3>
               <p className="text-secondary-600 leading-relaxed">
-                Your website isn't capturing leads or converting visitors into potential customers. 
+                Your website isn’t capturing leads or converting visitors into potential customers. 
                 Without lead generation, your website becomes a digital brochure rather than a business tool.
               </p>
             </div>
@@ -441,7 +441,7 @@ export default function WebsiteROIPage() {
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">Poor Analytics</h3>
               <p className="text-secondary-600 leading-relaxed">
                 Lack of tracking and measurement makes it impossible to optimize for better performance. 
-                You can't improve what you can't measure, leading to missed optimization opportunities.
+                You can’t improve what you can’t measure, leading to missed optimization opportunities.
               </p>
             </div>
 
@@ -451,7 +451,7 @@ export default function WebsiteROIPage() {
               </div>
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">Wrong Audience</h3>
               <p className="text-secondary-600 leading-relaxed">
-                Your website attracts visitors who aren't interested in your products or services. 
+                Your website attracts visitors who aren’t interested in your products or services. 
                 This leads to high bounce rates and wasted marketing spend on unqualified traffic.
               </p>
             </div>
@@ -473,7 +473,7 @@ export default function WebsiteROIPage() {
               </div>
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">No Clear Value</h3>
               <p className="text-secondary-600 leading-relaxed">
-                Visitors don't understand what you offer or why they should choose your business. 
+                Visitors don’t understand what you offer or why they should choose your business. 
                 Without a compelling value proposition, visitors have no reason to convert or engage.
               </p>
             </div>
@@ -499,7 +499,7 @@ export default function WebsiteROIPage() {
               Proven ROI Optimization Strategies
             </h2>
             <p className="text-xl text-secondary-600">
-              Our comprehensive approach combines multiple optimization strategies to maximize your website's return on investment. 
+              Our comprehensive approach combines multiple optimization strategies to maximize your website’s return on investment. 
               Each strategy is designed to address specific aspects of website performance and conversion optimization.
             </p>
           </div>
@@ -600,8 +600,8 @@ export default function WebsiteROIPage() {
               Common ROI-Killing Mistakes to Avoid
             </h2>
             <p className="text-xl text-secondary-600">
-              Many businesses unknowingly make these critical mistakes that significantly reduce their website's ROI. 
-              Understanding and avoiding these pitfalls is essential for maximizing your website's performance.
+              Many businesses unknowingly make these critical mistakes that significantly reduce their website’s ROI. 
+              Understanding and avoiding these pitfalls is essential for maximizing your website’s performance.
             </p>
           </div>
 
@@ -636,7 +636,7 @@ export default function WebsiteROIPage() {
               Frequently Asked Questions About Website ROI
             </h2>
             <p className="text-xl text-secondary-600">
-              Get answers to the most common questions about website ROI optimization and how to improve your website's performance.
+              Get answers to the most common questions about website ROI optimization and how to improve your website’s performance.
             </p>
           </div>
 
@@ -647,7 +647,7 @@ export default function WebsiteROIPage() {
                 answer: "Most businesses see initial improvements within 30-60 days, with significant ROI gains typically appearing within 3-6 months. The timeline depends on the scope of optimization, your industry, and the strategies implemented. We provide monthly progress reports so you can track improvements in real-time."
               },
               {
-                question: "What's the typical ROI improvement businesses see from website optimization?",
+                question: "What’s the typical ROI improvement businesses see from website optimization?",
                 answer: "Our clients typically see 300-800% returns on their optimization investment. This includes increased conversion rates, higher average order values, reduced customer acquisition costs, and improved search rankings. The exact improvement depends on your starting point and optimization goals."
               },
               {
@@ -659,8 +659,8 @@ export default function WebsiteROIPage() {
                 answer: "We implement comprehensive tracking including conversion goals, user behavior analysis, A/B testing, and revenue attribution. We provide detailed dashboards showing key metrics like conversion rates, customer acquisition costs, and revenue per visitor. This data-driven approach ensures measurable improvements."
               },
               {
-                question: "What's included in your ROI optimization services?",
-                answer: "Our comprehensive service includes website audit, conversion rate optimization, user experience improvements, content optimization, technical SEO, performance optimization, ongoing testing, and monthly reporting. We work as an extension of your team to continuously improve your website's performance."
+                question: "What’s included in your ROI optimization services?",
+                answer: "Our comprehensive service includes website audit, conversion rate optimization, user experience improvements, content optimization, technical SEO, performance optimization, ongoing testing, and monthly reporting. We work as an extension of your team to continuously improve your website’s performance."
               }
             ].map((faq, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100">
@@ -697,7 +697,7 @@ export default function WebsiteROIPage() {
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
             Let our ROI experts transform your website into a revenue-generating machine. 
-            We've helped hundreds of businesses achieve remarkable returns on their website investments.
+            We’ve helped hundreds of businesses achieve remarkable returns on their website investments.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

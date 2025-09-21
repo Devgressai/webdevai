@@ -7,7 +7,7 @@ const values = [
   {
     icon: Target,
     title: "Results-Driven",
-    description: "We don't just promise results—we guarantee them. Every strategy is designed to deliver measurable business growth."
+    description: "We don’t just promise results—we guarantee them. Every strategy is designed to deliver measurable business growth."
   },
   {
     icon: TrendingUp,
@@ -30,7 +30,7 @@ const team = [
   {
     name: "George S.",
     position: "CEO & Founder",
-    bio: "Visionary leader with extensive experience in digital marketing and business strategy, driving Web Vello's mission to deliver exceptional results.",
+    bio: "Visionary leader with extensive experience in digital marketing and business strategy, driving Web Vello’s mission to deliver exceptional results.",
     expertise: ["Strategic Planning", "Business Development", "Client Relations"]
   },
   {
@@ -81,7 +81,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              We're not just another digital marketing agency. We're the team that transforms 
+              We’re not just another digital marketing agency. We’re the team that transforms 
               businesses through data-driven strategies, AI-powered insights, and unwavering 
               commitment to results.
             </p>
@@ -115,12 +115,12 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-secondary-600 mb-6">
-                To empower businesses with digital marketing strategies that don't just promise 
+                To empower businesses with digital marketing strategies that don’t just promise 
                 growth—they deliver it. We believe every business deserves to dominate their market, 
                 and we have the proven methodology to make it happen.
               </p>
               <p className="text-lg text-secondary-600">
-                Since 2018, we've helped over 100 businesses achieve remarkable growth, generating 
+                Since 2018, we’ve helped over 100 businesses achieve remarkable growth, generating 
                 more than $1 million in additional revenue through our comprehensive digital 
                 marketing solutions.
               </p>
@@ -214,7 +214,7 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              From startup to industry leader, here's how we've grown and evolved over the years.
+              From startup to industry leader, here’s how we’ve grown and evolved over the years.
             </p>
           </div>
 
@@ -273,7 +273,7 @@ export default function AboutPage() {
               </div>
               <p className="text-secondary-600 mb-6">
                 Visionary leader with extensive experience in digital marketing and business strategy, 
-                driving Web Vello's mission to deliver exceptional results for clients nationwide.
+                driving Web Vello’s mission to deliver exceptional results for clients nationwide.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between">

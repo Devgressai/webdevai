@@ -10,6 +10,22 @@ import {
   BookOpen, FileQuestion 
 } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Answer Engine Optimization (AEO) Services | Web Vello',
+  description: 'Capture visibility in AI assistants and answer engines. Web Vello structures content to deliver precise, authoritative answers across conversational search.',
+  keywords: ['answer engine optimization', 'aeo services', 'ai assistant optimization', 'web vello aeo', 'conversational seo'],
+  alternates: {
+    canonical: 'https://webvello.com/services/answer-engine-optimization',
+  },
+  openGraph: {
+    title: 'Answer Engine Optimization | Web Vello',
+    description: 'Optimize content for AI answers and assistants with Web Vello’s structured response strategies and question-based content.',
+    url: 'https://webvello.com/services/answer-engine-optimization',
+    type: 'website',
+  }
+}
 
 const features = [
   {
@@ -35,7 +51,7 @@ const features = [
   {
     icon: Lightbulb,
     title: "Knowledge Graph Optimization",
-    description: "Optimize for Google's Knowledge Graph and other answer engine features."
+    description: "Optimize for Google’s Knowledge Graph and other answer engine features."
   },
   {
     icon: Target,
@@ -560,7 +576,7 @@ export default function AnswerEngineOptimizationPage() {
             Ready to Dominate Answer Engine Results?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's optimize your content to capture featured snippets and become the go-to source 
+            Let’s optimize your content to capture featured snippets and become the go-to source 
             for answers. Get started with a free AEO audit today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

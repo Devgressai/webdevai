@@ -178,7 +178,7 @@ const faqs = [
     answer: "Most agencies see initial improvements within 2-3 months, with significant results within 6-12 months. The timeline depends on the specific challenges and implementation speed."
   },
   {
-    question: "What's the most important metric for agency success?",
+    question: "What’s the most important metric for agency success?",
     answer: "Client retention rate is typically the most critical metric, as it directly impacts revenue stability, team morale, and long-term business growth. A high retention rate indicates satisfied clients and effective service delivery."
   },
   {
@@ -186,7 +186,7 @@ const faqs = [
     answer: "Focus on process optimization, automation, and clear workflows rather than just working harder. Implement realistic deadlines, provide proper tools, and ensure work-life balance for sustainable productivity improvements."
   },
   {
-    question: "What's the best pricing strategy for agencies?",
+    question: "What’s the best pricing strategy for agencies?",
     answer: "Value-based pricing typically outperforms hourly billing. Price based on the outcomes and value you deliver to clients, not the time you spend. This approach allows for higher margins and better client relationships."
   },
   {
@@ -211,7 +211,7 @@ export default function AgencyResultsPage() {
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Transform Your Agency's Performance
+              Transform Your Agency’s Performance
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
               Stop struggling with inconsistent results. Learn proven strategies to boost client retention, 
@@ -238,7 +238,7 @@ export default function AgencyResultsPage() {
               Key Performance Metrics for Agency Success
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Track these essential metrics to identify opportunities and measure your agency's performance improvements
+              Track these essential metrics to identify opportunities and measure your agency’s performance improvements
             </p>
           </div>
           
@@ -474,10 +474,10 @@ export default function AgencyResultsPage() {
               <Building2 className="h-12 w-12 text-white" />
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              Ready to Transform Your Agency's Performance?
+              Ready to Transform Your Agency’s Performance?
             </h2>
             <p className="text-xl text-blue-100">
-              Get a personalized assessment of your agency's performance and actionable strategies 
+              Get a personalized assessment of your agency’s performance and actionable strategies 
               to boost results, increase revenue, and build a scalable business.
             </p>
           </div>
