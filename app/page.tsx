@@ -8,10 +8,6 @@ const Pricing = dynamic(() => import('../components/sections/pricing'), {
   loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-lg" />
 })
 
-const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment'), { 
-  ssr: true,
-  loading: () => <div className="h-64 animate-pulse bg-gray-100 rounded-lg" />
-})
 
 const SocialProof = dynamic(() => import('../components/sections/social-proof'), { 
   ssr: false,
@@ -98,9 +94,99 @@ export default function HomePage() {
       <ScrollTracker />
       <Hero />
       
-      {/* Website Assessment Section */}
+      {/* Global Results & Trust Section */}
       <LazySection>
-        <WebsiteAssessment />
+        <section className="relative py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+          {/* Space-themed background */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/80 to-slate-800/90"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+            <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-400/20 to-cyan-400/20 blur-3xl"></div>
+            <div className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-purple-400/20 to-pink-400/20 blur-3xl"></div>
+          </div>
+          
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Content */}
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-1 h-12 bg-gradient-to-b from-red-500 to-red-600 rounded-full"></div>
+                    <span className="text-red-400 font-semibold text-sm uppercase tracking-wider">Quality Assurance</span>
+                  </div>
+                  <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                    Clients Around The World Trust Us To Deliver{' '}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                      Quality Work
+                    </span>
+                  </h2>
+                  <p className="text-xl text-gray-300 leading-relaxed">
+                    Our team of experienced professionals strives to provide top-notch services that meet the unique needs of each client. As a result, clients around the world have trusted us with their website design, development, and SEO needs.
+                  </p>
+                </div>
+                
+                {/* Trust Indicators */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div className="text-center sm:text-left">
+                    <div className="text-4xl font-bold text-white mb-2">500+</div>
+                    <div className="text-gray-300 text-sm">Websites Launched</div>
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <div className="text-4xl font-bold text-white mb-2">37</div>
+                    <div className="text-gray-300 text-sm">Cities Served</div>
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <div className="text-4xl font-bold text-white mb-2">300%+</div>
+                    <div className="text-gray-300 text-sm">Average Growth</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right Content - Results Grid */}
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Revenue Growth</h3>
+                  <p className="text-gray-300 text-sm">Average 300%+ organic traffic increase within 6 months</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Global Reach</h3>
+                  <p className="text-gray-300 text-sm">Serving clients across 37+ major cities worldwide</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Quality Assured</h3>
+                  <p className="text-gray-300 text-sm">Every project delivered with meticulous attention to detail</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Fast Results</h3>
+                  <p className="text-gray-300 text-sm">See measurable improvements within 30 days of launch</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </LazySection>
       
       {/* Social Proof Section */}
