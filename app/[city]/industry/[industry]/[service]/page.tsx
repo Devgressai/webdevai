@@ -276,7 +276,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
                     "name": "What makes web development different for technology companies in Denver?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Denver's tech ecosystem has unique characteristics including a mix of startups and enterprise companies, strong focus on innovation, and access to top talent from local universities. We tailor our development approach to leverage these local advantages while addressing the specific challenges of the technology sector."
+                      "text": "Denver&apos;s tech ecosystem has unique characteristics including a mix of startups and enterprise companies, strong focus on innovation, and access to top talent from local universities. We tailor our development approach to leverage these local advantages while addressing the specific challenges of the technology sector."
                     }
                   },
                   {
@@ -322,15 +322,15 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             </p>
             
             <p className="text-lg leading-relaxed mb-6">
-              Denver's technology landscape is experiencing unprecedented growth, with over 3,000 tech companies calling the Mile High City home. The city's strategic location, business-friendly environment, and access to top-tier talent make it an ideal hub for technology innovation. Our web development services are specifically tailored to meet the unique demands of Denver's diverse technology sector, from emerging startups in the RiNo district to established enterprise companies in the Denver Tech Center.
+              Denver&apos;s technology landscape is experiencing unprecedented growth, with over 3,000 tech companies calling the Mile High City home. The city&apos;s strategic location, business-friendly environment, and access to top-tier talent make it an ideal hub for technology innovation. Our web development services are specifically tailored to meet the unique demands of Denver&apos;s diverse technology sector, from emerging startups in the RiNo district to established enterprise companies in the Denver Tech Center.
             </p>
             
             <p className="text-lg leading-relaxed mb-6">
-              The technology industry in Denver encompasses a wide range of sectors including software development, cybersecurity, fintech, healthtech, and emerging technologies like artificial intelligence and blockchain. Each sector presents unique challenges and opportunities that require specialized web development approaches. Our team understands these nuances and has developed expertise in creating web solutions that not only meet current needs but also scale with your company's growth trajectory.
+              The technology industry in Denver encompasses a wide range of sectors including software development, cybersecurity, fintech, healthtech, and emerging technologies like artificial intelligence and blockchain. Each sector presents unique challenges and opportunities that require specialized web development approaches. Our team understands these nuances and has developed expertise in creating web solutions that not only meet current needs but also scale with your company&apos;s growth trajectory.
             </p>
             
             <p className="text-lg leading-relaxed mb-6">
-              Denver's tech ecosystem benefits from proximity to major universities like the University of Colorado and Colorado State University, which produce a steady stream of talented developers and engineers. This talent pool, combined with the city's lower cost of living compared to Silicon Valley, creates an attractive environment for technology companies. Our web development services leverage this local talent and understanding of the Denver market to deliver solutions that resonate with both local and global audiences.
+              Denver&apos;s tech ecosystem benefits from proximity to major universities like the University of Colorado and Colorado State University, which produce a steady stream of talented developers and engineers. This talent pool, combined with the city&apos;s lower cost of living compared to Silicon Valley, creates an attractive environment for technology companies. Our web development services leverage this local talent and understanding of the Denver market to deliver solutions that resonate with both local and global audiences.
             </p>
           </div>
         </div>
@@ -344,7 +344,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             {[
               {
                 q: `What makes web development different for technology companies in Denver?`,
-                a: `Denver's tech ecosystem has unique characteristics including a mix of startups and enterprise companies, strong focus on innovation, and access to top talent from local universities. We tailor our development approach to leverage these local advantages while addressing the specific challenges of the technology sector, such as rapid scaling needs, complex integration requirements, and high security standards.`
+                a: `Denver&apos;s tech ecosystem has unique characteristics including a mix of startups and enterprise companies, strong focus on innovation, and access to top talent from local universities. We tailor our development approach to leverage these local advantages while addressing the specific challenges of the technology sector, such as rapid scaling needs, complex integration requirements, and high security standards.`
               },
               {
                 q: 'How do you handle the rapid scaling needs of technology companies?',
@@ -485,7 +485,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-4">Startup Scene</h3>
               <p className="text-gray-700 mb-4">
-                Denver's startup ecosystem is thriving with over 1,000 active startups, particularly in the RiNo district and downtown areas. We help startups build their first web applications with scalable architectures.
+                Denver&apos;s startup ecosystem is thriving with over 1,000 active startups, particularly in the RiNo district and downtown areas. We help startups build their first web applications with scalable architectures.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• MVP development and rapid prototyping</li>
@@ -590,7 +590,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">Sustainability & Green Tech</h3>
               <p className="text-lg leading-relaxed">
-                Denver's focus on sustainability and green technology presents unique opportunities for technology companies. We can help you develop web applications that support environmental initiatives and sustainable business practices.
+                Denver&apos;s focus on sustainability and green technology presents unique opportunities for technology companies. We can help you develop web applications that support environmental initiatives and sustainable business practices.
               </p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Energy-efficient application architectures</li>
@@ -605,7 +605,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-semibold mb-6">Local Market Advantages</h3>
             <p className="text-lg leading-relaxed mb-6">
-              Denver's technology ecosystem offers unique advantages for web development projects. The city's central location provides easy access to both coasts, while the lower cost of living compared to Silicon Valley makes it an attractive location for technology companies. Our local presence allows us to provide more personalized service and faster response times than remote or offshore development teams.
+              Denver&apos;s technology ecosystem offers unique advantages for web development projects. The city&apos;s central location provides easy access to both coasts, while the lower cost of living compared to Silicon Valley makes it an attractive location for technology companies. Our local presence allows us to provide more personalized service and faster response times than remote or offshore development teams.
             </p>
             
             <p className="text-lg leading-relaxed mb-6">
@@ -613,7 +613,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             </p>
             
             <p className="text-lg leading-relaxed mb-6">
-              Denver's business-friendly environment and access to top-tier talent from local universities create an ideal setting for technology innovation. Our development team leverages this local talent pool and understanding of the Denver market to deliver solutions that resonate with both local and global audiences. We understand the unique challenges and opportunities in Denver's tech ecosystem and can provide more relevant and effective solutions for your specific needs.
+              Denver&apos;s business-friendly environment and access to top-tier talent from local universities create an ideal setting for technology innovation. Our development team leverages this local talent pool and understanding of the Denver market to deliver solutions that resonate with both local and global audiences. We understand the unique challenges and opportunities in Denver&apos;s tech ecosystem and can provide more relevant and effective solutions for your specific needs.
             </p>
           </div>
         </div>
