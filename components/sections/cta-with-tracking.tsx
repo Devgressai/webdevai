@@ -108,10 +108,10 @@ export function CTAWithTracking({ className = "" }: CTAWithTrackingProps) {
             
             {/* Urgency & Value Props - Golden ratio spacing */}
             <div className="space-y-4">
-              <p className="text-sm sm:text-base text-white/80">
+              <p className="text-sm sm:text-base text-white">
                 ⚡ <span className="font-semibold">Instant Response:</span> Get your custom proposal in 24 hours
               </p>
-              <p className="text-xs sm:text-sm text-white/60">
+              <p className="text-xs sm:text-sm text-white/90">
                 <span className="hidden sm:inline">No obligation • Free consultation included • 500+ successful projects</span>
                 <span className="sm:hidden">No obligation • Free consultation</span>
               </p>

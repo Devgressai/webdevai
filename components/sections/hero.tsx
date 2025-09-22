@@ -120,7 +120,7 @@ export function Hero() {
       <div className="hero-content">
         <div className="mx-auto max-w-4xl px-4">
           <div className="text-center">
-            <p className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white/80">
+            <p className="inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white">
               High-Impact Web & SEO Growth Programs
             </p>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
@@ -141,7 +141,7 @@ export function Hero() {
                     placeholder="Enter your website URL"
                     value={formData.website}
                     onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
-                    className="h-12 flex-1 border-none bg-white/20 text-white placeholder:text-white/60 focus-visible:ring-0 text-base focus:bg-white/30"
+                    className="h-12 flex-1 border-none bg-white/20 text-white placeholder:text-white/80 focus-visible:ring-0 text-base focus:bg-white/30"
                   />
                   <Button
                     type="submit"
@@ -151,8 +151,8 @@ export function Hero() {
                     Get My Proposal
                   </Button>
                 </form>
-                <p className="text-center text-sm text-white/80">
-                  Don’t have a site?{' '}
+                <p className="text-center text-sm text-white">
+                  Don't have a site?{' '}
                   <Link href="/contact" className="font-semibold text-white hover:text-[#7AD0E4] underline">
                     Click here
                   </Link>
@@ -252,19 +252,19 @@ export function Hero() {
         </div>
 
         <div className="mx-auto mt-16 max-w-4xl px-4">
-          <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 text-center">
             {stats.map((stat) => (
               <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-3 group">
                 <div className={`mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <dt className="text-sm sm:text-base leading-7 text-white/80">{stat.name}</dt>
-                <dd className="order-first text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-[#7AD0E4] transition-colors">
+                <h3 className="text-sm sm:text-base leading-7 text-white font-medium">{stat.name}</h3>
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-[#7AD0E4] transition-colors">
                   {stat.value}
-                </dd>
+                </p>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
 
         
