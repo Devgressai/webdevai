@@ -140,14 +140,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="dns-prefetch" href="//cdn.sanity.io" />
         <link rel="dns-prefetch" href="//images.unsplash.com" />
-        <link 
-          rel="preload" 
-          as="image" 
-          href="/images/hero-night-orbit.webp" 
-          fetchPriority="high"
-          imageSrcSet="/images/hero-night-orbit.webp 1920w"
-          imageSizes="100vw"
-        />
+        {/* Avoid preloading large hero images to keep LCP text-first */}
         
         {/* Critical CSS for above-the-fold content */}
         <style dangerouslySetInnerHTML={{__html: `

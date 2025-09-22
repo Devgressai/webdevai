@@ -2,14 +2,11 @@
 import { Hero } from '../components/sections/hero'
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
-import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Target, TrendingUp, Play, DollarSign, Building2, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, TrendingUp, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { HeroImage, BackgroundImage } from '../components/ui/optimized-image'
+import { HeroImage } from '../components/ui/optimized-image'
 import { LazySection } from '../components/ui/lazy-section'
-import { useConversionTracking } from '../hooks/useConversionTracking'
-import ScrollTracker from '../components/analytics/scroll-tracker'
-import { CTAWithTracking } from '../components/sections/cta-with-tracking'
 import dynamic from 'next/dynamic'
 
 // Lazy load heavy components to reduce initial bundle
