@@ -84,33 +84,33 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#1e3a8a] overflow-hidden">
-      {/* Background Elements - Silverstream color scheme */}
+    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+      {/* Background Elements - Google-inspired color scheme */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Base blue background */}
-        <div className="absolute inset-0 bg-[#1e3a8a]"></div>
+        {/* Clean white background like Google */}
+        <div className="absolute inset-0 bg-white"></div>
         
-        {/* Subtle professional overlays with cyan accents */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-cyan-500/10 opacity-60"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-cyan-400/15 to-cyan-500/15 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-blue-400/15 to-cyan-400/15 blur-3xl"></div>
+        {/* Subtle professional overlays with Google colors */}
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#4285f4]/5 via-[#34a853]/5 to-[#ea4335]/5 opacity-60"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/10 to-[#34a853]/10 blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-[#ea4335]/10 to-[#fbbc05]/10 blur-3xl"></div>
         
-        {/* Subtle geometric shapes with cyan colors */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-cyan-300/10 to-cyan-400/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-cyan-300/10 to-cyan-400/10 rounded-full blur-2xl"></div>
+        {/* Subtle geometric shapes with Google colors */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-[#4285f4]/10 to-[#34a853]/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-[#ea4335]/10 to-[#fbbc05]/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-[#34a853]/10 to-[#4285f4]/10 rounded-full blur-2xl"></div>
       </div>
 
       <div className="hero-content">
         <div className="mx-auto max-w-4xl px-4">
           <div className="text-center">
-            <p className="inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white">
+            <p className="inline-block rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-700">
               High-Impact Web & SEO Growth Programs
             </p>
-            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Transform your website into a lead generation machine with <span className="text-cyan-300 drop-shadow-lg">Web Vello</span>
+            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              Transform your website into a lead generation machine with <span className="bg-gradient-to-r from-[#4285f4] via-[#ea4335] to-[#34a853] bg-clip-text text-transparent drop-shadow-lg">Web Vello</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-3xl mx-auto">
+            <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
             </p>
           </div>
@@ -118,26 +118,26 @@ export function Hero() {
           <div className="mt-10 max-w-2xl mx-auto w-full">
             {step === 'url' && (
               <div className="space-y-6">
-                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-white/10 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-white/20">
+                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-slate-50 rounded-2xl p-2 shadow-xl border border-slate-200">
                   <Input
                     type="text"
                     required
                     placeholder="Enter your website URL"
                     value={formData.website}
                     onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
-                    className="h-12 flex-1 border-none bg-white/20 text-white placeholder:text-white/80 focus-visible:ring-0 text-base focus:bg-white/30"
+                    className="h-12 flex-1 border-none bg-white text-slate-900 placeholder:text-slate-500 focus-visible:ring-0 text-base focus:bg-slate-50"
                   />
                   <Button
                     type="submit"
                     size="lg"
-                    className="sm:w-auto h-12 px-8 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                    className="sm:w-auto h-12 px-8 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300"
                   >
                     Get My Proposal
                   </Button>
                 </form>
-                <p className="text-center text-sm text-white">
+                <p className="text-center text-sm text-slate-600">
                   Don&apos;t have a site?{' '}
-                  <Link href="/contact" className="font-semibold text-white hover:text-cyan-300 underline">
+                  <Link href="/contact" className="font-semibold text-[#4285f4] hover:text-[#ea4335] underline">
                     Click here
                   </Link>
                 </p>
@@ -164,7 +164,7 @@ export function Hero() {
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
-                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200"
+                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20"
                     />
                     <Input
                       type="email"
@@ -172,14 +172,14 @@ export function Hero() {
                       placeholder="Business email"
                       value={formData.email}
                       onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
-                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200"
+                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20"
                     />
                     <Input
                       type="tel"
                       placeholder="Phone number (optional)"
                       value={formData.phone}
                       onChange={(event) => setFormData((prev) => ({ ...prev, phone: event.target.value }))}
-                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200"
+                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20"
                     />
                     <Input
                       type="url"
@@ -194,13 +194,13 @@ export function Hero() {
                       value={formData.goals}
                       onChange={(event) => setFormData((prev) => ({ ...prev, goals: event.target.value }))}
                       rows={4}
-                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm bg-white text-slate-900 placeholder:text-slate-500 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200"
+                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm bg-white text-slate-900 placeholder:text-slate-500 focus:border-[#4285f4] focus:outline-none focus:ring-2 focus:ring-[#4285f4]/20"
                     />
                   </div>
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full h-12 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                    className="w-full h-12 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Submitting…' : 'Send my proposal'}
@@ -237,17 +237,26 @@ export function Hero() {
 
         <div className="mx-auto mt-16 max-w-4xl px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 text-center">
-            {stats.map((stat) => (
-              <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-3 group">
-                <div className="mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-500 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+            {stats.map((stat, index) => {
+              const colors = [
+                { bg: 'from-[#4285f4] to-[#3367d6]', hover: 'group-hover:text-[#4285f4]' }, // Blue
+                { bg: 'from-[#ea4335] to-[#d33b2c]', hover: 'group-hover:text-[#ea4335]' }, // Red
+                { bg: 'from-[#34a853] to-[#2d8f3f]', hover: 'group-hover:text-[#34a853]' }, // Green
+              ];
+              const color = colors[index % colors.length];
+              
+              return (
+                <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-3 group">
+                  <div className={`mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${color.bg} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                    <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                  </div>
+                  <h3 className="text-sm sm:text-base leading-7 text-slate-700 font-medium">{stat.name}</h3>
+                  <p className={`text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 ${color.hover} transition-colors`}>
+                    {stat.value}
+                  </p>
                 </div>
-                <h3 className="text-sm sm:text-base leading-7 text-white font-medium">{stat.name}</h3>
-                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-cyan-300 transition-colors">
-                  {stat.value}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
