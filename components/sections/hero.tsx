@@ -4,14 +4,8 @@ import { useState } from 'react'
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-import { ArrowLeft, ArrowRight, CheckCircle, Star, Users, TrendingUp, Zap } from "lucide-react"
+import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react"
 import Image from 'next/image'
-
-const stats = [
-  { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp },
-  { id: 2, name: "Happy Clients", value: "500+", icon: Users },
-  { id: 3, name: "ROI Average", value: "1,200%", icon: Zap },
-]
 
 export function Hero() {
   const [step, setStep] = useState<'url' | 'details' | 'success'>('url')
@@ -235,30 +229,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 max-w-4xl px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 text-center">
-            {stats.map((stat, index) => {
-              const colors = [
-                { bg: 'from-[#4285f4] to-[#3367d6]', hover: 'group-hover:text-[#4285f4]' }, // Blue
-                { bg: 'from-[#ea4335] to-[#d33b2c]', hover: 'group-hover:text-[#ea4335]' }, // Red
-                { bg: 'from-[#34a853] to-[#2d8f3f]', hover: 'group-hover:text-[#34a853]' }, // Green
-              ];
-              const color = colors[index % colors.length];
-              
-              return (
-                <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-3 group">
-                  <div className={`mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${color.bg} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300`}>
-                    <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-                  </div>
-                  <h3 className="text-sm sm:text-base leading-7 text-slate-700 font-medium">{stat.name}</h3>
-                  <p className={`text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 ${color.hover} transition-colors`}>
-                    {stat.value}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        {/* Stats section removed per request */}
       </div>
     </section>
   )
