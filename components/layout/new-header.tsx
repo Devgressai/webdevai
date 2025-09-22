@@ -16,8 +16,8 @@ import { cn } from "../../lib/utils"
 
 const navigation = [
   {
-    name: "Creative Solutions",
-    href: "#",
+    name: "Design",
+    href: "/services",
     description: "Design & Creative Services",
     children: [
       { 
@@ -73,7 +73,7 @@ const navigation = [
     ],
   },
   {
-    name: "Intelligent Solutions",
+    name: "AI & Marketing",
     href: "#",
     description: "AI & Advanced Marketing",
     children: [
@@ -123,7 +123,7 @@ const navigation = [
     ],
   },
   {
-    name: "Technical Solutions",
+    name: "Development",
     href: "#",
     description: "Development & Technical Services",
     children: [
@@ -242,11 +242,48 @@ const navigation = [
       },
     ],
   },
-  { name: "Case Studies", href: "/case-studies", description: "Success Stories" },
-  { name: "Industries", href: "/industries", description: "Industry Solutions" },
-  { name: "Pricing", href: "/pricing", description: "Transparent Pricing" },
-  { name: "Resources", href: "/resources", description: "Free Tools & Guides" },
-  { name: "About", href: "/about", description: "Our Story" },
+  {
+    name: "About",
+    href: "/about",
+    description: "Learn more about Web Vello",
+    children: [
+      {
+        name: "About Us",
+        href: "/about",
+        description: "Our story, values, and team",
+        icon: Users,
+        color: "from-slate-500 to-slate-700"
+      },
+      {
+        name: "Case Studies",
+        href: "/case-studies",
+        description: "Success stories and results",
+        icon: BarChart3,
+        color: "from-blue-500 to-indigo-600"
+      },
+      {
+        name: "Industries",
+        href: "/industries",
+        description: "Solutions by industry",
+        icon: Globe,
+        color: "from-green-500 to-emerald-600"
+      },
+      {
+        name: "Pricing",
+        href: "/pricing",
+        description: "Transparent pricing and packages",
+        icon: DollarSign,
+        color: "from-yellow-500 to-orange-600"
+      },
+      {
+        name: "Resources",
+        href: "/resources",
+        description: "Guides, tools, and templates",
+        icon: Target,
+        color: "from-purple-500 to-pink-600"
+      }
+    ]
+  },
 ]
 
 export function NewHeader() {
