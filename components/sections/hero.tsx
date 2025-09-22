@@ -152,7 +152,7 @@ export function Hero() {
                   </Button>
                 </form>
                 <p className="text-center text-sm text-white">
-                  Don't have a site?{' '}
+                  Don&apos;t have a site?{' '}
                   <Link href="/contact" className="font-semibold text-white hover:text-[#7AD0E4] underline">
                     Click here
                   </Link>
