@@ -1,18 +1,5 @@
 
 import { Hero } from '../components/sections/hero'
-import dynamic from 'next/dynamic'
-
-// Lazy load heavy components to reduce initial bundle
-const Pricing = dynamic(() => import('../components/sections/pricing'), { 
-  ssr: true,
-  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-lg" />
-})
-
-
-const SocialProof = dynamic(() => import('../components/sections/social-proof'), { 
-  ssr: false,
-  loading: () => <div className="h-48 animate-pulse bg-gray-100 rounded-lg" />
-})
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Target, TrendingUp, Play, DollarSign, Building2, Star } from 'lucide-react'
@@ -23,6 +10,18 @@ import { LazySection } from '../components/ui/lazy-section'
 import { useConversionTracking } from '../hooks/useConversionTracking'
 import ScrollTracker from '../components/analytics/scroll-tracker'
 import { CTAWithTracking } from '../components/sections/cta-with-tracking'
+import dynamic from 'next/dynamic'
+
+// Lazy load heavy components to reduce initial bundle
+const Pricing = dynamic(() => import('../components/sections/pricing'), { 
+  ssr: true,
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-lg" />
+})
+
+const SocialProof = dynamic(() => import('../components/sections/social-proof'), { 
+  ssr: false,
+  loading: () => <div className="h-48 animate-pulse bg-gray-100 rounded-lg" />
+})
 
 const services = [
   {
@@ -91,7 +90,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <ScrollTracker />
       <Hero />
       
       {/* Global Results & Trust Section */}
@@ -100,7 +98,9 @@ export default function HomePage() {
           {/* Space-themed background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/80 to-slate-800/90"></div>
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+            <div className="absolute top-0 left-0 w-full h-full opacity-30" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            }}></div>
             <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-400/20 to-cyan-400/20 blur-3xl"></div>
             <div className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-purple-400/20 to-pink-400/20 blur-3xl"></div>
           </div>
