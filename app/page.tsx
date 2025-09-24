@@ -111,30 +111,30 @@ export default function HomePage() {
                     <div className="w-1 h-12 bg-gradient-to-b from-red-500 to-red-600 rounded-full"></div>
                     <span className="text-red-400 font-semibold text-sm uppercase tracking-wider">Quality Assurance</span>
                   </div>
-                  <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-                    Clients Around The World Trust Us To Deliver{' '}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                      Quality Work
-                    </span>
-                  </h2>
-                  <p className="text-xl text-gray-300 leading-relaxed">
-                    Our team of experienced professionals strives to provide top-notch services that meet the unique needs of each client. As a result, clients around the world have trusted us with their website design, development, and SEO needs.
-                  </p>
+            <h2 className="text-6xl lg:text-7xl font-bold text-white leading-tight">
+              Clients Around The World Trust Us To Deliver{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Quality Work
+              </span>
+            </h2>
+            <p className="text-2xl text-gray-300 leading-relaxed">
+              Our team of experienced professionals strives to provide top-notch services that meet the unique needs of each client. As a result, clients around the world have trusted us with their website design, development, and SEO needs.
+            </p>
                 </div>
                 
                 {/* Trust Indicators */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <div className="text-center sm:text-left">
-                    <div className="text-4xl font-bold text-white mb-2">500+</div>
-                    <div className="text-gray-300 text-sm">Websites Launched</div>
-                  </div>
-                  <div className="text-center sm:text-left">
-                    <div className="text-4xl font-bold text-white mb-2">37</div>
-                    <div className="text-gray-300 text-sm">Cities Served</div>
-                  </div>
-                  <div className="text-center sm:text-left">
-                    <div className="text-4xl font-bold text-white mb-2">300%+</div>
-                    <div className="text-gray-300 text-sm">Average Growth</div>
+                  <div className="text-6xl font-bold text-white mb-2">500+</div>
+                  <div className="text-gray-300 text-base">Websites Launched</div>
+                </div>
+                <div className="text-center sm:text-left">
+                  <div className="text-6xl font-bold text-white mb-2">37</div>
+                  <div className="text-gray-300 text-base">Cities Served</div>
+                </div>
+                <div className="text-center sm:text-left">
+                  <div className="text-6xl font-bold text-white mb-2">300%+</div>
+                  <div className="text-gray-300 text-base">Average Growth</div>
                   </div>
                 </div>
               </div>
@@ -147,8 +147,8 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Revenue Growth</h3>
-                  <p className="text-gray-300 text-sm">Average 300%+ organic traffic increase within 6 months</p>
+                <h3 className="text-2xl font-semibold text-white mb-2">Revenue Growth</h3>
+                <p className="text-gray-300 text-base">Average 300%+ organic traffic increase within 6 months</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -157,8 +157,8 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Global Reach</h3>
-                  <p className="text-gray-300 text-sm">Serving clients across 37+ major cities worldwide</p>
+                <h3 className="text-2xl font-semibold text-white mb-2">Global Reach</h3>
+                <p className="text-gray-300 text-base">Serving clients across 37+ major cities worldwide</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -167,8 +167,8 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Quality Assured</h3>
-                  <p className="text-gray-300 text-sm">Every project delivered with meticulous attention to detail</p>
+                <h3 className="text-2xl font-semibold text-white mb-2">Quality Assured</h3>
+                <p className="text-gray-300 text-base">Every project delivered with meticulous attention to detail</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -177,8 +177,8 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Fast Results</h3>
-                  <p className="text-gray-300 text-sm">See measurable improvements within 30 days of launch</p>
+                <h3 className="text-2xl font-semibold text-white mb-2">Fast Results</h3>
+                <p className="text-gray-300 text-base">See measurable improvements within 30 days of launch</p>
                 </div>
               </div>
             </div>
@@ -195,8 +195,8 @@ export default function HomePage() {
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">How We Work</h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+            <h2 className="text-6xl lg:text-7xl font-bold text-secondary-900 mb-4">How We Work</h2>
+            <p className="text-2xl text-secondary-600 max-w-3xl mx-auto">
               Clear focus, senior expertise, measurable results, and transparent reporting—every engagement.
             </p>
           </div>
@@ -206,32 +206,32 @@ export default function HomePage() {
             <div className="relative text-center md:text-left">
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">1</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Focus</h3>
-                <p className="text-secondary-700">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+                <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Focus</h3>
+                <p className="text-lg text-secondary-700">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
               </div>
             </div>
             {/* Step 2 */}
             <div className="relative text-center md:text-left">
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">2</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Expertise</h3>
-                <p className="text-secondary-700">Certified senior team combining strategy, UX, engineering, and data science.</p>
+                <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Expertise</h3>
+                <p className="text-lg text-secondary-700">Certified senior team combining strategy, UX, engineering, and data science.</p>
               </div>
             </div>
             {/* Step 3 */}
             <div className="relative text-center md:text-left">
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">3</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Results</h3>
-                <p className="text-secondary-700">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+                <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Results</h3>
+                <p className="text-lg text-secondary-700">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
               </div>
             </div>
             {/* Step 4 */}
             <div className="relative text-center md:text-left">
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">4</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Transparency</h3>
-                <p className="text-secondary-700">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+                <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Transparency</h3>
+                <p className="text-lg text-secondary-700">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
               </div>
             </div>
           </div>

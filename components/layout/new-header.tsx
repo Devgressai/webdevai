@@ -10,7 +10,7 @@ import {
   Target, Users, TrendingUp, Globe, Code, 
   Zap, Monitor, Smartphone, ShoppingCart, Mail, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
-  MessageSquare, Star
+  MessageSquare
 } from "lucide-react"
 import { cn } from "../../lib/utils"
 
@@ -313,36 +313,10 @@ export function NewHeader() {
   return (
     <header className="relative sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur supports-[backdrop-filter]:bg-white/75">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600/80" aria-hidden="true" />
-      {/* Top Revenue Bar */}
-      <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 text-white py-3">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <Star className="h-4 w-4 text-yellow-300" />
-                <span className="font-semibold text-sm">SUCCESS DELIVERED FOR OUR CLIENTS</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-3xl font-bold">{require('../../lib/site-metrics').METRICS.revenue}</span>
-                <span className="text-sm opacity-90">{require('../../lib/site-metrics').METRICS.revenueLabel}</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/contact" className="hover:opacity-80 transition-opacity">
-                Partner Portal
-              </Link>
-              <Link href="/contact" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-                <Phone className="h-4 w-4" />
-                <span className="font-semibold">737-888-5723</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Navigation */}
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-5">
+        <div className="flex items-center justify-between py-8">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link

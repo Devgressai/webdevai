@@ -96,7 +96,7 @@ export function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="mx-auto max-w-4xl px-4">
+        <div className="mx-auto max-w-4xl px-4 -mt-16">
           <div className="text-center">
             <p className="inline-block rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-700">
               High-Impact Web & SEO Growth Programs
