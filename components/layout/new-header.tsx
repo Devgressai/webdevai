@@ -346,7 +346,7 @@ export function NewHeader() {
                    >
                      <div 
                        className={cn(
-                         "flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium tracking-tight transition-all duration-200 hover:bg-slate-100 hover:text-primary-600 cursor-pointer",
+                         "flex items-center gap-1 rounded-full px-4 py-2 text-base font-medium tracking-tight transition-all duration-200 hover:bg-slate-100 hover:text-primary-600 cursor-pointer",
                          openDropdown === item.name ? "bg-slate-100 text-primary-600 shadow-[0_6px_18px_rgba(15,23,42,0.08)]" : "text-slate-600"
                        )}
                        role="button"
@@ -393,7 +393,7 @@ export function NewHeader() {
                                      <div className="flex items-center gap-x-2 mb-1">
                                        <Link
                                          href={child.href}
-                                         className="font-semibold text-secondary-900 group-hover:text-primary-600 text-base"
+                                         className="font-semibold text-secondary-900 group-hover:text-primary-600 text-lg"
                                        >
                                          {child.name}
                                        </Link>
@@ -403,7 +403,7 @@ export function NewHeader() {
                                          </span>
                                        )}
                                      </div>
-                                     <p className="text-sm text-secondary-600 group-hover:text-secondary-700">
+                                     <p className="text-base text-secondary-600 group-hover:text-secondary-700">
                                        {child.description}
                                      </p>
                                    </div>
@@ -418,7 +418,7 @@ export function NewHeader() {
                  ) : (
                    <Link
                      href={item.href}
-                     className="px-4 py-3 text-sm font-semibold leading-6 text-secondary-900 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50"
+                     className="px-4 py-3 text-base font-semibold leading-6 text-secondary-900 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50"
                    >
                      {item.name}
                    </Link>
@@ -483,7 +483,7 @@ export function NewHeader() {
                                                  <div>
                            <button
                              onClick={() => handleMobileDropdownToggle(item.name)}
-                             className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-base font-semibold text-slate-800 transition hover:bg-slate-100"
+                             className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-lg font-semibold text-slate-800 transition hover:bg-slate-100"
                            >
                              {item.name}
                              <ChevronDown className={`h-5 w-5 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
@@ -494,7 +494,7 @@ export function NewHeader() {
                                 <Link
                                   key={child.name}
                                   href={child.href}
-                                  className="block rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                                  className="block rounded-lg px-3 py-2 text-base text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
                                   onClick={() => setMobileMenuOpen(false)}
                                 >
                                   {child.name}
@@ -506,7 +506,7 @@ export function NewHeader() {
                       ) : (
                         <Link
                           href={item.href}
-                          className="block rounded-xl px-3 py-2 text-base font-semibold text-slate-800 transition hover:bg-slate-100"
+                          className="block rounded-xl px-3 py-2 text-lg font-semibold text-slate-800 transition hover:bg-slate-100"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {item.name}
