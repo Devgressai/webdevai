@@ -202,9 +202,12 @@ export function ContactPageClient() {
                 size="lg" 
                 variant="outline" 
                 className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
+                asChild
               >
-                <Phone className="mr-2 h-5 w-5" />
-                Call 737-888-5723
+                <Link href="tel:+17378885723">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call 737-888-5723
+                </Link>
               </Button>
             </div>
           </div>
@@ -568,9 +571,12 @@ export function ContactPageClient() {
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg"
+              asChild
             >
-              <Phone className="mr-2 h-5 w-5" />
-              Call 737-888-5723
+              <Link href="tel:+17378885723">
+                <Phone className="mr-2 h-5 w-5" />
+                Call 737-888-5723
+              </Link>
             </Button>
           </div>
         </div>

@@ -809,8 +809,9 @@ export default function CityServicePage({ params }: CityServicePageProps) {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-3"
+            asChild
           >
-            Get Free Consultation
+            <Link href="/contact">Get Free Consultation</Link>
           </Button>
         </div>
       </section>
