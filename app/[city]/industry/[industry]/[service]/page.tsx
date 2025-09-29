@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { getCity, citySlugs } from '../../../../../lib/cities'
 import { getIndustry, industrySlugs } from '../../../../../lib/industries'
 import { getService, serviceSlugs } from '../../../../../lib/services'
@@ -218,25 +219,25 @@ export default async function CityIndustryServicePage({ params }: { params: Para
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": city.name,
-                    "item": `https://webvello.com/${params.city}`
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": `Industry: ${industry.name}`,
-                    "item": `https://webvello.com/${params.city}/industry/${params.industry}`
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": service.name,
-                    "item": `https://webvello.com/${params.city}/industry/${params.industry}/${params.service}`
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": city.name,
+                "item": `https://webvello.com/${params.city}`
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": `Industry: ${industry.name}`,
+                "item": `https://webvello.com/${params.city}/industry/${params.industry}`
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": service.name,
+                "item": `https://webvello.com/${params.city}/industry/${params.industry}/${params.service}`
                   }
                 ]
               },
@@ -317,9 +318,9 @@ export default async function CityIndustryServicePage({ params }: { params: Para
           <h2 className="text-3xl font-bold">Executive Summary</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-lg leading-relaxed mb-6">
-              We specialize in {service.name.toLowerCase()} for {industry.name.toLowerCase()} organizations in {city.fullName}. Our approach aligns
-              compliance, brand trust, and demand generation to drive measurable outcomes.
-            </p>
+            We specialize in {service.name.toLowerCase()} for {industry.name.toLowerCase()} organizations in {city.fullName}. Our approach aligns
+            compliance, brand trust, and demand generation to drive measurable outcomes.
+          </p>
             
             <p className="text-lg leading-relaxed mb-6">
               Denver&apos;s technology landscape is experiencing unprecedented growth, with over 3,000 tech companies calling the Mile High City home. The city&apos;s strategic location, business-friendly environment, and access to top-tier talent make it an ideal hub for technology innovation. Our web development services are specifically tailored to meet the unique demands of Denver&apos;s diverse technology sector, from emerging startups in the RiNo district to established enterprise companies in the Denver Tech Center.
@@ -623,7 +624,9 @@ export default async function CityIndustryServicePage({ params }: { params: Para
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-4">Results for {industry.name} in {city.name}</h2>
           <p className="mb-6 text-gray-700">300%+ organic traffic growth and 2x conversion rates within 6 months.</p>
-          <Button className="bg-primary-600 hover:bg-primary-700">View Case Studies</Button>
+          <Button className="bg-primary-600 hover:bg-primary-700" asChild>
+            <Link href="/case-studies">View Case Studies</Link>
+          </Button>
         </div>
       </section>
 
@@ -631,7 +634,9 @@ export default async function CityIndustryServicePage({ params }: { params: Para
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Get a Free {service.name} Plan for {industry.name} in {city.name}</h2>
           <p className="text-lg text-gray-700 mb-6">We’ll outline quick wins, growth roadmap, and projected ROI.</p>
-          <Button size="lg" className="bg-primary-600 hover:bg-primary-700">Get My Plan</Button>
+          <Button size="lg" className="bg-primary-600 hover:bg-primary-700" asChild>
+            <Link href="/contact">Get My Plan</Link>
+          </Button>
         </div>
       </section>
     </div>

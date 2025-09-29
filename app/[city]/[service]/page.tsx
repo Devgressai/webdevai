@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { 
   ArrowRight, 
@@ -969,15 +970,17 @@ export default function CityServicePage({ params }: CityServicePageProps) {
             <Button 
               size="lg" 
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
+              asChild
             >
-              Get Free Consultation
+              <Link href="/contact">Get Free Consultation</Link>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
+              asChild
             >
-              View Our Work
+              <Link href="/case-studies">View Our Work</Link>
             </Button>
           </div>
         </div>
