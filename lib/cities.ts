@@ -95,6 +95,17 @@ export const cities: Record<string, City> = {
   'richmond-va': { slug: 'richmond-va', name: 'Richmond', state: 'VA', fullName: 'Richmond, VA', industries: ['Finance', 'Healthcare', 'Government'] },
   'spokane-wa': { slug: 'spokane-wa', name: 'Spokane', state: 'WA', fullName: 'Spokane, WA', industries: ['Healthcare', 'Education', 'Manufacturing'] },
   'des-moines-ia': { slug: 'des-moines-ia', name: 'Des Moines', state: 'IA', fullName: 'Des Moines, IA', industries: ['Insurance', 'Finance', 'Healthcare'] },
+  'atlanta-ga': { slug: 'atlanta-ga', name: 'Atlanta', state: 'GA', fullName: 'Atlanta, GA', industries: ['Technology', 'Finance', 'Healthcare', 'Transportation'] },
+  'salt-lake-city-ut': { slug: 'salt-lake-city-ut', name: 'Salt Lake City', state: 'UT', fullName: 'Salt Lake City, UT', industries: ['Technology', 'Finance', 'Healthcare'] },
+  'colorado-springs-co': { slug: 'colorado-springs-co', name: 'Colorado Springs', state: 'CO', fullName: 'Colorado Springs, CO', industries: ['Military', 'Technology', 'Healthcare'] },
+  'fort-lauderdale-fl': { slug: 'fort-lauderdale-fl', name: 'Fort Lauderdale', state: 'FL', fullName: 'Fort Lauderdale, FL', industries: ['Tourism', 'Marine', 'Healthcare'] },
+  'long-beach-ca': { slug: 'long-beach-ca', name: 'Long Beach', state: 'CA', fullName: 'Long Beach, CA', industries: ['Transportation', 'Healthcare', 'Manufacturing'] },
+  'virginia-beach-va': { slug: 'virginia-beach-va', name: 'Virginia Beach', state: 'VA', fullName: 'Virginia Beach, VA', industries: ['Tourism', 'Military', 'Healthcare'] },
+  'rochester-ny': { slug: 'rochester-ny', name: 'Rochester', state: 'NY', fullName: 'Rochester, NY', industries: ['Technology', 'Healthcare', 'Education'] },
+  'chandler-az': { slug: 'chandler-az', name: 'Chandler', state: 'AZ', fullName: 'Chandler, AZ', industries: ['Technology', 'Healthcare', 'Manufacturing'] },
+  'scottsdale-az': { slug: 'scottsdale-az', name: 'Scottsdale', state: 'AZ', fullName: 'Scottsdale, AZ', industries: ['Tourism', 'Healthcare', 'Technology'] },
+  'fremont-ca': { slug: 'fremont-ca', name: 'Fremont', state: 'CA', fullName: 'Fremont, CA', industries: ['Technology', 'Manufacturing', 'Healthcare'] },
+  'irving-tx': { slug: 'irving-tx', name: 'Irving', state: 'TX', fullName: 'Irving, TX', industries: ['Technology', 'Finance', 'Healthcare'] },
 }
 
 export function getCity(slug: string): City | undefined {
