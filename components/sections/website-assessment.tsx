@@ -226,7 +226,7 @@ function WebsiteAssessment() {
     }
   }
 
-  const performSEOAudit = async (websiteUrl: string) => { => {
+  const performSEOAudit = async (websiteUrl: string) => {
     setIsLoading(true)
     setError('')
     setSeoResult(null)

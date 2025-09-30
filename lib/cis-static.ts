@@ -4507,24 +4507,6 @@ const registry: Record<string, CisStaticDoc> = {
     ]
   },
 
-  'jacksonville-fl__logistics__web-development': {
-    title: 'Web Development in Jacksonville Fl, FL for Logistics Companies',
-    metaTitle: 'Logistics Web Development in Jacksonville Fl | Professional Services',
-    metaDescription: 'Web Development in Jacksonville Fl, FL for Logistics companies. Professional web development solutions with professional services approach.',
-    hero: 'Professional web development in Jacksonville Fl, FL for logistics companies. professional services solutions tailored to the competitive Jacksonville Fl market.',
-    sections: [
-      'Logistics expertise: specialized web development solutions designed for logistics companies in Jacksonville Fl.',
-      'Local market focus: Jacksonville Fl-specific logistics trends, regulations, and business requirements.',
-      'Professional approach: professional services methodology that delivers measurable results for logistics businesses.',
-      'Performance optimization: fast, reliable, and scalable web development solutions for the competitive Jacksonville Fl market.'
-    ],
-    faqs: [
-      { question: 'What makes your web development different for logistics companies?', answer: 'We specialize in logistics requirements, understanding compliance needs, industry standards, and Jacksonville Fl market dynamics.' },
-      { question: 'Do you have experience with logistics businesses in Jacksonville Fl?', answer: 'Yes, we have extensive experience working with logistics companies in Jacksonville Fl and understand the local market requirements.' },
-      { question: 'How do you ensure compliance with logistics regulations?', answer: 'We stay updated with all relevant regulations and implement best practices to ensure full compliance for logistics businesses.' }
-    ]
-  },
-
   'washington-dc__education__digital-marketing': {
     title: 'Digital Marketing in Washington Dc, DC for Education Companies',
     metaTitle: 'Education Digital Marketing in Washington Dc | Professional Services',
@@ -8356,24 +8338,6 @@ const registry: Record<string, CisStaticDoc> = {
       { question: 'What makes your content marketing different for consulting companies?', answer: 'We specialize in consulting requirements, understanding compliance needs, industry standards, and Columbus Oh market dynamics.' },
       { question: 'Do you have experience with consulting businesses in Columbus Oh?', answer: 'Yes, we have extensive experience working with consulting companies in Columbus Oh and understand the local market requirements.' },
       { question: 'How do you ensure compliance with consulting regulations?', answer: 'We stay updated with all relevant regulations and implement best practices to ensure full compliance for consulting businesses.' }
-    ]
-  },
-
-  'los-angeles-ca__fashion__website-design': {
-    title: 'Website Design in Los Angeles Ca, CA for Fashion Companies',
-    metaTitle: 'Fashion Website Design in Los Angeles Ca | Professional Services',
-    metaDescription: 'Website Design in Los Angeles Ca, CA for Fashion companies. Professional website design solutions with visual appeal, brand storytelling, seasonal collections approach.',
-    hero: 'Professional website design in Los Angeles Ca, CA for fashion companies. visual appeal, brand storytelling, seasonal collections solutions tailored to the trendy Los Angeles Ca market.',
-    sections: [
-      'Fashion expertise: specialized website design solutions designed for fashion companies in Los Angeles Ca.',
-      'Local market focus: Los Angeles Ca-specific fashion trends, regulations, and business requirements.',
-      'Professional approach: visual appeal, brand storytelling, seasonal collections methodology that delivers measurable results for fashion businesses.',
-      'Performance optimization: fast, reliable, and scalable website design solutions for the competitive Los Angeles Ca market.'
-    ],
-    faqs: [
-      { question: 'What makes your website design different for fashion companies?', answer: 'We specialize in fashion requirements, understanding compliance needs, industry standards, and Los Angeles Ca market dynamics.' },
-      { question: 'Do you have experience with fashion businesses in Los Angeles Ca?', answer: 'Yes, we have extensive experience working with fashion companies in Los Angeles Ca and understand the local market requirements.' },
-      { question: 'How do you ensure compliance with fashion regulations?', answer: 'We stay updated with all relevant regulations and implement best practices to ensure full compliance for fashion businesses.' }
     ]
   },
 
@@ -13867,24 +13831,6 @@ const registry: Record<string, CisStaticDoc> = {
     ]
   },
 
-  'los-angeles-ca__entertainment__website-design': {
-    title: 'Website Design in Los Angeles Ca, CA for Entertainment Companies',
-    metaTitle: 'Entertainment Website Design in Los Angeles Ca | Professional Services',
-    metaDescription: 'Website Design in Los Angeles Ca, CA for Entertainment companies. Professional website design solutions with professional services approach.',
-    hero: 'Professional website design in Los Angeles Ca, CA for entertainment companies. professional services solutions tailored to the trendy Los Angeles Ca market.',
-    sections: [
-      'Entertainment expertise: specialized website design solutions designed for entertainment companies in Los Angeles Ca.',
-      'Local market focus: Los Angeles Ca-specific entertainment trends, regulations, and business requirements.',
-      'Professional approach: professional services methodology that delivers measurable results for entertainment businesses.',
-      'Performance optimization: fast, reliable, and scalable website design solutions for the competitive Los Angeles Ca market.'
-    ],
-    faqs: [
-      { question: 'What makes your website design different for entertainment companies?', answer: 'We specialize in entertainment requirements, understanding compliance needs, industry standards, and Los Angeles Ca market dynamics.' },
-      { question: 'Do you have experience with entertainment businesses in Los Angeles Ca?', answer: 'Yes, we have extensive experience working with entertainment companies in Los Angeles Ca and understand the local market requirements.' },
-      { question: 'How do you ensure compliance with entertainment regulations?', answer: 'We stay updated with all relevant regulations and implement best practices to ensure full compliance for entertainment businesses.' }
-    ]
-  },
-
   'denver-co__realestate__e-commerce-development': {
     title: 'E Commerce Development in Denver Co, CO for Realestate Companies',
     metaTitle: 'Realestate E Commerce Development in Denver Co | Professional Services',
@@ -15845,8 +15791,6 @@ const registry: Record<string, CisStaticDoc> = {
       { question: 'Do you have experience with agriculture businesses in Kansas City Mo?', answer: 'Yes, we have extensive experience working with agriculture companies in Kansas City Mo and understand the local market requirements.' },
       { question: 'How do you ensure compliance with agriculture regulations?', answer: 'We stay updated with all relevant regulations and implement best practices to ensure full compliance for agriculture businesses.' }
     ]
-  },
-
   },
 
   // Phoenix, AZ × Technology

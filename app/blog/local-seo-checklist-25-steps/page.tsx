@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Calendar, User, Clock, CheckCircle, ExternalLink, MapPin, Search, Star, Phone } from 'lucide-react'
+import { ArrowRight, Calendar, User, Clock, CheckCircle, ExternalLink, MapPin, Search, Star, Phone, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Local SEO Checklist: 25 Steps to Dominate Local Search in 2024 | Web Vello',
@@ -271,7 +271,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-lg text-gray-700 leading-relaxed mb-12">
-            Whether you're a small business owner or managing multiple locations, this 25-step local SEO 
+            Whether you&apos;re a small business owner or managing multiple locations, this 25-step local SEO 
             checklist will help you improve your local search visibility, attract more customers, and 
             increase your revenue from local searches.
           </p>

@@ -45,7 +45,7 @@ export default function VoiceSearchBlogPost() {
           </h1>
           
           <p className="text-xl text-gray-600 leading-relaxed">
-            Voice search is revolutionizing how people find information online. With over 50% of searches expected to be voice-based by 2024, optimizing for voice search is no longer optional—it's essential.
+            Voice search is revolutionizing how people find information online. With over 50% of searches expected to be voice-based by 2024, optimizing for voice search is no longer optional—it&apos;s essential.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export default function VoiceSearchBlogPost() {
 
           <h3>6. Use Natural Language</h3>
           <p>
-            Write content as if you're having a conversation. Use personal pronouns, contractions, and simple language.
+            Write content as if you&apos;re having a conversation. Use personal pronouns, contractions, and simple language.
           </p>
 
           <h3>7. Implement Schema Markup</h3>

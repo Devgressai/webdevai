@@ -146,7 +146,7 @@ export default function BlogPost() {
         <div className="prose prose-lg max-w-none">
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
             The SEO landscape is undergoing a revolutionary transformation. Artificial intelligence and machine learning 
-            are no longer futuristic concepts—they're actively reshaping how we approach search engine optimization. 
+            are no longer futuristic concepts—they&apos;re actively reshaping how we approach search engine optimization. 
             In 2024, businesses that embrace AI-powered SEO strategies are seeing unprecedented results.
           </p>
 
@@ -260,7 +260,7 @@ export default function BlogPost() {
               Ready to Embrace AI-Powered SEO?
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              The future of SEO is here, and it's powered by artificial intelligence. Don't get left behind 
+              The future of SEO is here, and it&apos;s powered by artificial intelligence. Don&apos;t get left behind 
               as your competitors leverage AI to dominate search results. Our team at Web Vello specializes 
               in implementing cutting-edge AI SEO strategies that deliver measurable results.
             </p>
