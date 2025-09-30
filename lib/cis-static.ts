@@ -2759,6 +2759,8 @@ const registry: Record<string, CisStaticDoc> = {
       { question: 'Brand alignment across divisions?', answer: 'We define shared tokens and variant rules to support sub-brands.' },
       { question: 'Do you support design audits?', answer: 'Yes. We assess consistency, performance, and usability with clear fixes.' }
     ]
+  },
+
   'denver-co__entertainment__ui-ux-design': {
     title: 'Ui Ux Design in Denver Co, CO for Entertainment Companies',
     metaTitle: 'Entertainment Ui Ux Design in Denver Co | Professional Services',

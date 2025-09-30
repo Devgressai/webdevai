@@ -6,7 +6,7 @@ import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Case Studies | Real Results from Web Vello Clients',
-  description: 'See how we've helped businesses achieve 300%+ traffic growth, dominate local search, and increase revenue with our SEO and web development services.',
+  description: 'See how we have helped businesses achieve 300%+ traffic growth, dominate local search, and increase revenue with our SEO and web development services.',
   keywords: 'SEO case studies, web development success stories, digital marketing results, client testimonials',
   openGraph: {
     title: 'Case Studies | Web Vello Client Success Stories',
