@@ -10,6 +10,13 @@ interface LeadData {
   conversation: any[]
   timestamp: Date
   source?: string
+  name?: string
+  phone?: string
+  company?: string
+  service?: string
+  budget?: string
+  urgency?: string
+  message?: string
 }
 
 interface EmailServiceConfig {
