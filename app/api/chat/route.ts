@@ -3,6 +3,17 @@ import { sendLeadNotification, saveLeadToDatabase } from '@/lib/email-service'
 
 // Knowledge base for the chatbot
 const KNOWLEDGE_BASE = {
+  contact_intent: {
+    keywords: [
+      'contact', 'contact info', 'contact information', 'get in touch', 'reach out',
+      'call me', 'email me', 'contact me', 'take my contact', 'my contact info',
+      'contact details', 'phone number', 'email address', 'reach me', 'get back to me',
+      'speak with', 'talk to', 'consultation', 'meeting', 'appointment', 'schedule',
+      'connect', 'connect with', 'speak to someone', 'talk to someone', 'human',
+      'representative', 'agent', 'team member', 'sales', 'sales team'
+    ],
+    response: "I'd be happy to connect you with our team! To get started, I'll need your contact information.\n\nPlease provide:\n• Your email address\n• Your name\n• Your company (optional)\n• What service you're interested in\n\nOnce I have your details, our team will reach out within 24 hours with a personalized consultation. What's your email address?"
+  },
   services: {
     seo: {
       keywords: ['seo', 'search engine', 'ranking', 'google', 'optimization', 'organic'],
@@ -94,23 +105,41 @@ export async function POST(request: Request) {
     let shouldCaptureLead = false
     let matchCount = 0
 
-    // Check services
-    for (const [key, service] of Object.entries(KNOWLEDGE_BASE.services)) {
-      const matches = service.keywords.filter(keyword => userInput.includes(keyword))
-      if (matches.length > matchCount) {
-        matchCount = matches.length
-        response = service.response
-        shouldCaptureLead = true
+    // PRIORITY 1: Check for contact intent first (highest priority)
+    const contactMatches = KNOWLEDGE_BASE.contact_intent.keywords.filter(keyword => userInput.includes(keyword))
+    
+    // Also check for common contact patterns
+    const contactPatterns = [
+      /i want to/i, /i need to/i, /can you/i, /could you/i, /help me/i,
+      /interested in/i, /looking for/i, /need help/i, /want help/i,
+      /tell me about/i, /more information/i, /learn more/i
+    ]
+    
+    const hasContactPattern = contactPatterns.some(pattern => pattern.test(userInput))
+    const isContactIntent = contactMatches.length > 0 || hasContactPattern
+    
+    if (isContactIntent) {
+      response = KNOWLEDGE_BASE.contact_intent.response
+      shouldCaptureLead = true
+    } else {
+      // PRIORITY 2: Check services
+      for (const [key, service] of Object.entries(KNOWLEDGE_BASE.services)) {
+        const matches = service.keywords.filter(keyword => userInput.includes(keyword))
+        if (matches.length > matchCount) {
+          matchCount = matches.length
+          response = service.response
+          shouldCaptureLead = true
+        }
       }
-    }
 
-    // Check common questions
-    for (const [key, question] of Object.entries(KNOWLEDGE_BASE.common_questions)) {
-      const matches = question.keywords.filter(keyword => userInput.includes(keyword))
-      if (matches.length > matchCount) {
-        matchCount = matches.length
-        response = question.response
-        shouldCaptureLead = false
+      // PRIORITY 3: Check common questions
+      for (const [key, question] of Object.entries(KNOWLEDGE_BASE.common_questions)) {
+        const matches = question.keywords.filter(keyword => userInput.includes(keyword))
+        if (matches.length > matchCount) {
+          matchCount = matches.length
+          response = question.response
+          shouldCaptureLead = false
+        }
       }
     }
 
@@ -143,16 +172,16 @@ export async function POST(request: Request) {
 function getDefaultResponse(userInput: string): string {
   // Greeting responses
   if (/^(hi|hello|hey|good morning|good afternoon)/.test(userInput)) {
-    return "Hello! Thanks for reaching out. I'm here to help you with SEO, web development, and digital marketing questions. What would you like to know about?"
+    return "Hello! Thanks for reaching out. I'm here to help you with SEO, web development, and digital marketing questions.\n\nWhat would you like to know about? Or if you'd like to speak with our team directly, I can help you get connected!"
   }
 
   // Thank you responses
   if (/thank/.test(userInput)) {
-    return "You're welcome! Is there anything else I can help you with today?"
+    return "You're welcome! Is there anything else I can help you with today? If you'd like to discuss your project with our team, I can help you get in touch!"
   }
 
-  // General inquiry
-  return "I'd be happy to help! We specialize in:\n\n• SEO & Local Search\n• Web Development\n• Digital Marketing\n• PPC Advertising\n\nWhat specific area interests you? Or would you like to schedule a free consultation to discuss your needs?"
+  // General inquiry - be more proactive about contact
+  return "I'd be happy to help! We specialize in:\n\n• SEO & Local Search\n• Web Development\n• Digital Marketing\n• PPC Advertising\n\nWhat specific area interests you? Or would you like to schedule a free consultation to discuss your needs? I can connect you with our team right away!"
 }
 
 
