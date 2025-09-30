@@ -10,7 +10,9 @@ const KNOWLEDGE_BASE = {
       'contact details', 'phone number', 'email address', 'reach me', 'get back to me',
       'speak with', 'talk to', 'consultation', 'meeting', 'appointment', 'schedule',
       'connect', 'connect with', 'speak to someone', 'talk to someone', 'human',
-      'representative', 'agent', 'team member', 'sales', 'sales team'
+      'representative', 'agent', 'team member', 'sales', 'sales team',
+      'take', 'info', 'information', 'details', 'connect', 'speak', 'talk',
+      'help me', 'assist me', 'support', 'guidance'
     ],
     response: "I'd be happy to connect you with our team! To get started, I'll need your contact information.\n\nPlease provide:\n• Your email address\n• Your name\n• Your company (optional)\n• What service you're interested in\n\nOnce I have your details, our team will reach out within 24 hours with a personalized consultation. What's your email address?"
   },
@@ -112,11 +114,15 @@ export async function POST(request: Request) {
     const contactPatterns = [
       /i want to/i, /i need to/i, /can you/i, /could you/i, /help me/i,
       /interested in/i, /looking for/i, /need help/i, /want help/i,
-      /tell me about/i, /more information/i, /learn more/i
+      /tell me about/i, /more information/i, /learn more/i,
+      /take.*contact/i, /contact.*info/i, /get.*touch/i, /reach.*out/i
     ]
     
     const hasContactPattern = contactPatterns.some(pattern => pattern.test(userInput))
     const isContactIntent = contactMatches.length > 0 || hasContactPattern
+    
+    // Debug logging
+    console.log('Contact matches:', contactMatches.length, 'Pattern matches:', hasContactPattern, 'User input:', userInput)
     
     if (isContactIntent) {
       response = KNOWLEDGE_BASE.contact_intent.response
