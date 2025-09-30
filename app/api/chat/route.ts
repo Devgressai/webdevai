@@ -86,6 +86,7 @@ export async function POST(request: Request) {
     const userInput = lastMessage.content.toLowerCase()
 
     // Check if we have complete lead information
+    console.log('Lead info check:', { leadInfo, hasEmail: leadInfo?.email, hasName: leadInfo?.name, leadCaptured })
     if (leadInfo && leadInfo.email && leadInfo.name && !leadCaptured) {
       // Save lead and send notification
       const leadData = {
