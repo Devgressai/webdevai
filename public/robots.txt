@@ -23,6 +23,8 @@ Allow: /contact/
 Allow: /pricing/
 Allow: /resources/
 Allow: /industries/
+Allow: /blog/
+Allow: /locations/
 
 # Specific rules for different user agents
 User-agent: Googlebot
