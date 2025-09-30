@@ -768,6 +768,891 @@ const registry: Record<string, CisStaticDoc> = {
     ]
   },
 
+  // Sacramento, CA × Fashion
+  'sacramento-ca__fashion__website-design': {
+    title: 'Website Design in Sacramento, CA for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Sacramento | Brand & E-commerce',
+    metaDescription:
+      'Fashion website design in Sacramento with stunning visuals, mobile-first e-commerce, and brand storytelling that converts.',
+    hero:
+      'Create stunning fashion websites in Sacramento that showcase your brand, drive sales, and engage customers with immersive shopping experiences.',
+    sections: [
+      'Visual storytelling: high-impact imagery, video content, and brand narratives that resonate with Sacramento fashion consumers.',
+      'E-commerce optimization: mobile-first design, quick checkout flows, and product showcases tailored to fashion retail.',
+      'Local market focus: Sacramento fashion trends, seasonal collections, and community engagement features.',
+      'Performance & SEO: fast loading times, mobile optimization, and search visibility for fashion keywords in Sacramento.'
+    ],
+    faqs: [
+      { question: 'Mobile shopping experience?', answer: 'We design mobile-first with touch-friendly navigation, quick product views, and streamlined checkout.' },
+      { question: 'Brand consistency?', answer: 'We create cohesive design systems that work across all touchpoints and maintain brand integrity.' },
+      { question: 'E-commerce features?', answer: 'Product catalogs, size guides, wishlists, reviews, and inventory management integration.' }
+    ]
+  },
+  'sacramento-ca__fashion__web-development': {
+    title: 'Web Development in Sacramento, CA for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Sacramento | E-commerce & Performance',
+    metaDescription:
+      'Fashion web development in Sacramento with fast, scalable e-commerce platforms, mobile optimization, and conversion-focused features.',
+    hero:
+      'Build high-performance fashion e-commerce sites in Sacramento with seamless shopping experiences and mobile-first architecture.',
+    sections: [
+      'E-commerce platform: Shopify, WooCommerce, or custom solutions optimized for fashion retail and Sacramento market needs.',
+      'Performance optimization: fast loading times, image optimization, and mobile responsiveness for fashion consumers.',
+      'Integration capabilities: inventory management, payment processing, shipping calculators, and customer relationship tools.',
+      'Local market features: Sacramento-specific content, local shipping options, and community engagement tools.'
+    ],
+    faqs: [
+      { question: 'Platform recommendations?', answer: 'We recommend Shopify for ease of use, WooCommerce for WordPress integration, or custom solutions for unique needs.' },
+      { question: 'Mobile performance?', answer: 'We optimize for mobile-first with fast loading, touch-friendly interfaces, and responsive design.' },
+      { question: 'Inventory management?', answer: 'We integrate with popular inventory systems and provide real-time stock updates.' }
+    ]
+  },
+  'sacramento-ca__fashion__seo': {
+    title: 'SEO in Sacramento, CA for Fashion Companies',
+    metaTitle: 'Fashion SEO in Sacramento | Local & E-commerce Search',
+    metaDescription:
+      'Fashion SEO in Sacramento targeting local search, e-commerce keywords, and brand visibility to drive traffic and sales.',
+    hero:
+      'Boost your fashion brand visibility in Sacramento with targeted SEO strategies for local search and e-commerce optimization.',
+    sections: [
+      'Local SEO: Sacramento fashion keywords, Google My Business optimization, and local directory listings.',
+      'E-commerce SEO: product page optimization, category structure, and search-friendly URLs for fashion items.',
+      'Content strategy: fashion blog content, style guides, and seasonal collections optimized for search.',
+      'Technical SEO: site speed, mobile optimization, and structured data for fashion products and reviews.'
+    ],
+    faqs: [
+      { question: 'Local fashion keywords?', answer: 'We target Sacramento-specific fashion terms, local shopping keywords, and seasonal trends.' },
+      { question: 'Product page SEO?', answer: 'We optimize product titles, descriptions, images, and reviews for search visibility.' },
+      { question: 'Seasonal content?', answer: 'We create seasonal fashion content and optimize for holiday shopping trends.' }
+    ]
+  },
+
+  // New York, NY × Fashion (Fashion Capital)
+  'new-york-ny__fashion__website-design': {
+    title: 'Website Design in New York, NY for Fashion Companies',
+    metaTitle: 'Fashion Website Design in New York | Luxury & E-commerce',
+    metaDescription:
+      'Luxury fashion website design in New York with cutting-edge visuals, high-end e-commerce, and brand storytelling that captivates the fashion capital.',
+    hero:
+      'Create stunning fashion websites in New York that capture the essence of the fashion capital with luxury design, seamless e-commerce, and trendsetting aesthetics.',
+    sections: [
+      'Luxury brand positioning: sophisticated design, premium imagery, and exclusive experiences that resonate with New York fashion consumers.',
+      'E-commerce excellence: seamless shopping experiences, luxury checkout flows, and premium product showcases for high-end fashion retail.',
+      'Fashion week integration: seasonal collections, runway shows, and trend-focused content that aligns with New York fashion calendar.',
+      'Performance & SEO: lightning-fast loading, mobile optimization, and search visibility for competitive fashion keywords in New York market.'
+    ],
+    faqs: [
+      { question: 'Luxury e-commerce features?', answer: 'We implement VIP experiences, exclusive collections, personal styling, and premium checkout flows.' },
+      { question: 'Fashion week content?', answer: 'We create seasonal content, runway integration, and trend-focused marketing campaigns.' },
+      { question: 'Brand differentiation?', answer: 'We develop unique visual identities that stand out in the competitive New York fashion market.' }
+    ]
+  },
+  'new-york-ny__fashion__web-development': {
+    title: 'Web Development in New York, NY for Fashion Companies',
+    metaTitle: 'Fashion Web Development in New York | Luxury E-commerce',
+    metaDescription:
+      'Luxury fashion web development in New York with high-performance e-commerce platforms, mobile optimization, and cutting-edge features for the fashion industry.',
+    hero:
+      'Build high-performance fashion e-commerce sites in New York with luxury features, seamless shopping experiences, and mobile-first architecture for the fashion capital.',
+    sections: [
+      'Luxury e-commerce platform: Shopify Plus, Magento, or custom solutions optimized for high-end fashion retail and New York market demands.',
+      'Performance optimization: lightning-fast loading, image optimization, and mobile responsiveness for discerning fashion consumers.',
+      'Advanced integrations: luxury CRM, inventory management, personalization engines, and exclusive member features.',
+      'Fashion-specific features: size guides, virtual try-on, AR experiences, and seasonal collection management.'
+    ],
+    faqs: [
+      { question: 'Luxury platform options?', answer: 'We recommend Shopify Plus for scalability, Magento for customization, or custom solutions for unique luxury needs.' },
+      { question: 'Mobile luxury experience?', answer: 'We create mobile-first luxury experiences with premium interactions and seamless navigation.' },
+      { question: 'Fashion-specific features?', answer: 'We implement virtual try-on, size guides, personalization, and seasonal collection management.' }
+    ]
+  },
+  'new-york-ny__fashion__seo': {
+    title: 'SEO in New York, NY for Fashion Companies',
+    metaTitle: 'Fashion SEO in New York | Luxury & E-commerce Search',
+    metaDescription:
+      'Luxury fashion SEO in New York targeting high-value keywords, local search, and brand visibility to dominate the competitive fashion market.',
+    hero:
+      'Dominate fashion search in New York with targeted SEO strategies for luxury brands, e-commerce optimization, and trend-focused content marketing.',
+    sections: [
+      'Luxury SEO strategy: high-value fashion keywords, brand positioning, and premium content that attracts affluent New York consumers.',
+      'E-commerce SEO: product page optimization, luxury category structure, and search-friendly URLs for high-end fashion items.',
+      'Fashion content strategy: trend reports, style guides, designer spotlights, and seasonal collections optimized for search.',
+      'Local luxury SEO: New York fashion districts, luxury shopping areas, and high-end fashion events optimization.'
+    ],
+    faqs: [
+      { question: 'Luxury fashion keywords?', answer: 'We target high-value terms like "luxury fashion," "designer clothing," and "premium fashion" in New York.' },
+      { question: 'Fashion content strategy?', answer: 'We create trend reports, style guides, designer features, and seasonal content that ranks for fashion searches.' },
+      { question: 'Competitive advantage?', answer: 'We focus on unique positioning and premium content that differentiates luxury brands in the competitive New York market.' }
+    ]
+  },
+
+  // Los Angeles, CA × Fashion (Entertainment Fashion)
+  'los-angeles-ca__fashion__website-design': {
+    title: 'Website Design in Los Angeles, CA for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Los Angeles | Entertainment & Style',
+    metaDescription:
+      'Fashion website design in Los Angeles with entertainment-focused visuals, celebrity styling, and trendsetting design that captures the LA fashion scene.',
+    hero:
+      'Create trendsetting fashion websites in Los Angeles that blend entertainment, style, and celebrity culture with stunning visuals and engaging shopping experiences.',
+    sections: [
+      'Entertainment fashion focus: celebrity-inspired design, red carpet aesthetics, and trendsetting visuals that resonate with LA fashion culture.',
+      'E-commerce optimization: mobile-first design, social shopping integration, and influencer-friendly features for the entertainment capital.',
+      'Local fashion scene: LA street style, beach fashion, and entertainment industry trends integrated into design and content.',
+      'Social media integration: Instagram shopping, influencer partnerships, and social commerce features for the social media-savvy LA market.'
+    ],
+    faqs: [
+      { question: 'Entertainment industry focus?', answer: 'We design with celebrity culture, red carpet aesthetics, and entertainment industry trends in mind.' },
+      { question: 'Social commerce features?', answer: 'We integrate Instagram shopping, influencer partnerships, and social media-driven commerce.' },
+      { question: 'LA fashion trends?', answer: 'We incorporate street style, beach fashion, and entertainment industry influences into the design.' }
+    ]
+  },
+  'los-angeles-ca__fashion__web-development': {
+    title: 'Web Development in Los Angeles, CA for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Los Angeles | Entertainment E-commerce',
+    metaDescription:
+      'Fashion web development in Los Angeles with entertainment-focused e-commerce, social integration, and mobile-first platforms for the LA fashion market.',
+    hero:
+      'Build entertainment-focused fashion e-commerce sites in Los Angeles with social integration, mobile-first design, and features that appeal to the LA fashion scene.',
+    sections: [
+      'Entertainment e-commerce: social shopping, influencer integration, and celebrity-focused features for the entertainment capital.',
+      'Mobile-first development: Instagram-optimized shopping, social media integration, and mobile commerce for the social media-savvy LA market.',
+      'LA-specific features: local fashion events, celebrity styling, and entertainment industry partnerships integration.',
+      'Performance optimization: fast loading for mobile users, social media optimization, and seamless shopping experiences.'
+    ],
+    faqs: [
+      { question: 'Social commerce integration?', answer: 'We integrate Instagram shopping, TikTok commerce, and social media-driven sales features.' },
+      { question: 'Entertainment partnerships?', answer: 'We build features for celebrity collaborations, influencer partnerships, and entertainment industry integration.' },
+      { question: 'Mobile optimization?', answer: 'We optimize for mobile-first shopping with social media integration and seamless user experiences.' }
+    ]
+  },
+  'los-angeles-ca__fashion__seo': {
+    title: 'SEO in Los Angeles, CA for Fashion Companies',
+    metaTitle: 'Fashion SEO in Los Angeles | Entertainment & Style Search',
+    metaDescription:
+      'Fashion SEO in Los Angeles targeting entertainment keywords, celebrity fashion, and local style searches to dominate the LA fashion market.',
+    hero:
+      'Dominate fashion search in Los Angeles with entertainment-focused SEO, celebrity fashion keywords, and trend-driven content that captures the LA style scene.',
+    sections: [
+      'Entertainment SEO: celebrity fashion keywords, red carpet trends, and entertainment industry-focused content optimization.',
+      'Local fashion SEO: LA fashion districts, celebrity hotspots, and entertainment industry locations optimization.',
+      'Social media SEO: Instagram-optimized content, influencer keywords, and social commerce search visibility.',
+      'Trend-focused content: street style guides, celebrity fashion analysis, and entertainment industry trend reports.'
+    ],
+    faqs: [
+      { question: 'Celebrity fashion keywords?', answer: 'We target terms like "celebrity fashion," "red carpet style," and "entertainment fashion" in LA.' },
+      { question: 'Social media SEO?', answer: 'We optimize for Instagram shopping, TikTok fashion trends, and social commerce search visibility.' },
+      { question: 'LA fashion content?', answer: 'We create content about LA fashion districts, celebrity style, and entertainment industry trends.' }
+    ]
+  },
+
+  // Chicago, IL × Fashion (Major Retail Hub)
+  'chicago-il__fashion__website-design': {
+    title: 'Website Design in Chicago, IL for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Chicago | Retail & E-commerce',
+    metaDescription:
+      'Fashion website design in Chicago with retail-focused design, seasonal collections, and e-commerce optimization for the major Midwest fashion hub.',
+    hero:
+      'Create sophisticated fashion websites in Chicago that blend retail excellence with e-commerce innovation, serving the major Midwest fashion market.',
+    sections: [
+      'Retail-focused design: sophisticated layouts, seasonal collections, and professional aesthetics that appeal to Chicago fashion consumers.',
+      'E-commerce excellence: seamless shopping experiences, seasonal promotions, and retail-grade features for the major Midwest market.',
+      'Seasonal optimization: weather-appropriate fashion, seasonal trends, and Chicago-specific style considerations.',
+      'Professional appeal: business-friendly fashion, corporate styling, and sophisticated design that resonates with Chicago professionals.'
+    ],
+    faqs: [
+      { question: 'Seasonal fashion focus?', answer: 'We design with Chicago seasons in mind, featuring weather-appropriate fashion and seasonal collections.' },
+      { question: 'Professional styling?', answer: 'We create sophisticated designs that appeal to Chicago professionals and business fashion needs.' },
+      { question: 'Retail integration?', answer: 'We build features that support both online and in-store experiences for Chicago retail locations.' }
+    ]
+  },
+  'chicago-il__fashion__web-development': {
+    title: 'Web Development in Chicago, IL for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Chicago | Retail E-commerce',
+    metaDescription:
+      'Fashion web development in Chicago with retail-grade e-commerce, seasonal features, and professional platforms for the major Midwest fashion market.',
+    hero:
+      'Build retail-grade fashion e-commerce sites in Chicago with seasonal features, professional appeal, and sophisticated functionality for the Midwest market.',
+    sections: [
+      'Retail e-commerce platform: enterprise-grade solutions, seasonal management, and professional features for Chicago fashion retailers.',
+      'Seasonal optimization: weather-based recommendations, seasonal collections, and Chicago-specific fashion features.',
+      'Professional integration: corporate styling options, business fashion, and professional appeal for Chicago business community.',
+      'Performance excellence: fast loading, mobile optimization, and retail-grade reliability for the competitive Chicago market.'
+    ],
+    faqs: [
+      { question: 'Seasonal features?', answer: 'We implement weather-based recommendations, seasonal collections, and Chicago-specific fashion features.' },
+      { question: 'Retail integration?', answer: 'We build features that support both online and in-store experiences for Chicago retail locations.' },
+      { question: 'Professional appeal?', answer: 'We create sophisticated functionality that appeals to Chicago professionals and business fashion needs.' }
+    ]
+  },
+  'chicago-il__fashion__seo': {
+    title: 'SEO in Chicago, IL for Fashion Companies',
+    metaTitle: 'Fashion SEO in Chicago | Retail & Seasonal Search',
+    metaDescription:
+      'Fashion SEO in Chicago targeting retail keywords, seasonal fashion, and local style searches to dominate the major Midwest fashion market.',
+    hero:
+      'Dominate fashion search in Chicago with retail-focused SEO, seasonal fashion keywords, and professional styling content for the Midwest market.',
+    sections: [
+      'Retail SEO strategy: fashion retail keywords, seasonal trends, and professional styling content for Chicago consumers.',
+      'Local fashion SEO: Chicago fashion districts, seasonal shopping, and Midwest fashion trends optimization.',
+      'Seasonal content: weather-appropriate fashion, seasonal collections, and Chicago-specific style guides.',
+      'Professional fashion: business styling, corporate fashion, and professional appeal for Chicago business community.'
+    ],
+    faqs: [
+      { question: 'Seasonal fashion keywords?', answer: 'We target terms like "winter fashion," "seasonal clothing," and "weather-appropriate style" in Chicago.' },
+      { question: 'Professional styling?', answer: 'We create content about business fashion, corporate styling, and professional appeal for Chicago professionals.' },
+      { question: 'Retail focus?', answer: 'We optimize for retail shopping, seasonal sales, and fashion retail experiences in Chicago.' }
+    ]
+  },
+
+  // San Francisco, CA × Fashion (Tech Fashion)
+  'san-francisco-ca__fashion__website-design': {
+    title: 'Website Design in San Francisco, CA for Fashion Companies',
+    metaTitle: 'Fashion Website Design in San Francisco | Tech & Innovation',
+    metaDescription:
+      'Fashion website design in San Francisco with tech-forward aesthetics, innovative features, and cutting-edge design for the tech-savvy Bay Area market.',
+    hero:
+      'Create innovative fashion websites in San Francisco that blend technology, sustainability, and cutting-edge design for the tech-savvy Bay Area market.',
+    sections: [
+      'Tech-forward design: innovative aesthetics, cutting-edge features, and technology integration that appeals to San Francisco tech culture.',
+      'Sustainability focus: eco-friendly fashion, sustainable practices, and environmental consciousness integrated into design and messaging.',
+      'Innovation features: AR try-on, AI recommendations, and cutting-edge technology that resonates with the tech-savvy Bay Area market.',
+      'Mobile-first approach: app-like experiences, mobile optimization, and tech-forward functionality for the mobile-first San Francisco market.'
+    ],
+    faqs: [
+      { question: 'Tech integration?', answer: 'We integrate AR try-on, AI recommendations, and cutting-edge technology features for the tech-savvy market.' },
+      { question: 'Sustainability focus?', answer: 'We emphasize eco-friendly fashion, sustainable practices, and environmental consciousness in design.' },
+      { question: 'Innovation features?', answer: 'We implement cutting-edge features like AR, AI, and mobile-first experiences for the tech-forward market.' }
+    ]
+  },
+  'san-francisco-ca__fashion__web-development': {
+    title: 'Web Development in San Francisco, CA for Fashion Companies',
+    metaTitle: 'Fashion Web Development in San Francisco | Tech Innovation',
+    metaDescription:
+      'Fashion web development in San Francisco with cutting-edge technology, AI integration, and innovative features for the tech-savvy Bay Area market.',
+    hero:
+      'Build cutting-edge fashion e-commerce sites in San Francisco with AI integration, AR features, and innovative technology for the tech-forward Bay Area market.',
+    sections: [
+      'AI-powered e-commerce: machine learning recommendations, personalized experiences, and intelligent features for the tech-savvy market.',
+      'AR and VR integration: virtual try-on, immersive experiences, and cutting-edge technology that appeals to San Francisco tech culture.',
+      'Sustainability tech: eco-friendly features, carbon footprint tracking, and sustainable fashion technology integration.',
+      'Mobile innovation: app-like experiences, progressive web apps, and cutting-edge mobile technology for the mobile-first market.'
+    ],
+    faqs: [
+      { question: 'AI integration?', answer: 'We implement machine learning recommendations, personalized experiences, and intelligent features for the tech market.' },
+      { question: 'AR/VR features?', answer: 'We build virtual try-on, immersive experiences, and cutting-edge AR/VR technology for fashion shopping.' },
+      { question: 'Sustainability tech?', answer: 'We integrate eco-friendly features, carbon tracking, and sustainable fashion technology.' }
+    ]
+  },
+  'san-francisco-ca__fashion__seo': {
+    title: 'SEO in San Francisco, CA for Fashion Companies',
+    metaTitle: 'Fashion SEO in San Francisco | Tech & Sustainable Search',
+    metaDescription:
+      'Fashion SEO in San Francisco targeting tech fashion, sustainable fashion, and innovation keywords to dominate the tech-savvy Bay Area market.',
+    hero:
+      'Dominate fashion search in San Francisco with tech-focused SEO, sustainable fashion keywords, and innovation content for the Bay Area market.',
+    sections: [
+      'Tech fashion SEO: innovation keywords, tech fashion trends, and cutting-edge fashion content for the tech-savvy market.',
+      'Sustainable fashion: eco-friendly keywords, sustainable practices, and environmental consciousness content optimization.',
+      'Innovation content: AI fashion, AR shopping, and cutting-edge technology content that appeals to San Francisco tech culture.',
+      'Local tech SEO: Bay Area fashion tech, Silicon Valley style, and San Francisco fashion innovation optimization.'
+    ],
+    faqs: [
+      { question: 'Tech fashion keywords?', answer: 'We target terms like "tech fashion," "innovative clothing," and "AI fashion" in San Francisco.' },
+      { question: 'Sustainable fashion?', answer: 'We optimize for eco-friendly fashion, sustainable practices, and environmental consciousness content.' },
+      { question: 'Innovation content?', answer: 'We create content about AI fashion, AR shopping, and cutting-edge technology for the tech market.' }
+    ]
+  },
+
+  // Dallas, TX × Fashion (Major Retail Hub)
+  'dallas-tx__fashion__website-design': {
+    title: 'Website Design in Dallas, TX for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Dallas | Retail & Southern Style',
+    metaDescription:
+      'Fashion website design in Dallas with Southern elegance, retail excellence, and sophisticated e-commerce for the major Texas fashion market.',
+    hero:
+      'Create sophisticated fashion websites in Dallas that blend Southern elegance with retail excellence, serving the major Texas fashion market.',
+    sections: [
+      'Southern elegance: sophisticated design, refined aesthetics, and elegant styling that appeals to Dallas fashion consumers.',
+      'Retail excellence: seamless shopping experiences, seasonal collections, and retail-grade features for the major Texas market.',
+      'Professional appeal: business-friendly fashion, corporate styling, and sophisticated design that resonates with Dallas professionals.',
+      'Local market focus: Dallas fashion trends, seasonal collections, and Texas-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Southern style focus?', answer: 'We design with Southern elegance and sophisticated aesthetics that appeal to Dallas fashion consumers.' },
+      { question: 'Professional styling?', answer: 'We create sophisticated designs that appeal to Dallas professionals and business fashion needs.' },
+      { question: 'Retail integration?', answer: 'We build features that support both online and in-store experiences for Dallas retail locations.' }
+    ]
+  },
+  'dallas-tx__fashion__web-development': {
+    title: 'Web Development in Dallas, TX for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Dallas | Retail E-commerce',
+    metaDescription:
+      'Fashion web development in Dallas with retail-grade e-commerce, seasonal features, and professional platforms for the major Texas fashion market.',
+    hero:
+      'Build retail-grade fashion e-commerce sites in Dallas with seasonal features, professional appeal, and sophisticated functionality for the Texas market.',
+    sections: [
+      'Retail e-commerce platform: enterprise-grade solutions, seasonal management, and professional features for Dallas fashion retailers.',
+      'Seasonal optimization: weather-based recommendations, seasonal collections, and Dallas-specific fashion features.',
+      'Professional integration: corporate styling options, business fashion, and professional appeal for Dallas business community.',
+      'Performance excellence: fast loading, mobile optimization, and retail-grade reliability for the competitive Dallas market.'
+    ],
+    faqs: [
+      { question: 'Seasonal features?', answer: 'We implement weather-based recommendations, seasonal collections, and Dallas-specific fashion features.' },
+      { question: 'Retail integration?', answer: 'We build features that support both online and in-store experiences for Dallas retail locations.' },
+      { question: 'Professional appeal?', answer: 'We create sophisticated functionality that appeals to Dallas professionals and business fashion needs.' }
+    ]
+  },
+  'dallas-tx__fashion__seo': {
+    title: 'SEO in Dallas, TX for Fashion Companies',
+    metaTitle: 'Fashion SEO in Dallas | Retail & Southern Style Search',
+    metaDescription:
+      'Fashion SEO in Dallas targeting retail keywords, Southern style, and local fashion searches to dominate the major Texas fashion market.',
+    hero:
+      'Dominate fashion search in Dallas with retail-focused SEO, Southern style keywords, and professional styling content for the Texas market.',
+    sections: [
+      'Retail SEO strategy: fashion retail keywords, seasonal trends, and professional styling content for Dallas consumers.',
+      'Local fashion SEO: Dallas fashion districts, seasonal shopping, and Texas fashion trends optimization.',
+      'Southern style content: elegant fashion, sophisticated styling, and Southern aesthetic content optimization.',
+      'Professional fashion: business styling, corporate fashion, and professional appeal for Dallas business community.'
+    ],
+    faqs: [
+      { question: 'Southern style keywords?', answer: 'We target terms like "Southern fashion," "elegant clothing," and "sophisticated style" in Dallas.' },
+      { question: 'Professional styling?', answer: 'We create content about business fashion, corporate styling, and professional appeal for Dallas professionals.' },
+      { question: 'Retail focus?', answer: 'We optimize for retail shopping, seasonal sales, and fashion retail experiences in Dallas.' }
+    ]
+  },
+
+  // Houston, TX × Fashion (Energy & Diversity)
+  'houston-tx__fashion__website-design': {
+    title: 'Website Design in Houston, TX for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Houston | Diverse & Dynamic',
+    metaDescription:
+      'Fashion website design in Houston with diverse appeal, multicultural aesthetics, and dynamic design for the vibrant Texas fashion market.',
+    hero:
+      'Create dynamic fashion websites in Houston that celebrate diversity, multicultural appeal, and vibrant design for the diverse Texas market.',
+    sections: [
+      'Diverse appeal: multicultural design, inclusive aesthetics, and diverse representation that resonates with Houston fashion consumers.',
+      'Dynamic design: vibrant visuals, energetic layouts, and dynamic features that appeal to the diverse Houston market.',
+      'Cultural integration: multicultural fashion trends, diverse styling, and inclusive design that celebrates Houston diversity.',
+      'Local market focus: Houston fashion trends, cultural collections, and diverse community engagement features.'
+    ],
+    faqs: [
+      { question: 'Multicultural focus?', answer: 'We design with diversity in mind, featuring inclusive aesthetics and multicultural fashion trends.' },
+      { question: 'Dynamic features?', answer: 'We create vibrant, energetic designs that appeal to the diverse and dynamic Houston market.' },
+      { question: 'Cultural integration?', answer: 'We incorporate multicultural fashion trends and diverse styling that celebrates Houston diversity.' }
+    ]
+  },
+  'houston-tx__fashion__web-development': {
+    title: 'Web Development in Houston, TX for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Houston | Diverse E-commerce',
+    metaDescription:
+      'Fashion web development in Houston with diverse e-commerce, multicultural features, and dynamic platforms for the vibrant Texas fashion market.',
+    hero:
+      'Build diverse fashion e-commerce sites in Houston with multicultural features, dynamic functionality, and inclusive design for the vibrant market.',
+    sections: [
+      'Diverse e-commerce: multicultural features, inclusive design, and diverse representation for the Houston market.',
+      'Dynamic functionality: vibrant features, energetic interactions, and dynamic user experiences for diverse consumers.',
+      'Cultural integration: multicultural fashion features, diverse styling options, and inclusive shopping experiences.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for the diverse Houston market.'
+    ],
+    faqs: [
+      { question: 'Multicultural features?', answer: 'We implement diverse representation, inclusive design, and multicultural fashion features.' },
+      { question: 'Dynamic functionality?', answer: 'We create vibrant, energetic features that appeal to the diverse and dynamic Houston market.' },
+      { question: 'Cultural integration?', answer: 'We build features that support multicultural fashion trends and diverse styling options.' }
+    ]
+  },
+  'houston-tx__fashion__seo': {
+    title: 'SEO in Houston, TX for Fashion Companies',
+    metaTitle: 'Fashion SEO in Houston | Diverse & Dynamic Search',
+    metaDescription:
+      'Fashion SEO in Houston targeting diverse keywords, multicultural fashion, and local style searches to dominate the vibrant Texas fashion market.',
+    hero:
+      'Dominate fashion search in Houston with diverse SEO, multicultural fashion keywords, and inclusive content for the vibrant Texas market.',
+    sections: [
+      'Diverse SEO strategy: multicultural fashion keywords, inclusive content, and diverse representation for Houston consumers.',
+      'Local fashion SEO: Houston fashion districts, multicultural shopping, and diverse community optimization.',
+      'Cultural content: multicultural fashion trends, diverse styling guides, and inclusive fashion content optimization.',
+      'Dynamic fashion: vibrant style content, energetic fashion trends, and dynamic styling for the diverse Houston market.'
+    ],
+    faqs: [
+      { question: 'Multicultural keywords?', answer: 'We target terms like "diverse fashion," "multicultural style," and "inclusive clothing" in Houston.' },
+      { question: 'Cultural content?', answer: 'We create content about multicultural fashion trends, diverse styling, and inclusive fashion for Houston.' },
+      { question: 'Dynamic fashion?', answer: 'We optimize for vibrant style content, energetic trends, and dynamic fashion for the diverse market.' }
+    ]
+  },
+
+  // Phoenix, AZ × Fashion (Desert & Resort)
+  'phoenix-az__fashion__website-design': {
+    title: 'Website Design in Phoenix, AZ for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Phoenix | Desert & Resort Style',
+    metaDescription:
+      'Fashion website design in Phoenix with desert-inspired aesthetics, resort fashion, and seasonal design for the unique Arizona fashion market.',
+    hero:
+      'Create unique fashion websites in Phoenix that blend desert inspiration with resort fashion and seasonal design for the Arizona market.',
+    sections: [
+      'Desert inspiration: warm color palettes, natural textures, and desert-inspired aesthetics that appeal to Phoenix fashion consumers.',
+      'Resort fashion: vacation-ready styles, resort wear, and leisure fashion that resonates with the Phoenix lifestyle.',
+      'Seasonal optimization: weather-appropriate fashion, seasonal trends, and Phoenix-specific style considerations.',
+      'Local market focus: Phoenix fashion trends, desert style, and Arizona-specific fashion features.'
+    ],
+    faqs: [
+      { question: 'Desert inspiration?', answer: 'We design with warm colors, natural textures, and desert-inspired aesthetics that appeal to Phoenix consumers.' },
+      { question: 'Resort fashion?', answer: 'We create vacation-ready styles, resort wear, and leisure fashion for the Phoenix lifestyle.' },
+      { question: 'Seasonal focus?', answer: 'We design with Phoenix weather in mind, featuring weather-appropriate fashion and seasonal collections.' }
+    ]
+  },
+  'phoenix-az__fashion__web-development': {
+    title: 'Web Development in Phoenix, AZ for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Phoenix | Desert E-commerce',
+    metaDescription:
+      'Fashion web development in Phoenix with desert-inspired features, resort fashion, and seasonal functionality for the unique Arizona fashion market.',
+    hero:
+      'Build unique fashion e-commerce sites in Phoenix with desert-inspired features, resort fashion, and seasonal functionality for the Arizona market.',
+    sections: [
+      'Desert e-commerce: warm aesthetics, natural design, and desert-inspired features for the Phoenix market.',
+      'Resort fashion features: vacation-ready shopping, resort wear categories, and leisure fashion functionality.',
+      'Seasonal optimization: weather-based recommendations, seasonal collections, and Phoenix-specific fashion features.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for the Phoenix market.'
+    ],
+    faqs: [
+      { question: 'Desert features?', answer: 'We implement warm aesthetics, natural design, and desert-inspired features for Phoenix consumers.' },
+      { question: 'Resort fashion?', answer: 'We build vacation-ready shopping, resort wear categories, and leisure fashion functionality.' },
+      { question: 'Seasonal optimization?', answer: 'We create weather-based recommendations and seasonal collections for Phoenix weather patterns.' }
+    ]
+  },
+  'phoenix-az__fashion__seo': {
+    title: 'SEO in Phoenix, AZ for Fashion Companies',
+    metaTitle: 'Fashion SEO in Phoenix | Desert & Resort Search',
+    metaDescription:
+      'Fashion SEO in Phoenix targeting desert fashion, resort wear, and seasonal keywords to dominate the unique Arizona fashion market.',
+    hero:
+      'Dominate fashion search in Phoenix with desert-focused SEO, resort fashion keywords, and seasonal content for the Arizona market.',
+    sections: [
+      'Desert fashion SEO: desert style keywords, natural fashion, and desert-inspired content for Phoenix consumers.',
+      'Resort fashion: vacation wear keywords, resort style, and leisure fashion content optimization.',
+      'Seasonal content: weather-appropriate fashion, seasonal collections, and Phoenix-specific style guides.',
+      'Local fashion SEO: Phoenix fashion districts, desert shopping, and Arizona fashion trends optimization.'
+    ],
+    faqs: [
+      { question: 'Desert fashion keywords?', answer: 'We target terms like "desert fashion," "natural style," and "desert-inspired clothing" in Phoenix.' },
+      { question: 'Resort fashion?', answer: 'We optimize for vacation wear, resort style, and leisure fashion for the Phoenix lifestyle.' },
+      { question: 'Seasonal content?', answer: 'We create content about weather-appropriate fashion and seasonal collections for Phoenix weather.' }
+    ]
+  },
+
+  // Boston, MA × Fashion (Education & Innovation)
+  'boston-ma__fashion__website-design': {
+    title: 'Website Design in Boston, MA for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Boston | Academic & Innovation',
+    metaDescription:
+      'Fashion website design in Boston with academic sophistication, innovative aesthetics, and intellectual appeal for the education-focused fashion market.',
+    hero:
+      'Create sophisticated fashion websites in Boston that blend academic elegance with innovative design, serving the education-focused Massachusetts fashion market.',
+    sections: [
+      'Academic sophistication: intellectual design, refined aesthetics, and sophisticated styling that appeals to Boston fashion consumers.',
+      'Innovation focus: cutting-edge design, tech-forward features, and innovative aesthetics that resonate with the Boston tech scene.',
+      'Educational appeal: professional styling, academic fashion, and sophisticated design that appeals to Boston professionals and students.',
+      'Local market focus: Boston fashion trends, seasonal collections, and Massachusetts-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Academic focus?', answer: 'We design with intellectual sophistication and refined aesthetics that appeal to Boston academic culture.' },
+      { question: 'Innovation features?', answer: 'We create cutting-edge designs and tech-forward features that resonate with Boston innovation.' },
+      { question: 'Professional styling?', answer: 'We develop sophisticated designs that appeal to Boston professionals and academic community.' }
+    ]
+  },
+  'boston-ma__fashion__web-development': {
+    title: 'Web Development in Boston, MA for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Boston | Academic E-commerce',
+    metaDescription:
+      'Fashion web development in Boston with academic-grade e-commerce, innovative features, and sophisticated platforms for the education-focused fashion market.',
+    hero:
+      'Build sophisticated fashion e-commerce sites in Boston with academic-grade features, innovative functionality, and intellectual appeal for the Massachusetts market.',
+    sections: [
+      'Academic e-commerce: sophisticated platforms, intellectual features, and refined functionality for Boston fashion retailers.',
+      'Innovation integration: cutting-edge technology, tech-forward features, and innovative functionality for the Boston tech scene.',
+      'Professional features: corporate styling options, academic fashion, and professional appeal for Boston business community.',
+      'Performance excellence: fast loading, mobile optimization, and academic-grade reliability for the competitive Boston market.'
+    ],
+    faqs: [
+      { question: 'Academic features?', answer: 'We implement sophisticated platforms and intellectual features for Boston academic culture.' },
+      { question: 'Innovation integration?', answer: 'We create cutting-edge technology and tech-forward features for Boston innovation scene.' },
+      { question: 'Professional appeal?', answer: 'We build sophisticated functionality that appeals to Boston professionals and academic community.' }
+    ]
+  },
+  'boston-ma__fashion__seo': {
+    title: 'SEO in Boston, MA for Fashion Companies',
+    metaTitle: 'Fashion SEO in Boston | Academic & Innovation Search',
+    metaDescription:
+      'Fashion SEO in Boston targeting academic keywords, innovation fashion, and local style searches to dominate the education-focused Massachusetts fashion market.',
+    hero:
+      'Dominate fashion search in Boston with academic-focused SEO, innovation fashion keywords, and sophisticated content for the Massachusetts market.',
+    sections: [
+      'Academic SEO strategy: intellectual fashion keywords, sophisticated content, and academic appeal for Boston consumers.',
+      'Innovation content: tech fashion keywords, cutting-edge fashion, and innovation-focused content optimization.',
+      'Local fashion SEO: Boston fashion districts, academic shopping, and Massachusetts fashion trends optimization.',
+      'Professional fashion: business styling, academic fashion, and professional appeal for Boston business community.'
+    ],
+    faqs: [
+      { question: 'Academic keywords?', answer: 'We target terms like "academic fashion," "intellectual style," and "sophisticated clothing" in Boston.' },
+      { question: 'Innovation content?', answer: 'We create content about tech fashion, cutting-edge style, and innovation for Boston tech scene.' },
+      { question: 'Professional styling?', answer: 'We optimize for business fashion, academic styling, and professional appeal for Boston professionals.' }
+    ]
+  },
+
+  // Seattle, WA × Fashion (Tech & Outdoor)
+  'seattle-wa__fashion__website-design': {
+    title: 'Website Design in Seattle, WA for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Seattle | Tech & Outdoor Style',
+    metaDescription:
+      'Fashion website design in Seattle with tech-forward aesthetics, outdoor inspiration, and innovative design for the Pacific Northwest fashion market.',
+    hero:
+      'Create innovative fashion websites in Seattle that blend tech culture with outdoor inspiration and cutting-edge design for the Pacific Northwest market.',
+    sections: [
+      'Tech-forward design: innovative aesthetics, cutting-edge features, and technology integration that appeals to Seattle tech culture.',
+      'Outdoor inspiration: natural textures, outdoor aesthetics, and adventure-ready styling that resonates with Pacific Northwest lifestyle.',
+      'Innovation features: AR try-on, AI recommendations, and cutting-edge technology that appeals to the tech-savvy Seattle market.',
+      'Local market focus: Seattle fashion trends, outdoor collections, and Pacific Northwest-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Tech integration?', answer: 'We integrate AR try-on, AI recommendations, and cutting-edge technology features for the tech-savvy Seattle market.' },
+      { question: 'Outdoor inspiration?', answer: 'We design with natural textures and outdoor aesthetics that appeal to Pacific Northwest lifestyle.' },
+      { question: 'Innovation features?', answer: 'We implement cutting-edge features like AR, AI, and mobile-first experiences for the tech-forward market.' }
+    ]
+  },
+  'seattle-wa__fashion__web-development': {
+    title: 'Web Development in Seattle, WA for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Seattle | Tech Innovation',
+    metaDescription:
+      'Fashion web development in Seattle with cutting-edge technology, outdoor features, and innovative platforms for the Pacific Northwest fashion market.',
+    hero:
+      'Build cutting-edge fashion e-commerce sites in Seattle with tech integration, outdoor features, and innovative functionality for the Pacific Northwest market.',
+    sections: [
+      'Tech e-commerce: cutting-edge platforms, AI integration, and innovative features for the Seattle tech scene.',
+      'Outdoor features: adventure-ready shopping, outdoor wear categories, and Pacific Northwest lifestyle functionality.',
+      'Innovation integration: AR/VR features, AI recommendations, and cutting-edge technology for the tech-savvy market.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for the Seattle market.'
+    ],
+    faqs: [
+      { question: 'Tech features?', answer: 'We implement cutting-edge platforms, AI integration, and innovative features for Seattle tech culture.' },
+      { question: 'Outdoor features?', answer: 'We build adventure-ready shopping, outdoor wear categories, and Pacific Northwest lifestyle functionality.' },
+      { question: 'Innovation integration?', answer: 'We create AR/VR features, AI recommendations, and cutting-edge technology for the tech market.' }
+    ]
+  },
+  'seattle-wa__fashion__seo': {
+    title: 'SEO in Seattle, WA for Fashion Companies',
+    metaTitle: 'Fashion SEO in Seattle | Tech & Outdoor Search',
+    metaDescription:
+      'Fashion SEO in Seattle targeting tech fashion, outdoor wear, and innovation keywords to dominate the Pacific Northwest fashion market.',
+    hero:
+      'Dominate fashion search in Seattle with tech-focused SEO, outdoor fashion keywords, and innovation content for the Pacific Northwest market.',
+    sections: [
+      'Tech fashion SEO: innovation keywords, tech fashion trends, and cutting-edge fashion content for Seattle consumers.',
+      'Outdoor fashion: adventure wear keywords, outdoor style, and Pacific Northwest lifestyle content optimization.',
+      'Innovation content: AI fashion, AR shopping, and cutting-edge technology content that appeals to Seattle tech culture.',
+      'Local fashion SEO: Seattle fashion districts, outdoor shopping, and Pacific Northwest fashion trends optimization.'
+    ],
+    faqs: [
+      { question: 'Tech fashion keywords?', answer: 'We target terms like "tech fashion," "innovative clothing," and "AI fashion" in Seattle.' },
+      { question: 'Outdoor fashion?', answer: 'We optimize for adventure wear, outdoor style, and Pacific Northwest lifestyle fashion.' },
+      { question: 'Innovation content?', answer: 'We create content about AI fashion, AR shopping, and cutting-edge technology for the tech market.' }
+    ]
+  },
+
+  // Denver, CO × Fashion (Outdoor & Active)
+  'denver-co__fashion__website-design': {
+    title: 'Website Design in Denver, CO for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Denver | Outdoor & Active Style',
+    metaDescription:
+      'Fashion website design in Denver with outdoor aesthetics, active lifestyle focus, and mountain-inspired design for the Colorado fashion market.',
+    hero:
+      'Create dynamic fashion websites in Denver that celebrate outdoor lifestyle, active fashion, and mountain-inspired design for the Colorado market.',
+    sections: [
+      'Outdoor aesthetics: natural design, mountain inspiration, and outdoor-focused styling that appeals to Denver fashion consumers.',
+      'Active lifestyle: performance fashion, outdoor wear, and adventure-ready styling that resonates with Colorado lifestyle.',
+      'Mountain inspiration: natural textures, outdoor colors, and adventure aesthetics that appeal to the Denver market.',
+      'Local market focus: Denver fashion trends, outdoor collections, and Colorado-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Outdoor focus?', answer: 'We design with natural aesthetics and mountain inspiration that appeal to Denver outdoor lifestyle.' },
+      { question: 'Active lifestyle?', answer: 'We create performance fashion and adventure-ready styling for Colorado active culture.' },
+      { question: 'Mountain inspiration?', answer: 'We incorporate natural textures and outdoor colors that resonate with Denver mountain culture.' }
+    ]
+  },
+  'denver-co__fashion__web-development': {
+    title: 'Web Development in Denver, CO for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Denver | Outdoor E-commerce',
+    metaDescription:
+      'Fashion web development in Denver with outdoor features, active lifestyle functionality, and mountain-inspired platforms for the Colorado fashion market.',
+    hero:
+      'Build outdoor-focused fashion e-commerce sites in Denver with adventure features, active lifestyle functionality, and mountain-inspired design for the Colorado market.',
+    sections: [
+      'Outdoor e-commerce: adventure-ready platforms, outdoor wear categories, and mountain-inspired features for Denver consumers.',
+      'Active lifestyle: performance fashion features, outdoor shopping, and adventure-ready functionality for Colorado lifestyle.',
+      'Mountain features: natural aesthetics, outdoor colors, and adventure-focused design for the Denver market.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for outdoor enthusiasts.'
+    ],
+    faqs: [
+      { question: 'Outdoor features?', answer: 'We implement adventure-ready platforms and outdoor wear categories for Denver outdoor lifestyle.' },
+      { question: 'Active lifestyle?', answer: 'We create performance fashion features and adventure-ready functionality for Colorado active culture.' },
+      { question: 'Mountain features?', answer: 'We build natural aesthetics and outdoor colors that resonate with Denver mountain culture.' }
+    ]
+  },
+  'denver-co__fashion__seo': {
+    title: 'SEO in Denver, CO for Fashion Companies',
+    metaTitle: 'Fashion SEO in Denver | Outdoor & Active Search',
+    metaDescription:
+      'Fashion SEO in Denver targeting outdoor fashion, active wear, and mountain style keywords to dominate the Colorado fashion market.',
+    hero:
+      'Dominate fashion search in Denver with outdoor-focused SEO, active wear keywords, and mountain style content for the Colorado market.',
+    sections: [
+      'Outdoor fashion SEO: adventure wear keywords, outdoor style, and mountain fashion content for Denver consumers.',
+      'Active wear: performance fashion keywords, outdoor gear, and adventure clothing content optimization.',
+      'Mountain style: natural fashion, outdoor aesthetics, and adventure-focused content for Colorado lifestyle.',
+      'Local fashion SEO: Denver fashion districts, outdoor shopping, and Colorado fashion trends optimization.'
+    ],
+    faqs: [
+      { question: 'Outdoor fashion keywords?', answer: 'We target terms like "outdoor fashion," "adventure wear," and "mountain style" in Denver.' },
+      { question: 'Active wear?', answer: 'We optimize for performance fashion, outdoor gear, and adventure clothing for Colorado lifestyle.' },
+      { question: 'Mountain style?', answer: 'We create content about natural fashion and outdoor aesthetics for Denver mountain culture.' }
+    ]
+  },
+
+  // Austin, TX × Fashion (Music & Tech)
+  'austin-tx__fashion__website-design': {
+    title: 'Website Design in Austin, TX for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Austin | Music & Tech Style',
+    metaDescription:
+      'Fashion website design in Austin with music culture aesthetics, tech-forward design, and creative appeal for the vibrant Texas fashion market.',
+    hero:
+      'Create vibrant fashion websites in Austin that blend music culture with tech innovation and creative design for the dynamic Texas market.',
+    sections: [
+      'Music culture: creative aesthetics, artistic design, and music-inspired styling that appeals to Austin fashion consumers.',
+      'Tech-forward design: innovative features, cutting-edge aesthetics, and technology integration for the Austin tech scene.',
+      'Creative appeal: artistic layouts, creative features, and innovative design that resonates with Austin creative culture.',
+      'Local market focus: Austin fashion trends, music collections, and Texas-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Music culture focus?', answer: 'We design with creative aesthetics and artistic design that appeal to Austin music culture.' },
+      { question: 'Tech integration?', answer: 'We create innovative features and cutting-edge aesthetics for the Austin tech scene.' },
+      { question: 'Creative appeal?', answer: 'We develop artistic layouts and creative features that resonate with Austin creative culture.' }
+    ]
+  },
+  'austin-tx__fashion__web-development': {
+    title: 'Web Development in Austin, TX for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Austin | Creative E-commerce',
+    metaDescription:
+      'Fashion web development in Austin with creative features, music culture functionality, and tech-forward platforms for the vibrant Texas fashion market.',
+    hero:
+      'Build creative fashion e-commerce sites in Austin with music culture features, tech integration, and innovative functionality for the dynamic Texas market.',
+    sections: [
+      'Creative e-commerce: artistic platforms, music culture features, and creative functionality for Austin fashion retailers.',
+      'Tech integration: cutting-edge technology, innovative features, and tech-forward functionality for the Austin tech scene.',
+      'Music features: creative shopping, artistic categories, and music-inspired functionality for Austin creative culture.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for the vibrant Austin market.'
+    ],
+    faqs: [
+      { question: 'Creative features?', answer: 'We implement artistic platforms and music culture features for Austin creative scene.' },
+      { question: 'Tech integration?', answer: 'We create cutting-edge technology and innovative features for the Austin tech scene.' },
+      { question: 'Music features?', answer: 'We build creative shopping and artistic categories for Austin music culture.' }
+    ]
+  },
+  'austin-tx__fashion__seo': {
+    title: 'SEO in Austin, TX for Fashion Companies',
+    metaTitle: 'Fashion SEO in Austin | Music & Tech Search',
+    metaDescription:
+      'Fashion SEO in Austin targeting music fashion, tech style, and creative keywords to dominate the vibrant Texas fashion market.',
+    hero:
+      'Dominate fashion search in Austin with music-focused SEO, tech fashion keywords, and creative content for the dynamic Texas market.',
+    sections: [
+      'Music fashion SEO: creative keywords, artistic fashion, and music-inspired content for Austin consumers.',
+      'Tech fashion: innovation keywords, tech style, and cutting-edge fashion content optimization.',
+      'Creative content: artistic fashion, creative styling, and innovative fashion content for Austin creative culture.',
+      'Local fashion SEO: Austin fashion districts, music shopping, and Texas fashion trends optimization.'
+    ],
+    faqs: [
+      { question: 'Music fashion keywords?', answer: 'We target terms like "music fashion," "artistic style," and "creative clothing" in Austin.' },
+      { question: 'Tech fashion?', answer: 'We optimize for innovation keywords, tech style, and cutting-edge fashion for the Austin tech scene.' },
+      { question: 'Creative content?', answer: 'We create content about artistic fashion and creative styling for Austin creative culture.' }
+    ]
+  },
+
+  // San Diego, CA × Fashion (Beach & Resort)
+  'san-diego-ca__fashion__website-design': {
+    title: 'Website Design in San Diego, CA for Fashion Companies',
+    metaTitle: 'Fashion Website Design in San Diego | Beach & Resort Style',
+    metaDescription:
+      'Fashion website design in San Diego with beach aesthetics, resort fashion, and coastal inspiration for the sunny California fashion market.',
+    hero:
+      'Create vibrant fashion websites in San Diego that celebrate beach culture, resort fashion, and coastal lifestyle for the sunny California market.',
+    sections: [
+      'Beach aesthetics: coastal design, ocean-inspired colors, and beach-ready styling that appeals to San Diego fashion consumers.',
+      'Resort fashion: vacation-ready styles, beach wear, and leisure fashion that resonates with the San Diego lifestyle.',
+      'Coastal inspiration: ocean themes, beach colors, and seaside aesthetics that appeal to the San Diego market.',
+      'Local market focus: San Diego fashion trends, beach collections, and California-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Beach focus?', answer: 'We design with coastal aesthetics and ocean-inspired colors that appeal to San Diego beach culture.' },
+      { question: 'Resort fashion?', answer: 'We create vacation-ready styles and beach wear for the San Diego lifestyle.' },
+      { question: 'Coastal inspiration?', answer: 'We incorporate ocean themes and beach colors that resonate with San Diego coastal culture.' }
+    ]
+  },
+  'san-diego-ca__fashion__web-development': {
+    title: 'Web Development in San Diego, CA for Fashion Companies',
+    metaTitle: 'Fashion Web Development in San Diego | Beach E-commerce',
+    metaDescription:
+      'Fashion web development in San Diego with beach features, resort fashion, and coastal functionality for the sunny California fashion market.',
+    hero:
+      'Build beach-focused fashion e-commerce sites in San Diego with coastal features, resort fashion, and seaside functionality for the California market.',
+    sections: [
+      'Beach e-commerce: coastal platforms, beach wear categories, and ocean-inspired features for San Diego consumers.',
+      'Resort features: vacation-ready shopping, beach wear, and leisure fashion functionality for San Diego lifestyle.',
+      'Coastal integration: ocean themes, beach colors, and seaside design for the San Diego market.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for beach enthusiasts.'
+    ],
+    faqs: [
+      { question: 'Beach features?', answer: 'We implement coastal platforms and beach wear categories for San Diego beach culture.' },
+      { question: 'Resort features?', answer: 'We create vacation-ready shopping and beach wear functionality for San Diego lifestyle.' },
+      { question: 'Coastal integration?', answer: 'We build ocean themes and beach colors that resonate with San Diego coastal culture.' }
+    ]
+  },
+  'san-diego-ca__fashion__seo': {
+    title: 'SEO in San Diego, CA for Fashion Companies',
+    metaTitle: 'Fashion SEO in San Diego | Beach & Resort Search',
+    metaDescription:
+      'Fashion SEO in San Diego targeting beach fashion, resort wear, and coastal keywords to dominate the sunny California fashion market.',
+    hero:
+      'Dominate fashion search in San Diego with beach-focused SEO, resort fashion keywords, and coastal content for the California market.',
+    sections: [
+      'Beach fashion SEO: coastal keywords, beach style, and ocean fashion content for San Diego consumers.',
+      'Resort fashion: vacation wear keywords, beach style, and leisure fashion content optimization.',
+      'Coastal content: ocean fashion, beach aesthetics, and seaside styling for San Diego lifestyle.',
+      'Local fashion SEO: San Diego fashion districts, beach shopping, and California fashion trends optimization.'
+    ],
+    faqs: [
+      { question: 'Beach fashion keywords?', answer: 'We target terms like "beach fashion," "coastal style," and "ocean clothing" in San Diego.' },
+      { question: 'Resort fashion?', answer: 'We optimize for vacation wear, beach style, and leisure fashion for San Diego lifestyle.' },
+      { question: 'Coastal content?', answer: 'We create content about ocean fashion and beach aesthetics for San Diego coastal culture.' }
+    ]
+  },
+
+  // Nashville, TN × Fashion (Music & Southern)
+  'nashville-tn__fashion__website-design': {
+    title: 'Website Design in Nashville, TN for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Nashville | Music & Southern Style',
+    metaDescription:
+      'Fashion website design in Nashville with music culture aesthetics, Southern elegance, and country-inspired design for the Tennessee fashion market.',
+    hero:
+      'Create vibrant fashion websites in Nashville that blend music culture with Southern elegance and country-inspired design for the Tennessee market.',
+    sections: [
+      'Music culture: creative aesthetics, artistic design, and music-inspired styling that appeals to Nashville fashion consumers.',
+      'Southern elegance: sophisticated design, refined aesthetics, and elegant styling that resonates with Tennessee culture.',
+      'Country inspiration: rustic textures, country colors, and music-themed aesthetics that appeal to the Nashville market.',
+      'Local market focus: Nashville fashion trends, music collections, and Tennessee-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Music culture focus?', answer: 'We design with creative aesthetics and artistic design that appeal to Nashville music culture.' },
+      { question: 'Southern elegance?', answer: 'We create sophisticated design and refined aesthetics that resonate with Tennessee culture.' },
+      { question: 'Country inspiration?', answer: 'We incorporate rustic textures and country colors that appeal to Nashville country culture.' }
+    ]
+  },
+  'nashville-tn__fashion__web-development': {
+    title: 'Web Development in Nashville, TN for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Nashville | Music E-commerce',
+    metaDescription:
+      'Fashion web development in Nashville with music culture features, Southern elegance, and country-inspired platforms for the Tennessee fashion market.',
+    hero:
+      'Build music-focused fashion e-commerce sites in Nashville with creative features, Southern elegance, and country-inspired functionality for the Tennessee market.',
+    sections: [
+      'Music e-commerce: creative platforms, music culture features, and artistic functionality for Nashville fashion retailers.',
+      'Southern features: elegant design, sophisticated aesthetics, and refined functionality for Tennessee culture.',
+      'Country integration: rustic themes, country colors, and music-inspired design for the Nashville market.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for the vibrant Nashville market.'
+    ],
+    faqs: [
+      { question: 'Music features?', answer: 'We implement creative platforms and music culture features for Nashville music scene.' },
+      { question: 'Southern features?', answer: 'We create elegant design and sophisticated aesthetics for Tennessee culture.' },
+      { question: 'Country integration?', answer: 'We build rustic themes and country colors that resonate with Nashville country culture.' }
+    ]
+  },
+  'nashville-tn__fashion__seo': {
+    title: 'SEO in Nashville, TN for Fashion Companies',
+    metaTitle: 'Fashion SEO in Nashville | Music & Southern Search',
+    metaDescription:
+      'Fashion SEO in Nashville targeting music fashion, Southern style, and country keywords to dominate the Tennessee fashion market.',
+    hero:
+      'Dominate fashion search in Nashville with music-focused SEO, Southern style keywords, and country content for the Tennessee market.',
+    sections: [
+      'Music fashion SEO: creative keywords, artistic fashion, and music-inspired content for Nashville consumers.',
+      'Southern style: elegant keywords, sophisticated fashion, and refined styling content optimization.',
+      'Country content: rustic fashion, country style, and music-themed content for Nashville culture.',
+      'Local fashion SEO: Nashville fashion districts, music shopping, and Tennessee fashion trends optimization.'
+    ],
+    faqs: [
+      { question: 'Music fashion keywords?', answer: 'We target terms like "music fashion," "artistic style," and "creative clothing" in Nashville.' },
+      { question: 'Southern style?', answer: 'We optimize for elegant keywords, sophisticated fashion, and refined styling for Tennessee culture.' },
+      { question: 'Country content?', answer: 'We create content about rustic fashion and country style for Nashville country culture.' }
+    ]
+  },
+
+  // Las Vegas, NV × Fashion (Entertainment & Luxury)
+  'las-vegas-nv__fashion__website-design': {
+    title: 'Website Design in Las Vegas, NV for Fashion Companies',
+    metaTitle: 'Fashion Website Design in Las Vegas | Entertainment & Luxury',
+    metaDescription:
+      'Fashion website design in Las Vegas with entertainment aesthetics, luxury appeal, and glamorous design for the vibrant Nevada fashion market.',
+    hero:
+      'Create glamorous fashion websites in Las Vegas that celebrate entertainment culture, luxury fashion, and vibrant design for the Nevada market.',
+    sections: [
+      'Entertainment aesthetics: glamorous design, vibrant colors, and show-stopping styling that appeals to Las Vegas fashion consumers.',
+      'Luxury appeal: sophisticated design, premium aesthetics, and high-end styling that resonates with Vegas luxury culture.',
+      'Glamorous inspiration: bold colors, dramatic styling, and entertainment-themed aesthetics that appeal to the Las Vegas market.',
+      'Local market focus: Las Vegas fashion trends, entertainment collections, and Nevada-specific style considerations.'
+    ],
+    faqs: [
+      { question: 'Entertainment focus?', answer: 'We design with glamorous aesthetics and vibrant colors that appeal to Las Vegas entertainment culture.' },
+      { question: 'Luxury appeal?', answer: 'We create sophisticated design and premium aesthetics that resonate with Vegas luxury culture.' },
+      { question: 'Glamorous inspiration?', answer: 'We incorporate bold colors and dramatic styling that appeal to Las Vegas glamour culture.' }
+    ]
+  },
+  'las-vegas-nv__fashion__web-development': {
+    title: 'Web Development in Las Vegas, NV for Fashion Companies',
+    metaTitle: 'Fashion Web Development in Las Vegas | Entertainment E-commerce',
+    metaDescription:
+      'Fashion web development in Las Vegas with entertainment features, luxury functionality, and glamorous platforms for the vibrant Nevada fashion market.',
+    hero:
+      'Build glamorous fashion e-commerce sites in Las Vegas with entertainment features, luxury functionality, and vibrant design for the Nevada market.',
+    sections: [
+      'Entertainment e-commerce: glamorous platforms, show-stopping features, and entertainment-focused functionality for Las Vegas retailers.',
+      'Luxury features: premium design, sophisticated aesthetics, and high-end functionality for Vegas luxury culture.',
+      'Glamorous integration: bold themes, dramatic colors, and entertainment-inspired design for the Las Vegas market.',
+      'Performance optimization: fast loading, mobile optimization, and reliable performance for the vibrant Las Vegas market.'
+    ],
+    faqs: [
+      { question: 'Entertainment features?', answer: 'We implement glamorous platforms and show-stopping features for Las Vegas entertainment scene.' },
+      { question: 'Luxury features?', answer: 'We create premium design and sophisticated aesthetics for Vegas luxury culture.' },
+      { question: 'Glamorous integration?', answer: 'We build bold themes and dramatic colors that resonate with Las Vegas glamour culture.' }
+    ]
+  },
+  'las-vegas-nv__fashion__seo': {
+    title: 'SEO in Las Vegas, NV for Fashion Companies',
+    metaTitle: 'Fashion SEO in Las Vegas | Entertainment & Luxury Search',
+    metaDescription:
+      'Fashion SEO in Las Vegas targeting entertainment fashion, luxury style, and glamorous keywords to dominate the vibrant Nevada fashion market.',
+    hero:
+      'Dominate fashion search in Las Vegas with entertainment-focused SEO, luxury fashion keywords, and glamorous content for the Nevada market.',
+    sections: [
+      'Entertainment fashion SEO: glamorous keywords, show-stopping fashion, and entertainment-inspired content for Las Vegas consumers.',
+      'Luxury fashion: premium keywords, sophisticated style, and high-end fashion content optimization.',
+      'Glamorous content: bold fashion, dramatic styling, and entertainment-themed content for Las Vegas culture.',
+      'Local fashion SEO: Las Vegas fashion districts, entertainment shopping, and Nevada fashion trends optimization.'
+    ],
+    faqs: [
+      { question: 'Entertainment fashion keywords?', answer: 'We target terms like "entertainment fashion," "glamorous style," and "show-stopping clothing" in Las Vegas.' },
+      { question: 'Luxury fashion?', answer: 'We optimize for premium keywords, sophisticated style, and high-end fashion for Vegas luxury culture.' },
+      { question: 'Glamorous content?', answer: 'We create content about bold fashion and dramatic styling for Las Vegas glamour culture.' }
+    ]
+  },
+
   // Kansas City, MO × Logistics
   'kansas-city-mo__logistics__web-development': {
     title: 'Web Development in Kansas City, MO for Logistics Companies',
