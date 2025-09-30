@@ -1,7 +1,22 @@
+import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, TrendingUp, Globe, Code, Users, Star, Calendar, DollarSign } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'Case Studies | Real Results from Web Vello Clients',
+  description: 'See how we've helped businesses achieve 300%+ traffic growth, dominate local search, and increase revenue with our SEO and web development services.',
+  keywords: 'SEO case studies, web development success stories, digital marketing results, client testimonials',
+  openGraph: {
+    title: 'Case Studies | Web Vello Client Success Stories',
+    description: 'Real results from businesses that partnered with Web Vello for SEO and web development.',
+    url: 'https://webvello.com/case-studies',
+    siteName: 'Web Vello',
+    locale: 'en_US',
+    type: 'website',
+  },
+}
 
 const caseStudies = [
   {

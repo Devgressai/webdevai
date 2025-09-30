@@ -1,0 +1,280 @@
+[
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/[city]/industry/[industry]/[service]/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/about/page.tsx",
+    "link": "/austin-tx",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/blog/ai-powered-seo-machine-learning/page.tsx",
+    "link": "/blog/conversion-rate-optimization-strategies",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/blog/essential-website-features-2024/page.tsx",
+    "link": "/blog/custom-vs-template-websites",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/blog/local-seo-checklist-25-steps/page.tsx",
+    "link": "/blog/google-my-business-optimization-guide",
+    "severity": "medium"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/case-studies/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/case-studies/page.tsx",
+    "link": "/services/content-strategy",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/case-studies/page.tsx",
+    "link": "/services/review-management",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/case-studies/page.tsx",
+    "link": "/services/technical-seo",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/case-studies/page.tsx",
+    "link": "/services/google-my-business",
+    "severity": "medium"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/contact/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "missing-title",
+    "file": "/Users/george/webdevai/app/contact/page.tsx",
+    "severity": "critical"
+  },
+  {
+    "type": "missing-title",
+    "file": "/Users/george/webdevai/app/enhanced-demo/page.tsx",
+    "severity": "critical"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/content-strategy",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/review-management",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/social-media-marketing",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/review-management",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/content-strategy",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/service-marketing",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/review-management",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/ecommerce-seo",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/industries/page.tsx",
+    "link": "/services/content-strategy",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "/favicon.ico",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "/apple-touch-icon.png",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "/favicon-32x32.png",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "/favicon-16x16.png",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "/site.webmanifest",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "//fonts.googleapis.com",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "//fonts.gstatic.com",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "//cdn.sanity.io",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/layout.tsx",
+    "link": "//images.unsplash.com",
+    "severity": "medium"
+  },
+  {
+    "type": "missing-title",
+    "file": "/Users/george/webdevai/app/page.tsx",
+    "severity": "critical"
+  },
+  {
+    "type": "missing-alt-text",
+    "file": "/Users/george/webdevai/app/page.tsx",
+    "image": "/images/hero-data-analysis.webp",
+    "severity": "medium"
+  },
+  {
+    "type": "missing-alt-text",
+    "file": "/Users/george/webdevai/app/page.tsx",
+    "image": "/images/hero-business-meeting.webp",
+    "severity": "medium"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/pricing/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/services/software-development/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "missing-title",
+    "file": "/Users/george/webdevai/app/services/software-development/page.tsx",
+    "severity": "critical"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/sitemap/city/[city]/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "missing-title",
+    "file": "/Users/george/webdevai/app/sitemap/city/[city]/page.tsx",
+    "severity": "critical"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/sitemap/locations/[letter]/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "missing-title",
+    "file": "/Users/george/webdevai/app/sitemap/locations/[letter]/page.tsx",
+    "severity": "critical"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/sitemap/locations/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/solutions/page.tsx",
+    "link": "/services/content-strategy",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/solutions/page.tsx",
+    "link": "/services/social-media-marketing",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/solutions/page.tsx",
+    "link": "/services/analytics-consulting",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/solutions/page.tsx",
+    "link": "/services/agency-consulting",
+    "severity": "medium"
+  },
+  {
+    "type": "broken-internal-link",
+    "file": "/Users/george/webdevai/app/solutions/page.tsx",
+    "link": "/services/process-optimization",
+    "severity": "medium"
+  },
+  {
+    "type": "missing-meta-description",
+    "file": "/Users/george/webdevai/app/studio/[[...tool]]/page.tsx",
+    "severity": "high"
+  },
+  {
+    "type": "missing-title",
+    "file": "/Users/george/webdevai/app/studio/[[...tool]]/page.tsx",
+    "severity": "critical"
+  }
+]

@@ -1,4 +1,5 @@
 
+import { Metadata } from 'next'
 import { Hero } from '../components/sections/hero'
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
@@ -8,6 +9,20 @@ import Image from 'next/image'
 import { HeroImage } from '../components/ui/optimized-image'
 import { LazySection } from '../components/ui/lazy-section'
 import dynamic from 'next/dynamic'
+
+export const metadata: Metadata = {
+  title: 'Web Vello | AI-Powered SEO, Web Development & Digital Marketing Services',
+  description: 'Professional SEO, web development, and digital marketing services that deliver 300%+ organic traffic growth. Serving 500+ businesses nationwide with AI-powered strategies.',
+  keywords: 'SEO services, web development, digital marketing, AI SEO, local SEO, web design',
+  openGraph: {
+    title: 'Web Vello | AI-Powered SEO & Web Development Services',
+    description: 'Professional SEO and web development services that deliver measurable results. 300%+ average traffic growth.',
+    url: 'https://webvello.com',
+    siteName: 'Web Vello',
+    locale: 'en_US',
+    type: 'website',
+  },
+}
 
 // Lazy load heavy components to reduce initial bundle
 const Pricing = dynamic(() => import('../components/sections/pricing'), { 
