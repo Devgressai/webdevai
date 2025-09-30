@@ -108,21 +108,20 @@ export async function POST(request: Request) {
     let matchCount = 0
 
     // PRIORITY 1: Check for contact intent first (highest priority)
-    const contactMatches = KNOWLEDGE_BASE.contact_intent.keywords.filter(keyword => userInput.includes(keyword))
+    // Simple and direct contact detection
+    const contactKeywords = ['contact', 'info', 'information', 'details', 'touch', 'reach', 'speak', 'talk', 'connect', 'help', 'assist', 'support']
+    const hasContactKeyword = contactKeywords.some(keyword => userInput.includes(keyword))
     
-    // Also check for common contact patterns
+    // Check for contact patterns
     const contactPatterns = [
-      /i want to/i, /i need to/i, /can you/i, /could you/i, /help me/i,
-      /interested in/i, /looking for/i, /need help/i, /want help/i,
-      /tell me about/i, /more information/i, /learn more/i,
-      /take.*contact/i, /contact.*info/i, /get.*touch/i, /reach.*out/i
+      /take.*contact/i, /contact.*info/i, /get.*touch/i, /reach.*out/i,
+      /speak.*with/i, /talk.*to/i, /connect.*with/i, /help.*me/i
     ]
-    
     const hasContactPattern = contactPatterns.some(pattern => pattern.test(userInput))
-    const isContactIntent = contactMatches.length > 0 || hasContactPattern
     
-    // Debug logging
-    console.log('Contact matches:', contactMatches.length, 'Pattern matches:', hasContactPattern, 'User input:', userInput)
+    const isContactIntent = hasContactKeyword || hasContactPattern
+    
+    console.log('Contact detection - Keywords:', hasContactKeyword, 'Patterns:', hasContactPattern, 'Input:', userInput)
     
     if (isContactIntent) {
       response = KNOWLEDGE_BASE.contact_intent.response
