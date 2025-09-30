@@ -7,6 +7,9 @@ import dynamic from 'next/dynamic'
 const PerformanceMonitor = dynamic(() => import('../components/analytics/performance-monitor').then(m => m.PerformanceMonitor), {
   ssr: false
 })
+const AIChatbot = dynamic(() => import('../components/chat/ai-chatbot').then(m => m.AIChatbot), {
+  ssr: false
+})
 // import GoogleAnalytics from '../components/analytics/google-analytics'
 
 const inter = Inter({ 
@@ -264,6 +267,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <AIChatbot businessName="Web Vello" primaryColor="#3b82f6" position="bottom-right" />
         
         {/* Structured Data for Website */}
         <script
