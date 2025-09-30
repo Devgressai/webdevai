@@ -218,9 +218,19 @@ function generateLeadEmailHTML(lead: LeadData): string {
       <div style="background: white; padding: 30px; border: 1px solid #e0e0e0; border-radius: 0 0 10px 10px;">
         <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
           <h2 style="margin: 0 0 15px 0; color: #667eea; font-size: 20px;">📧 Lead Information</h2>
-          <p style="margin: 5px 0;"><strong>Email:</strong> <a href="mailto:${lead.email}" style="color: #667eea;">${lead.email}</a></p>
-          <p style="margin: 5px 0;"><strong>Time:</strong> ${lead.timestamp.toLocaleString()}</p>
-          <p style="margin: 5px 0;"><strong>Source:</strong> ${lead.source || 'AI Chatbot'}</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+              <p style="margin: 5px 0;"><strong>👤 Name:</strong> ${lead.name || 'Not provided'}</p>
+              <p style="margin: 5px 0;"><strong>📧 Email:</strong> <a href="mailto:${lead.email}" style="color: #667eea;">${lead.email}</a></p>
+              <p style="margin: 5px 0;"><strong>📞 Phone:</strong> ${lead.phone || 'Not provided'}</p>
+            </div>
+            <div>
+              <p style="margin: 5px 0;"><strong>🏢 Company:</strong> ${lead.company || 'Not provided'}</p>
+              <p style="margin: 5px 0;"><strong>🎯 Service:</strong> ${lead.service || 'Not specified'}</p>
+              <p style="margin: 5px 0;"><strong>📅 Time:</strong> ${lead.timestamp.toLocaleString()}</p>
+            </div>
+          </div>
+          <p style="margin: 5px 0;"><strong>🔗 Source:</strong> ${lead.source || 'AI Chatbot'}</p>
         </div>
 
         <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 10px;">💬 Conversation History</h3>
@@ -233,8 +243,9 @@ function generateLeadEmailHTML(lead: LeadData): string {
           <p style="margin: 5px 0; color: #555;">
             1. Reply to this email within 24 hours<br/>
             2. Review their conversation to understand needs<br/>
-            3. Schedule a consultation call<br/>
-            4. Follow up if no response in 48 hours
+            3. Send detailed information about: ${lead.service || 'General inquiry'}<br/>
+            4. Schedule a consultation call${lead.phone ? ' (call directly at provided number)' : ''}<br/>
+            5. Follow up if no response in 48 hours
           </p>
         </div>
 

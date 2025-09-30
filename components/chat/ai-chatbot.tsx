@@ -11,6 +11,15 @@ interface Message {
   timestamp: Date
 }
 
+interface LeadInfo {
+  name?: string
+  email?: string
+  phone?: string
+  company?: string
+  service?: string
+  message?: string
+}
+
 interface ChatbotProps {
   businessName?: string
   primaryColor?: string
@@ -35,11 +44,186 @@ export function AIChatbot({
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [leadCaptured, setLeadCaptured] = useState(false)
+  const [leadInfo, setLeadInfo] = useState<LeadInfo>({})
+  const [leadStep, setLeadStep] = useState<'none' | 'name' | 'email' | 'phone' | 'company' | 'service' | 'complete'>('none')
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  // Lead collection helpers
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
+
+  const validatePhone = (phone: string) => {
+    return /^[\+]?[1-9][\d]{0,15}$/.test(phone.replace(/[\s\-\(\)]/g, ''))
+  }
+
+  const extractLeadInfo = (text: string): Partial<LeadInfo> => {
+    const info: Partial<LeadInfo> = {}
+    
+    // Extract email
+    const emailMatch = text.match(/[^\s@]+@[^\s@]+\.[^\s@]+/)
+    if (emailMatch) info.email = emailMatch[0]
+    
+    // Extract phone (various formats)
+    const phoneMatch = text.match(/(\+?1[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})/)
+    if (phoneMatch) info.phone = phoneMatch[0]
+    
+    // Extract name (simple heuristic - first two words if no email/phone)
+    if (!emailMatch && !phoneMatch) {
+      const words = text.trim().split(/\s+/)
+      if (words.length >= 2) {
+        info.name = words.slice(0, 2).join(' ')
+      }
+    }
+    
+    return info
+  }
+
+  const startLeadCollection = () => {
+    setLeadStep('name')
+    const leadMessage: Message = {
+      id: (Date.now() + 1).toString(),
+      role: 'assistant',
+      content: "Great! I'd love to connect you with our team. Let me get some quick information:\n\n**What's your name?**",
+      timestamp: new Date()
+    }
+    setMessages(prev => [...prev, leadMessage])
+  }
+
+  const processLeadStep = (userInput: string) => {
+    const extracted = extractLeadInfo(userInput)
+    const updatedLeadInfo = { ...leadInfo, ...extracted }
+    setLeadInfo(updatedLeadInfo)
+
+    switch (leadStep) {
+      case 'name':
+        if (extracted.name) {
+          setLeadStep('email')
+          const message: Message = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: `Nice to meet you, ${extracted.name}! What's your email address?`,
+            timestamp: new Date()
+          }
+          setMessages(prev => [...prev, message])
+        } else {
+          const message: Message = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: "I'd like to get your name. Could you please tell me your first and last name?",
+            timestamp: new Date()
+          }
+          setMessages(prev => [...prev, message])
+        }
+        break
+
+      case 'email':
+        if (extracted.email && validateEmail(extracted.email)) {
+          setLeadStep('phone')
+          const message: Message = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: `Perfect! What's your phone number? (This helps us reach you faster)`,
+            timestamp: new Date()
+          }
+          setMessages(prev => [...prev, message])
+        } else {
+          const message: Message = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: "I need a valid email address. Please provide your email (e.g., john@company.com):",
+            timestamp: new Date()
+          }
+          setMessages(prev => [...prev, message])
+        }
+        break
+
+      case 'phone':
+        if (extracted.phone && validatePhone(extracted.phone)) {
+          setLeadStep('company')
+          const message: Message = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: `Thanks! What company do you work for? (Optional - you can skip this)`,
+            timestamp: new Date()
+          }
+          setMessages(prev => [...prev, message])
+        } else {
+          const message: Message = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: "Please provide a valid phone number (e.g., 555-123-4567 or (555) 123-4567):",
+            timestamp: new Date()
+          }
+          setMessages(prev => [...prev, message])
+        }
+        break
+
+      case 'company':
+        if (userInput.toLowerCase().includes('skip') || userInput.toLowerCase().includes('none')) {
+          setLeadStep('service')
+        } else {
+          updatedLeadInfo.company = userInput.trim()
+          setLeadStep('service')
+        }
+        
+        const message: Message = {
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: `What service are you most interested in?\n\n• SEO & Local Search\n• Web Development\n• Digital Marketing\n• PPC Advertising\n• Other (please specify)`,
+          timestamp: new Date()
+        }
+        setMessages(prev => [...prev, message])
+        break
+
+      case 'service':
+        updatedLeadInfo.service = userInput.trim()
+        setLeadStep('complete')
+        completeLeadCapture(updatedLeadInfo)
+        break
+    }
+  }
+
+  const completeLeadCapture = async (finalLeadInfo: LeadInfo) => {
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: messages,
+          leadCaptured: false,
+          leadInfo: finalLeadInfo
+        })
+      })
+
+      const data = await response.json()
+      
+      const successMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: `Perfect! I've got all your information:\n\n• **Name:** ${finalLeadInfo.name}\n• **Email:** ${finalLeadInfo.email}\n• **Phone:** ${finalLeadInfo.phone}\n• **Company:** ${finalLeadInfo.company || 'Not provided'}\n• **Service:** ${finalLeadInfo.service}\n\nOur team will reach out within 24 hours with detailed information and next steps. In the meantime, feel free to ask me any questions!`,
+        timestamp: new Date()
+      }
+      
+      setMessages(prev => [...prev, successMessage])
+      setLeadCaptured(true)
+      setLeadStep('complete')
+      
+    } catch (error) {
+      console.error('Lead capture error:', error)
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: "I've saved your information, but there was a technical issue. Please also contact us directly at contact@webvello.com to ensure we get your details.",
+        timestamp: new Date()
+      }
+      setMessages(prev => [...prev, errorMessage])
+    }
   }
 
   useEffect(() => {
@@ -63,17 +247,26 @@ export function AIChatbot({
     }
 
     setMessages(prev => [...prev, userMessage])
+    const userInput = input.trim()
     setInput('')
     setIsLoading(true)
 
     try {
+      // If we're in lead collection mode, process the lead step
+      if (leadStep !== 'none' && leadStep !== 'complete') {
+        processLeadStep(userInput)
+        setIsLoading(false)
+        return
+      }
+
       // Call your AI API endpoint
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           messages: [...messages, userMessage],
-          leadCaptured
+          leadCaptured,
+          leadInfo
         })
       })
 
@@ -88,16 +281,10 @@ export function AIChatbot({
 
       setMessages(prev => [...prev, assistantMessage])
 
-      // Check if we should capture lead info
-      if (data.shouldCaptureLead && !leadCaptured) {
+      // Check if we should start lead collection
+      if (data.shouldCaptureLead && !leadCaptured && leadStep === 'none') {
         setTimeout(() => {
-          const leadMessage: Message = {
-            id: (Date.now() + 2).toString(),
-            role: 'assistant',
-            content: "I'd love to help you further! Could you share your email so I can send you detailed information and schedule a consultation?",
-            timestamp: new Date()
-          }
-          setMessages(prev => [...prev, leadMessage])
+          startLeadCollection()
         }, 1000)
       }
 

@@ -62,9 +62,18 @@ interface Message {
   content: string
 }
 
+interface LeadInfo {
+  name?: string
+  email?: string
+  phone?: string
+  company?: string
+  service?: string
+  message?: string
+}
+
 export async function POST(request: Request) {
   try {
-    const { messages, leadCaptured } = await request.json()
+    const { messages, leadCaptured, leadInfo } = await request.json()
     
     if (!messages || !Array.isArray(messages)) {
       return NextResponse.json(
@@ -76,9 +85,38 @@ export async function POST(request: Request) {
     const lastMessage = messages[messages.length - 1]
     const userInput = lastMessage.content.toLowerCase()
 
-    // Check if user provided email
+    // Check if we have complete lead information
+    if (leadInfo && leadInfo.email && leadInfo.name && !leadCaptured) {
+      // Save lead and send notification
+      const leadData = {
+        email: leadInfo.email,
+        name: leadInfo.name,
+        phone: leadInfo.phone,
+        company: leadInfo.company,
+        service: leadInfo.service,
+        conversation: messages,
+        timestamp: new Date(),
+        source: 'ai-chatbot'
+      }
+      
+      // Send email notification (runs in background)
+      sendLeadNotification(leadData).catch(err => {
+        console.error('Failed to send lead notification:', err)
+      })
+      
+      // Save to database (if configured)
+      await saveLeadToDatabase(leadData)
+
+      return NextResponse.json({
+        message: `Perfect! I've got all your information. Our team will reach out within 24 hours with detailed information.\n\nIn the meantime, would you like to:\n• Schedule a consultation: https://webvello.com/contact\n• Explore our services: https://webvello.com/services\n• See case studies: https://webvello.com/case-studies\n\nIs there anything else I can help you with?`,
+        leadCaptured: true,
+        shouldCaptureLead: false
+      })
+    }
+
+    // Legacy email-only capture (for backward compatibility)
     const emailMatch = lastMessage.content.match(EMAIL_REGEX)
-    if (emailMatch && !leadCaptured) {
+    if (emailMatch && !leadCaptured && !leadInfo) {
       // Save lead and send notification
       const leadData = {
         email: emailMatch[0],
