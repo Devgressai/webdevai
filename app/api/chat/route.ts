@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { sendLeadNotification, saveLeadToDatabase } from '@/lib/email-service'
 
 // Knowledge base for the chatbot
 const KNOWLEDGE_BASE = {
@@ -65,12 +66,21 @@ export async function POST(request: Request) {
     // Check if user provided email
     const emailMatch = lastMessage.content.match(EMAIL_REGEX)
     if (emailMatch && !leadCaptured) {
-      // Save lead (you can connect this to your CRM/database)
-      await saveLeadToDatabase({
+      // Save lead and send notification
+      const leadData = {
         email: emailMatch[0],
         conversation: messages,
-        timestamp: new Date()
+        timestamp: new Date(),
+        source: 'ai-chatbot'
+      }
+      
+      // Send email notification (runs in background)
+      sendLeadNotification(leadData).catch(err => {
+        console.error('Failed to send lead notification:', err)
       })
+      
+      // Save to database (if configured)
+      await saveLeadToDatabase(leadData)
 
       return NextResponse.json({
         message: `Perfect! I've got your email (${emailMatch[0]}). Our team will reach out within 24 hours with detailed information.\n\nIn the meantime, would you like to:\n• Schedule a consultation: https://webvello.com/contact\n• Explore our services: https://webvello.com/services\n• See case studies: https://webvello.com/case-studies\n\nIs there anything else I can help you with?`,
@@ -145,22 +155,4 @@ function getDefaultResponse(userInput: string): string {
   return "I'd be happy to help! We specialize in:\n\n• SEO & Local Search\n• Web Development\n• Digital Marketing\n• PPC Advertising\n\nWhat specific area interests you? Or would you like to schedule a free consultation to discuss your needs?"
 }
 
-// Mock function to save leads (replace with your actual database/CRM)
-async function saveLeadToDatabase(lead: any) {
-  // TODO: Implement your lead capture logic
-  // Examples:
-  // - Save to database (Prisma, MongoDB, etc.)
-  // - Send to CRM (HubSpot, Salesforce)
-  // - Send email notification
-  // - Add to mailing list
-  
-  console.log('Lead captured:', lead)
-  
-  // Example: Send to a webhook or API
-  // await fetch('https://your-crm.com/api/leads', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(lead)
-  // })
-}
 
