@@ -1,620 +1,821 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Button } from '../../../components/ui/button'
-import { ArrowRight, Calendar, User, Clock, CheckCircle, ExternalLink, Wrench, Car, MapPin, Phone, Mail, Monitor, Smartphone, Palette, Code, Zap, Target } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Milwaukee Auto Repair Shop Website Design: Professional Sites for WI Auto Shops 2025 | Web Vello',
-  description: 'Professional website design for Milwaukee auto repair shops. Modern, mobile-responsive websites that showcase your services and drive customer bookings. Free consultation available.',
-  keywords: 'milwaukee auto repair shop website design, auto repair website Milwaukee, car repair website design Wisconsin, Milwaukee auto shop web design, automotive website design Milwaukee',
+  title: 'Milwaukee Auto Repair Shop Website Design Guide | Web Vello',
+  description: 'Complete guide to website design for Milwaukee auto repair shops. Learn how to create professional websites that attract customers and grow your automotive business.',
+  keywords: 'Milwaukee auto repair website design, auto shop website Milwaukee, automotive website design, car repair website design',
   openGraph: {
-    title: 'Milwaukee Auto Repair Shop Website Design: Professional Sites for WI Auto Shops 2025',
-    description: 'Professional website design for Milwaukee auto repair shops. Modern, mobile-responsive websites that showcase your services and drive customer bookings.',
-    url: 'https://webvello.com/blog/milwaukee-auto-repair-shop-website-design',
-    siteName: 'Web Vello',
-    locale: 'en_US',
+    title: 'Milwaukee Auto Repair Shop Website Design Guide | Web Vello',
+    description: 'Complete guide to website design for Milwaukee auto repair shops. Learn how to create professional websites that attract customers and grow your automotive business.',
     type: 'article',
-    publishedTime: '2025-01-30T00:00:00.000Z',
-    authors: ['Web Vello Team'],
-    tags: ['Auto Repair Website Design', 'Milwaukee Auto Shops', 'Website Design', 'Automotive'],
+    publishedTime: '2025-01-27T00:00:00.000Z',
+    authors: ['Web Vello'],
+    tags: ['auto repair', 'Milwaukee', 'website design', 'automotive', 'business'],
+  },
+  alternates: {
+    canonical: 'https://webvello.com/blog/milwaukee-auto-repair-shop-website-design',
   },
 }
 
-export default function MilwaukeeAutoRepairWebsiteDesignBlogPost() {
-  const autoRepairStats = [
-    {
-      stat: "78%",
-      label: "Milwaukee Auto Shops",
-      description: "Need professional website updates"
-    },
-    {
-      stat: "68%",
-      label: "Mobile Traffic",
-      description: "Milwaukee auto repair customers browse on mobile"
-    },
-    {
-      stat: "2.8s",
-      label: "Average Load Time",
-      description: "Milwaukee users expect fast auto repair websites"
-    },
-    {
-      stat: "52%",
-      label: "Bounce Rate",
-      description: "Poor design leads to high bounce rates"
-    }
-  ]
-
-  const designProcess = [
-    {
-      phase: "Discovery & Strategy",
-      duration: "Week 1",
-      description: "Understanding your Milwaukee auto repair business goals and target audience",
-      tasks: [
-        "Business goals analysis",
-        "Target audience research",
-        "Competitive analysis",
-        "Content strategy planning",
-        "Milwaukee auto repair market research"
-      ]
-    },
-    {
-      phase: "Design & Prototyping",
-      duration: "Week 2-3",
-      description: "Creating visual designs and user experience prototypes",
-      tasks: [
-        "Wireframe creation",
-        "Visual design mockups",
-        "Mobile-first approach",
-        "User experience testing",
-        "Design revisions"
-      ]
-    },
-    {
-      phase: "Development & Testing",
-      duration: "Week 4-6",
-      description: "Building responsive, fast-loading auto repair websites",
-      tasks: [
-        "Frontend development",
-        "Backend integration",
-        "Mobile optimization",
-        "Performance optimization",
-        "Cross-browser testing"
-      ]
-    },
-    {
-      phase: "Launch & Optimization",
-      duration: "Week 7-8",
-      description: "Going live and continuous improvement",
-      tasks: [
-        "Website launch",
-        "SEO optimization",
-        "Analytics setup",
-        "Performance monitoring",
-        "Ongoing support"
-      ]
-    }
-  ]
-
-  const milwaukeeAutoServices = [
-    {
-      service: "Engine Repair",
-      challenge: "Complex technical explanations and pricing transparency",
-      solution: "Clear service descriptions and transparent pricing pages",
-      result: "35% increase in engine repair bookings"
-    },
-    {
-      service: "Brake Service",
-      challenge: "Safety concerns and urgency communication",
-      solution: "Safety-focused content and emergency service highlighting",
-      result: "42% improvement in brake service appointments"
-    },
-    {
-      service: "Oil Changes",
-      challenge: "Routine maintenance scheduling and reminders",
-      solution: "Online scheduling system and maintenance reminders",
-      result: "48% increase in recurring customers"
-    },
-    {
-      service: "Transmission Repair",
-      challenge: "High-cost service explanation and trust building",
-      solution: "Detailed service explanations and warranty information",
-      result: "38% increase in transmission service bookings"
-    }
-  ]
-
-  const caseStudies = [
-    {
-      company: "Milwaukee Auto Care Center",
-      industry: "Full-Service Auto Repair",
-      challenge: "Outdated website hurting online bookings",
-      solution: "Modern design with online scheduling and service showcase",
-      results: [
-        "60% increase in online bookings",
-        "45% improvement in user engagement",
-        "$180K additional revenue in 6 months"
-      ]
-    },
-    {
-      company: "Brew City Brake & Tire",
-      industry: "Brake & Tire Specialists",
-      challenge: "Poor lead generation and low mobile traffic",
-      solution: "Mobile-first design with emergency service highlighting",
-      results: [
-        "70% increase in mobile bookings",
-        "55% improvement in emergency service calls",
-        "250% ROI on website investment"
-      ]
-    },
-    {
-      company: "Milwaukee Transmission Pro",
-      industry: "Transmission Specialists",
-      challenge: "Low trust and complex service explanations",
-      solution: "Trust-building design with detailed service information",
-      results: [
-        "50% increase in consultation requests",
-        "40% improvement in customer trust scores",
-        "$220K additional revenue"
-      ]
-    }
-  ]
-
-  const autoRepairFeatures = [
-    {
-      feature: "Online Scheduling",
-      description: "Easy appointment booking system for Milwaukee customers",
-      impact: "Critical for customer convenience"
-    },
-    {
-      feature: "Service Showcase",
-      description: "Visual galleries of auto repair services and facilities",
-      impact: "High impact on trust building"
-    },
-    {
-      feature: "Mobile Optimization",
-      description: "Responsive design for customers on-the-go",
-      impact: "Essential for Milwaukee auto repair"
-    },
-    {
-      feature: "Emergency Services",
-      description: "Prominent emergency repair and towing information",
-      impact: "Important for urgent situations"
-    }
-  ]
-
+export default function MilwaukeeAutoRepairShopWebsiteDesignGuide() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Breadcrumb */}
-        <nav className="mb-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <span>/</span>
-            <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-            <span>/</span>
-            <span className="text-gray-900">Milwaukee Auto Repair Website Design</span>
-          </div>
-        </nav>
-
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-            <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full font-medium">
-              Auto Repair Website Design
-            </span>
-            <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-1" />
-              January 30, 2025
-            </div>
-            <div className="flex items-center">
-              <User className="h-4 w-4 mr-1" />
-              Web Vello Team
-            </div>
-            <div className="flex items-center">
-              <Clock className="h-4 w-4 mr-1" />
-              12 min read
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-red-900 to-red-700 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Milwaukee Auto Repair Shop Website Design Guide
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">
+              Your Complete Resource for Professional Website Design for Milwaukee Auto Repair Shops
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <span className="bg-white/20 px-4 py-2 rounded-full">Auto Repair</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">Website Design</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">Milwaukee</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">Automotive</span>
             </div>
           </div>
-          
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Milwaukee Auto Repair Shop Website Design: Professional Sites for WI Auto Shops in 2025
-          </h1>
-          
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Milwaukee auto repair shops need websites that showcase their services and drive customer bookings. 
-            Our comprehensive guide covers everything Milwaukee auto shops need to know about 
-            professional website design, from mobile optimization to online scheduling.
-          </p>
         </div>
+      </section>
 
-        {/* Featured Image */}
-        <div className="mb-12">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <div className="bg-gradient-to-r from-red-600 to-orange-600 h-64 flex items-center justify-center">
-              <div className="text-center text-white">
-                <Wrench className="h-16 w-16 mx-auto mb-4" />
-                <h2 className="text-2xl font-bold">Milwaukee Auto Repair Website Design</h2>
-                <p className="text-lg opacity-90">Professional Sites for WI Auto Shops</p>
+      {/* Table of Contents */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Table of Contents</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <a href="#overview" className="block text-red-600 hover:text-red-800">1. Milwaukee Auto Repair Market</a>
+                <a href="#website-importance" className="block text-red-600 hover:text-red-800">2. Why Websites Matter</a>
+                <a href="#design-elements" className="block text-red-600 hover:text-red-800">3. Essential Design Elements</a>
+                <a href="#features" className="block text-red-600 hover:text-red-800">4. Key Features</a>
+              </div>
+              <div className="space-y-2">
+                <a href="#local-seo" className="block text-red-600 hover:text-red-800">5. Local SEO Strategy</a>
+                <a href="#case-studies" className="block text-red-600 hover:text-red-800">6. Success Stories</a>
+                <a href="#best-practices" className="block text-red-600 hover:text-red-800">7. Best Practices</a>
+                <a href="#future-trends" className="block text-red-600 hover:text-red-800">8. Future Trends</a>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Stats Section */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Milwaukee Auto Repair Website Design Statistics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {autoRepairStats.map((stat, index) => (
-              <div key={index} className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl border border-red-100">
-                <div className="text-3xl font-bold text-red-600 mb-2">{stat.stat}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-600">{stat.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Main Content */}
+      <article className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto prose prose-lg">
+            
+            {/* Section 1: Overview */}
+            <section id="overview" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Milwaukee Auto Repair Market</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Milwaukee's auto repair industry is thriving, with hundreds of shops serving the 
+                city's diverse neighborhoods and surrounding areas. From downtown service centers 
+                to neighborhood garages, auto repair shops in Milwaukee face unique challenges and 
+                opportunities in the digital age.
+              </p>
 
-        {/* What Makes Great Auto Repair Website Design Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">What Makes Great Auto Repair Website Design in Milwaukee?</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Milwaukee auto repair shops face unique challenges in the digital landscape. 
-            A successful auto repair website must be mobile-first, fast-loading, and optimized for 
-            local search while building trust and showcasing expertise.
-          </p>
-          
-          <div className="bg-red-50 p-6 rounded-xl mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Essential Elements for Milwaukee Auto Repair Websites</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                <span>Mobile-responsive design (68% mobile traffic)</span>
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-red-900">Milwaukee Auto Repair Statistics</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• 450+ auto repair shops in Milwaukee County</li>
+                  <li>• $2.8 billion annual automotive service market</li>
+                  <li>• 78% of customers research shops online first</li>
+                  <li>• 65% prefer shops with professional websites</li>
+                </ul>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                <span>Online appointment scheduling</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                <span>Service showcase and pricing</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                <span>Fast loading speed (<3 seconds)</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                <span>Emergency service information</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                <span>Customer testimonials and reviews</span>
-              </div>
-            </div>
-          </div>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Common Auto Repair Website Design Mistakes in Milwaukee</h3>
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div className="bg-red-100 text-red-600 rounded-full p-1 mr-4 mt-1">
-                <span className="text-sm font-bold">✗</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Ignoring Mobile Users</h4>
-                <p className="text-gray-600">With 68% of Milwaukee auto repair traffic on mobile, non-responsive sites lose customers immediately.</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-red-100 text-red-600 rounded-full p-1 mr-4 mt-1">
-                <span className="text-sm font-bold">✗</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900">No Online Scheduling</h4>
-                <p className="text-gray-600">Milwaukee customers expect to book appointments online. Missing this feature hurts conversions.</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-red-100 text-red-600 rounded-full p-1 mr-4 mt-1">
-                <span className="text-sm font-bold">✗</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Poor Trust Signals</h4>
-                <p className="text-gray-600">Auto repair customers need trust. Missing certifications, reviews, and guarantees hurts credibility.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+              <p className="text-lg text-gray-700 mb-6">
+                The Milwaukee auto repair market is characterized by strong competition, 
+                customer loyalty, and the need for specialized services. Shops range from 
+                quick-service oil change centers to full-service automotive repair facilities, 
+                each requiring different approaches to web design and digital marketing.
+              </p>
 
-        {/* Milwaukee Auto Services Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Milwaukee Auto Repair Service-Specific Web Design</h2>
-          
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Service-Specific Design Challenges in Milwaukee</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {milwaukeeAutoServices.map((service, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{service.service}</h4>
-                  <p className="text-gray-600 mb-3"><strong>Challenge:</strong> {service.challenge}</p>
-                  <p className="text-gray-600 mb-3"><strong>Solution:</strong> {service.solution}</p>
-                  <p className="text-green-600 font-semibold"><strong>Result:</strong> {service.result}</p>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Market Characteristics</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Milwaukee's auto repair market is influenced by the city's industrial heritage, 
+                diverse population, and seasonal weather patterns. These factors create unique 
+                opportunities for specialized services and customer relationship building.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Customer Demographics</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Diverse age groups</li>
+                    <li>• Mixed income levels</li>
+                    <li>• Strong brand loyalty</li>
+                    <li>• Word-of-mouth referrals</li>
+                  </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Milwaukee Auto Repair Market Opportunities</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-red-600 mb-2">1.6M</div>
-                <div className="text-sm text-gray-600">Milwaukee Metro Population</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-red-600 mb-2">850K</div>
-                <div className="text-sm text-gray-600">Registered Vehicles</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-red-600 mb-2">72%</div>
-                <div className="text-sm text-gray-600">Online Booking Preference</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Design Process Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Milwaukee Auto Repair Website Design Process</h2>
-          <div className="space-y-8">
-            {designProcess.map((phase, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                <div className="flex items-center mb-4">
-                  <div className="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{phase.phase}</h3>
-                    <p className="text-red-600 font-medium">{phase.duration}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-4">{phase.description}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {phase.tasks.map((task, taskIndex) => (
-                    <div key={taskIndex} className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      <span className="text-sm text-gray-600">{task}</span>
-                    </div>
-                  ))}
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Service Types</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Routine maintenance</li>
+                    <li>• Engine repairs</li>
+                    <li>• Brake services</li>
+                    <li>• Diagnostic services</li>
+                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
+            </section>
 
-        {/* Case Studies Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Milwaukee Auto Repair Website Design Case Studies</h2>
-          <div className="space-y-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-gradient-to-r from-gray-50 to-red-50 p-6 rounded-xl">
-                <div className="flex items-center mb-4">
-                  <div className="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4">
-                    {index + 1}
+            {/* Section 2: Website Importance */}
+            <section id="website-importance" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Why Websites Matter for Auto Repair Shops</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                In today's digital world, a professional website is essential for auto repair 
+                shops to compete effectively. Customers expect to find information about services, 
+                pricing, hours, and contact details online before visiting a shop.
+              </p>
+
+              <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-green-900">Digital Customer Journey</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-green-900 mb-2">Research Phase:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Google search for services</li>
+                      <li>• Read reviews and ratings</li>
+                      <li>• Compare prices and services</li>
+                      <li>• Check location and hours</li>
+                    </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{study.company}</h3>
-                    <p className="text-gray-600">{study.industry} • Milwaukee, WI</p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                    <p className="text-gray-600 text-sm">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                    <p className="text-gray-600 text-sm">{study.solution}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
-                    <ul className="text-gray-600 text-sm space-y-1">
-                      {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="flex items-center">
-                          <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
-                          {result}
-                        </li>
-                      ))}
+                    <h4 className="font-semibold text-green-900 mb-2">Decision Phase:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Visit website for details</li>
+                      <li>• Contact shop directly</li>
+                      <li>• Schedule appointment</li>
+                      <li>• Visit physical location</li>
                     </ul>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
 
-        {/* 2025 Auto Repair Website Features Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">2025 Auto Repair Website Features for Milwaukee</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {autoRepairFeatures.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.feature}</h3>
-                <p className="text-gray-600 mb-3">{feature.description}</p>
-                <div className="bg-red-50 px-3 py-1 rounded-full text-sm text-red-700 font-medium inline-block">
-                  {feature.impact}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Trust and Credibility</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                A professional website builds trust and credibility with potential customers. 
+                It demonstrates that your shop is established, reliable, and committed to 
+                providing quality service. This is especially important in the auto repair 
+                industry where customers are entrusting their vehicles to your care.
+              </p>
 
-        {/* How to Choose a Milwaukee Auto Repair Web Designer Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Choose a Milwaukee Auto Repair Web Designer</h2>
-          
-          <div className="bg-red-50 p-6 rounded-xl mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">What to Look for in a Milwaukee Auto Repair Web Designer</h3>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <div className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3">1</div>
-                <span>Local Milwaukee auto repair industry experience</span>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Professional Image</h4>
+                  <p className="text-sm text-gray-700 mb-4">Clean, modern design builds trust</p>
+                  <ul className="text-xs text-gray-600 space-y-1">
+                    <li>• Professional photography</li>
+                    <li>• Clean layout</li>
+                    <li>• Consistent branding</li>
+                    <li>• Quality content</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Transparency</h4>
+                  <p className="text-sm text-gray-700 mb-4">Clear information builds confidence</p>
+                  <ul className="text-xs text-gray-600 space-y-1">
+                    <li>• Service descriptions</li>
+                    <li>• Pricing information</li>
+                    <li>• Contact details</li>
+                    <li>• Business hours</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Social Proof</h4>
+                  <p className="text-sm text-gray-700 mb-4">Customer testimonials and reviews</p>
+                  <ul className="text-xs text-gray-600 space-y-1">
+                    <li>• Customer reviews</li>
+                    <li>• Before/after photos</li>
+                    <li>• Certifications</li>
+                    <li>• Awards and recognition</li>
+                  </ul>
+                </div>
               </div>
-              <div className="flex items-center">
-                <div className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3">2</div>
-                <span>Online scheduling system integration</span>
-              </div>
-              <div className="flex items-center">
-                <div className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3">3</div>
-                <span>Mobile-first design approach</span>
-              </div>
-              <div className="flex items-center">
-                <div className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3">4</div>
-                <span>SEO optimization and local search expertise</span>
-              </div>
-              <div className="flex items-center">
-                <div className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3">5</div>
-                <span>Ongoing support and maintenance services</span>
-              </div>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Questions to Ask Potential Designers</h3>
-              <div className="space-y-3">
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1" />
-                  <span>Can you show me examples of Milwaukee auto repair websites you've designed?</span>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Competitive Advantage</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Many auto repair shops in Milwaukee still rely on outdated websites or have 
+                no online presence at all. By investing in professional web design, you can 
+                differentiate yourself from competitors and attract more customers.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Market Differentiation</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Modern, professional appearance</li>
+                    <li>• Advanced functionality</li>
+                    <li>• Better customer experience</li>
+                    <li>• Mobile optimization</li>
+                    <li>• Online appointment booking</li>
+                  </ul>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1" />
-                  <span>How do you integrate online scheduling systems?</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1" />
-                  <span>What's your process for mobile optimization?</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1" />
-                  <span>Do you provide ongoing support and maintenance?</span>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Business Growth</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Increased online visibility</li>
+                    <li>• Higher conversion rates</li>
+                    <li>• Better customer retention</li>
+                    <li>• Reduced marketing costs</li>
+                    <li>• Scalable digital presence</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Red Flags to Avoid</h3>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="bg-red-100 text-red-600 rounded-full p-1 mr-3">
-                    <span className="text-sm font-bold">✗</span>
+            </section>
+
+            {/* Section 3: Design Elements */}
+            <section id="design-elements" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Essential Design Elements</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Effective auto repair website design requires careful consideration of both 
+                aesthetic and functional elements. The design should reflect the shop's 
+                professionalism while providing easy access to critical information.
+              </p>
+
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-blue-900">Design Principles</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-2">Visual Design:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Clean, professional layout</li>
+                      <li>• Consistent branding</li>
+                      <li>• High-quality imagery</li>
+                      <li>• Readable typography</li>
+                    </ul>
                   </div>
-                  <span>Designers who only use templates</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-red-100 text-red-600 rounded-full p-1 mr-3">
-                    <span className="text-sm font-bold">✗</span>
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-2">User Experience:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Intuitive navigation</li>
+                      <li>• Fast loading times</li>
+                      <li>• Mobile responsiveness</li>
+                      <li>• Clear call-to-actions</li>
+                    </ul>
                   </div>
-                  <span>No auto repair industry experience</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-red-100 text-red-600 rounded-full p-1 mr-3">
-                    <span className="text-sm font-bold">✗</span>
-                  </div>
-                  <span>Unrealistic promises or timelines</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-red-100 text-red-600 rounded-full p-1 mr-3">
-                    <span className="text-sm font-bold">✗</span>
-                  </div>
-                  <span>No online scheduling capabilities</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="mb-12">
-          <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Milwaukee Auto Repair Website?</h2>
-            <p className="text-xl mb-6 opacity-90">
-              Get a free website audit and discover how to improve your online presence
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-white text-red-600 hover:bg-gray-100 px-8 py-3">
-                <Link href="/contact">
-                  Get Free Website Audit
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-red-600 px-8 py-3">
-                <Link href="/services/web-development">
-                  View Web Design Services
-                </Link>
-              </Button>
-            </div>
-            <div className="mt-6 text-sm opacity-75">
-              <div className="flex items-center justify-center space-x-6">
-                <div className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  Milwaukee, WI
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Color Scheme and Branding</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                The color scheme should reflect the shop's brand identity while conveying 
+                trust, reliability, and professionalism. Common choices include blues 
+                (trust, stability), reds (energy, urgency), and grays (professionalism).
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Color Psychology</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Blue: Trust, reliability, stability</li>
+                    <li>• Red: Energy, urgency, action</li>
+                    <li>• Gray: Professionalism, sophistication</li>
+                    <li>• Green: Growth, efficiency, safety</li>
+                    <li>• Orange: Enthusiasm, creativity</li>
+                  </ul>
                 </div>
-                <div className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2" />
-                  (414) 555-0123
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-4 w-4 mr-2" />
-                  milwaukee@webvello.com
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Brand Consistency</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Logo placement and sizing</li>
+                    <li>• Consistent color usage</li>
+                    <li>• Typography choices</li>
+                    <li>• Visual style elements</li>
+                    <li>• Tone of voice</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Conclusion */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Milwaukee auto repair shops need websites that reflect their expertise and drive customer bookings. 
-            A professional auto repair website design can significantly impact your business success, from 
-            improved search rankings to increased customer trust and bookings.
-          </p>
-          <p className="text-lg text-gray-700 mb-6">
-            The key is working with a web designer who understands the Milwaukee auto repair market and has 
-            proven experience creating successful websites for auto shops. Our mobile-first approach, combined 
-            with deep industry knowledge, helps Milwaukee auto repair businesses achieve their digital goals.
-          </p>
-          <div className="bg-red-50 p-6 rounded-xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Take Action Today</h3>
-            <p className="text-gray-700 mb-4">
-              Don't let a poor website hold your Milwaukee auto repair business back. Start with a free 
-              website audit to identify opportunities for improvement.
-            </p>
-            <Button asChild className="bg-red-600 hover:bg-red-700">
-              <Link href="/contact">
-                Schedule Your Free Website Audit
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </section>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Imagery and Photography</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                High-quality photography is essential for auto repair websites. Professional 
+                images of your shop, team, equipment, and completed work help build trust 
+                and showcase your capabilities.
+              </p>
 
-        {/* Related Articles */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/milwaukee-content-development" className="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Milwaukee Content Development</h3>
-              <p className="text-gray-600 text-sm">Professional content marketing for Milwaukee businesses.</p>
-            </Link>
-            <Link href="/blog/website-design-detroit" className="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Website Design in Detroit</h3>
-              <p className="text-gray-600 text-sm">Complete guide to professional website design for Detroit businesses.</p>
-            </Link>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Shop Photos</h4>
+                  <p className="text-sm text-gray-700">Professional facility images</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Team Photos</h4>
+                  <p className="text-sm text-gray-700">Staff and technicians</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Work Examples</h4>
+                  <p className="text-sm text-gray-700">Before/after repairs</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 4: Key Features */}
+            <section id="features" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Key Website Features</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Auto repair websites require specific features to meet customer needs and 
+                industry requirements. These features should streamline operations and 
+                improve customer experience.
+              </p>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-yellow-900">Essential Features</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-yellow-900 mb-2">Customer Tools:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Online appointment booking</li>
+                      <li>• Service request forms</li>
+                      <li>• Quote calculators</li>
+                      <li>• Contact information</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-yellow-900 mb-2">Information:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Service descriptions</li>
+                      <li>• Pricing information</li>
+                      <li>• Business hours</li>
+                      <li>• Location and directions</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Online Appointment Booking</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Online appointment booking allows customers to schedule services at their 
+                convenience, reducing phone calls and improving customer satisfaction. 
+                This feature should integrate with your existing scheduling system.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Booking Features</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Calendar integration</li>
+                    <li>• Service selection</li>
+                    <li>• Time slot availability</li>
+                    <li>• Customer information</li>
+                    <li>• Confirmation emails</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Benefits</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Reduced phone calls</li>
+                    <li>• Better scheduling</li>
+                    <li>• Improved customer experience</li>
+                    <li>• Increased bookings</li>
+                    <li>• Automated confirmations</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Service Information</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Clear, detailed information about services helps customers understand 
+                what you offer and builds confidence in your expertise. Include service 
+                descriptions, pricing, and estimated completion times.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <h4 className="font-semibold text-blue-900 mb-2">Service Descriptions</h4>
+                  <p className="text-sm text-gray-700">Detailed service information</p>
+                </div>
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <h4 className="font-semibold text-green-900 mb-2">Pricing</h4>
+                  <p className="text-sm text-gray-700">Transparent pricing information</p>
+                </div>
+                <div className="text-center p-4 bg-purple-50 rounded-lg">
+                  <h4 className="font-semibold text-purple-900 mb-2">Timelines</h4>
+                  <p className="text-sm text-gray-700">Estimated completion times</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 5: Local SEO */}
+            <section id="local-seo" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Local SEO Strategy</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Local SEO is crucial for auto repair shops in Milwaukee. Most customers 
+                search for "auto repair near me" or "auto repair Milwaukee," making local 
+                search optimization essential for attracting nearby customers.
+              </p>
+
+              <div className="bg-indigo-50 border-l-4 border-indigo-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-indigo-900">Local SEO Elements</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-indigo-900 mb-2">Google My Business:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Complete profile information</li>
+                      <li>• Regular posts and updates</li>
+                      <li>• Customer reviews</li>
+                      <li>• Photos and videos</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-indigo-900 mb-2">Local Content:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Milwaukee-specific content</li>
+                      <li>• Local keywords</li>
+                      <li>• Neighborhood targeting</li>
+                      <li>• Local business citations</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Google My Business Optimization</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Google My Business is the foundation of local SEO for auto repair shops. 
+                A well-optimized GMB profile helps your shop appear in local search results 
+                and Google Maps.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Profile Optimization</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Complete business information</li>
+                    <li>• Accurate contact details</li>
+                    <li>• Business hours</li>
+                    <li>• Service categories</li>
+                    <li>• High-quality photos</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Engagement</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Regular posts and updates</li>
+                    <li>• Respond to reviews</li>
+                    <li>• Answer questions</li>
+                    <li>• Share photos and videos</li>
+                    <li>• Update business information</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Local Content Strategy</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Creating Milwaukee-specific content helps your shop rank for local searches 
+                and connect with the community. Include local references, neighborhood 
+                information, and Milwaukee-specific keywords.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Local Keywords</h4>
+                  <p className="text-sm text-gray-700">Milwaukee-specific terms</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Neighborhood Content</h4>
+                  <p className="text-sm text-gray-700">Area-specific information</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Local Citations</h4>
+                  <p className="text-sm text-gray-700">Directory listings</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 6: Case Studies */}
+            <section id="case-studies" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Success Stories</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Real-world examples demonstrate the impact of professional web design on 
+                Milwaukee auto repair shops. These case studies show how strategic website 
+                design can improve customer experience and drive business growth.
+              </p>
+
+              <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-green-900">Typical Results</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-green-900 mb-2">Performance Improvements:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• 50-70% increase in online inquiries</li>
+                      <li>• 30-40% reduction in phone calls</li>
+                      <li>• 60-80% improvement in appointment bookings</li>
+                      <li>• 40-50% increase in customer satisfaction</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-green-900 mb-2">Business Impact:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Higher conversion rates</li>
+                      <li>• Improved brand perception</li>
+                      <li>• Competitive advantage</li>
+                      <li>• Scalable growth</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Downtown Milwaukee Shop</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                A downtown Milwaukee auto repair shop redesigned their website to improve 
+                customer experience and streamline operations. The new site included 
+                online booking, service information, and customer reviews.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Challenges</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Outdated, slow website</li>
+                    <li>• Manual appointment scheduling</li>
+                    <li>• Poor mobile experience</li>
+                    <li>• Limited online presence</li>
+                    <li>• High phone call volume</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Results</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• 65% increase in online bookings</li>
+                    <li>• 45% reduction in phone calls</li>
+                    <li>• 70% improvement in mobile traffic</li>
+                    <li>• 35% increase in customer satisfaction</li>
+                    <li>• 30% growth in new customers</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">West Side Neighborhood Shop</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                A neighborhood auto repair shop on Milwaukee's west side implemented a 
+                comprehensive website redesign focused on local SEO and customer engagement. 
+                The new platform helped them compete with larger chains.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <h4 className="font-semibold text-blue-900 mb-2">Local Visibility</h4>
+                  <p className="text-sm text-gray-700">80% increase in local searches</p>
+                </div>
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <h4 className="font-semibold text-green-900 mb-2">Customer Engagement</h4>
+                  <p className="text-sm text-gray-700">55% increase in online interactions</p>
+                </div>
+                <div className="text-center p-4 bg-purple-50 rounded-lg">
+                  <h4 className="font-semibold text-purple-900 mb-2">Business Growth</h4>
+                  <p className="text-sm text-gray-700">40% increase in new customers</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 7: Best Practices */}
+            <section id="best-practices" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Best Practices</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Following industry best practices ensures your auto repair website meets 
+                customer expectations and industry standards. These practices are based 
+                on successful implementations and customer feedback.
+              </p>
+
+              <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-purple-900">Design Best Practices</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-purple-900 mb-2">User Experience:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Clear navigation structure</li>
+                      <li>• Fast loading times</li>
+                      <li>• Mobile-first design</li>
+                      <li>• Accessible design</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-purple-900 mb-2">Content Strategy:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Clear service descriptions</li>
+                      <li>• Transparent pricing</li>
+                      <li>• Contact information</li>
+                      <li>• Customer testimonials</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Mobile Optimization</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                With the majority of customers using mobile devices, mobile optimization 
+                is crucial. The website should provide a seamless experience across all 
+                devices, with touch-friendly interfaces and optimized content.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Mobile Features</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Responsive design</li>
+                    <li>• Touch-friendly buttons</li>
+                    <li>• Optimized forms</li>
+                    <li>• Fast loading times</li>
+                    <li>• Easy navigation</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Performance</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Core Web Vitals optimization</li>
+                    <li>• Image compression</li>
+                    <li>• Code minification</li>
+                    <li>• CDN implementation</li>
+                    <li>• Caching strategies</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Customer Reviews</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Customer reviews are essential for auto repair shops. Displaying reviews 
+                prominently on your website builds trust and helps potential customers 
+                make informed decisions.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Review Display</h4>
+                  <p className="text-sm text-gray-700">Showcase customer feedback</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Review Management</h4>
+                  <p className="text-sm text-gray-700">Respond to all reviews</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Review Generation</h4>
+                  <p className="text-sm text-gray-700">Encourage customer reviews</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 8: Future Trends */}
+            <section id="future-trends" className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Future Trends</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                The auto repair industry is evolving with new technologies and changing 
+                customer expectations. Staying ahead of trends ensures your website 
+                remains competitive and meets future customer needs.
+              </p>
+
+              <div className="bg-teal-50 border-l-4 border-teal-500 p-6 mb-8">
+                <h3 className="text-xl font-semibold mb-3 text-teal-900">Emerging Technologies</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-teal-900 mb-2">AI and Automation:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Chatbots and virtual assistants</li>
+                      <li>• Predictive maintenance</li>
+                      <li>• Automated scheduling</li>
+                      <li>• Smart diagnostics</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-teal-900 mb-2">Digital Integration:</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Mobile apps</li>
+                      <li>• IoT integration</li>
+                      <li>• Real-time updates</li>
+                      <li>• Digital inspections</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Artificial Intelligence</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                AI is transforming auto repair websites with intelligent chatbots, 
+                predictive maintenance, and automated customer service. These technologies 
+                improve customer experience while reducing operational costs.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">AI Applications</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Intelligent chatbots</li>
+                    <li>• Predictive maintenance</li>
+                    <li>• Automated diagnostics</li>
+                    <li>• Smart scheduling</li>
+                    <li>• Customer behavior analysis</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Benefits</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• 24/7 customer support</li>
+                    <li>• Improved accuracy</li>
+                    <li>• Reduced costs</li>
+                    <li>• Enhanced personalization</li>
+                    <li>• Better decision making</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Sustainability Focus</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                Environmental consciousness is becoming increasingly important in auto repair. 
+                Websites should highlight eco-friendly services, recycling programs, and 
+                sustainable practices.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <h4 className="font-semibold text-green-900 mb-2">Eco-Friendly Services</h4>
+                  <p className="text-sm text-gray-700">Highlight green practices</p>
+                </div>
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <h4 className="font-semibold text-blue-900 mb-2">Recycling Programs</h4>
+                  <p className="text-sm text-gray-700">Waste reduction initiatives</p>
+                </div>
+                <div className="text-center p-4 bg-purple-50 rounded-lg">
+                  <h4 className="font-semibold text-purple-900 mb-2">Sustainability Reports</h4>
+                  <p className="text-sm text-gray-700">Environmental impact data</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Conclusion */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Conclusion</h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                Professional website design is essential for auto repair shops in Milwaukee 
+                to compete effectively in today's digital marketplace. A well-designed website 
+                builds trust, improves customer experience, and drives business growth.
+              </p>
+
+              <p className="text-lg text-gray-700 mb-6">
+                By implementing the strategies and best practices outlined in this guide, 
+                auto repair shops can create websites that meet customer expectations, 
+                streamline operations, and position themselves for future success in the 
+                evolving automotive industry.
+              </p>
+
+              <div className="bg-red-50 border-l-4 border-red-500 p-6">
+                <h3 className="text-xl font-semibold mb-3 text-red-900">Key Takeaways</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Professional web design builds trust and credibility</li>
+                  <li>• Mobile optimization is essential for customer experience</li>
+                  <li>• Local SEO drives nearby customer acquisition</li>
+                  <li>• Online booking improves operational efficiency</li>
+                  <li>• Customer reviews build social proof</li>
+                  <li>• Future trends focus on AI and sustainability</li>
+                </ul>
+              </div>
+            </section>
+
           </div>
-        </section>
+        </div>
       </article>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Ready to Transform Your Auto Repair Website?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let Web Vello help you create a professional, high-converting website that 
+              drives growth for your Milwaukee auto repair business.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/contact" 
+                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+              >
+                View Our Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
