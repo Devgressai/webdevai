@@ -152,3 +152,4 @@ The API now includes debug logging. Check Vercel function logs to see:
 Your chatbot is now much smarter and should properly understand when users want to be contacted. The improvements are deployed and ready for testing!
 
 **Test it now at: https://www.webvello.com** 🚀
+

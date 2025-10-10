@@ -116,3 +116,4 @@ https://www.webvello.com
 Your AI chatbot is live and working! It's now capturing leads 24/7 and sending them directly to your email using your existing Resend setup.
 
 **Ready to start getting more leads!** 🚀
+
