@@ -50,7 +50,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'email-marketing-design',
     'social-media-design',
     'cro-ecommerce',
-    'cro-lead-generation'
+    'cro-lead-generation',
+    // New service pages added
+    'seo-consulting-charlotte',
+    'web-design-albuquerque',
+    'seo-baltimore',
+    'web-development-las-vegas',
+    'web-application-development-chicago',
+    'website-design-louisville',
+    'web-design-columbus',
+    'website-design-oklahoma-city',
+    'seo-company-mesa',
+    'web-design-oklahoma-city'
   ]
 
   // All cities - include all for comprehensive coverage
@@ -68,7 +79,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog pages
   const blogPages = [
-    'essential-website-features-2024'
+    'essential-website-features-2024',
+    'voice-search-seo-optimization-2024',
+    'local-seo-checklist-25-steps',
+    'ai-powered-seo-machine-learning',
+    // New blog posts added
+    'seattle-software-development-guide',
+    'healthcare-web-design-companies-guide',
+    'arizona-organic-seo-growth-strategy',
+    'education-companies-el-paso-guide',
+    'freight-forwarder-web-design-guide',
+    'government-companies-el-paso-guide',
+    'seo-partnership-milwaukee-guide',
+    'seo-service-complete-guide',
+    'detroit-conversion-rate-optimization-services',
+    'el-paso-conversion-rate-optimization-services',
+    'louisville-conversion-rate-optimization-services',
+    'oklahoma-city-conversion-rate-optimization-company',
+    'oklahoma-city-conversion-rate-optimization-services',
+    'logistics-web-design-california',
+    'milwaukee-auto-repair-shop-website-design',
+    'milwaukee-content-development',
+    'web-developer-fresno',
+    'website-design-detroit',
+    'website-design-in-detroit'
   ]
 
   // Generate core page entries
