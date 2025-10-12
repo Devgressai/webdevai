@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from '../../components/ui/button'
-import { Phone, Mail, MapPin, Clock, MessageSquare, Users, Zap, CheckCircle, AlertCircle, Star, TrendingUp, Award, Shield, Globe, Calendar, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, MessageSquare, Users, Zap, CheckCircle, AlertCircle, Star, TrendingUp, Award, Shield, Globe, Calendar, ArrowRight, X } from 'lucide-react'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
 import Link from 'next/link'
 // import { useConversionTracking } from '@/hooks/useConversionTracking'
@@ -116,15 +116,13 @@ export function ContactPageClient() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
     phone: '',
     service: '',
-    budget: '',
-    urgency: '',
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [showExitIntent, setShowExitIntent] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -150,13 +148,19 @@ export function ContactPageClient() {
       setFormData({
         name: '',
         email: '',
-        company: '',
         phone: '',
         service: '',
-        budget: '',
-        urgency: '',
         message: ''
       })
+      
+      // Track successful form submission
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submit', {
+          event_category: 'Contact Form',
+          event_label: 'Contact Page',
+          value: formData.service
+        })
+      }
     } catch (error) {
       setSubmitStatus('error')
     } finally {
@@ -166,8 +170,43 @@ export function ContactPageClient() {
 
   const handleStrategySessionClick = () => {
     // Track strategy session request
-    console.log('Strategy session requested')
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click', {
+        event_category: 'CTA',
+        event_label: 'Strategy Session Button'
+      })
+    }
+    // Scroll to form
+    const formElement = document.getElementById('contact-form')
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
+
+  // Exit-intent detection
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    let exitIntentTriggered = false
+    
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0 && !exitIntentTriggered && submitStatus !== 'success') {
+        exitIntentTriggered = true
+        setShowExitIntent(true)
+        
+        // Track exit intent
+        if ((window as any).gtag) {
+          (window as any).gtag('event', 'exit_intent_shown', {
+            event_category: 'Popup',
+            event_label: 'Contact Page'
+          })
+        }
+      }
+    }
+
+    document.addEventListener('mouseout', handleMouseLeave)
+    return () => document.removeEventListener('mouseout', handleMouseLeave)
+  }, [submitStatus])
 
   return (
     <div className="min-h-screen bg-white">
@@ -246,12 +285,39 @@ export function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-soft">
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Get Your Free Strategy Session</h2>
-                <p className="text-gray-600">
-                  Fill out the form below and we’ll get back to you within 24 hours with a customized growth strategy for your business.
+            <div id="contact-form" className="bg-white rounded-2xl p-8 shadow-soft">
+              {/* Urgency Banner */}
+              <div className="mb-6 p-4 bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-500 rounded-lg">
+                <p className="text-orange-800 font-semibold flex items-center">
+                  <span className="mr-2">🔥</span>
+                  Only 3 free SEO audits left this week
                 </p>
+              </div>
+
+              <div className="mb-6">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Get Your Free SEO Audit</h2>
+                <p className="text-xl text-blue-600 font-semibold mb-4">Worth $500 - Limited Time Offer</p>
+                <p className="text-gray-600">
+                  We'll analyze your website and show you exactly how to 3x your organic traffic in 6 months.
+                </p>
+              </div>
+
+              {/* Trust Signals */}
+              <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="flex flex-wrap gap-4 items-center justify-center text-sm">
+                  <div className="flex items-center text-gray-700">
+                    <Shield className="h-4 w-4 text-green-600 mr-2" />
+                    100% Secure
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <Star className="h-4 w-4 text-yellow-400 mr-1 fill-current" />
+                    4.9/5 Stars (127 Reviews)
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <Users className="h-4 w-4 text-blue-600 mr-2" />
+                    Join 500+ Businesses
+                  </div>
+                </div>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -288,112 +354,65 @@ export function ContactPageClient() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                      Service Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="ai-seo">AI-Powered SEO</option>
-                      <option value="local-seo">Local SEO</option>
-                      <option value="web-development">Web Development</option>
-                      <option value="ui-ux-design">UI/UX Design</option>
-                      <option value="digital-marketing">Digital Marketing</option>
-                      <option value="consulting">Consulting</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                      Budget Range
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="under-5k">Under $5,000</option>
-                      <option value="5k-10k">$5,000 - $10,000</option>
-                      <option value="10k-25k">$10,000 - $25,000</option>
-                      <option value="25k-50k">$25,000 - $50,000</option>
-                      <option value="over-50k">Over $50,000</option>
-                    </select>
-                  </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number (Optional)
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="(555) 123-4567"
+                  />
+                  <p className="mt-1 text-xs text-gray-500">We'll call you back within 1 hour (business hours)</p>
                 </div>
 
                 <div>
-                  <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 mb-2">
-                    Project Timeline
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    What can we help you with?
                   </label>
                   <select
-                    id="urgency"
-                    name="urgency"
-                    value={formData.urgency}
+                    id="service"
+                    name="service"
+                    value={formData.service}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
-                    <option value="">Select timeline</option>
-                    <option value="asap">ASAP (Within 1 month)</option>
-                    <option value="1-3-months">1-3 months</option>
-                    <option value="3-6-months">3-6 months</option>
-                    <option value="6-months-plus">6+ months</option>
-                    <option value="just-exploring">Just exploring options</option>
+                    <option value="">Select a service</option>
+                    <option value="ai-seo">AI-Powered SEO (Get 300%+ Traffic Growth)</option>
+                    <option value="local-seo">Local SEO (Dominate Local Search)</option>
+                    <option value="web-development">Web Development (Custom Websites)</option>
+                    <option value="ui-ux-design">UI/UX Design (Beautiful Interfaces)</option>
+                    <option value="digital-marketing">Digital Marketing (Full Service)</option>
+                    <option value="consulting">Not Sure - Need Consultation</option>
                   </select>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Tell us about your project
+                    Tell us about your website (Optional)
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    rows={4}
+                    rows={3}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Describe your goals, challenges, and what you hope to achieve..."
+                    placeholder="What's your website URL and main goals? (e.g., increase traffic, improve rankings, generate more leads)"
                   />
+                </div>
+
+                {/* Privacy Notice */}
+                <div className="text-xs text-gray-500 flex items-start">
+                  <Shield className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0 text-green-600" />
+                  <p>
+                    We respect your privacy. Your information is 100% secure and will never be shared. 
+                    Read our <Link href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>.
+                  </p>
                 </div>
 
                 {submitStatus === 'success' && (
@@ -413,21 +432,25 @@ export function ContactPageClient() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
+                      Sending Your Request...
                     </>
                   ) : (
                     <>
-                      <MessageSquare className="mr-2 h-5 w-5" />
-                      Get My Free Strategy Session
+                      <Zap className="mr-2 h-5 w-5" />
+                      Get My Free $500 SEO Audit →
                     </>
                   )}
                 </Button>
+                
+                <p className="text-center text-sm text-gray-500 mt-2">
+                  ⚡ Get results within 24 hours • No credit card required
+                </p>
               </form>
             </div>
 
@@ -581,6 +604,74 @@ export function ContactPageClient() {
           </div>
         </div>
       </section>
+
+      {/* Exit-Intent Popup */}
+      {showExitIntent && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-slide-up">
+            <button
+              onClick={() => setShowExitIntent(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+              aria-label="Close"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            
+            <div className="text-center">
+              <div className="mb-4">
+                <span className="text-6xl">⚡</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Wait! Before You Go...
+              </h3>
+              <p className="text-lg text-gray-600 mb-4">
+                Get a <span className="text-blue-600 font-bold">FREE Website Audit</span> worth $500
+              </p>
+              <p className="text-gray-600 mb-6">
+                We'll show you exactly what's holding your website back and how to fix it.
+              </p>
+              
+              <div className="space-y-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      const email = (e.target as HTMLInputElement).value
+                      if (email) {
+                        setFormData(prev => ({ ...prev, email }))
+                        setShowExitIntent(false)
+                        const formElement = document.getElementById('contact-form')
+                        if (formElement) {
+                          formElement.scrollIntoView({ behavior: 'smooth' })
+                        }
+                      }
+                    }
+                  }}
+                />
+                <Button
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-3 font-bold"
+                  onClick={() => {
+                    setShowExitIntent(false)
+                    const formElement = document.getElementById('contact-form')
+                    if (formElement) {
+                      formElement.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                >
+                  <Zap className="mr-2 h-5 w-5" />
+                  Get My Free Audit
+                </Button>
+              </div>
+              
+              <p className="text-xs text-gray-500 mt-4">
+                No credit card required • 100% free • Results in 24 hours
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
