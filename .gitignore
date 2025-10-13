@@ -21,6 +21,9 @@ build/
 service-account*.json
 google-credentials*.json
 
+# Google Indexing scripts (local only, contains local paths)
+submit-to-google-indexing.js
+
 # IDE
 .vscode/
 .idea/
