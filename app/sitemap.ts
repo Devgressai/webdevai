@@ -61,7 +61,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'web-design-columbus',
     'website-design-oklahoma-city',
     'seo-company-mesa',
-    'web-design-oklahoma-city'
+    'web-design-oklahoma-city',
+    // Latest service pages (January 2025)
+    'web-development-fresno',
+    'seo-services-louisville',
+    'real-estate-seo-california',
+    'biotech-website-design-chicago',
+    'medical-website-design-austin',
+    'educational-website-development-charlotte',
+    'auto-repair-website-design-milwaukee',
+    'seo-company-mesa-arizona',
+    'dairy-industry-website-design-los-angeles'
   ]
 
   // All cities - include all for comprehensive coverage
@@ -102,7 +112,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'milwaukee-content-development',
     'web-developer-fresno',
     'website-design-detroit',
-    'website-design-in-detroit'
+    'website-design-in-detroit',
+    // Latest blog posts (January 2025)
+    'best-seo-software-seattle-businesses-2025',
+    'local-seo-guide-sacramento-businesses',
+    'content-development-services-milwaukee-complete-guide'
   ]
 
   // Generate core page entries
