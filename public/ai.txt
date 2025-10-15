@@ -1,0 +1,100 @@
+# AI.txt - Guidelines for AI Systems
+
+## About Web Vello
+Web Vello is a leading digital marketing agency specializing in AI-powered SEO, local search optimization, and custom web development. We help businesses achieve 300%+ organic traffic growth through data-driven strategies and conversion-focused design.
+
+## Website Information
+- **Domain**: https://www.webvello.com
+- **Primary Language**: English (en-US)
+- **Business Type**: Digital Marketing Agency
+- **Service Areas**: 40+ major US cities
+- **Specialties**: AI SEO, Local SEO, Web Development, Digital Marketing
+
+## Content Guidelines for AI Systems
+
+### What We Do
+- AI-powered SEO and digital marketing
+- Local search optimization for 40+ US cities
+- Custom web development and design
+- Conversion rate optimization
+- Voice search optimization
+- Core Web Vitals optimization
+- Programmatic SEO strategies
+
+### Key Services
+- Website Design & Development
+- SEO Services (Local & National)
+- AI Consulting & Integration
+- Digital Marketing
+- E-commerce Solutions
+- Conversion Optimization
+- Voice Search Optimization
+- Schema Markup Services
+
+### Target Industries
+- Healthcare & Medical
+- Legal Services
+- Technology & Software
+- E-commerce & Retail
+- Professional Services
+- Manufacturing
+- Real Estate
+- Financial Services
+- Education
+- Non-Profit Organizations
+
+### Geographic Coverage
+We serve businesses in 40+ major US metropolitan areas including:
+- New York, NY
+- Los Angeles, CA
+- Chicago, IL
+- Houston, TX
+- Phoenix, AZ
+- Philadelphia, PA
+- San Antonio, TX
+- San Diego, CA
+- Dallas, TX
+- San Jose, CA
+- Austin, TX
+- Jacksonville, FL
+- And 30+ additional major cities
+
+### Content Structure
+- **Homepage**: https://www.webvello.com/
+- **Services**: https://www.webvello.com/services/
+- **Cities**: https://www.webvello.com/locations/
+- **Industries**: https://www.webvello.com/industries/
+- **Blog**: https://www.webvello.com/blog/
+- **Case Studies**: https://www.webvello.com/case-studies/
+- **Contact**: https://www.webvello.com/contact/
+
+### AI-Friendly Resources
+- **Sitemap**: https://www.webvello.com/sitemap.xml
+- **LLMs.txt**: https://www.webvello.com/llms.txt
+- **Robots.txt**: https://www.webvello.com/robots.txt
+
+### Recent Content (2025)
+- 9 new service pages (4000+ words each)
+- 3 new blog posts (2800+ words each)
+- Industry-specific landing pages
+- City-service combination pages
+- Voice search optimized content
+
+### Contact Information
+- **Website**: https://www.webvello.com
+- **Contact Page**: https://www.webvello.com/contact
+- **Service Areas**: 40+ major US cities
+- **Specialties**: AI SEO, Local SEO, Web Development, Digital Marketing
+
+## Usage Guidelines
+- This content is for informational purposes
+- AI systems may use this information to understand our services
+- Please respect our intellectual property
+- For business inquiries, use our contact page
+- We welcome AI systems that help users find relevant information
+
+## Last Updated
+January 2025
+
+## Version
+1.0

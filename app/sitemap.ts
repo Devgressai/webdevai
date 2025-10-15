@@ -3,7 +3,7 @@ import { citySlugs } from '../lib/cities'
 import { industrySlugs } from '../lib/industries'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://webvello.com'
+  const baseUrl = 'https://www.webvello.com'
   
   // Core pages - high priority, high traffic potential
   const corePages = [

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://webvello.com/sitemap.xml
+Sitemap: https://www.webvello.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
@@ -325,6 +325,16 @@ Allow: /services/web-design-columbus/
 Allow: /services/website-design-oklahoma-city/
 Allow: /services/seo-company-mesa/
 Allow: /services/web-design-oklahoma-city/
+# Latest service pages (January 2025)
+Allow: /services/web-development-fresno/
+Allow: /services/seo-services-louisville/
+Allow: /services/real-estate-seo-california/
+Allow: /services/biotech-website-design-chicago/
+Allow: /services/medical-website-design-austin/
+Allow: /services/educational-website-development-charlotte/
+Allow: /services/auto-repair-website-design-milwaukee/
+Allow: /services/seo-company-mesa-arizona/
+Allow: /services/dairy-industry-website-design-los-angeles/
 
 # Allow all new blog posts
 Allow: /blog/seattle-software-development-guide/
@@ -346,6 +356,10 @@ Allow: /blog/milwaukee-content-development/
 Allow: /blog/web-developer-fresno/
 Allow: /blog/website-design-detroit/
 Allow: /blog/website-design-in-detroit/
+# Latest blog posts (January 2025)
+Allow: /blog/best-seo-software-seattle-businesses-2025/
+Allow: /blog/local-seo-guide-sacramento-businesses/
+Allow: /blog/content-development-services-milwaukee-complete-guide/
 
 # Specific rules for different user agents
 User-agent: Googlebot
