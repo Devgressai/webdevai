@@ -4,17 +4,25 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'SEO Services | Technical, On-Page, & Link Building Experts | Web Vello',
-  description: 'Increase rankings, traffic, and revenue with Web Vello’s SEO services. We combine audits, technical fixes, strategic content, and authoritative links to deliver predictable organic growth.',
+  title: 'Professional SEO Services & Experts | Web Vello',
+  description: 'Increase rankings, traffic & revenue with expert SEO. Technical audits, on-page optimization, content strategy & link building for predictable growth.',
   keywords: ['seo agency', 'technical seo services', 'on-page optimization', 'link building services', 'web vello seo'],
   alternates: {
     canonical: 'https://webvello.com/services/seo',
   },
   openGraph: {
-    title: 'Comprehensive SEO Services | Web Vello',
-    description: 'Partner with Web Vello to execute audits, content strategy, technical fixes, and link acquisition that drive sustainable organic growth.',
+    title: 'Professional SEO Services & Experts | Web Vello',
+    description: 'Increase rankings, traffic & revenue with expert SEO. Technical audits, on-page optimization, content strategy & link building.',
     url: 'https://webvello.com/services/seo',
     type: 'website',
+    images: [
+      {
+        url: 'https://webvello.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Web Vello SEO Services',
+      },
+    ],
   }
 }
 

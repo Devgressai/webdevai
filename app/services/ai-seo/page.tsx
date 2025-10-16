@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'AI SEO Agency | Predictive Search Growth Strategies | Web Vello',
-  description: 'Unlock 300%+ organic growth with AI-powered SEO. Web Vello blends machine learning, predictive analytics, and expert strategy to win competitive keywords faster.',
+  title: 'AI SEO Agency | Predictive Growth Strategies',
+  description: 'Leverage AI-powered SEO for 300%+ traffic growth. Predictive keyword research, content optimization & automated performance tracking.',
   keywords: ['ai seo services', 'machine learning seo agency', 'ai keyword research', 'predictive seo analytics', 'ai content optimization'],
   alternates: {
     canonical: 'https://webvello.com/services/ai-seo',
@@ -16,7 +16,15 @@ export const metadata: Metadata = {
     description: 'Combine AI-driven insights with senior strategists to dominate search results, launch intelligent content, and outrank category leaders.',
     url: 'https://webvello.com/services/ai-seo',
     type: 'website',
-  }
+  
+    images: [
+      {
+        url: 'https://webvello.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Web Vello Services',
+      },
+    ],}
 }
 
 const features = [

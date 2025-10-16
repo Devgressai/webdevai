@@ -4,7 +4,7 @@ import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Pricing | Transparent SEO & Web Development Packages',
-  description: 'Affordable SEO, web development, and digital marketing packages starting at $2,500. Transparent pricing with no hidden fees. Custom solutions available.',
+  description: 'Transparent pricing for SEO, web development & digital marketing services. Custom packages tailored to your business goals & budget.',
   keywords: 'SEO pricing, web development cost, digital marketing packages, affordable SEO services',
   openGraph: {
     title: 'Pricing | Web Vello Services',
@@ -13,7 +13,15 @@ export const metadata: Metadata = {
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'website',
-  },
+  
+    images: [
+      {
+        url: 'https://webvello.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Web Vello Services',
+      },
+    ],},
 }
 
 export default function PricingPage() {

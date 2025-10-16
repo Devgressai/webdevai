@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Local SEO Services | Rank #1 in Your Market | Web Vello',
-  description: 'Dominate Google Maps and local search with Web Vello’s Local SEO campaigns. We optimize Google Business Profiles, build citations, and launch review programs that convert nearby customers.',
+  title: 'Local SEO Services | Rank #1 in Your Market',
+  description: 'Dominate local search & get more customers with expert local SEO. Google My Business optimization, citations, reviews & geo-targeted strategies.',
   keywords: ['local seo agency', 'google business profile optimization', 'local citations', 'review management services', 'local seo campaigns'],
   alternates: {
     canonical: 'https://webvello.com/services/local-seo',
@@ -16,7 +16,15 @@ export const metadata: Metadata = {
     description: 'Increase calls, foot traffic, and revenue with a proven local SEO playbook driven by data, reviews, and conversion-focused landing pages.',
     url: 'https://webvello.com/services/local-seo',
     type: 'website',
-  }
+  
+    images: [
+      {
+        url: 'https://webvello.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Web Vello Services',
+      },
+    ],}
 }
 
 const features = [

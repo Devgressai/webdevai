@@ -8,19 +8,28 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { OptimizedImageComponent as HeroImage } from '../components/ui/optimized-image'
 import { LazySection } from '../components/ui/lazy-section'
+import { SchemaMarkup } from '../components/seo/schema-markup'
 import dynamic from 'next/dynamic'
 
 export const metadata: Metadata = {
-  title: 'Web Vello | AI-Powered SEO, Web Development & Digital Marketing Services',
-  description: 'Professional SEO, web development, and digital marketing services that deliver 300%+ organic traffic growth. Serving 500+ businesses nationwide with AI-powered strategies.',
+  title: 'AI-Powered SEO & Web Development | Web Vello',
+  description: 'Get 300%+ organic traffic growth with professional SEO, web development & digital marketing. Trusted by 500+ businesses nationwide.',
   keywords: 'SEO services, web development, digital marketing, AI SEO, local SEO, web design',
   openGraph: {
-    title: 'Web Vello | AI-Powered SEO & Web Development Services',
-    description: 'Professional SEO and web development services that deliver measurable results. 300%+ average traffic growth.',
+    title: 'AI-Powered SEO & Web Development | Web Vello',
+    description: 'Get 300%+ organic traffic growth with professional SEO, web development & digital marketing. Trusted by 500+ businesses.',
     url: 'https://webvello.com',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://webvello.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Web Vello - AI-Powered SEO & Web Development Services',
+      },
+    ],
   },
 }
 
@@ -100,9 +109,44 @@ const testimonials = [
 export default function HomePage() {
   // Server component: no client handlers to minimize JS shipped
 
+  // Organization Schema for better SEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Web Vello",
+    "url": "https://webvello.com",
+    "logo": "https://webvello.com/logo.png",
+    "description": "Professional AI-powered SEO, web development, and digital marketing services",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-737-888-5723",
+      "contactType": "sales",
+      "email": "hello@webvello.com",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/webvello",
+      "https://twitter.com/webvello"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "500",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   return (
-    <div className="min-h-screen">
-      <Hero />
+    <>
+      <SchemaMarkup schema={organizationSchema} />
+      <div className="min-h-screen">
+        <Hero />
       
       {/* Global Results & Trust Section */}
       <LazySection>
@@ -667,5 +711,6 @@ export default function HomePage() {
         <Pricing />
       </LazySection>
     </div>
+    </>
   )
 }

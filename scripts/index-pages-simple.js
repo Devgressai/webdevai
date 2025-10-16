@@ -6,9 +6,9 @@
  * Usage: node scripts/index-pages-simple.js
  */
 
-const https = require('https');
+const http = require('http');
 
-const BASE_URL = 'https://www.webvello.com';
+const BASE_URL = 'http://localhost:3000';
 const API_KEY = 'c13b5a20be67ad7add766e118761cb5bbb56feda0127a01b276737ad39ef59b2';
 
 // Priority pages to index
@@ -68,7 +68,7 @@ function makeRequest(url, body) {
       },
     };
 
-    const req = https.request(url, options, (res) => {
+    const req = http.request(url, options, (res) => {
       let responseData = '';
       
       res.on('data', (chunk) => {
@@ -112,32 +112,33 @@ async function indexPages() {
 
   for (let i = 0; i < PRIORITY_PAGES.length; i++) {
     const path = PRIORITY_PAGES[i];
-    const url = `${BASE_URL}${path}`;
+    const productionUrl = `https://www.webvello.com${path}`;
     const progress = `[${i + 1}/${PRIORITY_PAGES.length}]`;
     
-    console.log(`${progress} Processing: ${url}`);
+    console.log(`${progress} Processing: ${productionUrl}`);
     
     try {
       const response = await makeRequest(
         `${BASE_URL}/api/indexing/notify`,
-        { url, type: 'URL_UPDATED' }
+        { url: productionUrl, type: 'URL_UPDATED' }
       );
 
       if (response.success) {
-        console.log(`✅ Indexed: ${url}`);
+        console.log(`✅ Indexed: ${productionUrl}`);
         results.successful++;
       } else {
-        console.log(`❌ Failed: ${url} - ${response.error || 'Unknown error'}`);
+        console.log(`❌ Failed: ${productionUrl} - ${response.error || 'Unknown error'}`);
         results.failed++;
       }
     } catch (error) {
-      console.log(`❌ Failed: ${url} - ${error.message}`);
+      console.log(`❌ Failed: ${productionUrl} - ${error.message}`);
       results.failed++;
     }
 
-    // Add delay between requests (300ms = ~200 requests per minute)
+    // Add delay between requests (6 seconds as requested)
     if (i < PRIORITY_PAGES.length - 1) {
-      await delay(300);
+      console.log('⏳ Waiting 6 seconds before next request...');
+      await delay(6000);
     }
   }
 
