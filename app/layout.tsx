@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { NewHeader as Header } from '../components/layout/new-header'
+import MobileHeader from '../components/layout/mobile-header'
 import { Footer } from '../components/layout/footer'
 import dynamic from 'next/dynamic'
 const PerformanceMonitor = dynamic(() => import('../components/performance/performance-monitor').then(m => m.PerformanceMonitor), {
@@ -265,6 +266,7 @@ export default function RootLayout({
         {/* <GoogleAnalytics /> */}
         {process.env.NEXT_PUBLIC_ENABLE_PERF_MONITOR === 'true' ? <PerformanceMonitor /> : null}
         <Header />
+        <MobileHeader />
         <main>{children}</main>
         <Footer />
         <AIChatbot businessName="Web Vello" primaryColor="#3b82f6" position="bottom-right" />

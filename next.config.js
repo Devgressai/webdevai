@@ -34,27 +34,111 @@ const nextConfig = {
   // Compression
   compress: true,
   
-  // Headers for better caching and security
+  // Enhanced security headers
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
+          // Prevent clickjacking attacks
           {
             key: 'X-Frame-Options',
             value: 'DENY',
           },
+          // Prevent MIME type sniffing
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
+          // XSS Protection
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          // Referrer Policy
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            value: 'strict-origin-when-cross-origin',
           },
+          // Content Security Policy
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "img-src 'self' data: https: blob:",
+              "font-src 'self' https://fonts.gstatic.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://vitals.vercel-insights.com",
+              "frame-src 'none'",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "frame-ancestors 'none'",
+              "upgrade-insecure-requests"
+            ].join('; '),
+          },
+          // Permissions Policy
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            value: [
+              'camera=()',
+              'microphone=()',
+              'geolocation=()',
+              'gyroscope=()',
+              'magnetometer=()',
+              'payment=()',
+              'usb=()',
+              'accelerometer=()',
+              'ambient-light-sensor=()',
+              'autoplay=()',
+              'battery=()',
+              'display-capture=()',
+              'document-domain=()',
+              'encrypted-media=()',
+              'fullscreen=(self)',
+              'picture-in-picture=()',
+              'publickey-credentials-get=()',
+              'screen-wake-lock=()',
+              'sync-xhr=()',
+              'web-share=()',
+              'xr-spatial-tracking=()'
+            ].join(', '),
+          },
+          // Strict Transport Security
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          // Cross-Origin Embedder Policy
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'require-corp',
+          },
+          // Cross-Origin Opener Policy
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
+          },
+          // Cross-Origin Resource Policy
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'same-origin',
+          },
+          // DNS Prefetch Control
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          // Download Options
+          {
+            key: 'X-Download-Options',
+            value: 'noopen',
+          },
+          // IE XSS Filter
+          {
+            key: 'X-IE-Over-Options',
+            value: 'deny',
           },
         ],
       },
