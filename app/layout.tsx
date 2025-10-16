@@ -4,7 +4,7 @@ import './globals.css'
 import { NewHeader as Header } from '../components/layout/new-header'
 import { Footer } from '../components/layout/footer'
 import dynamic from 'next/dynamic'
-const PerformanceMonitor = dynamic(() => import('../components/analytics/performance-monitor').then(m => m.PerformanceMonitor), {
+const PerformanceMonitor = dynamic(() => import('../components/performance/performance-monitor').then(m => m.PerformanceMonitor), {
   ssr: false
 })
 const AIChatbot = dynamic(() => import('../components/chat/ai-chatbot').then(m => m.AIChatbot), {
