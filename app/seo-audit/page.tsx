@@ -55,7 +55,7 @@ const schemaData = {
 export default function SEOAuditPage() {
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SchemaMarkup schema={schemaData} />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}

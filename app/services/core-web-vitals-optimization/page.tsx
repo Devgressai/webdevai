@@ -53,7 +53,7 @@ const schemaData = {
 export default function CoreWebVitalsOptimizationPage() {
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SchemaMarkup schema={schemaData} />
       
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">
         {/* Hero Section */}
@@ -330,16 +330,11 @@ export default function CoreWebVitalsOptimizationPage() {
         </section>
 
         <RelatedLinks 
-          relatedServices={[
+          links={[
             { title: 'Technical SEO Services', url: '/services/technical-seo', description: 'Comprehensive technical SEO optimization' },
             { title: 'Website Speed Optimization', url: '/services/website-speed-optimization', description: 'Complete website speed improvement' },
             { title: 'Mobile SEO Services', url: '/services/mobile-seo', description: 'Mobile-first SEO optimization' },
             { title: 'E-commerce SEO', url: '/services/ecommerce-seo', description: 'E-commerce performance optimization' }
-          ]}
-          breadcrumbs={[
-            { title: 'Home', url: '/' },
-            { title: 'Services', url: '/services' },
-            { title: 'Core Web Vitals Optimization', url: '/services/core-web-vitals-optimization' }
           ]}
         />
       </div>

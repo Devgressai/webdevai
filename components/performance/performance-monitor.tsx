@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 interface WebVitals {
   lcp?: number
-  fid?: number
+  inp?: number
   cls?: number
   fcp?: number
   ttfb?: number
@@ -27,12 +27,12 @@ export function PerformanceMonitor() {
       
       // Measure Core Web Vitals
       if (typeof window !== 'undefined') {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => setVitals(prev => ({ ...prev, cls: metric.value })))
-          getFID((metric) => setVitals(prev => ({ ...prev, fid: metric.value })))
-          getFCP((metric) => setVitals(prev => ({ ...prev, fcp: metric.value })))
-          getLCP((metric) => setVitals(prev => ({ ...prev, lcp: metric.value })))
-          getTTFB((metric) => setVitals(prev => ({ ...prev, ttfb: metric.value })))
+        import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+          onCLS((metric) => setVitals(prev => ({ ...prev, cls: metric.value })))
+          onINP((metric) => setVitals(prev => ({ ...prev, inp: metric.value })))
+          onFCP((metric) => setVitals(prev => ({ ...prev, fcp: metric.value })))
+          onLCP((metric) => setVitals(prev => ({ ...prev, lcp: metric.value })))
+          onTTFB((metric) => setVitals(prev => ({ ...prev, ttfb: metric.value })))
         })
       }
     }
@@ -51,10 +51,10 @@ export function PerformanceMonitor() {
       issues++
     }
 
-    // FID scoring (0-30 points)
-    if (vitals.fid) {
-      if (vitals.fid <= 100) score += 0
-      else if (vitals.fid <= 300) score -= 10
+    // INP scoring (0-30 points)
+    if (vitals.inp) {
+      if (vitals.inp <= 200) score += 0
+      else if (vitals.inp <= 500) score -= 10
       else score -= 20
       issues++
     }
@@ -123,11 +123,11 @@ export function PerformanceMonitor() {
           </div>
         )}
 
-        {vitals.fid && (
+        {vitals.inp && (
           <div className="flex justify-between items-center">
-            <span className="text-gray-600">FID:</span>
-            <span className={`font-mono ${getVitalStatus(vitals.fid, 100).color}`}>
-              {getVitalStatus(vitals.fid, 100).icon} {vitals.fid.toFixed(0)}ms
+            <span className="text-gray-600">INP:</span>
+            <span className={`font-mono ${getVitalStatus(vitals.inp, 200).color}`}>
+              {getVitalStatus(vitals.inp, 200).icon} {vitals.inp.toFixed(0)}ms
             </span>
           </div>
         )}

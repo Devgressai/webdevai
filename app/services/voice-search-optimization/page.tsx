@@ -53,7 +53,7 @@ const schemaData = {
 export default function VoiceSearchOptimizationPage() {
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SchemaMarkup schema={schemaData} />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
@@ -334,16 +334,11 @@ export default function VoiceSearchOptimizationPage() {
         </section>
 
         <RelatedLinks 
-          relatedServices={[
+          links={[
             { title: 'AI SEO Services', url: '/services/ai-seo', description: 'Advanced AI-powered SEO strategies' },
             { title: 'Local SEO Services', url: '/services/local-seo', description: 'Dominate local search results' },
             { title: 'Technical SEO Services', url: '/services/technical-seo', description: 'Optimize your website\'s technical foundation' },
             { title: 'Content Marketing', url: '/services/content-marketing', description: 'Create voice-search-friendly content' }
-          ]}
-          breadcrumbs={[
-            { title: 'Home', url: '/' },
-            { title: 'Services', url: '/services' },
-            { title: 'Voice Search Optimization', url: '/services/voice-search-optimization' }
           ]}
         />
       </div>

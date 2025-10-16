@@ -53,7 +53,7 @@ const schemaData = {
 export default function ProgrammaticSEOPage() {
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SchemaMarkup schema={schemaData} />
       
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
         {/* Hero Section */}
@@ -334,16 +334,11 @@ export default function ProgrammaticSEOPage() {
         </section>
 
         <RelatedLinks 
-          relatedServices={[
+          links={[
             { title: 'Technical SEO Services', url: '/services/technical-seo', description: 'Comprehensive technical SEO optimization' },
             { title: 'Content Marketing Services', url: '/services/content-marketing', description: 'Strategic content creation and optimization' },
             { title: 'E-commerce SEO', url: '/services/ecommerce-seo', description: 'E-commerce SEO optimization' },
             { title: 'Local SEO Services', url: '/services/local-seo', description: 'Local search optimization' }
-          ]}
-          breadcrumbs={[
-            { title: 'Home', url: '/' },
-            { title: 'Services', url: '/services' },
-            { title: 'Programmatic SEO', url: '/services/programmatic-seo' }
           ]}
         />
       </div>

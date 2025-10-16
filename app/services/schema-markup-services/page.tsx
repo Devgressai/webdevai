@@ -53,7 +53,7 @@ const schemaData = {
 export default function SchemaMarkupServicesPage() {
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SchemaMarkup schema={schemaData} />
       
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-100">
         {/* Hero Section */}
@@ -304,16 +304,11 @@ export default function SchemaMarkupServicesPage() {
         </section>
 
         <RelatedLinks 
-          relatedServices={[
+          links={[
             { title: 'Technical SEO Services', url: '/services/technical-seo', description: 'Comprehensive technical SEO optimization' },
             { title: 'Local SEO Services', url: '/services/local-seo', description: 'Local search optimization' },
             { title: 'Voice Search Optimization', url: '/services/voice-search-optimization', description: 'Voice search and featured snippet optimization' },
             { title: 'E-commerce SEO', url: '/services/ecommerce-seo', description: 'E-commerce SEO optimization' }
-          ]}
-          breadcrumbs={[
-            { title: 'Home', url: '/' },
-            { title: 'Services', url: '/services' },
-            { title: 'Schema Markup Services', url: '/services/schema-markup-services' }
           ]}
         />
       </div>

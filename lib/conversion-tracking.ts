@@ -1,4 +1,9 @@
 // Advanced Conversion Tracking System
+
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: any[]): void
+}
 export interface ConversionEvent {
   eventName: string
   eventCategory: string

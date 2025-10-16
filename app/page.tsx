@@ -6,7 +6,7 @@ import { METRICS } from '@/lib/site-metrics'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, TrendingUp, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { HeroImage } from '../components/ui/optimized-image'
+import { OptimizedImageComponent as HeroImage } from '../components/ui/optimized-image'
 import { LazySection } from '../components/ui/lazy-section'
 import dynamic from 'next/dynamic'
 

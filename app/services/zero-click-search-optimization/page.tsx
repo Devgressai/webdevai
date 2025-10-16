@@ -53,7 +53,7 @@ const schemaData = {
 export default function ZeroClickSearchOptimizationPage() {
   return (
     <>
-      <SchemaMarkup data={schemaData} />
+      <SchemaMarkup schema={schemaData} />
       
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
         {/* Hero Section */}
@@ -333,16 +333,11 @@ export default function ZeroClickSearchOptimizationPage() {
         </section>
 
         <RelatedLinks 
-          relatedServices={[
+          links={[
             { title: 'Voice Search Optimization', url: '/services/voice-search-optimization', description: 'Voice search and featured snippet optimization' },
             { title: 'Schema Markup Services', url: '/services/schema-markup-services', description: 'Rich snippets and structured data optimization' },
             { title: 'Featured Snippet Optimization', url: '/services/featured-snippet-optimization', description: 'Position zero optimization' },
             { title: 'Technical SEO Services', url: '/services/technical-seo', description: 'Comprehensive technical SEO optimization' }
-          ]}
-          breadcrumbs={[
-            { title: 'Home', url: '/' },
-            { title: 'Services', url: '/services' },
-            { title: 'Zero-Click Search Optimization', url: '/services/zero-click-search-optimization' }
           ]}
         />
       </div>
