@@ -6,7 +6,7 @@ import { METRICS } from '@/lib/site-metrics'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, TrendingUp, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { OptimizedImageComponent as HeroImage } from '../components/ui/optimized-image'
+// import { OptimizedImageComponent as HeroImage } from '../components/ui/optimized-image' // Not needed for external Unsplash URLs
 import { LazySection } from '../components/ui/lazy-section'
 import { SchemaMarkup } from '../components/seo/schema-markup'
 import dynamic from 'next/dynamic'
@@ -344,11 +344,12 @@ export default function HomePage() {
             </div>
             
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <HeroImage 
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96">
+                <Image 
                   src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&crop=center"
                   alt="Professional digital marketing team collaborating on strategy"
-                  className="w-full h-96"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
@@ -398,11 +399,12 @@ export default function HomePage() {
 
           {/* Hero Image */}
           <div className="mb-16">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <HeroImage 
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96">
+              <Image 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&crop=center"
                 alt="Digital marketing team working on analytics and strategy"
-                className="w-full h-96"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
