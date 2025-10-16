@@ -71,7 +71,7 @@ const testimonials = [
     role: "CEO",
     content: "Web Vello transformed our online presence. Our organic traffic increased by 300% in just 6 months!",
     rating: 5,
-    avatar: "/testimonials/sarah-johnson.jpg"
+    avatar: "/images/sarah-johnson.webp"
   },
   {
     name: "Michael Chen",
@@ -79,7 +79,7 @@ const testimonials = [
     role: "Founder",
     content: "Their local SEO strategies helped us dominate our market. We’re now the #1 result for all our target keywords.",
     rating: 5,
-    avatar: "/testimonials/michael-chen.jpg"
+    avatar: "/images/michael-chen.webp"
   },
   {
     name: "Emily Rodriguez",
@@ -87,7 +87,7 @@ const testimonials = [
     role: "Marketing Director",
     content: "The custom website they built for us increased our conversion rate by 150%. Amazing results!",
     rating: 5,
-    avatar: "/testimonials/emily-rodriguez.jpg"
+    avatar: "/images/emily-rodriguez.webp"
   }
 ]
 

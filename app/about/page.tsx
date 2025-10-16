@@ -30,26 +30,30 @@ const team = [
   {
     name: "George S.",
     position: "CEO & Founder",
-    bio: "Visionary leader with extensive experience in digital marketing and business strategy, driving Web Vello’s mission to deliver exceptional results.",
-    expertise: ["Strategic Planning", "Business Development", "Client Relations"]
+    bio: "Visionary leader with extensive experience in digital marketing and business strategy, driving Web Vello's mission to deliver exceptional results.",
+    expertise: ["Strategic Planning", "Business Development", "Client Relations"],
+    photo: "/images/george-s.webp"
   },
   {
     name: "Rueben G.",
     position: "CTO & AI Specialist",
     bio: "Leading our AI-powered SEO initiatives and technical innovation across all digital marketing solutions with cutting-edge technology.",
-    expertise: ["AI/ML", "Technical SEO", "Data Analytics"]
+    expertise: ["AI/ML", "Technical SEO", "Data Analytics"],
+    photo: "/images/rueben-g.webp"
   },
   {
     name: "Irina I.",
     position: "Head of Local SEO",
     bio: "Expert in local search optimization with proven strategies for businesses in competitive markets, specializing in Austin and Texas markets.",
-    expertise: ["Local SEO", "Google My Business", "Review Management"]
+    expertise: ["Local SEO", "Google My Business", "Review Management"],
+    photo: "/images/irina-i.webp"
   },
   {
     name: "Mark S.",
     position: "Lead Web Developer",
     bio: "Creating conversion-focused websites that not only look great but drive real business results with modern development practices.",
-    expertise: ["Web Development", "Conversion Optimization", "Performance"]
+    expertise: ["Web Development", "Conversion Optimization", "Performance"],
+    photo: "/images/mark-s.webp"
   }
 ]
 
@@ -180,8 +184,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
               <div key={member.name} className="text-center">
-                <div className="mx-auto h-32 w-32 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 mb-6 flex items-center justify-center">
-                  <Users className="h-16 w-16 text-primary-600" />
+                <div className="mx-auto h-32 w-32 rounded-full overflow-hidden mb-6">
+                  <img 
+                    src={member.photo} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">
                   {member.name}
