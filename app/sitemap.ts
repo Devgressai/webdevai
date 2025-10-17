@@ -71,7 +71,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'educational-website-development-charlotte',
     'auto-repair-website-design-milwaukee',
     'seo-company-mesa-arizona',
-    'dairy-industry-website-design-los-angeles'
+    'dairy-industry-website-design-los-angeles',
+    // New comprehensive landing pages (October 2025) - 4000+ words each
+    'seo-company-government-website',
+    'seo-doctors-kansas-city',
+    'portland-web-marketing',
+    'surgeon-web-design-austin',
+    'retail-development-services',
+    'freight-forwarder-web-design',
+    'energy-seo-company',
+    'web-application-development-company',
+    'wordpress-developers-denver',
+    'jacksonville-ai-seo'
   ]
 
   // All cities - include all for comprehensive coverage
