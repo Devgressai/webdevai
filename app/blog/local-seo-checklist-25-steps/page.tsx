@@ -20,19 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Local SEO Checklist: 25 Steps to Dominate Local Search in 2024 | Web Vello",
-  description: "Complete local SEO checklist with 25 actionable steps to dominate local search results. Boost your local visibility and attract more customers.",
-  url: "https://webvello.com/blog/local-seo-checklist-25-steps",
-  image: "https://webvello.com/blog/local-seo-checklist-25-steps-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function BlogPost() {
   const checklistItems = [
     {
@@ -221,11 +208,7 @@ export default function BlogPost() {
   ]
 
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Breadcrumb */}
@@ -456,6 +439,5 @@ export default function BlogPost() {
         </div>
       </article>
     </div>
-    </>
   )
 }

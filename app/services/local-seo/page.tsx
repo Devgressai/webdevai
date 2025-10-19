@@ -3,8 +3,6 @@ import { ArrowRight, Globe, MapPin, Star, Users, TrendingUp, Target, CheckCircle
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
-import { SchemaMarkup } from '../../../components/seo/schema-markup'
-import { generateServicePageSchema } from '../../../lib/advanced-schema-generator'
 
 export const metadata: Metadata = {
   title: 'Local SEO Services | Rank #1 in Your Market',

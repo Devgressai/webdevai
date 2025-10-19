@@ -20,19 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Oklahoma City Conversion Rate Optimization Services: Maximize Your OKC Business ROI 2025 | Web Vello",
-  description: "Professional conversion rate optimization services in Oklahoma City. Increase your website conversions, sales, and ROI with expert strategies.",
-  url: "https://webvello.com/blog/oklahoma-city-conversion-rate-optimization-services",
-  image: "https://webvello.com/blog/oklahoma-city-conversion-rate-optimization-services-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function OklahomaCityCROServicesBlogPost() {
   const croStats = [
     {
@@ -172,11 +159,7 @@ export default function OklahomaCityCROServicesBlogPost() {
   ]
 
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Breadcrumb */}
@@ -582,6 +565,5 @@ export default function OklahomaCityCROServicesBlogPost() {
         </section>
       </article>
     </div>
-    </>
   )
 }

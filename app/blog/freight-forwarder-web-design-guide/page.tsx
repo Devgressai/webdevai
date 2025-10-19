@@ -20,19 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Freight Forwarder Web Design: Complete Guide 2025 | Web Vello",
-  description: "Complete guide to web design for freight forwarders in 2025. Learn about logistics website design, shipping tracking, and digital strategies for freight companies.",
-  url: "https://webvello.com/blog/freight-forwarder-web-design-guide",
-  image: "https://webvello.com/blog/freight-forwarder-web-design-guide-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function FreightForwarderWebDesignGuidePage() {
   const freightStats = [
     {
@@ -340,11 +327,7 @@ export default function FreightForwarderWebDesignGuidePage() {
   ]
 
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -769,6 +752,5 @@ export default function FreightForwarderWebDesignGuidePage() {
         </div>
       </section>
     </div>
-    </>
   )
 }

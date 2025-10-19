@@ -14,26 +14,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Content Development Services Milwaukee 2025 | Complete B2B Content Guide",
-  description: "Complete guide to content development services for Milwaukee businesses. Create high-quality content that drives leads, builds authority, and grows revenue.",
-  url: "https://webvello.com/blog/content-development-services-milwaukee-complete-guide",
-  image: "https://webvello.com/blog/content-development-services-milwaukee-complete-guide-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function ContentDevelopmentMilwaukeeGuideBlogPage() {
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="bg-white">
+    <div className="bg-white">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -499,7 +482,6 @@ export default function ContentDevelopmentMilwaukeeGuideBlogPage() {
         </section>
       </article>
     </div>
-    </>
   );
 }
 

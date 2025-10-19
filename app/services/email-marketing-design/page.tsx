@@ -2,8 +2,6 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Mail, Target, TrendingUp, CheckCircle, Eye, BarChart3, Zap, Users, Shield, MessageSquare, Send, Code, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '../../../lib/utils'
-import { SchemaMarkup } from '../../../components/seo/schema-markup'
-import { generateServicePageSchema } from '../../../lib/advanced-schema-generator'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -94,30 +92,9 @@ const results = [
   }
 ]
 
-// Enhanced FAQs and schema (auto-generated)
-const servicePageFAQs = [
-  { question: "How long does it take to see results?", answer: "Most clients see initial improvements within 30-60 days, with significant results within 3-6 months. Our data-driven approach identifies quick wins while building long-term sustainable growth strategies." },
-  { question: "What makes Web Vello different?", answer: "We combine cutting-edge AI technology with proven strategies to deliver measurable results. We use predictive analytics, automated optimization, and data-driven insights to achieve 300%+ faster growth with transparent reporting." },
-  { question: "Do you provide ongoing support?", answer: "Yes! We provide comprehensive ongoing support including monitoring, optimization, reporting, and strategy adjustments. Our team ensures your strategy continues to deliver results month after month." }
-];
-
-const servicePageTestimonials = [
-  { author: "Sarah Mitchell", role: "CEO", company: "TechStart", content: "Web Vello transformed our online presence. Results exceeded expectations.", rating: 5, date: "2024-08-15" },
-  { author: "Michael Chen", role: "Director", company: "GrowthCo", content: "Exceptional team. We saw 300%+ increase in qualified leads within 6 months.", rating: 5, date: "2024-09-20" }
-];
-
 export default function EmailMarketingDesignPage() {
   return (
-    <>
-      {(() => {
-        const schema = generateServicePageSchema(
-          { name: "Email Marketing Design", description: "Professional Email Marketing Design services", url: "https://webvello.com/services/email-marketing-design" },
-          servicePageFAQs,
-          servicePageTestimonials
-        );
-        return schema.map((s, i) => <SchemaMarkup key={i} schema={s} />);
-      })()}
-      <div className="min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-red-50 via-white to-pink-50 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">

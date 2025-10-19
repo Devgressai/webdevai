@@ -20,19 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Healthcare Web Design Companies: What to Look For in 2025 | Web Vello",
-  description: "Complete guide to choosing healthcare web design companies in 2025. Learn about HIPAA compliance, patient portal integration, and key factors for healthcare website success.",
-  url: "https://webvello.com/blog/healthcare-web-design-companies-guide",
-  image: "https://webvello.com/blog/healthcare-web-design-companies-guide-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function HealthcareWebDesignCompaniesGuidePage() {
   const healthcareStats = [
     {
@@ -254,11 +241,7 @@ export default function HealthcareWebDesignCompaniesGuidePage() {
   ]
 
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -618,6 +601,5 @@ export default function HealthcareWebDesignCompaniesGuidePage() {
         </div>
       </section>
     </div>
-    </>
   )
 }

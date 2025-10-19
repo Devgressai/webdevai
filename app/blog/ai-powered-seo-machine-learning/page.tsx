@@ -20,19 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "AI-Powered SEO: How Machine Learning is Revolutionizing Search in 2024 | Web Vello",
-  description: "Discover how artificial intelligence and machine learning are transforming SEO strategies. Learn about AI SEO tools, techniques, and the future of search optimization.",
-  url: "https://webvello.com/blog/ai-powered-seo-machine-learning",
-  image: "https://webvello.com/blog/ai-powered-seo-machine-learning-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function BlogPost() {
   const aiTools = [
     {
@@ -101,11 +88,7 @@ export default function BlogPost() {
   ]
 
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Breadcrumb */}
@@ -326,6 +309,5 @@ export default function BlogPost() {
         </div>
       </article>
     </div>
-    </>
   )
 }

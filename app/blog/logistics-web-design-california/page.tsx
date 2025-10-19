@@ -18,26 +18,9 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Logistics Web Design California Guide | Web Vello",
-  description: "Complete guide to logistics web design in California. Learn about professional website design for freight, shipping, and supply chain companies in CA.",
-  url: "https://webvello.com/blog/logistics-web-design-california",
-  image: "https://webvello.com/blog/logistics-web-design-california-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function LogisticsWebDesignCaliforniaGuide() {
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="container mx-auto px-4">
@@ -835,6 +818,5 @@ export default function LogisticsWebDesignCaliforniaGuide() {
         </div>
       </section>
     </div>
-    </>
   )
 }

@@ -20,19 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Arizona Organic SEO Growth: Complete Strategy Guide 2025 | Web Vello",
-  description: "Complete guide to Arizona organic SEO growth in 2025. Learn about local SEO strategies, content marketing, and proven techniques to dominate Arizona search results.",
-  url: "https://webvello.com/blog/arizona-organic-seo-growth-strategy",
-  image: "https://webvello.com/blog/arizona-organic-seo-growth-strategy-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function ArizonaOrganicSEOGrowthStrategyPage() {
   const arizonaStats = [
     {
@@ -289,11 +276,7 @@ export default function ArizonaOrganicSEOGrowthStrategyPage() {
   ]
 
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-orange-600 to-red-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -667,6 +650,5 @@ export default function ArizonaOrganicSEOGrowthStrategyPage() {
         </div>
       </section>
     </div>
-    </>
   )
 }

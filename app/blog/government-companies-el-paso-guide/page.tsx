@@ -18,26 +18,9 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Government Companies El Paso Guide | Web Vello",
-  description: "Discover the top government companies in El Paso, Texas. Learn about federal agencies, local government services, and career opportunities in El Paso, Texas.",
-  url: "https://webvello.com/blog/government-companies-el-paso-guide",
-  image: "https://webvello.com/blog/government-companies-el-paso-guide-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function GovernmentCompaniesElPasoGuide() {
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="container mx-auto px-4">
@@ -792,6 +775,5 @@ export default function GovernmentCompaniesElPasoGuide() {
         </div>
       </section>
     </div>
-    </>
   )
 }

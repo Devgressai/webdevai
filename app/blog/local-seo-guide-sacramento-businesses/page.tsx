@@ -14,26 +14,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Local SEO Guide for Sacramento Businesses 2025 | Rank #1 in California Capital",
-  description: "Complete local SEO guide for Sacramento businesses. Dominate Google local search, attract more customers, and outrank competitors in California capital.",
-  url: "https://webvello.com/blog/local-seo-guide-sacramento-businesses",
-  image: "https://webvello.com/blog/local-seo-guide-sacramento-businesses-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function LocalSEOSacramentoGuideBlogPage() {
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="bg-white">
+    <div className="bg-white">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -532,7 +515,6 @@ export default function LocalSEOSacramentoGuideBlogPage() {
         </section>
       </article>
     </div>
-    </>
   );
 }
 

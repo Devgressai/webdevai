@@ -20,19 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Article Schema for rich snippets
-const articleSchema = generateBlogPostSchema({
-  title: "Seattle Software Development: Complete Guide 2025 | Web Vello",
-  description: "Complete guide to Seattle software development in 2025. Learn about the tech ecosystem, top companies, development trends, and how to succeed in Seattle tech hub.",
-  url: "https://webvello.com/blog/seattle-software-development-guide",
-  image: "https://webvello.com/blog/seattle-software-development-guide-og.jpg",
-  datePublished: "2024-01-15T08:00:00Z",
-  dateModified: new Date().toISOString(),
-  author: "Web Vello Team",
-  keywords: []
-});
-
-
 export default function SeattleSoftwareDevelopmentGuidePage() {
   const seattleStats = [
     {
@@ -205,11 +192,7 @@ export default function SeattleSoftwareDevelopmentGuidePage() {
   ]
 
   return (
-    <>
-      {articleSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -567,6 +550,5 @@ export default function SeattleSoftwareDevelopmentGuidePage() {
         </div>
       </section>
     </div>
-    </>
   )
 }
