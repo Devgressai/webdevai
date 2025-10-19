@@ -6,9 +6,9 @@
  * Usage: node scripts/index-200-pages.js
  */
 
-const https = require('https');
+const http = require('http');
 
-const BASE_URL = 'https://www.webvello.com';
+const BASE_URL = 'http://localhost:3000';
 const API_KEY = 'c13b5a20be67ad7add766e118761cb5bbb56feda0127a01b276737ad39ef59b2';
 
 // 200 High-Priority Pages for Indexing
@@ -215,7 +215,7 @@ function makeRequest(url, body) {
       },
     };
 
-    const req = https.request(url, options, (res) => {
+    const req = http.request(url, options, (res) => {
       let responseData = '';
       
       res.on('data', (chunk) => {
@@ -249,7 +249,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 async function indexPages() {
   console.log('🚀 Starting Google Indexing API submission...\n');
   console.log(`📊 Total URLs to index: ${PRIORITY_PAGES.length}\n`);
-  console.log('⏱️  Estimated time: ~${Math.ceil(PRIORITY_PAGES.length * 6 / 60)} minutes (6 sec delay per page)\n');
+  console.log(`⏱️  Estimated time: ~${Math.ceil(PRIORITY_PAGES.length * 3 / 60)} minutes (3 sec delay per page)\n`);
   console.log('━'.repeat(60));
 
   const results = {
@@ -285,12 +285,12 @@ async function indexPages() {
       results.failed++;
     }
 
-    // Add delay between requests (6 seconds)
+    // Add delay between requests (3 seconds)
     if (i < PRIORITY_PAGES.length - 1) {
       const remaining = PRIORITY_PAGES.length - (i + 1);
-      const estimatedMinutes = Math.ceil(remaining * 6 / 60);
-      console.log(`⏳ Waiting 6 seconds... (${remaining} pages remaining, ~${estimatedMinutes} min left)`);
-      await delay(6000);
+      const estimatedMinutes = Math.ceil(remaining * 3 / 60);
+      console.log(`⏳ Waiting 3 seconds... (${remaining} pages remaining, ~${estimatedMinutes} min left)`);
+      await delay(3000);
     }
   }
 

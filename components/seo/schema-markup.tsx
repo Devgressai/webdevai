@@ -233,3 +233,138 @@ export function HowToSchema({
   return <SchemaMarkup schema={schema} />
 }
 
+interface ReviewSchemaProps {
+  itemName: string
+  itemType?: string
+  reviews: Array<{
+    author: string
+    rating: number
+    reviewBody: string
+    datePublished: string
+  }>
+}
+
+export function ReviewSchema({
+  itemName,
+  itemType = "Organization",
+  reviews
+}: ReviewSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": itemType,
+    "name": itemName,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1),
+      "reviewCount": reviews.length,
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": reviews.map(review => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author
+      },
+      "datePublished": review.datePublished,
+      "reviewBody": review.reviewBody,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating,
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }))
+  }
+  
+  return <SchemaMarkup schema={schema} />
+}
+
+interface VideoSchemaProps {
+  name: string
+  description: string
+  thumbnailUrl: string
+  uploadDate: string
+  contentUrl?: string
+  embedUrl?: string
+  duration?: string
+}
+
+export function VideoSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  contentUrl,
+  embedUrl,
+  duration = "PT10M"
+}: VideoSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": name,
+    "description": description,
+    "thumbnailUrl": thumbnailUrl,
+    "uploadDate": uploadDate,
+    "duration": duration,
+    ...(contentUrl && { "contentUrl": contentUrl }),
+    ...(embedUrl && { "embedUrl": embedUrl })
+  }
+  
+  return <SchemaMarkup schema={schema} />
+}
+
+interface ProductSchemaProps {
+  name: string
+  description: string
+  image: string
+  brand: string
+  offers: {
+    price: string
+    priceCurrency: string
+    availability?: string
+    url?: string
+  }
+  aggregateRating?: {
+    ratingValue: number
+    reviewCount: number
+  }
+}
+
+export function ProductSchema({
+  name,
+  description,
+  image,
+  brand,
+  offers,
+  aggregateRating
+}: ProductSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": name,
+    "description": description,
+    "image": image,
+    "brand": {
+      "@type": "Brand",
+      "name": brand
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": offers.price,
+      "priceCurrency": offers.priceCurrency,
+      "availability": offers.availability || "https://schema.org/InStock",
+      "url": offers.url || ""
+    },
+    ...(aggregateRating && {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": aggregateRating.ratingValue,
+        "reviewCount": aggregateRating.reviewCount
+      }
+    })
+  }
+  
+  return <SchemaMarkup schema={schema} />
+}
+

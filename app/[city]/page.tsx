@@ -15,6 +15,8 @@ import {
   Zap,
   Target
 } from 'lucide-react'
+import { SchemaMarkup } from '../../components/seo/schema-markup'
+import { generateCityPageSchema } from '../../lib/advanced-schema-generator'
 
 interface CityPageProps {
   params: {
@@ -156,8 +158,46 @@ export default function CityPage({ params }: CityPageProps) {
     )
   }
 
+  // City-specific FAQs for rich snippets
+  const cityFAQs = [
+    {
+      question: `What services does Web Vello offer in ${city.fullName}?`,
+      answer: `Web Vello offers comprehensive digital services in ${city.fullName} including AI-powered SEO, custom web development, e-commerce solutions, mobile app development, digital marketing, and conversion optimization. We help ${city.name} businesses achieve 300%+ growth through data-driven strategies.`
+    },
+    {
+      question: `How can Web Vello help my ${city.name} business grow?`,
+      answer: `We help ${city.name} businesses grow through proven digital marketing strategies, including local SEO optimization, high-converting website design, AI-powered marketing automation, and comprehensive analytics. Our clients in ${city.fullName} typically see significant increases in traffic, leads, and revenue within 3-6 months.`
+    },
+    {
+      question: `Does Web Vello provide local support in ${city.fullName}?`,
+      answer: `Yes! We provide dedicated support for ${city.name} businesses with personalized service, local market expertise, and ongoing optimization. Our team understands the ${city.fullName} market and creates strategies tailored to your local competition and target audience.`
+    },
+    {
+      question: `What makes Web Vello different from other agencies in ${city.name}?`,
+      answer: `Web Vello combines cutting-edge AI technology with proven marketing strategies to deliver measurable results. Unlike traditional agencies in ${city.name}, we use predictive analytics, automated optimization, and data-driven insights to achieve 300%+ faster growth. Plus, we offer transparent reporting and guaranteed ROI.`
+    },
+    {
+      question: `How quickly can I see results from Web Vello's services in ${city.name}?`,
+      answer: `Most ${city.name} businesses see initial improvements within 30-60 days, with significant growth within 3-6 months. Our AI-powered approach accelerates results by identifying quick wins while building long-term sustainable growth strategies tailored to the ${city.fullName} market.`
+    }
+  ]
+
+  // Generate comprehensive city page schema
+  const citySchema = generateCityPageSchema(
+    {
+      city: city.name,
+      state: city.fullName.split(', ')[1] || city.state,
+      stateCode: city.state
+    },
+    cityFAQs
+  )
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Enhanced LocalBusiness Schema for this city */}
+      {citySchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

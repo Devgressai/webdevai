@@ -149,3 +149,564 @@
 [36/173] (20.8%) Processing: https://www.webvello.com/services/digital-marketing
 ❌ FAILED: Failed to notify Google Indexing API
 ⏳ Waiting 6 seconds... (137 pages remaining, ~14 min left)
+
+[37/173] (21.4%) Processing: https://www.webvello.com/services/email-marketing-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (136 pages remaining, ~14 min left)
+
+[38/173] (22.0%) Processing: https://www.webvello.com/services/social-media-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (135 pages remaining, ~14 min left)
+
+[39/173] (22.5%) Processing: https://www.webvello.com/services/cro-ecommerce
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (134 pages remaining, ~14 min left)
+
+[40/173] (23.1%) Processing: https://www.webvello.com/services/cro-lead-generation
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (133 pages remaining, ~14 min left)
+
+[41/173] (23.7%) Processing: https://www.webvello.com/services/seo-company-government-website
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (132 pages remaining, ~14 min left)
+
+[42/173] (24.3%) Processing: https://www.webvello.com/services/seo-doctors-kansas-city
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (131 pages remaining, ~14 min left)
+
+[43/173] (24.9%) Processing: https://www.webvello.com/services/portland-web-marketing
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (130 pages remaining, ~13 min left)
+
+[44/173] (25.4%) Processing: https://www.webvello.com/services/surgeon-web-design-austin
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (129 pages remaining, ~13 min left)
+
+[45/173] (26.0%) Processing: https://www.webvello.com/services/retail-development-services
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (128 pages remaining, ~13 min left)
+
+[46/173] (26.6%) Processing: https://www.webvello.com/services/freight-forwarder-web-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (127 pages remaining, ~13 min left)
+
+[47/173] (27.2%) Processing: https://www.webvello.com/services/energy-seo-company
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (126 pages remaining, ~13 min left)
+
+[48/173] (27.7%) Processing: https://www.webvello.com/services/web-application-development-company
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (125 pages remaining, ~13 min left)
+
+[49/173] (28.3%) Processing: https://www.webvello.com/services/wordpress-developers-denver
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (124 pages remaining, ~13 min left)
+
+[50/173] (28.9%) Processing: https://www.webvello.com/services/jacksonville-ai-seo
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (123 pages remaining, ~13 min left)
+
+[51/173] (29.5%) Processing: https://www.webvello.com/services/seo-consulting-charlotte
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (122 pages remaining, ~13 min left)
+
+[52/173] (30.1%) Processing: https://www.webvello.com/services/web-design-albuquerque
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (121 pages remaining, ~13 min left)
+
+[53/173] (30.6%) Processing: https://www.webvello.com/services/seo-baltimore
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (120 pages remaining, ~12 min left)
+
+[54/173] (31.2%) Processing: https://www.webvello.com/services/web-development-las-vegas
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (119 pages remaining, ~12 min left)
+
+[55/173] (31.8%) Processing: https://www.webvello.com/services/web-application-development-chicago
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (118 pages remaining, ~12 min left)
+
+[56/173] (32.4%) Processing: https://www.webvello.com/services/website-design-louisville
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (117 pages remaining, ~12 min left)
+
+[57/173] (32.9%) Processing: https://www.webvello.com/services/web-design-columbus
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (116 pages remaining, ~12 min left)
+
+[58/173] (33.5%) Processing: https://www.webvello.com/services/website-design-oklahoma-city
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (115 pages remaining, ~12 min left)
+
+[59/173] (34.1%) Processing: https://www.webvello.com/services/seo-company-mesa
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (114 pages remaining, ~12 min left)
+
+[60/173] (34.7%) Processing: https://www.webvello.com/services/web-design-oklahoma-city
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (113 pages remaining, ~12 min left)
+
+[61/173] (35.3%) Processing: https://www.webvello.com/services/web-development-fresno
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (112 pages remaining, ~12 min left)
+
+[62/173] (35.8%) Processing: https://www.webvello.com/services/seo-services-louisville
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (111 pages remaining, ~12 min left)
+
+[63/173] (36.4%) Processing: https://www.webvello.com/services/real-estate-seo-california
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (110 pages remaining, ~11 min left)
+
+[64/173] (37.0%) Processing: https://www.webvello.com/services/biotech-website-design-chicago
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (109 pages remaining, ~11 min left)
+
+[65/173] (37.6%) Processing: https://www.webvello.com/services/medical-website-design-austin
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (108 pages remaining, ~11 min left)
+
+[66/173] (38.2%) Processing: https://www.webvello.com/services/educational-website-development-charlotte
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (107 pages remaining, ~11 min left)
+
+[67/173] (38.7%) Processing: https://www.webvello.com/services/auto-repair-website-design-milwaukee
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (106 pages remaining, ~11 min left)
+
+[68/173] (39.3%) Processing: https://www.webvello.com/services/seo-company-mesa-arizona
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (105 pages remaining, ~11 min left)
+
+[69/173] (39.9%) Processing: https://www.webvello.com/solutions/agency-results
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (104 pages remaining, ~11 min left)
+
+[70/173] (40.5%) Processing: https://www.webvello.com/solutions/declining-traffic
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (103 pages remaining, ~11 min left)
+
+[71/173] (41.0%) Processing: https://www.webvello.com/solutions/google-visibility
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (102 pages remaining, ~11 min left)
+
+[72/173] (41.6%) Processing: https://www.webvello.com/solutions/website-conversion
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (101 pages remaining, ~11 min left)
+
+[73/173] (42.2%) Processing: https://www.webvello.com/solutions/website-leads
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (100 pages remaining, ~10 min left)
+
+[74/173] (42.8%) Processing: https://www.webvello.com/solutions/website-roi
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (99 pages remaining, ~10 min left)
+
+[75/173] (43.4%) Processing: https://www.webvello.com/blog/essential-website-features-2024
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (98 pages remaining, ~10 min left)
+
+[76/173] (43.9%) Processing: https://www.webvello.com/blog/voice-search-seo-optimization-2024
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (97 pages remaining, ~10 min left)
+
+[77/173] (44.5%) Processing: https://www.webvello.com/blog/local-seo-checklist-25-steps
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (96 pages remaining, ~10 min left)
+
+[78/173] (45.1%) Processing: https://www.webvello.com/blog/ai-powered-seo-machine-learning
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (95 pages remaining, ~10 min left)
+
+[79/173] (45.7%) Processing: https://www.webvello.com/blog/seattle-software-development-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (94 pages remaining, ~10 min left)
+
+[80/173] (46.2%) Processing: https://www.webvello.com/blog/healthcare-web-design-companies-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (93 pages remaining, ~10 min left)
+
+[81/173] (46.8%) Processing: https://www.webvello.com/blog/arizona-organic-seo-growth-strategy
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (92 pages remaining, ~10 min left)
+
+[82/173] (47.4%) Processing: https://www.webvello.com/blog/education-companies-el-paso-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (91 pages remaining, ~10 min left)
+
+[83/173] (48.0%) Processing: https://www.webvello.com/blog/freight-forwarder-web-design-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (90 pages remaining, ~9 min left)
+
+[84/173] (48.6%) Processing: https://www.webvello.com/blog/government-companies-el-paso-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (89 pages remaining, ~9 min left)
+
+[85/173] (49.1%) Processing: https://www.webvello.com/blog/seo-partnership-milwaukee-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (88 pages remaining, ~9 min left)
+
+[86/173] (49.7%) Processing: https://www.webvello.com/blog/seo-service-complete-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (87 pages remaining, ~9 min left)
+
+[87/173] (50.3%) Processing: https://www.webvello.com/blog/detroit-conversion-rate-optimization-services
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (86 pages remaining, ~9 min left)
+
+[88/173] (50.9%) Processing: https://www.webvello.com/blog/el-paso-conversion-rate-optimization-services
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (85 pages remaining, ~9 min left)
+
+[89/173] (51.4%) Processing: https://www.webvello.com/blog/louisville-conversion-rate-optimization-services
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (84 pages remaining, ~9 min left)
+
+[90/173] (52.0%) Processing: https://www.webvello.com/blog/oklahoma-city-conversion-rate-optimization-company
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (83 pages remaining, ~9 min left)
+
+[91/173] (52.6%) Processing: https://www.webvello.com/blog/oklahoma-city-conversion-rate-optimization-services
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (82 pages remaining, ~9 min left)
+
+[92/173] (53.2%) Processing: https://www.webvello.com/blog/logistics-web-design-california
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (81 pages remaining, ~9 min left)
+
+[93/173] (53.8%) Processing: https://www.webvello.com/blog/milwaukee-auto-repair-shop-website-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (80 pages remaining, ~8 min left)
+
+[94/173] (54.3%) Processing: https://www.webvello.com/blog/milwaukee-content-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (79 pages remaining, ~8 min left)
+
+[95/173] (54.9%) Processing: https://www.webvello.com/blog/web-developer-fresno
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (78 pages remaining, ~8 min left)
+
+[96/173] (55.5%) Processing: https://www.webvello.com/blog/website-design-detroit
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (77 pages remaining, ~8 min left)
+
+[97/173] (56.1%) Processing: https://www.webvello.com/blog/website-design-in-detroit
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (76 pages remaining, ~8 min left)
+
+[98/173] (56.6%) Processing: https://www.webvello.com/blog/best-seo-software-seattle-businesses-2025
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (75 pages remaining, ~8 min left)
+
+[99/173] (57.2%) Processing: https://www.webvello.com/blog/local-seo-guide-sacramento-businesses
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (74 pages remaining, ~8 min left)
+
+[100/173] (57.8%) Processing: https://www.webvello.com/blog/content-development-services-milwaukee-complete-guide
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (73 pages remaining, ~8 min left)
+
+[101/173] (58.4%) Processing: https://www.webvello.com/blog/dairy-industry-website-design-los-angeles
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (72 pages remaining, ~8 min left)
+
+[102/173] (59.0%) Processing: https://www.webvello.com/blog/logistics-companies-website-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (71 pages remaining, ~8 min left)
+
+[103/173] (59.5%) Processing: https://www.webvello.com/new-york-ny
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (70 pages remaining, ~7 min left)
+
+[104/173] (60.1%) Processing: https://www.webvello.com/los-angeles-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (69 pages remaining, ~7 min left)
+
+[105/173] (60.7%) Processing: https://www.webvello.com/chicago-il
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (68 pages remaining, ~7 min left)
+
+[106/173] (61.3%) Processing: https://www.webvello.com/houston-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (67 pages remaining, ~7 min left)
+
+[107/173] (61.8%) Processing: https://www.webvello.com/phoenix-az
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (66 pages remaining, ~7 min left)
+
+[108/173] (62.4%) Processing: https://www.webvello.com/philadelphia-pa
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (65 pages remaining, ~7 min left)
+
+[109/173] (63.0%) Processing: https://www.webvello.com/san-antonio-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (64 pages remaining, ~7 min left)
+
+[110/173] (63.6%) Processing: https://www.webvello.com/san-diego-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (63 pages remaining, ~7 min left)
+
+[111/173] (64.2%) Processing: https://www.webvello.com/dallas-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (62 pages remaining, ~7 min left)
+
+[112/173] (64.7%) Processing: https://www.webvello.com/san-jose-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (61 pages remaining, ~7 min left)
+
+[113/173] (65.3%) Processing: https://www.webvello.com/austin-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (60 pages remaining, ~6 min left)
+
+[114/173] (65.9%) Processing: https://www.webvello.com/jacksonville-fl
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (59 pages remaining, ~6 min left)
+
+[115/173] (66.5%) Processing: https://www.webvello.com/fort-worth-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (58 pages remaining, ~6 min left)
+
+[116/173] (67.1%) Processing: https://www.webvello.com/columbus-oh
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (57 pages remaining, ~6 min left)
+
+[117/173] (67.6%) Processing: https://www.webvello.com/indianapolis-in
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (56 pages remaining, ~6 min left)
+
+[118/173] (68.2%) Processing: https://www.webvello.com/charlotte-nc
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (55 pages remaining, ~6 min left)
+
+[119/173] (68.8%) Processing: https://www.webvello.com/san-francisco-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (54 pages remaining, ~6 min left)
+
+[120/173] (69.4%) Processing: https://www.webvello.com/seattle-wa
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (53 pages remaining, ~6 min left)
+
+[121/173] (69.9%) Processing: https://www.webvello.com/denver-co
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (52 pages remaining, ~6 min left)
+
+[122/173] (70.5%) Processing: https://www.webvello.com/washington-dc
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (51 pages remaining, ~6 min left)
+
+[123/173] (71.1%) Processing: https://www.webvello.com/nashville-tn
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (50 pages remaining, ~5 min left)
+
+[124/173] (71.7%) Processing: https://www.webvello.com/oklahoma-city-ok
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (49 pages remaining, ~5 min left)
+
+[125/173] (72.3%) Processing: https://www.webvello.com/el-paso-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (48 pages remaining, ~5 min left)
+
+[126/173] (72.8%) Processing: https://www.webvello.com/boston-ma
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (47 pages remaining, ~5 min left)
+
+[127/173] (73.4%) Processing: https://www.webvello.com/portland-or
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (46 pages remaining, ~5 min left)
+
+[128/173] (74.0%) Processing: https://www.webvello.com/las-vegas-nv
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (45 pages remaining, ~5 min left)
+
+[129/173] (74.6%) Processing: https://www.webvello.com/detroit-mi
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (44 pages remaining, ~5 min left)
+
+[130/173] (75.1%) Processing: https://www.webvello.com/memphis-tn
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (43 pages remaining, ~5 min left)
+
+[131/173] (75.7%) Processing: https://www.webvello.com/louisville-ky
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (42 pages remaining, ~5 min left)
+
+[132/173] (76.3%) Processing: https://www.webvello.com/baltimore-md
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (41 pages remaining, ~5 min left)
+
+[133/173] (76.9%) Processing: https://www.webvello.com/milwaukee-wi
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (40 pages remaining, ~4 min left)
+
+[134/173] (77.5%) Processing: https://www.webvello.com/albuquerque-nm
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (39 pages remaining, ~4 min left)
+
+[135/173] (78.0%) Processing: https://www.webvello.com/tucson-az
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (38 pages remaining, ~4 min left)
+
+[136/173] (78.6%) Processing: https://www.webvello.com/fresno-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (37 pages remaining, ~4 min left)
+
+[137/173] (79.2%) Processing: https://www.webvello.com/sacramento-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (36 pages remaining, ~4 min left)
+
+[138/173] (79.8%) Processing: https://www.webvello.com/kansas-city-mo
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (35 pages remaining, ~4 min left)
+
+[139/173] (80.3%) Processing: https://www.webvello.com/mesa-az
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (34 pages remaining, ~4 min left)
+
+[140/173] (80.9%) Processing: https://www.webvello.com/raleigh-nc
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (33 pages remaining, ~4 min left)
+
+[141/173] (81.5%) Processing: https://www.webvello.com/omaha-ne
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (32 pages remaining, ~4 min left)
+
+[142/173] (82.1%) Processing: https://www.webvello.com/miami-fl
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (31 pages remaining, ~4 min left)
+
+[143/173] (82.7%) Processing: https://www.webvello.com/oakland-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (30 pages remaining, ~3 min left)
+
+[144/173] (83.2%) Processing: https://www.webvello.com/minneapolis-mn
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (29 pages remaining, ~3 min left)
+
+[145/173] (83.8%) Processing: https://www.webvello.com/tulsa-ok
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (28 pages remaining, ~3 min left)
+
+[146/173] (84.4%) Processing: https://www.webvello.com/wichita-ks
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (27 pages remaining, ~3 min left)
+
+[147/173] (85.0%) Processing: https://www.webvello.com/new-orleans-la
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (26 pages remaining, ~3 min left)
+
+[148/173] (85.5%) Processing: https://www.webvello.com/arlington-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (25 pages remaining, ~3 min left)
+
+[149/173] (86.1%) Processing: https://www.webvello.com/cleveland-oh
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (24 pages remaining, ~3 min left)
+
+[150/173] (86.7%) Processing: https://www.webvello.com/bakersfield-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (23 pages remaining, ~3 min left)
+
+[151/173] (87.3%) Processing: https://www.webvello.com/tampa-fl
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (22 pages remaining, ~3 min left)
+
+[152/173] (87.9%) Processing: https://www.webvello.com/aurora-co
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (21 pages remaining, ~3 min left)
+
+[153/173] (88.4%) Processing: https://www.webvello.com/atlanta-ga
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (20 pages remaining, ~2 min left)
+
+[154/173] (89.0%) Processing: https://www.webvello.com/salt-lake-city-ut
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (19 pages remaining, ~2 min left)
+
+[155/173] (89.6%) Processing: https://www.webvello.com/colorado-springs-co
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (18 pages remaining, ~2 min left)
+
+[156/173] (90.2%) Processing: https://www.webvello.com/st-louis-mo
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (17 pages remaining, ~2 min left)
+
+[157/173] (90.8%) Processing: https://www.webvello.com/pittsburgh-pa
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (16 pages remaining, ~2 min left)
+
+[158/173] (91.3%) Processing: https://www.webvello.com/cincinnati-oh
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (15 pages remaining, ~2 min left)
+
+[159/173] (91.9%) Processing: https://www.webvello.com/orlando-fl
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (14 pages remaining, ~2 min left)
+
+[160/173] (92.5%) Processing: https://www.webvello.com/anaheim-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (13 pages remaining, ~2 min left)
+
+[161/173] (93.1%) Processing: https://www.webvello.com/santa-ana-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (12 pages remaining, ~2 min left)
+
+[162/173] (93.6%) Processing: https://www.webvello.com/corpus-christi-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (11 pages remaining, ~2 min left)
+
+[163/173] (94.2%) Processing: https://www.webvello.com/riverside-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (10 pages remaining, ~1 min left)
+
+[164/173] (94.8%) Processing: https://www.webvello.com/lexington-ky
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (9 pages remaining, ~1 min left)
+
+[165/173] (95.4%) Processing: https://www.webvello.com/stockton-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (8 pages remaining, ~1 min left)
+
+[166/173] (96.0%) Processing: https://www.webvello.com/anchorage-ak
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (7 pages remaining, ~1 min left)
+
+[167/173] (96.5%) Processing: https://www.webvello.com/henderson-nv
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (6 pages remaining, ~1 min left)
+
+[168/173] (97.1%) Processing: https://www.webvello.com/greensboro-nc
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (5 pages remaining, ~1 min left)
+
+[169/173] (97.7%) Processing: https://www.webvello.com/plano-tx
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (4 pages remaining, ~1 min left)
+
+[170/173] (98.3%) Processing: https://www.webvello.com/newark-nj
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (3 pages remaining, ~1 min left)
+
+[171/173] (98.8%) Processing: https://www.webvello.com/lincoln-ne
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (2 pages remaining, ~1 min left)
+
+[172/173] (99.4%) Processing: https://www.webvello.com/irvine-ca
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (1 pages remaining, ~1 min left)
+
+[173/173] (100.0%) Processing: https://www.webvello.com/toledo-oh
+❌ FAILED: Failed to notify Google Indexing API
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 Indexing Complete!
+
+✅ Successful: 0 pages
+❌ Failed: 173 pages
+📈 Success Rate: 0.0%
+⏱️  Total Time: 17.8 minutes
+
+✨ Done! Your pages have been submitted to Google for indexing.
+⏱️  It may take 24-48 hours for pages to appear in search results.
+💡 Tip: Check Google Search Console to monitor indexing progress.
+
