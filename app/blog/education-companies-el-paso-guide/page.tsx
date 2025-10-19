@@ -20,6 +20,19 @@ export const metadata: Metadata = {
   },
 }
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "Education Companies in El Paso: Digital Marketing Guide 2025 | Web Vello",
+  description: "Complete guide to digital marketing for education companies in El Paso. Learn about student recruitment, online learning, and marketing strategies for educational institutions.",
+  url: "https://webvello.com/blog/education-companies-el-paso-guide",
+  image: "https://webvello.com/blog/education-companies-el-paso-guide-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function EducationCompaniesElPasoGuidePage() {
   const elPasoStats = [
     {
@@ -320,7 +333,11 @@ export default function EducationCompaniesElPasoGuidePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -693,5 +710,6 @@ export default function EducationCompaniesElPasoGuidePage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

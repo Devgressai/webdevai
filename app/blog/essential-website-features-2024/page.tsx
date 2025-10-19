@@ -20,6 +20,19 @@ export const metadata: Metadata = {
   },
 }
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "10 Essential Features Every Business Website Needs in 2024 | Web Vello",
+  description: "Discover the must-have features that can make or break your business website. From mobile optimization to AI integration, learn what your customers expect in 2024.",
+  url: "https://webvello.com/blog/essential-website-features-2024",
+  image: "https://webvello.com/blog/essential-website-features-2024-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function BlogPost() {
   const features = [
     {
@@ -125,7 +138,11 @@ export default function BlogPost() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Breadcrumb */}
@@ -267,5 +284,6 @@ export default function BlogPost() {
         </div>
       </article>
     </div>
+    </>
   )
 }

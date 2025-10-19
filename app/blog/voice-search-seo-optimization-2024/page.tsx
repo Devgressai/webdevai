@@ -9,9 +9,26 @@ export const metadata: Metadata = {
   keywords: 'voice search SEO, voice search optimization, Alexa SEO, Siri optimization, Google Assistant, conversational search',
 }
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "Voice Search SEO: Complete Optimization Guide for 2024 | Web Vello",
+  description: "Learn how to optimize your website for voice search queries from Alexa, Siri, and Google Assistant. Complete guide with actionable strategies.",
+  url: "https://webvello.com/blog/voice-search-seo-optimization-2024",
+  image: "https://webvello.com/blog/voice-search-seo-optimization-2024-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function VoiceSearchBlogPost() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <nav className="mb-8">
           <div className="flex items-center space-x-2 text-sm text-gray-500">
@@ -174,5 +191,6 @@ export default function VoiceSearchBlogPost() {
         </div>
       </article>
     </div>
+    </>
   )
 }

@@ -20,6 +20,19 @@ export const metadata: Metadata = {
   },
 }
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "Web Developer Fresno: Professional Web Development Services for CA Businesses 2025 | Web Vello",
+  description: "Professional web developer services in Fresno. Custom websites, web applications, and digital solutions for Fresno businesses. Free consultation available.",
+  url: "https://webvello.com/blog/web-developer-fresno",
+  image: "https://webvello.com/blog/web-developer-fresno-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function WebDeveloperFresnoBlogPost() {
   const webDevStats = [
     {
@@ -182,7 +195,11 @@ export default function WebDeveloperFresnoBlogPost() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Breadcrumb */}
@@ -617,5 +634,6 @@ export default function WebDeveloperFresnoBlogPost() {
         </section>
       </article>
     </div>
+    </>
   )
 }

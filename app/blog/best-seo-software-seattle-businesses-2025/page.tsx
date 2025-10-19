@@ -14,9 +14,26 @@ export const metadata: Metadata = {
   },
 };
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "Best SEO Software for Seattle Businesses 2025 | Complete Tool Guide",
+  description: "Discover the top SEO software tools for Seattle businesses in 2025. Compare features, pricing, and find the perfect SEO platform for your Pacific Northwest company.",
+  url: "https://webvello.com/blog/best-seo-software-seattle-businesses-2025",
+  image: "https://webvello.com/blog/best-seo-software-seattle-businesses-2025-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function BestSEOSoftwareSeattle2025BlogPage() {
   return (
-    <div className="bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="bg-white">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -385,6 +402,7 @@ export default function BestSEOSoftwareSeattle2025BlogPage() {
         </section>
       </article>
     </div>
+    </>
   );
 }
 

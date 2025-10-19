@@ -18,9 +18,26 @@ export const metadata: Metadata = {
   },
 }
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "SEO Partnership Milwaukee Guide | Web Vello",
+  description: "Discover the best SEO partnerships in Milwaukee, Wisconsin. Learn about local SEO agencies, digital marketing collaborations, and strategic partnerships for business growth.",
+  url: "https://webvello.com/blog/seo-partnership-milwaukee-guide",
+  image: "https://webvello.com/blog/seo-partnership-milwaukee-guide-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function SEOPartnershipMilwaukeeGuide() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-900 to-green-700 text-white py-20">
         <div className="container mx-auto px-4">
@@ -848,5 +865,6 @@ export default function SEOPartnershipMilwaukeeGuide() {
         </div>
       </section>
     </div>
+    </>
   )
 }

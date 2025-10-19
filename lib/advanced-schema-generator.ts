@@ -275,7 +275,7 @@ export function generateWebsiteSchema() {
 /**
  * Generate Complete Homepage Schema (multiple types)
  */
-export function generateHomepageSchema(testimonials: TestimonialData[], faqs: FAQData[]) {
+export function generateHomepageSchema(testimonials: TestimonialData[], faqs: FAQData[]): any[] {
   return [
     generateOrganizationWithReviewsSchema(testimonials),
     generateWebsiteSchema(),
@@ -290,7 +290,7 @@ export function generateServicePageSchema(
   service: ServiceData,
   faqs: FAQData[],
   testimonials?: TestimonialData[]
-) {
+): any[] {
   return [
     generateServiceSchema(service, testimonials),
     generateFAQSchema(faqs),
@@ -305,7 +305,7 @@ export function generateServicePageSchema(
 /**
  * Generate Complete City Page Schema
  */
-export function generateCityPageSchema(city: CityData, faqs: FAQData[]) {
+export function generateCityPageSchema(city: CityData, faqs: FAQData[]): any[] {
   return [
     generateLocalBusinessSchema(city),
     generateFAQSchema(faqs),
@@ -332,8 +332,8 @@ export function generateBlogPostSchema(
     keywords?: string[]
   },
   faqs?: FAQData[]
-) {
-  const schemas = [
+): any[] {
+  const schemas: any[] = [
     generateArticleSchema(article),
     generateBreadcrumbSchema([
       { name: "Home", url: "https://webvello.com" },

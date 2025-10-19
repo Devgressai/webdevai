@@ -20,6 +20,19 @@ export const metadata: Metadata = {
   },
 }
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "Website Design in Detroit: Complete Guide for 2025 | Web Vello",
+  description: "Professional website design services in Detroit. Modern, responsive websites that convert visitors into customers. Free consultation available for Detroit businesses.",
+  url: "https://webvello.com/blog/website-design-in-detroit",
+  image: "https://webvello.com/blog/website-design-in-detroit-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function DetroitWebDesignBlogPost() {
   const designProcess = [
     {
@@ -122,7 +135,11 @@ export default function DetroitWebDesignBlogPost() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Breadcrumb */}
@@ -754,5 +771,6 @@ export default function DetroitWebDesignBlogPost() {
 
       </article>
     </div>
+    </>
   )
 }

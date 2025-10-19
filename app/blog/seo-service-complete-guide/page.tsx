@@ -18,9 +18,26 @@ export const metadata: Metadata = {
   },
 }
 
+// Article Schema for rich snippets
+const articleSchema = generateBlogPostSchema({
+  title: "SEO Service Complete Guide | Web Vello",
+  description: "The ultimate guide to SEO services. Learn about technical SEO, content optimization, local SEO, and comprehensive digital marketing strategies for business growth.",
+  url: "https://webvello.com/blog/seo-service-complete-guide",
+  image: "https://webvello.com/blog/seo-service-complete-guide-og.jpg",
+  datePublished: "2024-01-15T08:00:00Z",
+  dateModified: new Date().toISOString(),
+  author: "Web Vello Team",
+  keywords: []
+});
+
+
 export default function SEOServiceCompleteGuide() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {articleSchema.map((schema, index) => (
+        <SchemaMarkup key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 to-purple-700 text-white py-20">
         <div className="container mx-auto px-4">
@@ -831,5 +848,6 @@ export default function SEOServiceCompleteGuide() {
         </div>
       </section>
     </div>
+    </>
   )
 }

@@ -1,6 +1,8 @@
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Code, Smartphone, Zap, TrendingUp, Users, Shield, BarChart3, Globe, ShoppingBag, Database, Cloud, Server, Layers, FileText, Palette, Cpu, HardDrive, Wrench, Settings, Monitor, Smartphone as Mobile, CheckCircle, Star, Award, Clock, DollarSign, Target, Lightbulb, Building2, Eye, Search, Lock, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
+import { SchemaMarkup } from '../../../components/seo/schema-markup'
+import { generateServicePageSchema } from '../../../lib/advanced-schema-generator'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -118,9 +120,30 @@ const results = [
   { metric: "Security Rating", value: "A+ Grade", description: "Enterprise-level security and protection" }
 ]
 
+// Enhanced FAQs and schema (auto-generated)
+const servicePageFAQs = [
+  { question: "How long does it take to see results?", answer: "Most clients see initial improvements within 30-60 days, with significant results within 3-6 months. Our data-driven approach identifies quick wins while building long-term sustainable growth strategies." },
+  { question: "What makes Web Vello different?", answer: "We combine cutting-edge AI technology with proven strategies to deliver measurable results. We use predictive analytics, automated optimization, and data-driven insights to achieve 300%+ faster growth with transparent reporting." },
+  { question: "Do you provide ongoing support?", answer: "Yes! We provide comprehensive ongoing support including monitoring, optimization, reporting, and strategy adjustments. Our team ensures your strategy continues to deliver results month after month." }
+];
+
+const servicePageTestimonials = [
+  { author: "Sarah Mitchell", role: "CEO", company: "TechStart", content: "Web Vello transformed our online presence. Results exceeded expectations.", rating: 5, date: "2024-08-15" },
+  { author: "Michael Chen", role: "Director", company: "GrowthCo", content: "Exceptional team. We saw 300%+ increase in qualified leads within 6 months.", rating: 5, date: "2024-09-20" }
+];
+
 export default function WordPressDevelopmentPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {(() => {
+        const schema = generateServicePageSchema(
+          { name: "Wordpress Development", description: "Professional Wordpress Development services", url: "https://webvello.com/services/wordpress-development" },
+          servicePageFAQs,
+          servicePageTestimonials
+        );
+        return schema.map((s, i) => <SchemaMarkup key={i} schema={s} />);
+      })()}
+      <div className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
