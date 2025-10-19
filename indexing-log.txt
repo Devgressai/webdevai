@@ -1,0 +1,151 @@
+🚀 Starting Google Indexing API submission...
+
+📊 Total URLs to index: 173
+
+⏱️  Estimated time: ~${Math.ceil(PRIORITY_PAGES.length * 6 / 60)} minutes (6 sec delay per page)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[1/173] (0.6%) Processing: https://www.webvello.com/
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (172 pages remaining, ~18 min left)
+
+[2/173] (1.2%) Processing: https://www.webvello.com/about
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (171 pages remaining, ~18 min left)
+
+[3/173] (1.7%) Processing: https://www.webvello.com/contact
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (170 pages remaining, ~17 min left)
+
+[4/173] (2.3%) Processing: https://www.webvello.com/pricing
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (169 pages remaining, ~17 min left)
+
+[5/173] (2.9%) Processing: https://www.webvello.com/resources
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (168 pages remaining, ~17 min left)
+
+[6/173] (3.5%) Processing: https://www.webvello.com/case-studies
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (167 pages remaining, ~17 min left)
+
+[7/173] (4.0%) Processing: https://www.webvello.com/industries
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (166 pages remaining, ~17 min left)
+
+[8/173] (4.6%) Processing: https://www.webvello.com/locations
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (165 pages remaining, ~17 min left)
+
+[9/173] (5.2%) Processing: https://www.webvello.com/solutions
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (164 pages remaining, ~17 min left)
+
+[10/173] (5.8%) Processing: https://www.webvello.com/blog
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (163 pages remaining, ~17 min left)
+
+[11/173] (6.4%) Processing: https://www.webvello.com/seo-audit
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (162 pages remaining, ~17 min left)
+
+[12/173] (6.9%) Processing: https://www.webvello.com/website-speed-test
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (161 pages remaining, ~17 min left)
+
+[13/173] (7.5%) Processing: https://www.webvello.com/enhanced-demo
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (160 pages remaining, ~16 min left)
+
+[14/173] (8.1%) Processing: https://www.webvello.com/services/website-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (159 pages remaining, ~16 min left)
+
+[15/173] (8.7%) Processing: https://www.webvello.com/services/website-redesign
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (158 pages remaining, ~16 min left)
+
+[16/173] (9.2%) Processing: https://www.webvello.com/services/web-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (157 pages remaining, ~16 min left)
+
+[17/173] (9.8%) Processing: https://www.webvello.com/services/rapid-web-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (156 pages remaining, ~16 min left)
+
+[18/173] (10.4%) Processing: https://www.webvello.com/services/ui-ux-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (155 pages remaining, ~16 min left)
+
+[19/173] (11.0%) Processing: https://www.webvello.com/services/ecommerce-design
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (154 pages remaining, ~16 min left)
+
+[20/173] (11.6%) Processing: https://www.webvello.com/services/app-design-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (153 pages remaining, ~16 min left)
+
+[21/173] (12.1%) Processing: https://www.webvello.com/services/software-design-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (152 pages remaining, ~16 min left)
+
+[22/173] (12.7%) Processing: https://www.webvello.com/services/software-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (151 pages remaining, ~16 min left)
+
+[23/173] (13.3%) Processing: https://www.webvello.com/services/shopify-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (150 pages remaining, ~15 min left)
+
+[24/173] (13.9%) Processing: https://www.webvello.com/services/wordpress-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (149 pages remaining, ~15 min left)
+
+[25/173] (14.5%) Processing: https://www.webvello.com/services/ai-consulting
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (148 pages remaining, ~15 min left)
+
+[26/173] (15.0%) Processing: https://www.webvello.com/services/ai-seo
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (147 pages remaining, ~15 min left)
+
+[27/173] (15.6%) Processing: https://www.webvello.com/services/ai-digital-marketing
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (146 pages remaining, ~15 min left)
+
+[28/173] (16.2%) Processing: https://www.webvello.com/services/ai-gpt-integration
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (145 pages remaining, ~15 min left)
+
+[29/173] (16.8%) Processing: https://www.webvello.com/services/ai-agent-development
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (144 pages remaining, ~15 min left)
+
+[30/173] (17.3%) Processing: https://www.webvello.com/services/chatgpt-optimization
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (143 pages remaining, ~15 min left)
+
+[31/173] (17.9%) Processing: https://www.webvello.com/services/generative-engine-optimization
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (142 pages remaining, ~15 min left)
+
+[32/173] (18.5%) Processing: https://www.webvello.com/services/answer-engine-optimization
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (141 pages remaining, ~15 min left)
+
+[33/173] (19.1%) Processing: https://www.webvello.com/services/enterprise-geo-services
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (140 pages remaining, ~14 min left)
+
+[34/173] (19.7%) Processing: https://www.webvello.com/services/seo
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (139 pages remaining, ~14 min left)
+
+[35/173] (20.2%) Processing: https://www.webvello.com/services/local-seo
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (138 pages remaining, ~14 min left)
+
+[36/173] (20.8%) Processing: https://www.webvello.com/services/digital-marketing
+❌ FAILED: Failed to notify Google Indexing API
+⏳ Waiting 6 seconds... (137 pages remaining, ~14 min left)
