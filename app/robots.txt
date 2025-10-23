@@ -14,11 +14,8 @@ Disallow: /_next/
 Disallow: /api/
 Disallow: /studio/
 
-# Disallow only the problematic city-industry-service pages
-# These can cause "Alternate page with proper canonical tag" errors
-Disallow: /*/industry/*/
-
-# Allow important pages
+# Allow all legitimate city, service, and industry pages
+Allow: /*/
 Allow: /services/
 Allow: /contact
 Allow: /pricing
@@ -28,3 +25,13 @@ Allow: /blog/
 Allow: /solutions/
 Allow: /seo-audit
 Allow: /website-speed-test
+Allow: /resources
+Allow: /industries
+Allow: /locations
+
+# Block only specific patterns that cause issues
+Disallow: /*?*utm_
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Disallow: /*.json$
+Disallow: /*.xml$

@@ -256,6 +256,14 @@ const nextConfig = {
       { source: '/industries/', destination: '/industries', permanent: true },
       { source: '/locations/', destination: '/locations', permanent: true },
       { source: '/solutions/', destination: '/solutions', permanent: true },
+      
+      // City-Industry hub redirects (these pages don't exist - redirect to city page)
+      // Fixes 418 404 errors for /:city/industry/:industry pattern
+      { 
+        source: '/:city/industry/:industry',
+        destination: '/:city',
+        permanent: true
+      },
     ]
   },
   
