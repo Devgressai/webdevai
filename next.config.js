@@ -118,20 +118,20 @@ const nextConfig = {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains; preload',
           },
-          // Cross-Origin Embedder Policy
+          // Cross-Origin Embedder Policy (relaxed for Google crawlers)
           {
             key: 'Cross-Origin-Embedder-Policy',
-            value: 'require-corp',
+            value: 'unsafe-none',
           },
           // Cross-Origin Opener Policy
           {
             key: 'Cross-Origin-Opener-Policy',
             value: 'same-origin',
           },
-          // Cross-Origin Resource Policy
+          // Cross-Origin Resource Policy (allow cross-origin for sitemaps/robots)
           {
             key: 'Cross-Origin-Resource-Policy',
-            value: 'same-origin',
+            value: 'cross-origin',
           },
           // DNS Prefetch Control
           {
@@ -256,14 +256,6 @@ const nextConfig = {
       { source: '/industries/', destination: '/industries', permanent: true },
       { source: '/locations/', destination: '/locations', permanent: true },
       { source: '/solutions/', destination: '/solutions', permanent: true },
-      
-      // City-Industry hub redirects (these pages don't exist - redirect to city page)
-      // Fixes 418 404 errors for /:city/industry/:industry pattern
-      { 
-        source: '/:city/industry/:industry',
-        destination: '/:city',
-        permanent: true
-      },
     ]
   },
   
