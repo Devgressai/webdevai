@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, Calendar, User, Tag, Clock } from 'lucide-react'
+import { getBlogPosts, getBlogCategories } from '../../lib/get-blog-posts'
 
 export const metadata: Metadata = {
   title: 'Web Vello Blog | Digital Marketing & Web Development Insights',
@@ -17,25 +18,10 @@ export const metadata: Metadata = {
   },
 }
 
-// Sample blog posts - in production, these would come from a CMS or API
-const blogPosts = [
-  {
-    id: 1,
-    title: '10 Essential Features Every Business Website Needs in 2024',
-    excerpt: 'Discover the must-have features that can make or break your business website. From mobile optimization to AI integration, learn what your customers expect.',
-    slug: 'essential-website-features-2024',
-    category: 'Web Development',
-    author: 'Web Vello Team',
-    date: '2024-01-15',
-    readTime: '8 min read',
-    image: '/api/placeholder/800/400',
-    featured: true
-  }
-]
-
-const categories = ['All', 'Web Development']
-
-export default function BlogPage() {
+export default async function BlogPage() {
+  const blogPosts = await getBlogPosts()
+  const categories = await getBlogCategories()
+  
   const featuredPosts = blogPosts.filter(post => post.featured)
   const regularPosts = blogPosts.filter(post => !post.featured)
 
@@ -76,9 +62,9 @@ export default function BlogPage() {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <article key={post.slug} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                  <span className="text-blue-600 font-semibold">Featured Image</span>
+                  <span className="text-blue-600 font-semibold">Featured Article</span>
                 </div>
                 <div className="p-8">
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
@@ -100,7 +86,7 @@ export default function BlogPage() {
                     </Link>
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    {post.excerpt}
+                    {post.description}
                   </p>
                   <Link href={`/blog/${post.slug}`}>
                     <Button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
@@ -143,9 +129,9 @@ export default function BlogPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <article key={post.slug} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <span className="text-gray-600 font-medium">Article Image</span>
+                  <span className="text-gray-600 font-medium">Article</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
@@ -157,13 +143,13 @@ export default function BlogPage() {
                       {post.readTime}
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors line-clamp-2">
                     <Link href={`/blog/${post.slug}`}>
                       {post.title}
                     </Link>
                   </h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                    {post.excerpt}
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                    {post.description}
                   </p>
                   <Link href={`/blog/${post.slug}`}>
                     <Button variant="outline" size="sm" className="w-full">
@@ -174,6 +160,41 @@ export default function BlogPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Shopify Web Development Company Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Your Trusted Shopify Web Development Company
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              As a leading Shopify web development company, Web Vello helps businesses build powerful, 
+              scalable e-commerce solutions that drive sales and enhance customer experiences.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Custom Shopify Development</h3>
+              <p className="text-gray-600">
+                Tailored Shopify stores that reflect your brand and meet your specific business needs.
+              </p>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Shopify Plus Solutions</h3>
+              <p className="text-gray-600">
+                Enterprise-level Shopify Plus development for high-volume businesses and complex requirements.
+              </p>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
+              <p className="text-gray-600">
+                Continuous maintenance, updates, and optimization to keep your Shopify store performing at its best.
+              </p>
+            </div>
           </div>
         </div>
       </section>
