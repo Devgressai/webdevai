@@ -53,8 +53,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'cro-lead-generation'
   ]
 
-  // Limit cities to avoid timeout - use top 50 cities only
-  const topCities = citySlugs.slice(0, 50)
+  // Use ALL cities for comprehensive coverage
+  const allCities = citySlugs
+  
+  // Key services for city+service combinations
+  const keyServices = [
+    'website-design',
+    'web-development',
+    'seo',
+    'local-seo',
+    'digital-marketing',
+    'ai-seo',
+    'ai-consulting',
+    'ui-ux-design'
+  ]
 
   // Generate core page entries
   const coreEntries = corePages.map((page) => ({
@@ -72,17 +84,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Generate city hub page entries (limited to 50 cities)
-  const cityEntries = topCities.map((city) => ({
+  // Generate city hub page entries
+  const cityEntries = allCities.map((city) => ({
     url: `${baseUrl}/${city}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
+  // Generate city+service combination entries (NEW!)
+  const cityServiceEntries: MetadataRoute.Sitemap = []
+  for (const city of allCities) {
+    for (const service of keyServices) {
+      cityServiceEntries.push({
+        url: `${baseUrl}/${city}/${service}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+      })
+    }
+  }
+
   return [
     ...coreEntries,
     ...serviceEntries,
-    ...cityEntries
+    ...cityEntries,
+    ...cityServiceEntries
   ]
 }
