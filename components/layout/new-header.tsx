@@ -284,6 +284,10 @@ const navigation = [
       }
     ]
   },
+  {
+    name: "Blog",
+    href: "/blog"
+  },
 ]
 
 export function NewHeader() {

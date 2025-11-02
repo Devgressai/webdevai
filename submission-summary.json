@@ -1,0 +1,8 @@
+{
+  "generated": "2025-10-30T06:16:56.322Z",
+  "totalUrls": 200,
+  "batches": 10,
+  "urlsPerBatch": 20,
+  "delaySeconds": 3,
+  "note": "Google Search Console has no official bulk submission API. Use manual submission or browser automation at your own risk."
+}

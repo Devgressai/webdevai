@@ -107,3 +107,4 @@ export async function getBlogCategories(): Promise<string[]> {
   return Array.from(categories)
 }
 
+

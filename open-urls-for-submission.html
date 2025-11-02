@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit URLs to Google Search Console</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .url-list {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .url-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .url-item:hover {
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+        .url-item.copied {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+        .url-text {
+            flex: 1;
+            font-size: 13px;
+            color: #333;
+            font-family: 'Courier New', monospace;
+        }
+        .url-number {
+            color: #999;
+            margin-right: 10px;
+            font-weight: bold;
+            min-width: 30px;
+        }
+        .copy-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background: #5568d3;
+            transform: scale(1.05);
+        }
+        .copy-btn.copied {
+            background: #28a745;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 2px solid #dee2e6;
+        }
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+        .progress {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .progress-bar {
+            height: 30px;
+            background: #e9ecef;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        .instructions ol {
+            margin-left: 20px;
+            color: #856404;
+        }
+        .instructions li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Submit URLs to Google</h1>
+        <p class="subtitle">Click each URL to copy, then paste into Search Console</p>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalUrls">200</div>
+                <div class="stat-label">Total URLs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="copiedUrls">0</div>
+                <div class="stat-label">Copied</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="remainingUrls">200</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 How to Use:</h3>
+            <ol>
+                <li>Open <a href="https://search.google.com/search-console" target="_blank">Google Search Console</a> in another tab</li>
+                <li>Click "URL Inspection" at the top</li>
+                <li>Click each URL below to copy it</li>
+                <li>Paste into Search Console, click "Request Indexing", wait 3s</li>
+                <li>Repeat for all 200 URLs</li>
+            </ol>
+        </div>
+
+        <div class="url-list" id="urlList">
+            <!-- URLs will be inserted here -->
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar">0%</div>
+            </div>
+            <div style="text-align: center; color: #666; font-size: 14px;">
+                <span id="copiedCount">0</span> of 200 URLs processed
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // URLs array
+        const urls = [
+            'https://www.webvello.com/jersey-city-nj/website-design',
+            'https://www.webvello.com/jersey-city-nj/web-development',
+            'https://www.webvello.com/jersey-city-nj/seo',
+            'https://www.webvello.com/jersey-city-nj/local-seo',
+            'https://www.webvello.com/jersey-city-nj/digital-marketing',
+            'https://www.webvello.com/jersey-city-nj/ai-seo',
+            'https://www.webvello.com/jersey-city-nj/ai-consulting',
+            'https://www.webvello.com/jersey-city-nj/ui-ux-design',
+            'https://www.webvello.com/chula-vista-ca/website-design',
+            'https://www.webvello.com/chula-vista-ca/web-development',
+            'https://www.webvello.com/chula-vista-ca/seo',
+            'https://www.webvello.com/chula-vista-ca/local-seo',
+            'https://www.webvello.com/chula-vista-ca/digital-marketing',
+            'https://www.webvello.com/chula-vista-ca/ai-seo',
+            'https://www.webvello.com/chula-vista-ca/ai-consulting',
+            'https://www.webvello.com/chula-vista-ca/ui-ux-design',
+            'https://www.webvello.com/buffalo-ny/website-design',
+            'https://www.webvello.com/buffalo-ny/web-development',
+            'https://www.webvello.com/buffalo-ny/seo',
+            'https://www.webvello.com/buffalo-ny/local-seo'
+            // Add more URLs here if needed
+        ];
+
+        let copiedCount = 0;
+        const totalUrls = urls.length;
+
+        // Load remaining URLs from file if possible
+        fetch('batch-200-urls.txt')
+            .then(response => response.text())
+            .then(text => {
+                const lines = text.split('\n').filter(line => line.trim());
+                lines.slice(0, totalUrls).forEach((url, index) => {
+                    if (!urls.includes(url)) {
+                        urls.push(url);
+                    }
+                });
+                renderUrls();
+            })
+            .catch(() => {
+                renderUrls();
+            });
+
+        function renderUrls() {
+            const urlList = document.getElementById('urlList');
+            urlList.innerHTML = '';
+
+            urls.forEach((url, index) => {
+                const urlItem = document.createElement('div');
+                urlItem.className = 'url-item';
+                urlItem.innerHTML = `
+                    <span class="url-number">${index + 1}</span>
+                    <span class="url-text">${url}</span>
+                    <button class="copy-btn" onclick="copyUrl(${index}, this)">Copy</button>
+                `;
+                urlList.appendChild(urlItem);
+            });
+        }
+
+        function copyUrl(index, button) {
+            const url = urls[index];
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(url).then(() => {
+                // Update UI
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                const urlItem = button.closest('.url-item');
+                urlItem.classList.add('copied');
+                
+                // Update stats
+                copiedCount++;
+                document.getElementById('copiedUrls').textContent = copiedCount;
+                document.getElementById('remainingUrls').textContent = totalUrls - copiedCount;
+                document.getElementById('copiedCount').textContent = copiedCount;
+                
+                // Update progress bar
+                const progress = (copiedCount / totalUrls) * 100;
+                document.getElementById('progressBar').style.width = progress + '%';
+                document.getElementById('progressBar').textContent = Math.round(progress) + '%';
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                    button.classList.remove('copied');
+                    urlItem.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Render initial URLs
+        renderUrls();
+    </script>
+</body>
+</html>
+
+
+

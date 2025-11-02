@@ -51,6 +51,7 @@ export default function MobileHeader() {
       { name: 'Google Visibility', href: '/solutions/google-visibility' },
       { name: 'Website Conversion', href: '/solutions/website-conversion' },
     ]},
+    { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about', submenu: [
       { name: 'About Us', href: '/about' },
       { name: 'Case Studies', href: '/case-studies' },
