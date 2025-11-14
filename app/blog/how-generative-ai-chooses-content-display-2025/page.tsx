@@ -100,7 +100,7 @@ export default function HowGenerativeAIChoosesContentPage() {
         <div className="flex gap-8 items-start">
           {/* Main Content */}
           <div className="flex-1 min-w-0">
-
+      
       {/* AI Summary Block */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto">
@@ -129,8 +129,7 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* Primary Topic Explanation */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">
               Understanding AI Content Selection: The Multi-Stage Process
             </h2>
