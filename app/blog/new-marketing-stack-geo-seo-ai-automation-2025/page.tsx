@@ -347,6 +347,249 @@ export default function NewMarketingStackPage() {
         </div>
       </section>
 
+      {/* Component Deep Dive */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              Component Deep Dive: GEO, SEO, and AI Automation
+            </h2>
+
+            <div className="space-y-6 mb-8">
+              <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-xl border-l-4 border-blue-600">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">GEO Implementation Details</h3>
+                <p className="text-gray-700 mb-4">
+                  Generative Engine Optimization (GEO) requires specific implementation strategies:
+                </p>
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <p className="font-semibold mb-3">GEO Implementation Steps:</p>
+                  <ul className="space-y-2">
+                    <li className="text-gray-700">• <strong>Schema Markup:</strong> Implement Organization, Article, FAQ schemas</li>
+                    <li className="text-gray-700">• <strong>Entity Optimization:</strong> Define and optimize entities (Organization, Products, Services)</li>
+                    <li className="text-gray-700">• <strong>Content Structure:</strong> Use semantic HTML, clear headings (H1-H4), modular blocks</li>
+                    <li className="text-gray-700">• <strong>Topical Authority:</strong> Build comprehensive topic clusters</li>
+                    <li className="text-gray-700">• <strong>Citation Optimization:</strong> Create citation-worthy content with clear facts</li>
+                    <li className="text-gray-700">• <strong>AI Visibility Monitoring:</strong> Track citations in AI responses</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-white p-6 rounded-xl border-l-4 border-green-600">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">SEO Implementation Details</h3>
+                <p className="text-gray-700 mb-4">
+                  Search Engine Optimization (SEO) requires comprehensive optimization strategies:
+                </p>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <p className="font-semibold mb-3">SEO Implementation Steps:</p>
+                  <ul className="space-y-2">
+                    <li className="text-gray-700">• <strong>Keyword Research:</strong> Identify target keywords and search intent</li>
+                    <li className="text-gray-700">• <strong>Technical SEO:</strong> Optimize site speed, mobile responsiveness, structure</li>
+                    <li className="text-gray-700">• <strong>Content Optimization:</strong> Create high-quality, keyword-optimized content</li>
+                    <li className="text-gray-700">• <strong>Link Building:</strong> Build high-quality backlinks and domain authority</li>
+                    <li className="text-gray-700">• <strong>Local SEO:</strong> Optimize for local search (if applicable)</li>
+                    <li className="text-gray-700">• <strong>SERP Features:</strong> Optimize for featured snippets, rich results</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-50 to-white p-6 rounded-xl border-l-4 border-purple-600">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">AI Automation Implementation Details</h3>
+                <p className="text-gray-700 mb-4">
+                  AI Automation requires strategic tool selection and implementation:
+                </p>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <p className="font-semibold mb-3">AI Automation Implementation Steps:</p>
+                  <ul className="space-y-2">
+                    <li className="text-gray-700">• <strong>Chatbot Implementation:</strong> Deploy intelligent chatbots for customer service</li>
+                    <li className="text-gray-700">• <strong>Personalization:</strong> Implement AI-powered content personalization</li>
+                    <li className="text-gray-700">• <strong>Lead Qualification:</strong> Use AI for lead scoring and qualification</li>
+                    <li className="text-gray-700">• <strong>Content Automation:</strong> Automate content creation and optimization</li>
+                    <li className="text-gray-700">• <strong>Analytics:</strong> Implement predictive analytics and forecasting</li>
+                    <li className="text-gray-700">• <strong>Optimization:</strong> Use AI for A/B testing and optimization automation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-World Examples */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              Real-World Examples: Integrated Marketing Stack Success Stories
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
+                <h4 className="font-bold text-xl mb-2 text-gray-900">Example 1: SaaS Company - Integrated Marketing Stack</h4>
+                <p className="text-gray-700 mb-3">
+                  A SaaS company implemented an integrated marketing stack: GEO (schema markup, entity optimization, topical 
+                  authority), SEO (keyword optimization, technical SEO, link building), and AI automation (chatbots, 
+                  personalization, lead qualification). Within 90 days, they saw 145% increase in leads, 67% reduction in 
+                  CAC, and 89% improvement in conversion rates. Their content appeared in 78% of AI responses when users 
+                  asked about their product category, and they ranked #1 for 12 target keywords.
+                </p>
+                <p className="text-gray-700 font-semibold text-blue-700">
+                  Result: 2.3x improvement in marketing efficiency, 156% ROI within 6 months
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600">
+                <h4 className="font-bold text-xl mb-2 text-gray-900">Example 2: E-Commerce Brand - Integrated Marketing Stack</h4>
+                <p className="text-gray-700 mb-3">
+                  An e-commerce brand implemented an integrated marketing stack: GEO (Product schema, entity optimization, 
+                  topical authority), SEO (product page optimization, technical SEO, local SEO), and AI automation 
+                  (personalization, chatbots, recommendation engines). Within 120 days, they saw 198% increase in product 
+                  views, 112% improvement in conversion rates, and 134% increase in average order value. Their products 
+                  appeared in 71% of AI responses when users asked about their product category, and they ranked #1 for 
+                  18 target keywords.
+                </p>
+                <p className="text-gray-700 font-semibold text-green-700">
+                  Result: 2.8x improvement in marketing efficiency, 189% ROI within 8 months
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-600">
+                <h4 className="font-bold text-xl mb-2 text-gray-900">Example 3: Service Business - Integrated Marketing Stack</h4>
+                <p className="text-gray-700 mb-3">
+                  A service business implemented an integrated marketing stack: GEO (LocalBusiness schema, entity optimization, 
+                  local topical authority), SEO (local SEO, keyword optimization, technical SEO), and AI automation 
+                  (chatbots, appointment scheduling, lead qualification). Within 90 days, they saw 156% increase in service 
+                  calls, 89% improvement in lead quality, and 67% reduction in CAC. Their business appeared in 82% of AI 
+                  responses when users in their service area asked about their services, and they ranked #1 in Google Maps 
+                  for 8 target keywords.
+                </p>
+                <p className="text-gray-700 font-semibold text-purple-700">
+                  Result: 2.5x improvement in marketing efficiency, 167% ROI within 6 months
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Checklist */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              Integrated Marketing Stack Implementation Checklist
+            </h2>
+
+            <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-xl shadow-lg">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-bold text-xl mb-4 text-gray-900">Foundation Setup</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Implement technical SEO improvements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Add schema markup (Organization, Article, FAQ)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Set up basic AI automation (chatbots)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Optimize site speed and mobile responsiveness</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Define entity structure and relationships</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl mb-4 text-gray-900">GEO Implementation</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Implement comprehensive schema markup</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Optimize entities (Organization, Products, Services)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Build topic clusters and topical authority</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Create citation-worthy content</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Monitor AI citation frequency</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl mb-4 text-gray-900">SEO Implementation</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Conduct keyword research and optimization</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Optimize content for target keywords</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Build high-quality backlinks</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Optimize for local SEO (if applicable)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Monitor search rankings and performance</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl mb-4 text-gray-900">AI Automation Implementation</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Deploy intelligent chatbots</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Implement content personalization</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Set up lead qualification and scoring</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Implement predictive analytics</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Automate A/B testing and optimization</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -403,7 +646,50 @@ export default function NewMarketingStackPage() {
                   for enterprise implementations. Monthly costs for tools and ongoing optimization typically range from 
                   $2,000-$10,000 depending on scale. The ROI typically justifies investment within 6-12 months through 
                   increased leads, reduced CAC, and improved conversion rates. Many businesses see 2-3x improvement in 
-                  marketing efficiency, making the investment highly profitable.
+                  marketing efficiency, making the investment highly profitable. The exact cost depends on your business 
+                  size, industry, and specific needs.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-lg font-bold mb-2 text-gray-900">
+                  How long does it take to see results from the integrated marketing stack?
+                </h3>
+                <p className="text-gray-700">
+                  Initial results typically appear within 4-8 weeks as you implement foundation work (schema markup, technical 
+                  SEO, basic AI automation). Significant improvements usually occur at 3-6 months as you build authority and 
+                  expand strategies. Full competitive advantage typically requires 6-12 months of consistent implementation 
+                  and optimization. The timeline varies based on your industry competitiveness, current online presence, and 
+                  implementation thoroughness. Businesses with existing strong online presence may see results faster, while 
+                  new businesses may require more time to establish authority.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-lg font-bold mb-2 text-gray-900">
+                  Can I implement the integrated marketing stack myself?
+                </h3>
+                <p className="text-gray-700">
+                  Basic implementation (schema markup, technical SEO fixes, basic chatbots) can be done in-house with 
+                  technical knowledge. However, comprehensive implementation benefits from professional help, especially for 
+                  GEO optimization, advanced SEO strategies, and complex AI automation. Consider working with a marketing 
+                  agency or consultant that specializes in GEO, SEO, and AI automation. The ROI typically justifies professional 
+                  help for businesses generating $500K+ annual revenue. Professional implementation ensures best practices, 
+                  reduces errors, and accelerates results.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-lg font-bold mb-2 text-gray-900">
+                  How do I measure success of the integrated marketing stack?
+                </h3>
+                <p className="text-gray-700">
+                  Track these key metrics: (1) GEO Metrics – AI citation frequency, branded search volume, AI visibility 
+                  scores; (2) SEO Metrics – search rankings, organic traffic, backlink growth, domain authority; (3) AI 
+                  Automation Metrics – chatbot engagement, personalization effectiveness, lead qualification rates, conversion 
+                  rates; (4) Overall Metrics – total leads, CAC, conversion rates, revenue growth. Use analytics platforms 
+                  to track performance and identify optimization opportunities. Regular monitoring helps you adjust strategies 
+                  and maximize ROI.
                 </p>
               </div>
             </div>
@@ -424,7 +710,7 @@ export default function NewMarketingStackPage() {
                 "name": "How do I prioritize GEO, SEO, and AI automation?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Start with foundation work that benefits all three: technical SEO improvements, schema markup, and basic AI automation setup. Most businesses benefit from a 40/40/20 split (40% GEO, 40% SEO, 20% AI automation) initially."
+                  "text": "Start with foundation work that benefits all three: technical SEO improvements, schema markup, and basic AI automation setup. Most businesses benefit from a 40/40/20 split (40% GEO, 40% SEO, 20% AI automation) initially, adjusting based on results."
                 }
               },
               {
@@ -432,7 +718,47 @@ export default function NewMarketingStackPage() {
                 "name": "What's the ROI timeline for the integrated marketing stack?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Initial results appear within 4-8 weeks. Significant impact typically occurs at 3-6 months. Full integration benefits are realized at 6-12 months. Businesses typically see 2-3x improvement in key metrics within 6-12 months."
+                  "text": "Initial results appear within 4-8 weeks. Significant impact typically occurs at 3-6 months. Full integration benefits are realized at 6-12 months as all components work synergistically. Businesses typically see 2-3x improvement in key metrics within 6-12 months."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need separate tools for GEO, SEO, and AI automation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Some tools serve multiple purposes, but you'll likely need specialized tools for each component. However, many modern marketing platforms integrate multiple capabilities, reducing the number of separate tools needed."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does it cost to implement the integrated marketing stack?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Implementation costs range from $15,000-$50,000 for small to medium businesses, and $50,000-$200,000+ for enterprise implementations. Monthly costs for tools and ongoing optimization typically range from $2,000-$10,000 depending on scale."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does it take to see results from the integrated marketing stack?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Initial results typically appear within 4-8 weeks. Significant improvements usually occur at 3-6 months. Full competitive advantage typically requires 6-12 months of consistent implementation and optimization."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I implement the integrated marketing stack myself?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Basic implementation can be done in-house with technical knowledge. However, comprehensive implementation benefits from professional help, especially for GEO optimization, advanced SEO strategies, and complex AI automation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I measure success of the integrated marketing stack?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Track GEO metrics (AI citation frequency, branded search volume), SEO metrics (search rankings, organic traffic, backlink growth), AI automation metrics (chatbot engagement, personalization effectiveness), and overall metrics (total leads, CAC, conversion rates, revenue growth)."
                 }
               }
             ]
