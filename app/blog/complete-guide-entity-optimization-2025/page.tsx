@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Brain, Search, TrendingUp, Zap, Target, CheckCircle, Database, Globe, MessageSquare } from 'import { ArrowRight, Database, Target, CheckCircle, Zap, Network, Layers, BarChart } from 'lucide-react'
-import { import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+import { ArrowRight, Database, Target, CheckCircle, Zap, Network, Layers, BarChart } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 
 export const metadata: Metadata = {
