@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Network, Layers, Target, CheckCircle, Zap, Link as LinkIcon, BarChart } from 'lucide-react'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+import BlogSidebar from '../../../components/blog/blog-sidebar'
 
 
 

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Database, Target, CheckCircle, Zap, Network, Layers, BarChart } from 'lucide-react'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+import BlogSidebar from '../../../components/blog/blog-sidebar'
 
 
 export const metadata: Metadata = {

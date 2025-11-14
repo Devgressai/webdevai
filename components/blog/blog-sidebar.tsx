@@ -20,7 +20,7 @@ const services = [
   'Other'
 ]
 
-export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
+export default function BlogSidebar({ headings = [] }: BlogSidebarProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

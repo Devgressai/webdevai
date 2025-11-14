@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Brain, Search, TrendingUp, Zap, Target, CheckCircle, Database, Globe, MessageSquare } from 'lucide-react'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+import BlogSidebar from '../../../components/blog/blog-sidebar'
 
 export const metadata: Metadata = {
   title: 'What Is Generative Engine Optimization (GEO)? Full 2025 Guide for Businesses | Web Vello',
