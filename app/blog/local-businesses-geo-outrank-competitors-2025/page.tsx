@@ -4,7 +4,6 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, MapPin, Target, CheckCircle, TrendingUp, Building, Users, Zap } from 'lucide-react'
 import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 
 export const metadata: Metadata = {
