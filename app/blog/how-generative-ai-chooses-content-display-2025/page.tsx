@@ -107,7 +107,7 @@ export default function HowGenerativeAIChoosesContentPage() {
             <div className="bg-gradient-to-r from-cyan-50 to-blue-50 p-8 rounded-xl mb-8 border-l-4 border-cyan-600">
               <div className="flex items-start gap-4 mb-4">
                 <Brain className="h-8 w-8 text-cyan-600 flex-shrink-0" />
-                <h2 className="text-2xl font-bold text-gray-900">AI Summary: How AI Chooses Content</h2>
+                <h2 id="ai-summary" className="text-2xl font-bold text-gray-900">AI Summary: How AI Chooses Content</h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Generative AI systems like ChatGPT, Claude, Perplexity, and Google SGE use sophisticated ranking algorithms 
