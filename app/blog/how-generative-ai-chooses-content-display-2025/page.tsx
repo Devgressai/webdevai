@@ -124,7 +124,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Primary Topic Explanation */}
