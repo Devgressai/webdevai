@@ -100,7 +100,6 @@ export default function HowGenerativeAIChoosesContentPage() {
         <div className="flex gap-8 items-start">
           {/* Main Content */}
           <div className="flex-1 min-w-0">
-      
       {/* AI Summary Block */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto">
@@ -132,7 +131,6 @@ export default function HowGenerativeAIChoosesContentPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">
               Understanding AI Content Selection: The Multi-Stage Process
             </h2>
-            
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">The Six-Stage Content Selection Process</h3>
               <p className="text-lg text-gray-700 mb-6">
@@ -313,7 +311,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Optimization Strategies */}
@@ -388,7 +385,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Ranking Factors Deep Dive */}
@@ -481,7 +477,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Real-World Examples */}
@@ -533,7 +528,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Implementation Checklist */}
@@ -651,7 +645,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* FAQ Section */}
@@ -673,7 +666,6 @@ export default function HowGenerativeAIChoosesContentPage() {
                   need to easily extract and understand information.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How do I know if my content is being selected by AI systems?
@@ -688,7 +680,6 @@ export default function HowGenerativeAIChoosesContentPage() {
                   in rich results.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Can I optimize content for specific AI platforms?
@@ -756,7 +747,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* FAQ Schema */}
@@ -834,7 +824,6 @@ export default function HowGenerativeAIChoosesContentPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways
             </h2>
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Ranking Factors</h3>
@@ -846,7 +835,6 @@ export default function HowGenerativeAIChoosesContentPage() {
                   <li>• Comprehensiveness (10-15%)</li>
                 </ul>
               </div>
-              
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Optimization Focus</h3>
                 <ul className="space-y-2">
@@ -859,11 +847,9 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
           </div>
-          
           {/* Sidebar */}
           <BlogSidebar />
         </div>
