@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Sparkles, Cpu, Layout, Zap, Brain, Rocket, CheckCircle, Eye, MessageSquare } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 export const metadata: Metadata = {
   title: 'The Future of Web Design in an AI-First World: GEO, Automation, and Smart Websites | Web Vello',

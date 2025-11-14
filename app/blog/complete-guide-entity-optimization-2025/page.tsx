@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Database, Target, CheckCircle, Zap, Network, Layers, BarChart } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 export const metadata: Metadata = {
   title: 'Complete Guide to Entity Optimization: The Foundation of Modern GEO and SEO | Web Vello',

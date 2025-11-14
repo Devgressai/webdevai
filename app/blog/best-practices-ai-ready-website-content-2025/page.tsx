@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, FileText, CheckCircle, AlertTriangle, Zap, Target, Layers, Sparkles } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 export const metadata: Metadata = {
   title: 'Best Practices for Creating AI-Ready Website Content That Gets Picked Up by Search Engines and AI Models | Web Vello',
   description: 'Complete guide to creating AI-ready website content optimized for both search engines and AI models. Learn best practices for content structure, formatting, and optimization.',
