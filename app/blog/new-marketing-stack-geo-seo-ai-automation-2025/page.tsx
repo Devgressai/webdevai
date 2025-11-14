@@ -5,7 +5,6 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Layers, TrendingUp, Zap, Target, CheckCircle, BarChart, Sparkles } from 'lucide-react'
 import BlogSidebar from '../../../components/blog/blog-sidebar'
 
-
 export const metadata: Metadata = {
   title: 'The New Marketing Stack: GEO + SEO + AI Automation for Business Growth in 2025 | Web Vello',
   description: 'Complete guide to the modern marketing stack combining GEO, SEO, and AI automation. Learn how to integrate these strategies for maximum business growth in 2025.',

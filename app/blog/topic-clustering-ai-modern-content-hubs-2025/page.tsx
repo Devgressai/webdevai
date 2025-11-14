@@ -5,7 +5,6 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Network, Layers, Target, CheckCircle, Zap, Link as LinkIcon, BarChart } from 'lucide-react'
 import BlogSidebar from '../../../components/blog/blog-sidebar'
 
-
 export const metadata: Metadata = {
   title: 'Topic Clustering for AI: How to Build Modern Content Hubs That Dominate GEO Search | Web Vello',
   description: 'Complete guide to topic clustering for AI optimization. Learn how to build modern content hubs that dominate GEO search and establish topical authority.',

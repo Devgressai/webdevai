@@ -5,7 +5,6 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Brain, Search, Zap, Target, CheckCircle, Database, Globe, Cpu, TrendingUp } from 'lucide-react'
 import BlogSidebar from '../../../components/blog/blog-sidebar'
 
-
 export const metadata: Metadata = {
   title: 'How to Optimize Your Website for AI Answer Engines (GPT-5, Claude, Gemini) | Web Vello',
   description: 'Complete guide to optimizing your website for AI answer engines including ChatGPT, Claude, Perplexity, Gemini, and Google SGE. Step-by-step implementation strategies.',

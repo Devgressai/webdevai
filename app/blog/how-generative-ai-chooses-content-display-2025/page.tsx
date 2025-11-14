@@ -5,7 +5,6 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Search, Brain, Filter, Target, CheckCircle, BarChart, Zap } from 'lucide-react'
 import BlogSidebar from '../../../components/blog/blog-sidebar'
 
-
 export const metadata: Metadata = {
   title: 'How Generative AI Chooses What Content to Display: Internal Ranking Factors Explained | Web Vello',
   description: 'Complete guide to understanding how generative AI systems like ChatGPT, Claude, and Perplexity choose and rank content. Learn the internal ranking factors that determine content visibility.',

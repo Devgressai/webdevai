@@ -5,7 +5,6 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, MapPin, Target, CheckCircle, TrendingUp, Building, Users, Zap } from 'lucide-react'
 import BlogSidebar from '../../../components/blog/blog-sidebar'
 
-
 export const metadata: Metadata = {
   title: 'How Local Businesses Can Use GEO to Outrank Competitors in Their City or Service Area | Web Vello',
   description: 'Complete guide to using GEO (Generative Engine Optimization) for local businesses. Learn how to outrank competitors in your city or service area with AI optimization strategies.',
