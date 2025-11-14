@@ -181,18 +181,18 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
 
         {submitStatus === 'success' ? (
           <div className="text-center py-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <CheckCircle className="h-6 w-6 text-green-600" />
+            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <CheckCircle className="h-6 w-6 text-white" />
             </div>
-            <p className="text-gray-700 font-semibold mb-2">Thank You!</p>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-white font-semibold mb-2">Thank You!</p>
+            <p className="text-sm text-white/90 mb-4">
               We'll get back to you within 24 hours.
             </p>
             <Button
               variant="outline"
               size="sm"
               onClick={() => setSubmitStatus('idle')}
-              className="w-full"
+              className="w-full bg-white text-blue-600 hover:bg-gray-100 border-white"
             >
               Send Another Message
             </Button>
@@ -200,7 +200,7 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="name" className="block text-sm font-medium text-white mb-1">
                 Name *
               </label>
               <input
@@ -210,13 +210,13 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
                 required
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-white/30 bg-white/90 rounded-lg focus:ring-2 focus:ring-white focus:border-white focus:bg-white"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-white mb-1">
                 Email *
               </label>
               <input
@@ -226,13 +226,13 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-white/30 bg-white/90 rounded-lg focus:ring-2 focus:ring-white focus:border-white focus:bg-white"
                 placeholder="your@email.com"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="phone" className="block text-sm font-medium text-white mb-1">
                 Phone
               </label>
               <input
@@ -241,13 +241,13 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-white/30 bg-white/90 rounded-lg focus:ring-2 focus:ring-white focus:border-white focus:bg-white"
                 placeholder="(555) 123-4567"
               />
             </div>
 
             <div>
-              <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="service" className="block text-sm font-medium text-white mb-1">
                 Service Interest
               </label>
               <select
@@ -255,7 +255,7 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
                 name="service"
                 value={formData.service}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-white/30 bg-white/90 rounded-lg focus:ring-2 focus:ring-white focus:border-white focus:bg-white"
               >
                 <option value="">Select a service</option>
                 {services.map((service) => (
@@ -267,7 +267,7 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-1">
                 Message
               </label>
               <textarea
@@ -276,13 +276,13 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
                 rows={3}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-white/30 bg-white/90 rounded-lg focus:ring-2 focus:ring-white focus:border-white focus:bg-white"
                 placeholder="Tell us about your project..."
               />
             </div>
 
             {submitStatus === 'error' && (
-              <div className="text-sm text-red-600">
+              <div className="text-sm text-white bg-red-500/80 p-2 rounded">
                 Something went wrong. Please try again.
               </div>
             )}
@@ -290,13 +290,41 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-2.5"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         )}
       </div>
+
+      {/* Table of Contents - Below Contact Form */}
+      {tocHeadings.length > 0 && (
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Table of Contents</h3>
+          <nav className="space-y-2">
+            {tocHeadings.map((heading) => (
+              <a
+                key={heading.id}
+                href={`#${heading.id}`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToHeading(heading.id)
+                }}
+                className={`block text-sm transition-colors py-1 px-2 rounded hover:bg-gray-50 ${
+                  heading.level === 3 ? 'ml-4 text-xs' : ''
+                } ${
+                  activeHeading === heading.id
+                    ? 'text-blue-600 font-semibold bg-blue-50 border-l-2 border-blue-600'
+                    : 'text-gray-600 hover:text-blue-600'
+                }`}
+              >
+                {heading.text.length > 60 ? `${heading.text.substring(0, 60)}...` : heading.text}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </div>
   )
 }
