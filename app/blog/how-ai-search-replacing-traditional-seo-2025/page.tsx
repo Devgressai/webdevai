@@ -3,7 +3,9 @@ import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, TrendingDown, TrendingUp, Search, Brain, Zap, AlertTriangle, CheckCircle, BarChart, Target } from 'lucide-react'
 import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+
 import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+
 
 export const metadata: Metadata = {
   title: 'How AI Search Is Replacing Traditional SEO: What Business Owners Must Know in 2025 | Web Vello',

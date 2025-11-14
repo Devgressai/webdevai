@@ -5,6 +5,7 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Sparkles, Cpu, Layout, Zap, Brain, Rocket, CheckCircle, Eye, MessageSquare } from 'lucide-react'
 import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
+
 export const metadata: Metadata = {
   title: 'The Future of Web Design in an AI-First World: GEO, Automation, and Smart Websites | Web Vello',
   description: 'Discover how web design is evolving for the AI era. Learn about GEO-optimized design, AI automation integration, and building smart websites that thrive in 2025.',

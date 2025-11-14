@@ -3,7 +3,9 @@ import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Brain, Search, Zap, Target, CheckCircle, Database, Globe, Cpu, TrendingUp } from 'lucide-react'
 import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+
 import { BlogSidebar } from '../../../components/blog/blog-sidebar'
+
 
 export const metadata: Metadata = {
   title: 'How to Optimize Your Website for AI Answer Engines (GPT-5, Claude, Gemini) | Web Vello',

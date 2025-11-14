@@ -5,6 +5,7 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Database, Target, CheckCircle, Zap, Network, Layers, BarChart } from 'lucide-react'
 import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
+
 export const metadata: Metadata = {
   title: 'Complete Guide to Entity Optimization: The Foundation of Modern GEO and SEO | Web Vello',
   description: 'Complete guide to entity optimization for GEO and SEO. Learn how to define, structure, and optimize entities to establish authority and improve AI visibility.',
