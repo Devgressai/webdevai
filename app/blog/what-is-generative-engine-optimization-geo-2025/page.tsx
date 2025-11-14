@@ -555,7 +555,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Local + National Relevance */}
