@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useMobileDetection, TouchButton, MobileNav } from '@/components/ui/mobile-optimizations'
+import { Logo } from '@/components/ui/logo'
 
 export default function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -76,15 +77,7 @@ export default function MobileHeader() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative w-10 h-10">
-                <Image
-                  src="/newlogo.png"
-                  alt="Web Vello"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
+              <Logo size={48} className="transition-transform duration-200 group-hover:scale-105" />
               <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Web Vello
               </span>

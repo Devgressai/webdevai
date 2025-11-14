@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "../ui/button"
+import { Logo } from "../ui/logo"
 // Import only essential icons to reduce bundle size
 import { 
   Menu, X, ChevronDown, Phone, BarChart3, 
@@ -328,14 +329,7 @@ export function NewHeader() {
               className="group flex items-center gap-3 rounded-full px-3 py-2 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
             >
               <span className="sr-only">Web Vello</span>
-              <Image
-                src="/newlogo.png"
-                alt="Web Vello logo"
-                width={150}
-                height={48}
-                priority
-                className="h-10 w-auto"
-              />
+              <Logo size={56} className="transition-transform duration-200 group-hover:scale-105" />
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -460,13 +454,7 @@ export function NewHeader() {
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Web Vello</span>
                 <div className="flex items-center gap-3">
-                  <Image
-                    src="/newlogo.png"
-                    alt="Web Vello logo"
-                    width={132}
-                    height={40}
-                    className="h-9 w-auto"
-                  />
+                  <Logo size={48} />
                 </div>
               </Link>
               <button
