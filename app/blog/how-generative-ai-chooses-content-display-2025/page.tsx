@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Search, Brain, Filter, Target, CheckCircle, BarChart, Zap } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 export const metadata: Metadata = {
   title: 'How Generative AI Chooses What Content to Display: Internal Ranking Factors Explained | Web Vello',

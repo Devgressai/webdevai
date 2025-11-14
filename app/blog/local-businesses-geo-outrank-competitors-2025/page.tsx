@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
-import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, MapPin, Target, CheckCircle, TrendingUp, Building, Users, Zap } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 export const metadata: Metadata = {
   title: 'How Local Businesses Can Use GEO to Outrank Competitors in Their City or Service Area | Web Vello',
