@@ -253,8 +253,7 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* Ranking Factors */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">
               Key Ranking Factors That Determine Content Selection
             </h2>
@@ -321,7 +320,6 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* Optimization Strategies */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">
               Optimization Strategies for AI Content Selection
@@ -397,7 +395,6 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* Ranking Factors Deep Dive */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">
               AI Ranking Factors: Technical Deep Dive
@@ -491,7 +488,6 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* Real-World Examples */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">
               Real-World Examples: AI Content Selection Success Stories
@@ -544,7 +540,6 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* Implementation Checklist */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">
               AI Content Selection Optimization Checklist
@@ -663,7 +658,6 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">
               Frequently Asked Questions
@@ -838,7 +832,6 @@ export default function HowGenerativeAIChoosesContentPage() {
 
       {/* AI Summary Compatibility */}
       <section className="py-16 bg-gradient-to-r from-cyan-900 to-blue-900 text-white">
-        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways
