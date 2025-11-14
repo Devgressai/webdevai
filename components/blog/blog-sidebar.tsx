@@ -171,40 +171,12 @@ export function BlogSidebar({ headings = [] }: BlogSidebarProps) {
   const tocHeadings = extractedHeadings.length > 0 ? extractedHeadings : headings
 
   return (
-    <div className="hidden xl:block w-80 flex-shrink-0 space-y-6">
-      {/* Table of Contents */}
-      {tocHeadings.length > 0 && (
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Table of Contents</h3>
-          <nav className="space-y-2">
-            {tocHeadings.map((heading) => (
-              <a
-                key={heading.id}
-                href={`#${heading.id}`}
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToHeading(heading.id)
-                }}
-                className={`block text-sm transition-colors py-1 px-2 rounded hover:bg-gray-50 ${
-                  heading.level === 3 ? 'ml-4 text-xs' : ''
-                } ${
-                  activeHeading === heading.id
-                    ? 'text-blue-600 font-semibold bg-blue-50 border-l-2 border-blue-600'
-                    : 'text-gray-600 hover:text-blue-600'
-                }`}
-              >
-                {heading.text.length > 60 ? `${heading.text.substring(0, 60)}...` : heading.text}
-              </a>
-            ))}
-          </nav>
-        </div>
-      )}
-
-      {/* Contact Form */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg border border-blue-200 p-6 sticky top-24">
+    <div className="hidden lg:block w-80 flex-shrink-0 space-y-6">
+      {/* Contact Form - CTA First */}
+      <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl shadow-xl border border-blue-500 p-6 sticky top-24">
         <div className="flex items-center gap-2 mb-4">
-          <MessageSquare className="h-5 w-5 text-blue-600" />
-          <h3 className="text-lg font-bold text-gray-900">Get in Touch</h3>
+          <MessageSquare className="h-5 w-5 text-white" />
+          <h3 className="text-lg font-bold text-white">Get in Touch</h3>
         </div>
 
         {submitStatus === 'success' ? (
