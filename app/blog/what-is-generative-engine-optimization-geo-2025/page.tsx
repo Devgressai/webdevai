@@ -101,7 +101,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
         <div className="flex gap-8 items-start">
           {/* Main Content */}
           <div className="flex-1 min-w-0">
-      
       {/* AI Summary Block */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto">
@@ -121,7 +120,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Primary Topic Explanation */}
@@ -130,7 +128,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
             <h2 id="understanding-generative-engine-optimization" className="text-3xl font-bold mb-6 text-gray-900">
               Understanding Generative Engine Optimization: The Evolution Beyond Traditional SEO
             </h2>
-            
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">What Is GEO? Clear Definition</h3>
               <p className="text-lg text-gray-700 mb-6">
@@ -144,7 +141,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               <p className="text-lg text-gray-700 mb-4">
                 The search landscape has fundamentally transformed. Consider these data points:
               </p>
-              
               <div className="bg-gray-50 p-6 rounded-xl mb-6">
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -203,7 +199,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </p>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Real-World Examples of GEO in Action</h3>
-              
               <div className="space-y-6 mb-8">
                 <div className="bg-blue-50 p-6 rounded-xl">
                   <h4 className="font-bold text-xl mb-2 text-gray-900">Example 1: Local Service Provider</h4>
@@ -250,7 +245,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Problem → Solution Breakdown */}
@@ -363,7 +357,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">The GEO Technology Stack</h3>
-              
               <p className="text-lg text-gray-700 mb-6">
                 GEO operates at the intersection of several technical disciplines. Understanding these components helps 
                 businesses implement effective optimization strategies.
@@ -371,7 +364,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
               <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-8 rounded-xl mb-8">
                 <h4 className="text-xl font-bold mb-4 text-gray-900">Core GEO Components:</h4>
-                
                 <div className="space-y-6">
                   <div>
                     <h5 className="font-bold text-lg mb-2 text-gray-900">1. Entity Optimization</h5>
@@ -442,7 +434,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">How AI Systems Select Content for Responses</h3>
-              
               <p className="text-lg text-gray-700 mb-4">
                 When a user asks an AI a question, the system follows a multi-step process to generate responses:
               </p>
@@ -455,7 +446,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                     <p className="text-gray-700">AI interprets the user's intent, extracting entities, topics, and desired information type</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
                   <div>
@@ -463,7 +453,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                     <p className="text-gray-700">System searches training data and/or real-time web sources for relevant content</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
                   <div>
@@ -471,7 +460,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                     <p className="text-gray-700">Retrieved content is ranked by relevance, authority, clarity, and recency</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
                   <div>
@@ -479,7 +467,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                     <p className="text-gray-700">Key facts, definitions, steps, or comparisons are extracted from top-ranked sources</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
                   <div>
@@ -487,7 +474,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                     <p className="text-gray-700">Information from multiple sources is combined into a coherent, comprehensive response</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">6</div>
                   <div>
@@ -506,7 +492,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">GEO Implementation Framework</h3>
-              
               <p className="text-lg text-gray-700 mb-4">
                 A systematic approach to implementing GEO across your digital properties:
               </p>
@@ -779,7 +764,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* GEO Quick Reference */}
@@ -921,7 +905,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* FAQ Section */}
@@ -943,7 +926,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   but complementary purposes in the modern search ecosystem.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How long does it take to see results from GEO implementation?
@@ -956,7 +938,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   competitiveness, current content quality, and implementation thoroughness.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Can small businesses benefit from GEO, or is it only for enterprises?
@@ -969,7 +950,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   outperform national chains in local AI search results.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Which AI platforms should I optimize for?
@@ -982,7 +962,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   platform-specific tactics, as the AI search landscape evolves rapidly.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Do I need technical expertise to implement GEO?
@@ -995,7 +974,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   from content-only optimizations before touching any technical elements.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How do I measure GEO success?
@@ -1009,7 +987,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   Google Analytics for traffic pattern changes indicating AI-driven discovery.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Will GEO replace traditional SEO?
@@ -1022,7 +999,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   visibility across traditional search engines and AI answer platforms.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   What content types work best for GEO?
@@ -1035,7 +1011,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   common thread: clear structure, specific information, and formats that make extraction easy for AI systems.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How much does professional GEO optimization cost?
@@ -1049,7 +1024,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   qualified leads, and market share gains.
                 </p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   What industries benefit most from GEO?
@@ -1065,7 +1039,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* FAQ Schema */}
@@ -1111,7 +1084,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways for Generative Engines
             </h2>
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Entity Recap</h3>
@@ -1122,7 +1094,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                   <li>• <strong>Key Benefit:</strong> Visibility where 1.2B+ users search</li>
                 </ul>
               </div>
-              
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Key Facts</h3>
                 <ul className="space-y-2">
@@ -1133,7 +1104,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                 </ul>
               </div>
             </div>
-            
             <div className="bg-white/10 p-6 rounded-xl mb-8">
               <h3 className="font-bold text-xl mb-4">Core Definitions</h3>
               <ul className="space-y-3">
@@ -1152,7 +1122,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
                 </li>
               </ul>
             </div>
-            
             <div className="bg-white/10 p-6 rounded-xl">
               <h3 className="font-bold text-xl mb-4">Short Answer Blocks</h3>
               <div className="space-y-4">
@@ -1175,7 +1144,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Internal Link Placeholders Section */}
@@ -1212,7 +1180,6 @@ export default function GenerativeEngineOptimizationGuidePage() {
       </section>
 
           </div>
-          
           {/* Sidebar */}
           <BlogSidebar />
         </div>
