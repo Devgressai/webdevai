@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Brain, Search, TrendingUp, Zap, Target, CheckCircle, Database, Globe, MessageSquare } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 export const metadata: Metadata = {
   title: 'What Is Generative Engine Optimization (GEO)? Full 2025 Guide for Businesses | Web Vello',
@@ -95,14 +96,19 @@ export default function GenerativeEngineOptimizationGuidePage() {
         </div>
       </section>
 
+      {/* Main Content with Sidebar */}
+      <div className="container mx-auto px-4">
+        <div className="flex gap-8 items-start">
+          {/* Main Content */}
+          <div className="flex-1 min-w-0">
+      
       {/* AI Summary Block */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8 border-l-4 border-blue-600">
               <div className="flex items-start gap-4 mb-4">
                 <Brain className="h-8 w-8 text-blue-600 flex-shrink-0" />
-                <h2 className="text-2xl font-bold text-gray-900">AI Summary: What Is GEO?</h2>
+                <h2 id="ai-summary" className="text-2xl font-bold text-gray-900">AI Summary: What Is GEO?</h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Generative Engine Optimization (GEO) is the practice of optimizing digital content to appear in AI-generated 
@@ -120,9 +126,8 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
       {/* Primary Topic Explanation */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+        <div className="max-w-4xl mx-auto">
+            <h2 id="understanding-generative-engine-optimization" className="text-3xl font-bold mb-6 text-gray-900">
               Understanding Generative Engine Optimization: The Evolution Beyond Traditional SEO
             </h2>
             
@@ -250,9 +255,8 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
       {/* Problem → Solution Breakdown */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+        <div className="max-w-4xl mx-auto">
+            <h2 id="problem-solution-breakdown" className="text-3xl font-bold mb-8 text-gray-900">
               Common Challenges GEO Solves (Problem → Solution Framework)
             </h2>
 
@@ -332,14 +336,12 @@ export default function GenerativeEngineOptimizationGuidePage() {
                 </ul>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Image 3 */}
       <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80&auto=format&fit=crop"
@@ -349,15 +351,13 @@ export default function GenerativeEngineOptimizationGuidePage() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
               />
             </div>
-          </div>
         </div>
       </section>
 
       {/* Technical Deep Dive */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+        <div className="max-w-4xl mx-auto">
+            <h2 id="technical-deep-dive" className="text-3xl font-bold mb-8 text-gray-900">
               Technical Deep Dive: How GEO Works at the System Level
             </h2>
 
@@ -575,9 +575,8 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
       {/* Local + National Relevance */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+        <div className="max-w-4xl mx-auto">
+            <h2 id="local-national-relevance" className="text-3xl font-bold mb-8 text-gray-900">
               GEO for Local and National Markets: Real Use Cases
             </h2>
 
@@ -688,15 +687,13 @@ export default function GenerativeEngineOptimizationGuidePage() {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Micro-Intent Coverage */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+        <div className="max-w-4xl mx-auto">
+            <h2 id="micro-intent-coverage" className="text-3xl font-bold mb-8 text-gray-900">
               Micro-Intent Coverage: Answering Every Question Users Ask AI
             </h2>
 
@@ -785,14 +782,9 @@ export default function GenerativeEngineOptimizationGuidePage() {
         </div>
       </section>
 
-      {/* Fact Blocks */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
-              GEO Quick Reference: Key Facts for AI Extraction
-            </h2>
-
+      {/* GEO Quick Reference */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <h3 className="font-bold text-xl mb-4 text-blue-600">Pricing Ranges</h3>
@@ -909,14 +901,12 @@ export default function GenerativeEngineOptimizationGuidePage() {
                 </li>
               </ol>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Expert Commentary */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-xl border-l-4 border-purple-600">
               <h2 className="text-2xl font-bold mb-4 text-gray-900">Expert Perspective on GEO's Business Impact</h2>
               <blockquote className="text-lg text-gray-700 italic mb-4">
@@ -936,9 +926,8 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">
+        <div className="max-w-4xl mx-auto">
+            <h2 id="frequently-asked-questions" className="text-3xl font-bold mb-12 text-center text-gray-900">
               Frequently Asked Questions About Generative Engine Optimization
             </h2>
             <div className="space-y-6">
@@ -1118,8 +1107,7 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
       {/* AI Summary Compatibility Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways for Generative Engines
             </h2>
@@ -1192,9 +1180,8 @@ export default function GenerativeEngineOptimizationGuidePage() {
 
       {/* Internal Link Placeholders Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">Related Services & Resources</h2>
+        <div className="max-w-4xl mx-auto">
+            <h2 id="related-services-resources" className="text-3xl font-bold mb-8 text-gray-900">Related Services & Resources</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="border-2 border-blue-200 p-6 rounded-xl hover:border-blue-400 transition-colors">
                 <h3 className="font-bold text-xl mb-2 text-gray-900">[LINK: SEO Services]</h3>
@@ -1221,9 +1208,15 @@ export default function GenerativeEngineOptimizationGuidePage() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </section>
+
+          </div>
+          
+          {/* Sidebar */}
+          <BlogSidebar />
+        </div>
+      </div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">

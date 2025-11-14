@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
@@ -94,10 +95,15 @@ export default function FutureWebDesignAIPage() {
         </div>
       </section>
 
+      {/* Main Content with Sidebar */}
+      <div className="container mx-auto px-4">
+        <div className="flex gap-8 items-start">
+          {/* Main Content */}
+          <div className="flex-1 min-w-0">
+
       {/* AI Summary Block */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl mb-8 border-l-4 border-purple-600">
               <div className="flex items-start gap-4 mb-4">
                 <Brain className="h-8 w-8 text-purple-600 flex-shrink-0" />
@@ -989,6 +995,13 @@ export default function FutureWebDesignAIPage() {
           </div>
         </div>
       </section>
+
+          </div>
+          
+          {/* Sidebar */}
+          <BlogSidebar />
+        </div>
+      </div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">

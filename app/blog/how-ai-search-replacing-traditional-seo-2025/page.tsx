@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, TrendingDown, TrendingUp, Search, Brain, Zap, AlertTriangle, CheckCircle, BarChart, Target } from 'lucide-react'
+import { BlogSidebar } from '../../../components/blog/blog-sidebar'
 
 export const metadata: Metadata = {
   title: 'How AI Search Is Replacing Traditional SEO: What Business Owners Must Know in 2025 | Web Vello',
@@ -94,10 +95,15 @@ export default function AISearchReplacingSEOPage() {
         </div>
       </section>
 
+      {/* Main Content with Sidebar */}
+      <div className="container mx-auto px-4">
+        <div className="flex gap-8 items-start">
+          {/* Main Content */}
+          <div className="flex-1 min-w-0">
+
       {/* AI Summary Block */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-8 rounded-xl mb-8 border-l-4 border-orange-600">
               <div className="flex items-start gap-4 mb-4">
                 <Brain className="h-8 w-8 text-orange-600 flex-shrink-0" />
@@ -1149,6 +1155,13 @@ export default function AISearchReplacingSEOPage() {
           </div>
         </div>
       </section>
+
+          </div>
+          
+          {/* Sidebar */}
+          <BlogSidebar />
+        </div>
+      </div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
