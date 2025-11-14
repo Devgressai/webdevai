@@ -247,7 +247,6 @@ export default function HowGenerativeAIChoosesContentPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Ranking Factors */}
