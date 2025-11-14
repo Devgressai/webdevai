@@ -83,7 +83,7 @@ export default function BestPracticesAIReadyContentPage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1434030216411.webp"
                 alt="Creating AI-ready website content optimized for search engines and AI models"
                 fill
                 className="object-cover"
@@ -158,7 +158,7 @@ export default function BestPracticesAIReadyContentPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1455390582262.webp"
                     alt="Content structure with clear heading hierarchy for AI extraction"
                     fill
                     className="object-cover"
@@ -209,7 +209,7 @@ export default function BestPracticesAIReadyContentPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1467232004584.webp"
                     alt="Modular content blocks and scannable formatting for AI-ready content"
                     fill
                     className="object-cover"
@@ -296,7 +296,7 @@ export default function BestPracticesAIReadyContentPage() {
             <div className="my-8">
               <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1486312338219-ce68e2c6f44d?w=1200&q=80&auto=format&fit=crop"
+                  src="/images/blog/1486312338219.webp"
                   alt="Writing best practices for AI-ready content: do's and don'ts"
                   fill
                   className="object-cover"
@@ -349,7 +349,7 @@ export default function BestPracticesAIReadyContentPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551650975.webp"
                     alt="Technical optimization with schema markup and semantic HTML for AI-ready content"
                     fill
                     className="object-cover"

@@ -84,7 +84,7 @@ export default function CompleteGuideEntityOptimizationPage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1460925895917.webp"
                 alt="Complete guide to entity optimization - the foundation of modern GEO and SEO"
                 fill
                 className="object-cover"
@@ -149,7 +149,7 @@ export default function CompleteGuideEntityOptimizationPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1451187580459.webp"
                     alt="Understanding entities and knowledge graphs in modern search and AI"
                     fill
                     className="object-cover"
@@ -189,7 +189,7 @@ export default function CompleteGuideEntityOptimizationPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1485827404703.webp"
                     alt="Benefits of entity optimization for GEO and SEO performance"
                     fill
                     className="object-cover"
@@ -248,7 +248,7 @@ export default function CompleteGuideEntityOptimizationPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1531746790731.webp"
                     alt="Step-by-step guide to implementing entity optimization for GEO and SEO"
                     fill
                     className="object-cover"
@@ -293,7 +293,7 @@ export default function CompleteGuideEntityOptimizationPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551288049.webp"
                     alt="Entity relationship mapping and knowledge graph structure for optimization"
                     fill
                     className="object-cover"

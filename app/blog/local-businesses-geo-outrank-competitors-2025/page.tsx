@@ -83,7 +83,7 @@ export default function LocalBusinessesGEOPage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1486312338219-ce68e2c6f44d?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1486312338219.webp"
                 alt="Local businesses using GEO to outrank competitors in their city or service area"
                 fill
                 className="object-cover"
@@ -146,7 +146,7 @@ export default function LocalBusinessesGEOPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1451187580459.webp"
                     alt="The local search revolution: why local businesses need GEO in 2025"
                     fill
                     className="object-cover"
@@ -185,7 +185,7 @@ export default function LocalBusinessesGEOPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1485827404703.webp"
                     alt="Benefits of local GEO for businesses competing in specific geographic markets"
                     fill
                     className="object-cover"
@@ -244,7 +244,7 @@ export default function LocalBusinessesGEOPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1531746790731.webp"
                     alt="Local GEO implementation strategies for city and service area optimization"
                     fill
                     className="object-cover"
@@ -289,7 +289,7 @@ export default function LocalBusinessesGEOPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551288049.webp"
                     alt="Optimizing for local AI queries and building local authority"
                     fill
                     className="object-cover"

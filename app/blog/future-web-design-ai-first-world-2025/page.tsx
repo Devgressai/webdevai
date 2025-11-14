@@ -84,7 +84,7 @@ export default function FutureWebDesignAIPage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1467232004584.webp"
                 alt="The future of web design in an AI-first world with GEO optimization and automation"
                 fill
                 className="object-cover"
@@ -265,7 +265,7 @@ export default function FutureWebDesignAIPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1486312338219-ce68e2c6f44d?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1486312338219.webp"
                     alt="Real-world examples of AI-first web design in action"
                     fill
                     className="object-cover"
@@ -456,7 +456,7 @@ export default function FutureWebDesignAIPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551650975.webp"
                     alt="AI-first technology stack and implementation architecture"
                     fill
                     className="object-cover"
@@ -626,7 +626,7 @@ export default function FutureWebDesignAIPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551434678.webp"
                     alt="Core implementation principles for AI-first web design"
                     fill
                     className="object-cover"

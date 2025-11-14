@@ -83,7 +83,7 @@ export default function NewMarketingStackPage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1460925895917.webp"
                 alt="The new marketing stack combining GEO, SEO, and AI automation for business growth"
                 fill
                 className="object-cover"
@@ -146,7 +146,7 @@ export default function NewMarketingStackPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551288049.webp"
                     alt="The three pillars of the modern marketing stack: GEO, SEO, and AI automation"
                     fill
                     className="object-cover"
@@ -191,7 +191,7 @@ export default function NewMarketingStackPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1552664730.webp"
                     alt="Business growth metrics showing the impact of integrated marketing strategies"
                     fill
                     className="object-cover"
@@ -255,7 +255,7 @@ export default function NewMarketingStackPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1556761175.webp"
                     alt="AI automation tools and workflows for marketing efficiency"
                     fill
                     className="object-cover"
@@ -338,7 +338,7 @@ export default function NewMarketingStackPage() {
             <div className="my-8">
               <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop"
+                  src="/images/blog/1551434678.webp"
                   alt="Integrated marketing stack workflow and automation processes"
                   fill
                   className="object-cover"

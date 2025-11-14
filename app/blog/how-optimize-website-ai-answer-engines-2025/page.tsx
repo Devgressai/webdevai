@@ -83,7 +83,7 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1677442136019.webp"
                 alt="AI answer engines visualization showing multiple AI platforms working together"
                 fill
                 className="object-cover"
@@ -145,7 +145,7 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1485827404703.webp"
                     alt="Comparison between traditional search engines and AI answer engines"
                     fill
                     className="object-cover"
@@ -191,7 +191,7 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1531746790731.webp"
                     alt="AI systems analyzing and extracting website content for answers"
                     fill
                     className="object-cover"
@@ -262,7 +262,7 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551288049.webp"
                     alt="Schema markup and structured data visualization for website optimization"
                     fill
                     className="object-cover"
@@ -318,7 +318,7 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1460925895917.webp"
                     alt="Entity optimization and content structure for AI understanding"
                     fill
                     className="object-cover"

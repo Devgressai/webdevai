@@ -84,7 +84,7 @@ export default function GenerativeEngineOptimizationGuidePage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1677442136019.webp"
                 alt="Generative Engine Optimization (GEO) concept showing AI systems extracting and citing content"
                 fill
                 className="object-cover"
@@ -176,7 +176,7 @@ export default function GenerativeEngineOptimizationGuidePage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1451187580459.webp"
                     alt="The evolution from traditional SEO to Generative Engine Optimization (GEO)"
                     fill
                     className="object-cover"
@@ -235,7 +235,7 @@ export default function GenerativeEngineOptimizationGuidePage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1485827404703.webp"
                     alt="Real-world examples of businesses successfully implementing GEO strategies"
                     fill
                     className="object-cover"
@@ -338,7 +338,7 @@ export default function GenerativeEngineOptimizationGuidePage() {
         <div className="max-w-4xl mx-auto">
             <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80&auto=format&fit=crop"
+                src="/images/blog/1531746790731.webp"
                 alt="Problem-solving framework for GEO implementation challenges"
                 fill
                 className="object-cover"
@@ -545,7 +545,7 @@ export default function GenerativeEngineOptimizationGuidePage() {
               <div className="my-8">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop"
+                    src="/images/blog/1551288049.webp"
                     alt="GEO implementation framework and technical architecture"
                     fill
                     className="object-cover"
