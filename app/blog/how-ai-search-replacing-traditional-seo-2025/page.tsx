@@ -122,7 +122,6 @@ export default function AISearchReplacingSEOPage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Primary Topic Explanation */}
@@ -132,7 +131,6 @@ export default function AISearchReplacingSEOPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">
               The Seismic Shift: How AI Is Disrupting Two Decades of SEO Practice
             </h2>
-            
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">What Is Happening to Traditional Search?</h3>
               <p className="text-lg text-gray-700 mb-6">
@@ -216,10 +214,8 @@ export default function AISearchReplacingSEOPage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Industry Context: The Evolution of Search Behavior</h3>
-              
               <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-8 rounded-xl mb-8">
                 <h4 className="font-bold text-xl mb-4 text-gray-900">The Four Eras of Search:</h4>
-                
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 bg-gray-400 text-white rounded-full flex items-center justify-center font-bold">1</div>
@@ -228,7 +224,6 @@ export default function AISearchReplacingSEOPage() {
                       <p className="text-gray-700">Yahoo Directory, DMOZ. Humans manually categorized websites. Limited scale.</p>
                     </div>
                   </div>
-                  
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
                     <div>
@@ -236,7 +231,6 @@ export default function AISearchReplacingSEOPage() {
                       <p className="text-gray-700">Google's PageRank. Keyword optimization, backlink building. Traditional SEO was born and thrived.</p>
                     </div>
                   </div>
-                  
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
                     <div>
@@ -244,7 +238,6 @@ export default function AISearchReplacingSEOPage() {
                       <p className="text-gray-700">Google's BERT, understanding context and intent. Content quality became paramount.</p>
                     </div>
                   </div>
-                  
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
                     <div>
@@ -261,7 +254,6 @@ export default function AISearchReplacingSEOPage() {
               </p>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Real-World Examples: AI Search Impact on Businesses</h3>
-              
               <div className="space-y-6 mb-8">
                 <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-600">
                   <h4 className="font-bold text-xl mb-2 text-gray-900">Example 1: Healthcare Information Site</h4>
@@ -481,7 +473,6 @@ export default function AISearchReplacingSEOPage() {
 
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">The Fundamental Differences</h3>
-              
               <p className="text-lg text-gray-700 mb-6">
                 Understanding why AI search requires different optimization starts with understanding how these systems 
                 process information compared to traditional search engines.
@@ -537,7 +528,6 @@ export default function AISearchReplacingSEOPage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">The AI Search Process: Step by Step</h3>
-              
               <p className="text-lg text-gray-700 mb-4">
                 When a user queries an AI system, a complex process unfolds that differs fundamentally from traditional search:
               </p>
@@ -629,7 +619,6 @@ export default function AISearchReplacingSEOPage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Why Traditional SEO Content Fails AI Extraction</h3>
-              
               <p className="text-lg text-gray-700 mb-4">
                 Content optimized for traditional SEO often has characteristics that make AI extraction difficult:
               </p>
@@ -683,7 +672,6 @@ export default function AISearchReplacingSEOPage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">The GEO Optimization Framework</h3>
-              
               <p className="text-lg text-gray-700 mb-4">
                 Effective content for AI search follows these technical principles:
               </p>
@@ -770,7 +758,6 @@ export default function AISearchReplacingSEOPage() {
 
             <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">The Hybrid Search Strategy: 70/30 Approach</h3>
-              
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center mb-3">
@@ -810,7 +797,6 @@ export default function AISearchReplacingSEOPage() {
 
             <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">12-Month Adaptation Timeline</h3>
-              
               <div className="space-y-4">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-24 text-center">
@@ -821,7 +807,6 @@ export default function AISearchReplacingSEOPage() {
                     <p className="text-gray-700">Evaluate current content, test AI visibility, identify quick wins, establish baseline metrics</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-24 text-center">
                     <div className="bg-indigo-600 text-white px-3 py-2 rounded-lg font-bold">Month 3-4</div>
@@ -831,7 +816,6 @@ export default function AISearchReplacingSEOPage() {
                     <p className="text-gray-700">Implement schema markup, optimize site structure, add entity definitions</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-24 text-center">
                     <div className="bg-purple-600 text-white px-3 py-2 rounded-lg font-bold">Month 5-7</div>
@@ -841,7 +825,6 @@ export default function AISearchReplacingSEOPage() {
                     <p className="text-gray-700">Restructure existing top-performing content, create new AI-optimized pieces, build topic clusters</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-24 text-center">
                     <div className="bg-pink-600 text-white px-3 py-2 rounded-lg font-bold">Month 8-10</div>
@@ -851,7 +834,6 @@ export default function AISearchReplacingSEOPage() {
                     <p className="text-gray-700">Increase GEO content production, expand topical coverage, optimize for more AI platforms</p>
                   </div>
                 </div>
-                
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-24 text-center">
                     <div className="bg-green-600 text-white px-3 py-2 rounded-lg font-bold">Month 11-12</div>
@@ -941,7 +923,6 @@ export default function AISearchReplacingSEOPage() {
                   see continued traffic declines, while those adapting to AI search will capture growing market share.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How quickly should I shift budget from SEO to GEO?
@@ -954,7 +935,6 @@ export default function AISearchReplacingSEOPage() {
                   for your specific business. Most businesses will naturally shift toward 50/50 or 40/60 over the next 2-3 years.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Which industries are most affected by the AI search shift?
@@ -967,7 +947,6 @@ export default function AISearchReplacingSEOPage() {
                   B2B industries see particularly strong impact as decision-makers use AI for vendor research and comparison.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Can I do GEO myself or do I need an agency?
@@ -981,7 +960,6 @@ export default function AISearchReplacingSEOPage() {
                   annual revenue.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How do I measure success in AI search?
@@ -995,7 +973,6 @@ export default function AISearchReplacingSEOPage() {
                   requires more manual monitoring until better tools emerge.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   What if my competitors are still only doing traditional SEO?
@@ -1112,7 +1089,6 @@ export default function AISearchReplacingSEOPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways
             </h2>
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Core Facts</h3>
@@ -1123,7 +1099,6 @@ export default function AISearchReplacingSEOPage() {
                   <li>• Traffic down 20-40% despite rankings</li>
                 </ul>
               </div>
-              
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">What to Do</h3>
                 <ul className="space-y-2">
@@ -1134,7 +1109,6 @@ export default function AISearchReplacingSEOPage() {
                 </ul>
               </div>
             </div>
-            
             <div className="bg-white/10 p-6 rounded-xl">
               <h3 className="font-bold text-xl mb-4">Short Answer Blocks</h3>
               <div className="space-y-4">
@@ -1157,7 +1131,6 @@ export default function AISearchReplacingSEOPage() {
       </section>
 
           </div>
-          
           {/* Sidebar */}
           <BlogSidebar />
         </div>

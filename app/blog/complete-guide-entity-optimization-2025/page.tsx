@@ -128,7 +128,6 @@ export default function CompleteGuideEntityOptimizationPage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Primary Topic Explanation */}
@@ -138,7 +137,6 @@ export default function CompleteGuideEntityOptimizationPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">
               Understanding Entity Optimization
             </h2>
-            
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">What Are Entities?</h3>
               <p className="text-lg text-gray-700 mb-6">
@@ -161,7 +159,6 @@ export default function CompleteGuideEntityOptimizationPage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Why Entity Optimization Matters</h3>
-              
               <div className="bg-gradient-to-r from-slate-50 to-gray-50 p-6 rounded-xl mb-8">
                 <h4 className="font-bold text-xl mb-4 text-gray-900">Key Benefits:</h4>
                 <ul className="space-y-3">
@@ -905,7 +902,6 @@ export default function CompleteGuideEntityOptimizationPage() {
                   business grows and expands into new areas.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How is entity optimization different from keyword optimization?
@@ -921,7 +917,6 @@ export default function CompleteGuideEntityOptimizationPage() {
                   provides the foundation that enables keyword optimization to be more effective.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How long does entity optimization take to show results?
@@ -1082,7 +1077,6 @@ export default function CompleteGuideEntityOptimizationPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways
             </h2>
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Core Components</h3>
@@ -1094,7 +1088,6 @@ export default function CompleteGuideEntityOptimizationPage() {
                   <li>• Regular entity updates</li>
                 </ul>
               </div>
-              
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Key Benefits</h3>
                 <ul className="space-y-2">
@@ -1111,7 +1104,6 @@ export default function CompleteGuideEntityOptimizationPage() {
       </section>
 
           </div>
-          
           {/* Sidebar */}
           <BlogSidebar />
         </div>

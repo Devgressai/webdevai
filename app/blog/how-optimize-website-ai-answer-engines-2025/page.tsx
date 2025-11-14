@@ -123,7 +123,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Primary Topic Explanation */}
@@ -133,7 +132,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">
               Understanding AI Answer Engine Optimization
             </h2>
-            
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">What Are AI Answer Engines?</h3>
               <p className="text-lg text-gray-700 mb-6">
@@ -157,7 +155,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Why Optimize for AI Answer Engines in 2025?</h3>
-              
               <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-8">
                 <h4 className="font-bold text-xl mb-4 text-gray-900">The Numbers Don't Lie:</h4>
                 <ul className="space-y-3">
@@ -563,7 +560,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
                   competitiveness, current content quality, and implementation thoroughness.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Do I need to optimize separately for each AI platform?
@@ -577,7 +573,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
                   adjust content formatting if needed.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Can I optimize my existing website or do I need a complete rebuild?
@@ -591,7 +586,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
                   improvements for optimal AI optimization.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How do I know if my optimization is working?
@@ -605,7 +599,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
                   track), AI visibility requires more manual monitoring until better tools emerge.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Will AI optimization hurt my traditional SEO rankings?
@@ -709,7 +702,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways
             </h2>
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Core Optimization Steps</h3>
@@ -722,7 +714,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
                   <li>• Build topical authority</li>
                 </ul>
               </div>
-              
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Key Benefits</h3>
                 <ul className="space-y-2">
@@ -735,7 +726,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
                 </ul>
               </div>
             </div>
-            
             <div className="bg-white/10 p-6 rounded-xl">
               <h3 className="font-bold text-xl mb-4">Short Answer Blocks</h3>
               <div className="space-y-4">
@@ -759,7 +749,6 @@ export default function OptimizeWebsiteAIAnswerEnginesPage() {
       </section>
 
           </div>
-          
           {/* Sidebar */}
           <BlogSidebar />
         </div>

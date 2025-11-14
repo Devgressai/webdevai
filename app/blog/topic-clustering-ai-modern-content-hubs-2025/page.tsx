@@ -126,7 +126,6 @@ export default function TopicClusteringAIPage() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Primary Topic Explanation */}
@@ -136,7 +135,6 @@ export default function TopicClusteringAIPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">
               Understanding Topic Clustering for AI Optimization
             </h2>
-            
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">What Is Topic Clustering?</h3>
               <p className="text-lg text-gray-700 mb-6">
@@ -159,7 +157,6 @@ export default function TopicClusteringAIPage() {
               </div>
 
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Why Topic Clustering Works for AI</h3>
-              
               <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-6 rounded-xl mb-8">
                 <h4 className="font-bold text-xl mb-4 text-gray-900">Key Benefits:</h4>
                 <ul className="space-y-3">
@@ -675,7 +672,6 @@ export default function TopicClusteringAIPage() {
                   comprehensive coverage matter more than quantity—better to own 3 topics thoroughly than 10 topics superficially.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   How long does it take to see results from topic clustering?
@@ -686,7 +682,6 @@ export default function TopicClusteringAIPage() {
                   topical authority establishment typically requires 6-12 months of consistent cluster development and expansion.
                 </p>
               </div>
-              
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">
                   Can I repurpose existing content into topic clusters?
@@ -832,7 +827,6 @@ export default function TopicClusteringAIPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               AI Summary Compatibility: Key Takeaways
             </h2>
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Core Components</h3>
@@ -844,7 +838,6 @@ export default function TopicClusteringAIPage() {
                   <li>• Comprehensive coverage</li>
                 </ul>
               </div>
-              
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="font-bold text-xl mb-4">Key Benefits</h3>
                 <ul className="space-y-2">
@@ -861,7 +854,6 @@ export default function TopicClusteringAIPage() {
       </section>
 
           </div>
-          
           {/* Sidebar */}
           <BlogSidebar />
         </div>
