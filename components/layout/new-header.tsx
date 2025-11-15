@@ -11,7 +11,7 @@ import {
   Target, Users, TrendingUp, Globe, Code, 
   Zap, Monitor, Smartphone, ShoppingCart, Mail, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
-  MessageSquare, MapPin
+  MessageSquare, MapPin, Bot
 } from "lucide-react"
 import { cn } from "../../lib/utils"
 
@@ -120,6 +120,13 @@ const navigation = [
         description: "Comprehensive digital marketing strategies",
         icon: BarChart3,
         color: "from-teal-500 to-blue-600"
+      },
+      { 
+        name: "Generative Engine Optimization (GEO)", 
+        href: "/services/generative-engine-optimization",
+        description: "Optimize your content for AI-powered search engines and generative AI platforms",
+        icon: Bot,
+        color: "from-violet-500 to-purple-600"
       },
     ],
   },
@@ -347,8 +354,8 @@ export function NewHeader() {
 
       {/* Main Navigation */}
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
-        <div className="flex items-center justify-between py-4 lg:py-5">
-          {/* Logo */}
+        <div className="flex items-center py-4 lg:py-5">
+          {/* Logo - Far Left */}
           <div className="flex-shrink-0">
             <Link
               href="/"
@@ -358,8 +365,9 @@ export function NewHeader() {
               <Logo size={52} className="transition-transform duration-200 group-hover:scale-105" />
             </Link>
           </div>
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-1 xl:gap-x-1.5">
+          
+          {/* Desktop Navigation - Center */}
+          <div className="hidden lg:flex lg:items-center lg:gap-x-1 xl:gap-x-1.5 lg:flex-1 lg:justify-center lg:mx-8">
              {navigation.map((item, idx) => (
                <div key={item.name} className="relative">
                  {item.children ? (
@@ -452,7 +460,8 @@ export function NewHeader() {
              ))}
            </div>
           
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-3">
+          {/* Get Started Button - Far Right */}
+          <div className="hidden lg:flex lg:flex-shrink-0 lg:ml-auto">
             <Button asChild className="rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-md">
               <Link href="/contact">Get Started</Link>
             </Button>

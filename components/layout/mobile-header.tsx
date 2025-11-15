@@ -37,6 +37,7 @@ export default function MobileHeader() {
       { name: 'AI Consulting', href: '/services/ai-consulting' },
       { name: 'AI SEO', href: '/services/ai-seo' },
       { name: 'Digital Marketing', href: '/services/digital-marketing' },
+      { name: 'Generative Engine Optimization (GEO)', href: '/services/generative-engine-optimization' },
     ]},
     { name: 'Development', href: '/services/web-development', submenu: [
       { name: 'Web Development', href: '/services/web-development' },

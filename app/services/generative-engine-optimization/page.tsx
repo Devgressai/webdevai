@@ -142,6 +142,50 @@ const caseStudies = [
       { metric: "AI Content Discovery", before: "28%", after: "67%", improvement: "139%" },
       { metric: "Voice Search Rankings", before: "Position 31", after: "Position 12", improvement: "61%" }
     ]
+  },
+  {
+    title: "Denver Plumbing Company",
+    industry: "Local Services",
+    challenge: "Not appearing in AI responses when users asked about emergency plumbing services in Denver",
+    solution: "Optimized service pages with structured fact blocks, clear pricing ranges, and step-by-step problem-solving content with local entity optimization",
+    results: [
+      { metric: "AI Response Appearance", before: "0%", after: "73%", improvement: "New" },
+      { metric: "Qualified Leads", before: "Baseline", after: "+34%", improvement: "34% increase" },
+      { metric: "Brand Citations", before: "0/month", after: "45/month", improvement: "New" }
+    ]
+  },
+  {
+    title: "Project Management SaaS",
+    industry: "Software & Technology",
+    challenge: "Competitors consistently appeared in AI tool recommendations when users compared project management solutions",
+    solution: "Restructured documentation and blog content using entity optimization and comparison tables, created comprehensive use-case scenarios",
+    results: [
+      { metric: "AI Recommendation Rate", before: "12%", after: "60%", improvement: "400%" },
+      { metric: "Organic Trial Signups", before: "Baseline", after: "+127%", improvement: "127% increase" },
+      { metric: "Brand Mentions in AI", before: "2/month", after: "10/month", improvement: "400%" }
+    ]
+  },
+  {
+    title: "Phoenix HVAC Company",
+    industry: "Local Services",
+    challenge: "Not appearing in local AI searches despite good Google Maps rankings",
+    solution: "Created neighborhood-specific pages for Scottsdale, Tempe, Mesa, and Chandler with local climate data and service area details",
+    results: [
+      { metric: "Local AI Visibility", before: "0%", after: "68%", improvement: "New" },
+      { metric: "Service Calls from AI", before: "Baseline", after: "+43%", improvement: "43% increase" },
+      { metric: "Neighborhood Queries", before: "0", after: "12", improvement: "New coverage" }
+    ]
+  },
+  {
+    title: "Marketing Automation Platform",
+    industry: "B2B SaaS",
+    challenge: "Low visibility in AI-generated responses comparing marketing automation tools",
+    solution: "Created 47 interconnected content pieces covering email marketing, automation workflows, CRM integration, and analytics with GEO-optimized structure",
+    results: [
+      { metric: "AI Response Appearance", before: "15%", after: "82%", improvement: "447%" },
+      { metric: "Demo Requests", before: "Baseline", after: "+156%", improvement: "156% increase" },
+      { metric: "Content Authority Score", before: "45%", after: "89%", improvement: "98%" }
+    ]
   }
 ]
 
@@ -175,27 +219,51 @@ const tools = [
 const faqs = [
   {
     question: "What is Generative Engine Optimization (GEO) and how does it differ from traditional SEO?",
-    answer: "Generative Engine Optimization (GEO) is the practice of optimizing your website and content specifically for AI-powered search engines and generative AI platforms. While traditional SEO focuses on keyword optimization and backlinks, GEO optimizes for AI understanding, semantic search, and machine learning algorithms. This includes optimizing content structure, implementing comprehensive schema markup, ensuring technical AI readiness, and creating content that AI systems can easily understand and recommend."
+    answer: "Generative Engine Optimization (GEO) is the practice of optimizing your website and content specifically for AI-powered search engines and generative AI platforms like ChatGPT, Claude, Perplexity, and Google SGE. While traditional SEO focuses on keyword optimization and backlinks to rank URLs in search results, GEO optimizes for AI understanding, semantic search, and machine learning algorithms. The key difference: SEO targets link clicks; GEO targets information extraction and brand attribution within AI-generated answers. Both are essential in 2025, as they serve different but complementary purposes in the modern search ecosystem."
   },
   {
     question: "How long does it take to see results from GEO optimization?",
-    answer: "GEO optimization typically shows initial results within 3-6 weeks, with significant improvements appearing within 3-6 months. The timeline depends on your current AI optimization status, the complexity of your website, and the specific optimizations implemented. Technical updates may show faster results, while content optimization and AI algorithm recognition may take longer to develop. We provide regular progress reports and can often identify early positive trends."
+    answer: "Initial results typically appear within 4-8 weeks of implementing GEO strategies. You'll start seeing your content referenced in AI responses for niche, long-tail queries first. Broader visibility for competitive terms usually takes 3-6 months as you build topical authority. Full market impact with consistent AI visibility across your industry typically requires 6-12 months of sustained GEO effort. The timeline varies based on your industry competitiveness, current content quality, and implementation thoroughness. Technical updates may show faster results, while content optimization and AI algorithm recognition may take longer to develop."
   },
   {
     question: "What are the key differences between optimizing for traditional search engines vs. AI-powered search?",
-    answer: "Traditional search engines rely heavily on keyword matching, backlinks, and technical factors, while AI-powered search focuses on understanding content meaning, context, and user intent. AI optimization requires more emphasis on natural language processing, semantic content structure, comprehensive schema markup, and creating content that AI systems can easily understand. The goal shifts from keyword optimization to meaning and context optimization."
+    answer: "Traditional search engines rely heavily on keyword matching, backlinks, and technical factors, while AI-powered search focuses on understanding content meaning, context, and user intent. AI optimization requires more emphasis on natural language processing, semantic content structure, comprehensive schema markup, and creating content that AI systems can easily understand. The goal shifts from keyword optimization to meaning and context optimization. AI systems extract and synthesize information from multiple sources, so your content must be structured for easy extraction with clear entities, definitions, and factual information."
   },
   {
     question: "How do you measure the success of GEO campaigns?",
-    answer: "We measure GEO success through multiple metrics including AI search visibility, featured snippet rates, AI content recognition scores, voice search rankings, and overall search engine performance in AI-powered results. We also track technical metrics like Core Web Vitals, schema markup implementation, and AI crawler accessibility. Our comprehensive reporting provides both high-level business metrics and detailed technical insights."
+    answer: "We measure GEO success through multiple metrics: (1) Citation Frequency – how often AI systems mention or cite your brand/content; (2) Branded Search Volume – increases in people searching for your brand after AI exposure; (3) Direct Traffic – visitors who arrive directly after discovering you through AI; (4) Query Coverage – number of relevant queries where you appear in AI responses; (5) Attribution Quality – whether AI systems cite you as an authority or recommend your solutions. We also track technical metrics like Core Web Vitals, schema markup implementation, and AI crawler accessibility. Use tools like ChatGPT, Claude, and Perplexity to manually test queries, and monitor Google Analytics for traffic pattern changes."
   },
   {
     question: "Can GEO optimization work for all types of businesses and industries?",
-    answer: "Yes, GEO optimization principles apply to all businesses and industries, but the specific strategies and optimizations vary based on your industry, target audience, and content type. B2B companies, e-commerce platforms, and content-heavy websites all benefit from GEO, but require different approaches. We customize our strategies to align with your specific business needs and industry requirements."
+    answer: "Yes, GEO optimization principles apply to all businesses and industries. Small businesses often benefit more from GEO than large enterprises because GEO levels the playing field—AI systems don't inherently favor big brands; they favor clear, authoritative, well-structured content. Local service businesses, niche product companies, specialized B2B providers, e-commerce platforms, and content-heavy websites all benefit from GEO, but require different approaches. We customize our strategies to align with your specific business needs, industry requirements, and target audience."
   },
   {
     question: "How often should we update our GEO strategy?",
-    answer: "GEO requires regular updates due to the rapid evolution of AI algorithms and search technologies. We recommend monthly strategy reviews and quarterly comprehensive audits. However, the frequency depends on your industry dynamics, AI algorithm changes, and business goals. High-tech industries may benefit from weekly optimizations, while more stable markets might need monthly updates. We continuously monitor AI algorithm changes and recommend updates accordingly."
+    answer: "GEO requires regular updates due to the rapid evolution of AI algorithms and search technologies. We recommend monthly strategy reviews and quarterly comprehensive audits. However, the frequency depends on your industry dynamics, AI algorithm changes, and business goals. High-tech industries may benefit from weekly optimizations, while more stable markets might need monthly updates. We continuously monitor AI algorithm changes and recommend updates accordingly. Content should be regularly updated with recent data and dates to maintain authority, as AI systems prioritize current information."
+  },
+  {
+    question: "Which AI platforms should I optimize for?",
+    answer: "Focus on these primary platforms in 2025: ChatGPT (OpenAI), Claude (Anthropic), Perplexity AI, Google SGE (Search Generative Experience), and Gemini (Google). While each has unique characteristics, content optimized for one generally performs well across all due to shared principles: clear structure, entity optimization, authoritative information, and semantic clarity. Start with general GEO best practices rather than platform-specific tactics, as the AI search landscape evolves rapidly. The goal is creating content that works across all AI platforms."
+  },
+  {
+    question: "Do I need technical expertise to implement GEO?",
+    answer: "Basic GEO implementation requires no coding skills. Content restructuring, adding clear headings, creating fact blocks, and writing comprehensive answers can be done by anyone who manages website content. Many businesses see 40-60% improvement in AI visibility from content-only optimizations before touching any technical elements. Advanced GEO (schema markup implementation, technical entity optimization, structured data) benefits from developer involvement but isn't mandatory for initial results. We provide both DIY guidance and full-service implementation options."
+  },
+  {
+    question: "What content types work best for GEO?",
+    answer: "AI systems favor these content types: (1) Comprehensive guides that thoroughly cover topics; (2) Comparison content with structured tables and pros/cons; (3) Step-by-step tutorials with numbered instructions; (4) FAQ pages with direct question-answer pairs; (5) Data-rich resources with statistics and research findings; (6) Definition and glossary pages; (7) Use-case and scenario-based content; (8) Problem-solution frameworks. The common thread: clear structure, specific information, and formats that make extraction easy for AI systems. Content should be both human-readable and AI-extractable."
+  },
+  {
+    question: "How much does professional GEO optimization cost?",
+    answer: "Professional GEO services range from $5,000-$15,000 for comprehensive site optimization, with enterprise strategies ranging $15,000-$50,000+. Monthly GEO maintenance and content optimization typically costs $1,000-$5,000 depending on scope. DIY implementation is possible with no financial cost (time investment only). Many agencies offer GEO audits for $2,000-$5,000 that identify optimization opportunities and provide actionable recommendations. ROI typically exceeds investment within 6-12 months through increased visibility, qualified leads, and market share gains. We offer flexible pricing packages to fit different business needs and budgets."
+  },
+  {
+    question: "Will GEO replace traditional SEO?",
+    answer: "No, GEO will not replace SEO; they work together synergistically. Traditional SEO remains important for website discovery, organic traffic, and ranking in conventional search results. GEO adds a new layer of optimization focused on AI extraction and citations. Think of them as complementary strategies: SEO gets your website found; GEO gets your information referenced. The most successful digital strategies in 2025 integrate both, ensuring visibility across traditional search engines and AI answer platforms. Businesses using integrated GEO + SEO approaches report 2-3x better results than single-strategy approaches."
+  },
+  {
+    question: "What industries benefit most from GEO?",
+    answer: "All industries benefit from GEO, but these see particularly strong results: (1) Professional services (legal, accounting, consulting) where AI provides recommendations; (2) Healthcare and medical practices where users research symptoms and treatments; (3) Software and technology companies where buyers compare solutions; (4) Local services (plumbing, HVAC, contractors) where users seek immediate help; (5) E-commerce brands competing for product recommendations; (6) B2B service providers where decision-makers research vendors. Any business that relies on being discovered during the research phase benefits significantly from GEO implementation."
   }
 ]
 
@@ -218,6 +286,20 @@ export default function GenerativeEngineOptimizationPage() {
               is perfectly positioned for AI-powered search engines, generative AI platforms, and 
               machine learning algorithms that are reshaping digital discovery.
             </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
+              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+                <span className="font-semibold">1.2B+</span> monthly AI users
+              </div>
+              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+                <span className="font-semibold">64%</span> prefer AI over Google
+              </div>
+              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+                <span className="font-semibold">84%</span> of queries show SGE
+              </div>
+              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+                <span className="font-semibold">59%</span> zero-click searches
+              </div>
+            </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button size="xl" asChild>
                 <Link href="/contact">
@@ -257,6 +339,37 @@ export default function GenerativeEngineOptimizationPage() {
                 process, and recommend. This approach is essential as search engines increasingly rely on 
                 machine learning algorithms and AI-powered content discovery.
               </p>
+              <p className="text-lg text-secondary-600 mb-6">
+                When someone asks ChatGPT "What's the best CRM for small businesses?" or asks Perplexity 
+                "How do I optimize my website speed?", the AI system pulls from its training data and 
+                real-time web sources to construct an answer. The businesses and websites that get mentioned 
+                in that answer win the visibility and trust. Those that don't exist in a void.
+              </p>
+              <div className="bg-blue-50 p-6 rounded-xl mb-6">
+                <h4 className="font-bold text-lg mb-3 text-secondary-900">The Search Landscape Has Transformed:</h4>
+                <ul className="space-y-2 text-secondary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>1.2+ billion monthly users</strong> actively use ChatGPT, Claude, Perplexity, and similar AI search tools</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>64% of users under 35</strong> now prefer asking AI chatbots over traditional Google searches</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Google's SGE</strong> now appears in 84% of commercial queries, pushing traditional results down</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Zero-click searches reached 59%</strong> in 2024, meaning users get answers without visiting websites</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>B2B buyers conduct 83%</strong> of their research using AI tools before contacting vendors</span>
+                  </li>
+                </ul>
+              </div>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
@@ -537,6 +650,236 @@ export default function GenerativeEngineOptimizationPage() {
                 <div className="text-sm font-medium text-secondary-900">{tool}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GEO vs SEO Comparison Section */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
+              GEO vs SEO: Understanding the Differences
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-secondary-600">
+              Both GEO and SEO are essential, but they serve different purposes in the modern search ecosystem.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+                    <th className="text-left p-4 font-semibold">Factor</th>
+                    <th className="text-left p-4 font-semibold">Traditional SEO</th>
+                    <th className="text-left p-4 font-semibold">GEO</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Primary Goal</td>
+                    <td className="p-4 text-secondary-600">Rank URLs in search results</td>
+                    <td className="p-4 text-secondary-600">Appear in AI-generated answers</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Target Platform</td>
+                    <td className="p-4 text-secondary-600">Google, Bing search engines</td>
+                    <td className="p-4 text-secondary-600">ChatGPT, Claude, Perplexity, SGE</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Success Metric</td>
+                    <td className="p-4 text-secondary-600">Search ranking position</td>
+                    <td className="p-4 text-secondary-600">Citation frequency in AI responses</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Content Focus</td>
+                    <td className="p-4 text-secondary-600">Keywords and backlinks</td>
+                    <td className="p-4 text-secondary-600">Entities and structured information</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">User Interaction</td>
+                    <td className="p-4 text-secondary-600">Click-through to website</td>
+                    <td className="p-4 text-secondary-600">Information extraction + attribution</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Optimization Approach</td>
+                    <td className="p-4 text-secondary-600">Technical + on-page + off-page</td>
+                    <td className="p-4 text-secondary-600">Semantic + structural + entity-based</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+            <p className="text-secondary-700">
+              <strong>Key Insight:</strong> The most successful digital strategies in 2025 integrate both GEO and SEO. 
+              SEO gets your website found; GEO gets your information referenced. Businesses using integrated approaches 
+              report 2-3x better results than single-strategy approaches.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Framework Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-indigo-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
+              GEO Implementation Framework
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-secondary-600">
+              A systematic approach to implementing GEO across your digital properties
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+                    <th className="text-left p-4 font-semibold">Phase</th>
+                    <th className="text-left p-4 font-semibold">Focus Area</th>
+                    <th className="text-left p-4 font-semibold">Timeline</th>
+                    <th className="text-left p-4 font-semibold">Expected Impact</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Phase 1</td>
+                    <td className="p-4 text-secondary-600">Entity & Schema Optimization</td>
+                    <td className="p-4 text-secondary-600">Week 1-2</td>
+                    <td className="p-4 text-secondary-600">Foundation for AI understanding</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Phase 2</td>
+                    <td className="p-4 text-secondary-600">Content Structure Audit & Reform</td>
+                    <td className="p-4 text-secondary-600">Week 3-4</td>
+                    <td className="p-4 text-secondary-600">Improved extraction rates</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Phase 3</td>
+                    <td className="p-4 text-secondary-600">Topical Cluster Development</td>
+                    <td className="p-4 text-secondary-600">Week 5-8</td>
+                    <td className="p-4 text-secondary-600">Topical authority establishment</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50 bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Phase 4</td>
+                    <td className="p-4 text-secondary-600">AI Answer Monitoring & Iteration</td>
+                    <td className="p-4 text-secondary-600">Week 9-12</td>
+                    <td className="p-4 text-secondary-600">Visibility in AI responses</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-4 font-semibold text-secondary-900">Phase 5</td>
+                    <td className="p-4 text-secondary-600">Ongoing Optimization & Expansion</td>
+                    <td className="p-4 text-secondary-600">Continuous</td>
+                    <td className="p-4 text-secondary-600">Market share growth</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-4">10-Step GEO Implementation Checklist</h3>
+              <ol className="space-y-2 text-secondary-700">
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">1.</span>
+                  <span>Audit current content for entity clarity and semantic structure</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">2.</span>
+                  <span>Implement schema markup (Organization, LocalBusiness, Article, FAQPage)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">3.</span>
+                  <span>Restructure key pages with clear H1-H2-H3 hierarchy</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">4.</span>
+                  <span>Add fact blocks, comparison tables, and definition sections</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">5.</span>
+                  <span>Create comprehensive FAQ sections answering micro-intent queries</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">6.</span>
+                  <span>Develop topical clusters around your core business themes</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">7.</span>
+                  <span>Optimize internal linking to show topical relationships</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">8.</span>
+                  <span>Add author expertise indicators and about/credentials pages</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">9.</span>
+                  <span>Test AI responses by querying ChatGPT, Claude, and Perplexity</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-indigo-600 mr-2">10.</span>
+                  <span>Monitor, measure, and iterate based on AI visibility results</span>
+                </li>
+              </ol>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-4">Pricing & Timeline Reference</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-secondary-900 mb-2">Pricing Ranges:</h4>
+                  <ul className="space-y-1 text-sm text-secondary-700">
+                    <li>• GEO Audit Services: $2,000 - $5,000</li>
+                    <li>• Professional GEO Optimization: $5,000 - $15,000</li>
+                    <li>• Enterprise GEO Strategy: $15,000 - $50,000+</li>
+                    <li>• Ongoing GEO Maintenance: $1,000 - $5,000/month</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-secondary-900 mb-2">Implementation Timelines:</h4>
+                  <ul className="space-y-1 text-sm text-secondary-700">
+                    <li>• Basic Content Restructuring: 2-4 weeks</li>
+                    <li>• Full Site GEO Optimization: 6-12 weeks</li>
+                    <li>• First AI Visibility Results: 4-8 weeks</li>
+                    <li>• Full Market Impact: 6-12 months</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources Section */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
+              Learn More About GEO
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-secondary-600">
+              Explore our comprehensive guides and resources on Generative Engine Optimization
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/blog/what-is-generative-engine-optimization-geo-2025" className="group bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2 group-hover:text-indigo-600">What Is GEO? Complete 2025 Guide</h3>
+              <p className="text-secondary-600 text-sm">Comprehensive guide to Generative Engine Optimization for businesses</p>
+            </Link>
+            <Link href="/blog/new-marketing-stack-geo-seo-ai-automation-2025" className="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2 group-hover:text-emerald-600">The New Marketing Stack: GEO + SEO + AI</h3>
+              <p className="text-secondary-600 text-sm">Learn how to integrate GEO, SEO, and AI automation for maximum growth</p>
+            </Link>
+            <Link href="/blog/best-practices-ai-ready-website-content-2025" className="group bg-gradient-to-br from-violet-50 to-purple-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2 group-hover:text-violet-600">AI-Ready Content Best Practices</h3>
+              <p className="text-secondary-600 text-sm">Best practices for creating content optimized for AI systems</p>
+            </Link>
           </div>
         </div>
       </section>
