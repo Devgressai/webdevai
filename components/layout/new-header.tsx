@@ -11,7 +11,7 @@ import {
   Target, Users, TrendingUp, Globe, Code, 
   Zap, Monitor, Smartphone, ShoppingCart, Mail, 
   DollarSign, AlertTriangle, Search as SearchIcon, Brain, 
-  MessageSquare
+  MessageSquare, MapPin
 } from "lucide-react"
 import { cn } from "../../lib/utils"
 
@@ -316,24 +316,54 @@ export function NewHeader() {
   }
 
   return (
-    <header className="relative sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur supports-[backdrop-filter]:bg-white/75">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600/80" aria-hidden="true" />
+    <header className="relative sticky top-0 z-50 bg-white shadow-[0_4px_12px_rgba(15,23,42,0.08)]">
+      {/* Top Banner */}
+      <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white border-b border-blue-800/20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-3 py-2.5 text-sm">
+            <div className="flex flex-wrap items-center gap-4 lg:gap-6">
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></div>
+                  <span className="font-semibold">USA Based</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-blue-100">
+                <MapPin className="h-4 w-4 flex-shrink-0" />
+                <span className="hidden sm:inline">2281 Lava Ridge Ct, Roseville, CA 95661</span>
+                <span className="sm:hidden">Roseville, CA</span>
+              </div>
+              <a 
+                href="tel:5305538883" 
+                className="flex items-center gap-2 text-blue-100 hover:text-white transition-colors"
+              >
+                <Phone className="h-4 w-4 flex-shrink-0" />
+                <span className="font-medium">(530) 553-8883</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Main Navigation */}
-      <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-8">
+      <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
+        <div className="flex items-center justify-between py-4 lg:py-5">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="group flex items-center gap-3 rounded-full px-3 py-2 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+              className="group flex items-center gap-3 rounded-lg px-2 py-1.5 transition-all duration-200 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <span className="sr-only">Web Vello</span>
-              <Logo size={56} className="transition-transform duration-200 group-hover:scale-105" />
+              <Logo size={52} className="transition-transform duration-200 group-hover:scale-105" />
+              <div className="hidden sm:flex items-baseline gap-1">
+                <span className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Web</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Vello</span>
+              </div>
             </Link>
           </div>
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-1.5 xl:gap-x-2">
+          <div className="hidden lg:flex lg:items-center lg:gap-x-1 xl:gap-x-1.5">
              {navigation.map((item, idx) => (
                <div key={item.name} className="relative">
                  {item.children ? (
@@ -344,8 +374,8 @@ export function NewHeader() {
                    >
                      <div 
                        className={cn(
-                         "flex items-center gap-1 rounded-full px-4 py-2 text-base font-medium tracking-tight transition-all duration-200 hover:bg-slate-100 hover:text-primary-600 cursor-pointer",
-                         openDropdown === item.name ? "bg-slate-100 text-primary-600 shadow-[0_6px_18px_rgba(15,23,42,0.08)]" : "text-slate-600"
+                         "flex items-center gap-1 rounded-lg px-3.5 py-2 text-sm font-semibold tracking-tight transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 cursor-pointer",
+                         openDropdown === item.name ? "bg-blue-50 text-blue-700 shadow-sm" : "text-slate-700"
                        )}
                        role="button"
                        tabIndex={0}
@@ -360,52 +390,53 @@ export function NewHeader() {
                        }}
                      >
                        {item.name}
-                       <ChevronDown className={cn("h-4 w-4 text-slate-400 transition-transform duration-200", openDropdown === item.name && "rotate-180 text-primary-500")} />
+                       <ChevronDown className={cn("h-3.5 w-3.5 text-slate-500 transition-transform duration-200", openDropdown === item.name && "rotate-180 text-blue-600")} />
                      </div>
                      
                      {openDropdown === item.name && (
                        <div 
-                         className={`${idx < 2 ? 'absolute left-0 -translate-x-0' : 'absolute left-1/2 -translate-x-1/2'} z-[9999] mt-2 flex w-screen max-w-6xl px-4`}
+                         className={`${idx < 2 ? 'absolute left-0 -translate-x-0' : 'absolute left-1/2 -translate-x-1/2'} z-[9999] mt-2 flex w-screen max-w-5xl px-4`}
                          onMouseEnter={() => handleMouseEnter(item.name)}
                          onMouseLeave={handleMouseLeave}
                        >
-                         <div className="w-full max-w-6xl flex-auto overflow-hidden rounded-3xl bg-white/95 text-sm leading-6 shadow-[0_28px_60px_rgba(15,23,42,0.12)] ring-1 ring-slate-200/60 border border-slate-100/80 backdrop-blur">
-                           <div className="p-6">
+                         <div className="w-full max-w-5xl flex-auto overflow-hidden rounded-2xl bg-white text-sm leading-6 shadow-xl ring-1 ring-slate-200 border border-slate-100">
+                           <div className="p-5">
                              {/* Header */}
-                             <div className="mb-6">
-                               <h3 className="text-lg font-semibold text-slate-900 mb-1">{item.name}</h3>
-                               <p className="text-sm text-slate-500">{item.description}</p>
+                             <div className="mb-5 pb-4 border-b border-slate-100">
+                               <h3 className="text-base font-bold text-slate-900 mb-0.5">{item.name}</h3>
+                               <p className="text-xs text-slate-500">{item.description}</p>
                              </div>
                              
                              {/* Grid Layout */}
-                             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+                             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                                {item.children.map((child) => (
-                                 <div key={child.name} className="group relative flex gap-x-4 rounded-2xl p-4 border border-transparent bg-white/90 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-100 hover:bg-slate-50/90 hover:shadow-[0_18px_32px_rgba(15,23,42,0.08)]">
+                                 <Link
+                                   key={child.name}
+                                   href={child.href}
+                                   className="group relative flex gap-x-3 rounded-xl p-3 border border-transparent bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-100 hover:bg-blue-50/50 hover:shadow-md"
+                                 >
                                    <div className={cn(
-                                     "flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-gradient-to-r",
+                                     "flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-gradient-to-r shrink-0",
                                      child.color
                                    )}>
-                                     <child.icon className="h-6 w-6 text-white" />
+                                     <child.icon className="h-5 w-5 text-white" />
                                    </div>
-                                   <div className="flex-1">
+                                   <div className="flex-1 min-w-0">
                                      <div className="flex items-center gap-x-2 mb-1">
-                                       <Link
-                                         href={child.href}
-                                         className="font-semibold text-secondary-900 group-hover:text-primary-600 text-lg"
-                                       >
+                                       <span className="font-semibold text-slate-900 group-hover:text-blue-600 text-sm leading-tight">
                                          {child.name}
-                                       </Link>
+                                       </span>
                                        {child.popular && (
-                                         <span className="inline-flex items-center rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800">
+                                         <span className="inline-flex items-center rounded-full bg-yellow-100 px-1.5 py-0.5 text-xs font-medium text-yellow-800 shrink-0">
                                            Popular
                                          </span>
                                        )}
                                      </div>
-                                     <p className="text-base text-secondary-600 group-hover:text-secondary-700">
+                                     <p className="text-xs text-slate-600 group-hover:text-slate-700 leading-relaxed line-clamp-2">
                                        {child.description}
                                      </p>
                                    </div>
-                                 </div>
+                                 </Link>
                                ))}
                              </div>
                            </div>
@@ -416,7 +447,7 @@ export function NewHeader() {
                  ) : (
                    <Link
                      href={item.href}
-                     className="px-4 py-3 text-base font-semibold leading-6 text-secondary-900 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50"
+                     className="px-3.5 py-2 text-sm font-semibold leading-6 text-slate-700 hover:text-blue-600 transition-colors rounded-lg hover:bg-blue-50"
                    >
                      {item.name}
                    </Link>
@@ -425,17 +456,23 @@ export function NewHeader() {
              ))}
            </div>
           
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button asChild className="rounded-full bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 px-6 py-2.5 text-sm font-semibold tracking-wide text-white shadow-[0_14px_30px_rgba(30,64,175,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(30,64,175,0.28)]">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-3">
+            <Button asChild className="rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-md">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
           
           {/* Mobile menu button */}
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden items-center gap-2">
+            <a 
+              href="tel:5305538883" 
+              className="inline-flex items-center justify-center rounded-lg p-2 text-blue-600 hover:bg-blue-50 transition-colors"
+            >
+              <Phone className="h-5 w-5" />
+            </a>
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-slate-600 ring-1 ring-slate-200/60 hover:bg-slate-100"
+              className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-slate-600 hover:bg-slate-100 transition-colors"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -507,12 +544,25 @@ export function NewHeader() {
                     </div>
                   ))}
                 </div>
-                <div className="py-6">
-                  <Button asChild className="w-full rounded-full bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-2.5 text-sm font-semibold tracking-wide text-white shadow-[0_14px_30px_rgba(30,64,175,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(30,64,175,0.28)]">
+                <div className="py-6 space-y-3">
+                  <Button asChild className="w-full rounded-lg bg-blue-600 hover:bg-blue-700 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200">
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                       Get Started
                     </Link>
                   </Button>
+                  <div className="pt-4 border-t border-slate-200 space-y-3">
+                    <div className="flex items-center gap-2 text-sm text-slate-600">
+                      <MapPin className="h-4 w-4 text-blue-600" />
+                      <span>2281 Lava Ridge Ct, Roseville, CA 95661</span>
+                    </div>
+                    <a 
+                      href="tel:5305538883" 
+                      className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-600 transition-colors"
+                    >
+                      <Phone className="h-4 w-4 text-blue-600" />
+                      <span>(530) 553-8883</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
