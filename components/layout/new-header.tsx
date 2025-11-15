@@ -352,14 +352,10 @@ export function NewHeader() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="group flex items-center gap-3 rounded-lg px-2 py-1.5 transition-all duration-200 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="group flex items-center rounded-lg px-2 py-1.5 transition-all duration-200 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <span className="sr-only">Web Vello</span>
               <Logo size={52} className="transition-transform duration-200 group-hover:scale-105" />
-              <div className="hidden sm:flex items-baseline gap-1">
-                <span className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Web</span>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Vello</span>
-              </div>
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -490,9 +486,7 @@ export function NewHeader() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Web Vello</span>
-                <div className="flex items-center gap-3">
-                  <Logo size={48} />
-                </div>
+                <Logo size={48} />
               </Link>
               <button
                 type="button"

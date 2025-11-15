@@ -102,16 +102,8 @@ export default function MobileHeader() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-14">
               {/* Logo */}
-              <Link href="/" className="flex items-center space-x-2 group">
+              <Link href="/" className="flex items-center group">
                 <Logo size={40} className="transition-transform duration-200 group-hover:scale-105" />
-                <div className="flex items-baseline gap-0.5">
-                  <span className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                    Web
-                  </span>
-                  <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-                    Vello
-                  </span>
-                </div>
               </Link>
 
               {/* Mobile Menu Button */}
