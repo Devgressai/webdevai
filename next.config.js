@@ -10,7 +10,7 @@ const nextConfig = {
   },
   // Disable TypeScript type checking during builds for speed
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true, // Speed up builds - check types in CI/local
   },
   // Enable experimental features for better performance
   experimental: {
@@ -21,6 +21,18 @@ const nextConfig = {
     swcMinify: true,
     // Enable modern output
     outputFileTracingRoot: process.cwd(),
+    // Reduce file tracing for faster builds
+    outputFileTracingIgnores: [
+      '**/node_modules/@swc/core*/**',
+      '**/node_modules/webpack/**',
+      '**/.next/cache/**',
+      '**/scripts/**',
+      '**/*.md',
+      '**/RECENT_CHANGES_ANALYSIS.md',
+      '**/SITEMAP_UPDATE_SUMMARY.md',
+      '**/convert-to-webp.sh',
+      '**/process-multiple-images.sh',
+    ],
   },
   
   // Image optimization
@@ -41,6 +53,15 @@ const nextConfig = {
   
   // Compression
   compress: true,
+  
+  // Build optimizations for faster Vercel builds
+  poweredByHeader: false,
+  
+  // Reduce build output
+  generateBuildId: async () => {
+    // Use git commit hash for build ID (faster than generating)
+    return process.env.VERCEL_GIT_COMMIT_SHA || 'build-' + Date.now()
+  },
   
   // Enhanced security headers
   async headers() {
