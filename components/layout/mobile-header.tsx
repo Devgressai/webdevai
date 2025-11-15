@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { useMobileDetection, TouchButton, MobileNav } from '@/components/ui/mobile-optimizations'
 import { Logo } from '@/components/ui/logo'
-import { Phone, MapPin } from 'lucide-react'
+import { Phone, MapPin, Mail } from 'lucide-react'
 
 export default function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const { isMobile, isTablet } = useMobileDetection()
+  const pathname = usePathname()
 
   // Handle scroll effect
   useEffect(() => {
@@ -22,10 +23,10 @@ export default function MobileHeader() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu on route change
+  // Close menu on route change - FIXED
   useEffect(() => {
     setIsMenuOpen(false)
-  }, [])
+  }, [pathname])
 
   const navigationItems = [
     { name: 'Design', href: '/services/website-design', submenu: [
@@ -68,25 +69,33 @@ export default function MobileHeader() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        {/* Top Banner */}
-        <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white border-b border-blue-800/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        {/* Top Banner - BOLDER COLORS */}
+        <div className="bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 text-white border-b border-primary-800/30 shadow-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex flex-wrap items-center justify-between gap-2 py-2 text-xs">
+            <div className="flex flex-wrap items-center justify-between gap-2 py-2.5 text-xs">
               <div className="flex items-center gap-1.5">
-                <div className="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></div>
-                <span className="font-semibold">USA Based</span>
+                <div className="h-2 w-2 rounded-full bg-success-400 animate-pulse shadow-lg shadow-success-400/50"></div>
+                <span className="font-bold">USA Based</span>
               </div>
-              <div className="flex items-center gap-1.5 text-blue-100">
-                <MapPin className="h-3 w-3 flex-shrink-0" />
-                <span className="hidden sm:inline">Roseville, CA</span>
+              <div className="flex items-center gap-1.5 text-white/90">
+                <MapPin className="h-3.5 w-3.5 flex-shrink-0" />
+                <span className="hidden sm:inline font-medium">Roseville, CA</span>
               </div>
               <a 
                 href="tel:5305538883" 
-                className="flex items-center gap-1.5 text-blue-100 hover:text-white transition-colors"
+                className="flex items-center gap-1.5 text-white/90 hover:text-white font-semibold transition-all duration-200 hover:scale-105"
               >
-                <Phone className="h-3 w-3 flex-shrink-0" />
-                <span className="font-medium">(530) 553-8883</span>
+                <Phone className="h-3.5 w-3.5 flex-shrink-0" />
+                <span className="font-bold">(530) 553-8883</span>
+              </a>
+              <a 
+                href="mailto:Hello@Webvello.com" 
+                className="flex items-center gap-1.5 text-white/90 hover:text-white font-semibold transition-all duration-200 hover:scale-105"
+              >
+                <Mail className="h-3.5 w-3.5 flex-shrink-0" />
+                <span className="hidden xs:inline font-bold">Hello@Webvello.com</span>
+                <span className="xs:hidden font-bold">Email</span>
               </a>
             </div>
           </div>
@@ -107,11 +116,11 @@ export default function MobileHeader() {
                 <Logo size={40} className="transition-transform duration-200 group-hover:scale-105" />
               </Link>
 
-              {/* Mobile Menu Button */}
+              {/* Mobile Menu Button - BOLDER COLORS */}
               <div className="flex items-center gap-2">
                 <a 
                   href="tel:5305538883" 
-                  className="inline-flex items-center justify-center rounded-lg p-2 text-blue-600 hover:bg-blue-50 transition-colors"
+                  className="inline-flex items-center justify-center rounded-lg p-2.5 text-accent-500 hover:bg-accent-50 hover:text-accent-600 transition-all duration-200 hover:scale-110 shadow-sm hover:shadow-md"
                   aria-label="Call us"
                 >
                   <Phone className="h-5 w-5" />
@@ -120,11 +129,11 @@ export default function MobileHeader() {
                   variant="outline"
                   size="sm"
                   onClick={() => setIsMenuOpen(true)}
-                  className="p-2"
+                  className="p-2.5 border-2 border-primary-500 text-primary-600 hover:bg-primary-50 hover:border-primary-600 hover:scale-105 transition-all duration-200"
                   aria-label="Open menu"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 </TouchButton>
               </div>
@@ -136,24 +145,24 @@ export default function MobileHeader() {
       {/* Mobile Navigation */}
       <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
         <nav className="space-y-6">
-          {/* Main Navigation */}
-          <div className="space-y-4">
+          {/* Main Navigation - IMPROVED HIERARCHY & COLORS */}
+          <div className="space-y-3">
             {navigationItems.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
                 <Link
                   href={item.href}
-                  className="block text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors py-2"
+                  className="block text-lg font-bold text-slate-900 hover:text-primary-600 transition-all duration-200 py-2.5 hover:translate-x-1"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
                 {item.submenu && (
-                  <div className="ml-4 mt-2 space-y-2">
+                  <div className="ml-4 mt-2 space-y-1.5 border-l-2 border-primary-100 pl-3">
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1"
+                        className="block text-sm font-medium text-slate-600 hover:text-primary-600 hover:font-semibold transition-all duration-200 py-1.5 hover:translate-x-1"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.name}
@@ -165,16 +174,20 @@ export default function MobileHeader() {
             ))}
           </div>
 
-          {/* Quick Actions */}
-          <div className="pt-6 border-t border-gray-200 space-y-4">
+          {/* Quick Actions - BOLDER, MORE PROMINENT CTAs */}
+          <div className="pt-6 border-t-2 border-primary-200 space-y-3">
             <TouchButton
               variant="primary"
               size="lg"
               fullWidth
               onClick={() => setIsMenuOpen(false)}
+              className="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold text-base shadow-lg hover:shadow-xl hover:shadow-accent-500/50 transition-all duration-300 hover:scale-105"
             >
-              <Link href="/contact" className="w-full">
-                Get Started
+              <Link href="/contact" className="w-full flex items-center justify-center gap-2">
+                <span>Get Started</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </Link>
             </TouchButton>
             
@@ -183,32 +196,39 @@ export default function MobileHeader() {
               size="lg"
               fullWidth
               onClick={() => setIsMenuOpen(false)}
+              className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-bold text-base shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              <Link href="/seo-audit" className="w-full">
-                Free SEO Audit
+              <Link href="/seo-audit" className="w-full flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Free SEO Audit</span>
               </Link>
             </TouchButton>
           </div>
 
-          {/* Contact Info */}
-          <div className="pt-6 border-t border-gray-200 space-y-3">
-            <div className="flex items-center gap-3 text-sm text-gray-600">
-              <MapPin className="w-4 h-4 text-blue-600 flex-shrink-0" />
-              <span>2281 Lava Ridge Ct, Roseville, CA 95661</span>
+          {/* Contact Info - BOLDER COLORS & BETTER VISIBILITY */}
+          <div className="pt-6 border-t-2 border-primary-200 space-y-3 bg-gradient-to-br from-primary-50/50 to-accent-50/30 rounded-xl p-4 -mx-2">
+            <div className="flex items-start gap-3 text-sm font-medium text-slate-700">
+              <MapPin className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+              <span className="leading-relaxed">2281 Lava Ridge Ct, Roseville, CA 95661</span>
             </div>
             <a 
               href="tel:5305538883" 
-              className="flex items-center gap-3 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+              className="flex items-center gap-3 text-sm font-semibold text-slate-700 hover:text-primary-600 transition-all duration-200 hover:translate-x-1"
             >
-              <Phone className="w-4 h-4 text-blue-600 flex-shrink-0" />
-              <span>(530) 553-8883</span>
+              <Phone className="w-5 h-5 text-primary-600 flex-shrink-0" />
+              <span className="font-bold">(530) 553-8883</span>
             </a>
-            <div className="flex items-center gap-3 text-sm text-gray-600">
-              <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            <a 
+              href="mailto:info@webvello.com" 
+              className="flex items-center gap-3 text-sm font-semibold text-slate-700 hover:text-primary-600 transition-all duration-200 hover:translate-x-1"
+            >
+              <svg className="w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>info@webvello.com</span>
-            </div>
+              <span className="font-bold">info@webvello.com</span>
+            </a>
           </div>
         </nav>
       </MobileNav>

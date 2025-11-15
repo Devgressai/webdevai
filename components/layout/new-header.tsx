@@ -324,7 +324,7 @@ export function NewHeader() {
 
   return (
     <header className="relative sticky top-0 z-50 bg-white shadow-[0_4px_12px_rgba(15,23,42,0.08)]">
-      {/* Top Banner */}
+      {/* Top Banner / Info Bar */}
       <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white border-b border-blue-800/20">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-3 py-2.5 text-sm">
@@ -346,6 +346,13 @@ export function NewHeader() {
               >
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 <span className="font-medium">(530) 553-8883</span>
+              </a>
+              <a 
+                href="mailto:Hello@Webvello.com" 
+                className="flex items-center gap-2 text-blue-100 hover:text-white transition-colors"
+              >
+                <Mail className="h-4 w-4 flex-shrink-0" />
+                <span className="font-medium">Hello@Webvello.com</span>
               </a>
             </div>
           </div>
