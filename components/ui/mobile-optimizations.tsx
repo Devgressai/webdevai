@@ -159,6 +159,16 @@ interface MobileNavProps {
 export function MobileNav({ isOpen, onClose, children }: MobileNavProps) {
   const { isMobile } = useMobileDetection()
   
+  // Prevent background scroll when menu is open
+  useEffect(() => {
+    if (!isOpen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [isOpen])
+  
   if (!isMobile) return <>{children}</>
   
   return (
@@ -173,11 +183,12 @@ export function MobileNav({ isOpen, onClose, children }: MobileNavProps) {
       
       {/* Mobile menu */}
       <div className={`
-        fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl z-50
+        fixed top-0 right-0 h-full max-h-screen w-80 max-w-[85vw] bg-white shadow-xl z-50
         transform transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+        overflow-y-auto overscroll-contain
       `}>
-        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+        <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-gray-200 bg-white">
           <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
           <button
             onClick={onClose}

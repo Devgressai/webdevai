@@ -379,7 +379,7 @@ export default function SurgeonWebDesignAustinPage() {
               <div>
                 <Phone className="h-8 w-8 mx-auto mb-3 text-blue-300" />
                 <div className="font-semibold mb-1">Call Us</div>
-                <a href="tel:+17378885723" className="text-blue-200 hover:text-white">(737) 888-5723</a>
+                <a href="tel:+15305538883" className="text-blue-200 hover:text-white">(530) 553-8883</a>
               </div>
               <div>
                 <Mail className="h-8 w-8 mx-auto mb-3 text-blue-300" />

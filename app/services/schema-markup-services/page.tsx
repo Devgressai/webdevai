@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://www.webvello.com/services/schema-markup-services',
     images: [
       {
-        url: 'https://www.webvello.com/og-schema-markup-services.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Schema Markup Services - Web Vello'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Schema Markup Services | Rich Snippets & Structured Data SEO',
     description: 'Boost your search visibility with professional schema markup services. Get rich snippets, featured snippets, and 30%+ more click-through rates.',
-    images: ['https://www.webvello.com/og-schema-markup-services.jpg']
+    images: ['https://www.webvello.com/og-image.jpg']
   },
   alternates: {
     canonical: 'https://www.webvello.com/services/schema-markup-services'

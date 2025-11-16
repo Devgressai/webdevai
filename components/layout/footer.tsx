@@ -58,8 +58,17 @@ export function Footer() {
               <a href="mailto:info@webvello.com" className="text-gray-300 hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
-              <a href="tel:+17378885723" className="text-gray-300 hover:text-white transition-colors">
+              <a href="tel:+15305538883" className="text-gray-300 hover:text-white transition-colors">
                 <Phone className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-white transition-colors"
+                aria-label="View on Google Maps"
+              >
+                <MapPin className="h-5 w-5" />
               </a>
               <a href="https://webvello.com" className="text-gray-300 hover:text-white transition-colors">
                 <Globe className="h-5 w-5" />

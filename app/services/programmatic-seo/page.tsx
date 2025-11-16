@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     title: 'Programmatic SEO Services | Scale Content & Dominate Search Results',
     description: 'Scale your SEO with programmatic SEO services. Create thousands of optimized pages automatically and dominate search results.',
     type: 'website',
-    url: 'https://www.webvello.com/services/programmatic-seo',
+    url: 'https://webvello.com/services/programmatic-seo',
     images: [
       {
-        url: 'https://www.webvello.com/og-programmatic-seo.jpg',
+        url: 'https://webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Programmatic SEO Services - Web Vello'
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Programmatic SEO Services | Scale Content & Dominate Search Results',
     description: 'Scale your SEO with programmatic SEO services. Create thousands of optimized pages automatically and dominate search results.',
-    images: ['https://www.webvello.com/og-programmatic-seo.jpg']
+    images: ['https://webvello.com/og-image.jpg']
   },
   alternates: {
-    canonical: 'https://www.webvello.com/services/programmatic-seo'
+    canonical: 'https://webvello.com/services/programmatic-seo'
   }
 }
 
