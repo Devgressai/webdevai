@@ -22,7 +22,7 @@ const nextConfig = {
     // Enable modern output
     outputFileTracingRoot: process.cwd(),
     // Reduce file tracing for faster builds
-    outputFileTracingExcludes: [
+    outputFileTracingIgnores: [
       '**/node_modules/@swc/core*/**',
       '**/node_modules/webpack/**',
       '**/.next/cache/**',
@@ -227,6 +227,7 @@ const nextConfig = {
       { source: '/:city/seo-services-:tail', destination: '/:city/seo', permanent: true },
       { source: '/:city/seo-:tail', destination: '/:city/seo', permanent: true },
       // Industry prefixed mis-slugs that should map to core services
+      { source: '/:city/*-industry-website-design-:tail', destination: '/:city/website-design', permanent: true },
       { source: '/:city/auto-repair-website-design-:tail', destination: '/:city/website-design', permanent: true },
       { source: '/:city/medical-website-design-:tail', destination: '/:city/website-design', permanent: true },
       { source: '/:city/real-estate-seo-:tail', destination: '/:city/seo', permanent: true },
