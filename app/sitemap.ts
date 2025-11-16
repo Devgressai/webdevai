@@ -5,7 +5,7 @@ import { readdirSync } from 'fs'
 import { join } from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.webvello.com'
+  const baseUrl = 'https://webvello.com'
   
   // Core pages - high priority, high traffic potential
   const corePages = [
