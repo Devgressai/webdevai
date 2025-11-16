@@ -133,9 +133,11 @@ export default function HomePage() {
       "areaServed": "US",
       "availableLanguage": "English"
     },
+    "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk",
     "sameAs": [
       "https://www.linkedin.com/company/webvello",
-      "https://twitter.com/webvello"
+      "https://twitter.com/webvello",
+      "https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk"
     ],
     "aggregateRating": {
       "@type": "AggregateRating",

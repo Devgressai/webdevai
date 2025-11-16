@@ -347,6 +347,16 @@ export function NewHeader() {
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 <span className="font-medium">(530) 553-8883</span>
               </a>
+              <a
+                href="https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center gap-2 text-blue-100 hover:text-white transition-colors"
+                aria-label="View on Google Maps"
+              >
+                <MapPin className="h-4 w-4 flex-shrink-0" />
+                <span className="font-medium">View on Google</span>
+              </a>
               <a 
                 href="mailto:Hello@Webvello.com" 
                 className="flex items-center gap-2 text-blue-100 hover:text-white transition-colors"

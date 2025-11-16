@@ -28,7 +28,7 @@ const contactInfo = [
     title: "Office",
     value: "Roseville, CA",
     description: "Serving businesses nationwide",
-    href: "https://maps.google.com/?q=2281+Lava+Ridge+Ct,+Roseville,+CA+95661"
+    href: "https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk"
   },
   {
     icon: Clock,
