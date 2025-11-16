@@ -132,7 +132,7 @@ export default function EnergySEOCompanyPage() {
             </div>
 
             <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
-              <div><Phone className="h-8 w-8 mx-auto mb-3 text-yellow-300" /><div className="font-semibold mb-1">Call Us</div><a href="tel:+17378885723" className="text-yellow-200 hover:text-white">(737) 888-5723</a></div>
+              <div><Phone className="h-8 w-8 mx-auto mb-3 text-yellow-300" /><div className="font-semibold mb-1">Call Us</div><a href="tel:+15305538883" className="text-yellow-200 hover:text-white">(530) 553-8883</a></div>
               <div><Mail className="h-8 w-8 mx-auto mb-3 text-yellow-300" /><div className="font-semibold mb-1">Email Us</div><a href="mailto:hello@webvello.com" className="text-yellow-200 hover:text-white">hello@webvello.com</a></div>
               <div><Clock className="h-8 w-8 mx-auto mb-3 text-yellow-300" /><div className="font-semibold mb-1">Business Hours</div><div className="text-yellow-100">Mon-Fri: 9AM-6PM</div></div>
             </div>
