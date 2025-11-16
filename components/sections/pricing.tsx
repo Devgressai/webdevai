@@ -108,54 +108,70 @@ function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 mb-20">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 mb-20 lg:items-stretch">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-200 ${
-                plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+              className={`relative flex flex-col rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-200 transition-all hover:shadow-xl ${
+                plan.popular ? 'ring-2 ring-blue-500 lg:scale-105 lg:-mt-4' : 'hover:ring-blue-200'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="inline-flex items-center rounded-full bg-blue-400 px-4 py-1 text-sm font-medium text-white">
-                    <Star className="mr-1 h-4 w-4" />
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-1.5 text-sm font-semibold text-white shadow-lg">
+                    <Star className="mr-1.5 h-4 w-4 fill-current" />
                     Most Popular
                   </span>
                 </div>
               )}
               
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
-                <p className="mt-2 text-gray-600">{plan.description}</p>
-                <div className="mt-6">
-                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                  <span className="text-lg text-gray-600">{plan.period}</span>
+              {/* Header Section */}
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <p className="text-sm text-gray-600 min-h-[2.5rem]">{plan.description}</p>
+                
+                {/* Price Section - Better Aligned */}
+                <div className="mt-6 mb-2">
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="text-5xl font-bold text-gray-900 tracking-tight">{plan.price}</span>
+                    <span className="text-lg text-gray-600 font-medium">{plan.period}</span>
+                  </div>
                 </div>
               </div>
 
-              <ul className="mt-8 space-y-4">
+              {/* Features List - Flex grow to push button down */}
+              <ul className="flex-grow space-y-3.5 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-700 leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-8">
+              {/* CTA Button - Always at bottom */}
+              <div className="mt-auto pt-4">
                 <Button
                   size="lg"
-                  className={`w-full ${
+                  className={`w-full font-semibold ${
                     plan.popular
-                      ? 'bg-blue-500 hover:bg-blue-600'
-                      : 'bg-gray-900 hover:bg-gray-800'
+                      ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg'
+                      : 'bg-gray-900 hover:bg-gray-800 text-white'
                   }`}
                   asChild
                 >
                   <a href={plan.href}>
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                    {plan.cta}
+                    {plan.name === 'Professional' ? (
+                      <>
+                        Get Started
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </>
+                    ) : (
+                      <>
+                        {plan.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </a>
                 </Button>
               </div>
@@ -174,20 +190,23 @@ function Pricing() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {additionalServices.map((service) => (
               <div
                 key={service.name}
-                className="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-all hover:border-blue-200 flex flex-col"
               >
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">
                   {service.name}
                 </h4>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-blue-500">{service.price}</span>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href="/contact">Learn More</a>
+                <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <span className="text-lg font-bold text-blue-600">{service.price}</span>
+                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50" asChild>
+                    <a href="/contact">
+                      Learn More
+                      <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                    </a>
                   </Button>
                 </div>
               </div>
