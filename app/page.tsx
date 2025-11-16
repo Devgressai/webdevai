@@ -133,6 +133,11 @@ export default function HomePage() {
       "areaServed": "US",
       "availableLanguage": "English"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.7474573,
+      "longitude": -121.2444338
+    },
     "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk",
     "sameAs": [
       "https://www.linkedin.com/company/webvello",
