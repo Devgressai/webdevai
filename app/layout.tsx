@@ -266,10 +266,10 @@ export default function RootLayout({
         {/* <GoogleAnalytics /> */}
         {process.env.NEXT_PUBLIC_ENABLE_PERF_MONITOR === 'true' ? <PerformanceMonitor /> : null}
         {/* Show desktop header on md+ and mobile header on small screens to avoid duplicates */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Header />
         </div>
-        <div className="md:hidden">
+        <div className="block lg:hidden">
           <MobileHeader />
         </div>
         <main>{children}</main>
