@@ -146,25 +146,6 @@ function SocialProof() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 border border-primary-100">
-            <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-              Ready to Join Our Success Stories?
-            </h3>
-            <p className="text-secondary-600 mb-6 max-w-2xl mx-auto">
-              Let’s discuss how we can help your business achieve similar results. Get a free consultation and discover your growth potential.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-gradient-primary hover:shadow-glow px-8 py-3">
-                <Link href="/contact">Get Free Consultation</Link>
-              </Button>
-              <Button variant="outline" asChild className="px-8 py-3">
-                <Link href="/case-studies">View Case Studies</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

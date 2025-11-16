@@ -249,26 +249,18 @@ function Pricing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <a href="/contact">
-                  Get FREE Strategy Session (Worth $500)
+                  Get Free Strategy Session
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
                 <a href="/case-studies">
-                  See 300%+ Results
+                  View Case Studies
                 </a>
               </Button>
             </div>
-            
-            {/* Urgency & Scarcity */}
-            <div className="mt-6 text-center">
-              <p className="text-sm text-blue-100 mb-2">
-                <Target className="inline mr-1 h-4 w-4" />
-                <span className="font-semibold">Limited Time:</span> Free strategy session (normally $500)
-              </p>
-              <p className="text-xs text-blue-200">
-                Only 3 spots available this week • 500+ businesses trust us
-              </p>
-            </div>
+            <p className="mt-6 text-sm text-blue-100">
+              500+ businesses trust us • No obligation
+            </p>
           </div>
         </div>
       </div>
