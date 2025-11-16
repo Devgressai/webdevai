@@ -102,7 +102,7 @@ export function Hero() {
               High-Impact Web & SEO Growth Programs
             </p>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-              Transform your website into a lead generation machine with <span className="text-primary-600">Web Vello</span>
+              Transform your website into a lead generation machine with <span className="text-blue-700">Web Vello</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
