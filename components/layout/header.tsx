@@ -369,7 +369,7 @@ export function Header() {
               </Link>
               <Link href="/contact" className="flex items-center space-x-1 text-slate-700 hover:text-slate-900 transition-colors">
                 <Phone className="h-3 w-3" />
-                <span className="font-medium">(530) 553-8883</span>
+                <span className="font-medium">737-888-5723</span>
               </Link>
             </div>
           </div>

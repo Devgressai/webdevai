@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
-import { notFound } from 'next/navigation'
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -48,26 +47,12 @@ const cityData: Record<string, { name: string; state: string; fullName: string; 
     population: '8.8 million',
     industries: ['Finance', 'Technology', 'Media', 'Healthcare', 'Real Estate', 'Retail', 'Tourism']
   },
-  'lubbock-tx': {
-    name: 'Lubbock',
-    state: 'TX',
-    fullName: 'Lubbock, TX',
-    population: '260K',
-    industries: ['Education', 'Healthcare', 'Agriculture', 'Manufacturing', 'Retail', 'Energy', 'Services']
-  },
   'los-angeles-ca': { 
     name: 'Los Angeles', 
     state: 'CA', 
     fullName: 'Los Angeles, CA',
     population: '4 million',
     industries: ['Entertainment', 'Technology', 'Fashion', 'Aerospace', 'Tourism', 'Healthcare', 'Manufacturing']
-  },
-  'tampa-fl': {
-    name: 'Tampa',
-    state: 'FL',
-    fullName: 'Tampa, FL',
-    population: '399K',
-    industries: ['Healthcare', 'Finance', 'Tourism', 'Technology', 'Logistics', 'Education', 'Defense']
   },
   'chicago-il': { 
     name: 'Chicago', 
@@ -89,13 +74,6 @@ const cityData: Record<string, { name: string; state: string; fullName: string; 
     fullName: 'Phoenix, AZ',
     population: '1.6 million',
     industries: ['Technology', 'Healthcare', 'Tourism', 'Financial Services', 'Manufacturing', 'Education', 'Real Estate']
-  },
-  'buffalo-ny': {
-    name: 'Buffalo',
-    state: 'NY',
-    fullName: 'Buffalo, NY',
-    population: '276K',
-    industries: ['Healthcare', 'Education', 'Manufacturing', 'Financial Services', 'Technology', 'Tourism', 'Logistics']
   },
   'philadelphia-pa': { 
     name: 'Philadelphia', 
@@ -320,217 +298,6 @@ const cityData: Record<string, { name: string; state: string; fullName: string; 
     fullName: 'Mesa, AZ',
     population: '504K',
     industries: ['Technology', 'Healthcare', 'Manufacturing', 'Education', 'Financial Services', 'Tourism', 'Real Estate']
-  }
-  ,
-  'wichita-ks': {
-    name: 'Wichita',
-    state: 'KS',
-    fullName: 'Wichita, KS',
-    population: '397K',
-    industries: ['Aerospace', 'Manufacturing', 'Healthcare', 'Education', 'Logistics', 'Agriculture', 'Services']
-  },
-  'anchorage-ak': {
-    name: 'Anchorage',
-    state: 'AK',
-    fullName: 'Anchorage, AK',
-    population: '288K',
-    industries: ['Energy', 'Logistics', 'Tourism', 'Healthcare', 'Government', 'Retail', 'Construction']
-  },
-  'jersey-city-nj': {
-    name: 'Jersey City',
-    state: 'NJ',
-    fullName: 'Jersey City, NJ',
-    population: '292K',
-    industries: ['Finance', 'Technology', 'Real Estate', 'Healthcare', 'Education', 'Logistics', 'Retail']
-  },
-  'chandler-az': {
-    name: 'Chandler',
-    state: 'AZ',
-    fullName: 'Chandler, AZ',
-    population: '287K',
-    industries: ['Technology', 'Manufacturing', 'Finance', 'Healthcare', 'Education', 'Retail', 'Logistics']
-  },
-  'spokane-wa': {
-    name: 'Spokane',
-    state: 'WA',
-    fullName: 'Spokane, WA',
-    population: '229K',
-    industries: ['Healthcare', 'Education', 'Manufacturing', 'Technology', 'Tourism', 'Logistics', 'Agriculture']
-  },
-  'plano-tx': {
-    name: 'Plano',
-    state: 'TX',
-    fullName: 'Plano, TX',
-    population: '289K',
-    industries: ['Finance', 'Technology', 'Telecom', 'Healthcare', 'Education', 'Retail', 'Logistics']
-  },
-  'st-petersburg-fl': {
-    name: 'St. Petersburg',
-    state: 'FL',
-    fullName: 'St. Petersburg, FL',
-    population: '258K',
-    industries: ['Tourism', 'Healthcare', 'Finance', 'Technology', 'Education', 'Retail', 'Logistics']
-  },
-  'lincoln-ne': {
-    name: 'Lincoln',
-    state: 'NE',
-    fullName: 'Lincoln, NE',
-    population: '293K',
-    industries: ['Education', 'Healthcare', 'Government', 'Manufacturing', 'Technology', 'Retail', 'Services']
-  },
-  'reno-nv': {
-    name: 'Reno',
-    state: 'NV',
-    fullName: 'Reno, NV',
-    population: '273K',
-    industries: ['Tourism', 'Technology', 'Manufacturing', 'Logistics', 'Healthcare', 'Education', 'Renewables']
-  },
-  'des-moines-ia': {
-    name: 'Des Moines',
-    state: 'IA',
-    fullName: 'Des Moines, IA',
-    population: '215K',
-    industries: ['Finance', 'Insurance', 'Manufacturing', 'Healthcare', 'Education', 'Technology', 'Logistics']
-  },
-  'omaha-ne': {
-    name: 'Omaha',
-    state: 'NE',
-    fullName: 'Omaha, NE',
-    population: '486K',
-    industries: ['Finance', 'Logistics', 'Healthcare', 'Education', 'Manufacturing', 'Technology', 'Services']
-  },
-  'lexington-ky': {
-    name: 'Lexington',
-    state: 'KY',
-    fullName: 'Lexington, KY',
-    population: '323K',
-    industries: ['Education', 'Healthcare', 'Manufacturing', 'Technology', 'Equine', 'Retail', 'Logistics']
-  },
-  'madison-wi': {
-    name: 'Madison',
-    state: 'WI',
-    fullName: 'Madison, WI',
-    population: '275K',
-    industries: ['Education', 'Healthcare', 'Technology', 'Government', 'Manufacturing', 'Retail', 'Services']
-  },
-  'cleveland-oh': {
-    name: 'Cleveland',
-    state: 'OH',
-    fullName: 'Cleveland, OH',
-    population: '368K',
-    industries: ['Healthcare', 'Manufacturing', 'Finance', 'Technology', 'Education', 'Logistics', 'Retail']
-  },
-  'richmond-va': {
-    name: 'Richmond',
-    state: 'VA',
-    fullName: 'Richmond, VA',
-    population: '229K',
-    industries: ['Finance', 'Government', 'Healthcare', 'Education', 'Manufacturing', 'Technology', 'Logistics']
-  },
-  'hialeah-fl': {
-    name: 'Hialeah',
-    state: 'FL',
-    fullName: 'Hialeah, FL',
-    population: '220K',
-    industries: ['Retail', 'Healthcare', 'Manufacturing', 'Logistics', 'Education', 'Services', 'Construction']
-  },
-  'henderson-nv': {
-    name: 'Henderson',
-    state: 'NV',
-    fullName: 'Henderson, NV',
-    population: '329K',
-    industries: ['Tourism', 'Technology', 'Healthcare', 'Manufacturing', 'Retail', 'Education', 'Logistics']
-  },
-  'virginia-beach-va': {
-    name: 'Virginia Beach',
-    state: 'VA',
-    fullName: 'Virginia Beach, VA',
-    population: '459K',
-    industries: ['Tourism', 'Defense', 'Healthcare', 'Education', 'Technology', 'Logistics', 'Retail']
-  },
-  'toledo-oh': {
-    name: 'Toledo',
-    state: 'OH',
-    fullName: 'Toledo, OH',
-    population: '270K',
-    industries: ['Manufacturing', 'Healthcare', 'Education', 'Logistics', 'Technology', 'Retail', 'Services']
-  },
-  'riverside-ca': {
-    name: 'Riverside',
-    state: 'CA',
-    fullName: 'Riverside, CA',
-    population: '328K',
-    industries: ['Logistics', 'Manufacturing', 'Education', 'Healthcare', 'Retail', 'Technology', 'Services']
-  },
-  'chula-vista-ca': {
-    name: 'Chula Vista',
-    state: 'CA',
-    fullName: 'Chula Vista, CA',
-    population: '282K',
-    industries: ['Manufacturing', 'Healthcare', 'Education', 'Retail', 'Tourism', 'Logistics', 'Technology']
-  },
-  'stockton-ca': {
-    name: 'Stockton',
-    state: 'CA',
-    fullName: 'Stockton, CA',
-    population: '322K',
-    industries: ['Logistics', 'Agriculture', 'Manufacturing', 'Healthcare', 'Education', 'Retail', 'Services']
-  },
-  'st-louis-mo': {
-    name: 'St. Louis',
-    state: 'MO',
-    fullName: 'St. Louis, MO',
-    population: '297K',
-    industries: ['Manufacturing', 'Healthcare', 'Finance', 'Education', 'Logistics', 'Technology', 'Retail']
-  },
-  'norfolk-va': {
-    name: 'Norfolk',
-    state: 'VA',
-    fullName: 'Norfolk, VA',
-    population: '238K',
-    industries: ['Defense', 'Logistics', 'Healthcare', 'Education', 'Tourism', 'Technology', 'Manufacturing']
-  },
-  'cincinnati-oh': {
-    name: 'Cincinnati',
-    state: 'OH',
-    fullName: 'Cincinnati, OH',
-    population: '309K',
-    industries: ['Manufacturing', 'Finance', 'Healthcare', 'Education', 'Retail', 'Technology', 'Logistics']
-  },
-  'pittsburgh-pa': {
-    name: 'Pittsburgh',
-    state: 'PA',
-    fullName: 'Pittsburgh, PA',
-    population: '303K',
-    industries: ['Technology', 'Healthcare', 'Education', 'Manufacturing', 'Finance', 'Logistics', 'Retail']
-  },
-  'boise-id': {
-    name: 'Boise',
-    state: 'ID',
-    fullName: 'Boise, ID',
-    population: '236K',
-    industries: ['Technology', 'Manufacturing', 'Education', 'Healthcare', 'Retail', 'Logistics', 'Tourism']
-  },
-  'anaheim-ca': {
-    name: 'Anaheim',
-    state: 'CA',
-    fullName: 'Anaheim, CA',
-    population: '346K',
-    industries: ['Tourism', 'Manufacturing', 'Healthcare', 'Education', 'Retail', 'Technology', 'Logistics']
-  },
-  'long-beach-ca': {
-    name: 'Long Beach',
-    state: 'CA',
-    fullName: 'Long Beach, CA',
-    population: '456K',
-    industries: ['Logistics', 'Healthcare', 'Education', 'Manufacturing', 'Tourism', 'Technology', 'Retail']
-  },
-  'santa-ana-ca': {
-    name: 'Santa Ana',
-    state: 'CA',
-    fullName: 'Santa Ana, CA',
-    population: '311K',
-    industries: ['Manufacturing', 'Healthcare', 'Education', 'Retail', 'Logistics', 'Technology', 'Services']
   }
 }
 
@@ -961,12 +728,9 @@ export async function generateMetadata({ params }: CityServicePageProps): Promis
   if (!city || !service) return { title: 'Page Not Found' }
 
   return {
-    title: `${service.name} in ${city.fullName}`,
+    title: `${service.name} in ${city.fullName} | Professional ${service.name} Services`,
     description: `Professional ${service.name.toLowerCase()} services in ${city.fullName}. ${service.shortDesc} tailored for ${city.name} businesses. Get expert solutions and local expertise.`,
     keywords: `${service.name.toLowerCase()}, ${city.name}, ${city.state}, business services, professional services, ${service.category.toLowerCase()}`,
-    alternates: {
-      canonical: `https://webvello.com/${params.city}/${params.service}`,
-    },
     openGraph: {
       title: `${service.name} in ${city.fullName} | Web Vello`,
       description: `Professional ${service.name.toLowerCase()} services in ${city.fullName} - Expert solutions for local businesses.`,
@@ -997,7 +761,17 @@ export default function CityServicePage({ params }: CityServicePageProps) {
   const service = serviceData[params.service]
   
   if (!city || !service) {
-    return notFound()
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+          <p className="text-gray-600 mb-8">The requested service page could not be found.</p>
+          <Button asChild>
+            <a href="/">Return Home</a>
+          </Button>
+        </div>
+      </div>
+    )
   }
 
   const ServiceIcon = service.icon

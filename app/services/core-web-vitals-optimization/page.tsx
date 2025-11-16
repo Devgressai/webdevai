@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://www.webvello.com/services/core-web-vitals-optimization',
     images: [
       {
-        url: 'https://www.webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-core-web-vitals-optimization.jpg',
         width: 1200,
         height: 630,
         alt: 'Core Web Vitals Optimization Services - Web Vello'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Core Web Vitals Optimization Services | Speed Up Your Website & Boost Rankings',
     description: 'Boost your Google rankings with our Core Web Vitals optimization services. Improve LCP, FID, CLS scores and get 40%+ more organic traffic.',
-    images: ['https://www.webvello.com/og-image.jpg']
+    images: ['https://www.webvello.com/og-core-web-vitals-optimization.jpg']
   },
   alternates: {
     canonical: 'https://www.webvello.com/services/core-web-vitals-optimization'

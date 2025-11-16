@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://www.webvello.com/services/voice-search-optimization',
     images: [
       {
-        url: 'https://www.webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-voice-search-optimization.jpg',
         width: 1200,
         height: 630,
         alt: 'Voice Search Optimization Services - Web Vello'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Voice Search Optimization Services | AI-Powered SEO for Voice Assistants',
     description: 'Dominate voice search with our AI-powered voice search optimization services. Get 300%+ more voice search traffic with Alexa, Siri & Google Assistant optimization.',
-    images: ['https://www.webvello.com/og-image.jpg']
+    images: ['https://www.webvello.com/og-voice-search-optimization.jpg']
   },
   alternates: {
     canonical: 'https://www.webvello.com/services/voice-search-optimization'

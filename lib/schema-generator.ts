@@ -37,7 +37,7 @@ export function generateOrganizationSchema() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-530-553-8883",
+      "telephone": "+1-737-888-5723",
       "contactType": "customer service",
       "areaServed": "US",
       "availableLanguage": ["English"],
@@ -70,7 +70,7 @@ export function generateLocalBusinessSchema(city: string, cityState: string) {
     "name": `Web Vello - ${cityState}`,
     "image": "https://webvello.com/logo.png",
     "url": `https://webvello.com/${city}`,
-    "telephone": "+1-530-553-8883",
+    "telephone": "+1-737-888-5723",
     "email": "hello@webvello.com",
     "priceRange": "$$",
     "address": {

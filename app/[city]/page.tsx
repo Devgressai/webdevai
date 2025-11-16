@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '../../components/ui/button'
-import { notFound } from 'next/navigation'
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -32,15 +31,12 @@ const cityData: Record<string, { name: string; state: string; fullName: string }
   'chicago-il': { name: 'Chicago', state: 'IL', fullName: 'Chicago, IL' },
   'houston-tx': { name: 'Houston', state: 'TX', fullName: 'Houston, TX' },
   'phoenix-az': { name: 'Phoenix', state: 'AZ', fullName: 'Phoenix, AZ' },
-  'lubbock-tx': { name: 'Lubbock', state: 'TX', fullName: 'Lubbock, TX' },
   'philadelphia-pa': { name: 'Philadelphia', state: 'PA', fullName: 'Philadelphia, PA' },
   'san-antonio-tx': { name: 'San Antonio', state: 'TX', fullName: 'San Antonio, TX' },
   'san-diego-ca': { name: 'San Diego', state: 'CA', fullName: 'San Diego, CA' },
   'dallas-tx': { name: 'Dallas', state: 'TX', fullName: 'Dallas, TX' },
   'san-jose-ca': { name: 'San Jose', state: 'CA', fullName: 'San Jose, CA' },
   'austin-tx': { name: 'Austin', state: 'TX', fullName: 'Austin, TX' },
-  'tampa-fl': { name: 'Tampa', state: 'FL', fullName: 'Tampa, FL' },
-  'buffalo-ny': { name: 'Buffalo', state: 'NY', fullName: 'Buffalo, NY' },
   'jacksonville-fl': { name: 'Jacksonville', state: 'FL', fullName: 'Jacksonville, FL' },
   'fort-worth-tx': { name: 'Fort Worth', state: 'TX', fullName: 'Fort Worth, TX' },
   'columbus-oh': { name: 'Columbus', state: 'OH', fullName: 'Columbus, OH' },
@@ -66,37 +62,7 @@ const cityData: Record<string, { name: string; state: string; fullName: string }
   'fresno-ca': { name: 'Fresno', state: 'CA', fullName: 'Fresno, CA' },
   'sacramento-ca': { name: 'Sacramento', state: 'CA', fullName: 'Sacramento, CA' },
   'kansas-city-mo': { name: 'Kansas City', state: 'MO', fullName: 'Kansas City, MO' },
-  'mesa-az': { name: 'Mesa', state: 'AZ', fullName: 'Mesa, AZ' },
-  'wichita-ks': { name: 'Wichita', state: 'KS', fullName: 'Wichita, KS' },
-  'anchorage-ak': { name: 'Anchorage', state: 'AK', fullName: 'Anchorage, AK' },
-  'jersey-city-nj': { name: 'Jersey City', state: 'NJ', fullName: 'Jersey City, NJ' },
-  'chandler-az': { name: 'Chandler', state: 'AZ', fullName: 'Chandler, AZ' },
-  'spokane-wa': { name: 'Spokane', state: 'WA', fullName: 'Spokane, WA' },
-  'plano-tx': { name: 'Plano', state: 'TX', fullName: 'Plano, TX' },
-  'st-petersburg-fl': { name: 'St. Petersburg', state: 'FL', fullName: 'St. Petersburg, FL' },
-  'lincoln-ne': { name: 'Lincoln', state: 'NE', fullName: 'Lincoln, NE' },
-  'reno-nv': { name: 'Reno', state: 'NV', fullName: 'Reno, NV' },
-  'des-moines-ia': { name: 'Des Moines', state: 'IA', fullName: 'Des Moines, IA' },
-  'omaha-ne': { name: 'Omaha', state: 'NE', fullName: 'Omaha, NE' },
-  'lexington-ky': { name: 'Lexington', state: 'KY', fullName: 'Lexington, KY' },
-  'madison-wi': { name: 'Madison', state: 'WI', fullName: 'Madison, WI' },
-  'cleveland-oh': { name: 'Cleveland', state: 'OH', fullName: 'Cleveland, OH' },
-  'richmond-va': { name: 'Richmond', state: 'VA', fullName: 'Richmond, VA' },
-  'hialeah-fl': { name: 'Hialeah', state: 'FL', fullName: 'Hialeah, FL' },
-  'henderson-nv': { name: 'Henderson', state: 'NV', fullName: 'Henderson, NV' },
-  'virginia-beach-va': { name: 'Virginia Beach', state: 'VA', fullName: 'Virginia Beach, VA' },
-  'toledo-oh': { name: 'Toledo', state: 'OH', fullName: 'Toledo, OH' },
-  'riverside-ca': { name: 'Riverside', state: 'CA', fullName: 'Riverside, CA' },
-  'chula-vista-ca': { name: 'Chula Vista', state: 'CA', fullName: 'Chula Vista, CA' },
-  'stockton-ca': { name: 'Stockton', state: 'CA', fullName: 'Stockton, CA' },
-  'st-louis-mo': { name: 'St. Louis', state: 'MO', fullName: 'St. Louis, MO' },
-  'norfolk-va': { name: 'Norfolk', state: 'VA', fullName: 'Norfolk, VA' },
-  'cincinnati-oh': { name: 'Cincinnati', state: 'OH', fullName: 'Cincinnati, OH' },
-  'pittsburgh-pa': { name: 'Pittsburgh', state: 'PA', fullName: 'Pittsburgh, PA' },
-  'boise-id': { name: 'Boise', state: 'ID', fullName: 'Boise, ID' },
-  'anaheim-ca': { name: 'Anaheim', state: 'CA', fullName: 'Anaheim, CA' },
-  'long-beach-ca': { name: 'Long Beach', state: 'CA', fullName: 'Long Beach, CA' },
-  'santa-ana-ca': { name: 'Santa Ana', state: 'CA', fullName: 'Santa Ana, CA' }
+  'mesa-az': { name: 'Mesa', state: 'AZ', fullName: 'Mesa, AZ' }
 }
 
 // All 28 services
@@ -144,7 +110,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   if (!city) return { title: 'City Not Found' }
 
   return {
-    title: `Digital Marketing & Web Design in ${city.fullName}`,
+    title: `Web Vello in ${city.fullName} | Web Design, SEO, & AI Growth`,
     description: `Partner with Web Vello in ${city.fullName} for high-converting web design, SEO, and AI-powered marketing programs that help ${city.name} businesses scale revenue.`,
     keywords: `web design ${city.name}, seo agency ${city.name}, digital marketing ${city.state}, AI marketing ${city.name}, Web Vello ${city.fullName}`,
     openGraph: {
@@ -179,7 +145,17 @@ export default function CityPage({ params }: CityPageProps) {
   const city = cityData[params.city]
   
   if (!city) {
-    return notFound()
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">City Not Found</h1>
+          <p className="text-gray-600 mb-8">The requested city page could not be found.</p>
+          <Button asChild>
+            <a href="/">Return Home</a>
+          </Button>
+        </div>
+      </div>
+    )
   }
 
   // City-specific FAQs for rich snippets

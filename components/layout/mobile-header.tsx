@@ -89,16 +89,6 @@ export default function MobileHeader() {
                 <Phone className="h-3.5 w-3.5 flex-shrink-0" />
                 <span className="font-bold">(530) 553-8883</span>
               </a>
-              <a
-                href="https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 text-white/90 hover:text-white font-semibold transition-all duration-200 hover:scale-105"
-                aria-label="View on Google Maps"
-              >
-                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>View on Google</span>
-              </a>
               <a 
                 href="mailto:Hello@Webvello.com" 
                 className="flex items-center gap-1.5 text-white/90 hover:text-white font-semibold transition-all duration-200 hover:scale-105"

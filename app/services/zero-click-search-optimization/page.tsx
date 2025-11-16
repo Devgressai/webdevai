@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://www.webvello.com/services/zero-click-search-optimization',
     images: [
       {
-        url: 'https://www.webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-zero-click-search-optimization.jpg',
         width: 1200,
         height: 630,
         alt: 'Zero-Click Search Optimization Services - Web Vello'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Zero-Click Search Optimization | Dominate Featured Snippets & Answer Boxes',
     description: 'Master zero-click search optimization to dominate featured snippets and answer boxes. Get 40%+ more visibility without clicks using our zero-click SEO strategies.',
-    images: ['https://www.webvello.com/og-image.jpg']
+    images: ['https://www.webvello.com/og-zero-click-search-optimization.jpg']
   },
   alternates: {
     canonical: 'https://www.webvello.com/services/zero-click-search-optimization'

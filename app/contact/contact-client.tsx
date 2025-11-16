@@ -12,9 +12,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "(530) 553-8883",
+    value: "737-888-5723",
     description: "Call us for immediate assistance",
-    href: "tel:+15305538883"
+    href: "tel:+17378885723"
   },
   {
     icon: Mail,
@@ -26,9 +26,9 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office",
-    value: "Roseville, CA",
+    value: "Austin, Texas",
     description: "Serving businesses nationwide",
-    href: "https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk"
+    href: "https://maps.google.com/?q=Austin,+Texas"
   },
   {
     icon: Clock,
@@ -243,9 +243,9 @@ export function ContactPageClient() {
                 className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
                 asChild
               >
-                <Link href="tel:+15305538883">
+                <Link href="tel:+17378885723">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (530) 553-8883
+                  Call 737-888-5723
                 </Link>
               </Button>
             </div>
@@ -596,9 +596,9 @@ export function ContactPageClient() {
               className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg"
               asChild
             >
-              <Link href="tel:+15305538883">
+              <Link href="tel:+17378885723">
                 <Phone className="mr-2 h-5 w-5" />
-                Call (530) 553-8883
+                Call 737-888-5723
               </Link>
             </Button>
           </div>

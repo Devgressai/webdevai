@@ -1,11 +1,9 @@
 import { MetadataRoute } from 'next'
 import { citySlugs } from '../lib/cities'
 import { industrySlugs } from '../lib/industries'
-import { readdirSync } from 'fs'
-import { join } from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://webvello.com'
+  const baseUrl = 'https://www.webvello.com'
   
   // Core pages - high priority, high traffic potential
   const corePages = [
@@ -70,25 +68,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ui-ux-design'
   ]
 
-  // Services for city-industry-service combinations
-  const industryServices = [
-    'website-design',
-    'web-development',
-    'seo'
-  ]
-
-  // Get all blog post slugs dynamically
-  const blogDir = join(process.cwd(), 'app', 'blog')
-  let blogSlugs: string[] = []
-  try {
-    blogSlugs = readdirSync(blogDir, { withFileTypes: true })
-      .filter(dirent => dirent.isDirectory())
-      .map(dirent => dirent.name)
-      .filter(name => name !== 'page.tsx' && !name.startsWith('.'))
-  } catch (error) {
-    console.error('Error reading blog directory:', error)
-  }
-
   // Generate core page entries
   const coreEntries = corePages.map((page) => ({
     url: `${baseUrl}${page}`,
@@ -113,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Generate city+service combination entries
+  // Generate city+service combination entries (NEW!)
   const cityServiceEntries: MetadataRoute.Sitemap = []
   for (const city of allCities) {
     for (const service of keyServices) {
@@ -126,35 +105,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Generate city-industry-service combination entries
-  const cityIndustryServiceEntries: MetadataRoute.Sitemap = []
-  for (const city of allCities) {
-    for (const industry of industrySlugs) {
-      for (const service of industryServices) {
-        cityIndustryServiceEntries.push({
-          url: `${baseUrl}/${city}/industry/${industry}/${service}`,
-          lastModified: new Date(),
-          changeFrequency: 'monthly' as const,
-          priority: 0.6,
-        })
-      }
-    }
-  }
-
-  // Generate blog post entries
-  const blogEntries = blogSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
-
   return [
     ...coreEntries,
     ...serviceEntries,
     ...cityEntries,
-    ...cityServiceEntries,
-    ...cityIndustryServiceEntries,
-    ...blogEntries
+    ...cityServiceEntries
   ]
 }

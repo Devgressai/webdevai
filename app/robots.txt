@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.webvello.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /studio/
+
+# Allow all legitimate city, service, and industry pages
+Allow: /*/
+Allow: /services/
+Allow: /contact
+Allow: /pricing
+Allow: /about
+Allow: /case-studies
+Allow: /blog/
+Allow: /solutions/
+Allow: /seo-audit
+Allow: /website-speed-test
+Allow: /resources
+Allow: /industries
+Allow: /locations
+
+# Block only specific patterns that cause issues
+Disallow: /*?*utm_
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Disallow: /*.json$
+
+# Allow sitemap.xml explicitly
+Allow: /sitemap.xml

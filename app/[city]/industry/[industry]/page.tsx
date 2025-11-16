@@ -99,7 +99,7 @@ export async function generateMetadata({ params }: CityIndustryPageProps): Promi
       locale: 'en_US',
       type: 'website',
       images: [{
-        url: 'https://webvello.com/og-image.jpg',
+        url: `https://webvello.com/og-industry-${params.industry}.jpg`,
         width: 1200,
         height: 630,
         alt: `${industry.name} Digital Services in ${city.fullName}`

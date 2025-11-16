@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed:cis": "ts-node scripts/seed-cis-pages.ts",
-    "index-pages": "node scripts/index-pages-simple.js",
-    "capture-screenshots": "node scripts/capture-screenshots.js"
+    "index-pages": "node scripts/index-pages-simple.js"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",

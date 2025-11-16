@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://www.webvello.com/seo-audit',
     images: [
       {
-        url: 'https://www.webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-seo-audit-tool.jpg',
         width: 1200,
         height: 630,
         alt: 'Free SEO Audit Tool - Web Vello'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free SEO Audit Tool | Website SEO Analysis & Optimization',
     description: 'Get a free comprehensive SEO audit of your website. Analyze technical SEO, performance, content, and get actionable recommendations.',
-    images: ['https://www.webvello.com/og-image.jpg']
+    images: ['https://www.webvello.com/og-seo-audit-tool.jpg']
   },
   alternates: {
     canonical: 'https://www.webvello.com/seo-audit'

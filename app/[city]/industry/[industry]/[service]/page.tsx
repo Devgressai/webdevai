@@ -8,7 +8,6 @@ import { fetchCisDoc } from '../../../../../lib/cis-content'
 import { PortableText } from '@portabletext/react'
 import { getStaticCisDoc } from '../../../../../lib/cis-static'
 import { ensureMinimumWords, generateSeoPadding } from '../../../../../lib/seo-content'
-import { notFound } from 'next/navigation'
 
 interface Params {
   city: string
@@ -92,7 +91,13 @@ export default async function CityIndustryServicePage({ params }: { params: Para
   const cms = await fetchCisDoc(params.city, params.industry, params.service)
 
   if (!city || !industry || !service) {
-    return notFound()
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold">Page Not Found</h1>
+        </div>
+      </div>
+    )
   }
 
   // If CMS content exists and is published/in-review, prefer CMS content
