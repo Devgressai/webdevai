@@ -58,7 +58,7 @@ export function Footer() {
               <a href="mailto:info@webvello.com" className="text-gray-300 hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
-              <a href="tel:+17378885723" className="text-gray-300 hover:text-white transition-colors">
+              <a href="tel:+15305538883" className="text-gray-300 hover:text-white transition-colors">
                 <Phone className="h-5 w-5" />
               </a>
               <a href="https://webvello.com" className="text-gray-300 hover:text-white transition-colors">
