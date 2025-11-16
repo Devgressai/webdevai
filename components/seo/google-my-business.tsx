@@ -1,6 +1,6 @@
 'use client'
 
-import { Star, MapPin, ExternalLink, MessageSquare } from 'lucide-react'
+import { Star, MapPin, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 
 interface GoogleMyBusinessProps {
@@ -29,7 +29,7 @@ export function GoogleMyBusiness({
             <h3 className="text-2xl font-bold text-gray-900">Google My Business</h3>
           </div>
           <p className="text-gray-600 text-sm">
-            Find us on Google Maps and leave a review
+            Find us on Google Maps
           </p>
         </div>
       </div>
@@ -69,27 +69,16 @@ export function GoogleMyBusiness({
         </div>
       )}
 
-      {/* Action Buttons */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* Action Button */}
+      <div>
         <Link
           href={profileUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-md hover:shadow-lg"
+          className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-md hover:shadow-lg w-full"
         >
           <MapPin className="w-4 h-4 mr-2" />
           View on Google Maps
-          <ExternalLink className="w-4 h-4 ml-2" />
-        </Link>
-        
-        <Link
-          href={`${profileUrl}/reviews`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center px-6 py-3 bg-white border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-primary-500 hover:text-primary-600 transition-all duration-200"
-        >
-          <MessageSquare className="w-4 h-4 mr-2" />
-          Leave a Review
           <ExternalLink className="w-4 h-4 ml-2" />
         </Link>
       </div>
