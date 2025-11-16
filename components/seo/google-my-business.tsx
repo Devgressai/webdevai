@@ -14,8 +14,8 @@ interface GoogleMyBusinessProps {
 export function GoogleMyBusiness({
   profileUrl = 'https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk',
   businessName = 'Web Vello',
-  rating = 4.9,
-  reviewCount = 127,
+  rating = 5.0,
+  reviewCount,
   address,
 }: GoogleMyBusinessProps) {
   return (
@@ -39,7 +39,7 @@ export function GoogleMyBusiness({
         <div className="flex items-center mr-4">
           <div className="text-4xl font-bold text-gray-900 mr-3">{rating}</div>
           <div>
-            <div className="flex items-center mb-1">
+            <div className="flex items-center">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
@@ -51,9 +51,6 @@ export function GoogleMyBusiness({
                 />
               ))}
             </div>
-            <p className="text-sm text-gray-600">
-              Based on {reviewCount}+ reviews
-            </p>
           </div>
         </div>
       </div>

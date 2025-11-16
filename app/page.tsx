@@ -428,7 +428,7 @@ export default function HomePage() {
                 Find Us on Google
               </h2>
               <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-                Connect with us on Google Maps, read reviews from our satisfied clients, and get directions to our location.
+                Connect with us on Google Maps and get directions to our location.
               </p>
             </div>
             
@@ -436,8 +436,7 @@ export default function HomePage() {
               <GoogleMyBusiness 
                 profileUrl="https://www.google.com/maps/place/?q=place_id:ChIJu2PDWQAfm4ARz5y6qVtIYPk"
                 businessName="Web Vello"
-                rating={4.9}
-                reviewCount={127}
+                rating={5.0}
               />
             </div>
           </div>
