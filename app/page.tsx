@@ -189,46 +189,70 @@ export default function HomePage() {
         <Hero />
       
       {/* How We Work */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">How We Work</h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">How We Work</h2>
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
               Clear focus, senior expertise, measurable results, and transparent reporting—every engagement.
             </p>
           </div>
-          <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -translate-y-1/2"></div>
-            {/* Step 1 */}
-            <div className="relative text-center md:text-left">
-              <div className="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">1</div>
-              <div className="mt-6 bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-3">Focus</h3>
-                <p className="text-secondary-700">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+          
+          <div className="relative">
+            {/* Connecting line - Desktop only */}
+            <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary-200 to-transparent -translate-y-1/2 z-0"></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
+              {/* Step 1 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center md:items-start h-full">
+                  <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
+                    1
+                  </div>
+                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Focus</h3>
+                    <p className="text-secondary-600 leading-relaxed">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            {/* Step 2 */}
-            <div className="relative text-center md:text-left">
-              <div className="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">2</div>
-              <div className="mt-6 bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-3">Expertise</h3>
-                <p className="text-secondary-700">Certified senior team combining strategy, UX, engineering, and data science.</p>
+              
+              {/* Step 2 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center md:items-start h-full">
+                  <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
+                    2
+                  </div>
+                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Expertise</h3>
+                    <p className="text-secondary-600 leading-relaxed">Certified senior team combining strategy, UX, engineering, and data science.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            {/* Step 3 */}
-            <div className="relative text-center md:text-left">
-              <div className="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">3</div>
-              <div className="mt-6 bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-3">Results</h3>
-                <p className="text-secondary-700">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+              
+              {/* Step 3 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center md:items-start h-full">
+                  <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
+                    3
+                  </div>
+                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Results</h3>
+                    <p className="text-secondary-600 leading-relaxed">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            {/* Step 4 */}
-            <div className="relative text-center md:text-left">
-              <div className="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">4</div>
-              <div className="mt-6 bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <h3 className="text-xl font-semibold text-secondary-900 mb-3">Transparency</h3>
-                <p className="text-secondary-700">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+              
+              {/* Step 4 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center md:items-start h-full">
+                  <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
+                    4
+                  </div>
+                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Transparency</h3>
+                    <p className="text-secondary-600 leading-relaxed">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

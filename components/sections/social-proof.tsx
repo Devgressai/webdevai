@@ -1,7 +1,4 @@
-import { Star, Quote, Award, Users, TrendingUp, CheckCircle } from 'lucide-react'
-import { METRICS } from '@/lib/site-metrics'
-import { Button } from '../ui/button'
-import Link from 'next/link'
+import { Star, Quote, CheckCircle } from 'lucide-react'
 
 
 
@@ -32,48 +29,10 @@ const testimonials = [
   }
 ]
 
-const stats = [
-  { number: METRICS.revenue, label: METRICS.revenueLabel, icon: TrendingUp },
-  { number: '500+', label: 'Happy Clients', icon: Users },
-  { number: '1,200%', label: 'Average ROI', icon: Award },
-  { number: '300%+', label: 'Traffic Growth', icon: TrendingUp }
-]
-
 function SocialProof() {
   return (
     <section className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Stats Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
-            Results That Speak for Themselves
-          </h2>
-          <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-            We’ve helped hundreds of businesses achieve remarkable growth through strategic digital marketing.
-          </p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="flex justify-center mb-3">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <stat.icon className="h-6 w-6 text-white" />
-                </div>
-              </div>
-              <div className="text-3xl font-bold text-secondary-900 mb-1">
-                {stat.number}
-              </div>
-              <div className="text-sm text-secondary-600">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-
-
-
         {/* Testimonials */}
         <div className="mb-20">
           <h3 className="text-xl font-semibold text-secondary-900 text-center mb-12">
