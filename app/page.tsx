@@ -80,33 +80,6 @@ const stats = [
   { id: 4, name: "Organic Traffic Growth", value: "300%+", icon: BarChart3 }
 ]
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Sarah Mitchell",
-    role: "CEO, TechStart Solutions",
-    content: "Web Vello’s digital marketing services transformed our online presence completely. We went from 50 qualified leads per month to over 200, and our revenue increased by 150% in just 6 months with their SEO and web development expertise.",
-    rating: 5,
-    company: "TechStart Solutions"
-  },
-  {
-    id: 2,
-    name: "Michael Rodriguez",
-    role: "Marketing Director, GrowthCo",
-    content: "The AI-powered SEO strategies are incredible. We’re ranking for high-value keywords we never thought possible, and our organic search traffic has grown 400% year-over-year with their advanced SEO techniques.",
-    rating: 5,
-    company: "GrowthCo"
-  },
-  {
-    id: 3,
-    name: "Jennifer Chen",
-    role: "Founder, LegalTech Pro",
-    content: "Professional, results-driven, and incredibly effective digital marketing agency. Web Vello helped us establish authority in our legal tech niche and attract high-value clients consistently through their SEO and web development services.",
-    rating: 5,
-    company: "LegalTech Pro"
-  }
-]
-
 export default function HomePage() {
   // Server component: no client handlers to minimize JS shipped
 
@@ -191,8 +164,8 @@ export default function HomePage() {
       {/* How We Work */}
       <section className="py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">How We Work</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">How We Work</h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
               Clear focus, senior expertise, measurable results, and transparent reporting—every engagement.
             </p>
@@ -202,16 +175,16 @@ export default function HomePage() {
             {/* Connecting line - Desktop only */}
             <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary-200 to-transparent -translate-y-1/2 z-0"></div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {/* Step 1 */}
               <div className="group relative">
                 <div className="flex flex-col items-center md:items-start h-full">
                   <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
                     1
                   </div>
-                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
-                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Focus</h3>
-                    <p className="text-secondary-600 leading-relaxed">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+                  <div className="flex-1 w-full bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-semibold text-secondary-900 mb-4">Focus</h3>
+                    <p className="text-base text-secondary-600 leading-relaxed">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
                   </div>
                 </div>
               </div>
@@ -222,9 +195,9 @@ export default function HomePage() {
                   <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
                     2
                   </div>
-                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
-                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Expertise</h3>
-                    <p className="text-secondary-600 leading-relaxed">Certified senior team combining strategy, UX, engineering, and data science.</p>
+                  <div className="flex-1 w-full bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-semibold text-secondary-900 mb-4">Expertise</h3>
+                    <p className="text-base text-secondary-600 leading-relaxed">Certified senior team combining strategy, UX, engineering, and data science.</p>
                   </div>
                 </div>
               </div>
@@ -235,9 +208,9 @@ export default function HomePage() {
                   <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
                     3
                   </div>
-                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
-                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Results</h3>
-                    <p className="text-secondary-600 leading-relaxed">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+                  <div className="flex-1 w-full bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-semibold text-secondary-900 mb-4">Results</h3>
+                    <p className="text-base text-secondary-600 leading-relaxed">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
                   </div>
                 </div>
               </div>
@@ -248,9 +221,9 @@ export default function HomePage() {
                   <div className="relative z-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-center font-bold text-lg shadow-xl ring-4 ring-white group-hover:scale-110 transition-transform duration-300 mb-6">
                     4
                   </div>
-                  <div className="flex-1 w-full bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
-                    <h3 className="text-xl font-bold text-secondary-900 mb-4">Transparency</h3>
-                    <p className="text-secondary-600 leading-relaxed">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+                  <div className="flex-1 w-full bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-semibold text-secondary-900 mb-4">Transparency</h3>
+                    <p className="text-base text-secondary-600 leading-relaxed">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
                   </div>
                 </div>
               </div>
@@ -273,7 +246,7 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
               We combine cutting-edge technology with proven strategies to deliver measurable results for professional services firms.
             </p>
           </div>
@@ -296,7 +269,7 @@ export default function HomePage() {
                       </span>
                     )}
                   </div>
-                  <p className="text-secondary-600 mb-6 leading-relaxed">
+                  <p className="text-base text-secondary-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="space-y-2">
@@ -325,7 +298,7 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Results That Speak for Themselves
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Our data-driven approach has delivered exceptional results for hundreds of professional services firms.
             </p>
           </div>
@@ -344,7 +317,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section - Focus on Benefits & Differentiators */}
       <LazySection>
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -352,89 +325,89 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
               Why Choose Web Vello
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              As a leading digital marketing agency, we specialize in AI-powered SEO, local search optimization, and custom web development. Our data-driven approach delivers measurable results for businesses across all industries.
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
+              We combine cutting-edge AI technology with proven strategies, delivering measurable results that drive real business growth—not just vanity metrics.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Card 1 - Local SEO Focus */}
+            {/* Card 1 - Proven Results */}
             <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                <Globe className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                <Award className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                Local SEO & Google My Business
+                Proven Track Record
               </h3>
-              <p className="text-secondary-600 mb-6 leading-relaxed">
-                Dominate local search results with proven strategies. We help businesses rank #1 in their local market through Google My Business optimization, local citations, and review management.
+              <p className="text-base text-secondary-600 mb-6 leading-relaxed">
+                We've helped 500+ businesses achieve 300%+ organic traffic growth in just 6 months. Our data-driven approach delivers measurable ROI, not empty promises.
               </p>
               <div className="space-y-2 text-sm text-secondary-600">
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Google My Business optimization
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  340% average ROI delivered
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Local keyword research & targeting
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Transparent reporting & dashboards
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Local citation building
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Real results, not vanity metrics
                 </div>
               </div>
             </div>
 
-            {/* Card 2 - AI SEO Focus */}
+            {/* Card 2 - Senior Expertise */}
             <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <Zap className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                <Users className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                AI-Powered SEO & Content Strategy
+                Senior Team Expertise
               </h3>
-              <p className="text-secondary-600 mb-6 leading-relaxed">
-                Leverage cutting-edge AI technology to identify hidden SEO opportunities. Our AI-powered approach analyzes millions of data points to create content strategies that drive 300%+ traffic growth.
+              <p className="text-base text-secondary-600 mb-6 leading-relaxed">
+                Work directly with certified senior specialists—no junior staff, no account handoffs. Our team combines strategy, UX, engineering, and data science expertise.
               </p>
               <div className="space-y-2 text-sm text-secondary-600">
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  AI keyword research & analysis
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Certified senior professionals
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Content optimization & creation
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Direct access to experts
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Competitive analysis & strategy
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Cross-functional expertise
                 </div>
               </div>
             </div>
 
-            {/* Card 3 - Web Development Focus */}
+            {/* Card 3 - Transparent Process */}
             <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
-              <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
-                <Code className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                Conversion-Focused Web Development
+                Transparent & Accountable
               </h3>
-              <p className="text-secondary-600 mb-6 leading-relaxed">
-                Build websites that convert visitors into customers. We create fast, mobile-optimized sites with built-in SEO best practices, ensuring your website ranks well and drives measurable business results.
+              <p className="text-base text-secondary-600 mb-6 leading-relaxed">
+                Weekly progress updates, shared dashboards, and a reproducible playbook. You always know what we're doing and why—no black boxes, no surprises.
               </p>
               <div className="space-y-2 text-sm text-secondary-600">
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Mobile-first responsive design
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Weekly progress reports
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  SEO-optimized code structure
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Shared dashboards & analytics
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Performance optimization
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                  Clear, actionable strategy
                 </div>
               </div>
             </div>
@@ -447,11 +420,11 @@ export default function HomePage() {
       <LazySection>
         <section className="py-24 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
                 Find Us on Google
               </h2>
-              <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+              <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
                 Connect with us on Google Maps and get directions to our location.
               </p>
             </div>
@@ -472,10 +445,10 @@ export default function HomePage() {
       <section className="py-24 bg-primary-600">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Ready to Grow Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-10 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Over 500+ businesses trust us to create tailored marketing strategies that enhance credibility, foster client relationships, and drive sustainable growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -492,7 +465,7 @@ export default function HomePage() {
                 className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                 asChild
               >
-                <Link href="/contact">Schedule a Strategy Call</Link>
+                <Link href="/case-studies">View Case Studies</Link>
               </Button>
             </div>
             <p className="mt-8 text-sm text-white/70">
