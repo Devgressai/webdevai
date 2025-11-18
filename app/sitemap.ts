@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { citySlugs } from '../lib/cities'
 import { industrySlugs } from '../lib/industries'
+import { getBlogPosts } from '../lib/get-blog-posts'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.webvello.com'
   
   // Core pages - high priority, high traffic potential
@@ -20,6 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/seo-audit',
     '/website-speed-test',
     '/enhanced-demo'
+  ]
+
+  // Solutions pages
+  const solutionsPages = [
+    'agency-results',
+    'declining-traffic',
+    'google-visibility',
+    'website-conversion',
+    'website-leads',
+    'website-roi'
   ]
 
   // Services that have standalone pages under /services/
@@ -50,7 +61,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'email-marketing-design',
     'social-media-design',
     'cro-ecommerce',
-    'cro-lead-generation'
+    'cro-lead-generation',
+    // Additional service pages
+    'content-marketing',
+    'core-web-vitals-optimization',
+    'programmatic-seo',
+    'schema-markup-services',
+    'voice-search-optimization',
+    'zero-click-search-optimization',
+    'web-application-development-company',
+    'web-application-development-chicago',
+    'retail-development-services',
+    'freight-forwarder-web-design',
+    'seo-company-government-website',
+    'seo-doctors-kansas-city',
+    'seo-company-mesa-arizona',
+    'wordpress-developers-denver',
+    'portland-web-marketing',
+    'jacksonville-ai-seo',
+    'energy-seo-company',
+    'real-estate-seo-california',
+    'seo-company-mesa',
+    'seo-baltimore',
+    'seo-services-louisville',
+    'seo-consulting-charlotte',
+    'web-design-albuquerque',
+    'web-design-columbus',
+    'web-design-oklahoma-city',
+    'web-development-fresno',
+    'web-development-las-vegas',
+    'website-design-louisville',
+    'website-design-oklahoma-city',
+    'auto-repair-website-design-milwaukee',
+    'biotech-website-design-chicago',
+    'dairy-industry-website-design-los-angeles',
+    'educational-website-development-charlotte',
+    'medical-website-design-austin',
+    'surgeon-web-design-austin'
   ]
 
   // Use ALL cities for comprehensive coverage
@@ -68,12 +115,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ui-ux-design'
   ]
 
+  // Get all blog posts with error handling
+  let blogPosts: Awaited<ReturnType<typeof getBlogPosts>> = []
+  try {
+    blogPosts = await getBlogPosts()
+  } catch (error) {
+    console.error('Error fetching blog posts for sitemap:', error)
+  }
+
   // Generate core page entries
   const coreEntries = corePages.map((page) => ({
     url: `${baseUrl}${page}`,
     lastModified: new Date(),
     changeFrequency: page === '' ? 'daily' as const : 'monthly' as const,
     priority: page === '' ? 1.0 : 0.7,
+  }))
+
+  // Generate solutions page entries - ensure all solutions pages are included
+  const solutionsEntries = solutionsPages.map((solution) => ({
+    url: `${baseUrl}/solutions/${solution}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
   }))
 
   // Generate service page entries
@@ -84,6 +147,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  // Generate blog post entries with error handling for date parsing
+  const blogEntries = blogPosts.map((post) => {
+    let lastModified: Date
+    try {
+      lastModified = post.date ? new Date(post.date) : new Date()
+    } catch (error) {
+      lastModified = new Date()
+    }
+    
+    return {
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }
+  })
+
   // Generate city hub page entries
   const cityEntries = allCities.map((city) => ({
     url: `${baseUrl}/${city}`,
@@ -92,7 +172,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Generate city+service combination entries (NEW!)
+  // Generate city+service combination entries
   const cityServiceEntries: MetadataRoute.Sitemap = []
   for (const city of allCities) {
     for (const service of keyServices) {
@@ -107,7 +187,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...coreEntries,
+    ...solutionsEntries,
     ...serviceEntries,
+    ...blogEntries,
     ...cityEntries,
     ...cityServiceEntries
   ]

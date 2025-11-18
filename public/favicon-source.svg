@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue "W" Letter Favicon -->
+  <!-- Replace this with your actual blue W image -->
+  <rect width="512" height="512" fill="#E5E7EB"/>
+  <text x="256" y="380" font-family="Arial, sans-serif" font-size="400" font-weight="bold" fill="#2563EB" text-anchor="middle" dominant-baseline="middle">W</text>
+</svg>
+

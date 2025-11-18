@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '../ui/button'
 import { ArrowRight, Monitor, Palette, Zap, Users, ShoppingCart, Mail, CheckCircle, Eye, Target, TrendingUp, Award, Clock, DollarSign, Globe, Smartphone, Search, Shield, BarChart3, Star, MessageSquare, Phone, Calendar, Sparkles, Layers, Code, Building2, Crown, Gem, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const features = [
   {
@@ -103,19 +104,22 @@ const designShowcase = [
     title: "Modern Minimalist",
     description: "Clean, focused design that puts content first",
     category: "Corporate",
-    features: ["Clean typography", "White space", "Subtle animations", "Focus on content"]
+    features: ["Clean typography", "White space", "Subtle animations", "Focus on content"],
+    image: "/images/design-showcase/modern-minimalist-design.webp"
   },
   {
     title: "Bold & Creative",
     description: "Eye-catching designs that make a statement",
     category: "Creative",
-    features: ["Vibrant colors", "Custom illustrations", "Interactive elements", "Unique layouts"]
+    features: ["Vibrant colors", "Custom illustrations", "Interactive elements", "Unique layouts"],
+    image: "/images/design-showcase/bold-creative-design.webp"
   },
   {
     title: "E-commerce Excellence",
     description: "Designed to convert browsers into buyers",
     category: "E-commerce",
-    features: ["Product-focused", "Easy navigation", "Trust signals", "Optimized CTAs"]
+    features: ["Product-focused", "Easy navigation", "Trust signals", "Optimized CTAs"],
+    image: "/images/design-showcase/ecommerce-excellence-design.webp"
   }
 ]
 
@@ -202,11 +206,23 @@ export default function WebsiteDesignContent() {
               <div key={showcase.title} className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl mb-4 flex items-center justify-center">
-                    <div className="text-center">
-                      <Monitor className="w-16 h-16 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-500 text-sm">Design Preview</p>
-                    </div>
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-4 overflow-hidden relative">
+                    {showcase.image ? (
+                      <Image
+                        src={showcase.image}
+                        alt={`${showcase.title} design preview`}
+                        fill
+                        className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-center">
+                          <Monitor className="w-16 h-16 text-gray-400 mx-auto mb-2" />
+                          <p className="text-gray-500 text-sm">Design Preview</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="inline-block bg-primary-100 text-primary-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
                     {showcase.category}

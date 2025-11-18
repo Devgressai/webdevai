@@ -26,15 +26,15 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office",
-    value: "Austin, Texas",
-    description: "Serving businesses nationwide",
-    href: "https://maps.google.com/?q=Austin,+Texas"
+    value: "Roseville, CA",
+    description: "2281 Lava Ridge Ct, Roseville, CA 95661",
+    href: "https://maps.google.com/?q=2281+Lava+Ridge+Ct,+Roseville,+CA+95661"
   },
   {
     icon: Clock,
     title: "Hours",
-    value: "Mon-Fri: 9AM-6PM CST",
-    description: "We’re here to help during business hours",
+    value: "Mon-Fri: 9AM-6PM PST",
+    description: "We're here to help during business hours",
     href: null
   }
 ]
