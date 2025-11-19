@@ -6,13 +6,12 @@ export type LeadType = 'raffle' | 'contact'
 export interface RaffleEntry {
   id: string
   type: 'raffle'
-  fullName: string
+  firstName: string
   email: string
-  phone?: string
-  businessName?: string
+  phone: string
+  hasCurrentSite: boolean
+  siteName?: string
   websiteUrl?: string
-  needs?: string
-  budget?: string
   consent: boolean
   submittedAt: string
   ipAddress?: string
@@ -152,35 +151,35 @@ export function exportAsCSV(type?: LeadType): string {
   }
   
   // Common headers
-  const headers = ['ID', 'Type', 'Name', 'Email', 'Phone', 'Company/Business', 'Submitted At']
+  const headers = ['ID', 'Type', 'Name', 'Email', 'Phone', 'Submitted At']
   
   // Add type-specific headers
-  const raffleHeaders = ['Website URL', 'Needs', 'Budget', 'Consent']
-  const contactHeaders = ['Service', 'Budget', 'Urgency', 'Message']
+  const raffleHeaders = ['Has Website', 'Site Name', 'Website URL', 'Consent']
+  const contactHeaders = ['Company', 'Service', 'Budget', 'Urgency', 'Message']
   
   // Build CSV rows
   const rows = leads.map(lead => {
     const baseRow = [
       lead.id,
       lead.type,
-      lead.type === 'raffle' ? lead.fullName : lead.name,
+      lead.type === 'raffle' ? lead.firstName : lead.name,
       lead.email,
-      lead.type === 'raffle' ? (lead.phone || '') : (lead.phone || ''),
-      lead.type === 'raffle' ? (lead.businessName || '') : (lead.company || ''),
+      lead.type === 'raffle' ? lead.phone : (lead.phone || ''),
       lead.submittedAt,
     ]
     
     if (lead.type === 'raffle') {
       return [
         ...baseRow,
+        lead.hasCurrentSite ? 'Yes' : 'No',
+        lead.siteName || '',
         lead.websiteUrl || '',
-        lead.needs || '',
-        lead.budget || '',
         lead.consent ? 'Yes' : 'No',
       ]
     } else {
       return [
         ...baseRow,
+        lead.company || '',
         lead.service || '',
         lead.budget || '',
         lead.urgency || '',

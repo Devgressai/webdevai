@@ -10,13 +10,12 @@ type LeadType = 'all' | 'raffle' | 'contact'
 interface RaffleEntry {
   id: string
   type: 'raffle'
-  fullName: string
+  firstName: string
   email: string
-  phone?: string
-  businessName?: string
+  phone: string
+  hasCurrentSite: boolean
+  siteName?: string
   websiteUrl?: string
-  needs?: string
-  budget?: string
   consent: boolean
   submittedAt: string
   ipAddress?: string
@@ -338,7 +337,7 @@ export default function AdminDashboard() {
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-3">
                       <h3 className="text-lg font-semibold text-secondary-900">
-                        {lead.type === 'raffle' ? lead.fullName : lead.name}
+                        {lead.type === 'raffle' ? lead.firstName : lead.name}
                       </h3>
                       <span className="text-sm text-secondary-500">
                         {lead.email}
@@ -353,25 +352,27 @@ export default function AdminDashboard() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                      {(lead.type === 'raffle' ? lead.businessName : lead.company) && (
-                        <div>
-                          <span className="font-medium text-secondary-700">
-                            {lead.type === 'raffle' ? 'Business:' : 'Company:'}
-                          </span>{' '}
-                          <span className="text-secondary-600">
-                            {lead.type === 'raffle' ? lead.businessName : lead.company}
-                          </span>
-                        </div>
-                      )}
                       {lead.phone && (
                         <div>
                           <span className="font-medium text-secondary-700">Phone:</span>{' '}
                           <span className="text-secondary-600">{lead.phone}</span>
                         </div>
                       )}
+                      {lead.type === 'raffle' && (
+                        <div>
+                          <span className="font-medium text-secondary-700">Has Website:</span>{' '}
+                          <span className="text-secondary-600">{lead.hasCurrentSite ? 'Yes' : 'No'}</span>
+                        </div>
+                      )}
+                      {lead.type === 'raffle' && lead.siteName && (
+                        <div>
+                          <span className="font-medium text-secondary-700">Site Name:</span>{' '}
+                          <span className="text-secondary-600">{lead.siteName}</span>
+                        </div>
+                      )}
                       {lead.type === 'raffle' && lead.websiteUrl && (
                         <div>
-                          <span className="font-medium text-secondary-700">Website:</span>{' '}
+                          <span className="font-medium text-secondary-700">Website URL:</span>{' '}
                           <a
                             href={lead.websiteUrl}
                             target="_blank"
@@ -382,13 +383,19 @@ export default function AdminDashboard() {
                           </a>
                         </div>
                       )}
+                      {lead.type === 'contact' && lead.company && (
+                        <div>
+                          <span className="font-medium text-secondary-700">Company:</span>{' '}
+                          <span className="text-secondary-600">{lead.company}</span>
+                        </div>
+                      )}
                       {lead.type === 'contact' && lead.service && (
                         <div>
                           <span className="font-medium text-secondary-700">Service:</span>{' '}
                           <span className="text-secondary-600">{lead.service}</span>
                         </div>
                       )}
-                      {lead.budget && (
+                      {lead.type === 'contact' && lead.budget && (
                         <div>
                           <span className="font-medium text-secondary-700">Budget:</span>{' '}
                           <span className="text-secondary-600">{lead.budget}</span>
@@ -412,14 +419,6 @@ export default function AdminDashboard() {
                       )}
                     </div>
 
-                    {lead.type === 'raffle' && lead.needs && (
-                      <div className="mt-3 pt-3 border-t border-gray-200">
-                        <p className="text-sm">
-                          <span className="font-medium text-secondary-700">Needs:</span>{' '}
-                          <span className="text-secondary-600">{lead.needs}</span>
-                        </p>
-                      </div>
-                    )}
 
                     {lead.type === 'contact' && lead.message && (
                       <div className="mt-3 pt-3 border-t border-gray-200">

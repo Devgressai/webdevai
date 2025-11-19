@@ -4,13 +4,12 @@ import { saveRaffleEntry } from '@/lib/lead-storage'
 export const dynamic = 'force-dynamic'
 
 interface RaffleFormData {
-  fullName: string
+  firstName: string
   email: string
-  phone?: string
-  businessName?: string
+  phone: string
+  hasCurrentSite: boolean
+  siteName?: string
   websiteUrl?: string
-  needs?: string
-  budget?: string
   consent: boolean
 }
 
@@ -22,19 +21,25 @@ export async function POST(req: NextRequest) {
   try {
     const data = (await req.json()) as Partial<RaffleFormData>
 
-    const fullName = (data.fullName || '').toString().trim()
+    const firstName = (data.firstName || '').toString().trim()
     const email = (data.email || '').toString().trim()
     const phone = (data.phone || '').toString().trim()
-    const businessName = (data.businessName || '').toString().trim()
+    const hasCurrentSite = data.hasCurrentSite === true
+    const siteName = (data.siteName || '').toString().trim()
     const websiteUrl = (data.websiteUrl || '').toString().trim()
-    const needs = (data.needs || '').toString().trim()
-    const budget = (data.budget || '').toString().trim()
     const consent = data.consent === true
 
     // Validation
-    if (!fullName || !email || !isValidEmail(email)) {
+    if (!firstName || !email || !isValidEmail(email) || !phone) {
       return NextResponse.json(
-        { success: false, error: 'Full name and valid email are required' },
+        { success: false, error: 'First name, email, and phone number are required' },
+        { status: 400 }
+      )
+    }
+
+    if (hasCurrentSite && (!siteName || !websiteUrl)) {
+      return NextResponse.json(
+        { success: false, error: 'Site name and website URL are required if you have a current website' },
         { status: 400 }
       )
     }
@@ -53,13 +58,12 @@ export async function POST(req: NextRequest) {
 
     // Save entry
     const entry = saveRaffleEntry({
-      fullName,
+      firstName,
       email,
-      phone: phone || undefined,
-      businessName: businessName || undefined,
-      websiteUrl: websiteUrl || undefined,
-      needs: needs || undefined,
-      budget: budget || undefined,
+      phone,
+      hasCurrentSite,
+      siteName: hasCurrentSite && siteName ? siteName : undefined,
+      websiteUrl: hasCurrentSite && websiteUrl ? websiteUrl : undefined,
       consent,
       ipAddress,
     })

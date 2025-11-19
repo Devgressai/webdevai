@@ -5,12 +5,12 @@ import Link from 'next/link'
 import { RaffleForm } from '@/components/raffle/raffle-form'
 
 export const metadata: Metadata = {
-  title: 'Win a FREE Custom Website (Up to 10 Pages) | Webvello Giveaway',
-  description: 'Enter to win a completely free custom website from Webvello. Up to 10 pages, mobile-friendly, and SEO-optimized. Winner selected within 3 days. No purchase necessary.',
-  keywords: 'free website giveaway, web design contest, free website design, custom website raffle',
+  title: 'Win a FREE Website (Up to 10 Pages) | Webvello Giveaway',
+  description: 'Enter to win a completely free website from Webvello. Rapid development in 1-2 weeks. Up to 10 pages, mobile-friendly, and SEO-optimized. Winner selected Friday, November 21st at 1pm PST. No purchase necessary.',
+  keywords: 'free website giveaway, web design contest, free website design, rapid website development',
   openGraph: {
-    title: 'Win a FREE Custom Website (Up to 10 Pages) | Webvello Giveaway',
-    description: 'Enter to win a completely free custom website from Webvello. Up to 10 pages, mobile-friendly, and SEO-optimized.',
+    title: 'Win a FREE Website (Up to 10 Pages) | Webvello Giveaway',
+    description: 'Enter to win a completely free website from Webvello. Rapid development in 1-2 weeks. Up to 10 pages, mobile-friendly, and SEO-optimized. Winner selected Friday, November 21st at 1pm PST.',
     url: 'https://webvello.com/raffle',
     siteName: 'Webvello',
     locale: 'en_US',
@@ -26,10 +26,10 @@ export default function RafflePage() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
-              Win a <span className="text-primary-600">FREE Custom Website</span> (Up to 10 Pages) from Webvello
+              Win a <span className="text-primary-600">FREE Website</span> (Up to 10 Pages) from Webvello
             </h1>
             <p className="text-xl lg:text-2xl text-secondary-600 mb-8 leading-relaxed">
-              Winner selected within 3 days of entry. No purchase necessary to enter.
+              Winner selected Friday, November 21st at 1pm PST. No purchase necessary to enter.
             </p>
             
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 mb-8 text-left">
@@ -37,7 +37,7 @@ export default function RafflePage() {
               <ul className="space-y-3 text-secondary-700">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Completely custom website design (not generic templates)</span>
+                  <span>Rapid development website (completed in 1-2 weeks)</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -45,17 +45,21 @@ export default function RafflePage() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Mobile-friendly and SEO-optimized design</span>
+                  <span>You choose color palette, theme, and layout design</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Perfect for small businesses and local service providers</span>
+                  <span>Modern, professional design that competes with any custom website</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Mobile-friendly and SEO-optimized</span>
                 </li>
               </ul>
             </div>
 
             <p className="text-lg text-secondary-700 mb-6">
-              Fill out the form below to enter. The winner will be randomly selected by Webvello within 3 days of entry.
+              Fill out the form below to enter. The winner will be randomly selected by Webvello on Friday, November 21st at 1pm PST.
             </p>
             <p className="text-sm text-secondary-600 italic">
               No purchase necessary to enter.
@@ -76,7 +80,7 @@ export default function RafflePage() {
 
             <div className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
               <p className="text-sm text-secondary-800">
-                <strong>Important:</strong> The free website from Webvello includes custom design and development for up to 10 pages. The winner is responsible for paying for their own <strong>domain name</strong> and <strong>website hosting</strong>. No purchase necessary to enter. One winner will be selected at random by Webvello within 3 days of entry.
+                <strong>Important:</strong> The free website from Webvello includes rapid development for up to 10 pages (completed in 1-2 weeks). You'll select your color palette, theme, and layout design. This is rapid development, not a full custom design process, but your site will look amazing and compete with any modern website. The winner is responsible for paying for their own <strong>domain name</strong> and <strong>website hosting</strong>. No purchase necessary to enter. One winner will be selected at random by Webvello on Friday, November 21st at 1pm PST.
               </p>
             </div>
           </div>
@@ -95,8 +99,8 @@ export default function RafflePage() {
               <li className="flex items-start">
                 <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-secondary-900 mb-1">Custom website design by Webvello</h3>
-                  <p className="text-secondary-600">Unique design tailored to your business, not a generic template.</p>
+                  <h3 className="font-semibold text-secondary-900 mb-1">Rapid development process</h3>
+                  <p className="text-secondary-600">Fast-track website development completed in 1-2 weeks. You'll select your color palette, theme, and layout design from our curated options. While this is rapid development (not a full custom design process), your site will look amazing and compete with any modern website design.</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -166,7 +170,7 @@ export default function RafflePage() {
                 2
               </div>
               <h3 className="font-semibold text-secondary-900 mb-2">Winner Selected</h3>
-              <p className="text-sm text-secondary-600">Webvello randomly selects 1 winner within 3 days of entry.</p>
+              <p className="text-sm text-secondary-600">Webvello randomly selects 1 winner on Friday, November 21st at 1pm PST.</p>
             </div>
             
             <div className="text-center">
@@ -182,7 +186,7 @@ export default function RafflePage() {
                 4
               </div>
               <h3 className="font-semibold text-secondary-900 mb-2">Website Built</h3>
-              <p className="text-sm text-secondary-600">Webvello designs and builds your custom website up to 10 pages.</p>
+              <p className="text-sm text-secondary-600">Webvello rapidly develops your website in 1-2 weeks. You'll select your color palette, theme, and layout, and we'll build your site up to 10 pages with a modern, professional design.</p>
             </div>
           </div>
         </div>
@@ -310,7 +314,7 @@ export default function RafflePage() {
                 How is the winner selected?
               </h3>
               <p className="text-secondary-700">
-                One winner will be selected at random by Webvello within 3 days of entry. The winner will be contacted via the email address provided in the entry form.
+                One winner will be selected at random by Webvello on Friday, November 21st at 1pm PST. The winner will be contacted via the email address provided in the entry form.
               </p>
             </div>
 
@@ -328,7 +332,7 @@ export default function RafflePage() {
                 How long does it take to build the website?
               </h3>
               <p className="text-secondary-700">
-                Once the winner is selected and the discovery call is completed, Webvello will work with you to design and build your custom website. The timeline typically ranges from 4-8 weeks depending on the complexity and your feedback during the design process.
+                This is a rapid development process, so your website will be completed within 1-2 weeks after the discovery call. During the discovery call, you'll select your preferred color palette, theme, and layout design from our curated options. While this is rapid development (not a full custom design process), your site will look amazing and compete with any modern website design. The fast timeline is possible because you'll be choosing from proven design templates and themes that we customize to match your brand.
               </p>
             </div>
           </div>
@@ -339,13 +343,13 @@ export default function RafflePage() {
       <section className="py-16 bg-primary-600">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Win Your Free Custom Website?
+            Ready to Win Your Free Website?
           </h2>
           <p className="text-xl text-white/90 mb-4 leading-relaxed">
-            Enter now for your chance to win a completely free custom website (up to 10 pages) from Webvello.
+            Enter now for your chance to win a completely free website (up to 10 pages) from Webvello. Rapid development in 1-2 weeks with modern, professional design.
           </p>
           <p className="text-lg text-white/80 mb-8">
-            Winner selected within 3 days. No purchase necessary.
+            Winner selected Friday, November 21st at 1pm PST. No purchase necessary.
           </p>
           <Button
             size="lg"

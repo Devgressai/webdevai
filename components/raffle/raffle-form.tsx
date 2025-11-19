@@ -6,6 +6,7 @@ import { CheckCircle } from 'lucide-react'
 
 export function RaffleForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [hasCurrentSite, setHasCurrentSite] = useState<string>('')
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null
     message: string
@@ -17,14 +18,15 @@ export function RaffleForm() {
     setSubmitStatus({ type: null, message: '' })
 
     const formData = new FormData(e.currentTarget)
+    const hasSite = formData.get('hasCurrentSite') === 'yes'
+    
     const data = {
-      fullName: formData.get('fullName'),
+      firstName: formData.get('firstName'),
       email: formData.get('email'),
       phone: formData.get('phone') || undefined,
-      businessName: formData.get('businessName') || undefined,
-      websiteUrl: formData.get('websiteUrl') || undefined,
-      needs: formData.get('needs') || undefined,
-      budget: formData.get('budget') || undefined,
+      hasCurrentSite: hasSite,
+      siteName: hasSite ? (formData.get('siteName') || undefined) : undefined,
+      websiteUrl: hasSite ? (formData.get('websiteUrl') || undefined) : undefined,
       consent: formData.get('consent') === 'on',
     }
 
@@ -46,6 +48,7 @@ export function RaffleForm() {
         })
         // Reset form
         e.currentTarget.reset()
+        setHasCurrentSite('')
       } else {
         setSubmitStatus({
           type: 'error',
@@ -78,17 +81,17 @@ export function RaffleForm() {
         )}
 
         <div>
-          <label htmlFor="fullName" className="block text-sm font-medium text-secondary-900 mb-2">
-            Full Name <span className="text-red-500">*</span>
+          <label htmlFor="firstName" className="block text-sm font-medium text-secondary-900 mb-2">
+            First Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            id="fullName"
-            name="fullName"
+            id="firstName"
+            name="firstName"
             required
             disabled={isSubmitting}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
-            placeholder="John Smith"
+            placeholder="John"
           />
         </div>
 
@@ -110,12 +113,13 @@ export function RaffleForm() {
 
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-secondary-900 mb-2">
-            Phone (Optional)
+            Phone Number <span className="text-red-500">*</span>
           </label>
           <input
             type="tel"
             id="phone"
             name="phone"
+            required
             disabled={isSubmitting}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
             placeholder="(555) 123-4567"
@@ -123,65 +127,72 @@ export function RaffleForm() {
         </div>
 
         <div>
-          <label htmlFor="businessName" className="block text-sm font-medium text-secondary-900 mb-2">
-            Business Name
+          <label className="block text-sm font-medium text-secondary-900 mb-3">
+            Do you currently have a website? <span className="text-red-500">*</span>
           </label>
-          <input
-            type="text"
-            id="businessName"
-            name="businessName"
-            disabled={isSubmitting}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
-            placeholder="Smith & Associates"
-          />
+          <div className="flex gap-6">
+            <label className="flex items-center">
+              <input
+                type="radio"
+                name="hasCurrentSite"
+                value="yes"
+                checked={hasCurrentSite === 'yes'}
+                onChange={(e) => setHasCurrentSite(e.target.value)}
+                disabled={isSubmitting}
+                required
+                className="h-4 w-4 text-primary-600 focus:ring-primary-600 border-gray-300 disabled:cursor-not-allowed"
+              />
+              <span className="ml-2 text-secondary-700">Yes</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="radio"
+                name="hasCurrentSite"
+                value="no"
+                checked={hasCurrentSite === 'no'}
+                onChange={(e) => setHasCurrentSite(e.target.value)}
+                disabled={isSubmitting}
+                required
+                className="h-4 w-4 text-primary-600 focus:ring-primary-600 border-gray-300 disabled:cursor-not-allowed"
+              />
+              <span className="ml-2 text-secondary-700">No</span>
+            </label>
+          </div>
         </div>
 
-        <div>
-          <label htmlFor="websiteUrl" className="block text-sm font-medium text-secondary-900 mb-2">
-            Current Website URL (if any)
-          </label>
-          <input
-            type="url"
-            id="websiteUrl"
-            name="websiteUrl"
-            disabled={isSubmitting}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
-            placeholder="https://www.example.com"
-          />
-          <p className="mt-1 text-sm text-secondary-600">Leave blank if you don't have a website yet.</p>
-        </div>
+        {hasCurrentSite === 'yes' && (
+          <>
+            <div>
+              <label htmlFor="siteName" className="block text-sm font-medium text-secondary-900 mb-2">
+                What is your site name? <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="siteName"
+                name="siteName"
+                required={hasCurrentSite === 'yes'}
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                placeholder="My Business Website"
+              />
+            </div>
 
-        <div>
-          <label htmlFor="needs" className="block text-sm font-medium text-secondary-900 mb-2">
-            What do you need help with most?
-          </label>
-          <textarea
-            id="needs"
-            name="needs"
-            rows={4}
-            disabled={isSubmitting}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
-            placeholder="Tell us about your business and what you're looking for in a website..."
-          />
-        </div>
-
-        <div>
-          <label htmlFor="budget" className="block text-sm font-medium text-secondary-900 mb-2">
-            Monthly marketing budget
-          </label>
-          <select
-            id="budget"
-            name="budget"
-            disabled={isSubmitting}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
-          >
-            <option value="">Select an option</option>
-            <option value="less-than-1000">Less than $1,000</option>
-            <option value="1000-3000">$1,000 - $3,000</option>
-            <option value="3000-5000">$3,000 - $5,000</option>
-            <option value="more-than-5000">More than $5,000</option>
-          </select>
-        </div>
+            <div>
+              <label htmlFor="websiteUrl" className="block text-sm font-medium text-secondary-900 mb-2">
+                What is your website URL? <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="url"
+                id="websiteUrl"
+                name="websiteUrl"
+                required={hasCurrentSite === 'yes'}
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                placeholder="https://www.example.com"
+              />
+            </div>
+          </>
+        )}
 
         <div className="flex items-start">
           <input
