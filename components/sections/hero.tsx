@@ -79,32 +79,38 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      {/* Background Elements - Google-inspired color scheme */}
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Clean white background like Google */}
-        <div className="absolute inset-0 bg-white"></div>
+        {/* Background Image */}
+        <Image
+          src="/images/hero-business-meeting.webp"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          quality={85}
+          sizes="100vw"
+        />
+        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70"></div>
         
         {/* Subtle professional overlays with Google colors */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#4285f4]/5 via-[#34a853]/5 to-[#ea4335]/5 opacity-60"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/10 to-[#34a853]/10 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-[#ea4335]/10 to-[#fbbc05]/10 blur-3xl"></div>
-        
-        {/* Subtle geometric shapes with Google colors */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-[#4285f4]/10 to-[#34a853]/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-[#ea4335]/10 to-[#fbbc05]/10 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-[#34a853]/10 to-[#4285f4]/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#4285f4]/10 via-[#34a853]/5 to-[#ea4335]/10 opacity-40"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/20 to-[#34a853]/20 blur-3xl opacity-30"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-[#ea4335]/20 to-[#fbbc05]/20 blur-3xl opacity-30"></div>
       </div>
 
-      <div className="hero-content">
+      <div className="hero-content relative z-10">
         <div className="mx-auto max-w-4xl px-4 -mt-16">
           <div className="text-center">
-            <p className="inline-block rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-700">
+            <p className="inline-block rounded-full bg-white/90 backdrop-blur-sm px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-lg">
               High-Impact Web & SEO Growth Programs
             </p>
-            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-              Transform your website into a lead generation machine with <span className="text-blue-700">Web Vello</span>
+            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-lg">
+              Transform your website into a lead generation machine with <span className="text-blue-300">Web Vello</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="mt-6 text-lg sm:text-xl text-white/90 max-w-3xl mx-auto drop-shadow-md">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
             </p>
           </div>
@@ -112,7 +118,7 @@ export function Hero() {
           <div className="mt-10 max-w-2xl mx-auto w-full">
             {step === 'url' && (
               <div className="space-y-6">
-                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-slate-50 rounded-2xl p-2 shadow-xl border border-slate-200">
+                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-white/95 backdrop-blur-sm rounded-2xl p-2 shadow-2xl border border-white/20">
                   <Input
                     type="text"
                     required
@@ -129,9 +135,9 @@ export function Hero() {
                     Get My Proposal
                   </Button>
                 </form>
-                <p className="text-center text-sm text-slate-600">
+                <p className="text-center text-sm text-white/90">
                   Don&apos;t have a site?{' '}
-                  <Link href="/contact" className="font-semibold text-[#4285f4] hover:text-[#ea4335] underline">
+                  <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline">
                     Click here
                   </Link>
                 </p>

@@ -162,8 +162,20 @@ export default function HomePage() {
         <Hero />
       
       {/* How We Work */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-team-collaboration.webp"
+            alt=""
+            fill
+            className="object-cover"
+            quality={75}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-white/85"></div>
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">How We Work</h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
@@ -239,8 +251,20 @@ export default function HomePage() {
 
       {/* Services Section */}
       <LazySection>
-      <section className="py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-analytics.webp"
+            alt=""
+            fill
+            className="object-cover"
+            quality={75}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gray-50/90"></div>
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
@@ -292,8 +316,20 @@ export default function HomePage() {
       </LazySection>
 
       {/* Unified Stats Section */}
-      <section className="py-24 bg-primary-600">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-night-orbit.webp"
+            alt=""
+            fill
+            className="object-cover"
+            quality={75}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-primary-600/85"></div>
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Results That Speak for Themselves
@@ -319,8 +355,20 @@ export default function HomePage() {
 
       {/* Why Choose Us Section - Focus on Benefits & Differentiators */}
       <LazySection>
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-office.webp"
+            alt=""
+            fill
+            className="object-cover"
+            quality={75}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-white/90"></div>
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
               Why Choose Web Vello
@@ -418,8 +466,20 @@ export default function HomePage() {
 
       {/* Google My Business Section */}
       <LazySection>
-        <section className="py-24 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="relative py-24 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/images/hero-data-analysis.webp"
+              alt=""
+              fill
+              className="object-cover"
+              quality={75}
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gray-50/90"></div>
+          </div>
+          <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
                 Find Us on Google
@@ -442,8 +502,20 @@ export default function HomePage() {
 
       {/* Final CTA Section */}
       <LazySection>
-      <section className="py-24 bg-primary-600">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-night-orbit.webp"
+            alt=""
+            fill
+            className="object-cover"
+            quality={75}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-primary-600/80"></div>
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Ready to Grow Your Business?
