@@ -91,8 +91,8 @@ export function Hero() {
           quality={85}
           sizes="100vw"
         />
-        {/* Subtle tint overlay to reduce busyness */}
-        <div className="absolute inset-0 bg-slate-900/20"></div>
+        {/* 20% tint overlay to reduce busyness */}
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       <div className="hero-content relative z-10">
@@ -129,17 +129,25 @@ export function Hero() {
                     Get My Proposal
                   </Button>
                 </form>
-                <div className="flex flex-col items-center gap-4">
-                  <Link href="/raffle" className="w-full sm:w-auto">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="lg"
-                      className="w-full sm:w-auto h-12 px-8 bg-white/10 hover:bg-white/20 border-2 border-white/30 text-white font-semibold shadow-lg backdrop-blur-sm transition-all duration-300"
-                    >
-                      <Gift className="mr-2 h-5 w-5" />
-                      Win a FREE Website
-                    </Button>
+                <div className="flex flex-col items-center gap-6">
+                  <Link href="/raffle" className="w-full group">
+                    <div className="relative w-full">
+                      {/* Animated background glow */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 animate-pulse"></div>
+                      <Button
+                        type="button"
+                        className="relative w-full h-20 px-8 text-xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 hover:from-yellow-300 hover:via-orange-400 hover:to-pink-400 text-white border-4 border-white/90 shadow-2xl hover:shadow-yellow-500/50 transform hover:scale-105 transition-all duration-300 rounded-2xl backdrop-blur-sm"
+                      >
+                        <div className="flex items-center justify-center gap-4">
+                          <Gift className="h-8 w-8 animate-bounce" />
+                          <div className="flex flex-col items-start">
+                            <span className="text-2xl sm:text-3xl leading-tight">🎉 Win a FREE Website! 🎉</span>
+                            <span className="text-sm sm:text-base font-normal opacity-90 mt-1">Up to 10 Pages - Enter Now</span>
+                          </div>
+                          <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
+                        </div>
+                      </Button>
+                    </div>
                   </Link>
                   <p className="text-center text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                     Don&apos;t have a site?{' '}
