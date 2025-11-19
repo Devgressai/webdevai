@@ -17,25 +17,37 @@ export async function POST(req: NextRequest) {
   const identifier = getClientIdentifier(req)
 
   try {
-    // CSRF protection - disabled for now to allow login
-    // Can be re-enabled with proper origin validation later
-    // The other security measures (rate limiting, secure sessions) still protect the endpoint
+    // CSRF protection - lenient for Vercel deployments
+    // Allow all Vercel domains and your main domain
     const origin = req.headers.get('origin')
     const referer = req.headers.get('referer')
+    const host = req.headers.get('host')
+    
+    // Log for debugging (remove in production if needed)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Login attempt:', { origin, referer, host })
+    }
     
     // Only block obviously malicious cross-origin requests
-    if (origin && 
-        !origin.includes('webvello.com') && 
-        !origin.includes('localhost') && 
-        !origin.includes('127.0.0.1') &&
-        !origin.includes('vercel.app') &&
-        !origin.includes('netlify.app')) {
-      logSecurityEvent('CSRF_ATTEMPT', identifier, { origin, referer })
-      return NextResponse.json(
-        { success: false, error: 'Invalid request origin' },
-        { status: 403 }
-      )
+    // Allow: webvello.com, localhost, any vercel.app domain, and requests without origin (same-origin)
+    if (origin) {
+      const isAllowed = 
+        origin.includes('webvello.com') ||
+        origin.includes('localhost') ||
+        origin.includes('127.0.0.1') ||
+        origin.includes('vercel.app') ||
+        origin.includes('vercel.com') ||
+        !origin // No origin header means same-origin (browsers omit for same-origin POST)
+      
+      if (!isAllowed) {
+        logSecurityEvent('CSRF_ATTEMPT', identifier, { origin, referer, host })
+        return NextResponse.json(
+          { success: false, error: 'Invalid request origin' },
+          { status: 403 }
+        )
+      }
     }
+    // If no origin header, it's a same-origin request (safe to allow)
 
     // Check rate limiting
     const rateLimitCheck = checkLoginRateLimit(identifier)
