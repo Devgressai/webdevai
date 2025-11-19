@@ -1,4 +1,3 @@
-
 import { Metadata } from 'next'
 import { Hero } from '../components/sections/hero'
 import { Button } from '../components/ui/button'
@@ -29,8 +28,13 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Web Vello - AI-Powered SEO & Web Development Services',
+        type: 'image/jpeg',
       },
     ],
+  },
+  icons: {
+    icon: 'https://webvello.com/favicon.ico',
+    apple: 'https://webvello.com/apple-touch-icon.png',
   },
 }
 
