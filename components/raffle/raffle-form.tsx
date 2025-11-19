@@ -31,6 +31,8 @@ export function RaffleForm() {
     }
 
     try {
+      console.log('🎫 Submitting raffle entry...', data)
+      
       const response = await fetch('/api/raffle/submit', {
         method: 'POST',
         headers: {
@@ -40,23 +42,27 @@ export function RaffleForm() {
         body: JSON.stringify(data),
       })
 
+      console.log('📡 Response status:', response.status, response.statusText)
+      console.log('📡 Response headers:', Object.fromEntries(response.headers.entries()))
+
       let result
+      const responseText = await response.text()
+      console.log('📄 Raw response:', responseText)
+      
       try {
-        result = await response.json()
+        result = JSON.parse(responseText)
+        console.log('✅ Parsed JSON:', result)
       } catch (parseError) {
-        // If response is not valid JSON, handle it
-        if (!response.ok) {
-          setSubmitStatus({
-            type: 'error',
-            message: `Failed to submit entry. Server returned ${response.status} ${response.statusText}. Please try again.`,
-          })
-          return
-        }
-        throw parseError
+        console.error('❌ JSON parse error:', parseError)
+        setSubmitStatus({
+          type: 'error',
+          message: `Server error: Could not parse response. Please try again.`,
+        })
+        return
       }
 
       if (!response.ok) {
-        // Handle non-200 responses
+        console.error('❌ Response not OK:', response.status, result)
         setSubmitStatus({
           type: 'error',
           message: result.error || result.message || 'Failed to submit entry. Please try again.',
@@ -65,6 +71,7 @@ export function RaffleForm() {
       }
 
       if (result.success) {
+        console.log('🎉 Success! Entry saved:', result.entryId)
         setSubmitStatus({
           type: 'success',
           message: result.message || 'Thank you for entering! We will contact the winner within 3 days.',
@@ -73,13 +80,14 @@ export function RaffleForm() {
         e.currentTarget.reset()
         setHasCurrentSite('')
       } else {
+        console.error('❌ Success = false:', result)
         setSubmitStatus({
           type: 'error',
           message: result.error || result.message || 'Failed to submit entry. Please try again.',
         })
       }
     } catch (error) {
-      console.error('Raffle form submission error:', error)
+      console.error('💥 Raffle form submission error:', error)
       setSubmitStatus({
         type: 'error',
         message: 'Failed to submit entry. Please check your connection and try again.',
