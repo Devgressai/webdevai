@@ -40,6 +40,7 @@ export function RaffleForm() {
           'Cache-Control': 'no-cache',
         },
         body: JSON.stringify(data),
+        redirect: 'follow', // Explicitly follow redirects
       })
 
       console.log('📡 Response status:', response.status, response.statusText)
