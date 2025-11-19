@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react"
+import { ArrowLeft, ArrowRight, CheckCircle, Gift } from "lucide-react"
 import Image from 'next/image'
 
 export function Hero() {
@@ -129,12 +129,25 @@ export function Hero() {
                     Get My Proposal
                   </Button>
                 </form>
-                <p className="text-center text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                  Don&apos;t have a site?{' '}
-                  <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                    Click here
+                <div className="flex flex-col items-center gap-4">
+                  <Link href="/raffle" className="w-full sm:w-auto">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="lg"
+                      className="w-full sm:w-auto h-12 px-8 bg-white/10 hover:bg-white/20 border-2 border-white/30 text-white font-semibold shadow-lg backdrop-blur-sm transition-all duration-300"
+                    >
+                      <Gift className="mr-2 h-5 w-5" />
+                      Win a FREE Website
+                    </Button>
                   </Link>
-                </p>
+                  <p className="text-center text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                    Don&apos;t have a site?{' '}
+                    <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                      Click here
+                    </Link>
+                  </p>
+                </div>
               </div>
             )}
 
