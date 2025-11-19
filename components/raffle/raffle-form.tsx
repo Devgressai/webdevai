@@ -77,7 +77,7 @@ export function RaffleForm() {
         console.log('🎉 Success! Entry saved:', result.entryId)
         setSubmitStatus({
           type: 'success',
-          message: result.message || 'Thank you for entering! We will contact the winner within 3 days.',
+          message: 'Thank you for entering! 🎉 The winner will be announced on this page on Friday, November 21st at 2:30 PM PST. Good luck!',
         })
         // Reset form using stored reference
         form.reset()
@@ -240,6 +240,20 @@ export function RaffleForm() {
           />
           <label htmlFor="consent" className="ml-3 text-sm text-secondary-700">
             I agree to receive emails and/or texts from Webvello about this raffle and website/marketing services. I can unsubscribe at any time. <span className="text-red-500">*</span>
+          </label>
+        </div>
+
+        <div className="flex items-start">
+          <input
+            type="checkbox"
+            id="winnerAcknowledgment"
+            name="winnerAcknowledgment"
+            required
+            disabled={isSubmitting}
+            className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-600 border-gray-300 rounded disabled:cursor-not-allowed"
+          />
+          <label htmlFor="winnerAcknowledgment" className="ml-3 text-sm text-secondary-700">
+            I understand and agree that the winner will be publicly announced on this page on Friday, November 21st at 2:30 PM PST. <span className="text-red-500">*</span>
           </label>
         </div>
 
