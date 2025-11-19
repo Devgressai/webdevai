@@ -79,7 +79,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image - No overlay */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Background Image */}
         <Image
@@ -91,14 +91,6 @@ export function Hero() {
           quality={85}
           sizes="100vw"
         />
-        
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70"></div>
-        
-        {/* Subtle professional overlays with Google colors */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#4285f4]/10 via-[#34a853]/5 to-[#ea4335]/10 opacity-40"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-[#4285f4]/20 to-[#34a853]/20 blur-3xl opacity-30"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-[#ea4335]/20 to-[#fbbc05]/20 blur-3xl opacity-30"></div>
       </div>
 
       <div className="hero-content relative z-10">
@@ -107,10 +99,10 @@ export function Hero() {
             <p className="inline-block rounded-full bg-white/90 backdrop-blur-sm px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-lg">
               High-Impact Web & SEO Growth Programs
             </p>
-            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-lg">
-              Transform your website into a lead generation machine with <span className="text-blue-300">Web Vello</span>
+            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              Transform your website into a lead generation machine with <span className="text-blue-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Web Vello</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white/90 max-w-3xl mx-auto drop-shadow-md">
+            <p className="mt-6 text-lg sm:text-xl text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
             </p>
           </div>
@@ -135,9 +127,9 @@ export function Hero() {
                     Get My Proposal
                   </Button>
                 </form>
-                <p className="text-center text-sm text-white/90">
+                <p className="text-center text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                   Don&apos;t have a site?{' '}
-                  <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline">
+                  <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                     Click here
                   </Link>
                 </p>
