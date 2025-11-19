@@ -22,8 +22,7 @@ async function main() {
   }
 
   let buffer
-  if (/^\
-    ?image.pnghttps?:\/\//i.test(input)) {
+  if (/^https?:\/\//i.test(input)) {
     console.log('Downloading:', input)
     const res = await fetch(input)
     if (!res.ok) {

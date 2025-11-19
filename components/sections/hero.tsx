@@ -83,7 +83,7 @@ export function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/images/hero-business-meeting.webp"
+          src="/images/hero-happy-bright.webp"
           alt=""
           fill
           priority
