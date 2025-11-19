@@ -68,9 +68,21 @@ export function getLeadsByType(type: LeadType): Lead[] {
 
 // Save a raffle entry
 export function saveRaffleEntry(entry: Omit<RaffleEntry, 'id' | 'type' | 'submittedAt'>): RaffleEntry {
-  ensureDataDir()
+  try {
+    ensureDataDir()
+  } catch (error) {
+    console.error('Error creating data directory:', error)
+    throw new Error('Failed to create data directory. Please check file permissions.')
+  }
   
-  const leads = getAllLeads()
+  let leads: Lead[]
+  try {
+    leads = getAllLeads()
+  } catch (error) {
+    console.error('Error reading existing leads:', error)
+    leads = [] // Start with empty array if read fails
+  }
+  
   const newEntry: RaffleEntry = {
     ...entry,
     type: 'raffle',
@@ -82,9 +94,14 @@ export function saveRaffleEntry(entry: Omit<RaffleEntry, 'id' | 'type' | 'submit
   
   try {
     fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2))
-  } catch (error) {
-    console.error('Error saving raffle entry:', error)
-    throw new Error('Failed to save entry')
+  } catch (error: any) {
+    console.error('Error saving raffle entry to file:', error)
+    const errorMessage = error.code === 'EACCES' 
+      ? 'Permission denied. Please check file permissions.'
+      : error.code === 'ENOSPC'
+      ? 'No space left on device.'
+      : `Failed to save entry: ${error.message || 'Unknown error'}`
+    throw new Error(errorMessage)
   }
   
   return newEntry

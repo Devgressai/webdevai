@@ -57,26 +57,44 @@ export async function POST(req: NextRequest) {
                      'unknown'
 
     // Save entry
-    const entry = saveRaffleEntry({
-      firstName,
-      email,
-      phone,
-      hasCurrentSite,
-      siteName: hasCurrentSite && siteName ? siteName : undefined,
-      websiteUrl: hasCurrentSite && websiteUrl ? websiteUrl : undefined,
-      consent,
-      ipAddress,
-    })
+    try {
+      const entry = saveRaffleEntry({
+        firstName,
+        email,
+        phone,
+        hasCurrentSite,
+        siteName: hasCurrentSite && siteName ? siteName : undefined,
+        websiteUrl: hasCurrentSite && websiteUrl ? websiteUrl : undefined,
+        consent,
+        ipAddress,
+      })
 
-    return NextResponse.json({
-      success: true,
-      message: 'Thank you for entering! We will contact the winner within 3 days.',
-      entryId: entry.id,
-    })
+      return NextResponse.json({
+        success: true,
+        message: 'Thank you for entering! We will contact the winner within 3 days.',
+        entryId: entry.id,
+      })
+    } catch (saveError: any) {
+      console.error('Error saving raffle entry:', saveError)
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: saveError.message || 'Failed to save entry. Please try again.' 
+        },
+        { status: 500 }
+      )
+    }
   } catch (error: any) {
     console.error('Error submitting raffle entry:', error)
+    // Handle JSON parsing errors
+    if (error instanceof SyntaxError) {
+      return NextResponse.json(
+        { success: false, error: 'Invalid request data. Please check your form and try again.' },
+        { status: 400 }
+      )
+    }
     return NextResponse.json(
-      { success: false, error: 'Failed to submit entry. Please try again.' },
+      { success: false, error: error.message || 'Failed to submit entry. Please try again.' },
       { status: 500 }
     )
   }

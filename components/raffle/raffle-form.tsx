@@ -39,7 +39,29 @@ export function RaffleForm() {
         body: JSON.stringify(data),
       })
 
-      const result = await response.json()
+      let result
+      try {
+        result = await response.json()
+      } catch (parseError) {
+        // If response is not valid JSON, handle it
+        if (!response.ok) {
+          setSubmitStatus({
+            type: 'error',
+            message: `Failed to submit entry. Server returned ${response.status} ${response.statusText}. Please try again.`,
+          })
+          return
+        }
+        throw parseError
+      }
+
+      if (!response.ok) {
+        // Handle non-200 responses
+        setSubmitStatus({
+          type: 'error',
+          message: result.error || result.message || 'Failed to submit entry. Please try again.',
+        })
+        return
+      }
 
       if (result.success) {
         setSubmitStatus({
@@ -52,10 +74,11 @@ export function RaffleForm() {
       } else {
         setSubmitStatus({
           type: 'error',
-          message: result.error || 'Something went wrong. Please try again.',
+          message: result.error || result.message || 'Failed to submit entry. Please try again.',
         })
       }
     } catch (error) {
+      console.error('Raffle form submission error:', error)
       setSubmitStatus({
         type: 'error',
         message: 'Failed to submit entry. Please check your connection and try again.',

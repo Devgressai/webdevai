@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-import { Trash2, Download, LogOut, RefreshCw } from 'lucide-react'
+import { Trash2, Download, LogOut, RefreshCw, CheckSquare, Square } from 'lucide-react'
 
 type LeadType = 'all' | 'raffle' | 'contact'
 
@@ -46,6 +46,8 @@ export default function AdminDashboard() {
   const [isExporting, setIsExporting] = useState(false)
   const [error, setError] = useState('')
   const [stats, setStats] = useState({ total: 0, raffle: 0, contact: 0 })
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
     checkAuthAndLoadLeads()
@@ -110,6 +112,7 @@ export default function AdminDashboard() {
 
   const handleFilterChange = (type: LeadType) => {
     setFilterType(type)
+    setSelectedIds(new Set()) // Clear selection when filter changes
     loadLeads(type)
   }
 
@@ -127,6 +130,11 @@ export default function AdminDashboard() {
 
       if (result.success) {
         setLeads(leads.filter(lead => lead.id !== id))
+        setSelectedIds(prev => {
+          const next = new Set(prev)
+          next.delete(id)
+          return next
+        })
         loadLeads(filterType) // Reload to update stats
       } else {
         if (response.status === 401) {
@@ -138,6 +146,58 @@ export default function AdminDashboard() {
     } catch (error) {
       alert('Failed to delete lead. Please try again.')
     }
+  }
+
+  const handleBulkDelete = async () => {
+    if (selectedIds.size === 0) return
+
+    const count = selectedIds.size
+    if (!confirm(`Are you sure you want to delete ${count} ${count === 1 ? 'entry' : 'entries'}? This action cannot be undone.`)) {
+      return
+    }
+
+    setIsDeleting(true)
+    setError('')
+
+    try {
+      const deletePromises = Array.from(selectedIds).map(id =>
+        fetch(`/api/raffle/entries?id=${id}`, { method: 'DELETE' })
+      )
+
+      const results = await Promise.all(deletePromises)
+      const failed = results.filter(r => !r.ok)
+
+      if (failed.length > 0) {
+        setError(`Failed to delete ${failed.length} ${failed.length === 1 ? 'entry' : 'entries'}`)
+      } else {
+        setSelectedIds(new Set())
+        await loadLeads(filterType) // Reload to update stats
+      }
+    } catch (error) {
+      setError('Failed to delete entries. Please try again.')
+    } finally {
+      setIsDeleting(false)
+    }
+  }
+
+  const handleSelectAll = () => {
+    if (selectedIds.size === filteredLeads.length) {
+      setSelectedIds(new Set())
+    } else {
+      setSelectedIds(new Set(filteredLeads.map(lead => lead.id)))
+    }
+  }
+
+  const handleToggleSelect = (id: string) => {
+    setSelectedIds(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) {
+        next.delete(id)
+      } else {
+        next.add(id)
+      }
+      return next
+    })
   }
 
   const handleExport = async (format: 'csv' | 'json', type?: LeadType) => {
@@ -219,6 +279,18 @@ export default function AdminDashboard() {
               </p>
             </div>
             <div className="flex items-center gap-3">
+              {selectedIds.size > 0 && (
+                <Button
+                  onClick={handleBulkDelete}
+                  variant="outline"
+                  size="sm"
+                  disabled={isDeleting}
+                  className="flex items-center gap-2 text-red-600 hover:text-red-700 hover:bg-red-50 border-red-300"
+                >
+                  <Trash2 className="w-4 h-4" />
+                  Delete Selected ({selectedIds.size})
+                </Button>
+              )}
               <Button
                 onClick={() => loadLeads(filterType)}
                 variant="outline"
@@ -328,13 +400,62 @@ export default function AdminDashboard() {
           </div>
         ) : (
           <div className="space-y-4">
+            {/* Select All Bar */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex items-center justify-between">
+              <button
+                onClick={handleSelectAll}
+                className="flex items-center gap-2 text-sm font-medium text-secondary-700 hover:text-secondary-900"
+              >
+                {selectedIds.size === filteredLeads.length ? (
+                  <CheckSquare className="w-5 h-5 text-primary-600" />
+                ) : (
+                  <Square className="w-5 h-5 text-secondary-400" />
+                )}
+                <span>
+                  {selectedIds.size === filteredLeads.length
+                    ? 'Deselect All'
+                    : `Select All (${filteredLeads.length} ${filteredLeads.length === 1 ? 'entry' : 'entries'})`}
+                </span>
+              </button>
+              {selectedIds.size > 0 && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-secondary-600">
+                    {selectedIds.size} {selectedIds.size === 1 ? 'entry' : 'entries'} selected
+                  </span>
+                  <Button
+                    onClick={handleBulkDelete}
+                    variant="outline"
+                    size="sm"
+                    disabled={isDeleting}
+                    className="flex items-center gap-2 text-red-600 hover:text-red-700 hover:bg-red-50 border-red-300"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                    Delete Selected
+                  </Button>
+                </div>
+              )}
+            </div>
+
             {filteredLeads.map((lead) => (
               <div
                 key={lead.id}
-                className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+                className={`bg-white rounded-xl shadow-sm border p-6 ${
+                  selectedIds.has(lead.id) ? 'border-primary-500 bg-primary-50' : 'border-gray-200'
+                }`}
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex-1">
+                  <div className="flex items-start gap-4 flex-1">
+                    <button
+                      onClick={() => handleToggleSelect(lead.id)}
+                      className="mt-1"
+                    >
+                      {selectedIds.has(lead.id) ? (
+                        <CheckSquare className="w-5 h-5 text-primary-600" />
+                      ) : (
+                        <Square className="w-5 h-5 text-secondary-400 hover:text-secondary-600" />
+                      )}
+                    </button>
+                    <div className="flex-1">
                     <div className="flex items-center gap-4 mb-3">
                       <h3 className="text-lg font-semibold text-secondary-900">
                         {lead.type === 'raffle' ? lead.firstName : lead.name}
@@ -434,6 +555,7 @@ export default function AdminDashboard() {
                       {lead.type === 'raffle' && (
                         <span>Consent: {lead.consent ? 'Yes' : 'No'}</span>
                       )}
+                    </div>
                     </div>
                   </div>
 
