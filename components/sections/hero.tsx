@@ -95,6 +95,28 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
+      {/* Side Raffle Link - Large and Bold */}
+      <Link 
+        href="/raffle" 
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 hidden lg:block group"
+      >
+        <div className="relative">
+          {/* Background glow */}
+          <div className="absolute inset-0 bg-blue-600 rounded-l-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
+          <div className="relative bg-white/95 backdrop-blur-sm border-4 border-blue-600 rounded-l-3xl px-12 py-16 shadow-2xl transform group-hover:translate-x-2 transition-transform">
+            <div className="flex flex-col items-center gap-4 text-center">
+              <Gift className="h-24 w-24 text-blue-600 animate-bounce" />
+              <div className="flex flex-col items-center gap-2">
+                <span className="text-6xl font-black text-blue-600 leading-tight">WIN A</span>
+                <span className="text-7xl font-black text-blue-600 leading-tight">FREE</span>
+                <span className="text-6xl font-black text-blue-600 leading-tight">WEBSITE</span>
+              </div>
+              <ArrowRight className="h-12 w-12 text-blue-600 group-hover:translate-x-2 transition-transform" />
+            </div>
+          </div>
+        </div>
+      </Link>
+
       <div className="hero-content relative z-10">
         <div className="mx-auto max-w-4xl px-4 -mt-16">
           <div className="text-center">
@@ -129,33 +151,28 @@ export function Hero() {
                     Get My Proposal
                   </Button>
                 </form>
-                <div className="flex flex-col items-center gap-6">
-                  <Link href="/raffle" className="w-full group">
-                    <div className="relative w-full">
-                      {/* Animated background glow */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 animate-pulse"></div>
-                      <Button
-                        type="button"
-                        className="relative w-full h-20 px-8 text-xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 hover:from-yellow-300 hover:via-orange-400 hover:to-pink-400 text-white border-4 border-white/90 shadow-2xl hover:shadow-yellow-500/50 transform hover:scale-105 transition-all duration-300 rounded-2xl backdrop-blur-sm"
-                      >
-                        <div className="flex items-center justify-center gap-4">
-                          <Gift className="h-8 w-8 animate-bounce" />
-                          <div className="flex flex-col items-start">
-                            <span className="text-2xl sm:text-3xl leading-tight">🎉 Win a FREE Website! 🎉</span>
-                            <span className="text-sm sm:text-base font-normal opacity-90 mt-1">Up to 10 Pages - Enter Now</span>
-                          </div>
-                          <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
-                        </div>
-                      </Button>
-                    </div>
+                <p className="text-center text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                  Don&apos;t have a site?{' '}
+                  <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                    Click here
                   </Link>
-                  <p className="text-center text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                    Don&apos;t have a site?{' '}
-                    <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                      Click here
-                    </Link>
-                  </p>
-                </div>
+                </p>
+                
+                {/* Mobile Raffle Link */}
+                <Link href="/raffle" className="block lg:hidden mt-8 group">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-blue-600 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    <div className="relative bg-white/95 backdrop-blur-sm border-4 border-blue-600 rounded-2xl px-8 py-12 shadow-2xl text-center">
+                      <Gift className="h-16 w-16 text-blue-600 animate-bounce mx-auto mb-4" />
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-4xl font-black text-blue-600 leading-tight">WIN A</span>
+                        <span className="text-5xl font-black text-blue-600 leading-tight">FREE</span>
+                        <span className="text-4xl font-black text-blue-600 leading-tight">WEBSITE</span>
+                      </div>
+                      <ArrowRight className="h-8 w-8 text-blue-600 mx-auto mt-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
               </div>
             )}
 
