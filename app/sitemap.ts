@@ -6,6 +6,9 @@ import { getBlogPosts } from '../lib/get-blog-posts'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.webvello.com'
   
+  // NOTE: Admin routes (/admin/*) are explicitly excluded from sitemap
+  // They are also blocked in robots.txt and have noindex meta tags
+  
   // Core pages - high priority, high traffic potential
   const corePages = [
     '', // Homepage

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { saveContactLead } from '@/lib/lead-storage'
 
 type ContactPayload = {
   name: string
@@ -31,6 +32,29 @@ export async function POST(req: NextRequest) {
 
     if (!name || !email || !isValidEmail(email)) {
       return NextResponse.json({ ok: false, error: 'Invalid name or email' }, { status: 400 })
+    }
+
+    // Get IP address
+    const ipAddress = req.headers.get('x-forwarded-for') || 
+                     req.headers.get('x-real-ip') || 
+                     'unknown'
+
+    // Save contact lead to storage
+    try {
+      saveContactLead({
+        name,
+        email,
+        company: company || undefined,
+        phone: phone || undefined,
+        service: service || undefined,
+        budget: budget || undefined,
+        urgency: urgency || undefined,
+        message: message || undefined,
+        ipAddress,
+      })
+    } catch (error) {
+      console.error('Error saving contact lead:', error)
+      // Continue with email even if storage fails
     }
 
     const TO_EMAIL = process.env.CONTACT_TO_EMAIL
