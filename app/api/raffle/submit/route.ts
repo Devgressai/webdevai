@@ -97,9 +97,22 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // Send email notification
+    // Entry saved successfully! Now try to send email notification (but don't fail if email fails)
+    const successResponse = {
+      success: true,
+      message: 'Thank you for entering! We will contact the winner within 3 days.',
+      entryId,
+    }
+
+    // Try to send email notification in the background (non-blocking)
     const TO_EMAIL = process.env.CONTACT_TO_EMAIL || process.env.EMAIL_TO
     const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || process.env.EMAIL_FROM || 'no-reply@webvello.com'
+
+    if (!TO_EMAIL) {
+      console.warn('⚠️  CONTACT_TO_EMAIL or EMAIL_TO not set. Entry captured but email not sent.')
+      return NextResponse.json(successResponse)
+    }
+
     const subject = `🎉 New Raffle Entry: ${firstName}`
     const html = `
       <h2>🎉 New Raffle Entry!</h2>
@@ -116,19 +129,11 @@ export async function POST(req: NextRequest) {
       <p><small>Entry ID: ${entryId}</small></p>
     `
 
-    if (!TO_EMAIL) {
-      console.warn('⚠️  CONTACT_TO_EMAIL or EMAIL_TO not set. Entry captured but email not sent.')
-      return NextResponse.json({
-        success: true,
-        message: 'Thank you for entering! We will contact the winner within 3 days.',
-        entryId,
-      })
-    }
-
-    // Try SMTP first if credentials exist
-    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env
-    if (SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS) {
-      try {
+    // Try to send email but don't block the response
+    try {
+      // Try SMTP first if credentials exist
+      const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env
+      if (SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS) {
         const transporter = nodemailer.createTransport({
           host: SMTP_HOST,
           port: Number(SMTP_PORT),
@@ -143,61 +148,42 @@ export async function POST(req: NextRequest) {
           html,
           replyTo: email,
         })
+        console.log('✅ Email sent via SMTP')
+      } 
+      // Try Resend if configured
+      else {
+        const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.EMAIL_API_KEY
+        if (RESEND_API_KEY) {
+          const resp = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${RESEND_API_KEY}`,
+            },
+            body: JSON.stringify({
+              from: FROM_EMAIL,
+              to: TO_EMAIL,
+              subject,
+              html,
+              reply_to: email,
+            }),
+          })
 
-        return NextResponse.json({
-          success: true,
-          message: 'Thank you for entering! We will contact the winner within 3 days.',
-          entryId,
-        })
-      } catch (smtpErr) {
-        console.error('SMTP error, trying Resend:', smtpErr)
-        // Fall through to Resend
-      }
-    }
-
-    // Fallback to Resend if configured
-    const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.EMAIL_API_KEY
-    if (RESEND_API_KEY) {
-      try {
-        const resp = await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${RESEND_API_KEY}`,
-          },
-          body: JSON.stringify({
-            from: FROM_EMAIL,
-            to: TO_EMAIL,
-            subject,
-            html,
-            reply_to: email,
-          }),
-        })
-
-        if (!resp.ok) {
-          const errorText = await resp.text()
-          console.error('Resend error:', errorText)
-          throw new Error(`Resend API error: ${resp.status}`)
+          if (resp.ok) {
+            console.log('✅ Email sent via Resend')
+          } else {
+            const errorText = await resp.text()
+            console.error('⚠️  Resend error:', errorText)
+          }
         }
-
-        return NextResponse.json({
-          success: true,
-          message: 'Thank you for entering! We will contact the winner within 3 days.',
-          entryId,
-        })
-      } catch (resendErr) {
-        console.error('Resend error:', resendErr)
-        // Continue - at least we tried
       }
+    } catch (emailError) {
+      // Email failed but entry was saved - that's okay
+      console.error('⚠️  Email notification failed:', emailError)
     }
 
-    // If we get here, no email was sent but entry was received
-    console.warn('⚠️  Email not sent (no provider configured) but entry was captured')
-    return NextResponse.json({
-      success: true,
-      message: 'Thank you for entering! We will contact the winner within 3 days.',
-      entryId,
-    })
+    // Always return success since entry was saved
+    return NextResponse.json(successResponse)
 
   } catch (error: any) {
     console.error('Error submitting raffle entry:', error)
