@@ -134,17 +134,56 @@ export function isSameOrigin(request: NextRequest): boolean {
   const referer = request.headers.get('referer')
   const host = request.headers.get('host')
 
+  // If no origin or referer, check if it's a same-origin request
+  // (browsers may omit origin for same-origin POST requests)
   if (!origin && !referer) {
-    // Direct requests without origin/referer are suspicious
-    return false
+    // Allow if it's a same-origin request (no origin header means same-origin in browsers)
+    // This is safe because browsers automatically include origin for cross-origin requests
+    return true
   }
 
   // In production, verify origin matches your domain
   if (process.env.NODE_ENV === 'production') {
     const allowedOrigin = process.env.NEXT_PUBLIC_BASE_URL || 'https://webvello.com'
-    if (origin && !origin.startsWith(allowedOrigin)) {
-      return false
+    
+    // Check origin if present
+    if (origin) {
+      // Remove protocol for comparison
+      const originHost = origin.replace(/^https?:\/\//, '').split('/')[0]
+      const allowedHost = allowedOrigin.replace(/^https?:\/\//, '').split('/')[0]
+      
+      if (originHost !== allowedHost) {
+        return false
+      }
     }
+    
+    // Check referer if origin not present
+    if (!origin && referer) {
+      try {
+        const refererUrl = new URL(referer)
+        const allowedHost = new URL(allowedOrigin).hostname
+        
+        if (refererUrl.hostname !== allowedHost) {
+          return false
+        }
+      } catch {
+        // Invalid referer URL
+        return false
+      }
+    }
+  }
+
+  // In development, be more lenient
+  if (process.env.NODE_ENV === 'development') {
+    // Allow localhost and same-origin requests
+    if (origin && (origin.includes('localhost') || origin.includes('127.0.0.1'))) {
+      return true
+    }
+    if (referer && (referer.includes('localhost') || referer.includes('127.0.0.1'))) {
+      return true
+    }
+    // If no origin/referer, it's likely same-origin (browsers omit for same-origin)
+    return true
   }
 
   return true
