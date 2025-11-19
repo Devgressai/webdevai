@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { saveRaffleEntry } from '@/lib/lead-storage'
+import { saveRaffleEntryToSanity, checkEmailExists } from '@/lib/sanity-raffle'
+import nodemailer from 'nodemailer'
 
 export const dynamic = 'force-dynamic'
 
@@ -56,9 +57,24 @@ export async function POST(req: NextRequest) {
                      req.headers.get('x-real-ip') || 
                      'unknown'
 
-    // Save entry
+    // Check if email already exists
     try {
-      const entry = saveRaffleEntry({
+      const emailExists = await checkEmailExists(email)
+      if (emailExists) {
+        return NextResponse.json(
+          { success: false, error: 'This email has already been entered in the raffle.' },
+          { status: 400 }
+        )
+      }
+    } catch (checkError) {
+      console.error('Error checking email existence:', checkError)
+      // Continue anyway - better to allow duplicate than block legitimate entry
+    }
+
+    // Save entry to Sanity
+    let entryId = `raffle-${Date.now()}`
+    try {
+      const entry = await saveRaffleEntryToSanity({
         firstName,
         email,
         phone,
@@ -68,22 +84,121 @@ export async function POST(req: NextRequest) {
         consent,
         ipAddress,
       })
-
-      return NextResponse.json({
-        success: true,
-        message: 'Thank you for entering! We will contact the winner within 3 days.',
-        entryId: entry.id,
-      })
+      entryId = entry._id
+      console.log('✅ Raffle entry saved to Sanity:', entryId)
     } catch (saveError: any) {
-      console.error('Error saving raffle entry:', saveError)
+      console.error('❌ Failed to save to Sanity:', saveError)
       return NextResponse.json(
         { 
           success: false, 
-          error: saveError.message || 'Failed to save entry. Please try again.' 
+          error: 'Failed to save entry. Please try again or contact support.' 
         },
         { status: 500 }
       )
     }
+
+    // Send email notification
+    const TO_EMAIL = process.env.CONTACT_TO_EMAIL || process.env.EMAIL_TO
+    const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || process.env.EMAIL_FROM || 'no-reply@webvello.com'
+    const subject = `🎉 New Raffle Entry: ${firstName}`
+    const html = `
+      <h2>🎉 New Raffle Entry!</h2>
+      <p><strong>First Name:</strong> ${firstName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Has Current Website:</strong> ${hasCurrentSite ? 'Yes' : 'No'}</p>
+      ${hasCurrentSite && siteName ? `<p><strong>Site Name:</strong> ${siteName}</p>` : ''}
+      ${hasCurrentSite && websiteUrl ? `<p><strong>Website URL:</strong> <a href="${websiteUrl}">${websiteUrl}</a></p>` : ''}
+      <p><strong>Consent:</strong> ${consent ? 'Yes' : 'No'}</p>
+      <p><strong>IP Address:</strong> ${ipAddress}</p>
+      <hr />
+      <p>Submitted at ${new Date().toISOString()}</p>
+      <p><small>Entry ID: ${entryId}</small></p>
+    `
+
+    if (!TO_EMAIL) {
+      console.warn('⚠️  CONTACT_TO_EMAIL or EMAIL_TO not set. Entry captured but email not sent.')
+      return NextResponse.json({
+        success: true,
+        message: 'Thank you for entering! We will contact the winner within 3 days.',
+        entryId,
+      })
+    }
+
+    // Try SMTP first if credentials exist
+    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env
+    if (SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: SMTP_HOST,
+          port: Number(SMTP_PORT),
+          secure: Number(SMTP_PORT) === 465,
+          auth: { user: SMTP_USER, pass: SMTP_PASS },
+        })
+
+        await transporter.sendMail({
+          from: FROM_EMAIL,
+          to: TO_EMAIL,
+          subject,
+          html,
+          replyTo: email,
+        })
+
+        return NextResponse.json({
+          success: true,
+          message: 'Thank you for entering! We will contact the winner within 3 days.',
+          entryId,
+        })
+      } catch (smtpErr) {
+        console.error('SMTP error, trying Resend:', smtpErr)
+        // Fall through to Resend
+      }
+    }
+
+    // Fallback to Resend if configured
+    const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.EMAIL_API_KEY
+    if (RESEND_API_KEY) {
+      try {
+        const resp = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${RESEND_API_KEY}`,
+          },
+          body: JSON.stringify({
+            from: FROM_EMAIL,
+            to: TO_EMAIL,
+            subject,
+            html,
+            reply_to: email,
+          }),
+        })
+
+        if (!resp.ok) {
+          const errorText = await resp.text()
+          console.error('Resend error:', errorText)
+          throw new Error(`Resend API error: ${resp.status}`)
+        }
+
+        return NextResponse.json({
+          success: true,
+          message: 'Thank you for entering! We will contact the winner within 3 days.',
+          entryId,
+        })
+      } catch (resendErr) {
+        console.error('Resend error:', resendErr)
+        // Continue - at least we tried
+      }
+    }
+
+    // If we get here, no email was sent but entry was received
+    console.warn('⚠️  Email not sent (no provider configured) but entry was captured')
+    return NextResponse.json({
+      success: true,
+      message: 'Thank you for entering! We will contact the winner within 3 days.',
+      entryId,
+    })
+
   } catch (error: any) {
     console.error('Error submitting raffle entry:', error)
     // Handle JSON parsing errors
@@ -94,7 +209,7 @@ export async function POST(req: NextRequest) {
       )
     }
     return NextResponse.json(
-      { success: false, error: error.message || 'Failed to submit entry. Please try again.' },
+      { success: false, error: 'Failed to submit entry. Please try again.' },
       { status: 500 }
     )
   }

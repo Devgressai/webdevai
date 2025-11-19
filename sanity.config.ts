@@ -62,6 +62,31 @@ export default defineConfig({
             S.documentTypeListItem('service').title('Services'),
             S.documentTypeListItem('caseStudy').title('Case Studies'),
             S.documentTypeListItem('blogPost').title('Blog Posts'),
+            S.divider(),
+            S.listItem()
+              .title('🎉 Raffle Entries')
+              .child(
+                S.list()
+                  .title('Raffle Entries')
+                  .items([
+                    S.documentTypeListItem('raffleEntry').title('All Entries'),
+                    S.listItem()
+                      .title('New Entries')
+                      .child(
+                        S.documentList().title('New Entries').filter('_type == "raffleEntry" && status == "new"')
+                      ),
+                    S.listItem()
+                      .title('Winners')
+                      .child(
+                        S.documentList().title('Winners').filter('_type == "raffleEntry" && status == "winner"')
+                      ),
+                    S.listItem()
+                      .title('Contacted')
+                      .child(
+                        S.documentList().title('Contacted').filter('_type == "raffleEntry" && status == "contacted"')
+                      ),
+                  ])
+              ),
           ]),
     }),
     visionTool(),

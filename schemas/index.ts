@@ -7,6 +7,7 @@ import { page } from './page'
 import { city } from './city'
 import { industry } from './industry'
 import { cisPage } from './cisPage'
+import raffleEntry from './raffleEntry'
 
 export const schemaTypes = [
   service,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   city,
   industry,
   cisPage,
+  raffleEntry,
 ]
