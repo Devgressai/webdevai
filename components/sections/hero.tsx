@@ -79,7 +79,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      {/* Background Image - No overlay */}
+      {/* Background Image with subtle tint */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Background Image */}
         <Image
@@ -91,6 +91,8 @@ export function Hero() {
           quality={85}
           sizes="100vw"
         />
+        {/* Subtle tint overlay to reduce busyness */}
+        <div className="absolute inset-0 bg-slate-900/20"></div>
       </div>
 
       <div className="hero-content relative z-10">
