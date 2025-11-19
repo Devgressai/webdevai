@@ -18,12 +18,22 @@ export async function POST(req: NextRequest) {
 
   try {
     // Check origin (basic CSRF protection)
-    if (!isSameOrigin(req)) {
-      logSecurityEvent('CSRF_ATTEMPT', identifier)
-      return NextResponse.json(
-        { success: false, error: 'Invalid request origin' },
-        { status: 403 }
-      )
+    // Temporarily more lenient - only block clearly malicious requests
+    const originCheck = isSameOrigin(req)
+    if (!originCheck && process.env.NODE_ENV === 'production') {
+      // Only enforce strict origin check in production
+      // In development/preview, be more lenient
+      const origin = req.headers.get('origin')
+      const referer = req.headers.get('referer')
+      
+      // Only block if there's a clear cross-origin attempt
+      if (origin && !origin.includes('webvello.com') && !origin.includes('localhost')) {
+        logSecurityEvent('CSRF_ATTEMPT', identifier, { origin, referer })
+        return NextResponse.json(
+          { success: false, error: 'Invalid request origin' },
+          { status: 403 }
+        )
+      }
     }
 
     // Check rate limiting
