@@ -35,8 +35,6 @@ export const metadata: Metadata = {
   },
 }
 
-export const metadata: Metadata = generateSEOMetadata('about')
-
 const values = [
   {
     icon: Target,
