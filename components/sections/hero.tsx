@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-import { ArrowLeft, ArrowRight, CheckCircle, Gift } from "lucide-react"
+import { ArrowLeft, CheckCircle } from "lucide-react"
 import Image from 'next/image'
 
 export function Hero() {
@@ -95,28 +95,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
-      {/* Side Raffle Link - Large and Bold */}
-      <Link 
-        href="/raffle" 
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 hidden lg:block group"
-      >
-        <div className="relative">
-          {/* Background glow */}
-          <div className="absolute inset-0 bg-blue-600 rounded-l-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
-          <div className="relative bg-white/95 backdrop-blur-sm border-4 border-blue-600 rounded-l-3xl px-12 py-16 shadow-2xl transform group-hover:translate-x-2 transition-transform">
-            <div className="flex flex-col items-center gap-4 text-center">
-              <Gift className="h-24 w-24 text-blue-600 animate-bounce" />
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-6xl font-black text-blue-600 leading-tight">WIN A</span>
-                <span className="text-7xl font-black text-blue-600 leading-tight">FREE</span>
-                <span className="text-6xl font-black text-blue-600 leading-tight">WEBSITE</span>
-              </div>
-              <ArrowRight className="h-12 w-12 text-blue-600 group-hover:translate-x-2 transition-transform" />
-            </div>
-          </div>
-        </div>
-      </Link>
-
       <div className="hero-content relative z-10">
         <div className="mx-auto max-w-4xl px-4 -mt-16">
           <div className="text-center">
@@ -157,22 +135,6 @@ export function Hero() {
                     Click here
                   </Link>
                 </p>
-                
-                {/* Mobile Raffle Link */}
-                <Link href="/raffle" className="block lg:hidden mt-8 group">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-blue-600 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
-                    <div className="relative bg-white/95 backdrop-blur-sm border-4 border-blue-600 rounded-2xl px-8 py-12 shadow-2xl text-center">
-                      <Gift className="h-16 w-16 text-blue-600 animate-bounce mx-auto mb-4" />
-                      <div className="flex flex-col items-center gap-2">
-                        <span className="text-4xl font-black text-blue-600 leading-tight">WIN A</span>
-                        <span className="text-5xl font-black text-blue-600 leading-tight">FREE</span>
-                        <span className="text-4xl font-black text-blue-600 leading-tight">WEBSITE</span>
-                      </div>
-                      <ArrowRight className="h-8 w-8 text-blue-600 mx-auto mt-4 group-hover:translate-x-2 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
               </div>
             )}
 
