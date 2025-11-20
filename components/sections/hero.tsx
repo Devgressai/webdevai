@@ -79,20 +79,27 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      {/* Background Image with subtle tint */}
+      {/* Background Image with optimized overlay for conversions */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - A/B Test Options:
+            Current: /images/hero-analytics.webp (data-driven, professional)
+            Alternative 1: /images/hero-business-meeting.webp (trust, partnership)
+            Alternative 2: /images/hero-team-collaboration.webp (expertise, team)
+            Alternative 3: /images/hero-office.webp (professional workspace)
+        */}
         <Image
-          src="/images/hero-happy-bright.webp"
-          alt=""
+          src="/images/hero-analytics.webp"
+          alt="Professional digital marketing analytics and data visualization dashboard"
           fill
           priority
           className="object-cover"
           quality={85}
           sizes="100vw"
         />
-        {/* 20% tint overlay to reduce busyness */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        {/* Stronger overlay (40%) to ensure CTA stands out and text is highly readable */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/60 via-primary-800/50 to-primary-900/60"></div>
+        {/* Additional subtle gradient for depth */}
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       <div className="hero-content relative z-10">
@@ -107,6 +114,21 @@ export function Hero() {
             <p className="mt-6 text-lg sm:text-xl text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
             </p>
+            {/* Trust signals for better conversions */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/90">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+                <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">500+ Clients</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+                <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">300%+ Traffic Growth</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+                <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">Free Consultation</span>
+              </div>
+            </div>
           </div>
 
           <div className="mt-10 max-w-2xl mx-auto w-full">
@@ -124,17 +146,22 @@ export function Hero() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="sm:w-auto h-12 px-8 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300"
+                    className="sm:w-auto h-12 px-8 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300 hover:scale-105"
                   >
-                    Get My Proposal
+                    Get Free Proposal →
                   </Button>
                 </form>
-                <p className="text-center text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                  Don&apos;t have a site?{' '}
-                  <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                    Click here
-                  </Link>
-                </p>
+                <div className="text-center space-y-2">
+                  <p className="text-xs text-white/80 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+                    🔒 100% confidential • No spam, ever
+                  </p>
+                  <p className="text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                    Don&apos;t have a site?{' '}
+                    <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                      Click here
+                    </Link>
+                  </p>
+                </div>
               </div>
             )}
 
@@ -191,14 +218,19 @@ export function Hero() {
                       className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm bg-white text-slate-900 placeholder:text-slate-500 focus:border-[#4285f4] focus:outline-none focus:ring-2 focus:ring-[#4285f4]/20"
                     />
                   </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full h-12 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Submitting…' : 'Send my proposal'}
-                  </Button>
+                  <div className="space-y-3">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full h-12 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300 hover:scale-[1.02]"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Submitting…' : 'Send My Free Proposal →'}
+                    </Button>
+                    <p className="text-xs text-center text-slate-500">
+                      🔒 Your information is secure and confidential
+                    </p>
+                  </div>
                 </form>
               </div>
             )}
