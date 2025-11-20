@@ -84,7 +84,7 @@ export default function LoginPage() {
             Admin Login
           </h1>
           <p className="text-secondary-600">
-            Enter your password to access the raffle dashboard
+            Enter your password to access the admin dashboard
           </p>
         </div>
 

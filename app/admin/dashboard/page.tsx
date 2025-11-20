@@ -5,21 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Trash2, Download, LogOut, RefreshCw, CheckSquare, Square } from 'lucide-react'
 
-type LeadType = 'all' | 'raffle' | 'contact'
-
-interface RaffleEntry {
-  id: string
-  type: 'raffle'
-  firstName: string
-  email: string
-  phone: string
-  hasCurrentSite: boolean
-  siteName?: string
-  websiteUrl?: string
-  consent: boolean
-  submittedAt: string
-  ipAddress?: string
-}
+type LeadType = 'contact'
 
 interface ContactLead {
   id: string
@@ -36,16 +22,16 @@ interface ContactLead {
   ipAddress?: string
 }
 
-type Lead = RaffleEntry | ContactLead
+type Lead = ContactLead
 
 export default function AdminDashboard() {
   const router = useRouter()
   const [leads, setLeads] = useState<Lead[]>([])
-  const [filterType, setFilterType] = useState<LeadType>('all')
+  const [filterType, setFilterType] = useState<LeadType>('contact')
   const [isLoading, setIsLoading] = useState(true)
   const [isExporting, setIsExporting] = useState(false)
   const [error, setError] = useState('')
-  const [stats, setStats] = useState({ total: 0, raffle: 0, contact: 0 })
+  const [stats, setStats] = useState({ total: 0, contact: 0 })
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
   const [isDeleting, setIsDeleting] = useState(false)
 
@@ -70,39 +56,29 @@ export default function AdminDashboard() {
     }
   }
 
-  const loadLeads = async (type?: LeadType) => {
+  const loadLeads = async () => {
     setIsLoading(true)
     setError('')
 
     try {
-      const url = type && type !== 'all' 
-        ? `/api/raffle/entries?type=${type}`
-        : '/api/raffle/entries'
+      // Load contact leads from the contact API
+      const response = await fetch('/api/contact/leads')
       
-      const response = await fetch(url)
-      const result = await response.json()
-
-      if (result.success) {
-        setLeads(result.leads || [])
-        
-        // Load stats
-        const allResponse = await fetch('/api/raffle/entries')
-        const allResult = await allResponse.json()
-        if (allResult.success) {
-          const allLeads = allResult.leads || []
-          setStats({
-            total: allLeads.length,
-            raffle: allLeads.filter((l: Lead) => l.type === 'raffle').length,
-            contact: allLeads.filter((l: Lead) => l.type === 'contact').length,
-          })
-        }
-      } else {
+      if (!response.ok) {
         if (response.status === 401) {
           router.push('/admin/login')
-        } else {
-          setError('Failed to load leads')
+          return
         }
+        setError('Failed to load leads')
+        return
       }
+
+      const leads = await response.json()
+      setLeads(leads || [])
+      setStats({
+        total: leads?.length || 0,
+        contact: leads?.length || 0,
+      })
     } catch (error) {
       setError('Failed to load leads. Please try again.')
     } finally {
@@ -110,11 +86,7 @@ export default function AdminDashboard() {
     }
   }
 
-  const handleFilterChange = (type: LeadType) => {
-    setFilterType(type)
-    setSelectedIds(new Set()) // Clear selection when filter changes
-    loadLeads(type)
-  }
+  // Filter removed - only showing contact leads now
 
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this lead?')) {
@@ -122,27 +94,26 @@ export default function AdminDashboard() {
     }
 
     try {
-      const response = await fetch(`/api/raffle/entries?id=${id}`, {
+      const response = await fetch(`/api/contact/leads?id=${id}`, {
         method: 'DELETE',
       })
 
-      const result = await response.json()
-
-      if (result.success) {
-        setLeads(leads.filter(lead => lead.id !== id))
-        setSelectedIds(prev => {
-          const next = new Set(prev)
-          next.delete(id)
-          return next
-        })
-        loadLeads(filterType) // Reload to update stats
-      } else {
+      if (!response.ok) {
         if (response.status === 401) {
           router.push('/admin/login')
         } else {
           alert('Failed to delete lead')
         }
+        return
       }
+
+      setLeads(leads.filter(lead => lead.id !== id))
+      setSelectedIds(prev => {
+        const next = new Set(prev)
+        next.delete(id)
+        return next
+      })
+      loadLeads() // Reload to update stats
     } catch (error) {
       alert('Failed to delete lead. Please try again.')
     }
@@ -161,7 +132,7 @@ export default function AdminDashboard() {
 
     try {
       const deletePromises = Array.from(selectedIds).map(id =>
-        fetch(`/api/raffle/entries?id=${id}`, { method: 'DELETE' })
+        fetch(`/api/contact/leads?id=${id}`, { method: 'DELETE' })
       )
 
       const results = await Promise.all(deletePromises)
@@ -171,7 +142,7 @@ export default function AdminDashboard() {
         setError(`Failed to delete ${failed.length} ${failed.length === 1 ? 'entry' : 'entries'}`)
       } else {
         setSelectedIds(new Set())
-        await loadLeads(filterType) // Reload to update stats
+        await loadLeads() // Reload to update stats
       }
     } catch (error) {
       setError('Failed to delete entries. Please try again.')
@@ -200,12 +171,11 @@ export default function AdminDashboard() {
     })
   }
 
-  const handleExport = async (format: 'csv' | 'json', type?: LeadType) => {
+  const handleExport = async (format: 'csv' | 'json') => {
     setIsExporting(true)
 
     try {
-      const typeParam = type && type !== 'all' ? `&type=${type}` : ''
-      const response = await fetch(`/api/raffle/export?format=${format}${typeParam}`)
+      const response = await fetch(`/api/contact/export?format=${format}`)
       
       if (response.status === 401) {
         router.push('/admin/login')
@@ -216,8 +186,7 @@ export default function AdminDashboard() {
       const url = window.URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      const typeLabel = type && type !== 'all' ? type : 'all-leads'
-      a.download = `${typeLabel}-${new Date().toISOString().split('T')[0]}.${format}`
+      a.download = `contact-leads-${new Date().toISOString().split('T')[0]}.${format}`
       document.body.appendChild(a)
       a.click()
       window.URL.revokeObjectURL(url)
@@ -249,9 +218,7 @@ export default function AdminDashboard() {
     })
   }
 
-  const filteredLeads = filterType === 'all' 
-    ? leads 
-    : leads.filter(lead => lead.type === filterType)
+  const filteredLeads = leads
 
   if (isLoading) {
     return (
@@ -275,7 +242,7 @@ export default function AdminDashboard() {
                 Leads Dashboard
               </h1>
               <p className="text-sm text-secondary-600 mt-1">
-                Manage raffle entries and contact form leads
+                Manage contact form leads
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -292,7 +259,7 @@ export default function AdminDashboard() {
                 </Button>
               )}
               <Button
-                onClick={() => loadLeads(filterType)}
+                onClick={() => loadLeads()}
                 variant="outline"
                 size="sm"
                 className="flex items-center gap-2"
@@ -301,7 +268,7 @@ export default function AdminDashboard() {
                 Refresh
               </Button>
               <Button
-                onClick={() => handleExport('csv', filterType)}
+                onClick={() => handleExport('csv')}
                 variant="outline"
                 size="sm"
                 disabled={isExporting || filteredLeads.length === 0}
@@ -311,7 +278,7 @@ export default function AdminDashboard() {
                 Export CSV
               </Button>
               <Button
-                onClick={() => handleExport('json', filterType)}
+                onClick={() => handleExport('json')}
                 variant="outline"
                 size="sm"
                 disabled={isExporting || filteredLeads.length === 0}
@@ -333,53 +300,11 @@ export default function AdminDashboard() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            <div className="bg-gray-50 rounded-lg p-3">
-              <div className="text-2xl font-bold text-secondary-900">{stats.total}</div>
-              <div className="text-sm text-secondary-600">Total Leads</div>
-            </div>
-            <div className="bg-blue-50 rounded-lg p-3">
-              <div className="text-2xl font-bold text-primary-600">{stats.raffle}</div>
-              <div className="text-sm text-secondary-600">Raffle Entries</div>
-            </div>
+          <div className="grid grid-cols-1 gap-4 mb-4">
             <div className="bg-green-50 rounded-lg p-3">
               <div className="text-2xl font-bold text-green-600">{stats.contact}</div>
               <div className="text-sm text-secondary-600">Contact Leads</div>
             </div>
-          </div>
-
-          {/* Filter Tabs */}
-          <div className="flex gap-2 border-b border-gray-200">
-            <button
-              onClick={() => handleFilterChange('all')}
-              className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
-                filterType === 'all'
-                  ? 'border-primary-600 text-primary-600'
-                  : 'border-transparent text-secondary-600 hover:text-secondary-900'
-              }`}
-            >
-              All ({stats.total})
-            </button>
-            <button
-              onClick={() => handleFilterChange('raffle')}
-              className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
-                filterType === 'raffle'
-                  ? 'border-primary-600 text-primary-600'
-                  : 'border-transparent text-secondary-600 hover:text-secondary-900'
-              }`}
-            >
-              Raffle ({stats.raffle})
-            </button>
-            <button
-              onClick={() => handleFilterChange('contact')}
-              className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
-                filterType === 'contact'
-                  ? 'border-primary-600 text-primary-600'
-                  : 'border-transparent text-secondary-600 hover:text-secondary-900'
-              }`}
-            >
-              Contact ({stats.contact})
-            </button>
           </div>
         </div>
       </div>
@@ -395,7 +320,7 @@ export default function AdminDashboard() {
         {filteredLeads.length === 0 ? (
           <div className="bg-white rounded-xl shadow-sm p-12 text-center">
             <p className="text-lg text-secondary-600">
-              No {filterType === 'all' ? 'leads' : filterType === 'raffle' ? 'raffle entries' : 'contact leads'} yet.
+              No contact leads yet.
             </p>
           </div>
         ) : (
@@ -458,17 +383,13 @@ export default function AdminDashboard() {
                     <div className="flex-1">
                     <div className="flex items-center gap-4 mb-3">
                       <h3 className="text-lg font-semibold text-secondary-900">
-                        {lead.type === 'raffle' ? lead.firstName : lead.name}
+                        {lead.name}
                       </h3>
                       <span className="text-sm text-secondary-500">
                         {lead.email}
                       </span>
-                      <span className={`px-2 py-1 text-xs font-medium rounded ${
-                        lead.type === 'raffle'
-                          ? 'bg-blue-100 text-blue-800'
-                          : 'bg-green-100 text-green-800'
-                      }`}>
-                        {lead.type === 'raffle' ? 'Raffle' : 'Contact'}
+                      <span className="px-2 py-1 text-xs font-medium rounded bg-green-100 text-green-800">
+                        Contact
                       </span>
                     </div>
 
@@ -479,50 +400,25 @@ export default function AdminDashboard() {
                           <span className="text-secondary-600">{lead.phone}</span>
                         </div>
                       )}
-                      {lead.type === 'raffle' && (
-                        <div>
-                          <span className="font-medium text-secondary-700">Has Website:</span>{' '}
-                          <span className="text-secondary-600">{lead.hasCurrentSite ? 'Yes' : 'No'}</span>
-                        </div>
-                      )}
-                      {lead.type === 'raffle' && lead.siteName && (
-                        <div>
-                          <span className="font-medium text-secondary-700">Site Name:</span>{' '}
-                          <span className="text-secondary-600">{lead.siteName}</span>
-                        </div>
-                      )}
-                      {lead.type === 'raffle' && lead.websiteUrl && (
-                        <div>
-                          <span className="font-medium text-secondary-700">Website URL:</span>{' '}
-                          <a
-                            href={lead.websiteUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary-600 hover:underline"
-                          >
-                            {lead.websiteUrl}
-                          </a>
-                        </div>
-                      )}
-                      {lead.type === 'contact' && lead.company && (
+                      {lead.company && (
                         <div>
                           <span className="font-medium text-secondary-700">Company:</span>{' '}
                           <span className="text-secondary-600">{lead.company}</span>
                         </div>
                       )}
-                      {lead.type === 'contact' && lead.service && (
+                      {lead.service && (
                         <div>
                           <span className="font-medium text-secondary-700">Service:</span>{' '}
                           <span className="text-secondary-600">{lead.service}</span>
                         </div>
                       )}
-                      {lead.type === 'contact' && lead.budget && (
+                      {lead.budget && (
                         <div>
                           <span className="font-medium text-secondary-700">Budget:</span>{' '}
                           <span className="text-secondary-600">{lead.budget}</span>
                         </div>
                       )}
-                      {lead.type === 'contact' && lead.urgency && (
+                      {lead.urgency && (
                         <div>
                           <span className="font-medium text-secondary-700">Urgency:</span>{' '}
                           <span className="text-secondary-600">{lead.urgency}</span>
@@ -540,8 +436,7 @@ export default function AdminDashboard() {
                       )}
                     </div>
 
-
-                    {lead.type === 'contact' && lead.message && (
+                    {lead.message && (
                       <div className="mt-3 pt-3 border-t border-gray-200">
                         <p className="text-sm">
                           <span className="font-medium text-secondary-700">Message:</span>{' '}
@@ -552,9 +447,6 @@ export default function AdminDashboard() {
 
                     <div className="mt-3 flex items-center gap-4 text-xs text-secondary-500">
                       <span>ID: {lead.id}</span>
-                      {lead.type === 'raffle' && (
-                        <span>Consent: {lead.consent ? 'Yes' : 'No'}</span>
-                      )}
                     </div>
                     </div>
                   </div>

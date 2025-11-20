@@ -22,10 +22,10 @@ const client = createClient({
 console.log('🧪 Testing Sanity Connection...\n')
 
 client
-  .fetch('count(*[_type == "raffleEntry"])')
+  .fetch('count(*[_type == "contact"])')
   .then(count => {
     console.log('✅ Sanity connection successful!')
-    console.log('📊 Total raffle entries in database:', count)
+    console.log('📊 Total contact entries in database:', count)
     console.log('\n✅ ALL ENVIRONMENT VARIABLES WORKING!\n')
   })
   .catch(error => {
