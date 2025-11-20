@@ -188,12 +188,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
+  // Generate city-industry hub page entries
+  // Format: /[city]/industry/[industry]
+  const cityIndustryEntries: MetadataRoute.Sitemap = []
+  for (const city of allCities) {
+    for (const industry of industrySlugs) {
+      cityIndustryEntries.push({
+        url: `${baseUrl}/${city}/industry/${industry}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      })
+    }
+  }
+
+  // Generate city-industry-service combination entries
+  // Format: /[city]/industry/[industry]/[service]
+  // Services: web-development, seo, website-design (as defined in generateStaticParams)
+  const cityIndustryServiceEntries: MetadataRoute.Sitemap = []
+  const cityIndustryServices = ['web-development', 'seo', 'website-design']
+  for (const city of allCities) {
+    for (const industry of industrySlugs) {
+      for (const service of cityIndustryServices) {
+        cityIndustryServiceEntries.push({
+          url: `${baseUrl}/${city}/industry/${industry}/${service}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly' as const,
+          priority: 0.6,
+        })
+      }
+    }
+  }
+
   return [
     ...coreEntries,
     ...solutionsEntries,
     ...serviceEntries,
     ...blogEntries,
     ...cityEntries,
-    ...cityServiceEntries
+    ...cityServiceEntries,
+    ...cityIndustryEntries,
+    ...cityIndustryServiceEntries
   ]
 }
