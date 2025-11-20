@@ -12,6 +12,21 @@ export function RaffleForm() {
     message: string
   }>({ type: null, message: '' })
 
+  const normalizeWebsiteUrl = (url: string): string => {
+    if (!url) return url
+    
+    // Remove any whitespace
+    url = url.trim()
+    
+    // If it already starts with http:// or https://, return as is
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return url
+    }
+    
+    // Add https:// prefix if missing
+    return `https://${url}`
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -22,13 +37,17 @@ export function RaffleForm() {
     const formData = new FormData(form)
     const hasSite = formData.get('hasCurrentSite') === 'yes'
     
+    // Get website URL and normalize it (add https:// if missing)
+    const rawWebsiteUrl = hasSite ? formData.get('websiteUrl')?.toString() : undefined
+    const normalizedWebsiteUrl = rawWebsiteUrl ? normalizeWebsiteUrl(rawWebsiteUrl) : undefined
+    
     const data = {
       firstName: formData.get('firstName'),
       email: formData.get('email'),
       phone: formData.get('phone') || undefined,
       hasCurrentSite: hasSite,
       siteName: hasSite ? (formData.get('siteName') || undefined) : undefined,
-      websiteUrl: hasSite ? (formData.get('websiteUrl') || undefined) : undefined,
+      websiteUrl: normalizedWebsiteUrl,
       consent: formData.get('consent') === 'on',
     }
 
@@ -217,14 +236,15 @@ export function RaffleForm() {
                 What is your website URL? <span className="text-red-500">*</span>
               </label>
               <input
-                type="url"
+                type="text"
                 id="websiteUrl"
                 name="websiteUrl"
                 required={hasCurrentSite === 'yes'}
                 disabled={isSubmitting}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
-                placeholder="https://www.example.com"
+                placeholder="webvello.com"
               />
+              <p className="mt-1 text-sm text-secondary-600">Enter your website address (e.g., webvello.com or www.example.com)</p>
             </div>
           </>
         )}
