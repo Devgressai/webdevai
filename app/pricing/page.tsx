@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pricing | Web Vello Services',
     description: 'Transparent pricing for professional SEO and web development services.',
-    url: 'https://webvello.com/pricing',
+    url: 'https://www.webvello.com/pricing',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'website',
   
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web Vello Services',

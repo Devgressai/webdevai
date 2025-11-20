@@ -20,12 +20,12 @@ export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://webvello.com/#organization",
+    "@id": "https://www.webvello.com/#organization",
     "name": "Web Vello",
-    "url": "https://webvello.com",
+    "url": "https://www.webvello.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://webvello.com/logo.png",
+      "url": "https://www.webvello.com/logo.png",
       "width": 600,
       "height": 60
     },
@@ -66,10 +66,10 @@ export function generateLocalBusinessSchema(city: string, cityState: string) {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": `https://webvello.com/${city}#localbusiness`,
+    "@id": `https://www.webvello.com/${city}#localbusiness`,
     "name": `Web Vello - ${cityState}`,
-    "image": "https://webvello.com/logo.png",
-    "url": `https://webvello.com/${city}`,
+    "image": "https://www.webvello.com/logo.png",
+    "url": `https://www.webvello.com/${city}`,
     "telephone": "+1-737-888-5723",
     "email": "hello@webvello.com",
     "priceRange": "$$",
@@ -129,7 +129,7 @@ export function generateServiceSchema(options: SchemaGeneratorOptions) {
     "url": options.url,
     "provider": {
       "@type": "Organization",
-      "@id": "https://webvello.com/#organization",
+      "@id": "https://www.webvello.com/#organization",
       "name": "Web Vello"
     },
     "areaServed": options.city ? {
@@ -189,15 +189,15 @@ export function generateArticleSchema(options: {
     "author": {
       "@type": "Person",
       "name": options.author || "Web Vello Team",
-      "url": "https://webvello.com/about"
+      "url": "https://www.webvello.com/about"
     },
     "publisher": {
       "@type": "Organization",
-      "@id": "https://webvello.com/#organization",
+      "@id": "https://www.webvello.com/#organization",
       "name": "Web Vello",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://webvello.com/logo.png"
+        "url": "https://www.webvello.com/logo.png"
       }
     },
     "mainEntityOfPage": {
@@ -251,7 +251,7 @@ export function generateWebPageSchema(options: SchemaGeneratorOptions) {
     "description": options.description,
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://webvello.com/#website"
+      "@id": "https://www.webvello.com/#website"
     },
     "about": {
       "@type": "Thing",
@@ -259,7 +259,7 @@ export function generateWebPageSchema(options: SchemaGeneratorOptions) {
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": options.image || "https://webvello.com/og-image.jpg"
+      "url": options.image || "https://www.webvello.com/og-image.jpg"
     },
     "inLanguage": "en-US"
   }

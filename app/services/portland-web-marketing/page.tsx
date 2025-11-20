@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: 'Top-rated web marketing agency in Portland, OR. SEO, PPC, social media & content marketing that drives ROI. Get more customers online.',
   keywords: 'portland web marketing, digital marketing portland, seo portland, ppc portland oregon, social media marketing portland',
   alternates: {
-    canonical: 'https://webvello.com/services/portland-web-marketing',
+    canonical: 'https://www.webvello.com/services/portland-web-marketing',
   },
   openGraph: {
     title: 'Portland Web Marketing Agency | Digital Marketing Experts',
     description: 'Top-rated web marketing agency in Portland, OR. SEO, PPC, social media & content marketing that drives ROI.',
-    url: 'https://webvello.com/services/portland-web-marketing',
+    url: 'https://www.webvello.com/services/portland-web-marketing',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Portland Web Marketing' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Portland Web Marketing' }],
   }
 }
 

@@ -77,7 +77,7 @@ export function Footer() {
               <a href="tel:+17378885723" className="text-gray-300 hover:text-white transition-colors" aria-label="Call us">
                 <Phone className="h-5 w-5" />
               </a>
-              <a href="https://webvello.com" className="text-gray-300 hover:text-white transition-colors" aria-label="Visit our website">
+              <a href="https://www.webvello.com" className="text-gray-300 hover:text-white transition-colors" aria-label="Visit our website">
                 <Globe className="h-5 w-5" />
               </a>
             </div>

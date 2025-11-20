@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Developer Fresno: Professional Web Development Services for CA Businesses 2025',
     description: 'Professional web developer services in Fresno. Custom websites, web applications, and digital solutions for Fresno businesses.',
-    url: 'https://webvello.com/blog/web-developer-fresno',
+    url: 'https://www.webvello.com/blog/web-developer-fresno',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

@@ -17,7 +17,7 @@ import * as path from 'path'
 // Load environment variables
 dotenv.config({ path: path.resolve(__dirname, '../.env.local') })
 
-const BASE_URL = process.env.GOOGLE_SEARCH_CONSOLE_SITE_URL || 'https://webvello.com'
+const BASE_URL = process.env.GOOGLE_SEARCH_CONSOLE_SITE_URL || 'https://www.webvello.com'
 
 // Initialize Google Auth Client
 function getGoogleAuthClient() {

@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Web Vello designs beautiful, conversion-optimized e-commerce experiences. From product pages to checkout, every detail is engineered to boost revenue.',
   keywords: ['ecommerce design agency', 'shopify design services', 'conversion focused ecommerce design', 'web vello ecommerce', 'online store design'],
   alternates: {
-    canonical: 'https://webvello.com/services/ecommerce-design',
+    canonical: 'https://www.webvello.com/services/ecommerce-design',
   },
   openGraph: {
     title: 'E-commerce Design Services | Web Vello',
     description: 'Partner with Web Vello to craft persuasive e-commerce experiences that increase conversions and lifetime value.',
-    url: 'https://webvello.com/services/ecommerce-design',
+    url: 'https://www.webvello.com/services/ecommerce-design',
     type: 'website',
   }
 }

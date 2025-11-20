@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Chicago Web Application Development: Custom Web Apps for IL Businesses',
     description: 'Professional web application development in Chicago, IL. Expert developers create custom web applications, SaaS platforms, and digital solutions for Chicago businesses.',
-    url: 'https://webvello.com/services/web-application-development-chicago',
+    url: 'https://www.webvello.com/services/web-application-development-chicago',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Oklahoma City Conversion Rate Optimization Services: Maximize Your OKC Business ROI 2025',
     description: 'Professional conversion rate optimization services in Oklahoma City. Increase your website\'s conversion rate by 25-40% with our data-driven CRO strategies.',
-    url: 'https://webvello.com/blog/oklahoma-city-conversion-rate-optimization-services',
+    url: 'https://www.webvello.com/blog/oklahoma-city-conversion-rate-optimization-services',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

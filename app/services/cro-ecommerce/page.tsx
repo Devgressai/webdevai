@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   description: 'Boost revenue per visitor with Web Vello’s e-commerce CRO program. We optimize product pages, checkout flows, and retention journeys to drive continuous growth.',
   keywords: ['ecommerce cro services', 'shop conversion optimization', 'increase average order value', 'web vello ecommerce', 'shopify conversion optimization'],
   alternates: {
-    canonical: 'https://webvello.com/services/cro-ecommerce',
+    canonical: 'https://www.webvello.com/services/cro-ecommerce',
   },
   openGraph: {
     title: 'E-commerce Conversion Optimization | Web Vello',
     description: 'Partner with Web Vello to analyze buyer behavior, test improvements, and lift e-commerce conversion metrics.',
-    url: 'https://webvello.com/services/cro-ecommerce',
+    url: 'https://www.webvello.com/services/cro-ecommerce',
     type: 'website',
   }
 }

@@ -1,7 +1,49 @@
+import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, Building2, Utensils, Heart, Scale, Car, ShoppingBag, Briefcase, Home, Users } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'Industry-Specific Digital Marketing Solutions | Web Vello',
+  description: 'Specialized digital marketing strategies for healthcare, restaurants, legal services, automotive, retail, and more. Industry-specific solutions that deliver measurable results.',
+  keywords: [
+    'industry-specific marketing',
+    'healthcare digital marketing',
+    'restaurant marketing',
+    'legal marketing services',
+    'automotive marketing',
+    'retail marketing',
+    'professional services marketing',
+    'real estate marketing',
+    'home services marketing'
+  ],
+  openGraph: {
+    title: 'Industry-Specific Digital Marketing Solutions | Web Vello',
+    description: 'Specialized digital marketing strategies for healthcare, restaurants, legal services, and more. Industry-specific solutions that deliver measurable results.',
+    url: 'https://webvello.com/industries',
+    siteName: 'Web Vello',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://webvello.com/og-industries.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Industry-Specific Digital Marketing Solutions - Web Vello',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industry-Specific Digital Marketing Solutions | Web Vello',
+    description: 'Specialized digital marketing strategies for healthcare, restaurants, legal services, and more.',
+    images: ['https://webvello.com/og-industries.jpg'],
+  },
+  alternates: {
+    canonical: 'https://webvello.com/industries',
+  },
+}
 
 const industries = [
   {

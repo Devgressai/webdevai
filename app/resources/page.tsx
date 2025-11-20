@@ -1,7 +1,48 @@
+import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, BookOpen, Video, FileText, Download, Calendar, User, Tag, Code } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'Free Digital Marketing Resources & Guides | Web Vello',
+  description: 'Access our library of free guides, tools, and insights on SEO, web development, local marketing, and more. Valuable knowledge to help your business grow.',
+  keywords: [
+    'digital marketing resources',
+    'free SEO guides',
+    'marketing tools',
+    'SEO checklists',
+    'web development guides',
+    'local SEO resources',
+    'marketing whitepapers',
+    'business growth resources'
+  ],
+  openGraph: {
+    title: 'Free Digital Marketing Resources & Guides | Web Vello',
+    description: 'Access our library of free guides, tools, and insights on SEO, web development, and marketing. Valuable knowledge to help your business grow.',
+    url: 'https://webvello.com/resources',
+    siteName: 'Web Vello',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://webvello.com/og-resources.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Free Digital Marketing Resources - Web Vello',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Digital Marketing Resources & Guides | Web Vello',
+    description: 'Access our library of free guides, tools, and insights on SEO, web development, and marketing.',
+    images: ['https://webvello.com/og-resources.jpg'],
+  },
+  alternates: {
+    canonical: 'https://webvello.com/resources',
+  },
+}
 
 const resources = [
   {

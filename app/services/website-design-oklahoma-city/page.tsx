@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Website Design in Oklahoma City: Professional Web Design Services OK',
     description: 'Professional website design services in Oklahoma City, OK. Expert web designers create custom, responsive websites for Oklahoma City businesses.',
-    url: 'https://webvello.com/services/website-design-oklahoma-city',
+    url: 'https://www.webvello.com/services/website-design-oklahoma-city',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

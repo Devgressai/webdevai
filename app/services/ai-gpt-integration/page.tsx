@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Integrate GPT and AI capabilities into your products and workflows. Web Vello architects secure, scalable integrations with custom prompts, APIs, and data pipelines.',
   keywords: ['gpt integration services', 'ai integration agency', 'chatgpt api integration', 'web vello gpt', 'ai system integration'],
   alternates: {
-    canonical: 'https://webvello.com/services/ai-gpt-integration',
+    canonical: 'https://www.webvello.com/services/ai-gpt-integration',
   },
   openGraph: {
     title: 'AI & GPT Integration | Web Vello',
     description: 'Web Vello connects GPT and AI systems to your applications with secure infrastructure, data governance, and UX best practices.',
-    url: 'https://webvello.com/services/ai-gpt-integration',
+    url: 'https://www.webvello.com/services/ai-gpt-integration',
     type: 'website',
   }
 }

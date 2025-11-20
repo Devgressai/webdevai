@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     tags: ['Shopify', 'Web Development', 'E-commerce', 'Online Store', 'Shopify Plus'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/ultimate-shopify-web-development-guide',
+    canonical: 'https://www.webvello.com/blog/ultimate-shopify-web-development-guide',
   },
 }
 

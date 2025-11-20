@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   description: 'Specialized SEO services for doctors and medical practices in Kansas City. Get more patients through local search. HIPAA compliant strategies that work.',
   keywords: 'seo for doctors kansas city, medical practice seo kansas city, doctor seo services, healthcare seo kansas city, physician marketing',
   alternates: {
-    canonical: 'https://webvello.com/services/seo-doctors-kansas-city',
+    canonical: 'https://www.webvello.com/services/seo-doctors-kansas-city',
   },
   openGraph: {
     title: 'SEO for Doctors Kansas City | Medical Practice SEO',
     description: 'Specialized SEO for doctors in Kansas City. Get more patients through local search with HIPAA-compliant strategies.',
-    url: 'https://webvello.com/services/seo-doctors-kansas-city',
+    url: 'https://www.webvello.com/services/seo-doctors-kansas-city',
     type: 'website',
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'SEO for Doctors Kansas City',

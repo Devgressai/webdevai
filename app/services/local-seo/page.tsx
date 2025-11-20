@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   description: 'Dominate local search & get more customers with expert local SEO. Google My Business optimization, citations, reviews & geo-targeted strategies.',
   keywords: ['local seo agency', 'google business profile optimization', 'local citations', 'review management services', 'local seo campaigns'],
   alternates: {
-    canonical: 'https://webvello.com/services/local-seo',
+    canonical: 'https://www.webvello.com/services/local-seo',
   },
   openGraph: {
     title: 'Local SEO Services | Web Vello',
     description: 'Increase calls, foot traffic, and revenue with a proven local SEO playbook driven by data, reviews, and conversion-focused landing pages.',
-    url: 'https://webvello.com/services/local-seo',
+    url: 'https://www.webvello.com/services/local-seo',
     type: 'website',
   
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web Vello Services',
@@ -109,7 +109,7 @@ export default function LocalSeOPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             serviceType: 'Local SEO',
-            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://webvello.com', logo: 'https://webvello.com/logo.png' },
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://www.webvello.com', logo: 'https://www.webvello.com/logo.png' },
             areaServed: 'US',
             audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
             brand: { '@type': 'Brand', name: 'Web Vello' }

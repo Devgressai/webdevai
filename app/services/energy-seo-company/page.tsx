@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: 'Energy SEO Company | Oil & Gas Digital Marketing',
   description: 'Specialized SEO for energy companies. Dominate search results for oil, gas, solar, wind & renewable energy services.',
   keywords: 'energy seo company, oil gas seo, renewable energy marketing, solar seo services, energy digital marketing',
-  alternates: { canonical: 'https://webvello.com/services/energy-seo-company' },
+  alternates: { canonical: 'https://www.webvello.com/services/energy-seo-company' },
   openGraph: {
     title: 'Energy SEO Company | Oil & Gas Digital Marketing',
     description: 'Specialized SEO for energy companies. Dominate search results for oil, gas, solar, wind & renewable energy services.',
-    url: 'https://webvello.com/services/energy-seo-company',
+    url: 'https://www.webvello.com/services/energy-seo-company',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Energy SEO Company' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Energy SEO Company' }],
   }
 }
 

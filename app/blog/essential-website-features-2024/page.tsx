@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '10 Essential Features Every Business Website Needs in 2024',
     description: 'Discover the must-have features that can make or break your business website. From mobile optimization to AI integration, learn what your customers expect.',
-    url: 'https://webvello.com/blog/essential-website-features-2024',
+    url: 'https://www.webvello.com/blog/essential-website-features-2024',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',
@@ -243,13 +243,13 @@ export default function BlogPost() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/custom-vs-template-websites" className="group">
+            <Link href="/blog/website-design-detroit" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                  Custom vs. Template Websites: Which is Right for Your Business?
+                  Professional Website Design: Complete Guide
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  Compare custom and template website solutions to make the best choice for your business needs.
+                  Learn how professional website design can transform your online presence and drive results.
                 </p>
               </div>
             </Link>

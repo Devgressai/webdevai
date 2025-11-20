@@ -33,7 +33,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://webvello.com'),
+  metadataBase: new URL('https://www.webvello.com'),
   title: {
     default: 'Web Vello - Digital Marketing Agency | AI SEO, Local SEO, Web Development',
     template: '%s | Web Vello'
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     'web design services',
     'marketing automation'
   ],
-  authors: [{ name: 'Web Vello', url: 'https://webvello.com' }],
+  authors: [{ name: 'Web Vello', url: 'https://www.webvello.com' }],
   creator: 'Web Vello',
   publisher: 'Web Vello',
   formatDetection: {
@@ -76,13 +76,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://webvello.com',
+    url: 'https://www.webvello.com',
     siteName: 'Web Vello',
     title: 'Web Vello - Digital Marketing Agency',
     description: 'Drive revenue growth with data-driven digital marketing. Get 300%+ traffic growth in 6 months.',
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web Vello - Digital Marketing Agency',
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Vello - Digital Marketing Agency',
     description: 'Drive revenue growth with data-driven digital marketing',
-    images: ['https://webvello.com/og-image.jpg'],
+    images: ['https://www.webvello.com/og-image.jpg'],
     creator: '@webvello',
     site: '@webvello',
   },
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
     yahoo: 'REPLACE_WITH_YAHOO_VERIFICATION_CODE',
   },
   alternates: {
-    canonical: 'https://webvello.com',
+    canonical: 'https://www.webvello.com',
   },
   category: 'Digital Marketing',
   classification: 'Business',
@@ -182,8 +182,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Web Vello",
-              "url": "https://webvello.com",
-              "logo": "https://webvello.com/logo.png",
+              "url": "https://www.webvello.com",
+              "logo": "https://www.webvello.com/logo.png",
               "description": "Digital Marketing Agency specializing in AI-powered SEO, local search optimization, and conversion-focused web development.",
               "address": {
                 "@type": "PostalAddress",
@@ -195,7 +195,7 @@ export default function RootLayout({
                 "contactType": "customer service",
                 "areaServed": "US",
                 "availableLanguage": "English",
-                "url": "https://webvello.com/contact"
+                "url": "https://www.webvello.com/contact"
               },
               "sameAs": [
                 "https://twitter.com/webvello",
@@ -257,8 +257,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "Web Vello",
-              "url": "https://webvello.com",
-              "image": "https://webvello.com/logo.png",
+              "url": "https://www.webvello.com",
+              "image": "https://www.webvello.com/logo.png",
               "slogan": "Design. Develop. Dominate.",
               "serviceType": [
                 "AI SEO",
@@ -294,11 +294,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Web Vello",
-              "url": "https://webvello.com",
+              "url": "https://www.webvello.com",
               "description": "Digital Marketing Agency - AI SEO, Local SEO, Web Development",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://webvello.com/search?q={search_term_string}",
+                "target": "https://www.webvello.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

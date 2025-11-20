@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Freight Forwarder Web Design: Complete Guide 2025',
     description: 'Complete guide to web design for freight forwarders in 2025. Learn about logistics website design, shipping tracking, and digital strategies for freight companies.',
-    url: 'https://webvello.com/blog/freight-forwarder-web-design-guide',
+    url: 'https://www.webvello.com/blog/freight-forwarder-web-design-guide',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

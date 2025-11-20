@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: 'Jacksonville AI SEO | AI-Powered Search Optimization',
   description: 'Revolutionary AI-powered SEO services in Jacksonville, FL. Machine learning algorithms that dominate search results.',
   keywords: 'jacksonville ai seo, ai seo jacksonville florida, artificial intelligence seo jacksonville, machine learning seo',
-  alternates: { canonical: 'https://webvello.com/services/jacksonville-ai-seo' },
+  alternates: { canonical: 'https://www.webvello.com/services/jacksonville-ai-seo' },
   openGraph: {
     title: 'Jacksonville AI SEO | AI-Powered Search Optimization',
     description: 'Revolutionary AI-powered SEO services in Jacksonville, FL. Machine learning algorithms that dominate search results.',
-    url: 'https://webvello.com/services/jacksonville-ai-seo',
+    url: 'https://www.webvello.com/services/jacksonville-ai-seo',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Jacksonville AI SEO' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Jacksonville AI SEO' }],
   }
 }
 

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Launch a custom, high-speed website that converts. Web Vello builds SEO-ready, secure, and scalable web experiences tailored to your funnels and revenue goals.',
   keywords: ['custom web development', 'conversion focused websites', 'web vello web design', 'seo-friendly web development', 'next.js agency'],
   alternates: {
-    canonical: 'https://webvello.com/services/web-development',
+    canonical: 'https://www.webvello.com/services/web-development',
   },
   openGraph: {
     title: 'Custom Web Development Services | Web Vello',
     description: 'Partner with Web Vello to build lightning-fast, conversion-first websites engineered to grow revenue.',
-    url: 'https://webvello.com/services/web-development',
+    url: 'https://www.webvello.com/services/web-development',
     type: 'website',
   }
 }
@@ -95,7 +95,7 @@ export default function WebDevelopmentPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             serviceType: 'Web Development',
-            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://webvello.com', logo: 'https://webvello.com/logo.png' },
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://www.webvello.com', logo: 'https://www.webvello.com/logo.png' },
             areaServed: 'US',
             audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
             brand: { '@type': 'Brand', name: 'Web Vello' }

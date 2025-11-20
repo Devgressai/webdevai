@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Increase open rates and revenue with Web Vello’s email marketing design studio. We craft on-brand, high-converting templates backed by testing and automation strategy.',
   keywords: ['email marketing design', 'email campaign design', 'responsive email templates', 'web vello email marketing', 'email conversion design'],
   alternates: {
-    canonical: 'https://webvello.com/services/email-marketing-design',
+    canonical: 'https://www.webvello.com/services/email-marketing-design',
   },
   openGraph: {
     title: 'Email Marketing Design Services | Web Vello',
     description: 'Partner with Web Vello to design on-brand, conversion-driven email campaigns that nurture and close customers.',
-    url: 'https://webvello.com/services/email-marketing-design',
+    url: 'https://www.webvello.com/services/email-marketing-design',
     type: 'website',
   }
 }

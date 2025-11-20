@@ -109,7 +109,7 @@ export async function POST(request: Request) {
       await saveLeadToDatabase(leadData)
 
       return NextResponse.json({
-        message: `Perfect! I've got all your information. Our team will reach out within 24 hours with detailed information.\n\nIn the meantime, would you like to:\n• Schedule a consultation: https://webvello.com/contact\n• Explore our services: https://webvello.com/services\n• See case studies: https://webvello.com/case-studies\n\nIs there anything else I can help you with?`,
+        message: `Perfect! I've got all your information. Our team will reach out within 24 hours with detailed information.\n\nIn the meantime, would you like to:\n• Schedule a consultation: https://www.webvello.com/contact\n• Explore our services: https://www.webvello.com/services\n• See case studies: https://www.webvello.com/case-studies\n\nIs there anything else I can help you with?`,
         leadCaptured: true,
         shouldCaptureLead: false
       })
@@ -135,7 +135,7 @@ export async function POST(request: Request) {
       await saveLeadToDatabase(leadData)
 
       return NextResponse.json({
-        message: `Perfect! I've got your email (${emailMatch[0]}). Our team will reach out within 24 hours with detailed information.\n\nIn the meantime, would you like to:\n• Schedule a consultation: https://webvello.com/contact\n• Explore our services: https://webvello.com/services\n• See case studies: https://webvello.com/case-studies\n\nIs there anything else I can help you with?`,
+        message: `Perfect! I've got your email (${emailMatch[0]}). Our team will reach out within 24 hours with detailed information.\n\nIn the meantime, would you like to:\n• Schedule a consultation: https://www.webvello.com/contact\n• Explore our services: https://www.webvello.com/services\n• See case studies: https://www.webvello.com/case-studies\n\nIs there anything else I can help you with?`,
         leadCaptured: true,
         shouldCaptureLead: false
       })

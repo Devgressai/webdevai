@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   description: 'Leading Shopify development company offering custom theme development, Shopify app creation, migrations, integrations, and optimization. Partner with certified Shopify experts.',
   keywords: 'shopify development company, shopify web development, custom shopify themes, shopify app development, shopify experts, shopify plus development, shopify migration, ecommerce development',
   alternates: {
-    canonical: 'https://webvello.com/services/shopify-development',
+    canonical: 'https://www.webvello.com/services/shopify-development',
   },
   openGraph: {
     title: 'Shopify Development Company | Web Vello',
     description: 'Professional Shopify development services: custom themes, apps, migrations, and optimization. Transform your e-commerce vision into reality.',
-    url: 'https://webvello.com/services/shopify-development',
+    url: 'https://www.webvello.com/services/shopify-development',
     type: 'website',
   }
 }

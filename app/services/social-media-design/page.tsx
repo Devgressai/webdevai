@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Stand out in every feed. Web Vello’s social media designers craft platform-specific creative that increases engagement, followers, and conversions.',
   keywords: ['social media design agency', 'social content design', 'instagram design services', 'web vello social media', 'social creative studio'],
   alternates: {
-    canonical: 'https://webvello.com/services/social-media-design',
+    canonical: 'https://www.webvello.com/services/social-media-design',
   },
   openGraph: {
     title: 'Social Media Design Services | Web Vello',
     description: 'Boost engagement with eye-catching, on-brand social media graphics produced by Web Vello’s creative team.',
-    url: 'https://webvello.com/services/social-media-design',
+    url: 'https://www.webvello.com/services/social-media-design',
     type: 'website',
   }
 }

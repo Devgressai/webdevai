@@ -1,8 +1,20 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import { cities } from '@/lib/cities'
 
-export const metadata = {
-  title: 'HTML Sitemap – Locations',
+export const metadata: Metadata = {
+  title: 'Locations Sitemap | Browse Cities by Letter',
+  description: 'Browse all service locations alphabetically. Find digital marketing services for your city including SEO, web development, and local SEO services.',
+  keywords: 'locations sitemap, cities sitemap, service locations, city pages, location index',
+  openGraph: {
+    title: 'Locations Sitemap | Web Vello',
+    description: 'Browse all service locations alphabetically. Find digital marketing services for your city.',
+    url: 'https://webvello.com/sitemap/locations',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://webvello.com/sitemap/locations',
+  },
 }
 
 export default function LocationsSitemapIndex() {

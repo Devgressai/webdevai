@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI-Powered SEO: How Machine Learning is Revolutionizing Search in 2024',
     description: 'Discover how artificial intelligence and machine learning are transforming SEO strategies. Learn about AI SEO tools, techniques, and the future of search optimization.',
-    url: 'https://webvello.com/blog/ai-powered-seo-machine-learning',
+    url: 'https://www.webvello.com/blog/ai-powered-seo-machine-learning',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',
@@ -295,10 +295,10 @@ export default function BlogPost() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/conversion-rate-optimization-strategies" className="group">
+            <Link href="/blog/detroit-conversion-rate-optimization-services" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
-                  Conversion Rate Optimization: 15 Strategies That Actually Work
+                  Conversion Rate Optimization Services: Complete Guide
                 </h4>
                 <p className="text-gray-600 text-sm">
                   Proven CRO strategies to turn more visitors into customers and boost your bottom line.

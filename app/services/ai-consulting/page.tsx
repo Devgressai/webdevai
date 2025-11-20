@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Translate AI into business outcomes. Web Vello’s AI consultants build roadmaps, select tech, and guide implementations that deliver measurable ROI.',
   keywords: ['ai consulting services', 'ai strategy firm', 'ai roadmap development', 'web vello ai', 'enterprise ai consulting'],
   alternates: {
-    canonical: 'https://webvello.com/services/ai-consulting',
+    canonical: 'https://www.webvello.com/services/ai-consulting',
   },
   openGraph: {
     title: 'AI Consulting Services | Web Vello',
     description: 'Work with Web Vello’s AI consultants to prioritize use cases, select platforms, and successfully deploy AI across your organization.',
-    url: 'https://webvello.com/services/ai-consulting',
+    url: 'https://www.webvello.com/services/ai-consulting',
     type: 'website',
   }
 }

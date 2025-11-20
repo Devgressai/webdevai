@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const defaultMetadata: Metadata = {
-  metadataBase: new URL('https://webvello.com'),
+  metadataBase: new URL('https://www.webvello.com'),
   title: {
     default: 'Web Vello - Digital Marketing Agency | AI SEO, Local SEO, Web Development',
     template: '%s | Web Vello'
@@ -19,7 +19,7 @@ export const defaultMetadata: Metadata = {
     'web design services',
     'marketing automation'
   ],
-  authors: [{ name: 'Web Vello', url: 'https://webvello.com' }],
+  authors: [{ name: 'Web Vello', url: 'https://www.webvello.com' }],
   creator: 'Web Vello',
   publisher: 'Web Vello',
   formatDetection: {
@@ -30,7 +30,7 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://webvello.com',
+    url: 'https://www.webvello.com',
     siteName: 'Web Vello',
     title: 'Web Vello - Digital Marketing Agency',
     description: 'Drive revenue growth with data-driven digital marketing. Get 300%+ traffic growth in 6 months.',
@@ -68,7 +68,7 @@ export const defaultMetadata: Metadata = {
     yahoo: 'REPLACE_WITH_YAHOO_VERIFICATION_CODE',
   },
   alternates: {
-    canonical: 'https://webvello.com',
+    canonical: 'https://www.webvello.com',
   },
   category: 'Digital Marketing',
   classification: 'Business',
@@ -101,7 +101,7 @@ export const serviceMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'Custom Web Development Services | Web Vello',
       description: 'Professional web development with modern technologies. Fast, mobile-optimized websites that convert visitors into customers.',
-      url: 'https://webvello.com/services/web-development',
+      url: 'https://www.webvello.com/services/web-development',
       images: [
         {
           url: '/og-web-development.jpg',
@@ -117,7 +117,7 @@ export const serviceMetadata: Record<string, Metadata> = {
       images: ['/og-web-development.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/services/web-development',
+      canonical: 'https://www.webvello.com/services/web-development',
     },
   },
   'wordpress-development': {
@@ -138,7 +138,7 @@ export const serviceMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'WordPress Development Services | Web Vello',
       description: 'Expert WordPress development including custom themes, plugins, and Elementor websites. Professional WordPress solutions for your business.',
-      url: 'https://webvello.com/services/wordpress-development',
+      url: 'https://www.webvello.com/services/wordpress-development',
       images: [
         {
           url: '/og-wordpress-development.jpg',
@@ -154,7 +154,7 @@ export const serviceMetadata: Record<string, Metadata> = {
       images: ['/og-wordpress-development.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/services/wordpress-development',
+      canonical: 'https://www.webvello.com/services/wordpress-development',
     },
   },
   'seo': {
@@ -175,7 +175,7 @@ export const serviceMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'SEO Services | AI-Powered Search Optimization',
       description: 'Professional SEO services with AI-powered strategies. Improve rankings and drive organic traffic with proven methods.',
-      url: 'https://webvello.com/services/seo',
+      url: 'https://www.webvello.com/services/seo',
       images: [
         {
           url: '/og-seo-services.jpg',
@@ -191,7 +191,7 @@ export const serviceMetadata: Record<string, Metadata> = {
       images: ['/og-seo-services.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/services/seo',
+      canonical: 'https://www.webvello.com/services/seo',
     },
   },
   'ai-seo': {
@@ -212,7 +212,7 @@ export const serviceMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'AI SEO Services | Revolutionary Search Optimization',
       description: 'Revolutionary AI-powered SEO that analyzes millions of data points. Get 300%+ traffic growth in 6 months.',
-      url: 'https://webvello.com/services/ai-seo',
+      url: 'https://www.webvello.com/services/ai-seo',
       images: [
         {
           url: '/og-ai-seo.jpg',
@@ -228,7 +228,7 @@ export const serviceMetadata: Record<string, Metadata> = {
       images: ['/og-ai-seo.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/services/ai-seo',
+      canonical: 'https://www.webvello.com/services/ai-seo',
     },
   },
   'local-seo': {
@@ -249,7 +249,7 @@ export const serviceMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'Local SEO Services | Dominate Local Search',
       description: 'Dominate local search results and drive foot traffic. Rank #1 in your local market with geo-targeted strategies.',
-      url: 'https://webvello.com/services/local-seo',
+      url: 'https://www.webvello.com/services/local-seo',
       images: [
         {
           url: '/og-local-seo.jpg',
@@ -265,7 +265,7 @@ export const serviceMetadata: Record<string, Metadata> = {
       images: ['/og-local-seo.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/services/local-seo',
+      canonical: 'https://www.webvello.com/services/local-seo',
     },
   },
   'ui-ux-design': {
@@ -286,7 +286,7 @@ export const serviceMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'UI/UX Design Services | User-Centered Design',
       description: 'User-centered design that creates seamless experiences and drives engagement. Focus on conversion optimization.',
-      url: 'https://webvello.com/services/ui-ux-design',
+      url: 'https://www.webvello.com/services/ui-ux-design',
       images: [
         {
           url: '/og-ui-ux-design.jpg',
@@ -302,7 +302,7 @@ export const serviceMetadata: Record<string, Metadata> = {
       images: ['/og-ui-ux-design.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/services/ui-ux-design',
+      canonical: 'https://www.webvello.com/services/ui-ux-design',
     },
   },
 }
@@ -324,7 +324,7 @@ export const pageMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'Contact Web Vello | Free Digital Marketing Strategy',
       description: 'Get your free digital marketing strategy session. Expert advice on SEO, web development, and conversion optimization.',
-      url: 'https://webvello.com/contact',
+      url: 'https://www.webvello.com/contact',
       images: [
         {
           url: '/og-contact.jpg',
@@ -340,7 +340,7 @@ export const pageMetadata: Record<string, Metadata> = {
       images: ['/og-contact.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/contact',
+      canonical: 'https://www.webvello.com/contact',
     },
   },
   'pricing': {
@@ -358,7 +358,7 @@ export const pageMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'Digital Marketing Pricing | Transparent Plans',
       description: 'Transparent pricing for digital marketing services. Flexible plans for SEO, web development, and marketing.',
-      url: 'https://webvello.com/pricing',
+      url: 'https://www.webvello.com/pricing',
       images: [
         {
           url: '/og-pricing.jpg',
@@ -374,7 +374,7 @@ export const pageMetadata: Record<string, Metadata> = {
       images: ['/og-pricing.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/pricing',
+      canonical: 'https://www.webvello.com/pricing',
     },
   },
   'about': {
@@ -392,7 +392,7 @@ export const pageMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'About Web Vello | Digital Marketing Agency',
       description: 'Learn about Web Vello\'s mission to drive business growth through data-driven digital marketing.',
-      url: 'https://webvello.com/about',
+      url: 'https://www.webvello.com/about',
       images: [
         {
           url: '/og-about.jpg',
@@ -408,7 +408,7 @@ export const pageMetadata: Record<string, Metadata> = {
       images: ['/og-about.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/about',
+      canonical: 'https://www.webvello.com/about',
     },
   },
   'case-studies': {
@@ -426,7 +426,7 @@ export const pageMetadata: Record<string, Metadata> = {
     openGraph: {
       title: 'Digital Marketing Case Studies | Real Results',
       description: 'Explore our digital marketing case studies and success stories. See real results from our campaigns.',
-      url: 'https://webvello.com/case-studies',
+      url: 'https://www.webvello.com/case-studies',
       images: [
         {
           url: '/og-case-studies.jpg',
@@ -442,7 +442,7 @@ export const pageMetadata: Record<string, Metadata> = {
       images: ['/og-case-studies.jpg'],
     },
     alternates: {
-      canonical: 'https://webvello.com/case-studies',
+      canonical: 'https://www.webvello.com/case-studies',
     },
   },
 }

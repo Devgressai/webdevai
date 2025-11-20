@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Need a conversion-ready website fast? Web Vello’s rapid web design sprints deliver polished, high-performing sites in days without sacrificing quality.',
   keywords: ['rapid web design', 'fast website launch', 'web design sprint', 'web vello rapid', 'quick website development'],
   alternates: {
-    canonical: 'https://webvello.com/services/rapid-web-design',
+    canonical: 'https://www.webvello.com/services/rapid-web-design',
   },
   openGraph: {
     title: 'Rapid Web Design | Web Vello',
     description: 'Launch a high-performing website in record time with Web Vello’s rapid design and development framework.',
-    url: 'https://webvello.com/services/rapid-web-design',
+    url: 'https://www.webvello.com/services/rapid-web-design',
     type: 'website',
   }
 }

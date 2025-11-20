@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Company Mesa: Professional SEO Services for Arizona Businesses',
     description: 'Professional SEO company services in Mesa, AZ. Expert SEO consultants help Mesa businesses increase organic traffic, improve rankings, and grow revenue.',
-    url: 'https://webvello.com/services/seo-company-mesa',
+    url: 'https://www.webvello.com/services/seo-company-mesa',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

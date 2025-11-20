@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   description: 'Specialized SEO services for government websites. WCAG compliant, security-focused, and proven results. Trusted by federal, state, and local agencies.',
   keywords: 'seo company for government website, government seo services, public sector seo, federal website optimization, state government seo',
   alternates: {
-    canonical: 'https://webvello.com/services/seo-company-government-website',
+    canonical: 'https://www.webvello.com/services/seo-company-government-website',
   },
   openGraph: {
     title: 'SEO Company for Government Website | Secure & Compliant',
     description: 'Specialized SEO services for government websites. WCAG compliant, security-focused, and proven results for federal, state, and local agencies.',
-    url: 'https://webvello.com/services/seo-company-government-website',
+    url: 'https://www.webvello.com/services/seo-company-government-website',
     type: 'website',
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web Vello Government SEO Services',

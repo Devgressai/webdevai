@@ -39,11 +39,11 @@ export function SEOHead({
     "@type": "WebPage",
     "name": title,
     "description": description,
-    "url": canonical || `https://webvello.com${typeof window !== 'undefined' ? window.location.pathname : ''}`,
+    "url": canonical || `https://www.webvello.com${typeof window !== 'undefined' ? window.location.pathname : ''}`,
     "mainEntity": {
       "@type": "Organization",
       "name": "Web Vello",
-      "url": "https://webvello.com"
+      "url": "https://www.webvello.com"
     }
   }
 
@@ -73,7 +73,7 @@ export function SEOHead({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="Web Vello" />
-      <meta property="og:url" content={canonical || `https://webvello.com${typeof window !== 'undefined' ? window.location.pathname : ''}`} />
+      <meta property="og:url" content={canonical || `https://www.webvello.com${typeof window !== 'undefined' ? window.location.pathname : ''}`} />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card */}

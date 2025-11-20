@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Website Design in Detroit: Complete Guide for 2025',
     description: 'Professional website design services in Detroit. Modern, responsive websites that convert visitors into customers.',
-    url: 'https://webvello.com/blog/website-design-in-detroit',
+    url: 'https://www.webvello.com/blog/website-design-in-detroit',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

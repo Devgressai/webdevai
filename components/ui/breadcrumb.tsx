@@ -18,7 +18,7 @@ export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
     '@type': 'ListItem',
     position: idx + 1,
     name: item.label,
-    item: item.href ? `https://webvello.com${item.href}` : undefined,
+    item: item.href ? `https://www.webvello.com${item.href}` : undefined,
   }))
 
   return (

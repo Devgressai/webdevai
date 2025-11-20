@@ -59,8 +59,8 @@ export function generateOrganizationWithReviewsSchema(testimonials: TestimonialD
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Web Vello",
-    "url": "https://webvello.com",
-    "logo": "https://webvello.com/logo.png",
+    "url": "https://www.webvello.com",
+    "logo": "https://www.webvello.com/logo.png",
     "description": "Professional AI-powered SEO, web development, and digital marketing services",
     "address": {
       "@type": "PostalAddress",
@@ -120,7 +120,7 @@ export function generateServiceSchema(service: ServiceData, testimonials?: Testi
     "provider": {
       "@type": "Organization",
       "name": "Web Vello",
-      "url": "https://webvello.com"
+      "url": "https://www.webvello.com"
     },
     "areaServed": {
       "@type": "Country",
@@ -158,7 +158,7 @@ export function generateLocalBusinessSchema(city: CityData) {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": `Web Vello - ${city.city}, ${city.stateCode}`,
-    "url": `https://webvello.com/${city.city.toLowerCase().replace(/\s+/g, '-')}-${city.stateCode.toLowerCase()}`,
+    "url": `https://www.webvello.com/${city.city.toLowerCase().replace(/\s+/g, '-')}-${city.stateCode.toLowerCase()}`,
     "telephone": "+1-737-888-5723",
     "email": "hello@webvello.com",
     "address": {
@@ -223,7 +223,7 @@ export function generateArticleSchema(article: {
       "name": "Web Vello",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://webvello.com/logo.png"
+        "url": "https://www.webvello.com/logo.png"
       }
     },
     "mainEntityOfPage": {
@@ -260,12 +260,12 @@ export function generateWebsiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Web Vello",
-    "url": "https://webvello.com",
+    "url": "https://www.webvello.com",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://webvello.com/search?q={search_term_string}"
+        "urlTemplate": "https://www.webvello.com/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -295,8 +295,8 @@ export function generateServicePageSchema(
     generateServiceSchema(service, testimonials),
     generateFAQSchema(faqs),
     generateBreadcrumbSchema([
-      { name: "Home", url: "https://webvello.com" },
-      { name: "Services", url: "https://webvello.com/services" },
+      { name: "Home", url: "https://www.webvello.com" },
+      { name: "Services", url: "https://www.webvello.com/services" },
       { name: service.name, url: service.url }
     ])
   ]
@@ -310,9 +310,9 @@ export function generateCityPageSchema(city: CityData, faqs: FAQData[]): any[] {
     generateLocalBusinessSchema(city),
     generateFAQSchema(faqs),
     generateBreadcrumbSchema([
-      { name: "Home", url: "https://webvello.com" },
-      { name: "Locations", url: "https://webvello.com/locations" },
-      { name: `${city.city}, ${city.stateCode}`, url: `https://webvello.com/${city.city.toLowerCase().replace(/\s+/g, '-')}-${city.stateCode.toLowerCase()}` }
+      { name: "Home", url: "https://www.webvello.com" },
+      { name: "Locations", url: "https://www.webvello.com/locations" },
+      { name: `${city.city}, ${city.stateCode}`, url: `https://www.webvello.com/${city.city.toLowerCase().replace(/\s+/g, '-')}-${city.stateCode.toLowerCase()}` }
     ])
   ]
 }
@@ -336,8 +336,8 @@ export function generateBlogPostSchema(
   const schemas: any[] = [
     generateArticleSchema(article),
     generateBreadcrumbSchema([
-      { name: "Home", url: "https://webvello.com" },
-      { name: "Blog", url: "https://webvello.com/blog" },
+      { name: "Home", url: "https://www.webvello.com" },
+      { name: "Blog", url: "https://www.webvello.com/blog" },
       { name: article.title, url: article.url }
     ])
   ]

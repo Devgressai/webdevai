@@ -1,7 +1,48 @@
+import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, TrendingUp, Globe, Code, Users, Star, Target, Zap, BarChart3, Building2, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'Business Solutions That Deliver Results | Web Vello',
+  description: 'Proven solutions for website ROI, lead generation, Google visibility, conversion optimization, and more. Transform your business challenges into measurable growth.',
+  keywords: [
+    'business solutions',
+    'website ROI optimization',
+    'lead generation solutions',
+    'Google visibility',
+    'conversion optimization',
+    'traffic recovery',
+    'agency growth',
+    'digital marketing solutions'
+  ],
+  openGraph: {
+    title: 'Business Solutions That Deliver Results | Web Vello',
+    description: 'Proven solutions for website ROI, lead generation, Google visibility, and conversion optimization. Transform challenges into growth.',
+    url: 'https://webvello.com/solutions',
+    siteName: 'Web Vello',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://webvello.com/og-solutions.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Business Solutions - Web Vello',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Business Solutions That Deliver Results | Web Vello',
+    description: 'Proven solutions for website ROI, lead generation, Google visibility, and conversion optimization.',
+    images: ['https://webvello.com/og-solutions.jpg'],
+  },
+  alternates: {
+    canonical: 'https://webvello.com/solutions',
+  },
+}
 
 const solutions = [
   {
@@ -79,6 +120,19 @@ const colorClasses = {
   orange: "bg-orange-100 text-orange-600",
   indigo: "bg-indigo-100 text-indigo-600",
   red: "bg-red-100 text-red-600"
+}
+
+// Map solution titles to actual page slugs
+function getSolutionSlug(title: string): string {
+  const slugMap: { [key: string]: string } = {
+    "Website ROI Optimization": "/solutions/website-roi",
+    "Website Lead Generation": "/solutions/website-leads",
+    "Google Visibility & Rankings": "/solutions/google-visibility",
+    "Website Conversion Optimization": "/solutions/website-conversion",
+    "Agency Results & Growth": "/solutions/agency-results",
+    "Declining Traffic Recovery": "/solutions/declining-traffic"
+  }
+  return slugMap[title] || `/solutions/${title.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, '')}`
 }
 
 export default function SolutionsPage() {
@@ -178,7 +232,7 @@ export default function SolutionsPage() {
                 </div>
 
                 <Button asChild className="w-full">
-                  <Link href={`/solutions/${solution.title.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, '')}`}>
+                  <Link href={getSolutionSlug(solution.title)}>
                     Get This Solution
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -235,7 +289,7 @@ export default function SolutionsPage() {
                 </div>
 
                 <Button variant="outline" asChild className="w-full">
-                  <Link href={`/solutions/${solution.title.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, '')}`}>
+                  <Link href={getSolutionSlug(solution.title)}>
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

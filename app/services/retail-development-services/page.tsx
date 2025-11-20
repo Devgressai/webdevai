@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: 'Complete retail development services for modern commerce. Custom e-commerce platforms, POS integration & omnichannel solutions.',
   keywords: 'retail development services, e-commerce development, retail software, pos integration, omnichannel retail, retail technology',
   alternates: {
-    canonical: 'https://webvello.com/services/retail-development-services',
+    canonical: 'https://www.webvello.com/services/retail-development-services',
   },
   openGraph: {
     title: 'Retail Development Services | E-commerce Solutions',
     description: 'Complete retail development services for modern commerce. Custom e-commerce platforms, POS integration & omnichannel solutions.',
-    url: 'https://webvello.com/services/retail-development-services',
+    url: 'https://www.webvello.com/services/retail-development-services',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Retail Development Services' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Retail Development Services' }],
   }
 }
 

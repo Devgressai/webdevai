@@ -94,12 +94,12 @@ export async function generateMetadata({ params }: CityIndustryPageProps): Promi
     openGraph: {
       title,
       description,
-      url: `https://webvello.com/${params.city}/industry/${params.industry}`,
+      url: `https://www.webvello.com/${params.city}/industry/${params.industry}`,
       siteName: 'Web Vello',
       locale: 'en_US',
       type: 'website',
       images: [{
-        url: `https://webvello.com/og-industry-${params.industry}.jpg`,
+        url: `https://www.webvello.com/og-industry-${params.industry}.jpg`,
         width: 1200,
         height: 630,
         alt: `${industry.name} Digital Services in ${city.fullName}`
@@ -111,7 +111,7 @@ export async function generateMetadata({ params }: CityIndustryPageProps): Promi
       description,
     },
     alternates: {
-      canonical: `https://webvello.com/${params.city}/industry/${params.industry}`,
+      canonical: `https://www.webvello.com/${params.city}/industry/${params.industry}`,
     },
     robots: {
       index: true,
@@ -156,8 +156,8 @@ export default function CityIndustryPage({ params }: CityIndustryPageProps) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     'name': 'Web Vello',
-    'url': 'https://webvello.com',
-    'logo': 'https://webvello.com/logo.png',
+    'url': 'https://www.webvello.com',
+    'logo': 'https://www.webvello.com/logo.png',
     'description': `Leading digital agency specializing in ${industry.name.toLowerCase()} businesses`,
     'address': {
       '@type': 'PostalAddress',
@@ -185,7 +185,7 @@ export default function CityIndustryPage({ params }: CityIndustryPageProps) {
     'provider': {
       '@type': 'Organization',
       'name': 'Web Vello',
-      'url': 'https://webvello.com'
+      'url': 'https://www.webvello.com'
     },
     'areaServed': {
       '@type': 'City',
@@ -221,25 +221,25 @@ export default function CityIndustryPage({ params }: CityIndustryPageProps) {
         '@type': 'ListItem',
         'position': 1,
         'name': 'Home',
-        'item': 'https://webvello.com'
+        'item': 'https://www.webvello.com'
       },
       {
         '@type': 'ListItem',
         'position': 2,
         'name': 'Locations',
-        'item': 'https://webvello.com/locations'
+        'item': 'https://www.webvello.com/locations'
       },
       {
         '@type': 'ListItem',
         'position': 3,
         'name': city.fullName,
-        'item': `https://webvello.com/${params.city}`
+        'item': `https://www.webvello.com/${params.city}`
       },
       {
         '@type': 'ListItem',
         'position': 4,
         'name': industry.name,
-        'item': `https://webvello.com/${params.city}/industry/${params.industry}`
+        'item': `https://www.webvello.com/${params.city}/industry/${params.industry}`
       }
     ]
   }
@@ -296,7 +296,7 @@ export default function CityIndustryPage({ params }: CityIndustryPageProps) {
     '@type': 'ProfessionalService',
     'name': `Web Vello - ${industry.name} Digital Agency`,
     'description': `Specialized digital marketing and web development for ${industry.name.toLowerCase()} businesses in ${city.fullName}`,
-    'url': `https://webvello.com/${params.city}/industry/${params.industry}`,
+    'url': `https://www.webvello.com/${params.city}/industry/${params.industry}`,
     'telephone': '+1-888-555-VELLO',
     'priceRange': '$$$',
     'address': {

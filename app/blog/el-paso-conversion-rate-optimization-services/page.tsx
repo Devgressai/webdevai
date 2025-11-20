@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'El Paso Conversion Rate Optimization Services: Maximize Your Border Business ROI 2025',
     description: 'Professional conversion rate optimization services in El Paso. Increase your website\'s conversion rate by 25-40% with our data-driven CRO strategies.',
-    url: 'https://webvello.com/blog/el-paso-conversion-rate-optimization-services',
+    url: 'https://www.webvello.com/blog/el-paso-conversion-rate-optimization-services',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

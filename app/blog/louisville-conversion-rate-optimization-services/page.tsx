@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Louisville Conversion Rate Optimization Services: Boost Your Business ROI in 2025',
     description: 'Professional conversion rate optimization services in Louisville. Increase your website\'s conversion rate by 25-40% with our data-driven CRO strategies.',
-    url: 'https://webvello.com/blog/louisville-conversion-rate-optimization-services',
+    url: 'https://www.webvello.com/blog/louisville-conversion-rate-optimization-services',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',
@@ -556,7 +556,7 @@ export default function LouisvilleCROBlogPost() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Website Design in Detroit: Complete Guide</h3>
               <p className="text-gray-600 text-sm">Everything Detroit businesses need to know about professional website design.</p>
             </Link>
-            <Link href="/blog/conversion-rate-optimization-guide" className="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+            <Link href="/blog/detroit-conversion-rate-optimization-services" className="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Complete CRO Guide for Small Businesses</h3>
               <p className="text-gray-600 text-sm">Step-by-step conversion rate optimization strategies for small businesses.</p>
             </Link>

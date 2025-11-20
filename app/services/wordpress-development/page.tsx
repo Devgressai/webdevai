@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Upgrade your WordPress site with Web Vello’s senior developers. We craft custom themes, secure infrastructures, and performance-tuned experiences.',
   keywords: ['wordpress development agency', 'custom wordpress theme', 'wordpress performance optimization', 'web vello wordpress', 'wordpress security services'],
   alternates: {
-    canonical: 'https://webvello.com/services/wordpress-development',
+    canonical: 'https://www.webvello.com/services/wordpress-development',
   },
   openGraph: {
     title: 'WordPress Development Services | Web Vello',
     description: 'Partner with Web Vello to design, build, and optimize WordPress sites that are fast, secure, and conversion-focused.',
-    url: 'https://webvello.com/services/wordpress-development',
+    url: 'https://www.webvello.com/services/wordpress-development',
     type: 'website',
   }
 }
@@ -128,7 +128,7 @@ export default function WordPressDevelopmentPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             serviceType: 'WordPress Development',
-            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://webvello.com', logo: 'https://webvello.com/logo.png' },
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://www.webvello.com', logo: 'https://www.webvello.com/logo.png' },
             areaServed: 'US',
             audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
             brand: { '@type': 'Brand', name: 'Web Vello' }

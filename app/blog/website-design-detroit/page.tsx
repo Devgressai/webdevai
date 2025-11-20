@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     tags: ['website design', 'Detroit', 'web design', 'business', 'professional'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/website-design-detroit',
+    canonical: 'https://www.webvello.com/blog/website-design-detroit',
   },
 }
 

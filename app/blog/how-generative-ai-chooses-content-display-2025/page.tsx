@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     tags: ['Generative AI', 'Content Ranking', 'AI Algorithms', 'Content Selection'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/how-generative-ai-chooses-content-display-2025',
+    canonical: 'https://www.webvello.com/blog/how-generative-ai-chooses-content-display-2025',
   },
 }
 
@@ -37,21 +37,21 @@ export default function HowGenerativeAIChoosesContentPage() {
             "author": {
               "@type": "Organization",
               "name": "Web Vello",
-              "url": "https://webvello.com"
+              "url": "https://www.webvello.com"
             },
             "publisher": {
               "@type": "Organization",
               "name": "Web Vello",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://webvello.com/logo.png"
+                "url": "https://www.webvello.com/logo.png"
               }
             },
             "datePublished": "2025-01-15T00:00:00.000Z",
             "dateModified": "2025-01-15T00:00:00.000Z",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://webvello.com/blog/how-generative-ai-chooses-content-display-2025"
+              "@id": "https://www.webvello.com/blog/how-generative-ai-chooses-content-display-2025"
             }
           })
         }}

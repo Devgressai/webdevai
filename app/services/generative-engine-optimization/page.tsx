@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   description: 'Prepare your brand for AI-driven search. Web Vello’s GEO program optimizes content for AI engines, chat results, and multimodal generative experiences.',
   keywords: ['generative engine optimization', 'geo services', 'ai search optimization', 'web vello geo', 'ai overview optimization'],
   alternates: {
-    canonical: 'https://webvello.com/services/generative-engine-optimization',
+    canonical: 'https://www.webvello.com/services/generative-engine-optimization',
   },
   openGraph: {
     title: 'Generative Engine Optimization | Web Vello',
     description: 'Ensure your brand appears in AI-powered SERPs with Web Vello’s GEO strategy for structured data, intent modeling, and conversational relevance.',
-    url: 'https://webvello.com/services/generative-engine-optimization',
+    url: 'https://www.webvello.com/services/generative-engine-optimization',
     type: 'website',
   }
 }

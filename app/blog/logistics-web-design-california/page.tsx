@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     tags: ['logistics', 'California', 'web design', 'freight', 'shipping'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/logistics-web-design-california',
+    canonical: 'https://www.webvello.com/blog/logistics-web-design-california',
   },
 }
 

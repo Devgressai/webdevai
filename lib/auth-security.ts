@@ -144,7 +144,7 @@ export function isSameOrigin(request: NextRequest): boolean {
 
   // In production, verify origin matches your domain
   if (process.env.NODE_ENV === 'production') {
-    const allowedOrigin = process.env.NEXT_PUBLIC_BASE_URL || 'https://webvello.com'
+    const allowedOrigin = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.webvello.com'
     
     // Check origin if present
     if (origin) {

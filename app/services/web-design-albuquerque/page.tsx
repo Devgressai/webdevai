@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Design in Albuquerque: Professional Website Design Services NM',
     description: 'Professional web design services in Albuquerque, NM. Expert web designers create custom, responsive websites for Albuquerque businesses.',
-    url: 'https://webvello.com/services/web-design-albuquerque',
+    url: 'https://www.webvello.com/services/web-design-albuquerque',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

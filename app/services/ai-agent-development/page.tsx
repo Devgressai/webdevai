@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Deploy intelligent AI agents tailored to your business. Web Vello designs, trains, and integrates autonomous agents that streamline operations and improve response times.',
   keywords: ['ai agent development', 'autonomous agents', 'ai workflow automation', 'web vello ai agents', 'business process automation'],
   alternates: {
-    canonical: 'https://webvello.com/services/ai-agent-development',
+    canonical: 'https://www.webvello.com/services/ai-agent-development',
   },
   openGraph: {
     title: 'AI Agent Development | Web Vello',
     description: 'Work with Web Vello to build custom AI agents that handle support, sales, and operational tasks with human-level intelligence.',
-    url: 'https://webvello.com/services/ai-agent-development',
+    url: 'https://www.webvello.com/services/ai-agent-development',
     type: 'website',
   }
 }

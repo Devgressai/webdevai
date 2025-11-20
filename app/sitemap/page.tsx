@@ -1,8 +1,19 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'HTML Sitemap',
-  description: 'Browse all key pages on Web Vello',
+export const metadata: Metadata = {
+  title: 'HTML Sitemap | All Pages on Web Vello',
+  description: 'Browse all key pages on Web Vello including services, blog posts, case studies, and location-specific pages. Find everything you need in one place.',
+  keywords: 'sitemap, site map, website pages, Web Vello pages, site navigation, all pages',
+  openGraph: {
+    title: 'HTML Sitemap | Web Vello',
+    description: 'Browse all key pages on Web Vello including services, blog posts, case studies, and location-specific pages.',
+    url: 'https://webvello.com/sitemap',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://webvello.com/sitemap',
+  },
 }
 
 export default async function HtmlSitemap() {

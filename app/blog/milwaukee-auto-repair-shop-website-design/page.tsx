@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     tags: ['auto repair', 'Milwaukee', 'website design', 'automotive', 'business'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/milwaukee-auto-repair-shop-website-design',
+    canonical: 'https://www.webvello.com/blog/milwaukee-auto-repair-shop-website-design',
   },
 }
 

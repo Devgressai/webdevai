@@ -71,11 +71,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       'lead generation',
       'conversion optimization'
     ],
-    alternates: { canonical: `https://webvello.com/${params.city}/industry/${params.industry}/${params.service}` },
+    alternates: { canonical: `https://www.webvello.com/${params.city}/industry/${params.industry}/${params.service}` },
     openGraph: {
       title,
       description,
-      url: `https://webvello.com/${params.city}/industry/${params.industry}/${params.service}`,
+      url: `https://www.webvello.com/${params.city}/industry/${params.industry}/${params.service}`,
       siteName: 'Web Vello',
       type: 'website'
     },
@@ -225,19 +225,19 @@ export default async function CityIndustryServicePage({ params }: { params: Para
                 "@type": "ListItem",
                 "position": 1,
                 "name": city.name,
-                "item": `https://webvello.com/${params.city}`
+                "item": `https://www.webvello.com/${params.city}`
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": `Industry: ${industry.name}`,
-                "item": `https://webvello.com/${params.city}/industry/${params.industry}`
+                "item": `https://www.webvello.com/${params.city}/industry/${params.industry}`
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": service.name,
-                "item": `https://webvello.com/${params.city}/industry/${params.industry}/${params.service}`
+                "item": `https://www.webvello.com/${params.city}/industry/${params.industry}/${params.service}`
                   }
                 ]
               },
@@ -248,7 +248,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
                 "provider": {
                   "@type": "Organization",
                   "name": "Web Vello",
-                  "url": "https://webvello.com",
+                  "url": "https://www.webvello.com",
                   "address": {
                     "@type": "PostalAddress",
                     "addressLocality": city.name,

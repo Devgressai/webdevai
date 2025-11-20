@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Vello Blog | Digital Marketing & Web Development Insights',
     description: 'Expert insights on web development, digital marketing, and AI consulting. Stay ahead with the latest trends and strategies.',
-    url: 'https://webvello.com/blog',
+    url: 'https://www.webvello.com/blog',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'website',

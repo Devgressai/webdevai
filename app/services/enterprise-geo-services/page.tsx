@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Use data-driven location intelligence to expand faster. Web Vello’s enterprise GEO team analyzes markets, territories, and site selection with AI-backed insights.',
   keywords: ['enterprise geo services', 'location intelligence consulting', 'market expansion strategy', 'web vello geo', 'site selection analytics'],
   alternates: {
-    canonical: 'https://webvello.com/services/enterprise-geo-services',
+    canonical: 'https://www.webvello.com/services/enterprise-geo-services',
   },
   openGraph: {
     title: 'Enterprise GEO Services | Web Vello',
     description: 'Plan expansions with confidence using Web Vello’s AI-powered location intelligence and market analysis services.',
-    url: 'https://webvello.com/services/enterprise-geo-services',
+    url: 'https://www.webvello.com/services/enterprise-geo-services',
     type: 'website',
   }
 }

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Refresh your outdated website with Web Vello’s redesign team. We preserve SEO equity, improve performance, and launch conversion-focused experiences.',
   keywords: ['website redesign agency', 'website refresh services', 'web vello redesign', 'conversion focused redesign', 'modernize website'],
   alternates: {
-    canonical: 'https://webvello.com/services/website-redesign',
+    canonical: 'https://www.webvello.com/services/website-redesign',
   },
   openGraph: {
     title: 'Website Redesign Services | Web Vello',
     description: 'Partner with Web Vello to transform your site into a high-performing, modern experience that accelerates growth.',
-    url: 'https://webvello.com/services/website-redesign',
+    url: 'https://www.webvello.com/services/website-redesign',
     type: 'website',
   }
 }

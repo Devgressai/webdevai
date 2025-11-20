@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Maximize ChatGPT ROI. Web Vello engineers prompts, workflows, and QA systems that produce on-brand, high-quality AI output for content, support, and operations.',
   keywords: ['chatgpt optimization', 'prompt engineering services', 'chatgpt automation', 'web vello chatgpt', 'chatgpt workflow design'],
   alternates: {
-    canonical: 'https://webvello.com/services/chatgpt-optimization',
+    canonical: 'https://www.webvello.com/services/chatgpt-optimization',
   },
   openGraph: {
     title: 'ChatGPT Optimization | Web Vello',
     description: 'Partner with Web Vello to optimize prompts, integrate ChatGPT into workflows, and maintain consistent, accurate AI output.',
-    url: 'https://webvello.com/services/chatgpt-optimization',
+    url: 'https://www.webvello.com/services/chatgpt-optimization',
     type: 'website',
   }
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Detroit Conversion Rate Optimization Services: Maximize Your Motor City Business ROI 2025',
     description: 'Professional conversion rate optimization services in Detroit. Increase your website\'s conversion rate by 25-40% with our data-driven CRO strategies.',
-    url: 'https://webvello.com/blog/detroit-conversion-rate-optimization-services',
+    url: 'https://www.webvello.com/blog/detroit-conversion-rate-optimization-services',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

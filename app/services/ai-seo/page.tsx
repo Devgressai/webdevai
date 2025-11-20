@@ -11,17 +11,17 @@ export const metadata: Metadata = {
   description: 'Leverage AI-powered SEO for 300%+ traffic growth. Predictive keyword research, content optimization & automated performance tracking.',
   keywords: ['ai seo services', 'machine learning seo agency', 'ai keyword research', 'predictive seo analytics', 'ai content optimization'],
   alternates: {
-    canonical: 'https://webvello.com/services/ai-seo',
+    canonical: 'https://www.webvello.com/services/ai-seo',
   },
   openGraph: {
     title: 'AI SEO Agency | Web Vello',
     description: 'Combine AI-driven insights with senior strategists to dominate search results, launch intelligent content, and outrank category leaders.',
-    url: 'https://webvello.com/services/ai-seo',
+    url: 'https://www.webvello.com/services/ai-seo',
     type: 'website',
   
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web Vello Services',
@@ -155,7 +155,7 @@ const serviceSchema = generateServicePageSchema(
   {
     name: "AI-Powered SEO Services",
     description: "Leverage cutting-edge AI technology to achieve 300%+ organic traffic growth with predictive keyword research, intelligent content optimization, and automated performance tracking.",
-    url: "https://webvello.com/services/ai-seo",
+    url: "https://www.webvello.com/services/ai-seo",
     features: [
       "AI-Powered Keyword Research",
       "Intelligent Content Optimization",

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Seattle Software Development: Complete Guide 2025',
     description: 'Complete guide to Seattle software development in 2025. Learn about the tech ecosystem, top companies, development trends, and how to succeed in Seattle\'s competitive software market.',
-    url: 'https://webvello.com/blog/seattle-software-development-guide',
+    url: 'https://www.webvello.com/blog/seattle-software-development-guide',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

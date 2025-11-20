@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   description: 'Increase rankings, traffic & revenue with expert SEO. Technical audits, on-page optimization, content strategy & link building for predictable growth.',
   keywords: ['seo agency', 'technical seo services', 'on-page optimization', 'link building services', 'web vello seo'],
   alternates: {
-    canonical: 'https://webvello.com/services/seo',
+    canonical: 'https://www.webvello.com/services/seo',
   },
   openGraph: {
     title: 'Professional SEO Services & Experts | Web Vello',
     description: 'Increase rankings, traffic & revenue with expert SEO. Technical audits, on-page optimization, content strategy & link building.',
-    url: 'https://webvello.com/services/seo',
+    url: 'https://www.webvello.com/services/seo',
     type: 'website',
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web Vello SEO Services',
@@ -355,7 +355,7 @@ export default function SEOPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             serviceType: 'SEO Services',
-            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://webvello.com', logo: 'https://webvello.com/logo.png' },
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://www.webvello.com', logo: 'https://www.webvello.com/logo.png' },
             areaServed: 'US',
             audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
             brand: { '@type': 'Brand', name: 'Web Vello' }

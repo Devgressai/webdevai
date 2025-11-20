@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Local SEO Checklist: 25 Steps to Dominate Local Search in 2024',
     description: 'Complete local SEO checklist with 25 actionable steps to dominate local search results. Boost your local visibility and attract more customers.',
-    url: 'https://webvello.com/blog/local-seo-checklist-25-steps',
+    url: 'https://www.webvello.com/blog/local-seo-checklist-25-steps',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',
@@ -415,13 +415,13 @@ export default function BlogPost() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/google-my-business-optimization-guide" className="group">
+            <Link href="/blog/local-seo-guide-sacramento-businesses" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
-                  Google My Business Optimization: Complete Guide
+                  Local SEO Guide: Complete Optimization Strategies
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  Master Google My Business with this comprehensive optimization guide.
+                  Master local SEO with this comprehensive guide to Google My Business and local search optimization.
                 </p>
               </div>
             </Link>

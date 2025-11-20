@@ -1,7 +1,39 @@
+import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, Zap, Globe, Code, Users, BarChart3, TrendingUp, Target } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'Digital Marketing Services | AI SEO, Web Development & More',
+  description: 'Comprehensive digital marketing services including AI-powered SEO, local SEO, web development, UI/UX design, and software development. Drive 300%+ traffic growth with our proven strategies.',
+  keywords: 'digital marketing services, AI SEO services, web development services, local SEO, UI/UX design, software development, SEO agency, marketing services',
+  openGraph: {
+    title: 'Digital Marketing Services | Web Vello',
+    description: 'Comprehensive digital marketing services including AI-powered SEO, web development, and more. Drive 300%+ traffic growth with proven strategies.',
+    url: 'https://webvello.com/services',
+    siteName: 'Web Vello',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://webvello.com/og-services.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Digital Marketing Services - Web Vello',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Digital Marketing Services | Web Vello',
+    description: 'Comprehensive digital marketing services including AI-powered SEO, web development, and more.',
+    images: ['https://webvello.com/og-services.jpg'],
+  },
+  alternates: {
+    canonical: 'https://webvello.com/services',
+  },
+}
 
 const services = [
   {

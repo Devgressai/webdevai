@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: 'Web Application Development Company | Custom Software',
   description: 'Enterprise web application development. Scalable, secure custom software solutions for modern businesses.',
   keywords: 'web application development company, custom web app development, enterprise software development, saas development',
-  alternates: { canonical: 'https://webvello.com/services/web-application-development-company' },
+  alternates: { canonical: 'https://www.webvello.com/services/web-application-development-company' },
   openGraph: {
     title: 'Web Application Development Company | Custom Software',
     description: 'Enterprise web application development. Scalable, secure custom software solutions for modern businesses.',
-    url: 'https://webvello.com/services/web-application-development-company',
+    url: 'https://www.webvello.com/services/web-application-development-company',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Web Application Development' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Web Application Development' }],
   }
 }
 

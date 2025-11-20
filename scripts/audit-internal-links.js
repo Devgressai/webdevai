@@ -10,7 +10,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Configuration
-const BASE_URL = 'https://webvello.com';
+const BASE_URL = 'https://www.webvello.com';
 const OUTPUT_FILE = 'internal-link-audit.json';
 const EXCLUDED_PATHS = [
   '/api/',

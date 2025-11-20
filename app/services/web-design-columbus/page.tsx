@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Columbus Ohio Web Designer: Professional Web Design Services OH',
     description: 'Professional web design services in Columbus, OH. Expert web designers create custom, responsive websites for Columbus businesses.',
-    url: 'https://webvello.com/services/web-design-columbus',
+    url: 'https://www.webvello.com/services/web-design-columbus',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

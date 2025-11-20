@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Arizona Organic SEO Growth: Complete Strategy Guide 2025',
     description: 'Complete guide to Arizona organic SEO growth in 2025. Learn about local SEO strategies, content marketing, and proven techniques to dominate Arizona search results.',
-    url: 'https://webvello.com/blog/arizona-organic-seo-growth-strategy',
+    url: 'https://www.webvello.com/blog/arizona-organic-seo-growth-strategy',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

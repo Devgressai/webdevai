@@ -49,7 +49,7 @@ export function ServiceSchema({
     "provider": {
       "@type": "Organization",
       "name": "Web Vello",
-      "url": "https://webvello.com"
+      "url": "https://www.webvello.com"
     },
     "areaServed": city ? {
       "@type": "City",
@@ -106,7 +106,7 @@ export function ArticleSchema({
       "name": "Web Vello",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://webvello.com/logo.png"
+        "url": "https://www.webvello.com/logo.png"
       }
     },
     "mainEntityOfPage": {

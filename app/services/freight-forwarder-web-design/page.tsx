@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: 'Specialized web design for freight forwarders and logistics companies. Quote systems, tracking integration & lead generation.',
   keywords: 'freight forwarder web design, logistics website design, freight website development, shipping company web design',
   alternates: {
-    canonical: 'https://webvello.com/services/freight-forwarder-web-design',
+    canonical: 'https://www.webvello.com/services/freight-forwarder-web-design',
   },
   openGraph: {
     title: 'Freight Forwarder Web Design | Logistics Website Development',
     description: 'Specialized web design for freight forwarders and logistics companies. Quote systems, tracking integration & lead generation.',
-    url: 'https://webvello.com/services/freight-forwarder-web-design',
+    url: 'https://www.webvello.com/services/freight-forwarder-web-design',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Freight Forwarder Web Design' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Freight Forwarder Web Design' }],
   }
 }
 

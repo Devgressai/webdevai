@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   description: 'Convert more visitors into qualified leads. Web Vello’s CRO specialists optimize landing pages, forms, and funnels to improve pipeline and ROI.',
   keywords: ['cro lead generation', 'conversion rate optimization services', 'lead gen optimization', 'web vello cro', 'landing page optimization'],
   alternates: {
-    canonical: 'https://webvello.com/services/cro-lead-generation',
+    canonical: 'https://www.webvello.com/services/cro-lead-generation',
   },
   openGraph: {
     title: 'Lead Generation CRO Services | Web Vello',
     description: 'Work with Web Vello to audit funnels, run experiments, and lift conversion rates across your lead-generation journey.',
-    url: 'https://webvello.com/services/cro-lead-generation',
+    url: 'https://www.webvello.com/services/cro-lead-generation',
     type: 'website',
   }
 }

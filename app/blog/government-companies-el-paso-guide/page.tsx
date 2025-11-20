@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     tags: ['government', 'El Paso', 'federal agencies', 'public sector', 'government contractors'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/government-companies-el-paso-guide',
+    canonical: 'https://www.webvello.com/blog/government-companies-el-paso-guide',
   },
 }
 

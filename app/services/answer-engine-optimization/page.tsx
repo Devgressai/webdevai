@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: 'Capture visibility in AI assistants and answer engines. Web Vello structures content to deliver precise, authoritative answers across conversational search.',
   keywords: ['answer engine optimization', 'aeo services', 'ai assistant optimization', 'web vello aeo', 'conversational seo'],
   alternates: {
-    canonical: 'https://webvello.com/services/answer-engine-optimization',
+    canonical: 'https://www.webvello.com/services/answer-engine-optimization',
   },
   openGraph: {
     title: 'Answer Engine Optimization | Web Vello',
     description: 'Optimize content for AI answers and assistants with Web Vello’s structured response strategies and question-based content.',
-    url: 'https://webvello.com/services/answer-engine-optimization',
+    url: 'https://www.webvello.com/services/answer-engine-optimization',
     type: 'website',
   }
 }

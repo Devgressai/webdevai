@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: 'Custom website design for surgeons in Austin, TX. HIPAA-compliant, conversion-focused designs that attract more patients.',
   keywords: 'surgeon website design austin, medical web design austin, healthcare website austin, surgeon marketing austin, plastic surgeon website',
   alternates: {
-    canonical: 'https://webvello.com/services/surgeon-web-design-austin',
+    canonical: 'https://www.webvello.com/services/surgeon-web-design-austin',
   },
   openGraph: {
     title: 'Surgeon Web Design Austin | Medical Website Development',
     description: 'Custom website design for surgeons in Austin, TX. HIPAA-compliant, conversion-focused designs that attract more patients.',
-    url: 'https://webvello.com/services/surgeon-web-design-austin',
+    url: 'https://www.webvello.com/services/surgeon-web-design-austin',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Surgeon Web Design Austin' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Surgeon Web Design Austin' }],
   }
 }
 

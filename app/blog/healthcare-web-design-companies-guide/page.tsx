@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Healthcare Web Design Companies: What to Look For in 2025',
     description: 'Complete guide to choosing healthcare web design companies in 2025. Learn about HIPAA compliance, patient portal integration, and key factors for healthcare website success.',
-    url: 'https://webvello.com/blog/healthcare-web-design-companies-guide',
+    url: 'https://www.webvello.com/blog/healthcare-web-design-companies-guide',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

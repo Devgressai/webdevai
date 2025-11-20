@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   description: 'Design, build, and launch high-performance web or mobile apps with Web Vello. We handle UX, engineering, QA, and iteration across the full product lifecycle.',
   keywords: ['app design and development', 'mobile app development agency', 'product design firm', 'web vello apps', 'end to end app development'],
   alternates: {
-    canonical: 'https://webvello.com/services/app-design-development',
+    canonical: 'https://www.webvello.com/services/app-design-development',
   },
   openGraph: {
     title: 'App Design & Development | Web Vello',
     description: 'Partner with Web Vello to ship beautifully designed, scalable applications built around user insight and modern engineering.',
-    url: 'https://webvello.com/services/app-design-development',
+    url: 'https://www.webvello.com/services/app-design-development',
     type: 'website',
   }
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Education Companies in El Paso: Digital Marketing Guide 2025',
     description: 'Complete guide to digital marketing for education companies in El Paso. Learn about student recruitment, online learning, and marketing strategies for educational institutions.',
-    url: 'https://webvello.com/blog/education-companies-el-paso-guide',
+    url: 'https://www.webvello.com/blog/education-companies-el-paso-guide',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

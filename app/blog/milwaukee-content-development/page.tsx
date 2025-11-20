@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Milwaukee Content Development: Professional Content Marketing for WI Businesses 2025',
     description: 'Professional content development services in Milwaukee. High-quality content marketing that drives traffic, builds authority, and generates leads for Milwaukee businesses.',
-    url: 'https://webvello.com/blog/milwaukee-content-development',
+    url: 'https://www.webvello.com/blog/milwaukee-content-development',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

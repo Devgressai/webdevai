@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     tags: ['SEO', 'Milwaukee', 'partnerships', 'digital marketing', 'collaboration'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/seo-partnership-milwaukee-guide',
+    canonical: 'https://www.webvello.com/blog/seo-partnership-milwaukee-guide',
   },
 }
 

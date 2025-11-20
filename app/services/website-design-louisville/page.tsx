@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Louisville Website Designer: Professional Website Design Services KY',
     description: 'Professional website design services in Louisville, KY. Expert website designers create custom, responsive websites for Louisville businesses.',
-    url: 'https://webvello.com/services/website-design-louisville',
+    url: 'https://www.webvello.com/services/website-design-louisville',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

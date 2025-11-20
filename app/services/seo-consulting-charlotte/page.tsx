@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Charlotte SEO Consulting Services: Expert SEO Consultants in NC',
     description: 'Professional SEO consulting services in Charlotte, NC. Expert SEO consultants help Charlotte businesses increase organic traffic, improve rankings, and grow revenue.',
-    url: 'https://webvello.com/services/seo-consulting-charlotte',
+    url: 'https://www.webvello.com/services/seo-consulting-charlotte',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

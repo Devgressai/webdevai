@@ -1,7 +1,41 @@
+import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { Users, Target, TrendingUp, Award, Globe, Zap, CheckCircle, Star } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+
+export const metadata: Metadata = {
+  title: 'About Web Vello | Digital Marketing Agency Story',
+  description: 'Learn about Web Vello\'s mission to drive business growth through data-driven digital marketing. Our team of experts delivers results with AI-powered strategies, helping 100+ businesses achieve 300%+ traffic growth.',
+  keywords: 'about Web Vello, digital marketing agency story, marketing team, company mission, marketing expertise, agency background, marketing philosophy, AI SEO experts',
+  openGraph: {
+    title: 'About Web Vello | Digital Marketing Agency',
+    description: 'Learn about Web Vello\'s mission to drive business growth through data-driven digital marketing. Expert team delivering 300%+ traffic growth.',
+    url: 'https://webvello.com/about',
+    siteName: 'Web Vello',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://webvello.com/og-about.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'About Web Vello - Digital Marketing Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Web Vello | Digital Marketing Agency',
+    description: 'Learn about Web Vello\'s mission to drive business growth through data-driven digital marketing.',
+    images: ['https://webvello.com/og-about.jpg'],
+  },
+  alternates: {
+    canonical: 'https://webvello.com/about',
+  },
+}
+
+export const metadata: Metadata = generateSEOMetadata('about')
 
 const values = [
   {

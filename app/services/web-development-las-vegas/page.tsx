@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Development Las Vegas: Professional Web Development Services NV',
     description: 'Professional web development services in Las Vegas, NV. Expert web developers create custom websites, web applications, and digital solutions for Las Vegas businesses.',
-    url: 'https://webvello.com/services/web-development-las-vegas',
+    url: 'https://www.webvello.com/services/web-development-las-vegas',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

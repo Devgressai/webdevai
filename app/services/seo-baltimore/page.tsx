@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Baltimore MD: Professional SEO Services for Maryland Businesses',
     description: 'Professional SEO services in Baltimore, MD. Expert SEO consultants help Baltimore businesses increase organic traffic, improve rankings, and grow revenue.',
-    url: 'https://webvello.com/services/seo-baltimore',
+    url: 'https://www.webvello.com/services/seo-baltimore',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'article',

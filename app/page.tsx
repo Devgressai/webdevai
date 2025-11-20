@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI-Powered SEO & Web Development | Web Vello',
     description: 'Get 300%+ organic traffic growth with professional SEO, web development & digital marketing. Trusted by 500+ businesses.',
-    url: 'https://webvello.com',
+    url: 'https://www.webvello.com',
     siteName: 'Web Vello',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web Vello - AI-Powered SEO & Web Development Services',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: 'https://webvello.com/favicon.ico',
-    apple: 'https://webvello.com/apple-touch-icon.png',
+    icon: 'https://www.webvello.com/favicon.ico',
+    apple: 'https://www.webvello.com/apple-touch-icon.png',
   },
 }
 
@@ -92,8 +92,8 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Web Vello",
-    "url": "https://webvello.com",
-    "logo": "https://webvello.com/logo.png",
+    "url": "https://www.webvello.com",
+    "logo": "https://www.webvello.com/logo.png",
     "description": "Professional AI-powered SEO, web development, and digital marketing services",
     "address": {
       "@type": "PostalAddress",
@@ -125,11 +125,11 @@ export default function HomePage() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://webvello.com#business",
+    "@id": "https://www.webvello.com#business",
     "name": "Web Vello",
-    "image": "https://webvello.com/og-image.jpg",
+    "image": "https://www.webvello.com/og-image.jpg",
     "description": "Professional AI-powered SEO, web development, and digital marketing services",
-    "url": "https://webvello.com",
+    "url": "https://www.webvello.com",
     "telephone": "+1-737-888-5723",
     "email": "hello@webvello.com",
     "address": {
@@ -171,7 +171,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-team-collaboration.webp"
-            alt=""
+            alt="Team collaboration and professional workspace background"
             fill
             className="object-cover"
             quality={75}
@@ -260,7 +260,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-analytics.webp"
-            alt=""
+            alt="Data analytics and performance metrics dashboard background"
             fill
             className="object-cover"
             quality={75}
@@ -325,7 +325,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-night-orbit.webp"
-            alt=""
+            alt="Modern technology and digital innovation background"
             fill
             className="object-cover"
             quality={75}
@@ -364,7 +364,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-office.webp"
-            alt=""
+            alt="Modern professional office workspace background"
             fill
             className="object-cover"
             quality={75}
@@ -475,7 +475,7 @@ export default function HomePage() {
           <div className="absolute inset-0">
             <Image
               src="/images/hero-data-analysis.webp"
-              alt=""
+              alt="Data analysis and business intelligence visualization background"
               fill
               className="object-cover"
               quality={75}
@@ -511,7 +511,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-night-orbit.webp"
-            alt=""
+            alt="Technology and digital transformation background for call-to-action section"
             fill
             className="object-cover"
             quality={75}

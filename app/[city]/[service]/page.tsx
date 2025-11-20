@@ -734,13 +734,13 @@ export async function generateMetadata({ params }: CityServicePageProps): Promis
     openGraph: {
       title: `${service.name} in ${city.fullName} | Web Vello`,
       description: `Professional ${service.name.toLowerCase()} services in ${city.fullName} - Expert solutions for local businesses.`,
-      url: `https://webvello.com/${params.city}/${params.service}`,
+      url: `https://www.webvello.com/${params.city}/${params.service}`,
       siteName: 'Web Vello',
       locale: 'en_US',
       type: 'website',
       images: [
         {
-          url: `https://webvello.com/og-${service.name.toLowerCase().replace(/\s+/g, '-')}.jpg`,
+          url: `https://www.webvello.com/og-${service.name.toLowerCase().replace(/\s+/g, '-')}.jpg`,
           width: 1200,
           height: 630,
           alt: `${service.name} in ${city.fullName} - Web Vello`,
@@ -751,7 +751,7 @@ export async function generateMetadata({ params }: CityServicePageProps): Promis
       card: 'summary_large_image',
       title: `${service.name} in ${city.fullName} | Web Vello`,
       description: `Professional ${service.name.toLowerCase()} services in ${city.fullName} - Expert solutions for local businesses.`,
-      images: [`https://webvello.com/og-${service.name.toLowerCase().replace(/\s+/g, '-')}.jpg`],
+      images: [`https://www.webvello.com/og-${service.name.toLowerCase().replace(/\s+/g, '-')}.jpg`],
     },
   }
 }

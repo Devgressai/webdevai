@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: 'WordPress Developers Denver | Expert WP Development',
   description: 'Top WordPress developers in Denver, CO. Custom themes, plugins, e-commerce & enterprise WordPress solutions.',
   keywords: 'wordpress developers denver, denver wordpress development, wordpress agency denver, custom wordpress denver',
-  alternates: { canonical: 'https://webvello.com/services/wordpress-developers-denver' },
+  alternates: { canonical: 'https://www.webvello.com/services/wordpress-developers-denver' },
   openGraph: {
     title: 'WordPress Developers Denver | Expert WP Development',
     description: 'Top WordPress developers in Denver, CO. Custom themes, plugins, e-commerce & enterprise WordPress solutions.',
-    url: 'https://webvello.com/services/wordpress-developers-denver',
+    url: 'https://www.webvello.com/services/wordpress-developers-denver',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'WordPress Developers Denver' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'WordPress Developers Denver' }],
   }
 }
 

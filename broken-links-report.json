@@ -1,0 +1,116 @@
+{
+  "totalLinks": 495,
+  "brokenLinks": [
+    {
+      "file": "/Users/george/webdevai/app/blog/detroit-conversion-rate-optimization-services/page.tsx",
+      "link": "/services/conversion-rate-optimization",
+      "original": "/services/conversion-rate-optimization"
+    },
+    {
+      "file": "/Users/george/webdevai/app/industries/page.tsx",
+      "link": "/services/content-strategy",
+      "original": "/services/content-strategy"
+    },
+    {
+      "file": "/Users/george/webdevai/app/industries/page.tsx",
+      "link": "/services/review-management",
+      "original": "/services/review-management"
+    },
+    {
+      "file": "/Users/george/webdevai/app/industries/page.tsx",
+      "link": "/services/social-media-marketing",
+      "original": "/services/social-media-marketing"
+    },
+    {
+      "file": "/Users/george/webdevai/app/industries/page.tsx",
+      "link": "/services/service-marketing",
+      "original": "/services/service-marketing"
+    },
+    {
+      "file": "/Users/george/webdevai/app/industries/page.tsx",
+      "link": "/services/ecommerce-seo",
+      "original": "/services/ecommerce-seo"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "/favicon.ico",
+      "original": "/favicon.ico"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "/apple-touch-icon.png",
+      "original": "/apple-touch-icon.png"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "/favicon-32x32.png",
+      "original": "/favicon-32x32.png"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "/favicon-16x16.png",
+      "original": "/favicon-16x16.png"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "/site.webmanifest",
+      "original": "/site.webmanifest"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "//fonts.googleapis.com",
+      "original": "//fonts.googleapis.com"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "//fonts.gstatic.com",
+      "original": "//fonts.gstatic.com"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "//cdn.sanity.io",
+      "original": "//cdn.sanity.io"
+    },
+    {
+      "file": "/Users/george/webdevai/app/layout.tsx",
+      "link": "//images.unsplash.com",
+      "original": "//images.unsplash.com"
+    },
+    {
+      "file": "/Users/george/webdevai/app/services/auto-repair-website-design-milwaukee/page.tsx",
+      "link": "/services/web-design",
+      "original": "/services/web-design"
+    },
+    {
+      "file": "/Users/george/webdevai/app/services/auto-repair-website-design-milwaukee/page.tsx",
+      "link": "/services/reputation-management",
+      "original": "/services/reputation-management"
+    },
+    {
+      "file": "/Users/george/webdevai/app/services/seo-company-mesa-arizona/page.tsx",
+      "link": "/services/ppc",
+      "original": "/services/ppc"
+    },
+    {
+      "file": "/Users/george/webdevai/app/services/web-development-fresno/page.tsx",
+      "link": "/services/ecommerce-development",
+      "original": "/services/ecommerce-development"
+    },
+    {
+      "file": "/Users/george/webdevai/app/solutions/page.tsx",
+      "link": "/services/analytics-consulting",
+      "original": "/services/analytics-consulting"
+    },
+    {
+      "file": "/Users/george/webdevai/app/solutions/page.tsx",
+      "link": "/services/agency-consulting",
+      "original": "/services/agency-consulting"
+    },
+    {
+      "file": "/Users/george/webdevai/app/solutions/page.tsx",
+      "link": "/services/process-optimization",
+      "original": "/services/process-optimization"
+    }
+  ],
+  "scanDate": "2025-11-20T07:16:01.931Z"
+}

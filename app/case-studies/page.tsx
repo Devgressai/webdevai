@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   description: 'Explore our portfolio of successful web development and SEO projects. Real results for GutterFX, RenovationFX, and Pinewood Cabinets.',
   keywords: 'web development portfolio, seo case studies, client success stories, web design examples, digital marketing results',
   alternates: {
-    canonical: 'https://webvello.com/case-studies',
+    canonical: 'https://www.webvello.com/case-studies',
   },
   openGraph: {
     title: 'Portfolio & Case Studies | Web Vello Success Stories',
     description: 'Explore our portfolio of successful web development and SEO projects. Real results for real businesses.',
-    url: 'https://webvello.com/case-studies',
+    url: 'https://www.webvello.com/case-studies',
     type: 'website',
-    images: [{ url: 'https://webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Web Vello Portfolio' }],
+    images: [{ url: 'https://www.webvello.com/og-image.jpg', width: 1200, height: 630, alt: 'Web Vello Portfolio' }],
   }
 }
 
@@ -118,7 +118,7 @@ export default function CaseStudiesPage() {
         <div className="absolute inset-0 opacity-10">
           <Image 
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=600&fit=crop&crop=center" 
-            alt="" 
+            alt="Business analytics and portfolio showcase background" 
             fill 
             className="object-cover"
           />

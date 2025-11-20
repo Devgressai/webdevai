@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Deliver intuitive, conversion-focused digital experiences. Web Vello’s UI/UX team blends research, prototyping, and testing to launch products customers love.',
   keywords: ['ui ux design agency', 'user experience design', 'product design services', 'web vello ux', 'ux research company'],
   alternates: {
-    canonical: 'https://webvello.com/services/ui-ux-design',
+    canonical: 'https://www.webvello.com/services/ui-ux-design',
   },
   openGraph: {
     title: 'UI/UX Design Services | Web Vello',
     description: 'Partner with Web Vello to create modern, research-driven interfaces that increase engagement and conversions.',
-    url: 'https://webvello.com/services/ui-ux-design',
+    url: 'https://www.webvello.com/services/ui-ux-design',
     type: 'website',
   }
 }

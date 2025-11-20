@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     tags: ['SEO', 'digital marketing', 'search optimization', 'content marketing', 'local SEO'],
   },
   alternates: {
-    canonical: 'https://webvello.com/blog/seo-service-complete-guide',
+    canonical: 'https://www.webvello.com/blog/seo-service-complete-guide',
   },
 }
 

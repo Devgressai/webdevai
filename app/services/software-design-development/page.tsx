@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   description: 'Architect, design, and develop secure enterprise software with Web Vello. We deliver modern cloud-native platforms that automate workflows and scale with your business.',
   keywords: ['software design development', 'enterprise software agency', 'custom software solutions', 'web vello software', 'cloud native development'],
   alternates: {
-    canonical: 'https://webvello.com/services/software-design-development',
+    canonical: 'https://www.webvello.com/services/software-design-development',
   },
   openGraph: {
     title: 'Software Design & Development | Web Vello',
     description: 'Web Vello builds robust, scalable software products that combine UX, engineering, and security for measurable ROI.',
-    url: 'https://webvello.com/services/software-design-development',
+    url: 'https://www.webvello.com/services/software-design-development',
     type: 'website',
   }
 }
