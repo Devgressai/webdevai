@@ -1,22 +1,27 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-import { ArrowLeft, CheckCircle } from "lucide-react"
+import { ArrowLeft, ArrowRight, CheckCircle, Sparkles, Shield, TrendingUp } from "lucide-react"
 import Image from 'next/image'
 
 export function Hero() {
   const [step, setStep] = useState<'url' | 'details' | 'success'>('url')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   const [formData, setFormData] = useState({
     website: '',
     name: '',
     email: '',
-    phone: '',
     goals: ''
   })
+
+  // Entrance animation trigger
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
 
   const handleWebsiteSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -48,8 +53,8 @@ export function Hero() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          phone: formData.phone,
-          company: formData.website, // Using website as company
+          phone: '', // Removed phone field for simplicity
+          company: formData.website,
           message: formData.goals,
           service: 'Website Proposal Request',
           urgency: 'Standard',
@@ -60,12 +65,10 @@ export function Hero() {
         setStep('success')
       } else {
         console.error('Failed to submit form')
-        // Still show success to user even if email fails
         setStep('success')
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      // Still show success to user even if email fails
       setStep('success')
     } finally {
       setIsSubmitting(false)
@@ -73,7 +76,7 @@ export function Hero() {
   }
 
   const resetFlow = () => {
-    setFormData({ website: '', name: '', email: '', phone: '', goals: '' })
+    setFormData({ website: '', name: '', email: '', goals: '' })
     setStep('url')
   }
 
@@ -81,12 +84,6 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
       {/* Background Image with optimized overlay for conversions */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Background Image - A/B Test Options:
-            Current: /images/hero-analytics.webp (data-driven, professional)
-            Alternative 1: /images/hero-business-meeting.webp (trust, partnership)
-            Alternative 2: /images/hero-team-collaboration.webp (expertise, team)
-            Alternative 3: /images/hero-office.webp (professional workspace)
-        */}
         <Image
           src="/images/hero-analytics.webp"
           alt="Professional digital marketing analytics and data visualization dashboard"
@@ -96,69 +93,94 @@ export function Hero() {
           quality={85}
           sizes="100vw"
         />
-        {/* Stronger overlay (40%) to ensure CTA stands out and text is highly readable */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/60 via-primary-800/50 to-primary-900/60"></div>
-        {/* Additional subtle gradient for depth */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Gradient overlay using Tailwind primary colors */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/70 via-primary-800/60 to-primary-900/70"></div>
+        {/* Additional depth layer */}
+        <div className="absolute inset-0 bg-black/25"></div>
       </div>
 
-      <div className="hero-content relative z-10">
-        <div className="mx-auto max-w-4xl px-4 -mt-16">
-          <div className="text-center">
-            <p className="inline-block rounded-full bg-white/90 backdrop-blur-sm px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-lg">
-              High-Impact Web & SEO Growth Programs
-            </p>
-            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              Transform your website into a lead generation machine with <span className="text-blue-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Web Vello</span>
+      <div className="hero-content relative z-10 w-full">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          {/* Animated content wrapper */}
+          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            {/* Updated badge - more benefit-focused */}
+            <div 
+              className="inline-flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-primary-700 shadow-lg border border-white/50"
+              style={{ animationDelay: '0.1s' }}
+            >
+              <Sparkles className="h-4 w-4 text-accent-500" />
+              <span>Trusted by 500+ Growing Businesses</span>
+            </div>
+            
+            {/* Updated headline - more specific and benefit-focused */}
+            <h1 
+              className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]"
+              style={{ animationDelay: '0.2s' }}
+            >
+              Get <span className="text-accent-400">300%+ More Leads</span> with AI-Powered SEO & Web Design
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-              Your partner for custom website design, development, SEO, GEO, and AI-driven optimization campaigns that win demanding markets.
+            
+            {/* Updated subheadline - clearer value proposition */}
+            <p 
+              className="mt-6 text-lg sm:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
+              style={{ animationDelay: '0.3s' }}
+            >
+              We build high-converting websites and implement data-driven SEO strategies that turn your website into a revenue-generating machine.
             </p>
-            {/* Trust signals for better conversions */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/90">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">500+ Clients</span>
+            
+            {/* Trust signals - enhanced design */}
+            <div 
+              className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8"
+              style={{ animationDelay: '0.4s' }}
+            >
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                <TrendingUp className="h-5 w-5 text-success-400" />
+                <span className="text-sm font-medium text-white">340% Avg ROI</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">300%+ Traffic Growth</span>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                <CheckCircle className="h-5 w-5 text-success-400" />
+                <span className="text-sm font-medium text-white">500+ Clients</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">Free Consultation</span>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                <Shield className="h-5 w-5 text-success-400" />
+                <span className="text-sm font-medium text-white">Free Consultation</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 max-w-2xl mx-auto w-full">
+          {/* Form section with staggered animation */}
+          <div 
+            className={`mt-10 max-w-2xl mx-auto w-full transition-all duration-1000 ease-out delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          >
             {step === 'url' && (
-              <div className="space-y-6">
-                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-white/95 backdrop-blur-sm rounded-2xl p-2 shadow-2xl border border-white/20">
+              <div className="space-y-5 animate-fade-in">
+                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-white/98 backdrop-blur-md rounded-2xl p-2 shadow-2xl border border-white/30">
                   <Input
                     type="text"
                     required
                     placeholder="Enter your website URL"
                     value={formData.website}
                     onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
-                    className="h-12 flex-1 border-none bg-white text-slate-900 placeholder:text-slate-500 focus-visible:ring-0 text-base focus:bg-slate-50"
+                    className="h-14 flex-1 border-none bg-white text-secondary-900 placeholder:text-secondary-500 focus-visible:ring-0 text-base focus:bg-secondary-50 rounded-xl"
                   />
                   <Button
                     type="submit"
                     size="lg"
-                    className="sm:w-auto h-12 px-8 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300 hover:scale-105"
+                    className="sm:w-auto h-14 px-8 bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg hover:shadow-primary-600/30 transition-all duration-300 hover:scale-[1.02] rounded-xl group"
                   >
-                    Get Free Proposal →
+                    Get Free Proposal
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
                 <div className="text-center space-y-2">
-                  <p className="text-xs text-white/80 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-                    🔒 100% confidential • No spam, ever
+                  <p className="text-xs text-white/80 flex items-center justify-center gap-2">
+                    <Shield className="h-3.5 w-3.5" />
+                    100% confidential • No spam, ever
                   </p>
-                  <p className="text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                    Don&apos;t have a site?{' '}
-                    <Link href="/contact" className="font-semibold text-blue-300 hover:text-blue-200 underline drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                      Click here
+                  <p className="text-sm text-white/90">
+                    Don&apos;t have a site yet?{' '}
+                    <Link href="/contact" className="font-semibold text-accent-300 hover:text-accent-200 underline underline-offset-2">
+                      Start from scratch
                     </Link>
                   </p>
                 </div>
@@ -166,26 +188,36 @@ export function Hero() {
             )}
 
             {step === 'details' && (
-              <div className="relative bg-white rounded-3xl shadow-2xl border border-slate-100 p-6 sm:p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <p className="font-semibold text-slate-900">Almost there—tell us how to reach you.</p>
+              <div className="relative bg-white rounded-2xl shadow-2xl border border-secondary-100 p-6 sm:p-8 animate-fade-in">
+                {/* Progress indicator */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-secondary-100 rounded-t-2xl overflow-hidden">
+                  <div className="h-full w-1/2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full"></div>
+                </div>
+                
+                <div className="flex items-center justify-between mb-6 pt-2">
+                  <div>
+                    <p className="font-semibold text-secondary-900">Almost there!</p>
+                    <p className="text-sm text-secondary-500">Tell us how to reach you</p>
+                  </div>
                   <button
                     type="button"
                     onClick={() => setStep('url')}
-                    className="inline-flex items-center text-sm text-slate-500 hover:text-slate-700"
+                    className="inline-flex items-center text-sm text-secondary-500 hover:text-secondary-700 transition-colors"
                   >
                     <ArrowLeft className="mr-1 h-4 w-4" /> Back
                   </button>
                 </div>
+                
                 <form className="space-y-4" onSubmit={handleDetailsSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Simplified form - removed phone, combined layout */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Input
                       type="text"
                       required
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
-                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20"
+                      className="h-12 bg-white text-secondary-900 placeholder:text-secondary-400 border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 rounded-xl"
                     />
                     <Input
                       type="email"
@@ -193,42 +225,48 @@ export function Hero() {
                       placeholder="Business email"
                       value={formData.email}
                       onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
-                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20"
-                    />
-                    <Input
-                      type="tel"
-                      placeholder="Phone number (optional)"
-                      value={formData.phone}
-                      onChange={(event) => setFormData((prev) => ({ ...prev, phone: event.target.value }))}
-                      className="h-12 bg-white text-slate-900 placeholder:text-slate-500 border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20"
-                    />
-                    <Input
-                      type="url"
-                      readOnly
-                      value={formData.website}
-                      className="h-12 bg-slate-50 border-slate-200 text-slate-700"
+                      className="h-12 bg-white text-secondary-900 placeholder:text-secondary-400 border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 rounded-xl"
                     />
                   </div>
+                  
+                  {/* Website display - styled as info */}
+                  <div className="flex items-center gap-2 px-4 py-3 bg-secondary-50 rounded-xl border border-secondary-200">
+                    <span className="text-sm text-secondary-500">Website:</span>
+                    <span className="text-sm font-medium text-secondary-700 truncate">{formData.website}</span>
+                  </div>
+                  
                   <div>
                     <textarea
-                      placeholder="What are you looking for? (goals, challenges, timeline)"
+                      placeholder="What are your main goals? (e.g., more leads, better rankings, new website)"
                       value={formData.goals}
                       onChange={(event) => setFormData((prev) => ({ ...prev, goals: event.target.value }))}
-                      rows={4}
-                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm bg-white text-slate-900 placeholder:text-slate-500 focus:border-[#4285f4] focus:outline-none focus:ring-2 focus:ring-[#4285f4]/20"
+                      rows={3}
+                      className="w-full rounded-xl border border-secondary-200 px-4 py-3 text-sm bg-white text-secondary-900 placeholder:text-secondary-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 resize-none"
                     />
                   </div>
-                  <div className="space-y-3">
+                  
+                  <div className="space-y-3 pt-2">
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full h-12 bg-[#4285f4] hover:bg-[#3367d6] text-white font-semibold shadow-lg hover:shadow-[#4285f4]/25 transition-all duration-300 hover:scale-[1.02]"
+                      className="w-full h-14 bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg hover:shadow-primary-600/30 transition-all duration-300 hover:scale-[1.01] rounded-xl group relative overflow-hidden"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? 'Submitting…' : 'Send My Free Proposal →'}
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <span className="h-5 w-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                          Processing...
+                        </span>
+                      ) : (
+                        <span className="flex items-center justify-center gap-2">
+                          Get My Free Proposal
+                          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      )}
                     </Button>
-                    <p className="text-xs text-center text-slate-500">
-                      🔒 Your information is secure and confidential
+                    <p className="text-xs text-center text-secondary-500 flex items-center justify-center gap-1.5">
+                      <Shield className="h-3.5 w-3.5" />
+                      Your information is secure and confidential
                     </p>
                   </div>
                 </form>
@@ -236,32 +274,40 @@ export function Hero() {
             )}
 
             {step === 'success' && (
-              <div className="rounded-3xl bg-emerald-100 border border-emerald-200 p-6 text-emerald-900 shadow-lg">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 mt-1 text-emerald-600" />
-                  <div>
-                    <h3 className="text-lg font-semibold">Thank you! We&apos;ll be in touch shortly.</h3>
-                    <p className="mt-2 text-sm leading-relaxed">
-                      One of our specialists will reach out with a tailored proposal. Need to talk sooner?{' '}
-                      <Link href="/contact" className="underline font-semibold text-emerald-700">
-                        Schedule a strategy call
-                      </Link>
-                      {' '}or email us at{' '}
-                      <a href="mailto:hello@webvello.com" className="underline">hello@webvello.com</a>.
+              <div className="rounded-2xl bg-gradient-to-br from-success-50 to-success-100 border border-success-200 p-6 sm:p-8 shadow-lg animate-fade-in">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-success-500 rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-success-900">You&apos;re all set!</h3>
+                    <p className="mt-2 text-success-800 leading-relaxed">
+                      One of our specialists will reach out within 24 hours with your personalized proposal.
                     </p>
-                    <div className="mt-4">
-                      <Button variant="outline" onClick={resetFlow} className="text-emerald-700 border-emerald-300">
-                        Start another request
-                      </Button>
+                    <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                      <Link 
+                        href="/contact" 
+                        className="inline-flex items-center justify-center px-4 py-2 bg-success-600 text-white font-medium rounded-lg hover:bg-success-700 transition-colors"
+                      >
+                        Schedule a Call Now
+                      </Link>
+                      <button 
+                        onClick={resetFlow} 
+                        className="inline-flex items-center justify-center px-4 py-2 border border-success-300 text-success-700 font-medium rounded-lg hover:bg-success-50 transition-colors"
+                      >
+                        Submit Another Request
+                      </button>
                     </div>
+                    <p className="mt-4 text-sm text-success-700">
+                      Questions? Email us at{' '}
+                      <a href="mailto:hello@webvello.com" className="font-semibold underline">hello@webvello.com</a>
+                    </p>
                   </div>
                 </div>
               </div>
             )}
           </div>
         </div>
-
-        {/* Stats section removed per request */}
       </div>
     </section>
   )

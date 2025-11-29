@@ -5,7 +5,6 @@ import { METRICS } from '@/lib/site-metrics'
 import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, TrendingUp, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-// import { OptimizedImageComponent as HeroImage } from '../components/ui/optimized-image' // Not needed for external Unsplash URLs
 import { LazySection } from '../components/ui/lazy-section'
 import { SchemaMarkup } from '../components/seo/schema-markup'
 import { GoogleMyBusiness } from '../components/seo/google-my-business'
@@ -93,7 +92,12 @@ export default function HomePage() {
     "@type": "Organization",
     "name": "Web Vello",
     "url": "https://www.webvello.com",
-    "logo": "https://www.webvello.com/logo.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.webvello.com/logo.png",
+      "width": 2048,
+      "height": 2048
+    },
     "description": "Professional AI-powered SEO, web development, and digital marketing services",
     "address": {
       "@type": "PostalAddress",
@@ -517,35 +521,53 @@ export default function HomePage() {
             quality={75}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-primary-600/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-800/90 via-primary-700/85 to-primary-900/90"></div>
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Ready to Grow Your Business?
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-4 py-2 text-sm font-medium text-white/90 mb-6">
+              <Star className="w-4 h-4 text-yellow-400" />
+              Rated 5.0 by 500+ Clients
+            </p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to 3X Your Traffic & Leads?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Over 500+ businesses trust us to create tailored marketing strategies that enhance credibility, foster client relationships, and drive sustainable growth.
+            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Join 500+ businesses that have transformed their online presence. Get a free strategy session and see exactly how we&apos;ll grow your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold shadow-lg transition-all duration-300"
+                className="bg-white text-primary-700 hover:bg-gray-50 px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group"
                 asChild
               >
-                <Link href="/contact">Get Free Consultation</Link>
+                <Link href="/contact" className="flex items-center gap-2">
+                  Get Your Free Strategy Session
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                className="border-2 border-white/50 text-white hover:bg-white/10 hover:border-white px-8 py-4 rounded-xl font-semibold transition-all duration-300"
                 asChild
               >
-                <Link href="/case-studies">View Case Studies</Link>
+                <Link href="/case-studies">See Our Results →</Link>
               </Button>
             </div>
-            <p className="mt-8 text-sm text-white/70">
-              No obligation • Free consultation included
+            <p className="mt-8 text-sm text-white/60 flex items-center justify-center gap-4">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                No obligation
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Free consultation
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Response within 24hrs
+              </span>
             </p>
           </div>
         </div>
