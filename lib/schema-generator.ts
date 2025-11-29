@@ -26,8 +26,8 @@ export function generateOrganizationSchema() {
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.webvello.com/logo.png",
-      "width": 600,
-      "height": 60
+      "width": 2048,
+      "height": 2048
     },
     "description": "Digital Marketing Agency specializing in AI-powered SEO, local search optimization, and conversion-focused web development.",
     "address": {

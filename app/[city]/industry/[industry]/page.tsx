@@ -157,7 +157,12 @@ export default function CityIndustryPage({ params }: CityIndustryPageProps) {
     '@type': 'Organization',
     'name': 'Web Vello',
     'url': 'https://www.webvello.com',
-    'logo': 'https://www.webvello.com/logo.png',
+    'logo': {
+      '@type': 'ImageObject',
+      'url': 'https://www.webvello.com/logo.png',
+      'width': 2048,
+      'height': 2048
+    },
     'description': `Leading digital agency specializing in ${industry.name.toLowerCase()} businesses`,
     'address': {
       '@type': 'PostalAddress',

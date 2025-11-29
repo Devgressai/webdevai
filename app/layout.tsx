@@ -183,7 +183,12 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Web Vello",
               "url": "https://www.webvello.com",
-              "logo": "https://www.webvello.com/logo.png",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.webvello.com/logo.png",
+                "width": 2048,
+                "height": 2048
+              },
               "description": "Digital Marketing Agency specializing in AI-powered SEO, local search optimization, and conversion-focused web development.",
               "address": {
                 "@type": "PostalAddress",

@@ -106,7 +106,9 @@ export function ArticleSchema({
       "name": "Web Vello",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.webvello.com/logo.png"
+        "url": "https://www.webvello.com/logo.png",
+        "width": 2048,
+        "height": 2048
       }
     },
     "mainEntityOfPage": {

@@ -146,7 +146,12 @@ export default function WebsiteDesignContent() {
               '@type': 'Organization',
               name: 'Web Vello',
               url: 'https://www.webvello.com',
-              logo: 'https://www.webvello.com/logo.png'
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.webvello.com/logo.png',
+                width: 2048,
+                height: 2048
+              }
             },
             areaServed: 'US',
             audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },

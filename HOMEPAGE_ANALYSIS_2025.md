@@ -679,3 +679,6 @@ Overall, this is a strong homepage that just needs refinement rather than major 
 Need help implementing any of these recommendations? Let me know!
 
 
+
+
+

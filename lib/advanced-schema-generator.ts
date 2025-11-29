@@ -60,7 +60,12 @@ export function generateOrganizationWithReviewsSchema(testimonials: TestimonialD
     "@type": "Organization",
     "name": "Web Vello",
     "url": "https://www.webvello.com",
-    "logo": "https://www.webvello.com/logo.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.webvello.com/logo.png",
+      "width": 2048,
+      "height": 2048
+    },
     "description": "Professional AI-powered SEO, web development, and digital marketing services",
     "address": {
       "@type": "PostalAddress",
@@ -223,7 +228,9 @@ export function generateArticleSchema(article: {
       "name": "Web Vello",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.webvello.com/logo.png"
+        "url": "https://www.webvello.com/logo.png",
+        "width": 2048,
+        "height": 2048
       }
     },
     "mainEntityOfPage": {

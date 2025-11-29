@@ -95,7 +95,7 @@ export default function WebDevelopmentPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             serviceType: 'Web Development',
-            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://www.webvello.com', logo: 'https://www.webvello.com/logo.png' },
+            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://www.webvello.com', logo: { '@type': 'ImageObject', url: 'https://www.webvello.com/logo.png', width: 2048, height: 2048 } },
             areaServed: 'US',
             audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
             brand: { '@type': 'Brand', name: 'Web Vello' }
