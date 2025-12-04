@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-import { ArrowLeft, ArrowRight, CheckCircle, Sparkles, Shield, TrendingUp } from "lucide-react"
+import { ArrowLeft, ArrowRight, CheckCircle, Star } from "lucide-react"
 import Image from 'next/image'
 
 export function Hero() {
@@ -18,7 +18,6 @@ export function Hero() {
     goals: ''
   })
 
-  // Entrance animation trigger
   useEffect(() => {
     setIsVisible(true)
   }, [])
@@ -27,7 +26,6 @@ export function Hero() {
     event.preventDefault()
     if (!formData.website.trim()) return
     
-    // Normalize the website input to ensure it has a proper URL format
     let normalizedWebsite = formData.website.trim()
     if (!normalizedWebsite.startsWith('http://') && !normalizedWebsite.startsWith('https://')) {
       normalizedWebsite = 'https://' + normalizedWebsite
@@ -44,16 +42,13 @@ export function Hero() {
     try {
       setIsSubmitting(true)
       
-      // Send to contact API
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          phone: '', // Removed phone field for simplicity
+          phone: '',
           company: formData.website,
           message: formData.goals,
           service: 'Website Proposal Request',
@@ -64,11 +59,9 @@ export function Hero() {
       if (response.ok) {
         setStep('success')
       } else {
-        console.error('Failed to submit form')
         setStep('success')
       }
-    } catch (error) {
-      console.error('Error submitting form:', error)
+    } catch {
       setStep('success')
     } finally {
       setIsSubmitting(false)
@@ -81,231 +74,241 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      {/* Background Image with optimized overlay for conversions */}
-      <div className="absolute inset-0 overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background with modern gradient overlay */}
+      <div className="absolute inset-0">
         <Image
-          src="/images/hero-analytics.webp"
-          alt="Professional digital marketing analytics and data visualization dashboard"
+          src="/images/hero-team-collaboration.webp"
+          alt="Team collaboration"
           fill
           priority
           className="object-cover"
-          quality={85}
+          quality={90}
           sizes="100vw"
         />
-        {/* Gradient overlay using Tailwind primary colors */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/70 via-primary-800/60 to-primary-900/70"></div>
-        {/* Additional depth layer */}
-        <div className="absolute inset-0 bg-black/25"></div>
+        {/* Modern gradient - slate with subtle warm tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/85"></div>
+        {/* Subtle color accent glow */}
+        <div className="absolute top-1/3 right-1/4 w-[600px] h-[400px] bg-rose-500/5 rounded-full blur-[120px]"></div>
       </div>
 
-      <div className="hero-content relative z-10 w-full">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          {/* Animated content wrapper */}
-          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            {/* Updated badge - more benefit-focused */}
-            <div 
-              className="inline-flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-primary-700 shadow-lg border border-white/50"
-              style={{ animationDelay: '0.1s' }}
-            >
-              <Sparkles className="h-4 w-4 text-accent-500" />
-              <span>Trusted by 500+ Growing Businesses</span>
-            </div>
+      <div className="relative z-10 w-full">
+        <div className="mx-auto max-w-7xl px-6 lg:px-16 py-28 lg:py-36">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             
-            {/* Updated headline - more specific and benefit-focused */}
-            <h1 
-              className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]"
-              style={{ animationDelay: '0.2s' }}
-            >
-              Get <span className="text-accent-400">300%+ More Leads</span> with AI-Powered SEO & Web Design
-            </h1>
-            
-            {/* Updated subheadline - clearer value proposition */}
-            <p 
-              className="mt-6 text-lg sm:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
-              style={{ animationDelay: '0.3s' }}
-            >
-              We build high-converting websites and implement data-driven SEO strategies that turn your website into a revenue-generating machine.
-            </p>
-            
-            {/* Trust signals - enhanced design */}
-            <div 
-              className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8"
-              style={{ animationDelay: '0.4s' }}
-            >
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <TrendingUp className="h-5 w-5 text-success-400" />
-                <span className="text-sm font-medium text-white">340% Avg ROI</span>
+            {/* Left content */}
+            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              
+              {/* Rating badge */}
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-8">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <span className="text-white/80 text-sm">Rated 5.0 by 500+ clients</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <CheckCircle className="h-5 w-5 text-success-400" />
-                <span className="text-sm font-medium text-white">500+ Clients</span>
+              
+              {/* Headline */}
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
+                We help you
+                <br />
+                <span className="bg-gradient-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
+                  grow online
+                </span>
+              </h1>
+              
+              {/* Subheadline */}
+              <p className="text-xl text-white/70 mb-8 leading-relaxed max-w-lg">
+                SEO and web development that actually works. 
+                We&apos;ve helped 500+ businesses increase traffic, 
+                leads, and revenue.
+              </p>
+              
+              {/* Key stats */}
+              <div className="flex gap-8 mb-10">
+                <div>
+                  <p className="text-3xl font-bold text-white">340%</p>
+                  <p className="text-white/50 text-sm">Avg. ROI</p>
+                </div>
+                <div className="w-px bg-white/20"></div>
+                <div>
+                  <p className="text-3xl font-bold text-white">$2.4M+</p>
+                  <p className="text-white/50 text-sm">Revenue generated</p>
+                </div>
+                <div className="w-px bg-white/20"></div>
+                <div>
+                  <p className="text-3xl font-bold text-white">90 days</p>
+                  <p className="text-white/50 text-sm">To first results</p>
+                </div>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Shield className="h-5 w-5 text-success-400" />
-                <span className="text-sm font-medium text-white">Free Consultation</span>
-              </div>
-            </div>
-          </div>
 
-          {/* Form section with staggered animation */}
-          <div 
-            className={`mt-10 max-w-2xl mx-auto w-full transition-all duration-1000 ease-out delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-          >
-            {step === 'url' && (
-              <div className="space-y-5 animate-fade-in">
-                <form onSubmit={handleWebsiteSubmit} className="flex flex-col sm:flex-row gap-3 bg-white/98 backdrop-blur-md rounded-2xl p-2 shadow-2xl border border-white/30">
-                  <Input
-                    type="text"
-                    required
-                    placeholder="Enter your website URL"
-                    value={formData.website}
-                    onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
-                    className="h-14 flex-1 border-none bg-white text-secondary-900 placeholder:text-secondary-500 focus-visible:ring-0 text-base focus:bg-secondary-50 rounded-xl"
-                  />
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="sm:w-auto h-14 px-8 bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg hover:shadow-primary-600/30 transition-all duration-300 hover:scale-[1.02] rounded-xl group"
-                  >
-                    Get Free Proposal
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </form>
-                <div className="text-center space-y-2">
-                  <p className="text-xs text-white/80 flex items-center justify-center gap-2">
-                    <Shield className="h-3.5 w-3.5" />
-                    100% confidential • No spam, ever
-                  </p>
-                  <p className="text-sm text-white/90">
-                    Don&apos;t have a site yet?{' '}
-                    <Link href="/contact" className="font-semibold text-accent-300 hover:text-accent-200 underline underline-offset-2">
-                      Start from scratch
-                    </Link>
-                  </p>
-                </div>
+              {/* CTA buttons */}
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  className="h-14 px-8 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold text-base rounded-xl shadow-lg shadow-rose-500/25 transition-all hover:shadow-rose-500/40"
+                  asChild
+                >
+                  <Link href="/contact">
+                    Start Your Project
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="h-14 px-8 border-white/20 text-white hover:bg-white/10 font-semibold text-base rounded-xl"
+                  asChild
+                >
+                  <Link href="/case-studies">
+                    See Our Work
+                  </Link>
+                </Button>
               </div>
-            )}
+            </div>
 
-            {step === 'details' && (
-              <div className="relative bg-white rounded-2xl shadow-2xl border border-secondary-100 p-6 sm:p-8 animate-fade-in">
-                {/* Progress indicator */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-secondary-100 rounded-t-2xl overflow-hidden">
-                  <div className="h-full w-1/2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full"></div>
-                </div>
-                
-                <div className="flex items-center justify-between mb-6 pt-2">
-                  <div>
-                    <p className="font-semibold text-secondary-900">Almost there!</p>
-                    <p className="text-sm text-secondary-500">Tell us how to reach you</p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setStep('url')}
-                    className="inline-flex items-center text-sm text-secondary-500 hover:text-secondary-700 transition-colors"
-                  >
-                    <ArrowLeft className="mr-1 h-4 w-4" /> Back
-                  </button>
-                </div>
-                
-                <form className="space-y-4" onSubmit={handleDetailsSubmit}>
-                  {/* Simplified form - removed phone, combined layout */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Input
-                      type="text"
-                      required
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
-                      className="h-12 bg-white text-secondary-900 placeholder:text-secondary-400 border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 rounded-xl"
-                    />
-                    <Input
-                      type="email"
-                      required
-                      placeholder="Business email"
-                      value={formData.email}
-                      onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
-                      className="h-12 bg-white text-secondary-900 placeholder:text-secondary-400 border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 rounded-xl"
-                    />
-                  </div>
+            {/* Right side - Form card */}
+            <div className={`transition-all duration-1000 ease-out delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              
+              {step === 'url' && (
+                <div className="bg-white rounded-2xl p-8 shadow-2xl">
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2">Get a free growth plan</h2>
+                  <p className="text-slate-600 mb-6">See exactly how we can help your business grow.</p>
                   
-                  {/* Website display - styled as info */}
-                  <div className="flex items-center gap-2 px-4 py-3 bg-secondary-50 rounded-xl border border-secondary-200">
-                    <span className="text-sm text-secondary-500">Website:</span>
-                    <span className="text-sm font-medium text-secondary-700 truncate">{formData.website}</span>
-                  </div>
-                  
-                  <div>
-                    <textarea
-                      placeholder="What are your main goals? (e.g., more leads, better rankings, new website)"
-                      value={formData.goals}
-                      onChange={(event) => setFormData((prev) => ({ ...prev, goals: event.target.value }))}
-                      rows={3}
-                      className="w-full rounded-xl border border-secondary-200 px-4 py-3 text-sm bg-white text-secondary-900 placeholder:text-secondary-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 resize-none"
-                    />
-                  </div>
-                  
-                  <div className="space-y-3 pt-2">
+                  <form onSubmit={handleWebsiteSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Your website</label>
+                      <Input
+                        type="text"
+                        required
+                        placeholder="yourwebsite.com"
+                        value={formData.website}
+                        onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
+                        className="h-12 bg-slate-50 border-slate-200 text-slate-900 rounded-xl focus:border-rose-500 focus:ring-rose-500/20"
+                      />
+                    </div>
                     <Button
                       type="submit"
-                      size="lg"
-                      className="w-full h-14 bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg hover:shadow-primary-600/30 transition-all duration-300 hover:scale-[1.01] rounded-xl group relative overflow-hidden"
-                      disabled={isSubmitting}
+                      className="w-full h-12 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold rounded-xl transition-all"
                     >
-                      {isSubmitting ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <span className="h-5 w-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                          Processing...
-                        </span>
-                      ) : (
-                        <span className="flex items-center justify-center gap-2">
-                          Get My Free Proposal
-                          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                        </span>
-                      )}
+                      Get My Free Plan
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                    <p className="text-xs text-center text-secondary-500 flex items-center justify-center gap-1.5">
-                      <Shield className="h-3.5 w-3.5" />
-                      Your information is secure and confidential
-                    </p>
-                  </div>
-                </form>
-              </div>
-            )}
-
-            {step === 'success' && (
-              <div className="rounded-2xl bg-gradient-to-br from-success-50 to-success-100 border border-success-200 p-6 sm:p-8 shadow-lg animate-fade-in">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-success-500 rounded-full flex items-center justify-center">
-                    <CheckCircle className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-success-900">You&apos;re all set!</h3>
-                    <p className="mt-2 text-success-800 leading-relaxed">
-                      One of our specialists will reach out within 24 hours with your personalized proposal.
-                    </p>
-                    <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                      <Link 
-                        href="/contact" 
-                        className="inline-flex items-center justify-center px-4 py-2 bg-success-600 text-white font-medium rounded-lg hover:bg-success-700 transition-colors"
-                      >
-                        Schedule a Call Now
-                      </Link>
-                      <button 
-                        onClick={resetFlow} 
-                        className="inline-flex items-center justify-center px-4 py-2 border border-success-300 text-success-700 font-medium rounded-lg hover:bg-success-50 transition-colors"
-                      >
-                        Submit Another Request
-                      </button>
+                  </form>
+                  
+                  <p className="text-center text-sm text-slate-500 mt-4">
+                    Free · No credit card · Results in 24 hours
+                  </p>
+                  
+                  <div className="mt-6 pt-6 border-t border-slate-100">
+                    <p className="text-sm text-slate-500 mb-3">Trusted by companies like</p>
+                    <div className="flex gap-6 opacity-50">
+                      <div className="h-6 w-20 bg-slate-200 rounded"></div>
+                      <div className="h-6 w-16 bg-slate-200 rounded"></div>
+                      <div className="h-6 w-24 bg-slate-200 rounded"></div>
                     </div>
-                    <p className="mt-4 text-sm text-success-700">
-                      Questions? Email us at{' '}
-                      <a href="mailto:hello@webvello.com" className="font-semibold underline">hello@webvello.com</a>
-                    </p>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+
+              {step === 'details' && (
+                <div className="bg-white rounded-2xl p-8 shadow-2xl">
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <h2 className="text-xl font-bold text-slate-900">Almost there</h2>
+                      <p className="text-slate-600 text-sm">Tell us how to reach you</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setStep('url')}
+                      className="text-sm text-slate-400 hover:text-slate-600 transition-colors flex items-center"
+                    >
+                      <ArrowLeft className="mr-1 h-4 w-4" /> Back
+                    </button>
+                  </div>
+                  
+                  {/* Progress */}
+                  <div className="h-1.5 bg-slate-100 rounded-full mb-6">
+                    <div className="h-full w-2/3 bg-gradient-to-r from-rose-500 to-orange-500 rounded-full"></div>
+                  </div>
+                  
+                  <form className="space-y-4" onSubmit={handleDetailsSubmit}>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                        <Input
+                          type="text"
+                          required
+                          placeholder="John Smith"
+                          value={formData.name}
+                          onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
+                          className="h-12 bg-slate-50 border-slate-200 rounded-xl"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                        <Input
+                          type="email"
+                          required
+                          placeholder="john@company.com"
+                          value={formData.email}
+                          onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
+                          className="h-12 bg-slate-50 border-slate-200 rounded-xl"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="p-3 bg-slate-50 rounded-xl text-sm text-slate-600">
+                      Analyzing: <span className="font-medium text-slate-900">{formData.website}</span>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Goals <span className="text-slate-400">(optional)</span></label>
+                      <textarea
+                        placeholder="What do you want to achieve?"
+                        value={formData.goals}
+                        onChange={(event) => setFormData((prev) => ({ ...prev, goals: event.target.value }))}
+                        rows={3}
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm resize-none focus:outline-none focus:border-rose-500"
+                      />
+                    </div>
+                    
+                    <Button
+                      type="submit"
+                      className="w-full h-12 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold rounded-xl"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Creating your plan...' : 'Get My Growth Plan'}
+                    </Button>
+                  </form>
+                </div>
+              )}
+
+              {step === 'success' && (
+                <div className="bg-white rounded-2xl p-8 shadow-2xl text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="h-8 w-8 text-white" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2">You&apos;re all set!</h2>
+                  <p className="text-slate-600 mb-6">
+                    We&apos;re analyzing your website now. Expect your personalized growth plan within 24 hours.
+                  </p>
+                  <div className="flex gap-3">
+                    <Link 
+                      href="/contact" 
+                      className="flex-1 h-12 inline-flex items-center justify-center bg-gradient-to-r from-rose-500 to-orange-500 text-white font-semibold rounded-xl"
+                    >
+                      Book a Call
+                    </Link>
+                    <button 
+                      onClick={resetFlow} 
+                      className="flex-1 h-12 inline-flex items-center justify-center border border-slate-200 text-slate-700 font-semibold rounded-xl hover:bg-slate-50"
+                    >
+                      Submit Another
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

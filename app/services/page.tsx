@@ -1,13 +1,13 @@
 import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
-import { ArrowRight, Zap, Globe, Code, Users, BarChart3, TrendingUp, Target } from 'lucide-react'
+import { ArrowRight, Zap, Globe, Code, Users, BarChart3, TrendingUp, Target, Brain, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services | AI SEO, Web Development & More',
-  description: 'Comprehensive digital marketing services including AI-powered SEO, local SEO, web development, UI/UX design, and software development. Drive 300%+ traffic growth with our proven strategies.',
-  keywords: 'digital marketing services, AI SEO services, web development services, local SEO, UI/UX design, software development, SEO agency, marketing services',
+  title: 'Digital Marketing Services | GEO, AI SEO, Web Development | Web Vello',
+  description: 'Comprehensive digital marketing services including GEO (Generative Engine Optimization), AI-powered SEO, web development, and more. Get found in ChatGPT, Perplexity, and Google SGE.',
+  keywords: 'digital marketing services, GEO services, generative engine optimization, AI SEO services, web development services, local SEO, ChatGPT optimization, Perplexity optimization',
   openGraph: {
     title: 'Digital Marketing Services | Web Vello',
     description: 'Comprehensive digital marketing services including AI-powered SEO, web development, and more. Drive 300%+ traffic growth with proven strategies.',
@@ -37,6 +37,15 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    name: "GEO (Generative Engine Optimization)",
+    description: "Get found in AI search results. Optimize for ChatGPT, Perplexity, Claude, and Google SGE. The future of search is AI—be visible where your customers are looking.",
+    icon: Brain,
+    href: "/services/geo-services",
+    features: ["AI content optimization", "Schema markup", "Entity optimization", "Topical authority"],
+    benefits: ["AI search visibility", "ChatGPT mentions", "Perplexity citations", "Future-proof SEO"],
+    featured: true
+  },
+  {
     name: "AI-Powered SEO",
     description: "Leverage artificial intelligence to identify opportunities and optimize your content strategy for maximum search visibility.",
     icon: Zap,
@@ -45,7 +54,7 @@ const services = [
     benefits: ["Faster results", "Data-driven insights", "Scalable optimization", "Competitive advantage"]
   },
   {
-    name: "Local/GEO SEO",
+    name: "Local SEO",
     description: "Dominate local search results and drive foot traffic to your physical locations with targeted local SEO strategies.",
     icon: Globe,
     href: "/services/local-seo",

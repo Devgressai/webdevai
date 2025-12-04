@@ -35,21 +35,21 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.webvello.com'),
   title: {
-    default: 'Web Vello - Digital Marketing Agency | AI SEO, Local SEO, Web Development',
+    default: 'Web Vello - GEO & SEO Agency | AI Search, Web Development',
     template: '%s | Web Vello'
   },
-  description: 'Drive revenue growth with data-driven digital marketing. Specializing in AI-powered SEO, local search dominance, and conversion-focused web development. Get 300%+ traffic growth in 6 months.',
+  description: 'GEO (Generative Engine Optimization) and SEO agency. Get found in ChatGPT, Perplexity, and Google. Custom web development, AI SEO, and local search optimization. 300%+ traffic growth.',
   keywords: [
-    'digital marketing agency',
+    'GEO agency',
+    'generative engine optimization',
     'AI SEO services',
+    'ChatGPT optimization',
+    'Perplexity optimization',
+    'Google SGE optimization',
     'local SEO optimization',
     'web development company',
-    'UI/UX design services',
-    'conversion rate optimization',
-    'digital marketing consulting',
-    'SEO agency',
-    'web design services',
-    'marketing automation'
+    'AI search optimization',
+    'digital marketing agency'
   ],
   authors: [{ name: 'Web Vello', url: 'https://www.webvello.com' }],
   creator: 'Web Vello',
@@ -78,8 +78,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.webvello.com',
     siteName: 'Web Vello',
-    title: 'Web Vello - Digital Marketing Agency',
-    description: 'Drive revenue growth with data-driven digital marketing. Get 300%+ traffic growth in 6 months.',
+    title: 'Web Vello - GEO & SEO Agency | AI Search Optimization',
+    description: 'GEO and SEO agency. Get found in ChatGPT, Perplexity, and Google. Custom web development and AI-powered search optimization.',
     images: [
       {
         url: 'https://www.webvello.com/og-image.jpg',
@@ -189,7 +189,7 @@ export default function RootLayout({
                 "width": 2048,
                 "height": 2048
               },
-              "description": "Digital Marketing Agency specializing in AI-powered SEO, local search optimization, and conversion-focused web development.",
+              "description": "GEO (Generative Engine Optimization) and SEO agency. We help businesses get found in ChatGPT, Perplexity, Google SGE, and traditional search. Custom web development, AI SEO, and local search optimization.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "United States",
@@ -215,8 +215,16 @@ export default function RootLayout({
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Digital Marketing Services",
+                "name": "GEO, SEO & Web Development Services",
                 "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "GEO (Generative Engine Optimization)",
+                      "description": "Get your business found in AI search platforms like ChatGPT, Perplexity, Claude, and Google SGE"
+                    }
+                  },
                   {
                     "@type": "Offer",
                     "itemOffered": {
@@ -239,14 +247,6 @@ export default function RootLayout({
                       "@type": "Service",
                       "name": "Custom Web Development",
                       "description": "Professional custom websites built with modern technologies for optimal performance and conversions"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "UI/UX Design Services",
-                      "description": "User-centered design that creates seamless experiences and drives engagement"
                     }
                   }
                 ]

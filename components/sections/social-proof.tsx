@@ -1,81 +1,93 @@
-import { Star, Quote, CheckCircle } from 'lucide-react'
+"use client"
 
-
+import { ArrowRight, Star } from 'lucide-react'
+import Link from 'next/link'
 
 const testimonials = [
   {
+    content: 'Web Vello completely transformed our online presence. We went from invisible to page 1 rankings in just 4 months. The ROI has been incredible.',
     name: 'Sarah Mitchell',
     role: 'CEO',
     company: 'TechStart Solutions',
-    content: 'Web Vello transformed our online presence completely. We went from 50 leads per month to over 200, and our revenue increased by 150% in just 6 months.',
-    rating: 5,
-    results: ['150% revenue increase', '300% more leads', '6 month timeline']
+    result: '3x traffic',
+    image: 'SM'
   },
   {
+    content: 'Finally an agency that delivers what they promise. Our leads have tripled and the quality is better than ever.',
     name: 'Michael Rodriguez',
     role: 'Marketing Director',
     company: 'GrowthCo',
-    content: 'The AI-powered SEO strategies are incredible. We\'re ranking for keywords we never thought possible, and our organic traffic has grown 400% year-over-year.',
-    rating: 5,
-    results: ['400% traffic growth', 'Top keyword rankings', 'Year-over-year success']
+    result: '400% growth',
+    image: 'MR'
   },
   {
+    content: 'The best investment we\'ve made. Professional, transparent, and the results speak for themselves.',
     name: 'Jennifer Chen',
     role: 'Founder',
     company: 'LegalTech Pro',
-    content: 'Professional, results-driven, and incredibly effective. Web Vello helped us establish authority in our niche and attract high-value clients consistently.',
-    rating: 5,
-    results: ['Authority established', 'High-value clients', 'Consistent results']
+    result: '5x revenue',
+    image: 'JC'
   }
 ]
 
 function SocialProof() {
   return (
-    <section className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Testimonials */}
-        <div className="mb-20">
-          <h3 className="text-xl font-semibold text-secondary-900 text-center mb-12">
-            What Our Clients Say
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-soft border border-secondary-100">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-current" />
-                    ))}
-                  </div>
-                  <Quote className="h-5 w-5 text-gray-400 ml-auto" />
+    <section className="py-28 bg-white">
+      <div className="mx-auto max-w-6xl px-6">
+        
+        <div className="max-w-2xl mb-16">
+          <p className="text-rose-500 font-semibold mb-3">Testimonials</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight mb-4">
+            Loved by growing businesses
+          </h2>
+          <p className="text-xl text-slate-600">
+            Don&apos;t take our word for it—hear from our clients.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="p-8 rounded-2xl border border-slate-200 bg-white hover:shadow-lg transition-all">
+              {/* Rating */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              
+              {/* Result badge */}
+              <div className="inline-block px-3 py-1 bg-gradient-to-r from-rose-50 to-orange-50 text-rose-600 text-sm font-semibold rounded-full mb-4">
+                {testimonial.result}
+              </div>
+              
+              {/* Quote */}
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                &ldquo;{testimonial.content}&rdquo;
+              </p>
+              
+              {/* Author */}
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center text-white font-bold">
+                  {testimonial.image}
                 </div>
-                
-                <p className="text-secondary-700 mb-4 italic">
-                  “{testimonial.content}”
-                </p>
-                
-                <div className="mb-4">
-                  <p className="font-semibold text-secondary-900">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-secondary-600">
-                    {testimonial.role}, {testimonial.company}
-                  </p>
-                </div>
-                
-                <div className="space-y-2">
-                  {testimonial.results.map((result, i) => (
-                    <div key={i} className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm text-secondary-700">{result}</span>
-                    </div>
-                  ))}
+                <div>
+                  <p className="font-bold text-slate-900">{testimonial.name}</p>
+                  <p className="text-slate-500 text-sm">{testimonial.role}, {testimonial.company}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-
+        
+        <div className="mt-12 text-center">
+          <Link 
+            href="/case-studies"
+            className="inline-flex items-center text-slate-900 font-semibold hover:text-rose-500 transition-colors"
+          >
+            View all case studies
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   )

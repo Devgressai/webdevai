@@ -1,0 +1,265 @@
+import { Button } from '../../../components/ui/button'
+import { ArrowRight, CheckCircle, Trees, Shovel, Sun, Home, Droplets, Leaf, Mountain, Flower } from 'lucide-react'
+import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'GEO for Landscaping Companies | AI Search Optimization | Web Vello',
+  description: 'Get your landscaping business found in ChatGPT, Perplexity, and Google SGE. GEO optimization for landscapers, lawn care, and hardscaping companies.',
+  keywords: ['geo landscaping', 'ai seo landscaping', 'landscaping chatgpt optimization', 'lawn care geo', 'landscaping ai search'],
+  alternates: {
+    canonical: 'https://www.webvello.com/services/geo-landscaping',
+  },
+  openGraph: {
+    title: 'GEO for Landscaping | AI Search for Landscapers | Web Vello',
+    description: 'Get your landscaping business found in AI search results.',
+    url: 'https://www.webvello.com/services/geo-landscaping',
+    type: 'website',
+  }
+}
+
+const landscapingTypes = [
+  { icon: Trees, name: "Landscape Design", description: "Full landscape design and installation" },
+  { icon: Shovel, name: "Hardscaping", description: "Patios, walkways, retaining walls" },
+  { icon: Sun, name: "Lawn Care", description: "Mowing, fertilization, weed control" },
+  { icon: Droplets, name: "Irrigation", description: "Sprinkler systems and maintenance" },
+  { icon: Leaf, name: "Tree Service", description: "Tree trimming, removal, planting" },
+  { icon: Flower, name: "Garden Design", description: "Flower beds and garden installation" },
+  { icon: Mountain, name: "Xeriscaping", description: "Drought-tolerant landscaping" },
+  { icon: Home, name: "Commercial", description: "Commercial property maintenance" }
+]
+
+const whyGeoMatters = [
+  {
+    query: "\"Best landscaper in [city]\"",
+    impact: "Homeowners ask AI for landscaper recommendations when planning projects"
+  },
+  {
+    query: "\"Who can build a patio in my area?\"",
+    impact: "Project-specific queries where AI recommends qualified contractors"
+  },
+  {
+    query: "\"Landscaping companies that do [specialty]\"",
+    impact: "Specialty searches where AI matches services to customer needs"
+  },
+  {
+    query: "\"Lawn care service near me\"",
+    impact: "Recurring service queries where AI recommends reliable providers"
+  }
+]
+
+const services = [
+  {
+    title: "Landscaper Entity Optimization",
+    description: "AI systems need to understand your landscaping business as a distinct entity with clear services and service areas.",
+    features: ["LocalBusiness schema markup", "Service area definition", "Specialty positioning", "Portfolio integration"]
+  },
+  {
+    title: "Project & Portfolio Content",
+    description: "Showcase your work in ways that AI can understand and cite when recommending landscapers.",
+    features: ["Project case studies", "Before/after content", "Service descriptions", "Material specialties"]
+  },
+  {
+    title: "Review & Reputation Building",
+    description: "AI systems heavily weight reviews for home services. We optimize your review presence.",
+    features: ["Review aggregation", "Response strategy", "Rating optimization", "Trust signals"]
+  },
+  {
+    title: "Local Area Targeting",
+    description: "Dominate AI recommendations for the specific neighborhoods and communities you serve.",
+    features: ["City targeting", "Neighborhood content", "Service area pages", "Local SEO integration"]
+  }
+]
+
+const faqs = [
+  {
+    question: "Why is GEO important for landscaping companies?",
+    answer: "When homeowners ask ChatGPT 'who's the best landscaper in my area' or ask Perplexity 'find a company that does patio installation,' AI recommends specific landscapers. If you're not optimized, you're invisible to these potential customers."
+  },
+  {
+    question: "How is landscaping GEO different from other industries?",
+    answer: "Landscaping GEO focuses on visual work portfolios, seasonal services, and hyperlocal targeting. We optimize for project-specific queries and help AI understand your specialties and service areas."
+  },
+  {
+    question: "Can GEO help with specific landscaping services?",
+    answer: "Absolutely. Specialty targeting often delivers the best results—'hardscaping contractor,' 'irrigation specialist,' 'xeriscaping company.' We optimize for both general and specialty queries."
+  },
+  {
+    question: "How do you showcase our work for AI?",
+    answer: "We create structured content around your projects with schema markup, descriptions, and details that AI can parse and cite. This helps you get recommended for relevant project queries."
+  },
+  {
+    question: "What about seasonal services?",
+    answer: "We optimize for seasonal queries like 'spring cleanup,' 'fall leaf removal,' and 'snow removal' (where applicable). Seasonal targeting ensures you capture business year-round."
+  },
+  {
+    question: "How do you measure landscaping GEO success?",
+    answer: "We track AI mentions for target services and areas, monitor competitor visibility, and measure lead quality and attribution from customers who mention AI discovery."
+  }
+]
+
+export default function GEOLandscapingPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[150px]"></div>
+        </div>
+        
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-2 mb-8">
+              <Trees className="w-4 h-4 text-rose-400" />
+              <span className="text-white/80 text-sm">GEO for Landscaping</span>
+            </div>
+            
+            <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
+              Get Your{' '}
+              <span className="bg-gradient-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
+                Landscaping Business
+              </span>{' '}
+              Recommended by AI
+            </h1>
+            
+            <p className="text-xl text-white/70 mb-8 leading-relaxed">
+              When homeowners ask ChatGPT "who's the best landscaper near me" or ask 
+              Perplexity "find a company to build my patio"—you should be the answer.
+            </p>
+            
+            <Button
+              className="h-14 px-8 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold rounded-xl"
+              asChild
+            >
+              <Link href="/contact">
+                Get Free Landscaping GEO Audit
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why GEO Matters */}
+      <section className="py-20 bg-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-2xl mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Why Landscapers Need GEO
+            </h2>
+            <p className="text-xl text-slate-600">
+              Homeowners are asking AI for contractor recommendations. AI mentions drive high-quality leads.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {whyGeoMatters.map((item, index) => (
+              <div key={index} className="bg-slate-50 rounded-xl p-8">
+                <p className="text-lg font-bold text-slate-900 mb-3">{item.query}</p>
+                <p className="text-slate-600">{item.impact}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Landscaping Types */}
+      <section className="py-24 bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Landscaping Services We Optimize
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              We help all types of landscaping and lawn care businesses get found in AI search.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {landscapingTypes.map((type) => (
+              <div key={type.name} className="bg-white rounded-xl p-6 text-center border border-slate-200">
+                <type.icon className="w-10 h-10 text-rose-500 mx-auto mb-4" />
+                <h3 className="font-bold text-slate-900 mb-2">{type.name}</h3>
+                <p className="text-sm text-slate-600">{type.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-2xl mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Our Landscaping GEO Package
+            </h2>
+            <p className="text-xl text-slate-600">
+              Everything you need to get your landscaping business recommended by AI.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service) => (
+              <div key={service.title} className="p-8 rounded-2xl border border-slate-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
+                <p className="text-slate-600 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center text-sm text-slate-700">
+                      <CheckCircle className="w-4 h-4 text-rose-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-24 bg-slate-50">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              FAQs for Landscaping GEO
+            </h2>
+          </div>
+          
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-slate-200">
+                <h3 className="text-lg font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 to-slate-800">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to get more landscaping leads from AI?
+          </h2>
+          <p className="text-xl text-white/70 mb-10">
+            Get a free GEO audit for your landscaping business. See exactly how visible you are 
+            when homeowners ask AI for recommendations.
+          </p>
+          <Button
+            className="h-14 px-10 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl"
+            asChild
+          >
+            <Link href="/contact">
+              Get Your Free Landscaping GEO Audit
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+    </div>
+  )
+}
+

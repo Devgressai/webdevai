@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from '../ui/button'
-import { ArrowRight, Monitor, Palette, Zap, Users, ShoppingCart, Mail, CheckCircle, Eye, Target, TrendingUp, Award, Clock, DollarSign, Globe, Smartphone, Search, Shield, BarChart3, Star, MessageSquare, Phone, Calendar, Sparkles, Layers, Code, Building2, Crown, Gem, FileText, ShoppingBag } from 'lucide-react'
+import { ArrowRight, Monitor, Palette, Zap, Users, ShoppingCart, Mail, CheckCircle, Eye, Target, TrendingUp, Award, Clock, DollarSign, Globe, Smartphone, Search, Shield, BarChart3, Star, MessageSquare, Phone, Calendar, Sparkles, Layers, Code, Building2, Crown, Gem, FileText, ShoppingBag, Briefcase, Paintbrush, MousePointerClick } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -12,32 +12,32 @@ const features = [
     description: "Tailored design approach based on your brand, audience, and business goals.",
     icon: Target,
     benefits: ["Brand-aligned design", "User-focused approach", "Conversion optimization", "Scalable solutions"],
-    color: "from-blue-500 to-cyan-600",
-    gradient: "from-blue-50 to-cyan-50"
+    color: "from-emerald-500 to-teal-600",
+    gradient: "from-emerald-50 to-teal-50"
   },
   {
     title: "Responsive Design",
     description: "Websites that look and perform perfectly on all devices and screen sizes.",
     icon: Monitor,
     benefits: ["Mobile-first design", "Cross-browser compatibility", "Touch-friendly interfaces", "Fast loading times"],
-    color: "from-purple-500 to-indigo-600",
-    gradient: "from-purple-50 to-indigo-50"
+    color: "from-violet-500 to-purple-600",
+    gradient: "from-violet-50 to-purple-50"
   },
   {
     title: "Conversion Optimization",
     description: "Design elements strategically placed to maximize visitor-to-customer conversion rates.",
     icon: TrendingUp,
     benefits: ["Strategic CTAs", "User flow optimization", "A/B testing", "Performance tracking"],
-    color: "from-green-500 to-emerald-600",
-    gradient: "from-green-50 to-emerald-50"
+    color: "from-amber-500 to-orange-600",
+    gradient: "from-amber-50 to-orange-50"
   },
   {
     title: "Modern UI/UX",
     description: "Contemporary design trends and user experience best practices.",
     icon: Eye,
     benefits: ["Clean aesthetics", "Intuitive navigation", "Accessibility compliance", "Engaging interactions"],
-    color: "from-orange-500 to-red-600",
-    gradient: "from-orange-50 to-red-50"
+    color: "from-rose-500 to-pink-600",
+    gradient: "from-rose-50 to-pink-50"
   }
 ]
 
@@ -47,28 +47,28 @@ const process = [
     title: "Discovery & Strategy",
     description: "We analyze your business, audience, and competitors to create a strategic design plan.",
     icon: Search,
-    color: "from-blue-500 to-cyan-600"
+    color: "from-emerald-500 to-teal-600"
   },
   {
     step: "02",
     title: "Wireframing & Prototyping",
     description: "We create wireframes and interactive prototypes to visualize the user experience.",
     icon: Layers,
-    color: "from-purple-500 to-indigo-600"
+    color: "from-violet-500 to-purple-600"
   },
   {
     step: "03",
     title: "Design & Development",
     description: "Our designers and developers work together to bring your vision to life.",
     icon: Code,
-    color: "from-green-500 to-emerald-600"
+    color: "from-amber-500 to-orange-600"
   },
   {
     step: "04",
     title: "Testing & Launch",
     description: "Rigorous testing across devices and browsers before launching your new website.",
     icon: Building2,
-    color: "from-orange-500 to-red-600"
+    color: "from-rose-500 to-pink-600"
   }
 ]
 
@@ -77,25 +77,25 @@ const results = [
     metric: "300%+",
     description: "Average increase in conversion rates",
     icon: TrendingUp,
-    color: "from-green-500 to-emerald-600"
+    color: "from-emerald-500 to-teal-600"
   },
   {
     metric: "45%",
     description: "Improvement in user engagement",
     icon: Users,
-    color: "from-blue-500 to-cyan-600"
+    color: "from-violet-500 to-purple-600"
   },
   {
     metric: "2.5x",
     description: "Faster page load times",
     icon: Zap,
-    color: "from-yellow-500 to-orange-600"
+    color: "from-amber-500 to-orange-600"
   },
   {
     metric: "85%",
     description: "Mobile traffic increase",
     icon: Smartphone,
-    color: "from-purple-500 to-indigo-600"
+    color: "from-rose-500 to-pink-600"
   }
 ]
 
@@ -104,27 +104,33 @@ const designShowcase = [
     title: "Modern Minimalist",
     description: "Clean, focused design that puts content first",
     category: "Corporate",
+    icon: Briefcase,
     features: ["Clean typography", "White space", "Subtle animations", "Focus on content"],
-    image: "/images/design-showcase/modern-minimalist-design.webp"
+    image: "/images/design-showcase/modern-minimalist.webp",
+    accent: "from-slate-600 to-zinc-700"
   },
   {
     title: "Bold & Creative",
     description: "Eye-catching designs that make a statement",
     category: "Creative",
+    icon: Paintbrush,
     features: ["Vibrant colors", "Custom illustrations", "Interactive elements", "Unique layouts"],
-    image: "/images/design-showcase/bold-creative-design.webp"
+    image: "/images/design-showcase/bold-creative.webp",
+    accent: "from-fuchsia-500 to-purple-600"
   },
   {
     title: "E-commerce Excellence",
     description: "Designed to convert browsers into buyers",
     category: "E-commerce",
+    icon: ShoppingCart,
     features: ["Product-focused", "Easy navigation", "Trust signals", "Optimized CTAs"],
-    image: "/images/design-showcase/ecommerce-excellence-design.webp"
+    image: "/images/design-showcase/ecommerce-excellence.webp",
+    accent: "from-emerald-500 to-teal-600"
   }
 ]
 
 export default function WebsiteDesignContent() {
-  const [hoveredFeature, setHoveredFeature] = useState(null)
+  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
@@ -134,7 +140,7 @@ export default function WebsiteDesignContent() {
   }, [])
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#0a0a0f]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -159,46 +165,52 @@ export default function WebsiteDesignContent() {
           })
         }}
       />
-      <section className="py-32 bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-tl from-indigo-200/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-gradient-to-br from-purple-200/20 to-transparent rounded-full blur-2xl animate-bounce"></div>
+      
+      {/* Hero Section with Dark Aesthetic */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0a0a0f]">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-900/20 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-emerald-900/15 via-transparent to-transparent"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         </div>
         
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 text-sm font-semibold mb-8 shadow-2xl animate-bounce">
-              <Monitor className="w-5 h-5 mr-3" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-5 py-2 text-sm font-medium text-violet-300 mb-8 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4" />
               Website Design Services
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-secondary-900 mb-8 leading-tight">
+            <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
               <span className="block mb-2">Custom Website Design</span>
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
+              <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
                 That Converts
               </span>
             </h1>
             
-            <p className="text-2xl text-secondary-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
               Transform your online presence with custom website design that combines 
-              <span className="text-primary-600 font-semibold"> stunning aesthetics </span>
+              <span className="text-violet-300 font-medium"> stunning aesthetics </span>
               with 
-              <span className="text-primary-600 font-semibold"> conversion-focused functionality</span>. 
-              We create websites that don’t just look good—they drive results.
+              <span className="text-emerald-300 font-medium"> conversion-focused functionality</span>. 
+              We don't just look good—we drive results.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold group">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button asChild size="lg" className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)] transition-all duration-500 px-8 py-6 text-lg font-semibold group border-0 rounded-xl">
                 <Link href="/contact">
-                  <Sparkles className="w-5 h-5 mr-3 group-hover:animate-spin" />
+                  <MousePointerClick className="w-5 h-5 mr-3" />
                   Get Your Custom Design
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-2 border-secondary-300 hover:border-primary-500 hover:bg-primary-50 hover:text-primary-700 transition-all duration-300 px-8 py-4 text-lg font-semibold group">
+              <Button asChild variant="outline" size="lg" className="border border-gray-700 bg-white/5 text-white hover:bg-white/10 hover:border-violet-500/50 transition-all duration-300 px-8 py-6 text-lg font-semibold group rounded-xl backdrop-blur-sm">
                 <Link href="/case-studies">
-                  <Eye className="w-5 h-5 mr-3 group-hover:animate-pulse" />
+                  <Eye className="w-5 h-5 mr-3" />
                   View Our Work
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -206,40 +218,54 @@ export default function WebsiteDesignContent() {
             </div>
           </div>
 
+          {/* Design Showcase Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
             {designShowcase.map((showcase, index) => (
-              <div key={showcase.title} className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-4 overflow-hidden relative">
-                    {showcase.image ? (
-                      <Image
-                        src={showcase.image}
-                        alt={`${showcase.title} design preview`}
-                        fill
-                        className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <div className="text-center">
-                          <Monitor className="w-16 h-16 text-gray-400 mx-auto mb-2" />
-                          <p className="text-gray-500 text-sm">Design Preview</p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                  <div className="inline-block bg-primary-100 text-primary-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+              <div 
+                key={showcase.title} 
+                className="group relative rounded-3xl overflow-hidden border border-gray-800/60 bg-gradient-to-b from-gray-900/80 to-gray-950/90 backdrop-blur-xl hover:border-violet-500/40 transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_30px_80px_-20px_rgba(139,92,246,0.35)]"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                {/* Glow effect on hover */}
+                <div className="absolute -inset-px bg-gradient-to-r from-violet-500/0 via-fuchsia-500/0 to-emerald-500/0 group-hover:from-violet-500/20 group-hover:via-fuchsia-500/10 group-hover:to-emerald-500/20 rounded-3xl transition-all duration-700 opacity-0 group-hover:opacity-100 blur-xl"></div>
+                
+                {/* Image Container */}
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={showcase.image}
+                    alt={`${showcase.title} design preview`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index === 0}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/60 to-transparent"></div>
+                  
+                  {/* Category Badge */}
+                  <div className={`absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${showcase.accent} px-4 py-2 text-xs font-bold text-white shadow-xl ring-1 ring-white/10`}>
+                    <showcase.icon className="w-4 h-4" />
                     {showcase.category}
                   </div>
-                  <h3 className="text-xl font-bold text-secondary-900 mb-2 group-hover:text-primary-600 transition-colors">
+
+                  {/* Decorative corner accent */}
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-violet-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                
+                {/* Content */}
+                <div className="relative p-7">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors duration-300">
                     {showcase.title}
                   </h3>
-                  <p className="text-secondary-600 mb-4">{showcase.description}</p>
-                  <ul className="space-y-2">
-                    {showcase.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-secondary-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <p className="text-gray-400 mb-6 text-sm leading-relaxed">{showcase.description}</p>
+                  
+                  <ul className="grid grid-cols-2 gap-3">
+                    {showcase.features.map((feature, featureIndex) => (
+                      <li 
+                        key={feature} 
+                        className="flex items-center text-xs text-gray-500 group-hover:text-gray-300 transition-all duration-300"
+                        style={{ transitionDelay: `${featureIndex * 50}ms` }}
+                      >
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -252,10 +278,14 @@ export default function WebsiteDesignContent() {
       </section>
 
       {/* Page-level FAQs */}
-      <section className="py-24 bg-gray-50">
-        <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-8">Website Design FAQs</h2>
-          <div className="space-y-6">
+      <section className="py-24 bg-[#0d0d12] relative">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-900/5 via-transparent to-transparent"></div>
+        <div className="mx-auto max-w-5xl px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Website Design FAQs</h2>
+            <p className="text-gray-400">Common questions about our design process</p>
+          </div>
+          <div className="space-y-4">
             {[
               {
                 q: 'How long does a custom website design take?',
@@ -270,83 +300,105 @@ export default function WebsiteDesignContent() {
                 a: 'We preserve URLs or set proper 301 redirects, migrate metadata, and monitor rankings to ensure a smooth transition.'
               }
             ].map((f, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border">
-                <h3 className="font-semibold text-secondary-900 mb-2">{f.q}</h3>
-                <p className="text-secondary-700">{f.a}</p>
+              <div key={i} className="group bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-violet-500/30 hover:bg-gray-900/80 transition-all duration-300 backdrop-blur-sm">
+                <h3 className="font-semibold text-white mb-3 group-hover:text-violet-300 transition-colors">{f.q}</h3>
+                <p className="text-gray-400 leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-32 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-blue-50/50"></div>
+      {/* Features Section */}
+      <section className="py-28 bg-[#0a0a0f] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:80px_80px]"></div>
+        </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Our 
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Website Design Services</span>?
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent"> Website Design</span>?
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
               We combine creativity with strategy to deliver websites that exceed expectations and drive measurable business results.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {features.map((feature, index) => (
-              <div key={feature.title} className={`bg-gradient-to-br ${feature.gradient} rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group cursor-pointer`}>
-                <div className="flex items-center mb-6">
-                  <div className={`h-16 w-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="h-8 w-8 text-white" />
+              <div 
+                key={feature.title} 
+                className="group relative bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-violet-500/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-15px_rgba(139,92,246,0.15)] backdrop-blur-sm overflow-hidden"
+                onMouseEnter={() => setHoveredFeature(index)}
+                onMouseLeave={() => setHoveredFeature(null)}
+              >
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-start gap-5 mb-6">
+                    <div className={`h-14 w-14 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <feature.icon className="h-7 w-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-violet-300 transition-colors mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-secondary-900 group-hover:text-primary-600 transition-colors">
-                    {feature.title}
-                  </h3>
+                  <ul className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-gray-800">
+                    {feature.benefits.map((benefit) => (
+                      <li key={benefit} className="flex items-center text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
+                        <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-lg text-secondary-700 mb-6 leading-relaxed">{feature.description}</p>
-                <ul className="space-y-3">
-                  {feature.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center text-base text-secondary-700 group-hover:text-secondary-900 transition-colors">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-32 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+      {/* Process Section */}
+      <section className="py-28 bg-[#0d0d12] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-violet-900/10 via-transparent to-transparent"></div>
+        </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our 
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Design Process</span>
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"> Design Process</span>
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
               A proven methodology that ensures your website design exceeds expectations and drives results.
             </p>
-            
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {process.map((step, index) => (
-              <div key={step.step} className="relative text-center group hover:scale-105 transition-all duration-500">
+              <div key={step.step} className="relative group">
+                {/* Connector Line */}
                 {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-gradient-to-r from-gray-300 to-gray-400 transform -translate-y-1/2 z-0"></div>
+                  <div className="hidden lg:block absolute top-12 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-px bg-gradient-to-r from-gray-700 via-violet-500/30 to-gray-700 z-0"></div>
                 )}
                 
-                <div className="relative z-10 bg-white rounded-3xl p-8 shadow-lg border-2 border-gray-200 hover:border-primary-500 hover:shadow-2xl hover:shadow-primary-200 transition-all duration-500">
-                  <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <step.icon className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                <div className="relative z-10 bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-violet-500/30 hover:shadow-[0_20px_60px_-15px_rgba(139,92,246,0.15)] transition-all duration-500 backdrop-blur-sm text-center h-full">
+                  {/* Step Number */}
+                  <div className={`absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r ${step.color} text-white text-xs font-bold shadow-lg`}>
                     {step.step}
                   </div>
-                  <h3 className="text-xl font-bold text-secondary-900 mb-4 group-hover:text-primary-600 transition-colors">{step.title}</h3>
-                  <p className="text-secondary-600 leading-relaxed">{step.description}</p>
+                  
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${step.color} flex items-center justify-center mx-auto mb-5 mt-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <step.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">{step.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -354,74 +406,94 @@ export default function WebsiteDesignContent() {
         </div>
       </section>
 
-      <section className="py-32 bg-white relative overflow-hidden">
+      {/* Results Section */}
+      <section className="py-28 bg-[#0a0a0f] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Results That 
-              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> Speak for Themselves</span>
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"> Speak for Themselves</span>
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
               Our custom website designs consistently deliver exceptional results for businesses across all industries.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {results.map((result, index) => (
-              <div key={result.metric} className="group text-center bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${result.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <result.icon className="h-10 w-10 text-white" />
+              <div key={result.metric} className="group text-center bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-violet-500/30 hover:shadow-[0_20px_60px_-15px_rgba(139,92,246,0.15)] transition-all duration-500 hover:-translate-y-1 backdrop-blur-sm">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${result.color} flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <result.icon className="h-7 w-7 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-secondary-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <div className="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:text-violet-300 transition-colors">
                   {result.metric}
                 </div>
-                <p className="text-secondary-600 text-lg">{result.description}</p>
+                <p className="text-gray-500 text-sm">{result.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-32 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
+      <section className="py-32 relative overflow-hidden bg-[#0a0a0f]">
+        {/* Enhanced gradient background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-fuchsia-900/20 to-emerald-900/20"></div>
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-[150px]"></div>
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-600/15 rounded-full blur-[120px]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         </div>
         
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Website?
+          {/* Decorative element */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-5 py-2 text-sm font-medium text-violet-300 mb-8 backdrop-blur-sm">
+            <Sparkles className="w-4 h-4" />
+            Start Your Transformation
+          </div>
+          
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Ready to Transform 
+            <span className="block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
+              Your Website?
+            </span>
           </h2>
-          <p className="text-xl text-primary-100 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             Join hundreds of businesses that have already achieved remarkable growth with our custom website designs.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button asChild size="xl" className="bg-white text-primary-600 hover:bg-gray-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 px-10 py-4 text-lg font-semibold group">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <Button asChild size="lg" className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 hover:shadow-[0_0_50px_rgba(139,92,246,0.4)] transition-all duration-500 px-10 py-7 text-lg font-semibold group border-0 rounded-2xl">
               <Link href="/contact">
-                <Crown className="w-6 h-6 mr-3 group-hover:animate-pulse" />
+                <Crown className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform" />
                 Get Your Custom Design
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Link>
             </Button>
-            <Button variant="outline" size="xl" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 hover:shadow-2xl transition-all duration-300 px-10 py-4 text-lg font-semibold group">
-              <Gem className="w-6 h-6 mr-3 group-hover:animate-bounce" />
-              View Portfolio
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+            <Button asChild variant="outline" size="lg" className="border-2 border-gray-700 bg-white/5 text-white hover:bg-white/10 hover:border-violet-500/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] transition-all duration-500 px-10 py-7 text-lg font-semibold group rounded-2xl backdrop-blur-sm">
+              <Link href="/case-studies">
+                <Gem className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
+                View Portfolio
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+              </Link>
             </Button>
           </div>
           
-          <div className="mt-12 flex items-center justify-center space-x-8 text-primary-100">
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Free Consultation</span>
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-8 text-gray-400">
+            <div className="flex items-center gap-2.5 bg-gray-900/50 px-5 py-2.5 rounded-full border border-gray-800">
+              <CheckCircle className="w-5 h-5 text-emerald-400" />
+              <span className="text-sm font-medium">Free Consultation</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>No Obligation</span>
+            <div className="flex items-center gap-2.5 bg-gray-900/50 px-5 py-2.5 rounded-full border border-gray-800">
+              <CheckCircle className="w-5 h-5 text-emerald-400" />
+              <span className="text-sm font-medium">No Obligation</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>24hr Response</span>
+            <div className="flex items-center gap-2.5 bg-gray-900/50 px-5 py-2.5 rounded-full border border-gray-800">
+              <CheckCircle className="w-5 h-5 text-emerald-400" />
+              <span className="text-sm font-medium">24hr Response</span>
             </div>
           </div>
         </div>
@@ -429,3 +501,5 @@ export default function WebsiteDesignContent() {
     </div>
   )
 }
+
+
