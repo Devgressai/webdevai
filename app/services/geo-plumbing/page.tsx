@@ -1,5 +1,5 @@
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, CheckCircle, Droplet, Wrench, Shield, Clock, Home, AlertTriangle, Gauge, Pipe } from 'lucide-react'
+import { ArrowRight, CheckCircle, Droplet, Wrench, Shield, Clock, Home, AlertTriangle, Gauge, Pipette } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -23,7 +23,7 @@ const plumbingServices = [
   { icon: AlertTriangle, name: "Emergency Plumbing", description: "24/7 emergency service calls" },
   { icon: Wrench, name: "Drain Cleaning", description: "Clogged drain and sewer service" },
   { icon: Gauge, name: "Water Heaters", description: "Water heater repair and replacement" },
-  { icon: Pipe, name: "Pipe Services", description: "Pipe repair, replacement, repiping" },
+  { icon: Pipette, name: "Pipe Services", description: "Pipe repair, replacement, repiping" },
   { icon: Shield, name: "Inspections", description: "Plumbing inspections and diagnostics" },
   { icon: Clock, name: "Same-Day Service", description: "Fast response plumbing" },
   { icon: Home, name: "Commercial", description: "Commercial plumbing services" }

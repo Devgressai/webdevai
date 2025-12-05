@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'AI Digital Marketing Services | Intelligent Campaign Automation | Web Vello',
-  description: 'Automate, personalize, and optimize every marketing touchpoint with Web Vello's AI digital marketing team. Predictive analytics, AI content, and smart targeting powered by experts.',
+  description: "Automate, personalize, and optimize every marketing touchpoint with Web Vello's AI digital marketing team. Predictive analytics, AI content, and smart targeting powered by experts.",
   keywords: ['ai digital marketing', 'marketing automation agency', 'predictive marketing', 'ai-driven campaigns', 'web vello ai marketing'],
   alternates: {
     canonical: 'https://www.webvello.com/services/ai-digital-marketing',
