@@ -1,313 +1,176 @@
-"use client"
+'use client'
 
-import { useState, useEffect } from 'react'
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { ArrowLeft, ArrowRight, CheckCircle, Star } from "lucide-react"
-import Image from 'next/image'
+import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award } from "lucide-react"
+// import { useConversionTracking } from "../../hooks/useConversionTracking"
+// import ScrollTracker from "../analytics/scroll-tracker"
+
+const stats = [
+  { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-blue-500 to-blue-600" },
+  { id: 2, name: "Happy Clients", value: "500+", icon: Users, color: "from-slate-600 to-slate-700" },
+  { id: 3, name: "ROI Average", value: "1,200%", icon: Zap, color: "from-indigo-500 to-indigo-600" },
+]
+
+const reviews = [
+  { id: 1, rating: 5, text: "Outstanding results and professional service", author: "Sarah M." },
+  { id: 2, rating: 5, text: "Transformed our online presence completely", author: "Mike R." },
+  { id: 3, rating: 5, text: "Best investment we've made this year", author: "Jennifer L." },
+]
 
 export function Hero() {
-  const [step, setStep] = useState<'url' | 'details' | 'success'>('url')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-  const [formData, setFormData] = useState({
-    website: '',
-    name: '',
-    email: '',
-    goals: ''
-  })
+  // Temporarily disabled conversion tracking to fix build error
+  // const { trackCTAClick, trackStrategySession } = useConversionTracking()
 
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
-  const handleWebsiteSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    if (!formData.website.trim()) return
-    
-    let normalizedWebsite = formData.website.trim()
-    if (!normalizedWebsite.startsWith('http://') && !normalizedWebsite.startsWith('https://')) {
-      normalizedWebsite = 'https://' + normalizedWebsite
-    }
-    
-    setFormData(prev => ({ ...prev, website: normalizedWebsite }))
-    setStep('details')
+  const handleCTAClick = (buttonText: string, location: string) => {
+    // trackCTAClick(buttonText, location)
+    console.log('CTA clicked:', buttonText, 'at', location)
   }
 
-  const handleDetailsSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    if (!formData.name || !formData.email) return
-
-    try {
-      setIsSubmitting(true)
-      
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: '',
-          company: formData.website,
-          message: formData.goals,
-          service: 'Website Proposal Request',
-          urgency: 'Standard',
-        }),
-      })
-
-      if (response.ok) {
-        setStep('success')
-      } else {
-        setStep('success')
-      }
-    } catch {
-      setStep('success')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  const resetFlow = () => {
-    setFormData({ website: '', name: '', email: '', goals: '' })
-    setStep('url')
+  const handleStrategySessionClick = () => {
+    // trackStrategySession('hero_section')
+    console.log('Strategy session requested from hero section')
   }
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background with modern gradient overlay */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900">
+      {/* <ScrollTracker /> */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero-team-collaboration.webp"
-          alt="Team collaboration"
-          fill
-          priority
-          className="object-cover"
-          quality={90}
-          sizes="100vw"
-        />
-        {/* Modern gradient - slate with subtle warm tint */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/85"></div>
-        {/* Subtle color accent glow */}
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[400px] bg-rose-500/5 rounded-full blur-[120px]"></div>
+        <div 
+          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=2070&h=1200&fit=crop&crop=center')"
+          }}
+        ></div>
+        {/* Light overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-slate-800/20 to-slate-900/30"></div>
+      </div>
+      
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Subtle professional overlays */}
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-500/5 via-slate-500/5 to-indigo-500/5 opacity-40"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/8 to-indigo-600/8 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-slate-600/8 to-gray-600/8 blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-indigo-600/8 to-blue-600/8 blur-3xl animate-pulse delay-500"></div>
+        
+        {/* Subtle geometric shapes */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-slate-600/10 to-gray-600/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="relative z-10 w-full">
-        <div className="mx-auto max-w-7xl px-6 lg:px-16 py-28 lg:py-36">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            
-            {/* Left content */}
-            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              
-              {/* Rating badge */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-8">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <span className="text-white/80 text-sm">Rated 5.0 by 500+ clients</span>
-              </div>
-              
-              {/* Headline */}
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
-                We help you
-                <br />
-                <span className="bg-gradient-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
-                  grow online
-                </span>
-              </h1>
-              
-              {/* Subheadline */}
-              <p className="text-xl text-white/70 mb-8 leading-relaxed max-w-lg">
-                SEO and web development that actually works. 
-                We&apos;ve helped 500+ businesses increase traffic, 
-                leads, and revenue.
-              </p>
-              
-              {/* Key stats */}
-              <div className="flex gap-8 mb-10">
-                <div>
-                  <p className="text-3xl font-bold text-white">340%</p>
-                  <p className="text-white/50 text-sm">Avg. ROI</p>
-                </div>
-                <div className="w-px bg-white/20"></div>
-                <div>
-                  <p className="text-3xl font-bold text-white">$2.4M+</p>
-                  <p className="text-white/50 text-sm">Revenue generated</p>
-                </div>
-                <div className="w-px bg-white/20"></div>
-                <div>
-                  <p className="text-3xl font-bold text-white">90 days</p>
-                  <p className="text-white/50 text-sm">To first results</p>
-                </div>
-              </div>
+      <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-28 lg:px-10 lg:py-36">
+        <div className="mx-auto max-w-2xl text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-6 sm:mb-8 shadow-2xl">
+            <Star className="mr-2 h-4 w-4 sm:h-5 sm:w-5 fill-white" />
+            <span className="hidden sm:inline">Trusted by 500+ businesses nationwide</span>
+            <span className="sm:hidden">500+ businesses trust us</span>
+          </div>
 
-              {/* CTA buttons */}
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  className="h-14 px-8 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold text-base rounded-xl shadow-lg shadow-rose-500/25 transition-all hover:shadow-rose-500/40"
-                  asChild
-                >
-                  <Link href="/contact">
-                    Start Your Project
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button
-                  variant="outline"
-                  className="h-14 px-8 border-white/20 text-white hover:bg-white/10 font-semibold text-base rounded-xl"
-                  asChild
-                >
-                  <Link href="/case-studies">
-                    See Our Work
-                  </Link>
-                </Button>
+          {/* Slogan */}
+          <div className="mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide text-white">
+              <span className="text-white">Design</span>
+              <span className="text-white/70 mx-2">•</span>
+              <span className="text-white">Develop</span>
+              <span className="text-white/70 mx-2">•</span>
+              <span className="text-white">Dominate</span>
+            </h2>
+          </div>
+
+          {/* Main H1 Heading for SEO */}
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
+            Professional Digital Marketing Services
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-lg sm:text-xl leading-7 sm:leading-8 text-white/90 max-w-3xl mx-auto">
+            Transform your business with AI-powered SEO, conversion-focused web development, and proven digital marketing strategies that deliver measurable results.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <Button 
+              size="xl" 
+              className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-400/25 transition-all duration-300" 
+              onClick={handleStrategySessionClick}
+              asChild
+            >
+              <Link href="/contact">
+                Get FREE Strategy Session (Worth $500)
+              </Link>
+            </Button>
+            <Button 
+              variant="outline" 
+              size="xl" 
+              className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold backdrop-blur-sm" 
+              onClick={() => handleCTAClick('See 300%+ Results', 'hero_section')}
+              asChild
+            >
+              <Link href="/case-studies" className="flex items-center">
+                <Play className="mr-2 h-5 w-5" />
+                See 300%+ Results
+              </Link>
+            </Button>
+          </div>
+          
+          {/* Urgency & Scarcity */}
+          <div className="mt-6 text-center">
+            <p className="text-xs sm:text-sm text-white mb-2">
+              ⏰ <span className="font-semibold">Limited Time:</span> Free strategy session (normally $500)
+            </p>
+            <p className="text-xs text-white/90">
+              <span className="hidden sm:inline">Only 3 spots available this week • 500+ businesses trust us</span>
+              <span className="sm:hidden">Only 3 spots this week</span>
+            </p>
+          </div>
+
+
+        </div>
+
+        {/* Stats Section */}
+        <div className="mx-auto mt-16 max-w-4xl">
+          <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 text-center">
+            {stats.map((stat) => (
+              <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-3 group">
+                <div className={`mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                  <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                </div>
+                <dt className="text-sm sm:text-base leading-7 text-white/80">{stat.name}</dt>
+                <dd className="order-first text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">
+                  {stat.value}
+                </dd>
               </div>
+            ))}
+          </dl>
+        </div>
+
+        {/* Social Proof */}
+        <div className="mx-auto mt-16 max-w-4xl">
+          <div className="rounded-2xl bg-white/10 backdrop-blur-md p-4 sm:p-6 lg:p-8 shadow-2xl ring-1 ring-white/20 border border-white/10">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-1 mb-4">
+              <div className="flex items-center space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-xs sm:text-sm font-medium text-white">4.9/5 from 200+ reviews</span>
             </div>
-
-            {/* Right side - Form card */}
-            <div className={`transition-all duration-1000 ease-out delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              
-              {step === 'url' && (
-                <div className="bg-white rounded-2xl p-8 shadow-2xl">
-                  <h2 className="text-2xl font-bold text-slate-900 mb-2">Get a free growth plan</h2>
-                  <p className="text-slate-600 mb-6">See exactly how we can help your business grow.</p>
-                  
-                  <form onSubmit={handleWebsiteSubmit} className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Your website</label>
-                      <Input
-                        type="text"
-                        required
-                        placeholder="yourwebsite.com"
-                        value={formData.website}
-                        onChange={(event) => setFormData((prev) => ({ ...prev, website: event.target.value }))}
-                        className="h-12 bg-slate-50 border-slate-200 text-slate-900 rounded-xl focus:border-rose-500 focus:ring-rose-500/20"
-                      />
-                    </div>
-                    <Button
-                      type="submit"
-                      className="w-full h-12 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold rounded-xl transition-all"
-                    >
-                      Get My Free Plan
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </form>
-                  
-                  <p className="text-center text-sm text-slate-500 mt-4">
-                    Free · No credit card · Results in 24 hours
-                  </p>
-                  
-                  <div className="mt-6 pt-6 border-t border-slate-100">
-                    <p className="text-sm text-slate-500 mb-3">Trusted by companies like</p>
-                    <div className="flex gap-6 opacity-50">
-                      <div className="h-6 w-20 bg-slate-200 rounded"></div>
-                      <div className="h-6 w-16 bg-slate-200 rounded"></div>
-                      <div className="h-6 w-24 bg-slate-200 rounded"></div>
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {reviews.map((review) => (
+                <div key={review.id} className="text-center">
+                  <div className="flex items-center justify-center space-x-1 mb-2">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
                   </div>
+                  <p className="text-xs sm:text-sm text-white/80 mb-1">"{review.text}"</p>
+                  <p className="text-xs font-medium text-white/90">— {review.author}</p>
                 </div>
-              )}
-
-              {step === 'details' && (
-                <div className="bg-white rounded-2xl p-8 shadow-2xl">
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <h2 className="text-xl font-bold text-slate-900">Almost there</h2>
-                      <p className="text-slate-600 text-sm">Tell us how to reach you</p>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => setStep('url')}
-                      className="text-sm text-slate-400 hover:text-slate-600 transition-colors flex items-center"
-                    >
-                      <ArrowLeft className="mr-1 h-4 w-4" /> Back
-                    </button>
-                  </div>
-                  
-                  {/* Progress */}
-                  <div className="h-1.5 bg-slate-100 rounded-full mb-6">
-                    <div className="h-full w-2/3 bg-gradient-to-r from-rose-500 to-orange-500 rounded-full"></div>
-                  </div>
-                  
-                  <form className="space-y-4" onSubmit={handleDetailsSubmit}>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-2">Name</label>
-                        <Input
-                          type="text"
-                          required
-                          placeholder="John Smith"
-                          value={formData.name}
-                          onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
-                          className="h-12 bg-slate-50 border-slate-200 rounded-xl"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-2">Email</label>
-                        <Input
-                          type="email"
-                          required
-                          placeholder="john@company.com"
-                          value={formData.email}
-                          onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
-                          className="h-12 bg-slate-50 border-slate-200 rounded-xl"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="p-3 bg-slate-50 rounded-xl text-sm text-slate-600">
-                      Analyzing: <span className="font-medium text-slate-900">{formData.website}</span>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Goals <span className="text-slate-400">(optional)</span></label>
-                      <textarea
-                        placeholder="What do you want to achieve?"
-                        value={formData.goals}
-                        onChange={(event) => setFormData((prev) => ({ ...prev, goals: event.target.value }))}
-                        rows={3}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm resize-none focus:outline-none focus:border-rose-500"
-                      />
-                    </div>
-                    
-                    <Button
-                      type="submit"
-                      className="w-full h-12 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold rounded-xl"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? 'Creating your plan...' : 'Get My Growth Plan'}
-                    </Button>
-                  </form>
-                </div>
-              )}
-
-              {step === 'success' && (
-                <div className="bg-white rounded-2xl p-8 shadow-2xl text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="h-8 w-8 text-white" />
-                  </div>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-2">You&apos;re all set!</h2>
-                  <p className="text-slate-600 mb-6">
-                    We&apos;re analyzing your website now. Expect your personalized growth plan within 24 hours.
-                  </p>
-                  <div className="flex gap-3">
-                    <Link 
-                      href="/contact" 
-                      className="flex-1 h-12 inline-flex items-center justify-center bg-gradient-to-r from-rose-500 to-orange-500 text-white font-semibold rounded-xl"
-                    >
-                      Book a Call
-                    </Link>
-                    <button 
-                      onClick={resetFlow} 
-                      className="flex-1 h-12 inline-flex items-center justify-center border border-slate-200 text-slate-700 font-semibold rounded-xl hover:bg-slate-50"
-                    >
-                      Submit Another
-                    </button>
-                  </div>
-                </div>
-              )}
+              ))}
             </div>
           </div>
         </div>
