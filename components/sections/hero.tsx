@@ -40,7 +40,7 @@ export function Hero() {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=2070&h=1200&fit=crop&crop=center')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2070&h=1200&fit=crop&crop=center')"
           }}
         ></div>
         {/* Light overlay for text readability */}
