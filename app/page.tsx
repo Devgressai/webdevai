@@ -346,7 +346,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96">
                 <Image 
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&crop=center"
+                  src="/images/hero-team-collaboration.webp"
                   alt="Professional digital marketing team collaborating on strategy"
                   fill
                   className="object-cover"
@@ -401,7 +401,7 @@ export default function HomePage() {
           <div className="mb-16">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96">
               <Image 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&crop=center"
+                src="/images/hero-analytics.webp"
                 alt="Digital marketing team working on analytics and strategy"
                 fill
                 className="object-cover"
@@ -460,7 +460,7 @@ export default function HomePage() {
       <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 relative overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 opacity-20">
-          <Image src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&crop=center" alt="" fill sizes="100vw" className="object-cover" />
+          <Image src="/images/hero-data-analysis.webp" alt="" fill sizes="100vw" className="object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-primary-600/80 via-primary-700/80 to-secondary-800/80"></div>
         {/* Background pattern */}
@@ -645,7 +645,7 @@ export default function HomePage() {
       <section className="py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
         {/* Background image and gradient flow */}
         <div className="absolute inset-0 opacity-20">
-          <Image src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&h=1080&fit=crop&crop=center" alt="" fill sizes="100vw" className="object-cover" />
+          <Image src="/images/hero-business-meeting.webp" alt="" fill sizes="100vw" className="object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/25 via-pink-500/25 to-blue-500/25"></div>
         {/* Removed pulsing/blurred orb for performance */}
