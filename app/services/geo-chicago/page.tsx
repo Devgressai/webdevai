@@ -385,19 +385,11 @@ export default function GEOChicagoPage() {
             <p className="text-white/60 text-sm mb-4">Related Services:</p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link href="/services/generative-engine-optimization" className="text-white/80 hover:text-white text-sm underline">
-                GEO Services Overview
+                Generative Engine Optimization
               </Link>
               <span className="text-white/40">•</span>
               <Link href="/services/answer-engine-optimization" className="text-white/80 hover:text-white text-sm underline">
-                Answer Engine Optimization (AEO)
-              </Link>
-              <span className="text-white/40">•</span>
-              <Link href="/services/seo" className="text-white/80 hover:text-white text-sm underline">
-                Traditional SEO Foundation
-              </Link>
-              <span className="text-white/40">•</span>
-              <Link href="/services/ai-seo" className="text-white/80 hover:text-white text-sm underline">
-                AI-Powered SEO
+                Answer Engine Optimization Strategy
               </Link>
               <span className="text-white/40">•</span>
               <Link href="/" className="text-white/80 hover:text-white text-sm underline">

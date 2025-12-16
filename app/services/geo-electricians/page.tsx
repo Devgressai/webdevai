@@ -260,6 +260,26 @@ export default function GEOElectriciansPage() {
           </Button>
         </div>
       </section>
+
+      {/* Internal Links */}
+      <section className="py-12 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-slate-600 text-sm mb-4 text-center">Related Services:</p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link href="/services/geo-home-services" className="text-slate-700 hover:text-slate-900 text-sm underline">
+              Home Services GEO
+            </Link>
+            <span className="text-slate-300">•</span>
+            <Link href="/services/local-seo" className="text-slate-700 hover:text-slate-900 text-sm underline">
+              Local Service Authority
+            </Link>
+            <span className="text-slate-300">•</span>
+            <Link href="/" className="text-slate-700 hover:text-slate-900 text-sm underline">
+              Home
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

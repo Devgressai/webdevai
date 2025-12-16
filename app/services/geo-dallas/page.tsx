@@ -363,16 +363,12 @@ export default function GEODallasPage() {
           <div className="mt-16 pt-16 border-t border-white/10">
             <p className="text-white/60 text-sm mb-4">Related Services:</p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/services/geo-services" className="text-white/80 hover:text-white text-sm underline">
-                GEO Services Overview
-              </Link>
-              <span className="text-white/40">•</span>
-              <Link href="/services/ai-seo" className="text-white/80 hover:text-white text-sm underline">
-                AI-Powered SEO
+              <Link href="/services/generative-engine-optimization" className="text-white/80 hover:text-white text-sm underline">
+                Generative Engine Optimization
               </Link>
               <span className="text-white/40">•</span>
               <Link href="/services/local-seo" className="text-white/80 hover:text-white text-sm underline">
-                Local SEO Services
+                Local Visibility Strategy
               </Link>
               <span className="text-white/40">•</span>
               <Link href="/" className="text-white/80 hover:text-white text-sm underline">

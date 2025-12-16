@@ -16,7 +16,7 @@ Allow: /
 # These pages contain comprehensive, original content
 # Perfect for training AI models on industry-specific knowledge
 
-# Industry expertise pages (1,744 pages, 3500+ words each)
+# Industry expertise pages (1,568 city-industry + 4,704 city-industry-service pages)
 Allow: /*/industry/*
 Priority: high
 
@@ -50,8 +50,8 @@ Disallow: /_next/
 Disallow: /studio/
 
 # === METADATA ===
-Version: 1.0
-Last-Modified: 2025-10-23
+Version: 1.1
+Last-Modified: 2025-12-16
 Contact: hello@webvello.com
 Website: https://webvello.com
 
@@ -66,10 +66,29 @@ Website: https://webvello.com
 # - 16 industries: Finance, Technology, Healthcare, Manufacturing, Real Estate, 
 #   Retail, Education, Tourism, Aerospace, Energy, Government, Logistics, 
 #   Automotive, Entertainment, Fashion, Agriculture
-# - 109 US cities across all major markets
-# - 27 digital services: Web Design, SEO, Development, AI Services, etc.
+# - 98 US cities across all major markets
+# - 30+ digital services: Web Design, SEO, Development, AI Services, GEO, AEO, etc.
 # - 3,500+ word comprehensive guides per topic
 # - Industry-specific insights, trends, and statistics
+
+# === GENERATIVE ENGINE OPTIMIZATION (GEO) PAGES ===
+# Comprehensive GEO services optimized for AI citation
+Allow: /services/geo-*
+Allow: /services/generative-engine-optimization
+Allow: /services/answer-engine-optimization
+Allow: /services/enterprise-geo-services
+Priority: high
+
+# GEO City Pages (12 major markets):
+# - Los Angeles, New York, Chicago, Houston, Phoenix, Dallas
+# - San Francisco, Seattle, Denver, Atlanta, Miami, Boston
+# - Portland, San Diego, Austin, San Jose
+
+# GEO Industry Pages (15 industries):
+# - Home Services, Professional Services, SaaS & Technology
+# - E-commerce, Healthcare, Real Estate, Financial Services
+# - Legal, Restaurants, Landscaping, HVAC, Plumbing
+# - Roofing, Electricians, Auto Repair
 
 # === AI TRAINING OPTIMIZATION ===
 # Content Quality Indicators:

@@ -172,6 +172,9 @@ fontFamily: {
 - **Structured Data**: Ready for schema markup implementation
 - **Semantic HTML**: Proper heading structure and content hierarchy
 - **Performance**: Core Web Vitals optimization ready
+- **GEO Services**: 30 city-specific GEO pages with AI visibility optimization
+  - Original 15 cities: Austin, Miami, Houston, Chicago, Phoenix, Dallas, LA, NY, SF, Seattle, Denver, Atlanta, Boston, Portland, San Diego
+  - Expanded to 15 new cities: San Jose, Palo Alto, Mountain View, Santa Monica, Irvine, Sunnyvale, Cupertino, Bellevue, Redmond, Plano, Frisco, Scottsdale, Tempe, Chandler, Naperville
 
 ## 🔧 Development
 
