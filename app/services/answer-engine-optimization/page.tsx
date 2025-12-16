@@ -13,15 +13,15 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Answer Engine Optimization (AEO) Services | Web Vello',
-  description: 'Capture visibility in AI assistants and answer engines. Web Vello structures content to deliver precise, authoritative answers across conversational search.',
-  keywords: ['answer engine optimization', 'aeo services', 'ai assistant optimization', 'web vello aeo', 'conversational seo'],
+  title: 'Answer Engine Optimization (AEO) | Get Featured in AI Answers',
+  description: 'Answer Engine Optimization structures content to appear in featured snippets, voice assistants, and Google answer boxes. Expert AEO services from Webvello.',
+  keywords: ['answer engine optimization', 'aeo services', 'featured snippet optimization', 'answer box optimization', 'question-based seo'],
   alternates: {
     canonical: 'https://www.webvello.com/services/answer-engine-optimization',
   },
   openGraph: {
-    title: 'Answer Engine Optimization | Web Vello',
-    description: 'Optimize content for AI answers and assistants with Web Vello’s structured response strategies and question-based content.',
+    title: 'Answer Engine Optimization (AEO) | Webvello',
+    description: 'Answer Engine Optimization structures content to appear in featured snippets, voice assistants, and Google answer boxes. Expert AEO services from Webvello.',
     url: 'https://www.webvello.com/services/answer-engine-optimization',
     type: 'website',
   }
@@ -30,33 +30,56 @@ export const metadata: Metadata = {
 const features = [
   {
     icon: MessageCircle,
-    title: "Question-Based Optimization",
-    description: "Optimize your content to directly answer user questions and queries."
+    title: "Featured Snippet Optimization",
+    description: "Structure content to capture position zero results in Google search with formatted answers that appear above organic listings."
   },
   {
     icon: Search,
-    title: "Featured Snippet Targeting",
-    description: "Strategically position your content to capture featured snippets and answer boxes."
+    title: "Question-Based Content Structure",
+    description: "Format content with question headings and concise answers that match how users phrase voice and text queries."
   },
   {
     icon: HelpCircle,
-    title: "User Intent Optimization",
-    description: "Align your content with specific user search intent and question patterns."
+    title: "FAQ Schema Implementation",
+    description: "Add structured data markup that helps search engines identify and extract question-answer pairs from your pages."
   },
   {
     icon: BookOpen,
-    title: "Comprehensive Answer Creation",
-    description: "Create content that provides complete, authoritative answers to user questions."
+    title: "Answer Box Targeting",
+    description: "Optimize for Google answer boxes by providing direct, quotable responses to common industry questions."
   },
   {
     icon: Lightbulb,
-    title: "Knowledge Graph Optimization",
-    description: "Optimize for Google’s Knowledge Graph and other answer engine features."
+    title: "Voice Search Readiness",
+    description: "Format content for voice assistants like Siri, Alexa, and Google Assistant with conversational answer structures."
   },
   {
     icon: Target,
-    title: "Voice Search Optimization",
-    description: "Optimize content for voice search queries and digital assistants."
+    title: "List & Table Formatting",
+    description: "Structure information in lists, tables, and step-by-step formats that search engines easily extract for featured snippets."
+  }
+]
+
+const misconceptions = [
+  {
+    myth: "AEO and SEO are the same thing",
+    reality: "AEO is a specialized subset of SEO. While SEO optimizes for general search rankings through keywords and backlinks, AEO specifically targets featured snippets and answer boxes through content formatting and schema markup. SEO aims for page one; AEO aims for position zero.",
+    icon: AlertTriangle
+  },
+  {
+    myth: "AEO only works for large websites",
+    reality: "Small businesses and local companies can capture featured snippets more easily than large corporations. Featured snippets prioritize direct, well-structured answers over domain authority, giving smaller sites opportunities to appear above larger competitors in answer boxes.",
+    icon: Building2
+  },
+  {
+    myth: "Featured snippets reduce website traffic",
+    reality: "While some users get answers without clicking, featured snippets increase brand visibility and drive qualified traffic. Studies show featured snippets increase click-through rates by providing credibility and appearing above all other results, capturing attention before users scroll.",
+    icon: TrendingDown
+  },
+  {
+    myth: "AEO requires completely new content",
+    reality: "Existing content can be optimized for AEO by restructuring headings into questions, adding concise answer paragraphs, implementing FAQ schema, and formatting information in lists and tables. Most AEO implementation involves reformatting rather than rewriting.",
+    icon: RefreshCw
   }
 ]
 
@@ -175,28 +198,36 @@ const tools = [
 
 const faqs = [
   {
-    question: "What is Answer Engine Optimization (AEO) and how does it differ from traditional SEO?",
-    answer: "Answer Engine Optimization (AEO) is the practice of optimizing your content specifically for answer engines, featured snippets, and question-based search queries. While traditional SEO focuses on general search engine optimization, AEO specifically targets the growing trend of users asking questions and expecting direct answers. This includes optimizing content structure, implementing question-based content strategies, targeting featured snippets, and ensuring your content directly answers user queries with comprehensive, authoritative responses."
+    question: "What is Answer Engine Optimization (AEO)?",
+    answer: "Answer Engine Optimization (AEO) is the practice of structuring content to appear in featured snippets, Google answer boxes, and voice assistant responses. AEO focuses on formatting content to directly answer specific questions users ask, using clear headings, concise definitions, and structured data markup. Unlike traditional SEO which optimizes for general search visibility, AEO optimizes specifically for position zero results and voice search queries."
   },
   {
-    question: "How long does it take to see results from AEO optimization?",
-    answer: "AEO optimization typically shows initial results within 2-4 weeks, with significant improvements appearing within 3-6 months. The timeline depends on your current answer engine optimization status, the complexity of your question-based content, and the specific optimizations implemented. Featured snippet optimization may show faster results, while comprehensive answer engine recognition may take longer to develop. We provide regular progress reports and can often identify early positive trends."
+    question: "How is AEO different from SEO?",
+    answer: "AEO differs from SEO in its focus and format. Traditional SEO aims to rank pages highly in search results through keywords, backlinks, and technical optimization. AEO targets featured snippets and direct answer boxes by structuring content in question-answer format, using FAQ schema, and providing concise 40-60 word answers. SEO optimizes for clicks; AEO optimizes for immediate answers that appear above organic results."
   },
   {
-    question: "What are the key differences between optimizing for traditional search vs. answer engines?",
-    answer: "Traditional search optimization focuses on keyword matching, backlinks, and general search engine factors, while answer engine optimization focuses on directly answering user questions, capturing featured snippets, and providing comprehensive answers. AEO requires more emphasis on question-based content creation, answer structure, user intent alignment, and technical optimizations that help answer engines understand and recommend your content. The goal shifts from general visibility to becoming the go-to source for specific answers."
+    question: "How is AEO different from GEO (Generative Engine Optimization)?",
+    answer: "AEO optimizes for existing search features like Google featured snippets and answer boxes, focusing on structured question-answer content. GEO optimizes for AI-generated responses from tools like ChatGPT, Perplexity, and Google's AI Overviews, emphasizing entity authority and source credibility. AEO targets position zero in traditional search; GEO targets citations in AI-generated summaries."
   },
   {
-    question: "How do you measure the success of AEO campaigns?",
-    answer: "We measure AEO success through multiple metrics including featured snippet capture rates, answer engine visibility, user satisfaction scores, question-based search rankings, and overall search engine performance for question queries. We also track technical metrics like schema markup implementation, structured data optimization, and answer engine accessibility. Our comprehensive reporting provides both high-level business metrics and detailed technical insights."
+    question: "How is AEO different from AI SEO?",
+    answer: "AEO is a content structuring approach focused on answer formats, while AI SEO uses artificial intelligence tools to enhance traditional SEO processes. AEO involves writing question-based content optimized for featured snippets. AI SEO uses machine learning for keyword research, content optimization, and predictive analytics. AEO is about what format content takes; AI SEO is about using AI tools to improve SEO performance."
   },
   {
-    question: "Can AEO optimization work for all types of businesses and industries?",
-    answer: "Yes, AEO optimization principles apply to all businesses and industries, but the specific strategies and content approaches vary based on your industry, target audience, and the types of questions your audience asks. B2B companies, e-commerce platforms, service businesses, and educational websites all benefit from AEO, but require different approaches. We customize our strategies to align with your specific business needs and question patterns."
+    question: "When should a business invest in AEO?",
+    answer: "Businesses should invest in AEO when their audience frequently asks specific questions about products, services, or industry topics. AEO is essential for local businesses targeting 'near me' voice searches, B2B companies answering technical questions, healthcare providers explaining conditions and treatments, and e-commerce brands with product questions. If your industry has high question-based search volume or voice search traffic, AEO provides significant visibility advantages."
   },
   {
-    question: "How often should we update our AEO strategy?",
-    answer: "AEO requires regular updates due to evolving user question patterns, search engine algorithm changes, and competitive landscape shifts. We recommend monthly strategy reviews and quarterly comprehensive audits. However, the frequency depends on your industry dynamics, question volume, and business goals. High-question industries may benefit from weekly optimizations, while more stable markets might need monthly updates. We continuously monitor question trends and recommend updates accordingly."
+    question: "What types of content work best for AEO?",
+    answer: "FAQ pages, how-to guides, definition pages, comparison articles, and step-by-step tutorials work best for AEO. Content should include clear H2 question headings, 40-60 word concise answers in the first paragraph, followed by detailed explanations. Lists, tables, and structured data markup enhance AEO performance. Voice-friendly conversational language and question phrases that match natural speech patterns improve featured snippet capture rates."
+  },
+  {
+    question: "How long does it take to see AEO results?",
+    answer: "Featured snippet optimization typically shows results within 2-4 weeks for pages already ranking on page one of Google. New content may take 2-3 months to rank and capture featured snippets. Results depend on existing domain authority, competition for target questions, and content quality. Webvello's AEO implementation includes performance tracking and provides monthly reports showing featured snippet wins and answer box appearances."
+  },
+  {
+    question: "How does Webvello implement AEO?",
+    answer: "Webvello implements AEO through a four-step process: question research to identify high-value queries, content structuring with FAQ schema and answer formats, technical implementation of structured data markup, and performance monitoring to track featured snippet wins. Our team analyzes which questions your audience asks, structures content to answer them directly, implements proper schema markup, and continuously optimizes based on results."
   }
 ]
 
@@ -206,19 +237,18 @@ export default function AnswerEngineOptimizationPage() {
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-6xl">
-              Answer Engine{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Optimization (AEO)
-              </span>{" "}
-              That Captures Questions
+              Answer Engine Optimization (AEO)
             </h1>
-            <p className="mt-6 text-lg leading-8 text-secondary-600">
-              Optimize your content to become the go-to source for answers. Our AEO strategies ensure your 
-              content captures featured snippets, dominates answer engine results, and directly answers 
-              the questions your audience is asking.
-            </p>
+            <div className="mt-6 text-xl leading-8 text-secondary-700 bg-white/80 rounded-xl p-6 shadow-sm">
+              <p className="font-medium mb-4">
+                Answer Engine Optimization (AEO) is the practice of structuring website content to appear in featured snippets, Google answer boxes, and voice assistant responses.
+              </p>
+              <p className="text-lg text-secondary-600">
+                AEO formats content to directly answer specific user questions, increasing visibility in position zero search results and voice search queries.
+              </p>
+            </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button size="xl" asChild>
                 <Link href="/contact">
@@ -237,64 +267,104 @@ export default function AnswerEngineOptimizationPage() {
         </div>
       </section>
 
-      {/* What is AEO Section */}
+      {/* What is AEO Section - AI-Citable Definitions */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-6">
-                What is Answer Engine Optimization (AEO)?
+                What is Answer Engine Optimization?
               </h2>
+              <div className="prose prose-lg max-w-none">
+                <p className="text-lg text-secondary-700 mb-6">
+                  <strong>Answer Engine Optimization (AEO)</strong> is the process of formatting and structuring website content to appear in featured snippets, answer boxes, and voice search results. AEO focuses on creating content that directly answers specific questions users ask search engines.
+                </p>
               <p className="text-lg text-secondary-600 mb-6">
-                Answer Engine Optimization (AEO) is the specialized practice of optimizing your content 
-                specifically for answer engines, featured snippets, and question-based search queries. 
-                As search behavior evolves toward asking questions rather than typing keywords, AEO 
-                ensures your content is perfectly positioned to capture these valuable search opportunities.
+                  Unlike traditional SEO which optimizes for standard search rankings, AEO targets "position zero" results—the featured snippet boxes that appear above organic search results. These answer boxes provide immediate answers without requiring users to click through to websites.
               </p>
               <p className="text-lg text-secondary-600 mb-6">
-                AEO involves creating content that directly answers user questions, optimizing for 
-                featured snippets and answer boxes, implementing question-based content strategies, 
-                and ensuring your content is easily discoverable by answer engines. This approach 
-                is essential as search engines increasingly prioritize providing direct answers to 
-                user queries.
-              </p>
-              <div className="space-y-4">
+                  AEO techniques include using question-based headings, writing concise 40-60 word answers, implementing FAQ schema markup, structuring content with clear definitions, and formatting information in tables and lists that search engines can easily extract.
+                </p>
+              </div>
+              
+              <div className="mt-8 bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-3">Key AEO Elements:</h3>
+                <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Capture featured snippets and answer boxes</p>
+                    <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+                    <p className="text-secondary-700">Question-formatted headings (H2) that match user queries</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Dominate answer engine results</p>
+                    <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+                    <p className="text-secondary-700">Concise answers in the first paragraph (40-60 words)</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Directly answer user questions</p>
+                    <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+                    <p className="text-secondary-700">FAQ schema markup for structured data</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Improve user satisfaction and engagement</p>
+                    <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+                    <p className="text-secondary-700">Tables and lists for easy data extraction</p>
+                  </div>
                 </div>
               </div>
             </div>
+            
+            <div className="space-y-6">
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-4">Why AEO Matters Now</h3>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-6">AEO vs. Other Optimization Types</h3>
               <div className="space-y-4">
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <MessageCircle className="h-5 w-5 text-blue-600" />
-                  <span className="font-medium text-secondary-900">Question-Based Search Growth</span>
+                  <div className="bg-white rounded-lg p-4">
+                    <div className="flex items-start space-x-3 mb-2">
+                      <MessageCircle className="h-5 w-5 text-blue-600 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-secondary-900">AEO vs. SEO</h4>
+                        <p className="text-sm text-secondary-600 mt-1">SEO ranks pages; AEO captures featured snippets with direct answers</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4">
+                    <div className="flex items-start space-x-3 mb-2">
+                      <Brain className="h-5 w-5 text-indigo-600 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-secondary-900">AEO vs. GEO</h4>
+                        <p className="text-sm text-secondary-600 mt-1">GEO targets AI-generated summaries; AEO targets Google answer boxes</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4">
+                    <div className="flex items-start space-x-3 mb-2">
+                      <Cpu className="h-5 w-5 text-purple-600 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-secondary-900">AEO vs. AI SEO</h4>
+                        <p className="text-sm text-secondary-600 mt-1">AI SEO uses AI tools for optimization; AEO is a content format strategy</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <Search className="h-5 w-5 text-indigo-600" />
-                  <span className="font-medium text-secondary-900">Featured Snippet Dominance</span>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-4">When Your Business Needs AEO</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <p className="text-secondary-700">Your audience asks specific "how to" or "what is" questions</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <p className="text-secondary-700">You receive high voice search traffic</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <p className="text-secondary-700">Competitors appear in featured snippets for your keywords</p>
                 </div>
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <HelpCircle className="h-5 w-5 text-purple-600" />
-                  <span className="font-medium text-secondary-900">Direct Answer Expectations</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <p className="text-secondary-700">Your industry has high question-based search volume</p>
                 </div>
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <Building2 className="h-5 w-5 text-green-600" />
-                  <span className="font-medium text-secondary-900">Competitive Advantage</span>
                 </div>
               </div>
             </div>
@@ -401,36 +471,172 @@ export default function AnswerEngineOptimizationPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* How Webvello Delivers AEO */}
       <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Our Proven AEO Process
+              How Webvello Delivers AEO
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              A systematic approach that ensures measurable improvements in your answer engine 
-              visibility and featured snippet capture rates.
+              Webvello implements Answer Engine Optimization through a four-step process designed to capture featured snippets and increase answer box visibility.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step) => (
-              <div key={step.step} className="text-center">
-                <div className="mx-auto h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                  <span className="text-2xl font-bold text-blue-600">{step.step}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-blue-600">1</span>
                 </div>
-                <h3 className="text-lg font-semibold text-secondary-900 mb-3">
-                  {step.title}
+                <div>
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                    Question Research & Analysis
+                  </h3>
+                  <p className="text-secondary-600 mb-4">
+                    We identify the specific questions your target audience asks by analyzing search query data, voice search patterns, and "People Also Ask" results. This research reveals which questions have featured snippet opportunities.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Search query analysis for question patterns</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Featured snippet opportunity identification</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Competitor featured snippet analysis</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-indigo-600">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                    Content Structuring & Formatting
+                  </h3>
+                  <p className="text-secondary-600 mb-4">
+                    We structure content with question-based H2 headings and provide concise 40-60 word answers in the first paragraph. Content is formatted with lists, tables, and clear definitions optimized for featured snippet extraction.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-indigo-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Question-formatted heading structure</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-indigo-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Concise answer paragraph placement</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-indigo-600 mt-1" />
+                      <span className="text-sm text-secondary-700">List and table formatting for extraction</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-purple-600">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                    Schema Markup Implementation
                 </h3>
-                <p className="text-secondary-600 mb-3">
-                  {step.description}
-                </p>
-                <div className="text-sm text-blue-600 font-medium mb-3">
-                  {step.duration}
+                  <p className="text-secondary-600 mb-4">
+                    We implement FAQ schema, HowTo schema, and other structured data markup that helps search engines identify and extract answers from your content. This technical implementation increases featured snippet eligibility.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-purple-600 mt-1" />
+                      <span className="text-sm text-secondary-700">FAQ schema for question-answer pairs</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-purple-600 mt-1" />
+                      <span className="text-sm text-secondary-700">HowTo schema for step-by-step guides</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-purple-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Structured data validation and testing</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-xs text-secondary-500">
-                  {step.deliverables.join(", ")}
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-green-600">4</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                    Performance Monitoring & Optimization
+                  </h3>
+                  <p className="text-secondary-600 mb-4">
+                    We track featured snippet wins, answer box appearances, and voice search rankings. Monthly reports show which questions your content answers in featured snippets, with ongoing optimization to capture additional opportunities.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Featured snippet tracking and reporting</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Answer box performance analysis</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-1" />
+                      <span className="text-sm text-secondary-700">Continuous content optimization</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Common Misconceptions Section */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
+              Common Misconceptions About AEO
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-secondary-600">
+              Understanding what AEO actually does—and doesn't do—helps set realistic expectations and maximize results.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {misconceptions.map((item, index) => (
+              <div key={index} className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 shadow-lg">
+                <div className="flex items-start space-x-4 mb-4">
+                  <div className="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="h-6 w-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-red-900 mb-2">
+                      Myth: {item.myth}
+                    </h3>
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg p-4 border-l-4 border-green-600">
+                  <p className="text-sm font-medium text-green-900 mb-2">Reality:</p>
+                  <p className="text-secondary-700">
+                    {item.reality}
+                  </p>
                 </div>
               </div>
             ))}
@@ -439,21 +645,20 @@ export default function AnswerEngineOptimizationPage() {
       </section>
 
       {/* Results Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Results That Speak for Themselves
+              AEO Performance Results
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              Our AEO strategies consistently deliver exceptional results that directly impact 
-              your answer engine visibility and featured snippet performance.
+              Webvello's AEO implementation delivers measurable improvements in featured snippet capture and answer box visibility.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {results.map((result) => (
-              <div key={result.metric} className="text-center">
+              <div key={result.metric} className="text-center bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-4xl font-bold text-blue-600 mb-2">{result.value}</div>
                 <div className="text-lg font-semibold text-secondary-900 mb-1">{result.metric}</div>
                 <div className="text-sm text-secondary-600">{result.description}</div>
@@ -569,26 +774,159 @@ export default function AnswerEngineOptimizationPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Dominate Answer Engine Results?
+      {/* CTA Section - Low Pressure */}
+      <section className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-12 shadow-xl text-center">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">
+              Improve Your Featured Snippet Visibility
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let’s optimize your content to capture featured snippets and become the go-to source 
-            for answers. Get started with a free AEO audit today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Get Free AEO Audit</Link>
+            <p className="text-lg text-secondary-600 mb-8 max-w-2xl mx-auto">
+              Webvello's AEO audit identifies which questions your audience asks and how to structure content for featured snippets. Get clarity on your answer optimization opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <Button size="lg" asChild>
+                <Link href="/contact">
+                  Request AEO Audit
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
-              <Link href="/pricing">View Pricing</Link>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/case-studies">View Case Studies</Link>
             </Button>
+            </div>
+            <p className="text-sm text-secondary-500">
+              Free consultation • No pressure • Clear pricing
+            </p>
           </div>
         </div>
       </section>
+      
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Service",
+                "@id": "https://www.webvello.com/services/answer-engine-optimization#service",
+                "name": "Answer Engine Optimization (AEO)",
+                "description": "Answer Engine Optimization (AEO) is the practice of structuring website content to appear in featured snippets, Google answer boxes, and voice assistant responses. AEO formats content to directly answer specific user questions, increasing visibility in position zero search results.",
+                "provider": {
+                  "@type": "Organization",
+                  "@id": "https://www.webvello.com/#organization",
+                  "name": "Webvello",
+                  "url": "https://www.webvello.com"
+                },
+                "areaServed": "US",
+                "serviceType": "Answer Engine Optimization",
+                "category": "SEO Services",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceCurrency": "USD"
+                  }
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "AEO Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Question Research & Analysis",
+                        "description": "Identify specific questions target audiences ask by analyzing search query data, voice search patterns, and featured snippet opportunities."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Content Structuring & Formatting",
+                        "description": "Structure content with question-based H2 headings and 40-60 word concise answers optimized for featured snippet extraction."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Schema Markup Implementation",
+                        "description": "Implement FAQ schema, HowTo schema, and structured data markup to help search engines identify and extract answers."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Performance Monitoring & Optimization",
+                        "description": "Track featured snippet wins, answer box appearances, and voice search rankings with monthly reporting and ongoing optimization."
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "@id": "https://www.webvello.com/services/answer-engine-optimization#faq",
+                "mainEntity": faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.webvello.com/services/answer-engine-optimization#webpage",
+                "url": "https://www.webvello.com/services/answer-engine-optimization",
+                "name": "Answer Engine Optimization (AEO) | Get Featured in AI Answers",
+                "description": "Answer Engine Optimization structures content to appear in featured snippets, voice assistants, and Google answer boxes. Expert AEO services from Webvello.",
+                "isPartOf": {
+                  "@type": "WebSite",
+                  "@id": "https://www.webvello.com/#website"
+                },
+                "about": {
+                  "@id": "https://www.webvello.com/services/answer-engine-optimization#service"
+                },
+                "mainEntity": {
+                  "@id": "https://www.webvello.com/services/answer-engine-optimization#faq"
+                }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.webvello.com/services/answer-engine-optimization#breadcrumb",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.webvello.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.webvello.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Answer Engine Optimization",
+                    "item": "https://www.webvello.com/services/answer-engine-optimization"
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
     </div>
   )
 }
