@@ -94,139 +94,32 @@ const faqs = [
   }
 ]
 
+import { generatePageSchema } from '@/lib/clean-schema-generator'
+
 export default function WebDevelopmentPage() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://www.webvello.com/services/web-development#service",
-        "name": "Custom Web Development",
-        "description": "Custom web development using React, Tailwind CSS, and Next.js. Performance-optimized, SEO-ready websites built for business growth and search visibility.",
-        "provider": {
-          "@type": "Organization",
-          "@id": "https://www.webvello.com/#organization",
-          "name": "Webvello",
-          "url": "https://www.webvello.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.webvello.com/logo.png",
-            "width": 2048,
-            "height": 2048
-          }
-        },
-        "serviceType": "Web Development",
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
-        },
-        "category": "Custom Web Development",
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "priceCurrency": "USD",
-          "priceRange": "$$$"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Web Development Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "React Development",
-                "description": "Custom websites built with React component architecture for maintainability and scalability"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Tailwind CSS Implementation",
-                "description": "Utility-first CSS framework for consistent, responsive design systems"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Next.js Development",
-                "description": "Server-side rendering and static site generation for SEO-optimized React applications"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Performance Optimization",
-                "description": "Core Web Vitals optimization, image optimization, and page speed improvements"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.webvello.com/services/web-development#faq",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.webvello.com/services/web-development#webpage",
-        "url": "https://www.webvello.com/services/web-development",
-        "name": "Custom React + Tailwind Web Development | Webvello",
-        "description": "Custom web development using React and Tailwind CSS. Performance-optimized, SEO-ready websites built for visibility and conversions.",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": "https://www.webvello.com/#website"
-        },
-        "about": {
-          "@id": "https://www.webvello.com/services/web-development#service"
-        },
-        "mainEntity": {
-          "@id": "https://www.webvello.com/services/web-development#faq"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.webvello.com/services/web-development#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.webvello.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://www.webvello.com/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Web Development",
-            "item": "https://www.webvello.com/services/web-development"
-          }
-        ]
-      }
+  const pageSchema = generatePageSchema({
+    pageType: 'service',
+    url: 'https://www.webvello.com/services/web-development',
+    title: 'Custom React + Tailwind Web Development | Webvello',
+    description: 'Custom web development using React and Tailwind CSS. Performance-optimized, SEO-ready websites built for visibility and conversions.',
+    service: {
+      name: 'Custom Web Development',
+      description: 'Custom web development using React, Tailwind CSS, and Next.js. Performance-optimized, SEO-ready websites built for business growth and search visibility.',
+      type: 'Web Development'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'Web Development', url: 'https://www.webvello.com/services/web-development' }
     ]
-  }
+  })
 
   return (
     <div className="min-h-screen bg-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
 
       {/* Hero Section */}

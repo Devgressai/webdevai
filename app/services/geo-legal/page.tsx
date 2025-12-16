@@ -2,6 +2,7 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, CheckCircle, Scale, Gavel, Shield, FileText, Users, Building2, Briefcase, Award } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
   title: 'GEO for Law Firms | AI Search Optimization for Attorneys | Web Vello',

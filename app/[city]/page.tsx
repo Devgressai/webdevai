@@ -207,8 +207,27 @@ export default function CityPage({ params }: CityPageProps) {
               Professional Services in {city.fullName}
             </h1>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Discover expert business solutions tailored for {city.name} businesses. From cutting-edge AI consulting to professional web development, we help companies in {city.name} thrive in the digital age.
+          </p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            Our team specializes in{' '}
+            <Link href="/services/ai-seo" className="text-blue-600 hover:text-blue-700 underline">
+              AI-powered SEO
+            </Link>
+            ,{' '}
+            <Link href="/services/answer-engine-optimization" className="text-blue-600 hover:text-blue-700 underline">
+              answer engine optimization
+            </Link>
+            , and{' '}
+            <Link href="/services/web-development" className="text-blue-600 hover:text-blue-700 underline">
+              modern web development
+            </Link>
+            {' '}to help {city.name} businesses dominate search results and drive measurable growth.{' '}
+            <Link href="/" className="text-blue-600 hover:text-blue-700 underline">
+              Explore all solutions
+            </Link>
+            .
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
             <div className="flex items-center">
@@ -234,8 +253,19 @@ export default function CityPage({ params }: CityPageProps) {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Complete Business Solutions for {city.name}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
               We offer comprehensive services across all major business areas, helping {city.name} companies establish a strong digital presence and drive growth.
+            </p>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+              From{' '}
+              <Link href="/services/seo" className="text-blue-600 hover:text-blue-700 underline">
+                search engine optimization
+              </Link>
+              {' '}to{' '}
+              <Link href="/services/ui-ux-design" className="text-blue-600 hover:text-blue-700 underline">
+                conversion-focused design
+              </Link>
+              , each solution is tailored for maximum impact in your local market.
             </p>
           </div>
 

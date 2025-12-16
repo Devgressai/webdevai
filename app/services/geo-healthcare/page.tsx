@@ -2,6 +2,7 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, CheckCircle, Stethoscope, Heart, Brain, Pill, Building, Users, Eye, Activity } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
   title: 'GEO for Healthcare | AI Search Optimization for Medical Practices | Web Vello',
@@ -99,8 +100,32 @@ const faqs = [
 ]
 
 export default function GEOHealthcarePage() {
+  const pageSchema = generatePageSchema({
+    pageType: 'geo',
+    url: 'https://www.webvello.com/services/geo-healthcare',
+    title: 'GEO for Healthcare | AI Search Optimization for Medical Practices',
+    description: 'Get your healthcare practice found in ChatGPT, Perplexity, and Google SGE. GEO optimization for doctors, dentists, specialists, and medical practices.',
+    geo: {
+      city: 'Healthcare Industry',
+      cityState: 'Healthcare Industry, US'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'GEO Healthcare', url: 'https://www.webvello.com/services/geo-healthcare' }
+    ]
+  })
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchema)
+        }}
+      />
+      
       {/* Hero */}
       <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0">

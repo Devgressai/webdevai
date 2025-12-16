@@ -3,8 +3,7 @@ import { ArrowRight, Zap, Brain, TrendingUp, Target, BarChart3, Users, Clock, Ch
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
-import { SchemaMarkup } from '../../../components/seo/schema-markup'
-import { generateServicePageSchema } from '../../../lib/advanced-schema-generator'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
   title: 'AI SEO: Machine Learning-Powered Search Optimization | Webvello',
@@ -135,29 +134,33 @@ const faqs = [
   }
 ]
 
-// Generate comprehensive schema for this service page
-const serviceSchema = generateServicePageSchema(
-  {
-    name: "AI SEO Services",
-    description: "AI SEO uses machine learning to automate keyword research, content optimization, and performance tracking within traditional SEO workflows. Webvello combines AI tools with expert strategy for faster, data-driven SEO results.",
-    url: "https://www.webvello.com/services/ai-seo",
-    features: [
-      "AI-Powered Keyword Research",
-      "Intelligent Content Optimization",
-      "Predictive Performance Analytics",
-      "Automated Competitive Analysis"
-    ]
-  },
-  faqs
-)
-
 export default function AISeOPage() {
+  const pageSchema = generatePageSchema({
+    pageType: 'service',
+    url: 'https://www.webvello.com/services/ai-seo',
+    title: 'AI SEO Services | Webvello',
+    description: 'AI SEO uses machine learning to automate keyword research, content optimization, and performance tracking within traditional SEO workflows. Webvello combines AI tools with expert strategy for faster, data-driven SEO results.',
+    service: {
+      name: 'AI SEO Services',
+      description: 'AI SEO uses machine learning to automate keyword research, content optimization, and performance tracking within traditional SEO workflows. Webvello combines AI tools with expert strategy for faster, data-driven SEO results.',
+      type: 'AI SEO'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'AI SEO', url: 'https://www.webvello.com/services/ai-seo' }
+    ]
+  })
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Enhanced Schema Markup for Rich Snippets */}
-      {serviceSchema.map((schema, index) => (
-        <SchemaMarkup key={index} schema={schema} />
-      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchema)
+        }}
+      />
 
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 relative overflow-hidden">

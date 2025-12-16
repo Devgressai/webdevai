@@ -6,6 +6,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
   title: 'UI/UX Design Services | Conversion-Focused & Accessible | Webvello',
@@ -186,8 +187,33 @@ const faqs = [
 ]
 
 export default function UIUXDesignPage() {
+  const pageSchema = generatePageSchema({
+    pageType: 'service',
+    url: 'https://www.webvello.com/services/ui-ux-design',
+    title: 'UI/UX Design Services | Conversion-Focused & Accessible | Webvello',
+    description: 'UI/UX Design services that prioritize conversions, accessibility, and SEO performance. Webvello designs user experiences that drive measurable business results.',
+    service: {
+      name: 'UI/UX Design Services',
+      description: 'UI/UX Design services that combine usability, accessibility, and conversion optimization to create user experiences that drive measurable business results. Webvello designs interfaces that support SEO performance, meet WCAG 2.1 standards, and guide users toward conversion goals.',
+      type: 'UI/UX Design'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'UI/UX Design', url: 'https://www.webvello.com/services/ui-ux-design' }
+    ]
+  })
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchema)
+        }}
+      />
+      
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-primary-50 via-blue-50 to-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -627,91 +653,6 @@ export default function UIUXDesignPage() {
           </div>
         </div>
       </section>
-      
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Service",
-                "@id": "https://www.webvello.com/services/ui-ux-design#service",
-                "name": "UI/UX Design Services",
-                "description": "UI/UX Design services that combine usability, accessibility, and conversion optimization to create user experiences that drive measurable business results. Webvello designs interfaces that support SEO performance, meet WCAG 2.1 standards, and guide users toward conversion goals.",
-                "provider": {
-                  "@type": "Organization",
-                  "@id": "https://www.webvello.com/#organization",
-                  "name": "Webvello",
-                  "url": "https://www.webvello.com"
-                },
-                "areaServed": "US",
-                "serviceType": "UI/UX Design",
-                "category": "Web Design Services",
-                "offers": {
-                  "@type": "Offer",
-                  "availability": "https://schema.org/InStock"
-                },
-                "audience": {
-                  "@type": "Audience",
-                  "audienceType": ["E-commerce businesses", "SaaS companies", "Local businesses", "B2B companies"]
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "@id": "https://www.webvello.com/services/ui-ux-design#faq",
-                "mainEntity": faqs.map(faq => ({
-                  "@type": "Question",
-                  "name": faq.question,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer
-                  }
-                }))
-              },
-              {
-                "@type": "WebPage",
-                "@id": "https://www.webvello.com/services/ui-ux-design#webpage",
-                "url": "https://www.webvello.com/services/ui-ux-design",
-                "name": "UI/UX Design Services | Conversion-Focused & Accessible | Webvello",
-                "description": "UI/UX Design services that prioritize conversions, accessibility, and SEO performance. Webvello designs user experiences that drive measurable business results.",
-                "isPartOf": {
-                  "@type": "WebSite",
-                  "@id": "https://www.webvello.com/#website"
-                },
-                "about": {
-                  "@id": "https://www.webvello.com/services/ui-ux-design#service"
-                }
-              },
-              {
-                "@type": "BreadcrumbList",
-                "@id": "https://www.webvello.com/services/ui-ux-design#breadcrumb",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://www.webvello.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Services",
-                    "item": "https://www.webvello.com/services"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "UI/UX Design",
-                    "item": "https://www.webvello.com/services/ui-ux-design"
-                  }
-                ]
-              }
-            ]
-          })
-        }}
-      />
     </div>
   )
 }

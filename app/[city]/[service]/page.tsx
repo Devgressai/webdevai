@@ -38,6 +38,213 @@ interface CityServicePageProps {
   }
 }
 
+// Service pillar mapping and secondary rotation
+const servicePillarMap: Record<string, { 
+  pillar: string; 
+  pillarName: string; 
+  secondaryPillar: string; 
+  secondaryName: string;
+}> = {
+  'ai-seo': { 
+    pillar: '/services/ai-seo', 
+    pillarName: 'AI-powered SEO',
+    secondaryPillar: '/services/answer-engine-optimization',
+    secondaryName: 'answer engine optimization'
+  },
+  'ai-consulting': { 
+    pillar: '/services/ai-seo', 
+    pillarName: 'AI SEO',
+    secondaryPillar: '/services/web-development',
+    secondaryName: 'modern web development'
+  },
+  'ai-digital-marketing': { 
+    pillar: '/services/ai-seo', 
+    pillarName: 'AI SEO',
+    secondaryPillar: '/services/answer-engine-optimization',
+    secondaryName: 'AEO services'
+  },
+  'ai-gpt-integration': { 
+    pillar: '/services/ai-seo', 
+    pillarName: 'AI SEO',
+    secondaryPillar: '/services/web-development',
+    secondaryName: 'web development'
+  },
+  'ai-agent-development': { 
+    pillar: '/services/ai-seo', 
+    pillarName: 'AI SEO',
+    secondaryPillar: '/services/answer-engine-optimization',
+    secondaryName: 'AEO'
+  },
+  'answer-engine-optimization': { 
+    pillar: '/services/answer-engine-optimization', 
+    pillarName: 'answer engine optimization',
+    secondaryPillar: '/services/web-development',
+    secondaryName: 'web development services'
+  },
+  'chatgpt-optimization': { 
+    pillar: '/services/answer-engine-optimization', 
+    pillarName: 'AEO',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI-powered SEO'
+  },
+  'generative-engine-optimization': { 
+    pillar: '/services/answer-engine-optimization', 
+    pillarName: 'answer engine optimization',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI SEO'
+  },
+  'seo': { 
+    pillar: '/services/seo', 
+    pillarName: 'SEO services',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI-powered SEO'
+  },
+  'local-seo': { 
+    pillar: '/services/seo', 
+    pillarName: 'search engine optimization',
+    secondaryPillar: '/services/answer-engine-optimization',
+    secondaryName: 'answer engine optimization'
+  },
+  'digital-marketing': { 
+    pillar: '/services/seo', 
+    pillarName: 'SEO',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI SEO strategies'
+  },
+  'web-development': { 
+    pillar: '/services/web-development', 
+    pillarName: 'web development',
+    secondaryPillar: '/services/ui-ux-design',
+    secondaryName: 'UI/UX design'
+  },
+  'website-design': { 
+    pillar: '/services/web-development', 
+    pillarName: 'web development services',
+    secondaryPillar: '/services/ui-ux-design',
+    secondaryName: 'conversion-focused design'
+  },
+  'website-redesign': { 
+    pillar: '/services/web-development', 
+    pillarName: 'modern web development',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'SEO optimization'
+  },
+  'rapid-web-design': { 
+    pillar: '/services/web-development', 
+    pillarName: 'web development',
+    secondaryPillar: '/services/ui-ux-design',
+    secondaryName: 'user experience design'
+  },
+  'shopify-development': { 
+    pillar: '/services/web-development', 
+    pillarName: 'web development',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'SEO services'
+  },
+  'wordpress-development': { 
+    pillar: '/services/web-development', 
+    pillarName: 'web development',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'search engine optimization'
+  },
+  'software-development': { 
+    pillar: '/services/web-development', 
+    pillarName: 'web development',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI-powered optimization'
+  },
+  'software-design-development': { 
+    pillar: '/services/web-development', 
+    pillarName: 'web development services',
+    secondaryPillar: '/services/ui-ux-design',
+    secondaryName: 'UI/UX design'
+  },
+  'ui-ux-design': { 
+    pillar: '/services/ui-ux-design', 
+    pillarName: 'UI/UX design',
+    secondaryPillar: '/services/answer-engine-optimization',
+    secondaryName: 'answer engine optimization'
+  },
+  'ecommerce-design': { 
+    pillar: '/services/ui-ux-design', 
+    pillarName: 'user experience design',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'SEO services'
+  },
+  'app-design-development': { 
+    pillar: '/services/ui-ux-design', 
+    pillarName: 'UI/UX design services',
+    secondaryPillar: '/services/web-development',
+    secondaryName: 'web development'
+  },
+  'cro-ecommerce': { 
+    pillar: '/services/ui-ux-design', 
+    pillarName: 'conversion-focused design',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'SEO optimization'
+  },
+  'cro-lead-generation': { 
+    pillar: '/services/ui-ux-design', 
+    pillarName: 'conversion optimization',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI SEO'
+  },
+  'email-marketing-design': { 
+    pillar: '/services/seo', 
+    pillarName: 'digital marketing',
+    secondaryPillar: '/services/ui-ux-design',
+    secondaryName: 'modern UI design'
+  },
+  'social-media-design': { 
+    pillar: '/services/seo', 
+    pillarName: 'digital marketing',
+    secondaryPillar: '/services/ui-ux-design',
+    secondaryName: 'responsive design'
+  },
+  'enterprise-geo-services': { 
+    pillar: '/services/answer-engine-optimization', 
+    pillarName: 'answer engine optimization',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI-powered SEO'
+  },
+  'content-marketing': { 
+    pillar: '/services/seo', 
+    pillarName: 'SEO',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI content optimization'
+  },
+  'core-web-vitals-optimization': { 
+    pillar: '/services/seo', 
+    pillarName: 'technical SEO',
+    secondaryPillar: '/services/web-development',
+    secondaryName: 'web development'
+  },
+  'programmatic-seo': { 
+    pillar: '/services/ai-seo', 
+    pillarName: 'AI SEO',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'traditional SEO'
+  },
+  'schema-markup-services': { 
+    pillar: '/services/seo', 
+    pillarName: 'technical SEO',
+    secondaryPillar: '/services/answer-engine-optimization',
+    secondaryName: 'answer engine optimization'
+  },
+  'voice-search-optimization': { 
+    pillar: '/services/answer-engine-optimization', 
+    pillarName: 'voice search optimization',
+    secondaryPillar: '/services/ai-seo',
+    secondaryName: 'AI SEO'
+  },
+  'zero-click-search-optimization': { 
+    pillar: '/services/answer-engine-optimization', 
+    pillarName: 'answer engine optimization',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'SEO services'
+  }
+}
+
 // City data mapping
 const cityData: Record<string, { name: string; state: string; fullName: string; population: string; industries: string[] }> = {
   'new-york-ny': { 
@@ -775,6 +982,12 @@ export default function CityServicePage({ params }: CityServicePageProps) {
   }
 
   const ServiceIcon = service.icon
+  const pillarInfo = servicePillarMap[params.service] || {
+    pillar: '/services/web-development',
+    pillarName: 'web development',
+    secondaryPillar: '/services/seo',
+    secondaryName: 'SEO services'
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -789,8 +1002,27 @@ export default function CityServicePage({ params }: CityServicePageProps) {
               {service.name} in {city.fullName}
             </h1>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Professional {service.name.toLowerCase()} services tailored for {city.name} businesses. {service.longDesc} with local expertise and proven results.
+          </p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            Our{' '}
+            <Link href={pillarInfo.pillar} className="text-blue-600 hover:text-blue-700 underline">
+              {pillarInfo.pillarName}
+            </Link>
+            {' '}services combine local expertise with{' '}
+            <Link href={pillarInfo.secondaryPillar} className="text-blue-600 hover:text-blue-700 underline">
+              {pillarInfo.secondaryName}
+            </Link>
+            {' '}for maximum impact.{' '}
+            <Link href={`/${params.city}`} className="text-blue-600 hover:text-blue-700 underline">
+              View all {city.name} services
+            </Link>
+            {' '}or{' '}
+            <Link href="/" className="text-blue-600 hover:text-blue-700 underline">
+              explore our complete solutions
+            </Link>
+            .
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600 mb-8">
             <div className="flex items-center">

@@ -2,6 +2,7 @@ import { Button } from '../../../components/ui/button'
 import { ArrowRight, Search, TrendingUp, BarChart3, Target, Zap, Globe, Users, FileText, Settings, CheckCircle, Shield, Award, Smartphone, ShoppingCart, Heart, Building2, Code, UserCheck, HelpCircle } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
   title: 'Traditional SEO: Technical, On-Page & Link Building Experts | Webvello',
@@ -183,121 +184,30 @@ const faqs = [
 ]
 
 export default function TraditionalSEOPage() {
+  const pageSchema = generatePageSchema({
+    pageType: 'service',
+    url: 'https://www.webvello.com/services/seo',
+    title: 'Traditional SEO Services | Webvello',
+    description: 'Traditional SEO builds search visibility through technical optimization, on-page strategy, and authority building. Expert SEO services from Webvello.',
+    service: {
+      name: 'Traditional SEO Services',
+      description: 'Traditional SEO is the foundational practice of optimizing websites for search engines through technical improvements, on-page optimization, and authority building. We provide comprehensive SEO services including technical audits, on-page optimization, content strategy, and link building to improve search visibility and organic traffic.',
+      type: 'Traditional SEO'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'Traditional SEO', url: 'https://www.webvello.com/services/seo' }
+    ]
+  })
+
   return (
     <div className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Service",
-                "@id": "https://www.webvello.com/services/seo#service",
-                "serviceType": "Traditional SEO Services",
-                "name": "Traditional SEO Services",
-                "description": "Traditional SEO is the foundational practice of optimizing websites for search engines through technical improvements, on-page optimization, and authority building. We provide comprehensive SEO services including technical audits, on-page optimization, content strategy, and link building to improve search visibility and organic traffic.",
-                "provider": {
-                  "@type": "Organization",
-                  "@id": "https://www.webvello.com/#organization",
-                  "name": "Webvello",
-                  "url": "https://www.webvello.com",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.webvello.com/logo.png",
-                    "width": 2048,
-                    "height": 2048
-                  },
-                  "sameAs": [
-                    "https://www.linkedin.com/company/webvello",
-                    "https://twitter.com/webvello"
-                  ]
-                },
-                "areaServed": {
-                  "@type": "Country",
-                  "name": "United States"
-                },
-                "hasOfferCatalog": {
-                  "@type": "OfferCatalog",
-                  "name": "Traditional SEO Services",
-                  "itemListElement": [
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Technical SEO Audit & Optimization",
-                        "description": "Comprehensive technical SEO analysis including site speed, mobile optimization, crawlability, indexing, and Core Web Vitals improvement."
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "On-Page SEO Optimization",
-                        "description": "Content optimization, keyword research, title tags, meta descriptions, header structure, and internal linking strategy."
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Link Building & Authority Development",
-                        "description": "High-quality backlink acquisition, domain authority building, and strategic link building campaigns."
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "SEO Strategy & Consulting",
-                        "description": "Custom SEO roadmaps, competitive analysis, and ongoing strategic guidance for sustainable search growth."
-                      }
-                    }
-                  ]
-                },
-                "audience": {
-                  "@type": "BusinessAudience",
-                  "audienceType": "Businesses seeking foundational search engine optimization services"
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "@id": "https://www.webvello.com/services/seo#faq",
-                "mainEntity": faqs.map(faq => ({
-                  "@type": "Question",
-                  "name": faq.question,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer
-                  }
-                }))
-              },
-              {
-                "@type": "BreadcrumbList",
-                "@id": "https://www.webvello.com/services/seo#breadcrumb",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://www.webvello.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Services",
-                    "item": "https://www.webvello.com/services"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Traditional SEO Services",
-                    "item": "https://www.webvello.com/services/seo"
-                  }
-                ]
-              }
-            ]
-          })
+          __html: JSON.stringify(pageSchema)
         }}
       />
 
