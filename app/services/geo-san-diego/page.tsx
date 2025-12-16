@@ -1,320 +1,354 @@
-import { Button } from '../../../components/ui/button'
-import { ArrowRight, CheckCircle, MapPin, Building2, TrendingUp, Users, Star, BarChart, Brain } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services San Diego | AI Search Optimization | Web Vello',
-  description: 'Get your San Diego business found in ChatGPT, Perplexity, and Google SGE. Local GEO services for San Diego businesses to dominate AI search.',
-  keywords: ['geo san diego', 'ai seo san diego', 'chatgpt optimization san diego', 'generative engine optimization san diego'],
-  alternates: {
-    canonical: 'https://www.webvello.com/services/geo-san-diego',
-  },
+  title: 'GEO Services in San Diego, CA | AI Search Optimization',
+  description: 'Get your San Diego business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  keywords: 'GEO San Diego, AI search optimization San Diego, generative engine optimization San Diego, ChatGPT SEO San Diego, Perplexity optimization',
   openGraph: {
-    title: 'GEO Services San Diego | AI Search Optimization',
-    description: 'Get your San Diego business found in AI search results.',
+    title: 'GEO Services in San Diego, CA | AI Search Optimization',
+    description: 'Get your San Diego business cited by ChatGPT, Perplexity & Google AI.',
     url: 'https://www.webvello.com/services/geo-san-diego',
     type: 'website',
-  }
+  },
 }
 
-const industries = [
-  { icon: Building2, name: "Biotech & Life Sciences", description: "San Diego's leading industry cluster" },
-  { icon: TrendingUp, name: "Defense & Aerospace", description: "Major military and aerospace presence" },
-  { icon: Users, name: "Tourism & Hospitality", description: "Hotels, restaurants, attractions" },
-  { icon: Star, name: "Healthcare", description: "Medical practices and health systems" },
-  { icon: BarChart, name: "Tech Startups", description: "Growing startup ecosystem" },
-  { icon: Brain, name: "Professional Services", description: "Law firms, accountants, consultants" }
-]
-
-const neighborhoods = [
-  "Downtown San Diego",
-  "La Jolla",
-  "Del Mar",
-  "Coronado",
-  "Pacific Beach",
-  "Gaslamp Quarter",
-  "Mission Valley",
-  "North County",
-  "East County",
-  "South Bay"
-]
-
-const faqs = [
-  {
-    question: "Why does my San Diego business need GEO?",
-    answer: "San Diego residents and tourists increasingly use AI to find local businesses. When someone asks ChatGPT 'best seafood restaurant in La Jolla' or 'top biotech companies in San Diego,' you want to be in that answer."
-  },
-  {
-    question: "How is San Diego GEO different from general GEO?",
-    answer: "San Diego GEO incorporates local context—neighborhoods like La Jolla and Gaslamp, local industries like biotech and defense, tourist considerations, and cross-border dynamics with Tijuana. We optimize for how people actually search in San Diego."
-  },
-  {
-    question: "What industries benefit most from San Diego GEO?",
-    answer: "Biotech, healthcare, tourism, real estate, and professional services see the biggest impact. These industries have high-value customers who research before buying—exactly who uses AI search."
-  },
-  {
-    question: "How do you handle San Diego's tourism market?",
-    answer: "We optimize for both resident and tourist queries. Tourists ask AI for recommendations constantly—restaurants, activities, services. We help you capture both local and visitor traffic."
-  },
-  {
-    question: "Do you work with San Diego biotech companies?",
-    answer: "Yes, biotech is a focus area. We understand how B2B decision-makers in life sciences use AI to research vendors, partners, and service providers. We optimize for technical and business queries."
-  },
-  {
-    question: "What's the timeline for San Diego GEO results?",
-    answer: "Initial visibility improvements typically appear within 4-8 weeks. For competitive San Diego markets like real estate or healthcare, full optimization may take 3-6 months for best results."
-  }
-]
-
 export default function GEOSanDiegoPage() {
+  const faqs = [
+    {
+      question: "How does GEO help San Diego businesses compete in AI search?",
+      answer: "GEO ensures your San Diego business appears when potential customers ask AI engines like ChatGPT, Perplexity, or Google SGE about services in your industry. This is crucial for San Diego's biotech, defense, and tourism markets where traditional SEO alone isn't enough."
+    },
+    {
+      question: "Can you optimize for San Diego businesses remotely?",
+      answer: "Yes. Webvello delivers GEO services remotely to San Diego companies. We analyze your market positioning, optimize content for AI citation, and ensure voice search readiness - all without needing a local office."
+    },
+    {
+      question: "What's the difference between GEO and traditional SEO for San Diego markets?",
+      answer: "Traditional SEO targets Google's blue links. GEO optimizes for AI-generated answers in ChatGPT, Perplexity, Claude, and Google's AI Overviews. In San Diego's diverse market, customers increasingly use AI to research services."
+    },
+    {
+      question: "How long before San Diego customers find us via AI search?",
+      answer: "Most San Diego clients see AI engine citations within 8-12 weeks. This includes content optimization, schema implementation, and strategic positioning for generative AI platforms."
+    },
+    {
+      question: "Do you serve specific San Diego neighborhoods or the entire metro?",
+      answer: "We serve all San Diego-area businesses remotely - from downtown to La Jolla to North County. Our GEO strategies work regardless of your physical location within the San Diego metro."
+    },
+    {
+      question: "What San Diego industries benefit most from GEO?",
+      answer: "San Diego's biotech companies, defense contractors, tourism businesses, healthcare providers, real estate firms, and professional services benefit significantly. Any industry where customers research via AI assistants needs GEO."
+    },
+    {
+      question: "How do you measure GEO success for San Diego clients?",
+      answer: "We track AI engine citations, voice search appearances, featured snippet coverage, and conversions from AI-driven traffic. You'll see exactly how often ChatGPT, Perplexity, and Google AI recommend your San Diego business."
+    },
+    {
+      question: "Can GEO work alongside our existing San Diego SEO agency?",
+      answer: "Absolutely. GEO complements traditional SEO. We can coordinate with your current San Diego marketing team or work independently. Many clients use us specifically for AI search while maintaining their existing SEO partnerships."
+    }
+  ]
+
+  const pageSchema = generatePageSchema({
+    pageType: 'geo',
+    url: 'https://www.webvello.com/services/geo-san-diego',
+    title: 'GEO Services in San Diego, CA | AI Search Optimization',
+    description: 'Get your San Diego business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    geo: {
+      city: 'San Diego',
+      cityState: 'San Diego, CA'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'GEO San Diego', url: 'https://www.webvello.com/services/geo-san-diego' }
+    ]
+  })
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[150px]"></div>
+      {/* Clean JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+        <div className="absolute inset-0 bg-grid-white/[0.05] -z-0"></div>
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <div className="inline-block mb-4 px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+            <span className="text-blue-300 font-semibold">AI Search Optimization</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            GEO Services in San Diego, California
+          </h1>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 mb-8 rounded-full"></div>
+          <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl">
+            <strong>Get your San Diego business cited by ChatGPT, Perplexity, and Google AI.</strong> Webvello delivers remote GEO services that position your brand for voice search, AI-generated answers, and the next generation of search technology.
+          </p>
         </div>
-        
-        <div className="relative z-10 mx-auto max-w-6xl px-6">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-2 mb-8">
-              <MapPin className="w-4 h-4 text-rose-400" />
-              <span className="text-white/80 text-sm">GEO Services in San Diego</span>
-            </div>
-            
-            <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
-              GEO Services for{' '}
-              <span className="bg-gradient-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
-                San Diego
-              </span>{' '}
-              Businesses
-            </h1>
-            
-            <p className="text-xl text-white/70 mb-8 leading-relaxed">
-              When someone in San Diego asks AI "who's the best [your service] near me"—your business 
-              should be the answer. We help San Diego businesses dominate AI search.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                className="h-14 px-8 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold rounded-xl"
-                asChild
-              >
-                <Link href="/contact">
-                  Get Free San Diego GEO Audit
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
+      </section>
+
+      {/* Direct Answer Section */}
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-blue-100">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  What is GEO for San Diego Businesses?
+                </h2>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  <strong>Generative Engine Optimization (GEO)</strong> ensures your San Diego business appears when potential customers ask AI platforms like ChatGPT, Perplexity, Claude, or Google's AI Overviews about services in your industry. Unlike traditional SEO that targets Google's blue links, GEO optimizes your content to be cited, quoted, and recommended by AI engines that increasingly shape how San Diego's diverse customer base discovers businesses.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Local Stats */}
-      <section className="py-16 bg-white border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-3xl font-bold text-slate-900 mb-1">3.3M</p>
-              <p className="text-slate-600 text-sm">San Diego County residents</p>
+      {/* Why It Matters Section */}
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+            Why GEO Matters in San Diego
+          </h2>
+          <div className="prose prose-lg max-w-none text-slate-700">
+            <p className="text-lg leading-relaxed mb-6">
+              San Diego's economy spans biotech innovation, defense technology, tourism, and professional services. Your customers aren't just Googling anymore - they're asking ChatGPT for recommendations, using Perplexity to research services, and trusting AI-generated answers from Google's Search Generative Experience.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              In a market as competitive and innovative as San Diego, <strong>being invisible to AI search means losing customers to competitors who appear in AI-generated recommendations</strong>. GEO ensures your San Diego business is cited when it matters most - when potential clients are making purchasing decisions.
+            </p>
+            <p className="text-lg leading-relaxed">
+              This isn't speculative - it's happening now. Voice assistants, AI chatbots, and generative search engines are answering millions of business queries daily. San Diego's tech-forward, innovation-driven market demands you show up in these AI-powered results.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Deliver Section */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+            How Webvello Delivers GEO Remotely
+          </h2>
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-slate-200">
+            <p className="text-lg text-slate-700 leading-relaxed mb-8">
+              We serve San Diego businesses entirely remotely. No local office needed. Here's what you can expect:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">Complete Market Analysis</h3>
+                  <p className="text-slate-600">We research how San Diego customers in your industry use AI search and where your competitors appear.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">AI-Optimized Content</h3>
+                  <p className="text-slate-600">We rewrite key pages to be citation-worthy for ChatGPT, Perplexity, and Google's generative AI.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">Technical Implementation</h3>
+                  <p className="text-slate-600">We implement schema markup, structured data, and AI-readable signals across your website.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">Ongoing Monitoring</h3>
+                  <p className="text-slate-600">We track your AI citations monthly and adjust strategy based on how engines respond to your content.</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <p className="text-3xl font-bold text-slate-900 mb-1">35M+</p>
-              <p className="text-slate-600 text-sm">Annual visitors</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-slate-900 mb-1">1,100+</p>
-              <p className="text-slate-600 text-sm">Biotech companies</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-slate-900 mb-1">#3</p>
-              <p className="text-slate-600 text-sm">Largest biotech cluster</p>
+            <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
+              <p className="text-slate-700">
+                <strong>Communication:</strong> Expect weekly Slack/email updates, monthly strategy calls, and transparent reporting. We work as an extension of your San Diego team.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industries */}
-      <section className="py-24 bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              San Diego Industries We Serve
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              We help businesses across San Diego's key industries get found in AI search.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {industries.map((industry) => (
-              <div key={industry.name} className="bg-white rounded-xl p-6 border border-slate-200">
-                <industry.icon className="w-10 h-10 text-rose-500 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">{industry.name}</h3>
-                <p className="text-sm text-slate-600">{industry.description}</p>
+      {/* Process Section */}
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+            Our 5-Step GEO Process
+          </h2>
+          <div className="grid gap-8">
+            {[
+              {
+                number: "01",
+                title: "AI Search Audit",
+                description: "We test how ChatGPT, Perplexity, Google AI, and Claude currently answer queries related to your San Diego business. This reveals gaps and opportunities.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                )
+              },
+              {
+                number: "02",
+                title: "Content Strategy",
+                description: "We identify which pages, topics, and formats will maximize AI citations. This includes analyzing San Diego market search patterns and competitor positioning.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                )
+              },
+              {
+                number: "03",
+                title: "Technical Optimization",
+                description: "We implement structured data, schema markup, and AI-readable signals that help generative engines understand and cite your content.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                )
+              },
+              {
+                number: "04",
+                title: "Content Deployment",
+                description: "We publish AI-optimized content across your site, ensuring each page is structured for maximum citation potential in voice and AI search.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
+                )
+              },
+              {
+                number: "05",
+                title: "Monitor & Refine",
+                description: "We track AI citations, measure voice search appearances, and continuously refine your GEO strategy based on real performance data.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                )
+              }
+            ].map((step, index) => (
+              <div key={index} className="flex gap-6 items-start group">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:shadow-xl transition-shadow">
+                    {step.number}
+                  </div>
+                </div>
+                <div className="flex-1 pt-2">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+                      {step.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900">{step.title}</h3>
+                  </div>
+                  <p className="text-lg text-slate-600 leading-relaxed">{step.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Neighborhoods */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              San Diego Areas We Cover
-            </h2>
-            <p className="text-xl text-slate-600">
-              From La Jolla to Chula Vista, we optimize for all San Diego neighborhoods and communities.
-            </p>
-          </div>
-          
-          <div className="flex flex-wrap gap-3">
-            {neighborhoods.map((neighborhood) => (
-              <span
-                key={neighborhood}
-                className="bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium"
-              >
-                {neighborhood}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What We Do */}
-      <section className="py-24 bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="max-w-2xl mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Our San Diego GEO Process
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-2xl border border-slate-200">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Local Entity Optimization</h3>
-              <p className="text-slate-600 mb-6">Establish your business as a recognized San Diego entity in AI systems.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  LocalBusiness schema with San Diego address
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Neighborhood-specific content
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Local authority signals
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl border border-slate-200">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">San Diego Content Strategy</h3>
-              <p className="text-slate-600 mb-6">Content that captures San Diego-specific queries and intent.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Local service pages
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  San Diego-focused FAQs
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Tourist and local intent targeting
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl border border-slate-200">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Review & Citation Building</h3>
-              <p className="text-slate-600 mb-6">Strengthen your San Diego reputation signals for AI systems.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Google Business Profile optimization
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  San Diego directory citations
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Review generation strategy
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl border border-slate-200">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Competitive Positioning</h3>
-              <p className="text-slate-600 mb-6">Stand out against San Diego competitors in AI recommendations.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Competitive gap analysis
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Differentiation content
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Market positioning optimization
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              San Diego GEO FAQs
-            </h2>
-          </div>
-          
+      {/* FAQ Section */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-slate-50 rounded-xl p-8">
-                <h3 className="text-lg font-bold text-slate-900 mb-3">{faq.question}</h3>
-                <p className="text-slate-600">{faq.answer}</p>
+              <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-slate-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 to-slate-800">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to dominate San Diego AI search?
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/[0.05] -z-0"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Show Up in AI Search Results?
           </h2>
-          <p className="text-xl text-white/70 mb-10">
-            Get a free GEO audit for your San Diego business. See exactly how visible you are 
-            when locals ask AI for recommendations.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how GEO can position your San Diego business for the next generation of search. No pressure, just a conversation about AI-driven visibility.
           </p>
-          <Button
-            className="h-14 px-10 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl"
-            asChild
-          >
-            <Link href="/contact">
-              Get Your Free San Diego GEO Audit
-              <ArrowRight className="ml-2 w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:shadow-xl hover:scale-105 transition-all"
+            >
+              Get Your Free GEO Audit
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
-          </Button>
+            <Link 
+              href="/services/geo-services" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all"
+            >
+              Learn More About GEO
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links */}
+      <section className="py-12 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+            <span className="text-slate-300">|</span>
+            <Link href="/services" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              All Services
+            </Link>
+            <span className="text-slate-300">|</span>
+            <Link href="/services/geo-services" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              GEO Services Overview
+            </Link>
+            <span className="text-slate-300">|</span>
+            <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
     </div>
   )
 }
-
