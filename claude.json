@@ -1,0 +1,268 @@
+{
+  "name": "Webvello AI Search Optimization Platform",
+  "description": "Claude AI integration configuration for Webvello project",
+  "version": "1.0.0",
+  "settings": {
+    "model": "claude-3-5-haiku",
+    "max_tokens": 4096,
+    "temperature": 0.7,
+    "context_window": "use_full"
+  },
+  "project_context": {
+    "type": "Next.js Web Application",
+    "industry": "Digital Marketing / SEO / AI Services",
+    "primary_service": "Generative Engine Optimization (GEO)",
+    "target_markets": "79 US cities",
+    "company_website": "https://www.webvello.com"
+  },
+  "code_style_preferences": {
+    "language": "TypeScript",
+    "framework": "Next.js 14+",
+    "styling": "Tailwind CSS",
+    "type_safety": "strict",
+    "naming_convention": "camelCase for functions, PascalCase for components",
+    "max_line_length": 100,
+    "indentation": "2 spaces"
+  },
+  "content_creation_guidelines": {
+    "seo": {
+      "title_limit": 60,
+      "meta_description_limit": 155,
+      "ensure_uniqueness_across_pages": true,
+      "keywords_per_page": 4,
+      "focus": "AI search optimization and GEO"
+    },
+    "tone_and_voice": {
+      "overall_tone": "Expert, professional, transparent",
+      "audience": "Business owners seeking AI visibility",
+      "avoid": "Hype, false claims, fake data",
+      "emphasize": "Real value, remote service delivery, measurable results"
+    },
+    "compliance": {
+      "no_fake_addresses": true,
+      "no_fake_phone_numbers": true,
+      "no_fake_ratings_or_reviews": true,
+      "no_invented_claims": true,
+      "verified_data_only": true
+    }
+  },
+  "geo_pages_specification": {
+    "total_pages": 79,
+    "newly_created": 49,
+    "page_structure": {
+      "hero_section": "City-specific headline with gradient background",
+      "value_proposition": "2-3 sentence direct answer in highlighted box",
+      "why_geo_matters": "Location-specific context and competitive urgency",
+      "how_we_deliver": "3-point remote service explanation",
+      "process_section": "5-step methodology with numbered steps",
+      "industries_served": "6 city-specific industries with descriptions",
+      "faq_section": "Minimum 8 unique Q&As addressing common objections",
+      "cta_section": "Dual buttons: audit + learn more"
+    },
+    "content_requirements": {
+      "sections_minimum": 7,
+      "faqs_minimum": 8,
+      "unique_wording_between_cities": true,
+      "ai_citation_optimization": true,
+      "voice_search_optimization": true
+    },
+    "schema_requirements": {
+      "types": ["Service", "FAQPage", "Breadcrumb"],
+      "include_address": false,
+      "include_fake_data": false,
+      "validate_with": "Google Rich Results Test"
+    }
+  },
+  "recent_project_completion": {
+    "project_name": "GEO Expansion 49 Cities",
+    "completion_date": "2025-12-16",
+    "status": "COMPLETE",
+    "deliverables": {
+      "pages_created": 49,
+      "geographic_expansion": "30 → 79 cities (+163%)",
+      "total_content_lines": 20905,
+      "total_faqs": 392,
+      "schema_implementations": "49 Service + 49 FAQ + 49 Breadcrumb",
+      "sitemap_updated": true,
+      "robots_txt_updated": true,
+      "git_commits": 4,
+      "deployment_status": "LIVE"
+    }
+  },
+  "file_organization": {
+    "app": {
+      "description": "Next.js app directory",
+      "important_files": [
+        "app/layout.tsx",
+        "app/page.tsx",
+        "app/sitemap.ts",
+        "app/services/geo-[city]/page.tsx"
+      ]
+    },
+    "lib": {
+      "description": "Utility and helper functions",
+      "files": [
+        "lib/cities.ts - City configuration data",
+        "lib/industries.ts - Industry categories",
+        "lib/clean-schema-generator.ts - JSON-LD generation"
+      ]
+    },
+    "components": {
+      "description": "Reusable React components",
+      "patterns": "One component per file"
+    },
+    "public": {
+      "description": "Static files and configuration",
+      "files": [
+        "public/robots.txt",
+        "public/sitemap.xml (generated)"
+      ]
+    }
+  },
+  "task_templates": {
+    "create_new_geo_page": {
+      "steps": [
+        "Create /app/services/geo-[city-slug]/ directory",
+        "Copy structure from geo-austin template",
+        "Update city-specific values (name, state, population, etc.)",
+        "Write unique H1, title, description, keywords",
+        "Create 8 unique FAQs for the city",
+        "Update gradient colors (use different color per city)",
+        "Add 6 city-relevant industries",
+        "Generate neighborhoods list for city",
+        "Update schema markup with city info",
+        "Test mobile and desktop rendering",
+        "Update app/sitemap.ts to include new page",
+        "Update public/robots.txt with Allow directive"
+      ],
+      "validation_checklist": [
+        "Title ≤ 60 characters",
+        "Meta description ≤ 155 characters",
+        "No duplicate wording with other cities",
+        "All 7 content sections present",
+        "8 FAQs minimum",
+        "Schema markup validates",
+        "No TypeScript errors",
+        "Mobile responsive",
+        "All internal links working"
+      ]
+    },
+    "update_existing_page": {
+      "guidelines": [
+        "Never modify existing GEO pages without explicit approval",
+        "If updates needed: create separate branch",
+        "Test thoroughly in production build",
+        "Preserve all existing content structure",
+        "Only update metadata if outdated",
+        "Verify no breaking changes to links"
+      ]
+    }
+  },
+  "performance_optimization": {
+    "targets": {
+      "page_load_time": "< 2 seconds",
+      "lighthouse_mobile": "> 90",
+      "lighthouse_desktop": "> 95",
+      "core_web_vitals": "All green"
+    },
+    "best_practices": [
+      "Use Next.js Image component for images",
+      "Lazy load below-fold content",
+      "Minimize CSS and JS bundles",
+      "Leverage Vercel CDN",
+      "Use dynamic imports for code splitting"
+    ]
+  },
+  "seo_best_practices": {
+    "on_page": [
+      "Unique title and meta description per page",
+      "Proper heading hierarchy (H1 → H2 → H3)",
+      "Internal linking to related pages",
+      "Mobile-first responsive design",
+      "Structured data (JSON-LD schema)",
+      "Fast page load times"
+    ],
+    "technical": [
+      "Canonical URLs on all pages",
+      "XML sitemap updated",
+      "Robots.txt properly configured",
+      "Meta robots tags (if needed)",
+      "Proper 301 redirects",
+      "HTTPS for all pages"
+    ],
+    "content": [
+      "AI search optimization (ChatGPT, Perplexity)",
+      "Voice search friendly content",
+      "Natural keyword integration",
+      "Answer user questions directly",
+      "Cite sources and data",
+      "Update content regularly"
+    ]
+  },
+  "common_questions_to_ask_claude": [
+    "How should I optimize this page for AI search engines?",
+    "What's the best structure for a GEO service page?",
+    "How can I write unique content for each city?",
+    "What schema markup is best for this content?",
+    "How do I improve Core Web Vitals?",
+    "What internal linking strategy should I use?",
+    "How should I handle mobile vs desktop?",
+    "What keywords should I target?",
+    "How do I create better FAQs?",
+    "How do I improve page load speed?"
+  ],
+  "resources_and_links": {
+    "documentation": {
+      "nextjs": "https://nextjs.org/docs",
+      "tailwindcss": "https://tailwindcss.com/docs",
+      "typescript": "https://www.typescriptlang.org/docs/",
+      "vercel": "https://vercel.com/docs"
+    },
+    "seo": {
+      "google_search": "https://developers.google.com/search",
+      "schema_org": "https://schema.org/",
+      "json_ld": "https://json-ld.org/",
+      "rich_results": "https://search.google.com/test/rich-results"
+    },
+    "ai": {
+      "chatgpt": "https://openai.com/chatgpt/",
+      "perplexity": "https://www.perplexity.ai/",
+      "google_ai": "https://ai.google/"
+    }
+  },
+  "git_workflow": {
+    "branch_naming": {
+      "feature": "feature/[description]",
+      "bugfix": "fix/[description]",
+      "documentation": "docs/[description]"
+    },
+    "commit_conventions": {
+      "style": "Conventional Commits",
+      "types": ["feat:", "fix:", "docs:", "style:", "refactor:", "test:", "chore:"],
+      "examples": [
+        "feat: Add 49 new GEO service pages",
+        "fix: Update sitemap with missing pages",
+        "docs: Update README with instructions",
+        "refactor: Improve schema generator"
+      ]
+    },
+    "push_policy": {
+      "main_branch": "Protected - no force pushes",
+      "testing_required": true,
+      "peer_review": "Recommended for major changes"
+    }
+  },
+  "support_and_context": {
+    "when_asking_for_help": [
+      "Provide specific file path",
+      "Describe current behavior vs expected",
+      "Share error messages",
+      "Explain steps to reproduce",
+      "List what you've already tried"
+    ],
+    "project_status": "PRODUCTION",
+    "team_size": "1 main developer with AI assistance",
+    "deployment": "Automatic on main branch push via Vercel"
+  }
+}
+

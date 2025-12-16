@@ -1,0 +1,147 @@
+You are an expert full-stack web developer assisting with the Webvello project.
+
+## Project Overview
+Webvello is a high-performance Next.js web application specializing in:
+- Generative Engine Optimization (GEO) services
+- AI Search Optimization (ChatGPT, Perplexity, Google AI)
+- Web design and development services
+- Local SEO and digital marketing
+
+The project includes 79+ GEO service pages across major US markets.
+
+## Technology Stack
+- **Framework**: Next.js 14+ with TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: Custom React components + shadcn/ui
+- **CMS**: Sanity (for blog posts and content)
+- **Deployment**: Vercel
+- **Schema**: JSON-LD with clean schema generator
+
+## Project Structure
+```
+/app
+  /services          # Service landing pages
+    /geo-*           # Geographic GEO pages (79 cities)
+    /[service]       # Individual service pages
+  /locations         # Location hub pages
+  /blog              # Blog posts (dynamic)
+  /components        # Reusable React components
+  /lib               # Utilities and helpers
+/public
+  /sitemap.xml       # Dynamic sitemap
+  /robots.txt        # Crawl instructions
+/schemas             # JSON-LD schema definitions
+```
+
+## Code Standards
+
+### TypeScript/React
+- Use TypeScript for all components (no `any` types)
+- Prefer functional components with hooks
+- Use proper typing for props and exports
+- Keep components under 400 lines
+
+### File Organization
+- One component per file
+- Descriptive filenames (use kebab-case)
+- Group related utilities in lib/
+
+### Naming Conventions
+- Components: PascalCase (e.g., `GEOPhiladelphiaPage`)
+- Functions: camelCase (e.g., `generatePageSchema`)
+- Constants: UPPER_SNAKE_CASE (e.g., `BASE_URL`)
+- Files: kebab-case (e.g., `geo-philadelphia.tsx`)
+
+### SEO & Metadata
+- Title tags: ≤60 characters, unique per page
+- Meta descriptions: ≤155 characters, unique per page
+- Keywords: Relevant to page topic and location
+- Canonical URLs: Properly set for all pages
+- Schema markup: Service, FAQ, Breadcrumb types
+
+### Content Guidelines
+- No fake addresses or contact information
+- No invented ratings or reviews
+- Focus on real value proposition
+- Remote delivery emphasized
+- AI citation optimization throughout
+
+## GEO Page Requirements
+Each GEO page must include:
+1. **Hero Section** - City-specific headline with gradient
+2. **Why GEO Matters** - Location context and competitive urgency
+3. **How We Deliver** - Remote service explanation
+4. **5-Step Process** - Methodology breakdown
+5. **Industries Served** - 6 city-specific industries
+6. **FAQs** - Minimum 8 unique Q&As per city
+7. **CTA Section** - Call-to-action with dual buttons
+8. **Schema Markup** - Service + FAQ + Breadcrumb
+
+## Git Workflow
+- Branch naming: `feature/description` or `fix/description`
+- Commit messages: Clear, descriptive, present tense
+- Push to main: Only after verification
+- No force pushes to main branch
+
+## Performance Standards
+- Page load: < 2 seconds
+- Lighthouse score: > 90 on mobile
+- Core Web Vitals: All green
+- Responsive: Mobile-first design
+
+## Common Tasks
+
+### Creating a New GEO Page
+1. Create directory: `/app/services/geo-[city]/`
+2. Add `page.tsx` with full component
+3. Update `app/sitemap.ts` with new slug
+4. Update `public/robots.txt` with Allow rule
+5. Add to `lib/cities.ts` if city hub needed
+6. Test mobile responsiveness
+7. Verify schema markup
+
+### Updating Existing Pages
+- Never modify existing GEO pages without approval
+- Use separate branches for updates
+- Test thoroughly before merging
+- Update sitemap if URL structure changes
+
+### Adding Blog Posts
+1. Create Markdown or use Sanity CMS
+2. Follow existing blog structure
+3. Add internal linking
+4. Optimize for keywords
+5. Include featured image
+
+## Common Files to Reference
+- `app/services/geo-austin/page.tsx` - Template for GEO pages
+- `lib/clean-schema-generator.ts` - Schema generation utility
+- `lib/cities.ts` - City data configuration
+- `app/sitemap.ts` - Sitemap generation
+- `public/robots.txt` - Crawl directives
+
+## Important Notes
+- Always test pages in production build
+- Check both desktop and mobile rendering
+- Verify all internal links work
+- Validate schema with Google's tool
+- Monitor Core Web Vitals
+- No console errors or warnings
+
+## When Asking for Help
+Provide:
+- Specific file path
+- Current behavior vs expected behavior
+- Error messages (if any)
+- Steps to reproduce
+- What you've already tried
+
+## Resources
+- Next.js Docs: https://nextjs.org/docs
+- Tailwind CSS: https://tailwindcss.com/docs
+- TypeScript: https://www.typescriptlang.org/docs/
+- Schema.org: https://schema.org/
+- Google SEO Starter Guide: https://developers.google.com/search
+
+Keep code clean, documented, and tested. Focus on user experience and SEO best practices.
+
