@@ -89,10 +89,10 @@ export default function ArizonaServicesPage() {
               Serving Businesses Across Arizona
             </h2>
             <p className="text-lg text-secondary-600 mb-4">
-              Arizona's diverse economy—from technology and healthcare in Phoenix to education and aerospace in Tucson—creates opportunities for businesses that establish strong digital visibility across both traditional and emerging search channels.
+              Arizona's diverse economy—from technology and healthcare in Phoenix to education and aerospace in Tucson—creates opportunities for businesses that establish strong digital visibility across both traditional and emerging search channels. From <Link href="/services/geo-phoenix" className="text-primary-600 hover:text-primary-700 underline">businesses in Phoenix</Link> to <Link href="/services/geo-tucson" className="text-primary-600 hover:text-primary-700 underline">companies operating in Tucson</Link>, Arizona organizations benefit from comprehensive digital visibility.
             </p>
             <p className="text-lg text-secondary-600">
-              Webvello delivers comprehensive SEO, GEO (Generative Engine Optimization), and web development services remotely. Arizona businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers discover and evaluate services.
+              Webvello delivers comprehensive SEO, GEO (Generative Engine Optimization), and web development services remotely. Whether you're a <Link href="/services/geo-scottsdale" className="text-primary-600 hover:text-primary-700 underline">Scottsdale-based team</Link> or <Link href="/services/geo-mesa" className="text-primary-600 hover:text-primary-700 underline">organizations across Mesa</Link>, Arizona businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers discover and evaluate services.
             </p>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function ArizonaServicesPage() {
               Arizona Coverage Areas
             </h2>
             <p className="text-lg text-secondary-600 mb-6">
-              Webvello serves businesses throughout Arizona. Our remote delivery model ensures consistent service quality for organizations in major metros and regional markets alike.
+              Webvello serves businesses throughout Arizona, including <Link href="/services/geo-chandler" className="text-primary-600 hover:text-primary-700 underline">Chandler enterprises</Link> and <Link href="/services/geo-tempe" className="text-primary-600 hover:text-primary-700 underline">Tempe-based organizations</Link>. Our remote delivery model ensures consistent service quality for organizations in major metros and regional markets alike.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               {['Phoenix', 'Tucson', 'Mesa', 'Chandler', 'Scottsdale', 'Glendale', 'Gilbert', 'Tempe', 'Peoria', 'Surprise'].map((city) => (
