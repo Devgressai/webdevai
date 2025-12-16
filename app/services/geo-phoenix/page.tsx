@@ -1,18 +1,19 @@
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, CheckCircle, MapPin, Building2, TrendingUp, Zap, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, MapPin, Building2, TrendingUp, Zap, Target, Globe, BarChart, Sun } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services Phoenix | AI Search Optimization Arizona | Web Vello',
-  description: 'Get your Phoenix business found in ChatGPT, Perplexity, and Google SGE. Local GEO services for Phoenix metro including Scottsdale, Mesa, Tempe, and Chandler.',
+  title: 'GEO Services in Phoenix, Arizona | AI Search Optimization',
+  description: 'Get your Phoenix business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Valley of the Sun.',
   keywords: ['geo phoenix', 'generative engine optimization phoenix', 'ai seo phoenix', 'chatgpt optimization arizona', 'perplexity optimization phoenix'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-phoenix',
   },
   openGraph: {
-    title: 'GEO Services Phoenix | AI Search Optimization | Web Vello',
-    description: 'Get found in AI search results in Phoenix. We optimize for ChatGPT, Perplexity, and Google SGE.',
+    title: 'GEO Services in Phoenix, Arizona | AI Search Optimization',
+    description: 'Get your Phoenix business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Valley of the Sun.',
     url: 'https://www.webvello.com/services/geo-phoenix',
     type: 'website',
   }
@@ -36,55 +37,122 @@ const phoenixAreas = [
   "Fountain Hills", "Queen Creek", "Surprise", "Goodyear"
 ]
 
+const processSteps = [
+  {
+    step: "1",
+    title: "Phoenix Market Audit",
+    description: "We analyze how AI systems currently respond to Phoenix and Valley queries in your industry. What's being cited? Who dominates Scottsdale vs. Mesa searches? Where are the opportunities?"
+  },
+  {
+    step: "2",
+    title: "Entity & Schema Setup",
+    description: "We implement structured data that tells AI systems exactly what you do and where you serve in the Valley. This includes LocalBusiness schema, Service schema, and area-specific markup."
+  },
+  {
+    step: "3",
+    title: "Content Optimization",
+    description: "We optimize your existing content and create new Phoenix-specific pages that answer the questions Valley residents ask AI engines about your services."
+  },
+  {
+    step: "4",
+    title: "Authority Building",
+    description: "We build topical authority through strategic content clusters, establishing your business as the definitive Phoenix source in your industry across all Valley cities."
+  },
+  {
+    step: "5",
+    title: "Monitor & Iterate",
+    description: "We track AI citations, measure visibility improvements across ChatGPT, Perplexity, and Google SGE, and continuously refine strategy based on Phoenix market data."
+  }
+]
+
 const faqs = [
   {
     question: "How does GEO help my Phoenix business?",
-    answer: "When someone asks ChatGPT 'best pool service in Scottsdale' or asks Perplexity 'find an HVAC company in Phoenix,' your business should be mentioned. GEO optimizes your online presence so AI systems recognize and recommend you for queries in the Phoenix metro."
+    answer: "When someone asks ChatGPT 'best pool service in Scottsdale' or asks Perplexity 'find an HVAC company in Phoenix,' your business should be mentioned. GEO optimizes your online presence so AI systems recognize and recommend you for queries in the Phoenix metro. As AI search grows, visibility there is critical for Valley businesses."
+  },
+  {
+    question: "How does Webvello deliver GEO services remotely to Phoenix businesses?",
+    answer: "All our GEO work is done digitally—no local office needed. We optimize your website, implement schema markup, create AI-friendly content for Phoenix areas, and monitor your visibility across AI platforms. You'll receive monthly reports showing exactly when and how AI systems cite your business. We've successfully served Phoenix businesses from HVAC companies to real estate agencies entirely remotely."
   },
   {
     question: "Do you serve the entire Phoenix metro area?",
-    answer: "Yes. We serve businesses throughout the Valley—Phoenix, Scottsdale, Mesa, Tempe, Chandler, Gilbert, Glendale, and all East and West Valley cities. We create location-specific strategies for your service areas."
+    answer: "Yes. We serve businesses throughout the Valley—Phoenix, Scottsdale, Mesa, Tempe, Chandler, Gilbert, Glendale, and all East and West Valley cities. We create location-specific strategies for your service areas, whether you serve one city or the entire metro."
   },
   {
     question: "What makes Phoenix different for GEO?",
-    answer: "Phoenix is the fifth-largest city in the US and one of the fastest-growing metros. The influx of California transplants and tech companies means a tech-savvy population increasingly using AI for local search. The seasonal tourism industry also creates unique GEO opportunities."
+    answer: "Phoenix is the fifth-largest city in the US and one of the fastest-growing metros. The influx of California transplants and tech companies means a tech-savvy population increasingly using AI for local search. The seasonal tourism industry and home services demand create unique GEO opportunities."
   },
   {
-    question: "How long until I see AI visibility improvements?",
-    answer: "For niche queries and specific Valley cities, we typically see improvements in 4-8 weeks. Broader competitive terms take 3-6 months. We prioritize quick wins in your specific area while building toward larger visibility goals."
+    question: "Do you work with Phoenix home services and contractors?",
+    answer: "Absolutely. Phoenix's climate drives huge demand for HVAC, pool service, landscaping, and construction. When homeowners ask AI for service recommendations, we ensure you're cited. We understand the seasonal patterns and competitive landscape of Valley home services."
+  },
+  {
+    question: "What industries benefit most from Phoenix GEO?",
+    answer: "Home services (HVAC, pool, landscaping), real estate, healthcare, hospitality, construction, and tech companies see the biggest impact. Phoenix's growth economy means high competition and high rewards for AI visibility."
+  },
+  {
+    question: "How long until I see AI visibility improvements in Phoenix?",
+    answer: "For niche queries and specific cities like Scottsdale or Chandler, we typically see improvements in 4-8 weeks. Broader competitive terms take 3-6 months. We prioritize quick wins in your specific service area while building toward larger Valley-wide visibility."
+  },
+  {
+    question: "How do you measure GEO success in Phoenix?",
+    answer: "We track when AI systems mention your business, monitor specific Phoenix-related queries in your industry, measure citation frequency across ChatGPT, Perplexity, and Google SGE, and analyze the context of mentions. You'll see concrete data showing your growing AI visibility month over month."
   }
 ]
 
 export default function GEOPhoenixPage() {
+  
+  const pageSchema = generatePageSchema({
+    pageType: 'geo',
+    url: 'https://www.webvello.com/services/geo-phoenix',
+    title: 'GEO Services in Phoenix, Arizona | AI Search Optimization',
+    description: 'Get your Phoenix business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Valley of the Sun.',
+    geo: {
+      city: 'Phoenix',
+      cityState: 'Phoenix, AZ'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'GEO Phoenix', url: 'https://www.webvello.com/services/geo-phoenix' }
+    ]
+  })
+  
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      
       <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[150px]"></div>
+          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[150px]"></div>
         </div>
         
         <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-2 mb-8">
-              <MapPin className="w-4 h-4 text-rose-400" />
-              <span className="text-white/80 text-sm">Serving Phoenix Metro & The Valley</span>
+              <MapPin className="w-4 h-4 text-amber-400" />
+              <span className="text-white/80 text-sm">GEO Services in Phoenix, Arizona</span>
             </div>
             
             <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
-              GEO Services{' '}
-              <span className="bg-gradient-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
-                Phoenix
+              Generative Engine Optimization in{' '}
+              <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+                Phoenix, Arizona
               </span>
             </h1>
             
-            <p className="text-xl text-white/70 mb-8 leading-relaxed">
-              Get your Valley business mentioned when customers ask AI for recommendations. 
-              From Phoenix to Scottsdale, Mesa to Chandler, we help Arizona businesses dominate AI search.
-            </p>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
+              <p className="text-lg text-white/90 leading-relaxed">
+                Webvello provides remote GEO services to Phoenix businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. We help HVAC companies, real estate agents, healthcare practices, and tech firms dominate AI search without requiring a local office visit.
+              </p>
+            </div>
             
             <Button
-              className="h-14 px-8 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold rounded-xl"
+              className="h-14 px-8 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold rounded-xl"
               asChild
             >
               <Link href="/contact">
@@ -96,63 +164,111 @@ export default function GEOPhoenixPage() {
         </div>
       </section>
 
-      {/* Why Phoenix Needs GEO */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white border-b border-slate-200">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
-                Why Phoenix Businesses Need GEO
+                Why GEO Matters in Phoenix
               </h2>
-              <p className="text-lg text-slate-600 mb-6">
-                Phoenix is the fifth-largest city in the US with 1.6 million residents and a 
-                metro area of nearly 5 million. It's one of the fastest-growing metros, attracting 
-                tech-savvy transplants who use AI tools for everyday search.
+              <p className="text-lg text-slate-600 mb-4">
+                Phoenix is the fifth-largest city in the US with 1.7 million residents and a metro area of 5 million. As one of America's fastest-growing cities, Phoenix attracts tech-savvy transplants who rely heavily on AI search for local recommendations.
               </p>
-              <p className="text-lg text-slate-600 mb-8">
-                When someone asks AI "who's the best HVAC company in Phoenix" or "find me a 
-                good real estate agent in Scottsdale," the businesses that appear are winning. 
-                Traditional SEO alone isn't enough in Phoenix's competitive market.
+              <p className="text-lg text-slate-600 mb-4">
+                When someone asks AI "best HVAC company in Scottsdale" or "find a pool service near me in Chandler," the businesses that appear in AI answers win the customers. Traditional SEO puts you in lists—GEO gets you into the AI answer itself.
               </p>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-slate-50 rounded-xl">
-                  <p className="text-3xl font-bold text-rose-500 mb-1">4.9M</p>
-                  <p className="text-sm text-slate-600">Metro population</p>
-                </div>
-                <div className="text-center p-6 bg-slate-50 rounded-xl">
-                  <p className="text-3xl font-bold text-rose-500 mb-1">#5</p>
-                  <p className="text-sm text-slate-600">US city by population</p>
-                </div>
-                <div className="text-center p-6 bg-slate-50 rounded-xl">
-                  <p className="text-3xl font-bold text-rose-500 mb-1">$269B</p>
-                  <p className="text-sm text-slate-600">Metro GDP</p>
-                </div>
-                <div className="text-center p-6 bg-slate-50 rounded-xl">
-                  <p className="text-3xl font-bold text-rose-500 mb-1">#1</p>
-                  <p className="text-sm text-slate-600">Population growth</p>
-                </div>
+              <p className="text-lg text-slate-600">
+                Voice search, ChatGPT, Perplexity, and Google's AI Overviews are now how Phoenix residents find services. With the Valley's explosive growth, early GEO adoption gives you a massive competitive advantage.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <p className="text-3xl font-bold text-amber-500 mb-1">1.7M</p>
+                <p className="text-sm text-slate-600">Phoenix residents</p>
+              </div>
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <p className="text-3xl font-bold text-amber-500 mb-1">5M+</p>
+                <p className="text-sm text-slate-600">Metro population</p>
+              </div>
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <p className="text-3xl font-bold text-amber-500 mb-1">#5</p>
+                <p className="text-sm text-slate-600">US city by population</p>
+              </div>
+              <div className="text-center p-6 bg-slate-50 rounded-xl">
+                <p className="text-3xl font-bold text-amber-500 mb-1">1st</p>
+                <p className="text-sm text-slate-600">Fastest growing major city</p>
               </div>
             </div>
-            
-            <div className="bg-slate-50 rounded-3xl p-10">
-              <h3 className="text-xl font-bold text-slate-900 mb-6">Valley Areas We Serve</h3>
-              <div className="flex flex-wrap gap-2">
-                {phoenixAreas.map((area) => (
-                  <span key={area} className="px-4 py-2 bg-white rounded-full text-sm text-slate-700 border border-slate-200">
-                    {area}
-                  </span>
-                ))}
-              </div>
-              <p className="mt-6 text-slate-600 text-sm">
-                Plus all of Maricopa County and beyond.
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+              How Webvello Delivers GEO Services Remotely
+            </h2>
+            <p className="text-xl text-slate-600">
+              All our GEO work is 100% digital. We optimize your website, implement structured data, create AI-friendly content, and monitor results—all without needing a local Phoenix office.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 border border-slate-200">
+              <Globe className="w-10 h-10 text-amber-500 mb-4" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Fully Remote Service</h3>
+              <p className="text-slate-600">
+                Everything happens online. We access your website, implement changes, and track results through digital tools. Meetings via Zoom, updates via email, results via dashboard.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 border border-slate-200">
+              <Target className="w-10 h-10 text-amber-500 mb-4" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Phoenix Market Expertise</h3>
+              <p className="text-slate-600">
+                We research Phoenix-specific queries, understand Scottsdale vs. Mesa vs. Chandler markets, and optimize for how Valley residents search. No local office needed.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 border border-slate-200">
+              <BarChart className="w-10 h-10 text-amber-500 mb-4" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Transparent Reporting</h3>
+              <p className="text-slate-600">
+                Monthly reports show exactly when AI systems cite your business for Phoenix queries. See your progress with real data and screenshots.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industries */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-2xl mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Our Phoenix GEO Process
+            </h2>
+            <p className="text-xl text-slate-600">
+              A systematic approach to dominating AI search in the Valley.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {processSteps.map((step) => (
+              <div key={step.step} className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                  {step.step}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-slate-50">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-2xl mb-16">
@@ -164,7 +280,7 @@ export default function GEOPhoenixPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {phoenixIndustries.map((industry) => (
               <div key={industry.name} className="bg-white rounded-xl p-6 border border-slate-200">
-                <Building2 className="w-8 h-8 text-rose-500 mb-4" />
+                <Building2 className="w-8 h-8 text-amber-500 mb-4" />
                 <h3 className="font-bold text-slate-900 mb-2">{industry.name}</h3>
                 <p className="text-sm text-slate-600">{industry.description}</p>
               </div>
@@ -173,88 +289,30 @@ export default function GEOPhoenixPage() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-2xl mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Our Phoenix GEO Services
+              Phoenix Areas We Serve
             </h2>
+            <p className="text-xl text-slate-600">
+              From Downtown Phoenix to Scottsdale, we optimize for all Valley cities.
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl border border-slate-200">
-              <Zap className="w-10 h-10 text-rose-500 mb-4" />
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Valley Entity Optimization</h3>
-              <p className="text-slate-600 mb-6">
-                We establish your business as a recognized entity in Phoenix. AI systems need to understand 
-                who you are and which Valley cities you serve.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Phoenix-specific schema markup
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Multi-city targeting
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Local authority building
-                </li>
-              </ul>
-            </div>
-            
-            <div className="p-8 rounded-2xl border border-slate-200">
-              <Target className="w-10 h-10 text-rose-500 mb-4" />
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Phoenix Content Strategy</h3>
-              <p className="text-slate-600 mb-6">
-                Content that positions you as the local Valley expert with pages for each city 
-                you serve.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  City landing pages
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Local topic clusters
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Phoenix-focused FAQ content
-                </li>
-              </ul>
-            </div>
-            
-            <div className="p-8 rounded-2xl border border-slate-200">
-              <TrendingUp className="w-10 h-10 text-rose-500 mb-4" />
-              <h3 className="text-xl font-bold text-slate-900 mb-3">AI Visibility Tracking</h3>
-              <p className="text-slate-600 mb-6">
-                Monitor when and how AI systems mention your Phoenix business and track progress.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Phoenix query monitoring
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Competitor analysis
-                </li>
-                <li className="flex items-center text-sm text-slate-700">
-                  <CheckCircle className="w-4 h-4 text-rose-500 mr-2" />
-                  Monthly reports
-                </li>
-              </ul>
-            </div>
+          <div className="flex flex-wrap gap-3">
+            {phoenixAreas.map((area) => (
+              <span
+                key={area}
+                className="bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium"
+              >
+                {area}
+              </span>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FAQs */}
       <section className="py-24 bg-slate-50">
         <div className="mx-auto max-w-4xl px-6">
           <div className="text-center mb-16">
@@ -265,7 +323,7 @@ export default function GEOPhoenixPage() {
           
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-slate-200">
+              <div key={index} className="bg-white rounded-xl p-8 border border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-3">{faq.question}</h3>
                 <p className="text-slate-600">{faq.answer}</p>
               </div>
@@ -274,28 +332,56 @@ export default function GEOPhoenixPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to dominate AI search in Phoenix?
+            Ready to Get Cited by AI in Phoenix?
           </h2>
           <p className="text-xl text-white/70 mb-10">
-            Get a free GEO audit for your Valley business. See exactly how visible you are 
-            in AI search and what opportunities exist.
+            No pressure. Just a free audit showing exactly how visible your Phoenix business is when people ask AI for recommendations. See where you stand and what's possible.
           </p>
-          <Button
-            className="h-14 px-10 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl"
-            asChild
-          >
-            <Link href="/contact">
-              Get Your Free Phoenix GEO Audit
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              className="h-14 px-10 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl"
+              asChild
+            >
+              <Link href="/contact">
+                Get Your Free Phoenix GEO Audit
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+            <Button
+              className="h-14 px-10 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-lg rounded-xl"
+              asChild
+            >
+              <Link href="/services/geo-services">
+                Learn More About GEO
+              </Link>
+            </Button>
+          </div>
+          
+          <div className="mt-16 pt-16 border-t border-white/10">
+            <p className="text-white/60 text-sm mb-4">Related Services:</p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link href="/services/geo-services" className="text-white/80 hover:text-white text-sm underline">
+                GEO Services Overview
+              </Link>
+              <span className="text-white/40">•</span>
+              <Link href="/services/ai-seo" className="text-white/80 hover:text-white text-sm underline">
+                AI-Powered SEO
+              </Link>
+              <span className="text-white/40">•</span>
+              <Link href="/services/local-seo" className="text-white/80 hover:text-white text-sm underline">
+                Local SEO Services
+              </Link>
+              <span className="text-white/40">•</span>
+              <Link href="/" className="text-white/80 hover:text-white text-sm underline">
+                Home
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   )
 }
-
