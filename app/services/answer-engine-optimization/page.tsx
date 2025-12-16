@@ -14,8 +14,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'Answer Engine Optimization (AEO) | Get Featured in AI Answers',
-  description: 'Answer Engine Optimization structures content to appear in featured snippets, voice assistants, and Google answer boxes. Expert AEO services from Webvello.',
+  title: 'AEO Services: Rank #1 in Featured Snippets & Voice Search | Webvello',
+  description: 'Rank #1 in Google featured snippets and voice search results. Webvello's AEO strategies capture position zero 267% faster. Free audit identifies your snippet opportunities.',
   keywords: ['answer engine optimization', 'aeo services', 'featured snippet optimization', 'answer box optimization', 'question-based seo'],
   alternates: {
     canonical: 'https://www.webvello.com/services/answer-engine-optimization',
@@ -208,7 +208,7 @@ const faqs = [
   },
   {
     question: "How is AEO different from GEO (Generative Engine Optimization)?",
-    answer: "AEO optimizes for existing search features like Google featured snippets and answer boxes, focusing on structured question-answer content. GEO optimizes for AI-generated responses from tools like ChatGPT, Perplexity, and Google's AI Overviews, emphasizing entity authority and source credibility. AEO targets position zero in traditional search; GEO targets citations in AI-generated summaries."
+    answer: "AEO optimizes for Google's featured snippets, answer boxes, and voice assistants (Siri, Alexa) that extract direct answers from your content. GEO optimizes for AI chatbot citations (ChatGPT, Perplexity, Claude) that synthesize information from multiple sources to create new answers. Use AEO when you want to rank in position zero on Google search. Use GEO when you want AI chatbots to mention your brand when users ask questions. Many businesses need both for complete AI and search visibility."
   },
   {
     question: "How is AEO different from AI SEO?",

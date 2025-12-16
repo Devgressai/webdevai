@@ -4,7 +4,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Traditional SEO Services | Technical & On-Page Experts',
+  title: 'Traditional SEO: Technical, On-Page & Link Building Experts | Webvello',
   description: 'Traditional SEO builds search visibility through technical optimization, on-page strategy, and authority building. Expert SEO services from Webvello.',
   keywords: ['traditional seo services', 'technical seo', 'on-page seo', 'seo optimization', 'seo foundation'],
   alternates: {

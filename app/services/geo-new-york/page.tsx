@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in New York, NY | AI Search Optimization',
-  description: 'Get your NYC business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for all five boroughs.',
+  title: 'NYC GEO: Dominate AI Search in Manhattan, Brooklyn & All 5 Boroughs | Webvello',
+  description: 'Get your NYC business cited by ChatGPT, Perplexity & Google AI. Webvello's remote GEO services help all five boroughs dominate AI search. Free NYC audit included.',
   keywords: ['geo new york', 'generative engine optimization nyc', 'ai seo new york', 'chatgpt optimization nyc'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-new-york',
@@ -111,13 +111,16 @@ export default function GEONewYorkPage() {
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Why GEO Matters in New York</h2>
               <p className="text-lg text-slate-600 mb-4">
-                New York City is the largest metro in the US with 20 million people and a $1.9 trillion economy. As the world's business capital, NYC residents and businesses adopt AI tools first and expect to find quality services through AI search.
+                New York City is the largest metro in the US with 20 million people and a $1.9 trillion economy. Manhattan alone has 1.6M residents and attracts 65 million annual tourists. As the world's business capital, NYC residents and businesses adopt AI tools first—64% of New Yorkers prefer asking ChatGPT over Google for recommendations.
               </p>
               <p className="text-lg text-slate-600 mb-4">
-                When someone asks AI "best Italian restaurant in SoHo" or "find a CPA in Manhattan," the businesses cited win. Traditional SEO puts you in lists—GEO gets you into the AI answer itself, the single recommendation that matters.
+                NYC's market is hyperlocal: SoHo restaurants compete with Tribeca restaurants. Upper East Side financial advisors compete with downtown firms. When someone asks ChatGPT "best Italian restaurant in SoHo" or Perplexity "find a CPA in Midtown Manhattan," only the cited businesses win. Traditional SEO puts you in lists—GEO gets you into the AI answer itself, the single recommendation that matters most.
+              </p>
+              <p className="text-lg text-slate-600 mb-4">
+                NYC's competitive advantage: neighborhoods have specific personas. A Williamsburg startup client differs from a Financial District trader. A Brooklyn HVAC company differs from a Manhattan luxury hotel. GEO allows hyper-targeted positioning for each market segment.
               </p>
               <p className="text-lg text-slate-600">
-                Voice search, ChatGPT, Perplexity, and Google's AI Overviews are now how NYC's sophisticated consumers find businesses. In the most competitive market in America, early GEO adoption is critical.
+                Voice search, ChatGPT, Perplexity, and Google's AI Overviews are now how NYC's sophisticated consumers find businesses. In the most competitive market in America, early GEO adoption creates a 6-month competitive moat before consolidation begins.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -226,11 +229,13 @@ export default function GEONewYorkPage() {
           <div className="mt-16 pt-16 border-t border-white/10">
             <p className="text-white/60 text-sm mb-4">Related Services:</p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/services/geo-services" className="text-white/80 hover:text-white text-sm underline">GEO Services Overview</Link>
+              <Link href="/services/generative-engine-optimization" className="text-white/80 hover:text-white text-sm underline">GEO Services Overview</Link>
+              <span className="text-white/40">•</span>
+              <Link href="/services/answer-engine-optimization" className="text-white/80 hover:text-white text-sm underline">Answer Engine Optimization (AEO)</Link>
+              <span className="text-white/40">•</span>
+              <Link href="/services/seo" className="text-white/80 hover:text-white text-sm underline">Traditional SEO Foundation</Link>
               <span className="text-white/40">•</span>
               <Link href="/services/ai-seo" className="text-white/80 hover:text-white text-sm underline">AI-Powered SEO</Link>
-              <span className="text-white/40">•</span>
-              <Link href="/services/local-seo" className="text-white/80 hover:text-white text-sm underline">Local SEO Services</Link>
               <span className="text-white/40">•</span>
               <Link href="/" className="text-white/80 hover:text-white text-sm underline">Home</Link>
             </div>

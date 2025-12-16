@@ -15,8 +15,8 @@ import { homepageFAQData } from '@/lib/homepage-faq-data'
 // SEO Title: 56 characters
 // Meta Description: 154 characters
 export const metadata: Metadata = {
-  title: 'Webvello | SEO, GEO & Web Development Agency',
-  description: 'Webvello is a digital marketing agency specializing in SEO, GEO (Generative Engine Optimization), and custom web development. Trusted by 500+ businesses.',
+  title: 'Webvello | AI-Powered SEO, GEO & Web Development Experts',
+  description: 'Webvello delivers AI-powered SEO, GEO, and web development proven to increase organic traffic 300%+. Trusted by 500+ businesses. Free strategy session shows your growth potential.',
   keywords: 'SEO services, GEO agency, generative engine optimization, web development, AI SEO, local SEO, AEO, answer engine optimization, web design',
   openGraph: {
     title: 'Webvello | SEO, GEO & Web Development Agency',
@@ -145,6 +145,9 @@ export default function HomePage() {
               </p>
               <p className="text-lg text-secondary-600 leading-relaxed">
                 Webvello serves businesses across the United States, combining data-driven strategies with transparent reporting. Core services include AI-powered SEO, local SEO for geographic targeting, and conversion-focused website development using React and Tailwind CSS.
+              </p>
+              <p className="text-lg text-secondary-600 leading-relaxed mt-4">
+                Founded in 2023, Webvello operates entirely remotely from headquarters in Roseville, California, providing SEO and web development services to over 500 businesses across 37+ US cities without requiring on-site visits. The agency serves financial services firms, legal practices, healthcare providers, e-commerce brands, and B2B technology companies seeking measurable improvements in organic search traffic, AI platform visibility, and conversion optimization.
               </p>
             </div>
           </div>

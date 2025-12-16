@@ -7,7 +7,7 @@ import { SchemaMarkup } from '../../../components/seo/schema-markup'
 import { generateServicePageSchema } from '../../../lib/advanced-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'AI SEO Services | Webvello',
+  title: 'AI SEO: Machine Learning-Powered Search Optimization | Webvello',
   description: 'AI SEO uses machine learning to automate keyword research, content optimization, and performance tracking within traditional SEO workflows. Webvello combines AI tools with expert strategy for faster, data-driven SEO results.',
   keywords: ['ai seo services', 'ai-powered seo', 'ai seo agency', 'what is ai seo', 'ai keyword research', 'ai content optimization', 'ai seo vs traditional seo', 'ai seo vs aeo'],
   alternates: {

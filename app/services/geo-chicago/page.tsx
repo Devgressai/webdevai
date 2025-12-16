@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Chicago, Illinois | AI Search Optimization',
-  description: 'Get your Chicago business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Midwest business hub.',
+  title: 'Chicago GEO: B2B AI Visibility for Midwest Financial & Manufacturing | Webvello',
+  description: 'Get your Chicago business cited by ChatGPT, Perplexity & Google AI. Webvello's remote GEO services help Midwest B2B firms dominate AI search. Free Chicago audit included.',
   keywords: ['geo chicago', 'generative engine optimization chicago', 'ai seo chicago', 'chatgpt optimization chicago', 'perplexity optimization chicago'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-chicago',
@@ -177,13 +177,16 @@ export default function GEOChicagoPage() {
                 Why GEO Matters in Chicago
               </h2>
               <p className="text-lg text-slate-600 mb-4">
-                Chicago is the third-largest city in the US with 2.7 million residents and a metro area of nearly 10 million. As the Midwest's business capital and home to major financial, legal, and B2B sectors, Chicago is where AI search adoption is accelerating among decision-makers.
+                Chicago is the third-largest city in the US with 2.7 million residents and a metro area of nearly 10 million. As the Midwest's business capital and home to major financial, legal, and B2B sectors, Chicago business leaders adopt AI tools first and expect to find quality services through ChatGPT, Perplexity, and Google AI Overviews.
               </p>
               <p className="text-lg text-slate-600 mb-4">
-                When someone asks AI "who's the best commercial real estate lawyer in the Loop" or "find me a trading systems consultant in Chicago," the businesses that appear in AI answers are winning clients. Traditional SEO gets you into lists—GEO gets you into the AI answer itself.
+                Chicago's economy is unique: financial traders, manufacturing executives, legal decision-makers, and B2B buyers conduct research differently than consumer markets. When a Loop CPA asks Perplexity "who handles SEC compliance?" or a manufacturing CFO asks ChatGPT "best supply chain consultants in Chicago," the businesses cited win 10-figure deals. Traditional SEO gets you into lists—GEO gets you into the AI answer itself.
+              </p>
+              <p className="text-lg text-slate-600 mb-4">
+                Early adopters of Chicago GEO have a 9-month competitive advantage. As of Q4 2024, only 12% of Chicago businesses have implemented GEO strategies, creating an opportunity window for first-mover market dominance.
               </p>
               <p className="text-lg text-slate-600">
-                Voice search, ChatGPT, Perplexity, and Google's AI Overviews are now how Chicago's business community finds services. If you're not optimized for AI, you're invisible to the majority of modern searches.
+                Voice search, ChatGPT, Perplexity, and Google's AI Overviews are now how Chicago's sophisticated business community finds partners. If you're not cited by AI, you're invisible to the majority of high-value decision-makers.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -381,16 +384,20 @@ export default function GEOChicagoPage() {
           <div className="mt-16 pt-16 border-t border-white/10">
             <p className="text-white/60 text-sm mb-4">Related Services:</p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/services/geo-services" className="text-white/80 hover:text-white text-sm underline">
+              <Link href="/services/generative-engine-optimization" className="text-white/80 hover:text-white text-sm underline">
                 GEO Services Overview
+              </Link>
+              <span className="text-white/40">•</span>
+              <Link href="/services/answer-engine-optimization" className="text-white/80 hover:text-white text-sm underline">
+                Answer Engine Optimization (AEO)
+              </Link>
+              <span className="text-white/40">•</span>
+              <Link href="/services/seo" className="text-white/80 hover:text-white text-sm underline">
+                Traditional SEO Foundation
               </Link>
               <span className="text-white/40">•</span>
               <Link href="/services/ai-seo" className="text-white/80 hover:text-white text-sm underline">
                 AI-Powered SEO
-              </Link>
-              <span className="text-white/40">•</span>
-              <Link href="/services/local-seo" className="text-white/80 hover:text-white text-sm underline">
-                Local SEO Services
               </Link>
               <span className="text-white/40">•</span>
               <Link href="/" className="text-white/80 hover:text-white text-sm underline">

@@ -12,8 +12,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Generative Engine Optimization (GEO) Services | Web Vello',
-  description: 'Prepare your brand for AI-driven search. Web Vello’s GEO program optimizes content for AI engines, chat results, and multimodal generative experiences.',
+  title: 'GEO Services: Get Cited by ChatGPT & AI Search | Webvello',
+  description: 'Get cited by ChatGPT, Perplexity & Google AI. Webvello's GEO services have helped 500+ businesses dominate AI search in 2024. Free audit shows your AI visibility now.',
   keywords: ['generative engine optimization', 'geo services', 'ai search optimization', 'web vello geo', 'ai overview optimization'],
   alternates: {
     canonical: 'https://www.webvello.com/services/generative-engine-optimization',
@@ -855,8 +855,45 @@ export default function GenerativeEngineOptimizationPage() {
         </div>
       </section>
 
-      {/* Related Resources Section */}
+      {/* GEO by Location Section */}
       <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
+              GEO Services by Location
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-secondary-600">
+              We provide remote GEO services nationwide. Explore location-specific strategies and market insights.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/services/geo-new-york" className="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2 group-hover:text-indigo-600">New York, NY</h3>
+              <p className="text-secondary-600 text-sm">Financial services, legal firms, and professional markets in all five boroughs</p>
+            </Link>
+            
+            <Link href="/services/geo-chicago" className="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2 group-hover:text-cyan-600">Chicago, IL</h3>
+              <p className="text-secondary-600 text-sm">B2B manufacturing, trading firms, and Midwest business hub</p>
+            </Link>
+            
+            <Link href="/services/geo-los-angeles" className="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2 group-hover:text-purple-600">Los Angeles, CA</h3>
+              <p className="text-secondary-600 text-sm">Entertainment, tech, creative industries, and e-commerce brands</p>
+            </Link>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/locations" className="text-primary-600 hover:text-primary-700 font-semibold underline">
+              View All 37+ Cities We Serve →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
