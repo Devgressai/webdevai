@@ -11,6 +11,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
   title: 'Answer Engine Optimization (AEO) | Get Featured in AI Answers',
@@ -232,8 +233,33 @@ const faqs = [
 ]
 
 export default function AnswerEngineOptimizationPage() {
+  // Generate clean schema (NO fake ratings/reviews)
+  const pageSchema = generatePageSchema({
+    pageType: 'service',
+    url: 'https://www.webvello.com/services/answer-engine-optimization',
+    title: 'Answer Engine Optimization (AEO) | Get Featured in AI Answers',
+    description: 'Answer Engine Optimization structures content to appear in featured snippets, voice assistants, and Google answer boxes. Expert AEO services from Webvello.',
+    service: {
+      name: 'Answer Engine Optimization (AEO)',
+      description: 'Answer Engine Optimization (AEO) is the practice of structuring website content to appear in featured snippets, Google answer boxes, and voice assistant responses. AEO formats content to directly answer specific user questions, increasing visibility in position zero search results.',
+      type: 'Answer Engine Optimization'
+    },
+    faqs: faqs,
+    breadcrumbs: [
+      { name: 'Home', url: 'https://www.webvello.com' },
+      { name: 'Services', url: 'https://www.webvello.com/services' },
+      { name: 'Answer Engine Optimization', url: 'https://www.webvello.com/services/answer-engine-optimization' }
+    ]
+  })
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchema)
+        }}
+      />
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -805,132 +831,6 @@ export default function AnswerEngineOptimizationPage() {
           </div>
         </div>
       </section>
-      
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Service",
-                "@id": "https://www.webvello.com/services/answer-engine-optimization#service",
-                "name": "Answer Engine Optimization (AEO)",
-                "description": "Answer Engine Optimization (AEO) is the practice of structuring website content to appear in featured snippets, Google answer boxes, and voice assistant responses. AEO formats content to directly answer specific user questions, increasing visibility in position zero search results.",
-                "provider": {
-                  "@type": "Organization",
-                  "@id": "https://www.webvello.com/#organization",
-                  "name": "Webvello",
-                  "url": "https://www.webvello.com"
-                },
-                "areaServed": "US",
-                "serviceType": "Answer Engine Optimization",
-                "category": "SEO Services",
-                "offers": {
-                  "@type": "Offer",
-                  "availability": "https://schema.org/InStock",
-                  "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "priceCurrency": "USD"
-                  }
-                },
-                "hasOfferCatalog": {
-                  "@type": "OfferCatalog",
-                  "name": "AEO Services",
-                  "itemListElement": [
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Question Research & Analysis",
-                        "description": "Identify specific questions target audiences ask by analyzing search query data, voice search patterns, and featured snippet opportunities."
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Content Structuring & Formatting",
-                        "description": "Structure content with question-based H2 headings and 40-60 word concise answers optimized for featured snippet extraction."
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Schema Markup Implementation",
-                        "description": "Implement FAQ schema, HowTo schema, and structured data markup to help search engines identify and extract answers."
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Performance Monitoring & Optimization",
-                        "description": "Track featured snippet wins, answer box appearances, and voice search rankings with monthly reporting and ongoing optimization."
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "@id": "https://www.webvello.com/services/answer-engine-optimization#faq",
-                "mainEntity": faqs.map(faq => ({
-                  "@type": "Question",
-                  "name": faq.question,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer
-                  }
-                }))
-              },
-              {
-                "@type": "WebPage",
-                "@id": "https://www.webvello.com/services/answer-engine-optimization#webpage",
-                "url": "https://www.webvello.com/services/answer-engine-optimization",
-                "name": "Answer Engine Optimization (AEO) | Get Featured in AI Answers",
-                "description": "Answer Engine Optimization structures content to appear in featured snippets, voice assistants, and Google answer boxes. Expert AEO services from Webvello.",
-                "isPartOf": {
-                  "@type": "WebSite",
-                  "@id": "https://www.webvello.com/#website"
-                },
-                "about": {
-                  "@id": "https://www.webvello.com/services/answer-engine-optimization#service"
-                },
-                "mainEntity": {
-                  "@id": "https://www.webvello.com/services/answer-engine-optimization#faq"
-                }
-              },
-              {
-                "@type": "BreadcrumbList",
-                "@id": "https://www.webvello.com/services/answer-engine-optimization#breadcrumb",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://www.webvello.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Services",
-                    "item": "https://www.webvello.com/services"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Answer Engine Optimization",
-                    "item": "https://www.webvello.com/services/answer-engine-optimization"
-                  }
-                ]
-              }
-            ]
-          })
-        }}
-      />
     </div>
   )
 }

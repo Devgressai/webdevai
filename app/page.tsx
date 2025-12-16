@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, Tre
 import Link from 'next/link'
 import Image from 'next/image'
 import { LazySection } from '../components/ui/lazy-section'
-import { SchemaMarkup, FAQSchema } from '../components/seo/schema-markup'
+import { generatePageSchema } from '@/lib/clean-schema-generator'
 import dynamic from 'next/dynamic'
 import { HomepageFAQ } from '../components/sections/homepage-faq'
 import { homepageFAQData } from '@/lib/homepage-faq-data'
@@ -110,103 +110,26 @@ const testimonials = [
 ]
 
 export default function HomePage() {
-  // Enhanced Organization Schema with GEO/AEO signals
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": ["Organization", "ProfessionalService"],
-    "name": "Webvello",
-    "alternateName": "Web Vello",
-    "url": "https://www.webvello.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.webvello.com/logo.png",
-      "width": 2048,
-      "height": 2048
-    },
-    "description": "Webvello is a digital marketing agency specializing in SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and custom web development. The agency helps businesses improve visibility in both traditional search engines and AI-powered search platforms.",
-    "slogan": "Design. Develop. Dominate.",
-    "foundingDate": "2024",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United States"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-737-888-5723",
-      "contactType": "sales",
-      "email": "hello@webvello.com",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/webvello",
-      "https://twitter.com/webvello"
-    ],
-    "knowsAbout": [
-      "Search Engine Optimization",
-      "Generative Engine Optimization",
-      "Answer Engine Optimization",
-      "Local SEO",
-      "Web Development",
-      "React",
-      "Tailwind CSS",
-      "AI Search Optimization",
-      "Digital Marketing"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Digital Marketing Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "SEO Services",
-            "description": "Search engine optimization to improve Google rankings and organic traffic"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "GEO Services",
-            "description": "Generative Engine Optimization to improve visibility in AI search platforms like ChatGPT and Perplexity"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Local SEO",
-            "description": "Geo-targeted local search optimization for businesses serving specific cities and regions"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Web Development",
-            "description": "Custom website development using React and Tailwind CSS"
-          }
-        }
-      ]
-    }
-  };
-
-  // FAQ Schema from component data
-  const faqSchemaData = homepageFAQData.map(faq => ({
-    question: faq.question,
-    answer: faq.answer
-  }))
+  // Generate clean schema using new generator (NO fake ratings/reviews)
+  const pageSchema = generatePageSchema({
+    pageType: 'homepage',
+    url: 'https://www.webvello.com',
+    title: 'Webvello | SEO, GEO & Web Development Agency',
+    description: 'Webvello is a digital marketing agency specializing in SEO, GEO (Generative Engine Optimization), and custom web development. Trusted by 500+ businesses.',
+    faqs: homepageFAQData.map(faq => ({
+      question: faq.question,
+      answer: faq.answer
+    }))
+  })
 
   return (
     <>
-      <SchemaMarkup schema={organizationSchema} />
-      <FAQSchema faqs={faqSchemaData} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchema)
+        }}
+      />
       <div className="min-h-screen">
         <Hero />
         

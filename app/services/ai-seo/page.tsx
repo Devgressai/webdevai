@@ -631,6 +631,73 @@ export default function AISeOPage() {
         </div>
       </section>
 
+      {/* Geographic Reach Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
+              AI SEO Services Across the United States
+            </h2>
+            <p className="text-lg text-secondary-600">
+              Webvello provides AI-powered SEO services to businesses in major technology and business hubs nationwide
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+            <Link href="/new-york-ny/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">New York</div>
+              <div className="text-xs text-secondary-500 mt-1">NY</div>
+            </Link>
+            <Link href="/san-francisco-ca/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">San Francisco</div>
+              <div className="text-xs text-secondary-500 mt-1">CA</div>
+            </Link>
+            <Link href="/seattle-wa/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Seattle</div>
+              <div className="text-xs text-secondary-500 mt-1">WA</div>
+            </Link>
+            <Link href="/austin-tx/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Austin</div>
+              <div className="text-xs text-secondary-500 mt-1">TX</div>
+            </Link>
+            <Link href="/boston-ma/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Boston</div>
+              <div className="text-xs text-secondary-500 mt-1">MA</div>
+            </Link>
+            <Link href="/los-angeles-ca/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Los Angeles</div>
+              <div className="text-xs text-secondary-500 mt-1">CA</div>
+            </Link>
+            <Link href="/chicago-il/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Chicago</div>
+              <div className="text-xs text-secondary-500 mt-1">IL</div>
+            </Link>
+            <Link href="/denver-co/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Denver</div>
+              <div className="text-xs text-secondary-500 mt-1">CO</div>
+            </Link>
+            <Link href="/atlanta-ga/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Atlanta</div>
+              <div className="text-xs text-secondary-500 mt-1">GA</div>
+            </Link>
+            <Link href="/dallas-tx/ai-seo" className="text-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
+              <div className="text-sm font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">Dallas</div>
+              <div className="text-xs text-secondary-500 mt-1">TX</div>
+            </Link>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-secondary-600 mb-4">
+              AI SEO combines machine learning automation with expert strategy to help businesses compete in their local markets. Our team works with companies across all industries to implement AI-powered keyword research, content optimization, and performance forecasting.
+            </p>
+            <Link href="/locations" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
+              View All Service Locations
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Related Services - Internal Linking */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
