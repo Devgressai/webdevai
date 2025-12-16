@@ -87,7 +87,7 @@ export default function GeorgiaServicesPage() {
               Serving Businesses Across Georgia
             </h2>
             <p className="text-lg text-secondary-600 mb-4">
-              Georgia's economy encompasses technology, logistics, film production, healthcare, financial services, and manufacturing. Each sector requires digital marketing that addresses both local market needs and Georgia's position as a Southeast regional hub.
+              Georgia's economy encompasses technology, logistics, film production, healthcare, financial services, and manufacturing. Each sector requires digital marketing that addresses both local market needs and Georgia's position as a Southeast regional hub. <Link href="/services/geo-atlanta" className="text-primary-600 hover:text-primary-700 underline">Businesses in Atlanta</Link> and organizations throughout Georgia benefit from comprehensive digital visibility strategies.
             </p>
             <p className="text-lg text-secondary-600">
               Webvello provides SEO, GEO (Generative Engine Optimization), and web development through remote delivery. Georgia businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers and partners discover solutions.

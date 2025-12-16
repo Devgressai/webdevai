@@ -89,7 +89,7 @@ export default function ColoradoServicesPage() {
               Serving Businesses Across Colorado
             </h2>
             <p className="text-lg text-secondary-600 mb-4">
-              Colorado's economy blends technology, energy, outdoor recreation, healthcare, and tourism. Each sector requires digital marketing that addresses both local market dynamics and the state's role in regional and national commerce.
+              Colorado's economy blends technology, energy, outdoor recreation, healthcare, and tourism. Each sector requires digital marketing that addresses both local market dynamics and the state's role in regional and national commerce. From <Link href="/services/geo-denver" className="text-primary-600 hover:text-primary-700 underline">businesses in Denver</Link> to <Link href="/services/geo-aurora" className="text-primary-600 hover:text-primary-700 underline">companies operating in Aurora</Link>, Colorado organizations benefit from comprehensive digital visibility.
             </p>
             <p className="text-lg text-secondary-600">
               Webvello provides SEO, GEO (Generative Engine Optimization), and web development through remote delivery. Colorado businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers discover and evaluate services.
