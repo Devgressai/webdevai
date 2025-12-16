@@ -336,6 +336,57 @@ Allow: /services/auto-repair-website-design-milwaukee/
 Allow: /services/seo-company-mesa-arizona/
 Allow: /services/dairy-industry-website-design-los-angeles/
 
+# New GEO service pages (December 2025)
+Allow: /services/geo-philadelphia/
+Allow: /services/geo-pittsburgh/
+Allow: /services/geo-nashville/
+Allow: /services/geo-charlotte/
+Allow: /services/geo-memphis/
+Allow: /services/geo-louisville/
+Allow: /services/geo-milwaukee/
+Allow: /services/geo-jacksonville/
+Allow: /services/geo-tampa/
+Allow: /services/geo-orlando/
+Allow: /services/geo-san-antonio/
+Allow: /services/geo-fort-worth/
+Allow: /services/geo-arlington/
+Allow: /services/geo-el-paso/
+Allow: /services/geo-corpus-christi/
+Allow: /services/geo-las-vegas/
+Allow: /services/geo-reno/
+Allow: /services/geo-kansas-city/
+Allow: /services/geo-st-louis/
+Allow: /services/geo-oklahoma-city/
+Allow: /services/geo-tulsa/
+Allow: /services/geo-detroit/
+Allow: /services/geo-cleveland/
+Allow: /services/geo-cincinnati/
+Allow: /services/geo-columbus/
+Allow: /services/geo-indianapolis/
+Allow: /services/geo-minneapolis/
+Allow: /services/geo-salt-lake-city/
+Allow: /services/geo-aurora/
+Allow: /services/geo-sacramento/
+Allow: /services/geo-fresno/
+Allow: /services/geo-bakersfield/
+Allow: /services/geo-baltimore/
+Allow: /services/geo-richmond/
+Allow: /services/geo-virginia-beach/
+Allow: /services/geo-buffalo/
+Allow: /services/geo-rochester/
+Allow: /services/geo-albuquerque/
+Allow: /services/geo-tucson/
+Allow: /services/geo-mesa/
+Allow: /services/geo-spokane/
+Allow: /services/geo-boise/
+Allow: /services/geo-anchorage/
+Allow: /services/geo-honolulu/
+Allow: /services/geo-madison/
+Allow: /services/geo-wichita/
+Allow: /services/geo-omaha/
+Allow: /services/geo-raleigh/
+Allow: /services/geo-new-orleans/
+
 # Allow all new blog posts
 Allow: /blog/seattle-software-development-guide/
 Allow: /blog/healthcare-web-design-companies-guide/
