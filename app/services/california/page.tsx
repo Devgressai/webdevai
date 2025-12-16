@@ -89,10 +89,10 @@ export default function CaliforniaServicesPage() {
               Serving Businesses Across California
             </h2>
             <p className="text-lg text-secondary-600 mb-4">
-              California's economy—the world's fifth largest—spans technology, entertainment, healthcare, agriculture, manufacturing, and professional services. Each sector requires digital marketing expertise that addresses both local market dynamics and national visibility.
+              California's economy—the world's fifth largest—spans technology, entertainment, healthcare, agriculture, manufacturing, and professional services. Each sector requires digital marketing expertise that addresses both local market dynamics and national visibility. From <Link href="/services/geo-los-angeles" className="text-primary-600 hover:text-primary-700 underline">businesses in Los Angeles</Link> to <Link href="/services/geo-san-francisco" className="text-primary-600 hover:text-primary-700 underline">companies operating in San Francisco</Link>, California organizations benefit from comprehensive digital visibility.
             </p>
             <p className="text-lg text-secondary-600">
-              Webvello delivers comprehensive SEO, GEO (Generative Engine Optimization), and web development services remotely. California businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers and partners discover solutions.
+              Webvello delivers comprehensive SEO, GEO (Generative Engine Optimization), and web development services remotely. Whether you're a <Link href="/services/geo-san-jose" className="text-primary-600 hover:text-primary-700 underline">San Jose-based team</Link> in tech or <Link href="/services/geo-san-diego" className="text-primary-600 hover:text-primary-700 underline">organizations across San Diego</Link> in healthcare, California businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers and partners discover solutions.
             </p>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function CaliforniaServicesPage() {
               California Coverage Areas
             </h2>
             <p className="text-lg text-secondary-600 mb-6">
-              Webvello serves businesses throughout California. Our remote delivery model ensures consistent service quality for organizations in major metros and regional markets.
+              Webvello serves businesses throughout California, including <Link href="/services/geo-sacramento" className="text-primary-600 hover:text-primary-700 underline">Sacramento enterprises</Link>, <Link href="/services/geo-fresno" className="text-primary-600 hover:text-primary-700 underline">Fresno companies</Link>, <Link href="/services/geo-irvine" className="text-primary-600 hover:text-primary-700 underline">Irvine-based organizations</Link>, and <Link href="/services/geo-palo-alto" className="text-primary-600 hover:text-primary-700 underline">teams in Palo Alto</Link>. Our remote delivery model ensures consistent service quality for organizations in major metros and regional markets.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               {['Los Angeles', 'San Francisco', 'San Diego', 'San Jose', 'Fresno', 'Sacramento', 'Long Beach', 'Oakland', 'Bakersfield', 'Anaheim', 'Santa Ana', 'Riverside'].map((city) => (

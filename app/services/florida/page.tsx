@@ -87,10 +87,10 @@ export default function FloridaServicesPage() {
               Serving Businesses Across Florida
             </h2>
             <p className="text-lg text-secondary-600 mb-4">
-              Florida's diverse economy spans tourism, real estate, healthcare, technology, finance, and international trade. Each sector requires digital marketing that addresses both local market dynamics and the state's role in national and international commerce.
+              Florida's diverse economy spans tourism, real estate, healthcare, technology, finance, and international trade. Each sector requires digital marketing that addresses both local market dynamics and the state's role in national and international commerce. From <Link href="/services/geo-miami" className="text-primary-600 hover:text-primary-700 underline">businesses in Miami</Link> to <Link href="/services/geo-jacksonville" className="text-primary-600 hover:text-primary-700 underline">companies operating in Jacksonville</Link>, Florida organizations benefit from comprehensive digital visibility.
             </p>
             <p className="text-lg text-secondary-600">
-              Webvello delivers comprehensive SEO, GEO (Generative Engine Optimization), and web development services remotely. Florida businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers discover and evaluate services.
+              Webvello delivers comprehensive SEO, GEO (Generative Engine Optimization), and web development services remotely. Whether you're a <Link href="/services/geo-tampa" className="text-primary-600 hover:text-primary-700 underline">Tampa-based team</Link> or <Link href="/services/geo-orlando" className="text-primary-600 hover:text-primary-700 underline">organizations across Orlando</Link>, Florida businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers discover and evaluate services.
             </p>
           </div>
         </div>
