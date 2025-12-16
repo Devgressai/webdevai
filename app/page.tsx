@@ -3,31 +3,33 @@ import { Metadata } from 'next'
 import { Hero } from '../components/sections/hero'
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
-import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, TrendingUp, Star } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Globe, Code, BarChart3, Users, Award, TrendingUp, Star, HelpCircle } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-// import { OptimizedImageComponent as HeroImage } from '../components/ui/optimized-image' // Not needed for external Unsplash URLs
 import { LazySection } from '../components/ui/lazy-section'
-import { SchemaMarkup } from '../components/seo/schema-markup'
+import { SchemaMarkup, FAQSchema } from '../components/seo/schema-markup'
 import dynamic from 'next/dynamic'
+import { HomepageFAQ, homepageFAQData } from '../components/sections/homepage-faq'
 
+// SEO Title: 56 characters
+// Meta Description: 154 characters
 export const metadata: Metadata = {
-  title: 'AI-Powered SEO & Web Development | Web Vello',
-  description: 'Get 300%+ organic traffic growth with professional SEO, web development & digital marketing. Trusted by 500+ businesses nationwide.',
-  keywords: 'SEO services, web development, digital marketing, AI SEO, local SEO, web design',
+  title: 'Webvello | SEO, GEO & Web Development Agency',
+  description: 'Webvello is a digital marketing agency specializing in SEO, GEO (Generative Engine Optimization), and custom web development. Trusted by 500+ businesses.',
+  keywords: 'SEO services, GEO agency, generative engine optimization, web development, AI SEO, local SEO, AEO, answer engine optimization, web design',
   openGraph: {
-    title: 'AI-Powered SEO & Web Development | Web Vello',
-    description: 'Get 300%+ organic traffic growth with professional SEO, web development & digital marketing. Trusted by 500+ businesses.',
-    url: 'https://webvello.com',
-    siteName: 'Web Vello',
+    title: 'Webvello | SEO, GEO & Web Development Agency',
+    description: 'Webvello is a digital marketing agency specializing in SEO, GEO, and custom web development. Trusted by 500+ businesses.',
+    url: 'https://www.webvello.com',
+    siteName: 'Webvello',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Web Vello - AI-Powered SEO & Web Development Services',
+        alt: 'Webvello - SEO, GEO & Web Development Agency',
       },
     ],
   },
@@ -47,7 +49,7 @@ const SocialProof = dynamic(() => import('../components/sections/social-proof'),
 const services = [
   {
     name: "AI-Powered SEO",
-    description: "Get 300%+ organic traffic growth in 6 months with our advanced AI SEO strategies that analyze millions of data points.",
+    description: "Search engine optimization using artificial intelligence and machine learning to analyze data and identify ranking opportunities.",
     icon: Zap,
     href: "/services/ai-seo",
     features: ["AI keyword research", "Content optimization", "Performance tracking"],
@@ -56,15 +58,15 @@ const services = [
   },
   {
     name: "Local SEO",
-    description: "Dominate local search results and rank #1 in your market with geo-targeted strategies.",
+    description: "Geo-targeted optimization to improve visibility in local search results, Google Maps, and the Local Pack.",
     icon: Globe,
     href: "/services/local-seo",
-    features: ["Google My Business", "Local citations", "Review management"],
+    features: ["Google Business Profile", "Local citations", "Review management"],
     gradient: "from-blue-400 to-cyan-500"
   },
   {
     name: "Web Development",
-    description: "Custom websites that convert visitors into customers with conversion-focused design.",
+    description: "Custom websites built with React and Tailwind CSS, designed for performance, conversions, and search visibility.",
     icon: Code,
     href: "/services/web-development",
     features: ["Mobile-first design", "SEO integration", "Performance optimization"],
@@ -107,19 +109,29 @@ const testimonials = [
 ]
 
 export default function HomePage() {
-  // Server component: no client handlers to minimize JS shipped
-
-  // Organization Schema for better SEO
+  // Enhanced Organization Schema with GEO/AEO signals
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Web Vello",
-    "url": "https://webvello.com",
-    "logo": "https://webvello.com/logo.png",
-    "description": "Professional AI-powered SEO, web development, and digital marketing services",
+    "@type": ["Organization", "ProfessionalService"],
+    "name": "Webvello",
+    "alternateName": "Web Vello",
+    "url": "https://www.webvello.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.webvello.com/logo.png",
+      "width": 2048,
+      "height": 2048
+    },
+    "description": "Webvello is a digital marketing agency specializing in SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and custom web development. The agency helps businesses improve visibility in both traditional search engines and AI-powered search platforms.",
+    "slogan": "Design. Develop. Dominate.",
+    "foundingDate": "2024",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
     },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -133,20 +145,86 @@ export default function HomePage() {
       "https://www.linkedin.com/company/webvello",
       "https://twitter.com/webvello"
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "500",
-      "bestRating": "5",
-      "worstRating": "1"
+    "knowsAbout": [
+      "Search Engine Optimization",
+      "Generative Engine Optimization",
+      "Answer Engine Optimization",
+      "Local SEO",
+      "Web Development",
+      "React",
+      "Tailwind CSS",
+      "AI Search Optimization",
+      "Digital Marketing"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Marketing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO Services",
+            "description": "Search engine optimization to improve Google rankings and organic traffic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "GEO Services",
+            "description": "Generative Engine Optimization to improve visibility in AI search platforms like ChatGPT and Perplexity"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local SEO",
+            "description": "Geo-targeted local search optimization for businesses serving specific cities and regions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Development",
+            "description": "Custom website development using React and Tailwind CSS"
+          }
+        }
+      ]
     }
   };
+
+  // FAQ Schema from component data
+  const faqSchemaData = homepageFAQData.map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  }))
 
   return (
     <>
       <SchemaMarkup schema={organizationSchema} />
+      <FAQSchema faqs={faqSchemaData} />
       <div className="min-h-screen">
         <Hero />
+        
+        {/* Entity Definition Section - AEO Optimized */}
+        <section className="py-16 bg-white border-b border-gray-100">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-6">
+                What Is Webvello?
+              </h2>
+              <p className="text-xl text-secondary-700 leading-relaxed mb-8">
+                <strong>Webvello</strong> is a digital marketing agency specializing in <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 underline">SEO</Link> (Search Engine Optimization), <Link href="/services/generative-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">GEO</Link> (Generative Engine Optimization), <Link href="/services/answer-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">AEO</Link> (Answer Engine Optimization), and <Link href="/services/web-development" className="text-primary-600 hover:text-primary-700 underline">custom web development</Link>. The agency helps businesses improve their visibility in both traditional search engines like Google and AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
+              </p>
+              <p className="text-lg text-secondary-600 leading-relaxed">
+                Webvello serves businesses across the United States, combining data-driven strategies with transparent reporting. Core services include AI-powered SEO, local SEO for geographic targeting, and conversion-focused website development using React and Tailwind CSS.
+              </p>
+            </div>
+          </div>
+        </section>
       
       {/* Global Results & Trust Section */}
       <LazySection>
@@ -250,13 +328,13 @@ export default function HomePage() {
         <SocialProof />
       </LazySection>
       
-      {/* How We Work (aligns with AI Overview facets) */}
+      {/* How We Work - Process Section (AEO Optimized) */}
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-6xl lg:text-7xl font-bold text-secondary-900 mb-4">How We Work</h2>
-            <p className="text-2xl text-secondary-600 max-w-3xl mx-auto">
-              Clear focus, senior expertise, measurable results, and transparent reporting—every engagement.
+            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">How Does Webvello Work?</h2>
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+              Webvello follows a four-step process: strategic focus, senior expertise, measurable results, and transparent reporting.
             </p>
           </div>
           <div className="relative grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -266,7 +344,7 @@ export default function HomePage() {
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">1</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
                 <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Focus</h3>
-                <p className="text-lg text-secondary-700">Digital marketing that drives revenue—AI SEO, Local SEO, website design, and development.</p>
+                <p className="text-lg text-secondary-700">Digital marketing services focused on revenue growth—SEO, GEO, AEO, local SEO, and web development.</p>
               </div>
             </div>
             {/* Step 2 */}
@@ -274,7 +352,7 @@ export default function HomePage() {
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">2</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
                 <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Expertise</h3>
-                <p className="text-lg text-secondary-700">Certified senior team combining strategy, UX, engineering, and data science.</p>
+                <p className="text-lg text-secondary-700">Senior team combining strategy, UX design, engineering, and data analysis.</p>
               </div>
             </div>
             {/* Step 3 */}
@@ -282,7 +360,7 @@ export default function HomePage() {
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">3</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
                 <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Results</h3>
-                <p className="text-lg text-secondary-700">300%+ average traffic growth in 6 months with conversion lifts across key pages.</p>
+                <p className="text-lg text-secondary-700">Measurable outcomes including traffic growth, ranking improvements, and conversion optimization.</p>
               </div>
             </div>
             {/* Step 4 */}
@@ -290,24 +368,31 @@ export default function HomePage() {
               <div className="mx-auto md:mx-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold shadow ring-2 ring-white">4</div>
               <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm border">
                 <h3 className="text-2xl font-semibold text-secondary-900 mb-2">Transparency</h3>
-                <p className="text-lg text-secondary-700">Weekly progress, shared dashboards, and a reproducible playbook for compounding growth.</p>
+                <p className="text-lg text-secondary-700">Weekly progress updates, shared dashboards, and clear reporting on all activities.</p>
               </div>
             </div>
+          </div>
+          
+          {/* Process Summary for AI Engines */}
+          <div className="mt-12 text-center bg-white rounded-2xl p-8 shadow-sm border max-w-4xl mx-auto">
+            <p className="text-lg text-secondary-700 leading-relaxed">
+              <strong>Summary:</strong> Webvello's process starts with focused strategy development, leverages senior-level expertise for implementation, delivers measurable results through data-driven optimization, and maintains transparency via weekly reporting and shared dashboards.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* SEO-Optimized Content Section */}
+      {/* SEO-Optimized Content Section - Service Definitions */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
-                Why Choose Web Vello for Your 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600"> Digital Marketing Needs?</span>
+                Why Choose Webvello for 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600"> SEO & Web Development?</span>
               </h2>
               <p className="text-xl text-secondary-600 mb-8">
-                As a leading digital marketing agency, Web Vello specializes in AI-powered SEO, local search optimization, and custom web development. Our data-driven approach delivers measurable results for businesses across all industries.
+                Webvello combines AI-powered technology with proven strategies for SEO, GEO, AEO, and web development. The data-driven approach delivers measurable results for businesses across industries.
               </p>
               
               <div className="space-y-6">
@@ -316,8 +401,8 @@ export default function HomePage() {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-secondary-900 mb-2">AI-Powered SEO Services</h3>
-                    <p className="text-secondary-600">Our artificial intelligence SEO strategies analyze millions of data points to identify opportunities your competitors miss, delivering 300%+ organic traffic growth.</p>
+                    <h3 className="text-lg font-semibold text-secondary-900 mb-2">AI-Powered SEO</h3>
+                    <p className="text-secondary-600">SEO strategies using artificial intelligence and machine learning to analyze data patterns and identify ranking opportunities.</p>
                   </div>
                 </div>
                 
@@ -326,8 +411,8 @@ export default function HomePage() {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-secondary-900 mb-2">Local SEO & Geo-Targeting</h3>
-                    <p className="text-secondary-600">Dominate local search results with our geo-targeted strategies. We help businesses rank #1 in their local market and capture nearby customers.</p>
+                    <h3 className="text-lg font-semibold text-secondary-900 mb-2">GEO & AEO Services</h3>
+                    <p className="text-secondary-600">Optimization for AI search platforms (ChatGPT, Perplexity) and voice search assistants through structured content and clear answers.</p>
                   </div>
                 </div>
                 
@@ -337,7 +422,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-secondary-900 mb-2">Custom Web Development</h3>
-                    <p className="text-secondary-600">Professional custom websites built with modern technologies. Fast, mobile-optimized, and SEO-friendly sites that convert visitors into customers.</p>
+                    <p className="text-secondary-600">Websites built with React and Tailwind CSS, optimized for performance, mobile devices, and search engine visibility.</p>
                   </div>
                 </div>
               </div>
@@ -347,20 +432,20 @@ export default function HomePage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96">
                 <Image 
                   src="/images/hero-team-collaboration.webp"
-                  alt="Professional digital marketing team collaborating on strategy"
+                  alt="Webvello digital marketing team collaborating on SEO and web development strategy"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <h3 className="text-xl font-bold mb-2">Expert Team</h3>
-                  <p className="text-sm opacity-90">Our experienced professionals deliver results</p>
+                  <p className="text-sm opacity-90">Senior professionals deliver SEO and web development results</p>
                 </div>
               </div>
               
               <div className="mt-8 p-6 bg-white rounded-xl shadow-sm">
-                <h4 className="text-lg font-semibold text-secondary-900 mb-3">Ready to Grow Your Business?</h4>
-                <p className="text-secondary-600 mb-4">Get a free digital marketing strategy consultation and discover how our SEO and web development services can transform your online presence.</p>
+                <h4 className="text-lg font-semibold text-secondary-900 mb-3">Ready to Improve Search Visibility?</h4>
+                <p className="text-secondary-600 mb-4">Get a free consultation to discuss SEO, GEO, and web development for your business.</p>
                 <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Free Strategy Session
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -385,15 +470,14 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 text-sm font-semibold mb-6 shadow-lg">
               <Star className="w-4 h-4 mr-2" />
-              Our Core Services
+              Core Services
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
-              Digital Marketing Solutions That
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600"> Deliver Success</span>
+              What Services Does Webvello
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600"> Offer?</span>
             </h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven strategies to deliver measurable results for professional services firms. 
-              From AI-powered SEO to custom web development, we have the expertise to transform your digital presence.
+              Webvello offers SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), local SEO, and custom web development services for businesses across the United States.
             </p>
           </div>
 
@@ -402,14 +486,14 @@ export default function HomePage() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96">
               <Image 
                 src="/images/hero-analytics.webp"
-                alt="Digital marketing team working on analytics and strategy"
+                alt="Webvello team analyzing SEO data and search performance"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
                 <h3 className="text-2xl font-bold mb-2">Data-Driven Results</h3>
-                <p className="text-lg opacity-90">Our team analyzes real-time data to optimize your digital presence</p>
+                <p className="text-lg opacity-90">Analytics-based optimization for SEO and web performance</p>
               </div>
             </div>
           </div>
@@ -445,12 +529,19 @@ export default function HomePage() {
                   </div>
                   <div className="mt-6 flex items-center text-primary-600 font-semibold group-hover:text-primary-700 transition-colors duration-300">
                     <Zap className="w-4 h-4 mr-2" />
-                    Get Started Today
+                    Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
               </Link>
             ))}
+          </div>
+          
+          {/* Additional Services Links */}
+          <div className="mt-12 text-center">
+            <p className="text-lg text-secondary-600 mb-4">
+              Additional services: <Link href="/services/generative-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">GEO</Link> • <Link href="/services/answer-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">AEO</Link> • <Link href="/services/chatgpt-optimization" className="text-primary-600 hover:text-primary-700 underline">ChatGPT Optimization</Link> • <Link href="/services/voice-search-optimization" className="text-primary-600 hover:text-primary-700 underline">Voice Search</Link>
+            </p>
           </div>
         </div>
       </section>
@@ -469,11 +560,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Success Metrics That Prove Our Value
+              Webvello Results & Metrics
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Our data-driven approach has delivered exceptional results for hundreds of professional services firms. 
-              See the numbers that demonstrate our strategies work.
+              Data-driven digital marketing delivers measurable outcomes for SEO, GEO, and web development clients.
             </p>
           </div>
 
@@ -507,98 +597,91 @@ export default function HomePage() {
               Digital Marketing Excellence
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-6">
-              Why Choose Web Vello for Your Digital Marketing Needs?
+              How Is Webvello Different From Other Agencies?
             </h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              Discover how our data-driven approach to SEO, web development, and digital marketing 
-              helps businesses achieve sustainable growth and dominate their markets.
+              Webvello differentiates through AI-powered technology, transparent reporting, senior-level expertise, and a focus on emerging optimization categories including GEO and AEO.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* SEO Content Card 1 - Local SEO Focus */}
+            {/* Card 1 - GEO Focus */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-secondary-900 mb-4">
-                Local SEO & Google My Business Optimization
+                GEO (Generative Engine Optimization)
               </h3>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Dominate local search results with our proven local SEO strategies. We help businesses rank #1 
-                in their local market, increase foot traffic, and capture nearby customers through Google My Business 
-                optimization, local citations, and review management.
+                Optimization for AI-powered search platforms. GEO ensures businesses are cited when users ask questions to ChatGPT, Perplexity, Claude, and Google AI Overviews. This emerging category of search optimization requires structured, factual content that AI systems can understand and quote accurately.
               </p>
               <div className="space-y-2 text-sm text-secondary-600">
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Google My Business optimization
+                  ChatGPT & Perplexity optimization
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Local keyword research & targeting
+                  AI-citable content structure
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Local citation building & management
+                  Entity definition & schema markup
                 </div>
               </div>
             </div>
 
-            {/* SEO Content Card 2 - AI SEO Focus */}
+            {/* Card 2 - AEO Focus */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
+                <HelpCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-secondary-900 mb-4">
-                AI-Powered SEO & Content Strategy
+                AEO (Answer Engine Optimization)
               </h3>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Leverage cutting-edge AI technology to identify hidden SEO opportunities your competitors miss. 
-                Our AI-powered approach analyzes millions of data points to create content strategies that drive 
-                300%+ traffic growth and improve search rankings across all major search engines.
+                Optimization for featured snippets, voice search assistants, and answer boxes. AEO structures content so search engines can extract direct answers to user questions. This includes FAQ optimization, how-to content, and clear entity definitions.
               </p>
               <div className="space-y-2 text-sm text-secondary-600">
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  AI keyword research & analysis
+                  Featured snippet optimization
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Content optimization & creation
+                  Voice search targeting
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Competitive analysis & strategy
+                  FAQ schema implementation
                 </div>
               </div>
             </div>
 
-            {/* SEO Content Card 3 - Web Development Focus */}
+            {/* Card 3 - Web Development Focus */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
                 <Code className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-secondary-900 mb-4">
-                Conversion-Focused Web Development
+                React & Tailwind Web Development
               </h3>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Build websites that convert visitors into customers with our conversion-focused development approach. 
-                We create fast, mobile-optimized sites with built-in SEO best practices, ensuring your website 
-                ranks well and drives measurable business results.
+                Custom websites built with React and Tailwind CSS for optimal performance and search visibility. Development includes mobile-first responsive design, Core Web Vitals optimization, SEO-friendly architecture, and conversion rate optimization.
               </p>
               <div className="space-y-2 text-sm text-secondary-600">
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Mobile-first responsive design
+                  React & Next.js development
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  SEO-optimized code structure
+                  Tailwind CSS styling
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
-                  Performance optimization
+                  Core Web Vitals optimization
                 </div>
               </div>
             </div>
@@ -608,27 +691,25 @@ export default function HomePage() {
           <div className="mt-16 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-3xl p-8 border border-primary-100">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-                Digital Marketing Services Available Nationwide
+                Digital Marketing Services Across the United States
               </h3>
               <p className="text-lg text-secondary-600 max-w-4xl mx-auto">
-                Web Vello provides comprehensive digital marketing solutions including SEO, web development, 
-                UI/UX design, and software development. Our services help businesses across all industries 
-                improve their online presence, increase search visibility, and drive sustainable revenue growth.
+                Webvello provides SEO, GEO, AEO, local SEO, and web development services for businesses across all industries and US markets. The agency serves clients in <Link href="/locations" className="text-primary-600 hover:text-primary-700 underline">37+ major cities</Link> including <Link href="/austin-seo" className="text-primary-600 hover:text-primary-700 underline">Austin</Link>, <Link href="/dallas-seo" className="text-primary-600 hover:text-primary-700 underline">Dallas</Link>, <Link href="/houston-seo" className="text-primary-600 hover:text-primary-700 underline">Houston</Link>, <Link href="/services/geo-los-angeles" className="text-primary-600 hover:text-primary-700 underline">Los Angeles</Link>, and <Link href="/services/geo-new-york" className="text-primary-600 hover:text-primary-700 underline">New York</Link>.
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div className="bg-white rounded-xl p-4 shadow-sm">
-                <div className="text-2xl font-bold text-primary-600 mb-2">15+</div>
-                <div className="text-sm text-secondary-600">Years Experience</div>
+                <div className="text-2xl font-bold text-primary-600 mb-2">50+</div>
+                <div className="text-sm text-secondary-600">Industries Served</div>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-sm">
                 <div className="text-2xl font-bold text-primary-600 mb-2">500+</div>
-                <div className="text-sm text-secondary-600">Successful Clients</div>
+                <div className="text-sm text-secondary-600">Business Clients</div>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-sm">
-                <div className="text-2xl font-bold text-primary-600 mb-2">50+</div>
-                <div className="text-sm text-secondary-600">Industries Served</div>
+                <div className="text-2xl font-bold text-primary-600 mb-2">37+</div>
+                <div className="text-sm text-secondary-600">Cities Served</div>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-sm">
                 <div className="text-2xl font-bold text-primary-600 mb-2">24/7</div>
@@ -640,6 +721,11 @@ export default function HomePage() {
       </section>
       </LazySection>
 
+      {/* FAQ Section */}
+      <LazySection>
+        <HomepageFAQ />
+      </LazySection>
+
       {/* CTA Section */}
       <LazySection>
       <section className="py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
@@ -648,36 +734,32 @@ export default function HomePage() {
           <Image src="/images/hero-business-meeting.webp" alt="" fill sizes="100vw" className="object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/25 via-pink-500/25 to-blue-500/25"></div>
-        {/* Removed pulsing/blurred orb for performance */}
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             
-            {/* Text and CTA - Golden Ratio Layout */}
+            {/* Text and CTA */}
             <div className="text-white">
-              {/* Badge - Golden ratio spacing */}
+              {/* Badge */}
               <div className="inline-flex items-center rounded-full bg-white/10 px-4 py-2.5 text-sm font-medium text-white/90 mb-8 border border-white/20">
-                <span className="hidden sm:inline">DIGITAL MARKETING THAT DELIVERS RESULTS</span>
-                <span className="sm:hidden">RESULTS-DRIVEN MARKETING</span>
+                <span className="hidden sm:inline">SEO • GEO • AEO • WEB DEVELOPMENT</span>
+                <span className="sm:hidden">DIGITAL MARKETING</span>
               </div>
               
-              {/* Main Headline - Golden ratio typography */}
+              {/* Main Headline */}
               <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-10 leading-tight">
-                Transform Your Website into a Lead Generation Machine with{' '}
+                Improve Your Search Visibility with{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
-                  Web Vello
+                  Webvello
                 </span>
               </h2>
               
-              {/* Description - Golden ratio line height and spacing */}
+              {/* Description */}
               <p className="text-lg sm:text-xl text-white/90 mb-16 leading-relaxed max-w-4xl mx-auto">
-                Professional services firms must effectively differentiate themselves to attract and retain clients. 
-                Over 500+ professional services clients trust us to create tailored marketing strategies that enhance 
-                credibility, foster client relationships, and drive lead generation. Let us help you establish your 
-                firm as a trusted authority in your industry while achieving your unique business goals.
+                Webvello helps businesses improve visibility in Google, AI search platforms, and voice assistants through integrated SEO, GEO, and AEO strategies. Custom web development ensures fast, mobile-optimized websites that convert visitors into customers.
               </p>
               
-              {/* CTA Input & Button - Golden ratio proportions */}
+              {/* CTA Input & Button */}
               <div className="flex flex-col sm:flex-row gap-6 max-w-2xl mx-auto mb-12">
                 <input
                   type="text"
@@ -689,17 +771,17 @@ export default function HomePage() {
                   className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
                   asChild
                 >
-                  <Link href="/contact" aria-label="Get a free SEO audit">🎯 Get Free SEO Audit</Link>
+                  <Link href="/contact" aria-label="Get a free SEO audit">Get Free SEO Audit</Link>
                 </Button>
               </div>
               
-              {/* Urgency & Value Props - Golden ratio spacing */}
+              {/* Value Props */}
               <div className="space-y-4">
                 <p className="text-sm sm:text-base text-white/80">
-                  ⚡ <span className="font-semibold">Instant Response:</span> Get your custom proposal in 24 hours
+                  <span className="font-semibold">Free Consultation:</span> Get a custom proposal within 24 hours
                 </p>
                 <p className="text-xs sm:text-sm text-white/60">
-                  <span className="hidden sm:inline">No obligation • Free consultation included • 500+ successful projects</span>
+                  <span className="hidden sm:inline">No obligation • Free consultation included • SEO • GEO • AEO • Web Development</span>
                   <span className="sm:hidden">No obligation • Free consultation</span>
                 </p>
               </div>
