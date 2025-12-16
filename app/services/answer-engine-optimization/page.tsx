@@ -15,7 +15,7 @@ import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
   title: 'AEO Services: Rank #1 in Featured Snippets & Voice Search | Webvello',
-  description: 'Rank #1 in Google featured snippets and voice search results. Webvello's AEO strategies capture position zero 267% faster. Free audit identifies your snippet opportunities.',
+  description: 'Rank #1 in Google featured snippets and voice search results. Webvello\'s AEO strategies capture position zero 267% faster. Free audit identifies your snippet opportunities.',
   keywords: ['answer engine optimization', 'aeo services', 'featured snippet optimization', 'answer box optimization', 'question-based seo'],
   alternates: {
     canonical: 'https://www.webvello.com/services/answer-engine-optimization',

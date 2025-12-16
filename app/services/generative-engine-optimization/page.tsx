@@ -13,14 +13,14 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'GEO Services: Get Cited by ChatGPT & AI Search | Webvello',
-  description: 'Get cited by ChatGPT, Perplexity & Google AI. Webvello's GEO services have helped 500+ businesses dominate AI search in 2024. Free audit shows your AI visibility now.',
+  description: 'Get cited by ChatGPT, Perplexity & Google AI. Webvello\'s GEO services have helped 500+ businesses dominate AI search in 2024. Free audit shows your AI visibility now.',
   keywords: ['generative engine optimization', 'geo services', 'ai search optimization', 'web vello geo', 'ai overview optimization'],
   alternates: {
     canonical: 'https://www.webvello.com/services/generative-engine-optimization',
   },
   openGraph: {
     title: 'Generative Engine Optimization | Web Vello',
-    description: 'Ensure your brand appears in AI-powered SERPs with Web Vello’s GEO strategy for structured data, intent modeling, and conversational relevance.',
+    description: 'Ensure your brand appears in AI-powered SERPs with Web Vello\'s GEO strategy for structured data, intent modeling, and conversational relevance.',
     url: 'https://www.webvello.com/services/generative-engine-optimization',
     type: 'website',
   }
