@@ -1,32 +1,32 @@
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Zap, Brain, TrendingUp, Target, BarChart3, Users, Clock, CheckCircle, Cpu, Network, Database, Globe, Sparkles, Play, Pause, RotateCcw, Code, FileText } from 'lucide-react'
+import { ArrowRight, Zap, Brain, TrendingUp, Target, BarChart3, Users, Clock, CheckCircle, Cpu, Network, Database, Globe, Sparkles, Code, FileText, HelpCircle, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
-import { SchemaMarkup, FAQSchema, ReviewSchema } from '../../../components/seo/schema-markup'
+import { SchemaMarkup } from '../../../components/seo/schema-markup'
 import { generateServicePageSchema } from '../../../lib/advanced-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'AI SEO Agency | Predictive Growth Strategies',
-  description: 'Leverage AI-powered SEO for 300%+ traffic growth. Predictive keyword research, content optimization & automated performance tracking.',
-  keywords: ['ai seo services', 'machine learning seo agency', 'ai keyword research', 'predictive seo analytics', 'ai content optimization'],
+  title: 'AI SEO Services | Webvello',
+  description: 'AI SEO uses machine learning to automate keyword research, content optimization, and performance tracking within traditional SEO workflows. Webvello combines AI tools with expert strategy for faster, data-driven SEO results.',
+  keywords: ['ai seo services', 'ai-powered seo', 'ai seo agency', 'what is ai seo', 'ai keyword research', 'ai content optimization', 'ai seo vs traditional seo', 'ai seo vs aeo'],
   alternates: {
     canonical: 'https://www.webvello.com/services/ai-seo',
   },
   openGraph: {
-    title: 'AI SEO Agency | Web Vello',
-    description: 'Combine AI-driven insights with senior strategists to dominate search results, launch intelligent content, and outrank category leaders.',
+    title: 'AI SEO Services | Webvello',
+    description: 'AI SEO uses machine learning to automate keyword research, content optimization, and performance tracking within traditional SEO workflows.',
     url: 'https://www.webvello.com/services/ai-seo',
     type: 'website',
-  
     images: [
       {
         url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Web Vello Services',
+        alt: 'Webvello AI SEO Services',
       },
-    ],}
+    ],
+  }
 }
 
 const features = [
@@ -85,76 +85,61 @@ const process = [
   {
     step: "04",
     title: "Results & Optimization",
-    description: "AI analyzes results and automatically implements improvements for continuous growth.",
+    description: "AI analyzes results and implements improvements for continuous growth.",
     duration: "Monthly",
     icon: TrendingUp
   }
 ]
 
-const results = [
-  { metric: "Traffic Increase", value: "300%+", description: "Average organic traffic growth" },
-  { metric: "Ranking Improvement", value: "85%", description: "Keywords moved to page 1" },
-  { metric: "Conversion Rate", value: "250%+", description: "Increase in lead generation" },
-  { metric: "ROI", value: "1,500%+", description: "Return on investment" }
-]
-
 // Enhanced FAQs for rich snippets
 const faqs = [
   {
-    question: "What is AI-powered SEO?",
-    answer: "AI-powered SEO uses artificial intelligence and machine learning algorithms to analyze millions of data points, identify keyword opportunities, predict content performance, and optimize your website for better search rankings. It goes beyond traditional SEO by using predictive analytics and automated optimization to achieve 300%+ faster results."
+    question: "What is AI SEO?",
+    answer: "AI SEO is the use of artificial intelligence and machine learning tools to automate and improve traditional search engine optimization processes. AI SEO includes automated keyword research, content optimization recommendations, predictive performance forecasting, and continuous competitor monitoring. AI SEO enhances human SEO strategy by processing large datasets faster and identifying opportunities humans might miss."
   },
   {
     question: "How is AI SEO different from traditional SEO?",
-    answer: "AI SEO leverages machine learning to analyze vast amounts of search data, predict trends, and identify opportunities that humans might miss. It provides real-time optimization suggestions, automated competitor analysis, and predictive performance metrics that traditional SEO methods can't match. This results in faster implementation and better ROI."
+    answer: "AI SEO uses machine learning to automate repetitive tasks like keyword research, content analysis, and technical audits, while traditional SEO relies on manual processes. AI SEO processes millions of data points in hours, whereas traditional SEO research can take weeks. AI SEO predicts content performance before publishing; traditional SEO evaluates performance after publishing. Both approaches require human strategy and expertise, but AI SEO accelerates execution and improves accuracy."
+  },
+  {
+    question: "How is AI SEO different from AEO?",
+    answer: "AI SEO is a methodology that uses artificial intelligence tools to improve traditional SEO workflows. AEO (Answer Engine Optimization) is a content structuring approach focused on capturing featured snippets and answer boxes. AI SEO involves using AI for keyword research, content optimization, and analytics. AEO involves formatting content in question-answer format with FAQ schema. AI SEO is about how SEO work is done; AEO is about what format content takes."
+  },
+  {
+    question: "How is AI SEO different from GEO?",
+    answer: "AI SEO optimizes for traditional search engines like Google using AI-powered tools and automation. GEO (Generative Engine Optimization) optimizes content to be cited by AI-generated responses in tools like ChatGPT, Perplexity, and Google AI Overviews. AI SEO focuses on keyword rankings and organic traffic. GEO focuses on source citations and authority in AI-generated summaries. Both approaches are complementary and should be used together for maximum visibility."
+  },
+  {
+    question: "Does AI SEO replace human SEO professionals?",
+    answer: "No. AI SEO automates repetitive tasks like data analysis, keyword research, and performance monitoring, but human expertise remains essential for strategy, quality control, and brand voice. AI generates content briefs and recommendations; humans create final content, make strategic decisions, and ensure quality. The most effective SEO combines AI efficiency with human creativity and judgment. Webvello's AI SEO services pair AI tools with experienced SEO strategists."
   },
   {
     question: "How long does it take to see results from AI SEO?",
-    answer: "Most clients see significant improvements within 60-90 days, with continued growth over 6-12 months. AI SEO accelerates results by quickly identifying high-impact opportunities and automating optimization tasks that would take months manually. Our clients typically achieve 300%+ traffic growth within 6 months."
+    answer: "Most businesses see initial results from AI SEO within 60-90 days, with continued growth over 6-12 months. AI SEO accelerates research and optimization, but search engines still require time to crawl, index, and rank new content. AI-powered keyword research identifies opportunities faster (days instead of weeks), enabling quicker content production. AI predictive analytics reduce wasted effort by focusing on high-impact opportunities first. Competitive industries may require 6-12 months for top rankings."
   },
   {
-    question: "What is the ROI of AI-powered SEO services?",
-    answer: "Our AI SEO services typically deliver 1,500%+ ROI within the first year. By combining data-driven insights with automated optimization, we help businesses achieve faster rankings, higher conversion rates, and sustained organic growth. The average client sees a 250% increase in qualified leads within 6 months."
+    question: "What tools does Webvello use for AI SEO?",
+    answer: "Webvello uses a combination of proprietary AI models and industry-leading AI SEO tools including natural language processing for content analysis, machine learning for keyword clustering and intent mapping, predictive analytics for performance forecasting, and automated monitoring systems for competitor and ranking tracking. Our AI tools integrate with Google Search Console, Google Analytics, and third-party SEO platforms for comprehensive data analysis."
   },
   {
-    question: "Do you provide ongoing AI SEO monitoring and optimization?",
-    answer: "Yes! Our AI systems continuously monitor your website's performance, track competitor movements, and identify new opportunities 24/7. We provide monthly reports, real-time alerts, and ongoing optimization to ensure your SEO strategy adapts to algorithm changes and market trends."
-  }
-]
-
-// Client testimonials for review schema
-const testimonials = [
-  {
-    author: "Michael Rodriguez",
-    role: "Marketing Director",
-    company: "GrowthCo",
-    content: "The AI-powered SEO strategies are incredible. We're ranking for high-value keywords we never thought possible, and our organic search traffic has grown 400% year-over-year.",
-    rating: 5,
-    date: "2024-08-15"
+    question: "How much does AI SEO cost?",
+    answer: "AI SEO services typically cost 20-40% less than traditional SEO services of equivalent scope because AI automation reduces the time required for research, analysis, and monitoring. Webvello offers AI SEO services starting at $2,500/month for small businesses (20-40 pages) and scaling to $10,000+/month for enterprise clients (1,000+ pages). Pricing depends on website size, competition level, content volume, and scope of services."
   },
   {
-    author: "Jennifer Lee",
-    role: "CEO",
-    company: "TechVenture Inc",
-    content: "Web Vello's AI SEO approach completely transformed our online visibility. Within 4 months, we jumped from page 3 to top positions for our most competitive keywords. The ROI has been phenomenal.",
-    rating: 5,
-    date: "2024-09-20"
+    question: "Can AI SEO work for small businesses?",
+    answer: "Yes. AI SEO is particularly valuable for small businesses with limited marketing budgets because AI automation reduces the time and cost required for effective SEO. Small businesses can execute enterprise-level SEO strategies using AI tools that automate research, analysis, and monitoring. AI SEO helps small businesses compete with larger competitors by identifying niche keyword opportunities and content gaps."
   },
   {
-    author: "David Chen",
-    role: "Founder",
-    company: "Digital Solutions Pro",
-    content: "The predictive analytics and automated optimization are game-changers. We're seeing results 3x faster than traditional SEO agencies we've worked with. Highly recommended!",
-    rating: 5,
-    date: "2024-10-01"
+    question: "How do you measure AI SEO success?",
+    answer: "We measure AI SEO success using key metrics including organic traffic growth (monthly visitors from search engines), keyword ranking improvements (positions for target keywords), featured snippet wins (answer boxes and position zero results), conversion actions (form submissions, calls, demos from organic traffic), and ROI (revenue generated per dollar spent on SEO). AI enables real-time tracking and predictive forecasting for all metrics."
   }
 ]
 
 // Generate comprehensive schema for this service page
 const serviceSchema = generateServicePageSchema(
   {
-    name: "AI-Powered SEO Services",
-    description: "Leverage cutting-edge AI technology to achieve 300%+ organic traffic growth with predictive keyword research, intelligent content optimization, and automated performance tracking.",
+    name: "AI SEO Services",
+    description: "AI SEO uses machine learning to automate keyword research, content optimization, and performance tracking within traditional SEO workflows. Webvello combines AI tools with expert strategy for faster, data-driven SEO results.",
     url: "https://www.webvello.com/services/ai-seo",
     features: [
       "AI-Powered Keyword Research",
@@ -163,8 +148,7 @@ const serviceSchema = generateServicePageSchema(
       "Automated Competitive Analysis"
     ]
   },
-  faqs,
-  testimonials
+  faqs
 )
 
 export default function AISeOPage() {
@@ -174,7 +158,8 @@ export default function AISeOPage() {
       {serviceSchema.map((schema, index) => (
         <SchemaMarkup key={index} schema={schema} />
       ))}
-      {/* Hero Section with AI Visualization */}
+
+      {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 relative overflow-hidden">
         {/* Animated AI Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -186,9 +171,10 @@ export default function AISeOPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('service', { title: 'AI-Powered SEO' })} 
+            items={generateBreadcrumbs('service', { title: 'AI SEO' })} 
             className="mb-8"
           />
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div>
@@ -198,27 +184,37 @@ export default function AISeOPage() {
               </div>
               
               <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-6xl mb-6">
-                Supercharge Your SEO with{" "}
+                What Is{" "}
                 <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
-                  Artificial Intelligence
+                  AI SEO?
                 </span>
               </h1>
-              
-              <p className="text-lg leading-8 text-secondary-600 mb-8">
-                Leverage cutting-edge AI technology to identify opportunities, optimize content, and achieve 
-                search rankings that traditional SEO methods can’t match. Our AI analyzes millions of data 
-                points to uncover hidden keywords, predict content performance, and outmaneuver your competition.
+
+              {/* Direct Answer Summary - AI Citable */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-primary-100 mb-8">
+                <p className="text-lg leading-8 text-secondary-900 font-medium">
+                  <strong>AI SEO</strong> is the application of artificial intelligence and machine learning 
+                  technologies to traditional search engine optimization tasks. AI SEO automates keyword research, 
+                  content analysis, competitor monitoring, and performance forecasting, enabling SEO professionals 
+                  to make faster, more accurate, data-driven decisions.
+                </p>
+              </div>
+
+              <p className="text-lg leading-7 text-secondary-600 mb-8">
+                AI SEO is a tool-based enhancement to traditional SEO, not a replacement for human strategy. 
+                Webvello combines AI automation with expert SEO strategists to deliver faster, more scalable 
+                results without sacrificing quality or brand voice.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="xl" className="bg-gradient-to-r from-primary-600 to-primary-500 hover:shadow-lg" asChild>
                   <Link href="/contact">
-                    Get AI SEO Strategy
+                    Get Free AI SEO Consultation
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="xl" asChild>
-                  <Link href="/case-studies">View AI SEO Results</Link>
+                  <Link href="/case-studies">View Case Studies</Link>
                 </Button>
               </div>
             </div>
@@ -260,52 +256,108 @@ export default function AISeOPage() {
                     <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.6" />
                     <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.6" />
                   </linearGradient>
-                  <linearGradient id="neural2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#10B981" stopOpacity="0.6" />
-                    <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.6" />
-                  </linearGradient>
                 </defs>
                 <line x1="25%" y1="25%" x2="50%" y2="50%" stroke="url(#neural1)" strokeWidth="2" className="animate-pulse" />
                 <line x1="75%" y1="25%" x2="50%" y2="50%" stroke="url(#neural1)" strokeWidth="2" className="animate-pulse" />
-                <line x1="25%" y1="75%" x2="50%" y2="50%" stroke="url(#neural2)" strokeWidth="2" className="animate-pulse" />
-                <line x1="75%" y1="75%" x2="50%" y2="50%" stroke="url(#neural2)" strokeWidth="2" className="animate-pulse" />
+                <line x1="25%" y1="75%" x2="50%" y2="50%" stroke="url(#neural1)" strokeWidth="2" className="animate-pulse" />
+                <line x1="75%" y1="75%" x2="50%" y2="50%" stroke="url(#neural1)" strokeWidth="2" className="animate-pulse" />
               </svg>
-
-              {/* Floating Data Particles */}
-              <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-              <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-green-400 rounded-full animate-ping" style={{animationDelay: '0.3s'}}></div>
-              <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{animationDelay: '0.6s'}}></div>
-              <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-orange-400 rounded-full animate-ping" style={{animationDelay: '0.9s'}}></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Page-level FAQs */}
-      <section className="py-24 bg-gray-50">
-        <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-8">AI SEO FAQs</h2>
-          <div className="space-y-6">
-            {[
-              {
-                q: 'What is AI SEO? ',
-                a: 'AI SEO uses machine learning to analyze large data sets, identify opportunities faster, and continuously improve content, internal links, and metadata.'
-              },
-              {
-                q: 'How fast will we see results?',
-                a: 'Most clients see leading indicators within 30–45 days and significant growth by months 3–6, depending on competition and content velocity.'
-              },
-              {
-                q: 'Will AI replace human content?',
-                a: 'No. We pair AI research/briefs with expert human editing, brand voice guidelines, and fact‑checking to ensure quality and originality.'
-              }
-            ].map((f, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border">
-                <h3 className="font-semibold text-secondary-900 mb-2">{f.q}</h3>
-                <p className="text-secondary-700">{f.a}</p>
-              </div>
-            ))}
+      {/* What AI SEO Is and When It Is Used */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-8">
+            What AI SEO Is and When It Is Used
+          </h2>
+          
+          <p className="text-lg text-secondary-700 mb-8">
+            <strong>AI SEO</strong> refers to the use of artificial intelligence technologies—including 
+            natural language processing, machine learning, and predictive analytics—to improve and 
+            accelerate traditional search engine optimization processes.
+          </p>
+
+          <h3 className="text-2xl font-semibold text-secondary-900 mb-6">Core Components of AI SEO:</h3>
+          
+          <div className="space-y-6 mb-12">
+            <div className="bg-gradient-to-r from-primary-50 to-white rounded-xl p-6 border border-primary-100">
+              <h4 className="text-xl font-semibold text-secondary-900 mb-3">
+                1. AI-Powered Keyword Research
+              </h4>
+              <p className="text-secondary-700">
+                Machine learning algorithms analyze search volume, user intent, competition levels, and 
+                semantic relationships to identify high-opportunity keywords faster than manual research.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl p-6 border border-blue-100">
+              <h4 className="text-xl font-semibold text-secondary-900 mb-3">
+                2. Intelligent Content Optimization
+              </h4>
+              <p className="text-secondary-700">
+                AI tools analyze top-ranking content to recommend topic coverage, headings, word count, 
+                entity usage, and content structure improvements.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-50 to-white rounded-xl p-6 border border-green-100">
+              <h4 className="text-xl font-semibold text-secondary-900 mb-3">
+                3. Predictive Performance Analytics
+              </h4>
+              <p className="text-secondary-700">
+                Machine learning models predict how content will perform before publishing based on 
+                historical ranking data, competitor analysis, and search trend patterns.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-orange-50 to-white rounded-xl p-6 border border-orange-100">
+              <h4 className="text-xl font-semibold text-secondary-900 mb-3">
+                4. Automated Competitive Analysis
+              </h4>
+              <p className="text-secondary-700">
+                AI continuously monitors competitor content, backlinks, keyword rankings, and technical 
+                changes, alerting SEO teams to opportunities and threats in real time.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-50 to-white rounded-xl p-6 border border-purple-100">
+              <h4 className="text-xl font-semibold text-secondary-900 mb-3">
+                5. Technical SEO Automation
+              </h4>
+              <p className="text-secondary-700">
+                AI systems identify crawl errors, broken links, page speed issues, and schema markup 
+                opportunities automatically, reducing manual auditing time.
+              </p>
+            </div>
           </div>
+
+          <h3 className="text-2xl font-semibold text-secondary-900 mb-6">When AI SEO Is Used:</h3>
+          
+          <ul className="space-y-4 text-lg text-secondary-700">
+            <li className="flex items-start">
+              <CheckCircle className="mr-3 h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+              <span><strong>Scaling content production</strong> – AI research and briefs enable faster content creation without sacrificing quality</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-3 h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+              <span><strong>Competitive markets</strong> – AI identifies keyword gaps and content opportunities competitors have missed</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-3 h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+              <span><strong>Large websites</strong> – AI automates technical audits and ongoing monitoring for sites with hundreds or thousands of pages</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-3 h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+              <span><strong>Resource constraints</strong> – AI handles repetitive tasks, allowing small teams to execute enterprise-level SEO strategies</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-3 h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+              <span><strong>Predictive planning</strong> – AI forecasts which content will generate the most traffic and conversions before investment</span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -368,6 +420,122 @@ export default function AISeOPage() {
         </div>
       </section>
 
+      {/* How AI SEO Complements AEO */}
+      <section className="py-24 bg-gradient-to-br from-primary-50 to-white">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-8">
+            How AI SEO Complements AEO
+          </h2>
+          
+          <p className="text-lg text-secondary-700 mb-8">
+            <strong>AI SEO</strong> and <strong>AEO (Answer Engine Optimization)</strong> serve different 
+            but complementary purposes:
+          </p>
+
+          <div className="bg-white rounded-xl shadow-lg overflow-x-auto mb-12">
+            <table className="w-full">
+              <thead className="bg-gradient-to-r from-primary-600 to-primary-500 text-white">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold">Aspect</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold">AI SEO</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold">AEO</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-secondary-900">Definition</td>
+                  <td className="px-6 py-4 text-secondary-700">Using AI tools to automate and improve traditional SEO processes</td>
+                  <td className="px-6 py-4 text-secondary-700">Structuring content to appear in featured snippets and answer boxes</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-secondary-900">Primary Goal</td>
+                  <td className="px-6 py-4 text-secondary-700">Rank higher in organic search results</td>
+                  <td className="px-6 py-4 text-secondary-700">Capture position zero and voice search results</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-secondary-900">Method</td>
+                  <td className="px-6 py-4 text-secondary-700">Machine learning for keyword research, content analysis, and forecasting</td>
+                  <td className="px-6 py-4 text-secondary-700">Question-based content formatting and FAQ schema</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 font-medium text-secondary-900">Scope</td>
+                  <td className="px-6 py-4 text-secondary-700">Entire SEO workflow (research, content, technical, analytics)</td>
+                  <td className="px-6 py-4 text-secondary-700">Content structure and direct answer optimization</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-secondary-900 mb-6">How They Work Together:</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-white rounded-xl p-6 shadow-md border border-primary-100">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold mr-4 flex-shrink-0">1</div>
+                <p className="text-secondary-700">AI SEO identifies question-based keywords → AEO formats content to answer those questions directly</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-md border border-primary-100">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold mr-4 flex-shrink-0">2</div>
+                <p className="text-secondary-700">AI SEO predicts which questions will drive traffic → AEO structures pages to capture featured snippets</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-md border border-primary-100">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold mr-4 flex-shrink-0">3</div>
+                <p className="text-secondary-700">AI SEO monitors featured snippet opportunities → AEO content formats maximize snippet capture rate</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-md border border-primary-100">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold mr-4 flex-shrink-0">4</div>
+                <p className="text-secondary-700">AI SEO analyzes which answer formats perform best → AEO strategy adapts based on data</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-primary-600 to-primary-500 rounded-xl p-8 text-white mb-8">
+            <h4 className="text-2xl font-bold mb-4">Example Workflow:</h4>
+            <ul className="space-y-3 text-primary-50">
+              <li className="flex items-start">
+                <ArrowRight className="mr-3 h-5 w-5 flex-shrink-0 mt-1" />
+                <span>AI SEO discovers "What is conversion rate optimization?" gets 5,400 monthly searches</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="mr-3 h-5 w-5 flex-shrink-0 mt-1" />
+                <span>AI SEO predicts a featured snippet opportunity based on low competition</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="mr-3 h-5 w-5 flex-shrink-0 mt-1" />
+                <span>AEO structures the answer: 40-60 word definition at top, FAQ schema, clear H2 question headings</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="mr-3 h-5 w-5 flex-shrink-0 mt-1" />
+                <span>AI SEO monitors ranking position and featured snippet wins</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="mr-3 h-5 w-5 flex-shrink-0 mt-1" />
+                <span><strong>Result:</strong> Featured snippet captured within 3 weeks, driving 3x more traffic than traditional ranking alone</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="text-center">
+            <Link 
+              href="/services/answer-engine-optimization"
+              className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold text-lg"
+            >
+              Learn more about Answer Engine Optimization (AEO)
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* AI Process Visualization */}
       <section className="py-24 bg-gradient-to-br from-secondary-50 to-white relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -419,328 +587,157 @@ export default function AISeOPage() {
         </div>
       </section>
 
-      {/* Interactive AI Results Dashboard */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Proven AI SEO Results
+      {/* Comprehensive FAQ Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
+              Frequently Asked Questions About AI SEO
             </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              See the real impact of AI-powered SEO on business growth and online visibility.
+            <p className="text-lg text-secondary-600">
+              Direct answers to common questions about AI-powered search engine optimization
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {results.map((result, index) => (
-              <div key={result.metric} className="text-center group">
-                <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                  {/* Animated Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
-                      {result.value}
-                    </div>
-                    <div className="text-lg font-semibold text-secondary-900 mb-2">{result.metric}</div>
-                    <div className="text-sm text-secondary-500">{result.description}</div>
-                    
-                    {/* AI Success Indicator */}
-                    <div className="mt-4 flex items-center justify-center">
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse mr-2"></div>
-                      <span className="text-xs text-green-600 font-medium">AI Optimized</span>
-                    </div>
-                  </div>
-                </div>
+          
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-3 flex items-start">
+                  <HelpCircle className="mr-3 h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+                  {faq.question}
+                </h3>
+                <p className="text-secondary-700 leading-relaxed pl-9">
+                  {faq.answer}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* AI Performance Graph */}
-          <div className="mt-16 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-3xl p-8 border border-primary-100">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-                AI Performance Analytics Dashboard
-              </h3>
-              <p className="text-lg text-secondary-600">
-                Real-time monitoring and predictive analytics powered by artificial intelligence
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-2xl p-6 shadow-sm">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm font-medium text-secondary-600">AI Processing Power</div>
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                </div>
-                <div className="text-2xl font-bold text-primary-600">99.9%</div>
-                <div className="text-xs text-secondary-500">Uptime</div>
-              </div>
-              
-              <div className="bg-white rounded-2xl p-6 shadow-sm">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm font-medium text-secondary-600">Data Points Analyzed</div>
-                  <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                </div>
-                <div className="text-2xl font-bold text-primary-600">2.4M+</div>
-                <div className="text-xs text-secondary-500">Per Day</div>
-              </div>
-              
-              <div className="bg-white rounded-2xl p-6 shadow-sm">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm font-medium text-secondary-600">AI Accuracy Rate</div>
-                  <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-                </div>
-                <div className="text-2xl font-bold text-primary-600">94.7%</div>
-                <div className="text-xs text-secondary-500">Prediction Rate</div>
-              </div>
-            </div>
+          <div className="mt-12 text-center">
+            <p className="text-lg text-secondary-700 mb-6">
+              Have more questions about AI SEO?
+            </p>
+            <Button size="lg" asChild className="bg-gradient-to-r from-primary-600 to-primary-500">
+              <Link href="/contact">
+                Schedule a Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Educational Blog Section - How AI is changing SEO */}
+      {/* Related Services - Internal Linking */}
       <section className="py-24 bg-white border-t border-gray-100">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-6">
-            How AI SEO Works — And How It’s Changing Search
-          </h2>
-          <p className="text-lg leading-8 text-secondary-700 mb-6">
-            Artificial intelligence is reshaping search faster than any previous shift. The biggest change isn’t
-            “robots doing SEO,” it’s the ability to model search intent at scale, generate better content faster, and
-            learn from performance in near real‑time. Below is a concise walkthrough of what modern AI SEO looks like
-            in practice and how to adapt your strategy.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-secondary-900 mt-10 mb-3">1) Intent modeling with AI</h3>
-          <p className="text-secondary-700 mb-4">
-            Large language models synthesize thousands of ranking pages to understand the topic, entities, and
-            sub‑questions users expect. Instead of guessing keywords, we build topic clusters that map to searcher
-            journeys (problem → consideration → decision) and let AI reveal the gaps competitors miss.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-3">2) Content that is complete, not just long</h3>
-          <p className="text-secondary-700 mb-4">
-            AI assistants accelerate outlines, briefs, FAQs and schema. Human editors ensure expertise, point of view,
-            and examples. The result is comprehensive content that satisfies intent quickly and earns engagement signals
-            (time on page, scroll depth, clicks) without fluff.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-3">3) Entity, schema and internal links — programmatically</h3>
-          <p className="text-secondary-700 mb-4">
-            Search now understands entities (people, places, concepts). We use AI to suggest the right entities,
-            add structured data, and generate contextual internal links between pillars and supporting articles. This
-            clarifies topical authority and speeds up indexing.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-3">4) Continuous optimization with predictive analytics</h3>
-          <p className="text-secondary-700 mb-4">
-            Models forecast which pages will grow or stall. We test titles, intro hooks, FAQs and CTAs, then push
-            improvements on a weekly cadence. Instead of waiting months for “big rewrites,” AI enables small wins that
-            compound.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-3">5) What to measure</h3>
-          <ul className="list-disc pl-6 text-secondary-700 space-y-2 mb-6">
-            <li>Topical coverage and internal link depth across clusters</li>
-            <li>Impressions → CTR improvements from title/meta experiments</li>
-            <li>New ranking queries discovered per month (query expansion)</li>
-            <li>Conversion actions from organic (demos, calls, form submits)</li>
-            <li>Time to publish and time to first keyword wins</li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-3">Quick implementation checklist</h3>
-          <ul className="list-disc pl-6 text-secondary-700 space-y-2 mb-10">
-            <li>Map 3–5 core topics, then generate supporting subtopics with AI</li>
-            <li>Create human‑edited briefs and outlines; add FAQs and schema</li>
-            <li>Publish weekly; interlink new pages to pillars and relevant services</li>
-            <li>Run title/intro tests; measure CTR and conversion lift</li>
-            <li>Review predictive dashboards and refresh underperformers bi‑weekly</li>
-          </ul>
-
-          <div className="rounded-2xl bg-gradient-to-r from-primary-50 to-secondary-50 p-6 border border-primary-100">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h4 className="text-xl font-semibold text-secondary-900">Want our 30‑day AI SEO action plan?</h4>
-                <p className="text-secondary-700">We’ll audit your topics, generate a publishing calendar, and set up testing.</p>
-              </div>
-              <div className="flex gap-3">
-                <Button asChild className="bg-gradient-to-r from-primary-600 to-primary-500">
-                  <Link href="/contact">Get the Plan</Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href="/blog/essential-website-features-2024">Read a related article</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Services Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
-              Related Services
+              Explore Related Services
             </h2>
-            <p className="text-lg leading-8 text-secondary-600">
-              AI SEO works best when combined with our other digital marketing services. 
-              Discover the complete solution for your business growth.
+            <p className="text-lg text-secondary-600">
+              AI SEO works best when combined with complementary optimization strategies
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* AEO Service */}
+            <Link 
+              href="/services/answer-engine-optimization"
+              className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-md border border-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-100 group-hover:bg-blue-200 transition-colors mb-6">
+                <MessageCircle className="h-7 w-7 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-blue-600 transition-colors">
+                Answer Engine Optimization (AEO)
+              </h3>
+              <p className="text-secondary-600 mb-4">
+                Structure content to capture featured snippets and voice search results. AEO formats the answers AI SEO identifies.
+              </p>
+              <div className="inline-flex items-center text-blue-600 font-medium group-hover:underline">
+                Learn About AEO
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            {/* GEO Service */}
+            <Link 
+              href="/services/generative-engine-optimization"
+              className="group bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-md border border-purple-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-100 group-hover:bg-purple-200 transition-colors mb-6">
+                <Sparkles className="h-7 w-7 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-purple-600 transition-colors">
+                Generative Engine Optimization (GEO)
+              </h3>
+              <p className="text-secondary-600 mb-4">
+                Optimize content for AI-generated responses from ChatGPT, Perplexity, and Google AI Overviews.
+              </p>
+              <div className="inline-flex items-center text-purple-600 font-medium group-hover:underline">
+                Learn About GEO
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
             {/* Traditional SEO */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 group-hover:bg-green-200 transition-colors mb-4">
-                <Target className="h-6 w-6 text-green-600" />
+            <Link 
+              href="/services/seo"
+              className="group bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-md border border-green-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-green-100 group-hover:bg-green-200 transition-colors mb-6">
+                <Target className="h-7 w-7 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-green-600 transition-colors">
-                Traditional SEO
+                Traditional SEO Services
               </h3>
               <p className="text-secondary-600 mb-4">
                 Proven SEO strategies that complement AI optimization for comprehensive search visibility.
               </p>
-              <Link 
-                href="/services/seo" 
-                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium group-hover:underline"
-              >
-                Learn More
+              <div className="inline-flex items-center text-green-600 font-medium group-hover:underline">
+                Learn About Traditional SEO
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Local SEO */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
-                <Globe className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-blue-600 transition-colors">
-                Local/GEO SEO
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Dominate local search results with AI-enhanced local SEO strategies.
-              </p>
-              <Link 
-                href="/services/local-seo" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Web Development */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4">
-                <Code className="h-6 w-6 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-orange-600 transition-colors">
-                Web Development
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                AI-optimized websites built for conversions and search engine success.
-              </p>
-              <Link 
-                href="/services/web-development" 
-                className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* UI/UX Design */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4">
-                <Users className="h-6 w-6 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-purple-600 transition-colors">
-                UI/UX Design
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                User-centered design that works seamlessly with AI SEO strategies.
-              </p>
-              <Link 
-                href="/services/ui-ux-design" 
-                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* CRO Services */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 group-hover:bg-red-200 transition-colors mb-4">
-                <TrendingUp className="h-6 w-6 text-red-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-red-600 transition-colors">
-                CRO Services
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Convert AI-driven traffic into customers with conversion rate optimization.
-              </p>
-              <Link 
-                href="/services/cro-lead-generation" 
-                className="inline-flex items-center text-red-600 hover:text-red-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Content Strategy */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-100 group-hover:bg-teal-200 transition-colors mb-4">
-                <FileText className="h-6 w-6 text-teal-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-teal-600 transition-colors">
-                Content Strategy
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                AI-optimized content that ranks and converts for maximum ROI.
-              </p>
-              <Link 
-                href="/services/digital-marketing" 
-                className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
+      {/* Low-Pressure CTA Section */}
       <section className="py-24 bg-gradient-to-r from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-blue-500/20 opacity-30"></div>
           <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
         </div>
         
-        <div className="mx-auto max-w-4xl text-center relative z-10">
+        <div className="mx-auto max-w-4xl text-center relative z-10 px-6">
           <div className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-sm px-6 py-3 text-sm font-medium text-white/90 mb-6 border border-white/20">
-            <Cpu className="mr-2 h-4 w-4" />
-            AI-POWERED SEO READY
+            <Brain className="mr-2 h-4 w-4" />
+            AI + HUMAN EXPERTISE
           </div>
           
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Experience AI-Powered SEO?
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Ready to Accelerate Your SEO with AI?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Join the future of search engine optimization and leave your competitors behind.
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            Get a free consultation to discover how AI SEO can help your business rank faster, 
+            scale content production, and compete with industry leaders.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100" asChild>
-              <Link href="/contact">Get Free AI SEO Audit</Link>
+            <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 shadow-xl" asChild>
+              <Link href="/contact">
+                Get Free AI SEO Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600" asChild>
-              <Link href="/pricing">View Pricing</Link>
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary-600" asChild>
+              <Link href="/case-studies">View Case Studies</Link>
             </Button>
           </div>
+
+          <p className="mt-6 text-sm text-primary-200">
+            No aggressive sales. Just honest advice on whether AI SEO is right for your business.
+          </p>
         </div>
       </section>
     </div>
