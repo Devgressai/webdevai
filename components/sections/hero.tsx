@@ -88,7 +88,7 @@ export function Hero() {
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl leading-7 sm:leading-8 text-white/90 max-w-3xl mx-auto">
-            Transform your business with AI-powered SEO, conversion-focused web development, and proven digital marketing strategies that deliver measurable results.
+            Webvello provides AI-powered SEO, conversion-focused web development, and digital marketing strategies that increase organic traffic by 300%+ and deliver measurable business results.
           </p>
 
           {/* CTA Buttons */}

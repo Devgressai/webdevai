@@ -41,7 +41,7 @@ const processSteps = [
   {
     step: "1",
     title: "Houston Market Audit",
-    description: "We analyze how AI systems currently respond to Houston-specific queries in your industry. What's being cited? Who dominates energy, healthcare, or B2B searches? Where are the gaps in your sector?"
+    description: "Houston market audit analyzes how AI systems currently respond to Houston-specific queries in your industry, identifies who dominates energy, healthcare, or B2B searches, and locates gaps in your sector."
   },
   {
     step: "2",
@@ -68,7 +68,7 @@ const processSteps = [
 const faqs = [
   {
     question: "How does GEO address Houston's specialized procurement processes?",
-    answer: "Houston's energy, medical, and B2B sectors follow industry-specific procurement rhythms. GEO positions you for the moments when procurement teams actively research vendors. We understand RFQ cycles, regulatory review periods, and contract renewal windows—timing optimization for when decision-makers search."
+    answer: "Houston's energy, medical, and B2B sectors follow industry-specific procurement rhythms. GEO positions businesses for the moments when procurement teams actively research vendors. GEO optimization aligns with RFQ cycles, regulatory review periods, and contract renewal windows—timing optimization for when decision-makers search."
   },
   {
     question: "Can GEO integrate with technical buyers' research workflows?",
@@ -151,7 +151,7 @@ export default function GEOHoustonPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Houston's industries operate at specialized scales—energy systems, medical hierarchies, manufacturing networks. GEO builds visibility into industry-specific buyer flows, positioning you where decision-makers already search. As part of our services <Link href="/services/texas" className="text-orange-300 hover:text-orange-200 underline">throughout Texas</Link>, we help Houston businesses gain competitive advantage through AI-optimized visibility.
+                Houston's industries operate at specialized scales—energy systems, medical hierarchies, manufacturing networks. GEO builds visibility into industry-specific buyer flows, positioning businesses where decision-makers already search. As part of Webvello's services <Link href="/services/texas" className="text-orange-300 hover:text-orange-200 underline">throughout Texas</Link>, Houston businesses gain competitive advantage through AI-optimized visibility.
               </p>
             </div>
             

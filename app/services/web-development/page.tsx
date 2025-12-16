@@ -54,7 +54,7 @@ const features = [
 const faqs = [
   {
     question: "What is custom web development?",
-    answer: "Custom web development is the process of building websites from scratch using programming languages and frameworks rather than using templates or website builders. At Webvello, custom development means writing code specifically for your business needs using React, Tailwind CSS, and Next.js—creating unique websites optimized for your specific goals rather than adapting generic templates."
+    answer: "Custom web development builds websites from scratch using programming languages and frameworks rather than templates or website builders. Webvello custom development writes code specifically for business needs using React, Tailwind CSS, and Next.js—creating unique websites optimized for specific goals rather than adapting generic templates."
   },
   {
     question: "Why should I choose React and Tailwind over WordPress or template builders?",
@@ -138,7 +138,7 @@ export default function WebDevelopmentPage() {
                 Webvello builds custom websites using React and Tailwind CSS—a modern technology stack focused on performance, scalability, and search visibility.
               </p>
               <p className="text-secondary-600">
-                Unlike template-based solutions, custom React + Tailwind development provides complete control over user experience, page speed, and technical SEO implementation.
+                Custom React + Tailwind development provides complete control over user experience, page speed, and technical SEO implementation, unlike template-based solutions.
               </p>
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -168,7 +168,7 @@ export default function WebDevelopmentPage() {
                 What is Web Development at Webvello?
               </h2>
               <p className="text-lg text-secondary-700 mb-6">
-                <strong>Web development at Webvello</strong> is the process of building custom websites and web applications using React, Tailwind CSS, and Next.js. This approach focuses on creating performance-optimized, SEO-ready websites with scalable architecture designed for business growth.
+                <strong>Web development at Webvello</strong> builds custom websites and web applications using React, Tailwind CSS, and Next.js. This approach creates performance-optimized, SEO-ready websites with scalable architecture designed for business growth.
               </p>
               <p className="text-lg text-secondary-600 mb-6">
                 Webvello's web development services differ from template-based website builders and WordPress sites. The team writes custom code using component-based architecture, allowing for unique designs, advanced functionality, and precise control over performance metrics like Core Web Vitals.
@@ -344,7 +344,7 @@ export default function WebDevelopmentPage() {
               How Webvello Builds Custom Websites
             </h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              A four-phase development process ensuring websites are built correctly, on time, and aligned with business goals.
+              Webvello's four-phase development process builds websites correctly, on time, and aligned with business goals through discovery, design, development, and launch phases.
             </p>
           </div>
 

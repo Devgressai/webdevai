@@ -63,7 +63,7 @@ const process = [
   {
     step: "01",
     title: "AI Analysis & Strategy",
-    description: "Our AI analyzes your current performance, competitors, and market opportunities to create a data-driven strategy.",
+    description: "AI SEO analysis evaluates current performance, competitors, and market opportunities to create a data-driven strategy.",
     duration: "1-2 weeks",
     icon: Brain
   },
@@ -94,7 +94,7 @@ const process = [
 const faqs = [
   {
     question: "What is AI SEO?",
-    answer: "AI SEO is the use of artificial intelligence and machine learning tools to automate and improve traditional search engine optimization processes. AI SEO includes automated keyword research, content optimization recommendations, predictive performance forecasting, and continuous competitor monitoring. AI SEO enhances human SEO strategy by processing large datasets faster and identifying opportunities humans might miss."
+    answer: "AI SEO uses artificial intelligence and machine learning tools to automate and improve traditional search engine optimization processes. AI SEO includes automated keyword research, content optimization recommendations, predictive performance forecasting, and continuous competitor monitoring. AI SEO enhances human SEO strategy by processing large datasets faster and identifying opportunities humans might miss."
   },
   {
     question: "How is AI SEO different from traditional SEO?",
@@ -196,7 +196,7 @@ export default function AISeOPage() {
               {/* Direct Answer Summary - AI Citable */}
               <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-primary-100 mb-8">
                 <p className="text-lg leading-8 text-secondary-900 font-medium">
-                  <strong>AI SEO</strong> is the application of artificial intelligence and machine learning 
+                  <strong>AI SEO</strong> applies artificial intelligence and machine learning 
                   technologies to traditional search engine optimization tasks. AI SEO automates keyword research, 
                   content analysis, competitor monitoring, and performance forecasting, enabling SEO professionals 
                   to make faster, more accurate, data-driven decisions.
@@ -278,7 +278,7 @@ export default function AISeOPage() {
           </h2>
           
           <p className="text-lg text-secondary-700 mb-8">
-            <strong>AI SEO</strong> refers to the use of artificial intelligence technologies—including 
+            <strong>AI SEO</strong> uses artificial intelligence technologies—including 
             natural language processing, machine learning, and predictive analytics—to improve and 
             accelerate traditional search engine optimization processes. AI SEO works best when built on a solid{' '}
             <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 font-medium underline">

@@ -141,7 +141,7 @@ export default function HomePage() {
                 What Is Webvello?
               </h2>
               <p className="text-xl text-secondary-700 leading-relaxed mb-8">
-                <strong>Webvello</strong> is a digital marketing agency specializing in <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 underline">SEO</Link> (Search Engine Optimization), <Link href="/services/generative-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">GEO</Link> (Generative Engine Optimization), <Link href="/services/answer-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">AEO</Link> (Answer Engine Optimization), and <Link href="/services/web-development" className="text-primary-600 hover:text-primary-700 underline">custom web development</Link>. The agency helps businesses improve their visibility in both traditional search engines like Google and AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
+                <strong>Webvello</strong> is a digital marketing agency specializing in <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 underline">SEO</Link> (Search Engine Optimization), <Link href="/services/generative-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">GEO</Link> (Generative Engine Optimization), <Link href="/services/answer-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">AEO</Link> (Answer Engine Optimization), and <Link href="/services/web-development" className="text-primary-600 hover:text-primary-700 underline">custom web development</Link>. Webvello improves business visibility in traditional search engines like Google and AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
               </p>
               <p className="text-lg text-secondary-600 leading-relaxed">
                 Webvello serves businesses across the United States, combining data-driven strategies with transparent reporting. Core services include AI-powered SEO, local SEO for geographic targeting, and conversion-focused website development using React and Tailwind CSS.
@@ -261,7 +261,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">How Does Webvello Work?</h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              Webvello follows a four-step process: strategic focus, senior expertise, measurable results, and transparent reporting.
+              Webvello's process includes strategic focus on revenue growth services, senior-level expertise for implementation, measurable results through data-driven optimization, and transparent reporting via weekly updates and shared dashboards.
             </p>
           </div>
           <div className="relative grid grid-cols-1 md:grid-cols-4 gap-6">

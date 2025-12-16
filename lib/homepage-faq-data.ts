@@ -9,7 +9,7 @@ export interface FAQItem {
 export const homepageFAQData: FAQItem[] = [
   {
     question: "What is Webvello?",
-    answer: "Webvello is a digital marketing agency specializing in SEO (Search Engine Optimization), GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and custom web development. Webvello helps businesses improve their visibility in both traditional search engines like Google and AI-powered search platforms like ChatGPT, Perplexity, and Google AI Overviews. The agency serves businesses across the United States with data-driven strategies, transparent reporting, and conversion-focused design."
+    answer: "Webvello is a digital marketing agency specializing in SEO (Search Engine Optimization), GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and custom web development. Webvello improves business visibility in traditional search engines like Google and AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews. The agency serves businesses across the United States using data-driven strategies, transparent reporting, and conversion-focused design."
   },
   {
     question: "What services does Webvello offer?",
