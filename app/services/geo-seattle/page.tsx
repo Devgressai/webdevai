@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Seattle, WA | AI Search Optimization',
-  description: 'Get your Seattle business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  title: 'Seattle Growth Velocity: First-Mover GEO Advantage',
+  description: 'Seattle\'s windows close fast. GEO establishes citations before saturation. Scaling momentum in emerging markets.',
   keywords: 'GEO Seattle, AI search optimization Seattle, generative engine optimization Seattle, ChatGPT SEO Seattle, Perplexity optimization',
   openGraph: {
-    title: 'GEO Services in Seattle, WA | AI Search Optimization',
-    description: 'Get your Seattle business cited by ChatGPT, Perplexity & Google AI.',
+    title: 'Seattle Growth Velocity: First-Mover GEO Advantage',
+    description: 'Seattle\'s windows close fast. GEO establishes citations before saturation. Scaling momentum in emerging markets.',
     url: 'https://www.webvello.com/services/geo-seattle',
     type: 'website',
   },
@@ -53,8 +53,8 @@ export default function GEOSeattlePage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-seattle',
-    title: 'GEO Services in Seattle, WA | AI Search Optimization',
-    description: 'Get your Seattle business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'Seattle Growth Velocity: First-Mover GEO Advantage',
+    description: 'Seattle\'s windows close fast. GEO establishes citations before saturation. Scaling momentum in emerging markets.',
     geo: {
       city: 'Seattle',
       cityState: 'Seattle, WA'

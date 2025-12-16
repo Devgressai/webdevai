@@ -5,15 +5,15 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Austin, Texas | AI Search Optimization',
-  description: 'Get your Austin business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  title: 'Austin Tech Growth & AI Visibility | Webvello GEO',
+  description: 'Dominate ChatGPT & AI search in Austin\'s fast-moving tech ecosystem. Get your business cited before competitors saturate the market.',
   keywords: ['geo austin', 'ai seo austin', 'chatgpt optimization austin', 'generative engine optimization austin'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-austin',
   },
   openGraph: {
-    title: 'GEO Services in Austin, Texas | AI Search Optimization',
-    description: 'Get your Austin business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'Austin Tech Growth & AI Visibility | Webvello GEO',
+    description: 'Dominate ChatGPT & AI search in Austin\'s fast-moving tech ecosystem. Get your business cited before competitors saturate the market.',
     url: 'https://www.webvello.com/services/geo-austin',
     type: 'website',
   }
@@ -109,8 +109,8 @@ export default function GEOAustinPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-austin',
-    title: 'GEO Services in Austin, Texas | AI Search Optimization',
-    description: 'Get your Austin business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'Austin Tech Growth & AI Visibility | Webvello GEO',
+    description: 'Dominate ChatGPT & AI search in Austin\'s fast-moving tech ecosystem. Get your business cited before competitors saturate the market.',
     geo: {
       city: 'Austin',
       cityState: 'Austin, TX'

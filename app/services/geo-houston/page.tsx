@@ -5,15 +5,15 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Houston, Texas | AI Search Optimization',
-  description: 'Get your Houston business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for Energy Capital businesses.',
+  title: 'Houston B2B Systems: GEO for Execution at Scale',
+  description: 'Integrate GEO into Houston operations. Energy, medical, B2B positioning optimized for procurement and decision-making workflows.',
   keywords: ['geo houston', 'generative engine optimization houston', 'ai seo houston', 'chatgpt optimization houston texas', 'perplexity optimization houston'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-houston',
   },
   openGraph: {
-    title: 'GEO Services in Houston, Texas | AI Search Optimization',
-    description: 'Get your Houston business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for Energy Capital businesses.',
+    title: 'Houston B2B Systems: GEO for Execution at Scale',
+    description: 'Integrate GEO into Houston operations. Energy, medical, B2B positioning optimized for procurement and decision-making workflows.',
     url: 'https://www.webvello.com/services/geo-houston',
     type: 'website',
   }
@@ -106,8 +106,8 @@ export default function GEOHoustonPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-houston',
-    title: 'GEO Services in Houston, Texas | AI Search Optimization',
-    description: 'Get your Houston business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for Energy Capital businesses.',
+    title: 'Houston B2B Systems: GEO for Execution at Scale',
+    description: 'Integrate GEO into Houston operations. Energy, medical, B2B positioning optimized for procurement and decision-making workflows.',
     geo: {
       city: 'Houston',
       cityState: 'Houston, TX'

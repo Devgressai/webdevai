@@ -5,15 +5,15 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Miami, Florida | AI Search Optimization',
-  description: 'Get your Miami business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for South Florida businesses.',
+  title: 'Miami GEO: High-Intent AI Citations for ROI',
+  description: 'Convert Miami buyers with AI citations. ChatGPT positioning emphasizes proven results, efficiency, and ROI in South Florida premium markets.',
   keywords: ['geo miami', 'generative engine optimization miami', 'ai seo miami', 'chatgpt optimization florida', 'perplexity optimization miami'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-miami',
   },
   openGraph: {
-    title: 'GEO Services in Miami, Florida | AI Search Optimization',
-    description: 'Get your Miami business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for South Florida businesses.',
+    title: 'Miami GEO: High-Intent AI Citations for ROI',
+    description: 'Convert Miami buyers with AI citations. ChatGPT positioning emphasizes proven results, efficiency, and ROI in South Florida premium markets.',
     url: 'https://www.webvello.com/services/geo-miami',
     type: 'website',
   }
@@ -106,8 +106,8 @@ export default function GEOMiamiPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-miami',
-    title: 'GEO Services in Miami, Florida | AI Search Optimization',
-    description: 'Get your Miami business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for South Florida businesses.',
+    title: 'Miami GEO: High-Intent AI Citations for ROI',
+    description: 'Convert Miami buyers with AI citations. ChatGPT positioning emphasizes proven results, efficiency, and ROI in South Florida premium markets.',
     geo: {
       city: 'Miami',
       cityState: 'Miami, FL'

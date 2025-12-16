@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Atlanta, GA | AI Search Optimization',
-  description: 'Get your Atlanta business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  title: 'Atlanta Operations: Logistics & Systems GEO',
+  description: 'Atlanta operational complexity demands strategic positioning. Logistics, corporate, startup GEO aligned with decisions.',
   keywords: 'GEO Atlanta, AI search optimization Atlanta, generative engine optimization Atlanta, ChatGPT SEO Atlanta, Perplexity optimization',
   openGraph: {
-    title: 'GEO Services in Atlanta, GA | AI Search Optimization',
-    description: 'Get your Atlanta business cited by ChatGPT, Perplexity & Google AI.',
+    title: 'Atlanta Operations: Logistics & Systems GEO',
+    description: 'Atlanta operational complexity demands strategic positioning. Logistics, corporate, startup GEO aligned with decisions.',
     url: 'https://www.webvello.com/services/geo-atlanta',
     type: 'website',
   },
@@ -53,8 +53,8 @@ export default function GEOAtlantaPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-atlanta',
-    title: 'GEO Services in Atlanta, GA | AI Search Optimization',
-    description: 'Get your Atlanta business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'Atlanta Operations: Logistics & Systems GEO',
+    description: 'Atlanta operational complexity demands strategic positioning. Logistics, corporate, startup GEO aligned with decisions.',
     geo: {
       city: 'Atlanta',
       cityState: 'Atlanta, GA'

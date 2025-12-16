@@ -5,15 +5,15 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'Chicago GEO: B2B AI Visibility for Midwest Financial & Manufacturing | Webvello',
-  description: 'Get your Chicago business cited by ChatGPT, Perplexity & Google AI. Webvello's remote GEO services help Midwest B2B firms dominate AI search. Free Chicago audit included.',
+  title: 'Chicago Complexity: Multi-Stakeholder GEO Strategy',
+  description: 'Navigate Chicago institutional hierarchies with GEO. Procurement, executive, technical positioning for complex B2B sales cycles.',
   keywords: ['geo chicago', 'generative engine optimization chicago', 'ai seo chicago', 'chatgpt optimization chicago', 'perplexity optimization chicago'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-chicago',
   },
   openGraph: {
-    title: 'GEO Services in Chicago, Illinois | AI Search Optimization',
-    description: 'Get your Chicago business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Midwest business hub.',
+    title: 'Chicago Complexity: Multi-Stakeholder GEO Strategy',
+    description: 'Navigate Chicago institutional hierarchies with GEO. Procurement, executive, technical positioning for complex B2B sales cycles.',
     url: 'https://www.webvello.com/services/geo-chicago',
     type: 'website',
   }
@@ -106,8 +106,8 @@ export default function GEOChicagoPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-chicago',
-    title: 'GEO Services in Chicago, Illinois | AI Search Optimization',
-    description: 'Get your Chicago business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Midwest business hub.',
+    title: 'Chicago Complexity: Multi-Stakeholder GEO Strategy',
+    description: 'Navigate Chicago institutional hierarchies with GEO. Procurement, executive, technical positioning for complex B2B sales cycles.',
     geo: {
       city: 'Chicago',
       cityState: 'Chicago, IL'

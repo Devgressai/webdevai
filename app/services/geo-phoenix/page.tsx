@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Phoenix, Arizona | AI Search Optimization',
-  description: 'Get your Phoenix business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Valley of the Sun.',
+  title: 'Phoenix Conversion: Fast-Moving Buyer GEO',
+  description: 'Phoenix buyers decide quickly. GEO establishes credibility before purchase windows close. ROI-focused Valley positioning.',
   keywords: ['geo phoenix', 'generative engine optimization phoenix', 'ai seo phoenix', 'chatgpt optimization arizona', 'perplexity optimization phoenix'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-phoenix',
@@ -105,8 +105,8 @@ export default function GEOPhoenixPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-phoenix',
-    title: 'GEO Services in Phoenix, Arizona | AI Search Optimization',
-    description: 'Get your Phoenix business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for the Valley of the Sun.',
+    title: 'Phoenix Conversion: Fast-Moving Buyer GEO',
+    description: 'Phoenix buyers decide quickly. GEO establishes credibility before purchase windows close. ROI-focused Valley positioning.',
     geo: {
       city: 'Phoenix',
       cityState: 'Phoenix, AZ'

@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in San Diego, CA | AI Search Optimization',
-  description: 'Get your San Diego business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  title: 'San Diego Efficiency: High-Intent ROI GEO',
+  description: 'San Diego prospects convert fast. GEO prioritizes high-intent discovery moments. ROI-focused lead quality positioning.',
   keywords: 'GEO San Diego, AI search optimization San Diego, generative engine optimization San Diego, ChatGPT SEO San Diego, Perplexity optimization',
   openGraph: {
-    title: 'GEO Services in San Diego, CA | AI Search Optimization',
-    description: 'Get your San Diego business cited by ChatGPT, Perplexity & Google AI.',
+    title: 'San Diego Efficiency: High-Intent ROI GEO',
+    description: 'San Diego prospects convert fast. GEO prioritizes high-intent discovery moments. ROI-focused lead quality positioning.',
     url: 'https://www.webvello.com/services/geo-san-diego',
     type: 'website',
   },
@@ -53,8 +53,8 @@ export default function GEOSanDiegoPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-san-diego',
-    title: 'GEO Services in San Diego, CA | AI Search Optimization',
-    description: 'Get your San Diego business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'San Diego Efficiency: High-Intent ROI GEO',
+    description: 'San Diego prospects convert fast. GEO prioritizes high-intent discovery moments. ROI-focused lead quality positioning.',
     geo: {
       city: 'San Diego',
       cityState: 'San Diego, CA'

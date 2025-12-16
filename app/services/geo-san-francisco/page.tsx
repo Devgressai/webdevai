@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in San Francisco, CA | AI Search',
-  description: 'Get your SF business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for Bay Area tech capital.',
+  title: 'SF Velocity: Technical Credibility at Startup Speed',
+  description: 'Match SF\'s rapid pace. Technical positioning for founders, CTOs, investors—citations before next funding round closes.',
   keywords: ['geo san francisco', 'generative engine optimization sf', 'ai seo san francisco'],
   alternates: { canonical: 'https://www.webvello.com/services/geo-san-francisco' },
   openGraph: {
@@ -56,8 +56,8 @@ export default function GEOSanFranciscoPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-san-francisco',
-    title: 'GEO Services in San Francisco, CA | AI Search',
-    description: 'Get your SF business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for Bay Area tech capital.',
+    title: 'SF Velocity: Technical Credibility at Startup Speed',
+    description: 'Match SF\'s rapid pace. Technical positioning for founders, CTOs, investors—citations before next funding round closes.',
     geo: { city: 'San Francisco', cityState: 'San Francisco, CA' },
     faqs: faqs,
     breadcrumbs: [

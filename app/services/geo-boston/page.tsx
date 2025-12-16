@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Boston, MA | AI Search Optimization',
-  description: 'Get your Boston business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  title: 'Boston Complexity: Institutional Credibility GEO',
+  description: 'Boston\'s academic and medical sophistication demands nuanced GEO. Regulatory, institutional, clinical positioning.',
   keywords: 'GEO Boston, AI search optimization Boston, generative engine optimization Boston, ChatGPT SEO Boston, Perplexity optimization',
   openGraph: {
-    title: 'GEO Services in Boston, MA | AI Search Optimization',
-    description: 'Get your Boston business cited by ChatGPT, Perplexity & Google AI.',
+    title: 'Boston Complexity: Institutional Credibility GEO',
+    description: 'Boston\'s academic and medical sophistication demands nuanced GEO. Regulatory, institutional, clinical positioning.',
     url: 'https://www.webvello.com/services/geo-boston',
     type: 'website',
   },
@@ -53,8 +53,8 @@ export default function GEOBostonPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-boston',
-    title: 'GEO Services in Boston, MA | AI Search Optimization',
-    description: 'Get your Boston business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'Boston Complexity: Institutional Credibility GEO',
+    description: 'Boston\'s academic and medical sophistication demands nuanced GEO. Regulatory, institutional, clinical positioning.',
     geo: {
       city: 'Boston',
       cityState: 'Boston, MA'

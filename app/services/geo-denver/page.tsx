@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Denver, CO | AI Search Optimization',
-  description: 'Get your Denver business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  title: 'Denver Expansion: GEO for Market Acceleration',
+  description: 'Capture Denver\'s explosive growth before competitors do. GEO positions for emerging neighborhoods and market velocity.',
   keywords: 'GEO Denver, AI search optimization Denver, generative engine optimization Denver, ChatGPT SEO Denver, Perplexity optimization',
   openGraph: {
-    title: 'GEO Services in Denver, CO | AI Search Optimization',
-    description: 'Get your Denver business cited by ChatGPT, Perplexity & Google AI.',
+    title: 'Denver Expansion: GEO for Market Acceleration',
+    description: 'Capture Denver\'s explosive growth before competitors do. GEO positions for emerging neighborhoods and market velocity.',
     url: 'https://www.webvello.com/services/geo-denver',
     type: 'website',
   },
@@ -53,8 +53,8 @@ export default function GEODenverPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-denver',
-    title: 'GEO Services in Denver, CO | AI Search Optimization',
-    description: 'Get your Denver business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'Denver Expansion: GEO for Market Acceleration',
+    description: 'Capture Denver\'s explosive growth before competitors do. GEO positions for emerging neighborhoods and market velocity.',
     geo: {
       city: 'Denver',
       cityState: 'Denver, CO'

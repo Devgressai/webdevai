@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'NYC GEO: Dominate AI Search in Manhattan, Brooklyn & All 5 Boroughs | Webvello',
-  description: 'Get your NYC business cited by ChatGPT, Perplexity & Google AI. Webvello's remote GEO services help all five boroughs dominate AI search. Free NYC audit included.',
+  title: 'NYC Hyperlocal GEO: Borough-Specific Authority',
+  description: 'Dominate NYC hyperlocal AI search across all five boroughs. Manhattan, Brooklyn positioning reflects neighborhood sophistication.',
   keywords: ['geo new york', 'generative engine optimization nyc', 'ai seo new york', 'chatgpt optimization nyc'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-new-york',
@@ -58,8 +58,8 @@ export default function GEONewYorkPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-new-york',
-    title: 'GEO Services in New York, NY | AI Search Optimization',
-    description: 'Get your NYC business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for all five boroughs.',
+    title: 'NYC Hyperlocal GEO: Borough-Specific Authority',
+    description: 'Dominate NYC hyperlocal AI search across all five boroughs. Manhattan, Brooklyn positioning reflects neighborhood sophistication.',
     geo: { city: 'New York', cityState: 'New York, NY' },
     faqs: faqs,
     breadcrumbs: [

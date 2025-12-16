@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Dallas, Texas | AI Search Optimization',
-  description: 'Get your Dallas business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for DFW metroplex.',
+  title: 'DFW Operations: Distributed Teams & Execution',
+  description: 'Scale GEO across DFW distributed operations. Dallas, Fort Worth, Plano positioning for multi-office growth and lead flow.',
   keywords: ['geo dallas', 'generative engine optimization dallas', 'ai seo dallas', 'chatgpt optimization dfw', 'perplexity optimization dallas'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-dallas',
@@ -105,8 +105,8 @@ export default function GEODallasPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-dallas',
-    title: 'GEO Services in Dallas, Texas | AI Search Optimization',
-    description: 'Get your Dallas business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for DFW metroplex.',
+    title: 'DFW Operations: Distributed Teams & Execution',
+    description: 'Scale GEO across DFW distributed operations. Dallas, Fort Worth, Plano positioning for multi-office growth and lead flow.',
     geo: {
       city: 'Dallas',
       cityState: 'Dallas, TX'

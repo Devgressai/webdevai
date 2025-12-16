@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Los Angeles, California | AI Search',
-  description: 'Get your LA business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for greater Los Angeles and LA County.',
+  title: 'LA Enterprise Complexity: Segmented GEO Positioning',
+  description: 'Navigate LA\'s fragmented business universes. Entertainment, tech, real estate positioned distinctly through AI citations.',
   keywords: ['geo los angeles', 'generative engine optimization los angeles', 'ai seo los angeles', 'chatgpt optimization la'],
   alternates: {
     canonical: 'https://www.webvello.com/services/geo-los-angeles',
@@ -104,8 +104,8 @@ export default function GEOLosAngelesPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-los-angeles',
-    title: 'GEO Services in Los Angeles, California | AI Search',
-    description: 'Get your LA business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for greater Los Angeles and LA County.',
+    title: 'LA Enterprise Complexity: Segmented GEO Positioning',
+    description: 'Navigate LA\'s fragmented business universes. Entertainment, tech, real estate positioned distinctly through AI citations.',
     geo: {
       city: 'Los Angeles',
       cityState: 'Los Angeles, CA'

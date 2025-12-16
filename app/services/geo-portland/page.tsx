@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
 export const metadata: Metadata = {
-  title: 'GEO Services in Portland, OR | AI Search Optimization',
-  description: 'Get your Portland business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+  title: 'Portland Values: Brand Differentiation Through GEO',
+  description: 'Portland buyers choose by values. Authentic differentiation, sustainability, community positioning through AI citations.',
   keywords: 'GEO Portland, AI search optimization Portland, generative engine optimization Portland, ChatGPT SEO Portland, Perplexity optimization',
   openGraph: {
-    title: 'GEO Services in Portland, OR | AI Search Optimization',
-    description: 'Get your Portland business cited by ChatGPT, Perplexity & Google AI.',
+    title: 'Portland Values: Brand Differentiation Through GEO',
+    description: 'Portland buyers choose by values. Authentic differentiation, sustainability, community positioning through AI citations.',
     url: 'https://www.webvello.com/services/geo-portland',
     type: 'website',
   },
@@ -53,8 +53,8 @@ export default function GEOPortlandPage() {
   const pageSchema = generatePageSchema({
     pageType: 'geo',
     url: 'https://www.webvello.com/services/geo-portland',
-    title: 'GEO Services in Portland, OR | AI Search Optimization',
-    description: 'Get your Portland business cited by ChatGPT, Perplexity & Google AI. Remote GEO services optimizing for voice search and AI engines.',
+    title: 'Portland Values: Brand Differentiation Through GEO',
+    description: 'Portland buyers choose by values. Authentic differentiation, sustainability, community positioning through AI citations.',
     geo: {
       city: 'Portland',
       cityState: 'Portland, OR'
