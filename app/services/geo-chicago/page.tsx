@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description: 'Navigate Chicago institutional hierarchies with GEO. Procurement, executive, technical positioning for complex B2B sales cycles.',
     url: 'https://www.webvello.com/services/geo-chicago',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.webvello.com/og-geo-chicago.svg',
+        width: 1200,
+        height: 630,
+        alt: 'GEO Services in Chicago - Web Vello',
+      },
+    ],
   }
 }
 

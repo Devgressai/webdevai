@@ -1,0 +1,76 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark gradient background like the Chicago hero -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Blue gradient for Chicago accent (matching the page) -->
+    <linearGradient id="chicagoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="80" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Subtle glow orb (like the page hero) -->
+  <circle cx="900" cy="200" r="300" fill="#3b82f6" opacity="0.1" filter="url(#glow)"/>
+  
+  <!-- Top badge/pill (glassmorphism style) -->
+  <g>
+    <rect x="80" y="80" width="280" height="40" rx="20" fill="white" opacity="0.1"/>
+    <rect x="80" y="80" width="280" height="40" rx="20" stroke="white" stroke-width="1" opacity="0.1" fill="none"/>
+    <text x="120" y="106" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#60a5fa">
+      📍 GEO Services in Chicago, Illinois
+    </text>
+  </g>
+  
+  <!-- Main heading -->
+  <text x="80" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="700" fill="white" letter-spacing="-2">
+    Generative Engine
+  </text>
+  
+  <text x="80" y="260" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="700" fill="white" letter-spacing="-2">
+    Optimization in
+  </text>
+  
+  <!-- Gradient text for location -->
+  <text x="80" y="330" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="700" fill="url(#chicagoGradient)" letter-spacing="-2">
+    Chicago, Illinois
+  </text>
+  
+  <!-- Direct answer summary box (glassmorphism) -->
+  <g>
+    <rect x="80" y="380" width="700" height="130" rx="16" fill="white" opacity="0.05"/>
+    <rect x="80" y="380" width="700" height="130" rx="16" stroke="white" stroke-width="1" opacity="0.1" fill="none"/>
+    
+    <text x="110" y="420" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="400" fill="white" opacity="0.9">
+      <tspan x="110" dy="0">Chicago's decision-making structures run deep—multiple</tspan>
+      <tspan x="110" dy="26">stakeholders, institutional hierarchies, long evaluation cycles.</tspan>
+      <tspan x="110" dy="26">GEO positions you credibly within committees that drive B2B</tspan>
+    </text>
+  </g>
+  
+  <!-- Bottom branding -->
+  <text x="80" y="580" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="600" fill="white">
+    Web Vello
+  </text>
+  
+  <text x="200" y="580" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="400" fill="white" opacity="0.5">
+    · GEO & SEO Agency
+  </text>
+</svg>
+
