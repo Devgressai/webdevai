@@ -42,14 +42,14 @@ const processSteps = [
 ]
 
 const faqs = [
-  { question: "How does GEO help my San Francisco business?", answer: "When someone asks ChatGPT 'best SaaS consultant in SF' or 'find a tech lawyer in SOMA,' your business should be cited. GEO optimizes for AI visibility in SF's competitive tech market." },
-  { question: "How does Webvello deliver GEO services remotely to SF businesses?", answer: "All work is digital. We optimize your site, implement schema, create AI-friendly content, and monitor visibility—no local office needed. Monthly reports show when AI systems cite you." },
-  { question: "What makes San Francisco different for GEO?", answer: "SF is the global tech capital with the highest concentration of AI early adopters. Everyone here uses ChatGPT and AI tools. If you serve tech companies, GEO is essential." },
-  { question: "Do you work with SF tech startups and SaaS companies?", answer: "Absolutely. We understand the tech ecosystem and how founders, investors, and buyers use AI search. We optimize for B2B tech queries." },
-  { question: "What industries benefit most from SF GEO?", answer: "Tech, SaaS, fintech, biotech, professional services, and legal firms see huge impact. SF's business community relies heavily on AI search." },
-  { question: "How long until I see results in SF?", answer: "For niche tech queries, 4-8 weeks. Broader terms take 3-6 months due to competition. We prioritize quick wins while building authority." },
-  { question: "Can you handle technical B2B queries?", answer: "Yes. We understand developer tools, enterprise software, and technical services. We optimize for how technical buyers actually search." },
-  { question: "How do you measure GEO success?", answer: "We track AI citations, monitor SF tech queries, measure visibility across ChatGPT, Perplexity, and Google SGE with concrete monthly data." }
+  { question: "Why does technical credibility matter more in SF?", answer: "SF decision-makers—founders, engineers, investors—use AI to validate vendor capabilities before engagement. Being cited in technical AI queries positions you as someone tech leaders already trust. Citation creates the credibility foundation that accelerates sales cycles in B2B SaaS markets." },
+  { question: "How do you optimize for SF's specific buyer personas?", answer: "SF has distinct buyer types: venture-backed founders, corporate CTOs, angel investors, technical individual contributors. Each searches differently through AI tools. We optimize for the specific terminology and decision-making language each persona uses, ensuring citations appear in high-intent moments." },
+  { question: "Does GEO work for pre-product or early-stage startups?", answer: "Yes. Early-stage companies benefit most from GEO because you lack the brand recognition that older companies have. AI citations give you immediate credibility with the investor and customer networks you need to scale. It levels the playing field against established competitors." },
+  { question: "How fast does competitive pressure escalate in SF?", answer: "Very fast. A funded competitor can launch marketing within weeks. GEO's speed advantage becomes critical—establishing AI citations before competitors do creates a durable positioning gap. We prioritize rapid citation establishment in your niche before others move." },
+  { question: "Can you track investor and founder search patterns?", answer: "Yes. We identify AI queries coming from institutional investors, VCs, and technical decision-makers. These high-value searches get optimization priority. When a VC researches potential solutions, we ensure your company appears in their results." },
+  { question: "What's different about SF technical service GEO?", answer: "Technical services in SF compete on demonstrated expertise. GEO citations must be contextually accurate about your technical depth. We optimize schema and content to reflect technical specificity that SF's engineer and CTO buyers expect and demand." },
+  { question: "Do you handle SaaS product positioning through GEO?", answer: "Yes. We create AI-optimized positioning that differentiates your product from competitor alternatives. Rather than generic capability descriptions, we craft distinctive angles that AI systems cite when SF buyers compare solutions." },
+  { question: "How do you handle velocity in fast-moving niches?", answer: "SF markets shift monthly. We conduct biweekly competitive analysis, identify emerging opportunities in your niche, and adjust optimization strategy aggressively. Your positioning adapts as quickly as the market moves, preventing you from being overtaken by new players." }
 ]
 
 export default function GEOSanFranciscoPage() {
@@ -92,7 +92,7 @@ export default function GEOSanFranciscoPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to San Francisco businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when tech buyers ask for recommendations. We help SaaS companies, startups, and tech services dominate AI search without requiring a local office visit.
+                SF's tech scene accelerates beyond what traditional marketing can match. Founders, CTOs, and investors make buying decisions through AI queries, not Google ads. GEO puts your company in AI answers before your next funding round closes. Competitive positioning consolidates quickly in Bay Area markets—establish AI credibility now or watch newer entrants claim the territory.
               </p>
             </div>
             

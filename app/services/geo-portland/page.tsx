@@ -17,36 +17,36 @@ export const metadata: Metadata = {
 export default function GEOPortlandPage() {
   const faqs = [
     {
-      question: "How does GEO help Portland businesses compete in AI search?",
-      answer: "GEO ensures your Portland business appears when potential customers ask AI engines like ChatGPT, Perplexity, or Google SGE about services in your industry. This is crucial for Portland's creative, tech, and sustainable business sectors where traditional SEO alone isn't enough."
+      question: "How does brand differentiation work through GEO in Portland?",
+      answer: "Portland's market rewards distinct positioning. GEO articulates what makes you different—sustainability practices, creative approach, unique values. Citations should reflect your actual differentiation, not generic competitor language. Distinct positioning becomes harder for competitors to replicate."
     },
     {
-      question: "Can you optimize for Portland businesses remotely?",
-      answer: "Yes. Webvello delivers GEO services remotely to Portland companies. We analyze your market positioning, optimize content for AI citation, and ensure voice search readiness - all without needing a local office."
+      question: "Can GEO communicate Portland brand values through AI?",
+      answer: "Yes. Portland audiences care about values—sustainability, craft, community, ethics. GEO positioning emphasizes authentic brand values, not manufactured claims. When AI citations reflect genuine company values, Portland audiences trust you. Values-aligned positioning resonates strongly in this market."
     },
     {
-      question: "What's the difference between GEO and traditional SEO for Portland markets?",
-      answer: "Traditional SEO targets Google's blue links. GEO optimizes for AI-generated answers in ChatGPT, Perplexity, Claude, and Google's AI Overviews. In Portland's progressive market, customers increasingly use AI to research services."
+      question: "How does trust-building happen through AI citations?",
+      answer: "Citations from trusted AI sources establish credibility. When ChatGPT or Perplexity mentions you with specific context, Portland audiences perceive you as vetted. Early citations compound—being mentioned first creates implicit endorsement effect. First-mover advantage in citations becomes trust advantage."
     },
     {
-      question: "How long before Portland customers find us via AI search?",
-      answer: "Most Portland clients see AI engine citations within 8-12 weeks. This includes content optimization, schema implementation, and strategic positioning for generative AI platforms."
+      question: "What's Portland-specific about values-based GEO?",
+      answer: "Portland clients explicitly evaluate vendors on values alignment. Sustainability certifications, community involvement, ethical practices all factor into decisions. GEO positioning highlights these authentic differentiators. Generic competitors positioning on price can't match values-based positioning."
     },
     {
-      question: "Do you serve specific Portland neighborhoods or the entire metro?",
-      answer: "We serve all Portland-area businesses remotely - from downtown to Pearl District to suburban markets. Our GEO strategies work regardless of your physical location within the Portland metro."
+      question: "Can GEO support Portland's creative industry positioning?",
+      answer: "Absolutely. Creative agencies compete on talent, awards, culture. GEO showcases creative credentials—award recognition, client testimonials, portfolio breadth. Positioning emphasizes creative differentiation rather than generic \"creative solutions.\""
     },
     {
-      question: "What Portland industries benefit most from GEO?",
-      answer: "Portland's creative agencies, sustainable businesses, tech startups, craft industries, professional services, and outdoor/recreation companies benefit significantly. Any industry where customers research via AI assistants needs GEO."
+      question: "How does community connection appear in GEO?",
+      answer: "Portland businesses thrive on community ties. GEO can highlight local partnerships, community contributions, civic engagement. Citations reflecting genuine community involvement resonate stronger than transactional positioning."
     },
     {
-      question: "How do you measure GEO success for Portland clients?",
-      answer: "We track AI engine citations, voice search appearances, featured snippet coverage, and conversions from AI-driven traffic. You'll see exactly how often ChatGPT, Perplexity, and Google AI recommend your Portland business."
+      question: "Does sustainable business positioning require different GEO?",
+      answer: "Yes. Sustainable businesses compete on environmental impact, ethical sourcing, carbon footprint. GEO emphasizes measurable sustainability credentials. Buyers scrutinize green claims—citations must reflect verifiable commitments, not marketing exaggeration."
     },
     {
-      question: "Can GEO work alongside our existing Portland SEO agency?",
-      answer: "Absolutely. GEO complements traditional SEO. We can coordinate with your current Portland marketing team or work independently. Many clients use us specifically for AI search while maintaining their existing SEO partnerships."
+      question: "What competitive advantage comes from values-aligned GEO?",
+      answer: "Competitors often optimize generic positioning. Portland's values-driven market rewards authentic brand differentiation. Positioning reflecting genuine company values becomes difficult to fake. Values alignment compounds—early citations build trust that price-based competitors struggle to overcome."
     }
   ]
 

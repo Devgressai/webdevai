@@ -67,36 +67,36 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "How does GEO help my Phoenix business?",
-    answer: "When someone asks ChatGPT 'best pool service in Scottsdale' or asks Perplexity 'find an HVAC company in Phoenix,' your business should be mentioned. GEO optimizes your online presence so AI systems recognize and recommend you for queries in the Phoenix metro. As AI search grows, visibility there is critical for Valley businesses."
+    question: "How does Phoenix's buying speed affect GEO timing?",
+    answer: "Phoenix buyers act quickly—window from awareness to decision is narrow. GEO that establishes credibility before purchase moments begin captures high-conversion traffic. Early visibility becomes critical when buyer research window compresses into days. We prioritize getting you cited for high-intent queries first."
   },
   {
-    question: "How does Webvello deliver GEO services remotely to Phoenix businesses?",
-    answer: "All our GEO work is done digitally—no local office needed. We optimize your website, implement schema markup, create AI-friendly content for Phoenix areas, and monitor your visibility across AI platforms. You'll receive monthly reports showing exactly when and how AI systems cite your business. We've successfully served Phoenix businesses from HVAC companies to real estate agencies entirely remotely."
+    question: "Can GEO improve lead quality and conversion rates?",
+    answer: "Yes. Prospects finding you through AI citations are pre-qualified—they've already received credibility signals. This produces higher conversion rates than cold outreach. Citation context determines qualification level—we optimize for discovery moments preceding purchase intent."
   },
   {
-    question: "Do you serve the entire Phoenix metro area?",
-    answer: "Yes. We serve businesses throughout the Valley—Phoenix, Scottsdale, Mesa, Tempe, Chandler, Gilbert, Glendale, and all East and West Valley cities. We create location-specific strategies for your service areas, whether you serve one city or the entire metro."
+    question: "How do you measure ROI directly from GEO in Phoenix?",
+    answer: "We track citation context, keywords appearing alongside your mentions, and prospect source quality. High-intent queries (\"find\", \"need\", \"buy\") produce faster conversions than exploratory queries. Monthly reports segment leads by intent type, showing ROI improvement from focused optimization."
   },
   {
-    question: "What makes Phoenix different for GEO?",
-    answer: "Phoenix is the fifth-largest city in the US and one of the fastest-growing metros. The influx of California transplants and tech companies means a tech-savvy population increasingly using AI for local search. The seasonal tourism industry and home services demand create unique GEO opportunities."
+    question: "What Phoenix industries see fastest ROI from GEO?",
+    answer: "Home services (HVAC, pool, plumbing) convert fastest because decision windows are short and budget-driven. Real estate and healthcare also show strong near-term ROI. Service frequency and price points determine conversion speed—we prioritize highest-ROI query segments."
   },
   {
-    question: "Do you work with Phoenix home services and contractors?",
-    answer: "Absolutely. Phoenix's climate drives huge demand for HVAC, pool service, landscaping, and construction. When homeowners ask AI for service recommendations, we ensure you're cited. We understand the seasonal patterns and competitive landscape of Valley home services."
+    question: "Does GEO work for seasonal Phoenix businesses?",
+    answer: "Absolutely. Seasonal demand patterns create concentrated conversion windows. Summer HVAC demand, winter tourism peaks, spring construction booms—we align optimization with seasonal demand cycles, maximizing visibility during high-conversion windows."
   },
   {
-    question: "What industries benefit most from Phoenix GEO?",
-    answer: "Home services (HVAC, pool, landscaping), real estate, healthcare, hospitality, construction, and tech companies see the biggest impact. Phoenix's growth economy means high competition and high rewards for AI visibility."
+    question: "Can GEO support sales team efficiency?",
+    answer: "Yes. When prospects call already aware you're recommended by AI, sales conversations skip credibility-building phases. Shorter sales cycles and higher close rates directly increase efficiency. We track how AI visibility compresses sales timelines."
   },
   {
-    question: "How long until I see AI visibility improvements in Phoenix?",
-    answer: "For niche queries and specific cities like Scottsdale or Chandler, we typically see improvements in 4-8 weeks. Broader competitive terms take 3-6 months. We prioritize quick wins in your specific service area while building toward larger Valley-wide visibility."
+    question: "How do you optimize for Scottsdale vs. Phoenix economics?",
+    answer: "Scottsdale buyers have different price sensitivity and expectations than broader Phoenix market. We segment positioning by economic context—Scottsdale premium positioning emphasizes luxury and exclusivity, Phoenix-wide positioning emphasizes value and accessibility."
   },
   {
-    question: "How do you measure GEO success in Phoenix?",
-    answer: "We track when AI systems mention your business, monitor specific Phoenix-related queries in your industry, measure citation frequency across ChatGPT, Perplexity, and Google SGE, and analyze the context of mentions. You'll see concrete data showing your growing AI visibility month over month."
+    question: "What competitive advantage does ROI-focused GEO create?",
+    answer: "Most competitors optimize for volume instead of conversion efficiency. Phoenix's tight buyer windows reward conversion-optimized positioning. Early citations in high-intent queries generate disproportionate revenue compared to general visibility. Conversion focus creates economic advantage competitors struggle to match."
   }
 ]
 
@@ -147,7 +147,7 @@ export default function GEOPhoenixPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to Phoenix businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. We help HVAC companies, real estate agents, healthcare practices, and tech firms dominate AI search without requiring a local office visit.
+                Phoenix buyers convert faster than most markets—they've done their research before calling. GEO ensures you're already trusted by the time prospects ask for recommendations. ROI-focused positioning emphasizes cost-efficiency, reliability, and proven results. Early visibility translates directly to increased lead volume and higher conversion rates.
               </p>
             </div>
             

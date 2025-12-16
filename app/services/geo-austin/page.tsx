@@ -71,36 +71,36 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "Why does my Austin business need GEO?",
-    answer: "Austin is one of the most tech-savvy cities in America. Your potential customers are early adopters of AI search tools. When someone asks ChatGPT 'best tech recruiting firm in Austin' or 'top restaurants on South Congress,' you want to be in that answer. GEO ensures AI engines cite your business when Austin residents and visitors ask for recommendations."
+    question: "Why is AI visibility urgent in Austin right now?",
+    answer: "Austin's expansion happens in real-time. New competitors arrive weekly, search patterns shift monthly, and neighborhoods evolve faster than traditional SEO can track. AI engines that cite your business today lock in credibility before the next wave of competition arrives. Delay means falling behind companies that moved first."
   },
   {
-    question: "How does Webvello deliver GEO services remotely to Austin businesses?",
-    answer: "All our GEO work is done digitally—no local office needed. We optimize your website, implement schema markup, create AI-friendly content, and monitor your visibility across AI platforms. Results are tracked through dashboards and monthly reports. We've successfully served Austin businesses from tech startups to established restaurants, all remotely."
+    question: "How do you keep Austin GEO current as the city changes?",
+    answer: "We monitor emerging neighborhoods, track industry shifts in real-time, and update optimization strategies monthly based on market activity. When new downtown development happens or a neighborhood trends upward, we adjust your content positioning. Continuous iteration keeps you ahead of market transitions."
   },
   {
-    question: "How is Austin GEO different from general GEO?",
-    answer: "Austin GEO incorporates local context—neighborhoods like SoCo and The Domain, the tech and startup culture, the music scene, and the unique Austin identity. We optimize for how Austin residents actually ask AI for recommendations, using location-specific terminology and cultural references."
+    question: "Can GEO help startups establish authority faster in Austin?",
+    answer: "Yes. New businesses lack the legacy authority of established companies. GEO accelerates recognition by getting AI systems to mention you immediately, positioning you as a credible player from launch. This matters enormously in Austin, where new entrants must prove themselves quickly against both legacy and competing new players."
   },
   {
-    question: "What industries benefit most from Austin GEO?",
-    answer: "Tech companies, SaaS businesses, professional services, restaurants, and real estate see the biggest impact. Austin's tech-savvy population uses AI search heavily for both business and personal decisions. Any business serving local Austin customers can benefit."
+    question: "Which Austin sectors face the most scaling pressure?",
+    answer: "Tech services, recruiting, SaaS, commercial real estate, and hospitality experience constant influx of competitors. These sectors benefit most from GEO because AI citation becomes the fastest way to build credibility when traditional dominance takes years to establish."
   },
   {
-    question: "Do you work with Austin tech startups?",
-    answer: "Absolutely. We understand the Austin tech ecosystem and how startup founders, investors, and employees use AI to research vendors, partners, and service providers. We've worked with SaaS companies, dev shops, and B2B services throughout Austin."
+    question: "Does remote GEO work for competitive Austin markets?",
+    answer: "Absolutely. Competition level doesn't change the digital nature of GEO. Highly competitive markets actually accelerate results visibility—you see faster feedback on what's working. Our dashboard reports show you exactly how your positioning compares to competitors in real-time."
   },
   {
-    question: "How do you handle Austin's rapid growth and changing market?",
-    answer: "Austin is one of the fastest-growing cities in the US. We help new businesses establish AI visibility quickly and help established businesses maintain dominance as competition increases. Our strategy adapts to new neighborhoods, emerging industries, and evolving search patterns."
+    question: "How do you optimize for Austin's multiple business personas?",
+    answer: "Austin houses different buyer archetypes—tech executives, creative professionals, service-based business owners, hospitality decision-makers. We segment optimization by how each persona uses AI to search, ensuring your content surfaces in the specific context each audience uses."
   },
   {
-    question: "What's the timeline for Austin GEO results?",
-    answer: "Initial visibility improvements typically appear within 4-8 weeks for niche queries and specific neighborhoods. For competitive Austin markets like tech services or real estate, full optimization may take 3-6 months. We prioritize quick wins while building long-term authority."
+    question: "What happens if competitors in Austin adopt GEO first?",
+    answer: "Early movers gain positioning advantage in AI citation patterns. That advantage narrows over months as more businesses optimize. This creates urgency. Waiting six months puts you in reactive mode instead of strategic mode. We help you establish visibility before competitive saturation occurs."
   },
   {
-    question: "How do you measure GEO success in Austin?",
-    answer: "We track when AI systems mention your business, monitor specific Austin-related queries, measure citation frequency across ChatGPT, Perplexity, and Google SGE, and analyze the context of mentions. You'll see concrete data on your AI visibility month over month."
+    question: "Can you measure market velocity impact in reports?",
+    answer: "Yes. We track competitive emergence rates, monitor how quickly new players claim market share, and measure citation velocity—how fast AI systems recognize your business relative to competitors. Monthly reports show momentum trends specific to Austin's pace."
   }
 ]
 
@@ -154,7 +154,7 @@ export default function GEOAustinPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to Austin businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when Austin customers ask for recommendations. We help tech startups, restaurants, real estate firms, and professional services dominate AI search without requiring a local office visit.
+                Austin's business landscape shifts faster than most cities. New startups, relocated talent, and aggressive market entrants compete for attention daily. Webvello's GEO services ensure your business surfaces when AI engines field customer queries—before competitors establish their own AI footprint. Remote-first optimization means you gain visibility at the speed Austin moves.
               </p>
             </div>
             

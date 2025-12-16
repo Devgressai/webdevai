@@ -67,36 +67,36 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "How does GEO help my Chicago business?",
-    answer: "When someone asks ChatGPT 'best deep dish pizza in Chicago' or asks Perplexity 'find a commercial real estate lawyer near me,' your business should be mentioned. GEO optimizes your online presence so AI systems recognize and recommend you for relevant local queries in the Chicago market. As AI search dominates, visibility there is critical."
+    question: "How does Chicago's institutional decision-making change GEO?",
+    answer: "Chicago B2B deals involve procurement committees, risk assessment teams, and executive sign-off. Each stakeholder type searches differently through AI. GEO positions your company across these decision-making layers, ensuring procurement sees efficiency credentials, executives see risk mitigation, and technical teams see implementation details."
   },
   {
-    question: "How does Webvello deliver GEO services remotely to Chicago businesses?",
-    answer: "All our GEO work is done digitally—no local office needed. We optimize your website, implement schema markup, create AI-friendly content for Chicago neighborhoods, and monitor your visibility across AI platforms. You'll receive monthly reports showing exactly when and how AI systems cite your business. We've successfully served Chicago businesses from financial services to restaurants entirely remotely."
+    question: "Can GEO accelerate longer B2B sales cycles?",
+    answer: "Yes. Extended evaluation periods create multiple research moments. Early visibility in exploratory searches establishes credibility before competitive bids arrive. GEO ensures when prospects ask AI 'who are the leading vendors in this space,' you're already mentioned—giving you advantage when formal RFP processes begin."
   },
   {
-    question: "Do you work with businesses throughout Chicagoland?",
-    answer: "Yes. We serve businesses throughout the Chicago metro area—from the Loop to the suburbs, North Side to South Side. We also work with businesses in the collar counties: DuPage, Lake, Will, Kane, and McHenry. We create location-specific strategies for your service areas."
+    question: "How do you optimize for Chicago's collar county expansion?",
+    answer: "Collar county decisions are often separate from Chicago proper—different committees, different priorities. We create content and positioning segmented by decision-making geography, ensuring suburban purchasers see positioning relevant to their operational context."
   },
   {
-    question: "What makes Chicago different for GEO?",
-    answer: "Chicago is the business hub of the Midwest with strong B2B and professional services sectors. The neighborhood-specific nature of Chicago means hyper-local GEO strategies are essential. Lincoln Park customers search differently than Loop customers. We understand Chicago's diverse business landscape and optimize accordingly."
+    question: "What's Chicago-specific about manufacturing GEO?",
+    answer: "Manufacturing decisions involve production teams, quality assurance, supply chain managers, and finance. Each reviews vendors through different criteria and search patterns. We segment optimization by functional role, ensuring each stakeholder type encounters relevant credibility signals."
   },
   {
-    question: "Do you work with Chicago B2B and financial services?",
-    answer: "Absolutely. Chicago is a major financial center with a strong B2B economy—trading firms, manufacturers, logistics companies, professional services. When decision-makers ask AI for recommendations, we ensure you're cited. We understand the specialized terminology and longer sales cycles of Chicago's major industries."
+    question: "How do you handle multi-stakeholder financial services GEO?",
+    answer: "Financial decisions involve risk managers, compliance officers, CFOs, and operational executives. We position your firm across these approval hierarchies, addressing the specific concerns each stakeholder raises during AI research phases."
   },
   {
-    question: "What industries benefit most from Chicago GEO?",
-    answer: "Financial services, legal firms, B2B manufacturers, healthcare practices, restaurants, and professional services see the biggest impact. Chicago's business-focused economy means AI visibility drives high-value leads."
+    question: "Can GEO work with complex legal service positioning?",
+    answer: "Absolutely. Law firms serve multiple client types with different needs. In-house counsel, CFOs, and business development executives all research legal partners through AI. We create dimensional positioning addressing each purchaser type's specific evaluation criteria."
   },
   {
-    question: "How long until I see AI visibility improvements in Chicago?",
-    answer: "For niche queries and specific neighborhoods, we typically see improvements in 4-8 weeks. Broader competitive terms take 3-6 months due to Chicago's high competition. We prioritize quick wins in your specific area while building toward larger visibility goals."
+    question: "How do institutional relationships affect GEO strategy?",
+    answer: "Chicago institutions maintain loyalty through relationship quality. GEO positions you within industry networks and association contexts, leveraging institutional recognition. When associations recommend vendors or thought leaders cite credibility, GEO amplifies these institutional credibility signals through AI discovery."
   },
   {
-    question: "How do you measure GEO success in Chicago?",
-    answer: "We track when AI systems mention your business, monitor specific Chicago-related queries in your industry, measure citation frequency across ChatGPT, Perplexity, and Google SGE, and analyze the context and accuracy of mentions. You'll see concrete data showing your growing AI visibility month over month."
+    question: "What advantage do Chicago businesses gain from complexity-aware GEO?",
+    answer: "Most competitors position generically, missing stakeholder nuance. Chicago's institutional complexity becomes strategic advantage when you optimize for it. Stakeholder-specific positioning becomes difficult to match, creating durable positioning advantage as deals progress through evaluation."
   }
 ]
 
@@ -151,7 +151,7 @@ export default function GEOChicagoPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to Chicago businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. We help financial services, restaurants, legal firms, and B2B companies dominate AI search without requiring a local office visit.
+                Chicago's decision-making structures run deep—multiple stakeholders, institutional hierarchies, long evaluation cycles. GEO navigates this complexity by positioning your company credibly within the specific committees and networks that drive B2B buying decisions, ensuring visibility throughout extended sales processes.
               </p>
             </div>
             

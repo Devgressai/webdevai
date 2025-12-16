@@ -67,36 +67,36 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "How does GEO help my Houston business?",
-    answer: "When someone asks ChatGPT 'best oil and gas lawyer in Houston' or asks Perplexity 'find an HVAC company near me in The Woodlands,' your business should be mentioned. GEO optimizes your online presence so AI systems recognize and recommend you for relevant queries in the Houston market. As AI search dominates, visibility there is critical."
+    question: "How does GEO address Houston's specialized procurement processes?",
+    answer: "Houston's energy, medical, and B2B sectors follow industry-specific procurement rhythms. GEO positions you for the moments when procurement teams actively research vendors. We understand RFQ cycles, regulatory review periods, and contract renewal windows—timing optimization for when decision-makers search."
   },
   {
-    question: "How does Webvello deliver GEO services remotely to Houston businesses?",
-    answer: "All our GEO work is done digitally—no local office needed. We optimize your website, implement schema markup, create AI-friendly content for Houston areas, and monitor your visibility across AI platforms. You'll receive monthly reports showing exactly when and how AI systems cite your business. We've successfully served Houston energy companies, medical practices, and B2B services entirely remotely."
+    question: "Can GEO integrate with technical buyers' research workflows?",
+    answer: "Yes. Engineering teams, technical directors, and specialist procurement search with specific terminology. We optimize for technical query language used by specialists, not generalists. Citations appear in the search moments specialists actually use during evaluation processes."
   },
   {
-    question: "Do you work with businesses throughout Greater Houston?",
-    answer: "Yes. We serve businesses throughout the Houston metro area—from Downtown to the suburbs. We work with businesses in Harris County, Fort Bend, Montgomery, Brazoria, and Galveston counties. We create location-specific strategies for your service areas, whether that's the Energy Corridor, Medical Center, or The Woodlands."
+    question: "How does Houston's scale require operational optimization?",
+    answer: "Houston's Energy Corridor, Medical Center, and industrial zones operate at different scales with different decision-making speeds. We optimize by operational context—rapid-cycle retail differs from multi-month energy contracts. Messaging and positioning adapt to buying process realities."
   },
   {
-    question: "What makes Houston different for GEO?",
-    answer: "Houston is the energy capital of the world and home to the Texas Medical Center, the largest medical complex globally. B2B industries and professional services dominate, and these sectors are rapidly adopting AI search tools. We understand Houston's unique business landscape and optimize for the specialized queries buyers use in energy, healthcare, and industrial sectors."
+    question: "What's special about B2B GEO for Houston manufacturers?",
+    answer: "Manufacturing sales cycles are long, decisions involve multiple stakeholders. GEO builds visibility across the entire evaluation period—initial research, vendor comparison, technical review, financial approval. Each stakeholder encounters relevant credibility signals at their decision moment."
   },
   {
-    question: "Do you work with Houston B2B and industrial companies?",
-    answer: "Absolutely. Houston's economy is heavily B2B—energy services, manufacturing, logistics, professional services. When procurement teams or decision-makers ask AI for vendor recommendations, we ensure you're cited. We understand the longer sales cycles and technical terminology of Houston's major industries."
+    question: "Can GEO support energy industry positioning?",
+    answer: "Absolutely. Energy sector buyers search for specialized expertise—upstream, downstream, midstream, services differentiation. We position within industry verticals, ensuring energy procurement teams find you during their vertical-specific research."
   },
   {
-    question: "What industries benefit most from Houston GEO?",
-    answer: "Energy companies, medical practices, legal services, B2B manufacturers, construction firms, and professional services see the biggest impact. Houston's business-focused economy means AI visibility drives high-value leads and contracts."
+    question: "How do you handle Medical Center hospital vs. practice optimization?",
+    answer: "Houston Medical Center hospitals, clinics, and solo practices all search differently. We create positioning tailored by organizational type. Hospital procurement searches differ from patient-search behaviors—we optimize for each decision-maker type."
   },
   {
-    question: "How long until I see AI visibility improvements in Houston?",
-    answer: "For niche queries and specific areas, we typically see improvements in 4-8 weeks. Broader competitive terms take 3-6 months. We prioritize quick wins in your specific service area while building toward larger visibility goals in competitive Houston markets."
+    question: "Does GEO work with logistics and distribution operations?",
+    answer: "Yes. Logistics professionals search for solutions to specific operational challenges. GEO positions you as problem-solvers for logistics professionals, not generic service providers. We optimize for supply chain and operational terminology actual logistics teams use."
   },
   {
-    question: "How do you measure GEO success in Houston?",
-    answer: "We track when AI systems mention your business, monitor specific Houston-related queries in your industry, measure citation frequency across ChatGPT, Perplexity, and Google SGE, and analyze the context and accuracy of mentions. You'll see concrete data showing your growing AI visibility month over month."
+    question: "What operational advantage does Houston-specific GEO create?",
+    answer: "Most competitors optimize generically. Houston's specialized, large-scale industries reward deep understanding of operational needs. Positioning tailored to actual buying processes becomes difficult for competitors to match. Operational alignment compounds—efficiency gains multiply as scale grows."
   }
 ]
 
@@ -151,7 +151,7 @@ export default function GEOHoustonPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to Houston businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. We help energy companies, medical practices, B2B services, and professional firms dominate AI search without requiring a local office visit.
+                Houston's industries operate at specialized scales—energy systems, medical hierarchies, manufacturing networks. GEO builds visibility into industry-specific buyer flows, positioning you where decision-makers already search. Operational integration means optimization happens alongside core business processes.
               </p>
             </div>
             

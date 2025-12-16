@@ -67,36 +67,36 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "How does GEO help my Dallas business?",
-    answer: "When someone asks ChatGPT 'best financial advisor in Dallas' or asks Perplexity 'find a commercial real estate broker in Plano,' your business should be mentioned. GEO optimizes your online presence so AI systems recognize and recommend you for queries in the DFW market. As AI search grows, visibility there is critical."
+    question: "How does GEO fit into distributed operations?",
+    answer: "DFW companies operate across multiple offices, regional teams, distinct business units. GEO scales with your operational structure—separate optimization for Dallas, Fort Worth, Plano, and satellite offices. Central coordination ensures consistency while respecting operational autonomy of individual locations."
   },
   {
-    question: "How does Webvello deliver GEO services remotely to Dallas businesses?",
-    answer: "All our GEO work is done digitally—no local office needed. We optimize your website, implement schema markup, create AI-friendly content for DFW areas, and monitor your visibility across AI platforms. You'll receive monthly reports showing exactly when and how AI systems cite your business. We've successfully served Dallas businesses from tech startups to financial services entirely remotely."
+    question: "Can GEO integrate with existing marketing systems?",
+    answer: "Yes. We work within your CRM, marketing automation, and analytics infrastructure. GEO citations feed into existing lead tracking systems. Monthly reports integrate with your standard reporting dashboards. No new systems required—just expanded visibility within existing operational flow."
   },
   {
-    question: "Do you serve the entire DFW metroplex?",
-    answer: "Yes. We serve businesses throughout Dallas-Fort Worth—from Downtown Dallas to Fort Worth, Plano to Arlington. We create location-specific strategies for your service areas across all DFW counties including Dallas, Tarrant, Collin, and Denton."
+    question: "How do you handle scale across DFW's expanded footprint?",
+    answer: "Scale creates complexity—different messages for different markets, evolving competitive landscapes, expanding team structures. We manage this systematically: market segmentation by geography and buyer type, centralized monitoring with local customization, priority-based optimization as your footprint grows."
   },
   {
-    question: "What makes Dallas-Fort Worth different for GEO?",
-    answer: "DFW is the fourth-largest metro in the US and one of the fastest-growing. The influx of corporate relocations from California and the Northeast means a tech-savvy population increasingly using AI for search. Competition is growing rapidly, making early GEO adoption valuable."
+    question: "What's DFW-specific about operational GEO?",
+    answer: "DFW headquarters operate resource-constrained—marketing teams are lean, focus is execution over marketing. GEO runs operationally parallel to your core business, not requiring significant internal resources. External teams handle optimization; your team handles execution."
   },
   {
-    question: "Do you work with Dallas tech companies and corporate relocations?",
-    answer: "Absolutely. DFW has seen massive corporate relocations—Oracle, Tesla, CBRE, and hundreds more. These companies and their employees use AI search heavily. We help tech companies, professional services, and B2B businesses establish AI visibility quickly in this growing market."
+    question: "How does corporate relocation affect GEO strategy?",
+    answer: "Relocating companies face credibility gaps in new markets. GEO accelerates establishment of local presence. When Oracle, Tesla, or new arrivals need vendor relationships, being cited by AI systems establishes credibility before relationship networks form. Speed of market integration becomes competitive advantage."
   },
   {
-    question: "What industries benefit most from Dallas GEO?",
-    answer: "Financial services, tech companies, real estate, professional services, healthcare, and retail headquarters see the biggest impact. DFW's diverse, growing economy means AI visibility drives high-value leads across nearly every industry."
+    question: "Can GEO support multi-office sales operations?",
+    answer: "Absolutely. Sales teams operating from Dallas, Fort Worth, Plano offices all benefit from location-specific visibility. When prospects in each city ask AI for vendor recommendations, local positioning ensures your nearest office appears. Sales team productivity increases as leads arrive warm."
   },
   {
-    question: "How long until I see AI visibility improvements in Dallas?",
-    answer: "For niche queries and specific DFW cities like Plano or Frisco, we typically see improvements in 4-8 weeks. Broader competitive terms take 3-6 months. We prioritize quick wins in your specific area while building toward larger metroplex-wide visibility."
+    question: "How do you track GEO effectiveness across distributed teams?",
+    answer: "Centralized reporting shows overall progress; location-based dashboards show Dallas vs. Fort Worth vs. Plano performance. Sales team integration reveals which citations produce qualified leads by location. Operational metrics connect GEO to revenue, not just impressions."
   },
   {
-    question: "How do you measure GEO success in Dallas?",
-    answer: "We track when AI systems mention your business, monitor specific DFW-related queries in your industry, measure citation frequency across ChatGPT, Perplexity, and Google SGE, and analyze the context of mentions. You'll see concrete data showing your growing AI visibility month over month."
+    question: "What operational advantage comes from systematic GEO?",
+    answer: "Operational GEO removes discovery friction. Prospects already know about you when they call. Sales conversations start with qualification, not credibility-building. Team productivity increases as internal resources focus on closing instead of positioning. Scale compounds—efficient growth systems enable expansion."
   }
 ]
 
@@ -147,7 +147,7 @@ export default function GEODallasPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to Dallas-Fort Worth businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. We help tech companies, financial services, real estate firms, and professional practices dominate AI search without requiring a local office visit.
+                DFW operates on execution at scale. Multiple systems, distributed teams, evolving processes—GEO works within your operational reality. Scalable optimization integrates with your growth systems, producing citations without disrupting operations. Remote delivery means your team stays focused on core execution while AI visibility builds in parallel.
               </p>
             </div>
             

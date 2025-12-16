@@ -17,36 +17,36 @@ export const metadata: Metadata = {
 export default function GEOSanDiegoPage() {
   const faqs = [
     {
-      question: "How does GEO help San Diego businesses compete in AI search?",
-      answer: "GEO ensures your San Diego business appears when potential customers ask AI engines like ChatGPT, Perplexity, or Google SGE about services in your industry. This is crucial for San Diego's biotech, defense, and tourism markets where traditional SEO alone isn't enough."
+      question: "How does San Diego's buyer efficiency change GEO strategy?",
+      answer: "San Diego prospects are decisive—they research fast and commit quickly. GEO must establish credibility in narrow research windows. Positioning emphasizes proven results, efficiency metrics, and ROI. Early citation in high-intent moments captures prospects before competitive alternatives emerge."
     },
     {
-      question: "Can you optimize for San Diego businesses remotely?",
-      answer: "Yes. Webvello delivers GEO services remotely to San Diego companies. We analyze your market positioning, optimize content for AI citation, and ensure voice search readiness - all without needing a local office."
+      question: "Can GEO accelerate sales cycles in San Diego markets?",
+      answer: "Absolutely. Quick-moving prospects value pre-qualification through AI recommendations. Citations from trusted platforms compress evaluation phases. When multiple stakeholders have already heard your name from AI, buying timelines compress from months to weeks."
     },
     {
-      question: "What's the difference between GEO and traditional SEO for San Diego markets?",
-      answer: "Traditional SEO targets Google's blue links. GEO optimizes for AI-generated answers in ChatGPT, Perplexity, Claude, and Google's AI Overviews. In San Diego's diverse market, customers increasingly use AI to research services."
+      question: "How do you optimize for North County vs. Downtown San Diego ROI?",
+      answer: "Different service areas have different buying patterns and budgets. North County construction differs from Downtown real estate; La Jolla professional services differ from East County home services. We optimize separately by economic context and buyer behavior patterns."
     },
     {
-      question: "How long before San Diego customers find us via AI search?",
-      answer: "Most San Diego clients see AI engine citations within 8-12 weeks. This includes content optimization, schema implementation, and strategic positioning for generative AI platforms."
+      question: "What's San Diego-specific about conversion-focused GEO?",
+      answer: "San Diego's efficiency-oriented culture values direct ROI metrics. Positioning emphasizes cost-per-acquisition improvement and lead quality. We track conversion source, budget efficiency, and buyer sophistication—enabling constant optimization toward high-efficiency queries."
     },
     {
-      question: "Do you serve specific San Diego neighborhoods or the entire metro?",
-      answer: "We serve all San Diego-area businesses remotely - from downtown to La Jolla to North County. Our GEO strategies work regardless of your physical location within the San Diego metro."
+      question: "Can GEO support lead quality filtering in San Diego?",
+      answer: "Yes. Not all citations produce equal-quality leads. We optimize for discovery moments preceding firm buying intent. Geographic and intent-specific positioning attracts serious prospects, not tire-kickers. Monthly reports segment leads by quality tier."
     },
     {
-      question: "What San Diego industries benefit most from GEO?",
-      answer: "San Diego's biotech companies, defense contractors, tourism businesses, healthcare providers, real estate firms, and professional services benefit significantly. Any industry where customers research via AI assistants needs GEO."
+      question: "How fast do San Diego prospects convert from AI citation to call?",
+      answer: "Varies by industry. Service businesses convert within days; professional services within weeks; biotech/defense within months due to longer evaluation cycles. We adjust optimization timelines based on your typical sales cycle length."
     },
     {
-      question: "How do you measure GEO success for San Diego clients?",
-      answer: "We track AI engine citations, voice search appearances, featured snippet coverage, and conversions from AI-driven traffic. You'll see exactly how often ChatGPT, Perplexity, and Google AI recommend your San Diego business."
+      question: "Does San Diego's tourism market require different GEO?",
+      answer: "Yes. Tourism queries emphasize experience and lifestyle positioning rather than ROI metrics. Hospitality positioning differs significantly from biotech or home services. We create segment-specific messaging addressing each audience's discovery motivations."
     },
     {
-      question: "Can GEO work alongside our existing San Diego SEO agency?",
-      answer: "Absolutely. GEO complements traditional SEO. We can coordinate with your current San Diego marketing team or work independently. Many clients use us specifically for AI search while maintaining their existing SEO partnerships."
+      question: "What competitive advantage comes from ROI-optimized San Diego GEO?",
+      answer: "Most competitors optimize for volume. San Diego's efficiency-focused market rewards conversion optimization. Early citations in high-intent queries generate disproportionate revenue. Economic advantage compounds—better ROI enables higher marketing budgets, which accelerates growth."
     }
   ]
 

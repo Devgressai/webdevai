@@ -17,36 +17,36 @@ export const metadata: Metadata = {
 export default function GEOBostonPage() {
   const faqs = [
     {
-      question: "How does GEO help Boston businesses compete in AI search?",
-      answer: "GEO ensures your Boston business appears when potential customers ask AI engines like ChatGPT, Perplexity, or Google SGE about services in your industry. This is crucial for Boston's education, biotech, and finance sectors where traditional SEO alone isn't enough."
+      question: "How does Boston's academic ecosystem affect GEO strategy?",
+      answer: "Harvard, MIT, and Boston University shape market expectations for credibility and rigor. GEO positioning must reflect institutional sophistication buyers expect. Academic networks influence vendor research—we optimize for how scholars, researchers, and PhD-holders evaluate vendors through AI queries."
     },
     {
-      question: "Can you optimize for Boston businesses remotely?",
-      answer: "Yes. Webvello delivers GEO services remotely to Boston companies. We analyze your market positioning, optimize content for AI citation, and ensure voice search readiness - all without needing a local office."
+      question: "Can GEO help biotech companies establish credibility with regulators?",
+      answer: "Yes. Regulatory bodies and compliance teams use AI research during vendor evaluation. GEO positions your company within regulatory frameworks, demonstrating compliance understanding and standards adherence. Citations in regulatory contexts accelerate trust-building."
     },
     {
-      question: "What's the difference between GEO and traditional SEO for Boston markets?",
-      answer: "Traditional SEO targets Google's blue links. GEO optimizes for AI-generated answers in ChatGPT, Perplexity, Claude, and Google's AI Overviews. In Boston's sophisticated market, customers increasingly use AI to research services."
+      question: "How do you optimize for Boston's healthcare decision hierarchies?",
+      answer: "Healthcare decisions involve clinicians, administrators, compliance officers, and procurement separately. Each researches vendors through different criteria. GEO creates segmented positioning addressing clinical evidence, operational efficiency, and regulatory alignment—ensuring each stakeholder type finds relevant credibility signals."
     },
     {
-      question: "How long before Boston customers find us via AI search?",
-      answer: "Most Boston clients see AI engine citations within 8-12 weeks. This includes content optimization, schema implementation, and strategic positioning for generative AI platforms."
+      question: "What's Boston-specific about financial services GEO?",
+      answer: "Boston financial services operate within strict governance frameworks. GEO positions firms emphasizing regulatory expertise, risk management sophistication, and institutional relationships. When compliance teams and CROs ask AI about vendor capabilities, positioning reflects institutional requirements."
     },
     {
-      question: "Do you serve specific Boston neighborhoods or the entire metro?",
-      answer: "We serve all Boston-area businesses remotely - from downtown to Cambridge to suburban markets. Our GEO strategies work regardless of your physical location within the Boston metro."
+      question: "How do institutional affiliations enhance GEO positioning?",
+      answer: "Boston's academic and medical institutions create powerful credibility vectors. GEO amplifies legitimate institutional connections, research partnerships, and thought leadership within AI discovery. When associations recommend or partners endorse, GEO ensures these credibility signals reach decision-makers."
     },
     {
-      question: "What Boston industries benefit most from GEO?",
-      answer: "Boston's biotech firms, financial services, healthcare providers, education tech companies, and professional services benefit significantly. Any industry where customers research via AI assistants needs GEO."
+      question: "Can GEO accelerate adoption in conservative Boston markets?",
+      answer: "Yes. Established institutions in Boston evaluate carefully—GEO builds credibility early in discovery phases, shortening evaluation timelines. When prestigious companies are already citing you, newer prospects move faster from awareness to evaluation."
     },
     {
-      question: "How do you measure GEO success for Boston clients?",
-      answer: "We track AI engine citations, voice search appearances, featured snippet coverage, and conversions from AI-driven traffic. You'll see exactly how often ChatGPT, Perplexity, and Google AI recommend your Boston business."
+      question: "How do you handle Boston's preference for proven expertise?",
+      answer: "Boston audiences value demonstrated results and peer validation. GEO positioning emphasizes case results, client testimonials, and institutional recognition. Citations should reference successful outcomes, not just capabilities."
     },
     {
-      question: "Can GEO work alongside our existing Boston SEO agency?",
-      answer: "Absolutely. GEO complements traditional SEO. We can coordinate with your current Boston marketing team or work independently. Many clients use us specifically for AI search while maintaining their existing SEO partnerships."
+      question: "What competitive advantage comes from complexity-aware Boston GEO?",
+      answer: "Most competitors position generically without acknowledging Boston's institutional and regulatory sophistication. Complexity-aware positioning becomes difficult to match. Institutional audiences recognize genuine understanding of their decision frameworks—creating durable advantage as trust builds."
     }
   ]
 

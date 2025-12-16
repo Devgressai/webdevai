@@ -66,36 +66,36 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "How does GEO help my Los Angeles business?",
-    answer: "When someone asks ChatGPT 'best production company in LA' or asks Perplexity 'find a dentist in Beverly Hills,' your business should be mentioned. GEO optimizes your online presence so AI systems recognize and recommend you for relevant local queries in the LA market. As AI search grows, visibility there is critical."
+    question: "How does LA's industry fragmentation affect GEO strategy?",
+    answer: "LA contains distinct business universes with different decision-making hierarchies. Entertainment companies, tech firms, real estate groups, and medical practices operate under completely different buyer personas and search behaviors. We segment optimization by industry ecosystem, ensuring positioning resonates within the specific community you serve."
   },
   {
-    question: "How does Webvello deliver GEO services remotely to LA businesses?",
-    answer: "All our GEO work is done digitally—no local office needed. We optimize your website, implement schema markup, create AI-friendly content for LA neighborhoods, and monitor your visibility across AI platforms. You'll receive monthly reports showing exactly when and how AI systems cite your business. We've successfully served LA businesses from entertainment to healthcare entirely remotely."
+    question: "Can you optimize for multiple LA markets simultaneously?",
+    answer: "Yes. Large LA companies often serve diverse stakeholder groups. We create nuanced positioning that addresses different personas using different terminology. Your GEO strategy branches by audience segment, ensuring credibility within each professional network."
   },
   {
-    question: "Do you work with businesses throughout LA County?",
-    answer: "Yes. We serve businesses throughout Los Angeles County, from Downtown LA to the Westside, the Valley to the South Bay. We create location-specific content and optimization strategies for your service areas, whether you serve one neighborhood or all of LA."
+    question: "How does stakeholder complexity change GEO priorities?",
+    answer: "Larger decisions involve multiple stakeholders with different information needs. A real estate transaction requires agents, financing professionals, title companies, and inspectors. GEO targets each stakeholder type separately, ensuring you appear in the AI queries they each use during their decision process."
   },
   {
-    question: "What makes LA different for GEO?",
-    answer: "Los Angeles is highly competitive with tech-savvy consumers who adopt AI tools quickly. The entertainment and tech industries mean your audience is more likely to use AI for search. LA also has distinct neighborhoods with different search behaviors—we optimize for this local complexity."
+    question: "What's LA-specific about serving enterprise accounts?",
+    answer: "LA enterprise clients operate across global networks with local execution requirements. GEO positioning must demonstrate both international sophistication and local market mastery simultaneously. We craft messaging that appeals to C-suite decision-makers researching vendor credibility."
   },
   {
-    question: "Do you work with LA entertainment and production companies?",
-    answer: "Absolutely. We understand the entertainment industry and how talent, investors, and partners use AI to research companies. When someone asks AI for production company or agency recommendations, we ensure you're cited. We optimize for industry-specific terminology and search patterns."
+    question: "How do you handle cross-neighborhood optimization in LA?",
+    answer: "Different LA neighborhoods have completely different buyer demographics and search behaviors. Beverly Hills professional searches differ from Downtown LA searches. We optimize separately for each neighborhood cluster, acknowledging distinct market segments within the broader metro."
   },
   {
-    question: "What industries benefit most from LA GEO?",
-    answer: "Entertainment, tech, real estate, legal services, healthcare, home services, and restaurants see the biggest impact. LA's diverse, competitive economy means AI visibility drives leads across nearly every industry."
+    question: "Can GEO support complex service offerings?",
+    answer: "Absolutely. Consulting firms, legal practices, and healthcare networks offer multiple service lines to distinct client types. GEO creates dimensional positioning—different aspects of your company appear in different relevant contexts, avoiding generic descriptions that underserve nuanced offerings."
   },
   {
-    question: "How long until I see AI visibility improvements in LA?",
-    answer: "For niche queries and specific LA neighborhoods, we often see improvements in 4-8 weeks. Broader, competitive terms like 'best restaurant in LA' take 3-6 months. We focus on quick wins in your specific area first while building toward bigger targets."
+    question: "How do you ensure positioning works across organizational levels?",
+    answer: "Purchasing decisions involve different hierarchies. Department heads search differently than procurement specialists. We optimize for search patterns across the buying committee structure, ensuring each decision-maker encounters relevant credibility evidence during their research phase."
   },
   {
-    question: "How do you measure GEO success in Los Angeles?",
-    answer: "We track when AI systems mention your business, monitor specific LA-related queries in your industry, measure citation frequency across ChatGPT, Perplexity, and Google SGE, and analyze the context of mentions. You'll see concrete data showing your growing AI visibility month over month."
+    question: "What's the advantage of LA-specific enterprise GEO?",
+    answer: "Competitors often take one-size-fits-all approaches. LA enterprises benefit from segmented optimization recognizing the complexity of their markets. This creates durable advantage—your sophistication positioning becomes difficult for generalist competitors to match."
   }
 ]
 
@@ -146,7 +146,7 @@ export default function GEOLosAngelesPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to Los Angeles businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. We help entertainment companies, tech startups, real estate firms, and service businesses dominate AI search without requiring a local office visit.
+                Los Angeles operates across multiple business universes—entertainment, technology, real estate, finance, healthcare. Managing reputation across these fragmented ecosystems requires nuance. GEO positions your company distinctly within the specific stakeholder networks you serve, ensuring the right audience discovers you when they ask AI for help.
               </p>
             </div>
             
