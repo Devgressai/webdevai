@@ -151,7 +151,7 @@ export default function GEOMiamiPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Miami buyers decide fast and move decisively. Establishing early credibility through AI citations converts high-intent prospects into clients. GEO emphasizes proven results, efficiency metrics, and ROI. First citations in high-value queries drive immediate lead flow and superior conversion rates.
+                Miami buyers decide fast and move decisively. Establishing early credibility through AI citations converts high-intent prospects into clients. As part of our services <Link href="/services/florida" className="text-cyan-400 hover:underline">across Florida</Link>, GEO emphasizes proven results, efficiency metrics, and ROI. First citations in high-value queries drive immediate lead flow and superior conversion rates.
               </p>
             </div>
             

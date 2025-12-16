@@ -150,7 +150,7 @@ export default function GEORedmondPage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach Microsoft partners, ecosystem decision-makers, and cloud-first enterprises where they research solutions. Dominate Redmond's tech innovation landscape.
+              Reach Microsoft partners, ecosystem decision-makers, and cloud-first enterprises where they research solutions. Dominate Redmond's tech innovation landscape. We serve organizations <Link href="/services/washington" className="text-cyan-400 hover:underline">throughout Washington state</Link>.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

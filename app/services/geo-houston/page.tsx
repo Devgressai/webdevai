@@ -151,7 +151,7 @@ export default function GEOHoustonPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Houston's industries operate at specialized scales—energy systems, medical hierarchies, manufacturing networks. GEO builds visibility into industry-specific buyer flows, positioning you where decision-makers already search. Operational integration means optimization happens alongside core business processes.
+                Houston's industries operate at specialized scales—energy systems, medical hierarchies, manufacturing networks. GEO builds visibility into industry-specific buyer flows, positioning you where decision-makers already search. As part of our services <Link href="/services/texas" className="text-orange-300 hover:text-orange-200 underline">throughout Texas</Link>, we help Houston businesses gain competitive advantage through AI-optimized visibility.
               </p>
             </div>
             

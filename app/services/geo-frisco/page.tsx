@@ -134,7 +134,7 @@ export default function GEOFriscoPage() {
               <span className="text-white/80 text-sm">GEO Services in Frisco, Texas</span>
             </div>
             <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">Growth-Stage Tech Authority<span className="block bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">for Frisco</span></h1>
-            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach founders, growth-stage leaders, and venture investors where they research scaling solutions. Dominate Frisco's startup and growth ecosystem.</p>
+            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach founders, growth-stage leaders, and venture investors where they research scaling solutions. Dominate Frisco's startup and growth ecosystem. As part of our services <Link href="/services/texas" className="text-amber-300 hover:text-amber-200 underline">throughout Texas</Link>, we help businesses gain competitive advantage through AI-optimized visibility.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white"><Link href="/contact">Get Growth Strategy</Link></Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10"><Link href="/">View Case Studies</Link></Button>

@@ -147,7 +147,7 @@ export default function GEODallasPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                DFW operates on execution at scale. Multiple systems, distributed teams, evolving processes—GEO works within your operational reality. Scalable optimization integrates with your growth systems, producing citations without disrupting operations. Remote delivery means your team stays focused on core execution while AI visibility builds in parallel.
+                DFW operates on execution at scale. Multiple systems, distributed teams, evolving processes—GEO works within your operational reality. Scalable optimization integrates with your growth systems, producing citations without disrupting operations. Webvello delivers expert services <Link href="/services/texas" className="text-purple-400 hover:underline">throughout Texas</Link>, with remote delivery ensuring your team stays focused on core execution while AI visibility builds in parallel.
               </p>
             </div>
             

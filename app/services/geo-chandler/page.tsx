@@ -52,7 +52,7 @@ export default function GEOChandlerPage() {
               <span className="text-white/80 text-sm">GEO Services in Chandler, Arizona</span>
             </div>
             <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">Tech Manufacturing Authority<span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">for Chandler</span></h1>
-            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach semiconductor engineers and manufacturing leaders. Dominate Chandler's industrial tech ecosystem through AI search visibility.</p>
+            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach semiconductor engineers and manufacturing leaders. Dominate Chandler's industrial tech ecosystem through AI search visibility. We serve organizations <Link href="/services/arizona" className="text-indigo-400 hover:underline">across Arizona</Link>.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white"><Link href="/contact">Get Manufacturing Strategy</Link></Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10"><Link href="/">View Case Studies</Link></Button>

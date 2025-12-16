@@ -167,7 +167,7 @@ export default function GEOMemphisPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Get found when Memphis customers ask AI for recommendations. Webvello's remote GEO services ensure your Memphis business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Get found when Memphis customers ask AI for recommendations. Webvello's remote GEO services ensure your Memphis business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/tennessee" className="text-cyan-400 hover:underline">throughout Tennessee</Link>.
               </p>
             </div>
             

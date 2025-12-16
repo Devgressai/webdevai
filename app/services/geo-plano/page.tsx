@@ -150,7 +150,7 @@ export default function GEOPlanoPage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach Fortune 500 executives, corporate tech leaders, and enterprise decision-makers. Dominate Plano's corporate ecosystem through AI search visibility.
+              Reach Fortune 500 executives, corporate tech leaders, and enterprise decision-makers. Dominate Plano's corporate ecosystem through AI search visibility. As part of our services <Link href="/services/texas" className="text-sky-300 hover:text-sky-200 underline">throughout Texas</Link>, we help businesses gain competitive advantage through AI-optimized visibility.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

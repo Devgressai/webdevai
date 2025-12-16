@@ -167,7 +167,7 @@ export default function GEOOrlandoPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Get found by AI when Orlando visitors and residents search. Webvello's remote GEO services ensure your Orlando business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Get found by AI when Orlando visitors and residents search. Webvello's remote GEO services ensure your Orlando business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/florida" className="text-purple-400 hover:underline">throughout Florida</Link> with expert GEO delivery.
               </p>
             </div>
             

@@ -150,7 +150,7 @@ export default function GEOCupertinoPage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach consumer tech decision-makers, product leaders, and suppliers where they research solutions. Dominate Cupertino's design-first tech conversations.
+              Reach consumer tech decision-makers, product leaders, and suppliers where they research solutions. Dominate Cupertino's design-first tech conversations. As part of our services <Link href="/services/california" className="text-orange-300 hover:text-orange-200 underline">across California</Link>, we help businesses gain competitive advantage through AI-optimized visibility.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

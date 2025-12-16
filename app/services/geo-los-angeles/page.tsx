@@ -146,7 +146,7 @@ export default function GEOLosAngelesPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Los Angeles operates across multiple business universes—entertainment, technology, real estate, finance, healthcare. Managing reputation across these fragmented ecosystems requires nuance. GEO positions your company distinctly within the specific stakeholder networks you serve, ensuring the right audience discovers you when they ask AI for help.
+                Los Angeles operates across multiple business universes—entertainment, technology, real estate, finance, healthcare. Managing reputation across these fragmented ecosystems requires nuance. As part of our services <Link href="/services/california" className="text-rose-400 hover:underline">across California</Link>, GEO positions your company distinctly within the specific stakeholder networks you serve, ensuring the right audience discovers you when they ask AI for help.
               </p>
             </div>
             

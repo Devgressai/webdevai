@@ -150,7 +150,7 @@ export default function GEOPaloAltoPage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach VCs, founders, and corporate innovation teams where they research opportunities. Dominate Palo Alto venture conversations across ChatGPT, Perplexity, and Claude.
+              Reach VCs, founders, and corporate innovation teams where they research opportunities. Dominate Palo Alto venture conversations across ChatGPT, Perplexity, and Claude. As part of our services <Link href="/services/california" className="text-purple-300 hover:text-purple-200 underline">across California</Link>, we help businesses gain competitive advantage through AI-optimized visibility.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

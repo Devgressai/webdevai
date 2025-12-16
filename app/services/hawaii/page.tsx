@@ -87,7 +87,7 @@ export default function HawaiiServicesPage() {
               Serving Businesses Across Hawaii
             </h2>
             <p className="text-lg text-secondary-600 mb-4">
-              Hawaii's economy centers on tourism, hospitality, real estate, healthcare, and professional services. Each sector requires digital marketing that addresses both local resident needs and visitor discovery patterns.
+              Hawaii's economy centers on tourism, hospitality, real estate, healthcare, and professional services. Each sector requires digital marketing that addresses both local resident needs and visitor discovery patterns. <Link href="/services/geo-honolulu" className="text-primary-600 hover:text-primary-700 underline">Businesses in Honolulu</Link> and organizations throughout the islands benefit from comprehensive digital visibility strategies.
             </p>
             <p className="text-lg text-secondary-600">
               Webvello provides SEO, GEO (Generative Engine Optimization), and web development through remote delivery. Hawaii businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers and travelers research Hawaii services.

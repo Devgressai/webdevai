@@ -159,7 +159,7 @@ export default function GEOChicagoPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Chicago's decision-making structures run deep—multiple stakeholders, institutional hierarchies, long evaluation cycles. GEO navigates this complexity by positioning your company credibly within the specific committees and networks that drive B2B buying decisions, ensuring visibility throughout extended sales processes.
+                Chicago's decision-making structures run deep—multiple stakeholders, institutional hierarchies, long evaluation cycles. GEO navigates this complexity by positioning your company credibly within the specific committees and networks that drive B2B buying decisions. As part of our services <Link href="/services/illinois" className="text-cyan-400 hover:underline">throughout Illinois</Link>, we ensure visibility throughout extended sales processes.
               </p>
             </div>
             

@@ -150,7 +150,7 @@ export default function GEOBellevuePage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach Bellevue tech leaders, Microsoft ecosystem partners, and enterprise buyers where they research solutions. Dominate Pacific Northwest tech conversations.
+              Reach Bellevue tech leaders, Microsoft ecosystem partners, and enterprise buyers where they research solutions. Dominate Pacific Northwest tech conversations. We serve organizations <Link href="/services/washington" className="text-lime-400 hover:underline">throughout Washington state</Link>.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

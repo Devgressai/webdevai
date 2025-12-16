@@ -154,7 +154,7 @@ export default function GEOAustinPage() {
             {/* Direct Answer Summary */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Austin's business landscape shifts faster than most cities. New startups, relocated talent, and aggressive market entrants compete for attention daily. Webvello's GEO services ensure your business surfaces when AI engines field customer queries—before competitors establish their own AI footprint. Remote-first optimization means you gain visibility at the speed Austin moves.
+                Austin's business landscape shifts faster than most cities. New startups, relocated talent, and aggressive market entrants compete for attention daily. Webvello's GEO services ensure your business surfaces when AI engines field customer queries—before competitors establish their own AI footprint. As part of our services <Link href="/services/texas" className="text-rose-400 hover:underline">across Texas</Link>, remote-first optimization means you gain visibility at the speed Austin moves.
               </p>
             </div>
             

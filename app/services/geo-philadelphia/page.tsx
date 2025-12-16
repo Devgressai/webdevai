@@ -167,7 +167,7 @@ export default function GEOPhiladelphiaPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Position your Philadelphia business in ChatGPT, Perplexity & AI search results. Webvello's remote GEO services ensure your Philadelphia business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Position your Philadelphia business in ChatGPT, Perplexity & AI search results. Webvello's remote GEO services ensure your Philadelphia business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/pennsylvania" className="text-blue-400 hover:underline">across Pennsylvania</Link>.
               </p>
             </div>
             

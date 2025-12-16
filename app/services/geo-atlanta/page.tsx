@@ -87,7 +87,7 @@ export default function GEOAtlantaPage() {
           </h1>
           <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 mb-8 rounded-full"></div>
           <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl">
-            <strong>Get your Atlanta business cited by ChatGPT, Perplexity, and Google AI.</strong> Webvello delivers remote GEO services that position your brand for voice search, AI-generated answers, and the next generation of search technology.
+            <strong>Get your Atlanta business cited by ChatGPT, Perplexity, and Google AI.</strong> Webvello delivers remote GEO services that position your brand for voice search, AI-generated answers, and the next generation of search technology. We serve organizations <Link href="/services/georgia" className="text-blue-300 hover:underline">across Georgia</Link>.
           </p>
         </div>
       </section>

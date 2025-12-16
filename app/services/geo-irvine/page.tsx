@@ -150,7 +150,7 @@ export default function GEOIrvinePage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach corporate executives and tech leaders where Orange County businesses research solutions. Dominate Irvine's enterprise and tech marketplace.
+              Reach corporate executives and tech leaders where Orange County businesses research solutions. Dominate Irvine's enterprise and tech marketplace. As part of our services <Link href="/services/california" className="text-indigo-300 hover:text-indigo-200 underline">across California</Link>, we help businesses gain competitive advantage through AI-optimized visibility.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

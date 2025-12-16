@@ -167,7 +167,7 @@ export default function GEOOklahomaCityPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Get found by ChatGPT when OKC customers search your industry. Webvello's remote GEO services ensure your Oklahoma City business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Get found by ChatGPT when OKC customers search your industry. Webvello's remote GEO services ensure your Oklahoma City business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/oklahoma" className="text-red-400 hover:underline">across Oklahoma</Link>.
               </p>
             </div>
             

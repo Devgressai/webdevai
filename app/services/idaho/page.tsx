@@ -49,7 +49,7 @@ export default function IdahoServicesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold text-secondary-900 mb-6">Serving Businesses Across Idaho</h2>
-            <p className="text-lg text-secondary-600 mb-4">Idaho's economy blends technology, agriculture, manufacturing, and healthcare. Each sector requires digital marketing that addresses both local market needs and broader regional commerce opportunities.</p>
+            <p className="text-lg text-secondary-600 mb-4">Idaho's economy blends technology, agriculture, manufacturing, and healthcare. Each sector requires digital marketing that addresses both local market needs and broader regional commerce opportunities. <Link href="/services/geo-boise" className="text-primary-600 hover:text-primary-700 underline">Businesses in Boise</Link> and organizations throughout Idaho benefit from comprehensive digital visibility strategies.</p>
             <p className="text-lg text-secondary-600">Webvello provides SEO, GEO (Generative Engine Optimization), and web development through remote delivery. Idaho businesses appear in Google, ChatGPT, Perplexity, and other platforms where customers discover solutions.</p>
           </div>
         </div>

@@ -147,7 +147,7 @@ export default function GEOPhoenixPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Phoenix buyers convert faster than most markets—they've done their research before calling. GEO ensures you're already trusted by the time prospects ask for recommendations. ROI-focused positioning emphasizes cost-efficiency, reliability, and proven results. Early visibility translates directly to increased lead volume and higher conversion rates.
+                Phoenix buyers convert faster than most markets—they've done their research before calling. GEO ensures you're already trusted by the time prospects ask for recommendations. As part of our services <Link href="/services/arizona" className="text-amber-400 hover:underline">throughout Arizona</Link>, ROI-focused positioning emphasizes cost-efficiency, reliability, and proven results. Early visibility translates directly to increased lead volume and higher conversion rates.
               </p>
             </div>
             

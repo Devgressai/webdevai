@@ -167,7 +167,7 @@ export default function GEOSpokanePage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Secure AI citations for your Spokane business. Webvello's remote GEO services ensure your Spokane business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Secure AI citations for your Spokane business. Webvello's remote GEO services ensure your Spokane business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/washington" className="text-green-400 hover:underline">across Washington state</Link>.
               </p>
             </div>
             

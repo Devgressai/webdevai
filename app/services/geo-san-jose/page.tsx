@@ -150,7 +150,7 @@ export default function GEOSanJosePage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Capture AI search citations where Silicon Valley talent, investors, and tech buyers research. Dominate ChatGPT, Perplexity, and Claude conversations in San Jose's most competitive tech sectors.
+              Capture AI search citations where Silicon Valley talent, investors, and tech buyers research. As part of our services <Link href="/services/california" className="text-blue-400 hover:underline">across California</Link>, dominate ChatGPT, Perplexity, and Claude conversations in San Jose's most competitive tech sectors.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

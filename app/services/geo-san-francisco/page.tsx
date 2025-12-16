@@ -92,7 +92,7 @@ export default function GEOSanFranciscoPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                SF's tech scene accelerates beyond what traditional marketing can match. Founders, CTOs, and investors make buying decisions through AI queries, not Google ads. GEO puts your company in AI answers before your next funding round closes. Competitive positioning consolidates quickly in Bay Area markets—establish AI credibility now or watch newer entrants claim the territory.
+                SF's tech scene accelerates beyond what traditional marketing can match. Founders, CTOs, and investors make buying decisions through AI queries, not Google ads. As part of our services <Link href="/services/california" className="text-emerald-400 hover:underline">throughout California</Link>, GEO puts your company in AI answers before your next funding round closes. Competitive positioning consolidates quickly in Bay Area markets—establish AI credibility now or watch newer entrants claim the territory.
               </p>
             </div>
             

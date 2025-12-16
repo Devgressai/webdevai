@@ -150,7 +150,7 @@ export default function GEOSunnyvalePage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach semiconductor engineers, cloud architects, and enterprise tech leaders. Dominate Sunnyvale's technical innovation conversations through AI search.</p>
+              Reach semiconductor engineers, cloud architects, and enterprise tech leaders. Dominate Sunnyvale's technical innovation conversations through AI search. As part of our services <Link href="/services/california" className="text-cyan-300 hover:text-cyan-200 underline">across California</Link>, we help businesses gain competitive advantage through AI-optimized visibility.</p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white">

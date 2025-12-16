@@ -94,7 +94,7 @@ export default function GEONewYorkPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Webvello provides remote GEO services to New York City businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. We help financial services, law firms, real estate agencies, and professional practices dominate AI search without requiring a local office visit.
+                Webvello provides remote GEO services to New York City businesses, optimizing your online presence so AI engines like ChatGPT, Perplexity, and Google SGE cite you when customers ask for recommendations. As part of our services <Link href="/services/new-york" className="text-blue-400 hover:underline">throughout New York state</Link>, we help financial services, law firms, real estate agencies, and professional practices dominate AI search without requiring a local office visit.
               </p>
             </div>
             

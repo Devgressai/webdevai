@@ -52,7 +52,7 @@ export default function GEONapervillePage() {
               <span className="text-white/80 text-sm">GEO Services in Naperville, Illinois</span>
             </div>
             <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">Chicago Suburbs Corporate Authority<span className="block bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">for Naperville</span></h1>
-            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach Naperville corporate leaders and research professionals. Dominate Chicago-area corporate tech ecosystem through AI search visibility.</p>
+            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach Naperville corporate leaders and research professionals. Dominate Chicago-area corporate tech ecosystem through AI search visibility. As part of our services <Link href="/services/illinois" className="text-teal-300 hover:text-teal-200 underline">throughout Illinois</Link>, we help businesses gain competitive advantage through AI-optimized visibility.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white"><Link href="/contact">Get Corporate Strategy</Link></Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10"><Link href="/">View Case Studies</Link></Button>

@@ -167,7 +167,7 @@ export default function GEOSacramentoPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Get your Sacramento business found by AI engines like ChatGPT. Webvello's remote GEO services ensure your Sacramento business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Get your Sacramento business found by AI engines like ChatGPT. Webvello's remote GEO services ensure your Sacramento business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/california" className="text-green-400 hover:underline">throughout California</Link> with expert GEO delivery.
               </p>
             </div>
             

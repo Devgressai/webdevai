@@ -167,7 +167,7 @@ export default function GEOOmahaPage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Secure ChatGPT citations for your Omaha business today. Webvello's remote GEO services ensure your Omaha business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Secure ChatGPT citations for your Omaha business today. Webvello's remote GEO services ensure your Omaha business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/nebraska" className="text-red-400 hover:underline">across Nebraska</Link>.
               </p>
             </div>
             

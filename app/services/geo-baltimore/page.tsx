@@ -167,7 +167,7 @@ export default function GEOBaltimorePage() {
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 backdrop-blur-sm">
               <p className="text-lg text-white/90 leading-relaxed">
-                Dominate AI visibility when Baltimore customers search for services. Webvello's remote GEO services ensure your Baltimore business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet.
+                Dominate AI visibility when Baltimore customers search for services. Webvello's remote GEO services ensure your Baltimore business surfaces when AI engines field customer queries—positioning you ahead of competitors who haven't optimized for AI search yet. We serve organizations <Link href="/services/maryland" className="text-orange-400 hover:underline">across Maryland</Link>.
               </p>
             </div>
             

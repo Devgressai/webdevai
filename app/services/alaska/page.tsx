@@ -89,7 +89,7 @@ export default function AlaskaServicesPage() {
               Serving Businesses Across Alaska
             </h2>
             <p className="text-lg text-secondary-600 mb-4">
-              Alaska's unique economy—spanning tourism, natural resources, healthcare, and professional services—requires digital marketing that addresses both local market needs and the state's role in broader regional commerce.
+              Alaska's unique economy—spanning tourism, natural resources, healthcare, and professional services—requires digital marketing that addresses both local market needs and the state's role in broader regional commerce. <Link href="/services/geo-anchorage" className="text-primary-600 hover:text-primary-700 underline">Businesses in Anchorage</Link> and organizations throughout Alaska benefit from comprehensive digital visibility strategies.
             </p>
             <p className="text-lg text-secondary-600">
               Webvello provides SEO, GEO (Generative Engine Optimization), and web development through remote delivery. Alaska businesses appear in Google search results, AI platform responses, and other discovery channels where customers and partners research Alaska services.

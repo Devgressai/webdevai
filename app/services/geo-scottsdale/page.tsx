@@ -52,7 +52,7 @@ export default function GEOScottsdalePage() {
               <span className="text-white/80 text-sm">GEO Services in Scottsdale, Arizona</span>
             </div>
             <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">Luxury Brand Authority<span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">for Scottsdale</span></h1>
-            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach affluent decision-makers and premium market leaders. Dominate Scottsdale's luxury ecosystem through AI search positioning.</p>
+            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach affluent decision-makers and premium market leaders. Dominate Scottsdale's luxury ecosystem through AI search positioning. We serve organizations <Link href="/services/arizona" className="text-purple-400 hover:underline">throughout Arizona</Link>.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white"><Link href="/contact">Get Luxury Strategy</Link></Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10"><Link href="/">View Case Studies</Link></Button>

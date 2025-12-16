@@ -52,7 +52,7 @@ export default function GEOTempePage() {
               <span className="text-white/80 text-sm">GEO Services in Tempe, Arizona</span>
             </div>
             <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">Academic & Innovation Authority<span className="block bg-gradient-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">for Tempe</span></h1>
-            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach ASU researchers, academic innovators, and education tech leaders. Dominate Tempe's innovation ecosystem through AI search.</p>
+            <p className="text-xl text-slate-200 mb-8 max-w-2xl">Reach ASU researchers, academic innovators, and education tech leaders. Dominate Tempe's innovation ecosystem through AI search. We serve organizations <Link href="/services/arizona" className="text-rose-400 hover:underline">across Arizona</Link>.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-white"><Link href="/contact">Get Academic Strategy</Link></Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10"><Link href="/">View Case Studies</Link></Button>

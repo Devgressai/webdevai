@@ -150,7 +150,7 @@ export default function GEOSantaMonicaPage() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-8 max-w-2xl">
-              Reach creative directors, producers, and brand leaders where they research partners. Dominate Santa Monica's creative industry on AI platforms.
+              Reach creative directors, producers, and brand leaders where they research partners. Dominate Santa Monica's creative industry on AI platforms. As part of our services <Link href="/services/california" className="text-pink-300 hover:text-pink-200 underline">across California</Link>, we help businesses gain competitive advantage through AI-optimized visibility.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
