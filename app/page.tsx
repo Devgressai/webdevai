@@ -9,7 +9,8 @@ import Image from 'next/image'
 import { LazySection } from '../components/ui/lazy-section'
 import { SchemaMarkup, FAQSchema } from '../components/seo/schema-markup'
 import dynamic from 'next/dynamic'
-import { HomepageFAQ, homepageFAQData } from '../components/sections/homepage-faq'
+import { HomepageFAQ } from '../components/sections/homepage-faq'
+import { homepageFAQData } from '@/lib/homepage-faq-data'
 
 // SEO Title: 56 characters
 // Meta Description: 154 characters
