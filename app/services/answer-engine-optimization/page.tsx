@@ -283,7 +283,11 @@ export default function AnswerEngineOptimizationPage() {
                   Unlike traditional SEO which optimizes for standard search rankings, AEO targets "position zero" results—the featured snippet boxes that appear above organic search results. These answer boxes provide immediate answers without requiring users to click through to websites.
               </p>
               <p className="text-lg text-secondary-600 mb-6">
-                  AEO techniques include using question-based headings, writing concise 40-60 word answers, implementing FAQ schema markup, structuring content with clear definitions, and formatting information in tables and lists that search engines can easily extract.
+                  AEO techniques include using question-based headings, writing concise 40-60 word answers, implementing FAQ schema markup, structuring content with clear definitions, and formatting information in tables and lists that search engines can easily extract. Answer Engine Optimization requires{' '}
+                  <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 font-medium underline">
+                    strong technical SEO fundamentals
+                  </Link>{' '}
+                  to ensure your content is crawlable, indexable, and performant.
                 </p>
               </div>
               

@@ -277,7 +277,11 @@ export default function AISeOPage() {
           <p className="text-lg text-secondary-700 mb-8">
             <strong>AI SEO</strong> refers to the use of artificial intelligence technologies—including 
             natural language processing, machine learning, and predictive analytics—to improve and 
-            accelerate traditional search engine optimization processes.
+            accelerate traditional search engine optimization processes. AI SEO works best when built on a solid{' '}
+            <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 font-medium underline">
+              traditional SEO foundation
+            </Link>{' '}
+            that ensures technical health, crawlability, and site performance.
           </p>
 
           <h3 className="text-2xl font-semibold text-secondary-900 mb-6">Core Components of AI SEO:</h3>

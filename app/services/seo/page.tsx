@@ -1,18 +1,18 @@
 import { Button } from '../../../components/ui/button'
-import { ArrowRight, Search, TrendingUp, BarChart3, Target, Zap, Globe, Users, FileText, Settings, Code, ShoppingBag, Link as LinkIcon, CheckCircle, Clock, Shield, Award, Star, Eye, MousePointer, Filter, Heart, Truck, CreditCard, Lock, RefreshCw, TrendingDown, AlertTriangle, Lightbulb, Building2, Calculator, Calendar, UserCheck, MessageSquare, Phone, UserPlus, Palette, Monitor, ShoppingCart, Send, Bot, Factory, Wrench, Layers, Crown, Gem, Share2, MessageCircle, Cloud, Smartphone } from 'lucide-react'
+import { ArrowRight, Search, TrendingUp, BarChart3, Target, Zap, Globe, Users, FileText, Settings, CheckCircle, Shield, Award, Smartphone, ShoppingCart, Heart, Building2, Code, UserCheck, HelpCircle } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Professional SEO Services & Experts | Web Vello',
-  description: 'Increase rankings, traffic & revenue with expert SEO. Technical audits, on-page optimization, content strategy & link building for predictable growth.',
-  keywords: ['seo agency', 'technical seo services', 'on-page optimization', 'link building services', 'web vello seo'],
+  title: 'Traditional SEO Services | Technical & On-Page Experts',
+  description: 'Traditional SEO builds search visibility through technical optimization, on-page strategy, and authority building. Expert SEO services from Webvello.',
+  keywords: ['traditional seo services', 'technical seo', 'on-page seo', 'seo optimization', 'seo foundation'],
   alternates: {
     canonical: 'https://www.webvello.com/services/seo',
   },
   openGraph: {
-    title: 'Professional SEO Services & Experts | Web Vello',
-    description: 'Increase rankings, traffic & revenue with expert SEO. Technical audits, on-page optimization, content strategy & link building.',
+    title: 'Traditional SEO Services | Technical & On-Page Experts',
+    description: 'Traditional SEO builds search visibility through technical optimization, on-page strategy, and authority building. Expert SEO services from Webvello.',
     url: 'https://www.webvello.com/services/seo',
     type: 'website',
     images: [
@@ -20,365 +20,305 @@ export const metadata: Metadata = {
         url: 'https://www.webvello.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Web Vello SEO Services',
+        alt: 'Webvello Traditional SEO Services',
       },
     ],
   }
 }
 
-const features = [
+const corePillars = [
   {
-    icon: Search,
-    title: "Advanced Keyword Research",
-    description: "Comprehensive keyword analysis using cutting-edge tools to identify high-value opportunities your competitors are missing. We analyze search volume, competition levels, and user intent to build a strategic keyword foundation."
-  },
-  {
-    icon: Target,
-    title: "On-Page Optimization",
-    description: "Technical SEO optimization including meta tags, content structure, internal linking, and schema markup. We ensure every page is perfectly optimized for search engines while maintaining excellent user experience."
-  },
-  {
-    icon: BarChart3,
-    title: "Performance Monitoring",
-    description: "Continuous tracking and analysis of your SEO performance with detailed reporting. We monitor rankings, traffic, conversions, and provide monthly reports with actionable insights and recommendations."
-  },
-  {
-    icon: Zap,
+    icon: Settings,
     title: "Technical SEO",
-    description: "Site speed optimization, mobile responsiveness, Core Web Vitals, and technical improvements for better rankings. We ensure your website meets all technical requirements for optimal search engine performance."
+    description: "The structural foundation that allows search engines to crawl, index, and understand your website efficiently.",
+    elements: [
+      "Site speed optimization and Core Web Vitals",
+      "Mobile responsiveness and mobile-first indexing",
+      "XML sitemaps and robots.txt configuration",
+      "SSL certificates and HTTPS implementation",
+      "Site architecture and URL structure",
+      "Schema markup and structured data"
+    ]
+  },
+  {
+    icon: FileText,
+    title: "On-Page SEO",
+    description: "Content-level optimization that makes individual pages relevant, valuable, and competitive for target keywords.",
+    elements: [
+      "Title tag optimization for click-through rates",
+      "Meta description writing for engagement",
+      "Header tag structure optimization",
+      "Keyword research and strategic placement",
+      "Content quality and relevance improvement",
+      "Internal linking strategy"
+    ]
   },
   {
     icon: Globe,
-    title: "Content Strategy",
-    description: "SEO-optimized content that ranks well and provides value to your target audience. We develop content strategies that align with search intent and business goals for maximum impact."
-  },
-  {
-    icon: Users,
-    title: "Link Building",
-    description: "Strategic link building to increase domain authority and improve search rankings. We focus on high-quality, relevant backlinks from authoritative sources that provide real SEO value."
+    title: "Off-Page SEO & Authority Building",
+    description: "External signals that demonstrate credibility, trustworthiness, and industry authority to search engines.",
+    elements: [
+      "High-quality backlink acquisition",
+      "Domain authority development",
+      "Link building from authoritative sources",
+      "Competitor backlink analysis",
+      "Brand mention tracking",
+      "Digital PR and media outreach"
+    ]
   }
 ]
 
-const process = [
+const seoProcess = [
   {
     step: "01",
     title: "Comprehensive SEO Audit",
-    description: "Deep analysis of your current SEO performance, technical issues, content gaps, and competitive landscape. We identify opportunities and create a roadmap for improvement.",
     duration: "1-2 weeks",
-    details: [
-      "Technical SEO audit and site health check",
-      "Keyword research and competitive analysis", 
-      "Content gap analysis and opportunity identification",
-      "Backlink profile analysis and link audit",
-      "Local SEO assessment (if applicable)",
-      "Performance and Core Web Vitals evaluation"
+    description: "We analyze your website's current state to identify opportunities and technical issues.",
+    deliverable: "Complete SEO audit report with prioritized recommendations",
+    items: [
+      "Technical SEO health and crawlability",
+      "Site speed and Core Web Vitals",
+      "Mobile optimization and responsive design",
+      "On-page optimization gaps",
+      "Backlink profile and domain authority",
+      "Competitive landscape analysis"
     ]
   },
   {
     step: "02",
     title: "Strategic Planning",
-    description: "Create a customized SEO strategy based on your business goals, target audience, and competitive landscape. We develop a comprehensive plan with clear objectives and timelines.",
     duration: "1 week",
-    details: [
+    description: "We develop a customized SEO strategy based on your business goals, target audience, and competitive position.",
+    deliverable: "90-day SEO roadmap with clear objectives and timelines",
+    items: [
       "Goal setting and KPI definition",
       "Keyword strategy and content planning",
       "Technical optimization roadmap",
       "Link building strategy development",
-      "Local SEO strategy (if applicable)",
-      "Reporting and monitoring setup"
+      "On-page optimization priorities",
+      "Measurement and reporting setup"
     ]
   },
   {
     step: "03",
     title: "Implementation & Optimization",
-    description: "Execute on-page optimizations, content improvements, technical enhancements, and begin link building campaigns. We implement changes systematically for maximum impact.",
     duration: "2-4 weeks",
-    details: [
-      "On-page SEO optimization",
-      "Content creation and optimization",
-      "Technical improvements and fixes",
+    description: "We systematically implement technical fixes, on-page improvements, and begin authority-building campaigns.",
+    deliverable: "Completed optimizations with before/after documentation",
+    items: [
+      "Technical SEO fixes (speed, mobile, crawling)",
+      "On-page optimization (titles, meta, content)",
       "Schema markup implementation",
-      "Local SEO optimization",
+      "Internal linking improvements",
+      "Content optimization and creation",
       "Initial link building outreach"
     ]
   },
   {
     step: "04",
     title: "Monitoring & Continuous Improvement",
-    description: "Ongoing monitoring, reporting, and optimization to ensure sustained growth. We continuously refine strategies based on performance data and algorithm updates.",
     duration: "Ongoing",
-    details: [
+    description: "SEO is not a one-time project—we continuously monitor performance and refine strategies based on data.",
+    deliverable: "Monthly reports with insights, rankings, traffic trends, and next steps",
+    items: [
       "Monthly performance reporting",
-      "Ranking monitoring and analysis",
+      "Ranking tracking and analysis",
       "Content performance optimization",
       "Link building campaign management",
       "Algorithm update adaptation",
-      "Strategy refinement and improvement"
+      "Strategy refinement based on results"
     ]
   }
 ]
 
 const results = [
-  { metric: "Organic Traffic Growth", value: "200%+", description: "Average increase in 6 months", icon: TrendingUp },
-  { metric: "Keyword Rankings", value: "150%+", description: "More keywords on page 1", icon: Target },
-  { metric: "Click-Through Rate", value: "40%+", description: "Improved CTR from search results", icon: MousePointer },
-  { metric: "Conversion Rate", value: "25%+", description: "Higher conversion from organic traffic", icon: BarChart3 }
-]
-
-const seoFactors = [
-  {
-    title: "Page Speed & Performance",
-    description: "Optimizing loading times, Core Web Vitals, and overall site performance for better user experience and search rankings.",
-    icon: Zap
-  },
-  {
-    title: "Mobile-First Indexing",
-    description: "Ensuring your website is fully optimized for mobile devices, as Google primarily uses mobile versions for indexing.",
-    icon: Smartphone
-  },
-  {
-    title: "Core Web Vitals",
-    description: "Optimizing Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS) for better rankings.",
-    icon: Eye
-  },
-  {
-    title: "Content Quality & Relevance",
-    description: "Creating high-quality, relevant content that answers user questions and provides genuine value to your audience.",
-    icon: FileText
-  },
-  {
-    title: "User Experience Signals",
-    description: "Improving bounce rate, time on site, pages per session, and other user engagement metrics that impact SEO.",
-    icon: Users
-  },
-  {
-    title: "Technical SEO Health",
-    description: "Maintaining clean code, proper site structure, XML sitemaps, robots.txt, and other technical SEO elements.",
-    icon: Settings
-  }
-]
-
-const seoTechniques = [
-  {
-    category: "On-Page SEO",
-    techniques: [
-      "Title tag optimization for maximum click-through rates",
-      "Meta description writing that drives engagement",
-      "Header tag structure (H1, H2, H3) optimization",
-      "Internal linking strategy for better page authority distribution",
-      "Image alt text optimization for accessibility and SEO",
-      "URL structure optimization for better crawling",
-      "Schema markup implementation for rich snippets",
-      "Content optimization for target keywords"
-    ]
-  },
-  {
-    category: "Technical SEO",
-    techniques: [
-      "Site speed optimization and Core Web Vitals improvement",
-      "Mobile responsiveness and mobile-first indexing optimization",
-      "XML sitemap creation and submission",
-      "Robots.txt file optimization",
-      "Canonical URL implementation to prevent duplicate content",
-      "SSL certificate installation and HTTPS implementation",
-      "Site architecture and navigation optimization",
-      "Crawl error identification and resolution"
-    ]
-  },
-  {
-    category: "Content SEO",
-    techniques: [
-      "Keyword research and content gap analysis",
-      "Content strategy development based on search intent",
-      "Long-form content creation for topic authority",
-      "Content freshness and update strategies",
-      "Featured snippet optimization",
-      "Content clustering and topic modeling",
-      "User-generated content optimization",
-      "Content performance tracking and optimization"
-    ]
-  },
-  {
-    category: "Link Building",
-    techniques: [
-      "High-quality backlink acquisition from authoritative sites",
-      "Broken link building and resource page link acquisition",
-      "Guest posting on relevant industry websites",
-      "Digital PR and media outreach campaigns",
-      "Local citation building and directory submissions",
-      "Internal linking optimization for better page authority",
-      "Link disavowal for toxic backlinks",
-      "Competitor backlink analysis and acquisition"
-    ]
-  }
+  { icon: TrendingUp, metric: "Organic Traffic Growth", value: "200%+", description: "Average increase within 6 months" },
+  { icon: Target, metric: "Keyword Rankings", value: "150%+", description: "More keywords on page one" },
+  { icon: BarChart3, metric: "Click-Through Rate", value: "40%+", description: "Higher CTR from search results" },
+  { icon: CheckCircle, metric: "Conversion Rate", value: "25%+", description: "Higher conversion from organic traffic" }
 ]
 
 const industries = [
+  { icon: ShoppingCart, name: "E-Commerce", description: "Product page optimization, category structure, schema markup, and conversion-focused strategies." },
+  { icon: Heart, name: "Healthcare", description: "HIPAA-compliant optimization, medical content authority, local SEO for practices, and reputation management." },
+  { icon: Shield, name: "Legal Services", description: "Competitive market strategies, local attorney SEO, content marketing, and legal directory optimization." },
+  { icon: Building2, name: "Real Estate", description: "Local market optimization, property listing SEO, neighborhood pages, and lead generation strategies." },
+  { icon: Code, name: "Technology & SaaS", description: "B2B SEO strategies, technical content optimization, software documentation, and industry thought leadership." },
+  { icon: UserCheck, name: "Professional Services", description: "Service page optimization, local visibility, client case studies, and expertise demonstration." }
+]
+
+const faqs = [
   {
-    name: "E-commerce",
-    description: "Product page optimization, category page SEO, and conversion-focused strategies for online stores.",
-    icon: ShoppingCart,
-    challenges: ["Product page optimization", "Category page rankings", "Product review SEO", "E-commerce site structure"]
+    question: "What is Traditional SEO?",
+    answer: "Traditional SEO is the practice of optimizing websites to rank higher in search engine results through technical improvements, on-page optimization, and authority building. It includes site speed optimization, mobile responsiveness, keyword research, content optimization, internal linking, schema markup, and earning high-quality backlinks. Traditional SEO creates the foundational infrastructure that allows search engines to crawl, index, and rank your website effectively."
   },
   {
-    name: "Healthcare",
-    description: "HIPAA-compliant SEO strategies for medical practices, hospitals, and healthcare providers.",
-    icon: Heart,
-    challenges: ["Local medical SEO", "Medical content optimization", "Healthcare directory listings", "Patient review management"]
+    question: "How is Traditional SEO different from AI SEO?",
+    answer: "Traditional SEO focuses on manual optimization of technical elements, on-page content, and authority building using established best practices. AI SEO uses machine learning and artificial intelligence to automate analysis, predict content performance, and identify optimization opportunities faster. Traditional SEO is the foundation; AI SEO adds speed, automation, and predictive intelligence. Both work together—Traditional SEO ensures technical health while AI SEO accelerates optimization and identifies opportunities."
   },
   {
-    name: "Legal Services",
-    description: "Specialized SEO for law firms, attorneys, and legal service providers in competitive markets.",
-    icon: Shield,
-    challenges: ["Legal content marketing", "Local attorney SEO", "Case study optimization", "Legal directory optimization"]
+    question: "How long does Traditional SEO take to show results?",
+    answer: "Most businesses see initial improvements in 60-90 days, with significant growth over 6-12 months. Traditional SEO is a compounding investment—rankings improve gradually as search engines recognize your site's authority, content quality, and technical excellence. Quick wins include technical fixes and on-page optimization, while authority building and competitive keyword rankings take 4-6 months. Sustainable results require consistent effort and strategic refinement."
   },
   {
-    name: "Real Estate",
-    description: "Local SEO and property listing optimization for real estate agents and agencies.",
-    icon: Building2,
-    challenges: ["Local real estate SEO", "Property listing optimization", "Neighborhood page SEO", "Real estate content marketing"]
+    question: "Do I need Traditional SEO if I'm doing AI SEO or AEO?",
+    answer: "Yes. Traditional SEO is the required foundation for AI SEO and Answer Engine Optimization to succeed. Without proper technical SEO (crawlability, site speed, mobile optimization), search engines cannot effectively index or rank your content—regardless of AI optimizations or answer-box formatting. Think of Traditional SEO as the infrastructure, AI SEO as the acceleration layer, and AEO as the featured snippet strategy. All three work together for maximum visibility."
   },
   {
-    name: "Technology",
-    description: "B2B SEO strategies for tech companies, SaaS providers, and software developers.",
-    icon: Code,
-    challenges: ["Technical content optimization", "B2B keyword targeting", "Software documentation SEO", "Tech industry link building"]
+    question: "What are the most important Traditional SEO ranking factors?",
+    answer: "The most impactful factors are: (1) Technical health — crawlability, site speed, mobile optimization, and Core Web Vitals; (2) Content quality — relevance, depth, user value, and keyword optimization; (3) Backlinks — quality and relevance of external links pointing to your site; (4) User experience — engagement metrics, time on page, and bounce rate; (5) On-page optimization — title tags, meta descriptions, headers, and internal linking. All factors work together—optimizing one area improves overall performance."
   },
   {
-    name: "Professional Services",
-    description: "SEO for consultants, agencies, and professional service providers across various industries.",
-    icon: UserCheck,
-    challenges: ["Service page optimization", "Professional directory listings", "Thought leadership content", "Client case study SEO"]
+    question: "Is Traditional SEO still effective in 2025?",
+    answer: "Absolutely. Traditional SEO remains the foundation of all search visibility strategies. While AI and answer engines are changing how content is discovered, they still rely on traditional SEO fundamentals: crawlability, site speed, mobile optimization, quality content, and backlinks. Google's core algorithm still prioritizes technically sound, authoritative websites with valuable content. Traditional SEO has evolved to include Core Web Vitals, mobile-first indexing, and structured data—but the fundamentals remain essential."
+  },
+  {
+    question: "How much does Traditional SEO cost?",
+    answer: "Professional Traditional SEO services typically range from $2,500/month for small businesses to $10,000+/month for enterprises, depending on site size, competition level, and scope of work. One-time SEO audits range from $1,500-$5,000. Traditional SEO is a long-term investment—most businesses see ROI within 6-12 months as organic traffic and rankings improve. We offer customized packages based on your goals, budget, and competitive landscape."
+  },
+  {
+    question: "Can I do Traditional SEO myself, or do I need an agency?",
+    answer: "Basic SEO tasks (title optimization, meta descriptions, alt text) can be done in-house with the right knowledge. However, comprehensive Traditional SEO requires technical expertise (site speed optimization, schema markup, crawl management), link building relationships, competitive analysis tools, and ongoing algorithm knowledge. Most businesses benefit from agency expertise to avoid costly mistakes, achieve faster results, and focus internal teams on core business activities. We offer both full-service management and consulting for in-house teams."
   }
 ]
 
-const tools = [
-  {
-    name: "Google Search Console",
-    description: "Monitor search performance, identify issues, and track keyword rankings.",
-    category: "Analytics & Monitoring"
-  },
-  {
-    name: "Google Analytics",
-    description: "Track organic traffic, user behavior, and conversion metrics.",
-    category: "Analytics & Monitoring"
-  },
-  {
-    name: "Ahrefs",
-    description: "Comprehensive keyword research, competitor analysis, and backlink tracking.",
-    category: "Research & Analysis"
-  },
-  {
-    name: "SEMrush",
-    description: "Keyword research, site audit, and competitive intelligence.",
-    category: "Research & Analysis"
-  },
-  {
-    name: "Screaming Frog",
-    description: "Technical SEO auditing and website crawling analysis.",
-    category: "Technical SEO"
-  },
-  {
-    name: "PageSpeed Insights",
-    description: "Core Web Vitals analysis and performance optimization recommendations.",
-    category: "Technical SEO"
-  }
-]
-
-const pricing = [
-  {
-    name: "Starter SEO",
-    price: "$2,500",
-    period: "/month",
-    description: "Perfect for small businesses looking to establish their online presence",
-    features: [
-      "Monthly keyword research (50 keywords)",
-      "On-page optimization for 10 pages",
-      "Basic technical SEO audit",
-      "Monthly performance report",
-      "Google Analytics setup",
-      "Google Search Console setup",
-      "Basic local SEO optimization",
-      "Email support"
-    ],
-    popular: false
-  },
-  {
-    name: "Professional SEO",
-    price: "$5,000",
-    period: "/month",
-    description: "Comprehensive SEO strategy for growing businesses",
-    features: [
-      "Monthly keyword research (150 keywords)",
-      "On-page optimization for 25 pages",
-      "Comprehensive technical SEO audit",
-      "Content strategy and optimization",
-      "Monthly performance report with insights",
-      "Advanced analytics setup",
-      "Local SEO optimization",
-      "Basic link building (5 links/month)",
-      "Priority support",
-      "Monthly strategy call"
-    ],
-    popular: true
-  },
-  {
-    name: "Enterprise SEO",
-    price: "$10,000",
-    period: "/month",
-    description: "Full-scale SEO solution for large businesses and enterprises",
-    features: [
-      "Unlimited keyword research",
-      "Unlimited on-page optimization",
-      "Advanced technical SEO audit",
-      "Comprehensive content strategy",
-      "Detailed monthly performance report",
-      "Advanced analytics and tracking",
-      "Multi-location local SEO",
-      "Advanced link building (15 links/month)",
-      "Dedicated account manager",
-      "Weekly strategy calls",
-      "Custom reporting dashboard",
-      "24/7 priority support"
-    ],
-    popular: false
-  }
-]
-
-export default function SEOPage() {
+export default function TraditionalSEOPage() {
   return (
     <div className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            serviceType: 'SEO Services',
-            provider: { '@type': 'Organization', name: 'Web Vello', url: 'https://www.webvello.com', logo: { '@type': 'ImageObject', url: 'https://www.webvello.com/logo.png', width: 2048, height: 2048 } },
-            areaServed: 'US',
-            audience: { '@type': 'BusinessAudience', audienceType: 'B2B' },
-            brand: { '@type': 'Brand', name: 'Web Vello' }
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Service",
+                "@id": "https://www.webvello.com/services/seo#service",
+                "serviceType": "Traditional SEO Services",
+                "name": "Traditional SEO Services",
+                "description": "Traditional SEO is the foundational practice of optimizing websites for search engines through technical improvements, on-page optimization, and authority building. We provide comprehensive SEO services including technical audits, on-page optimization, content strategy, and link building to improve search visibility and organic traffic.",
+                "provider": {
+                  "@type": "Organization",
+                  "@id": "https://www.webvello.com/#organization",
+                  "name": "Webvello",
+                  "url": "https://www.webvello.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.webvello.com/logo.png",
+                    "width": 2048,
+                    "height": 2048
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/webvello",
+                    "https://twitter.com/webvello"
+                  ]
+                },
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "United States"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Traditional SEO Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Technical SEO Audit & Optimization",
+                        "description": "Comprehensive technical SEO analysis including site speed, mobile optimization, crawlability, indexing, and Core Web Vitals improvement."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "On-Page SEO Optimization",
+                        "description": "Content optimization, keyword research, title tags, meta descriptions, header structure, and internal linking strategy."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Link Building & Authority Development",
+                        "description": "High-quality backlink acquisition, domain authority building, and strategic link building campaigns."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "SEO Strategy & Consulting",
+                        "description": "Custom SEO roadmaps, competitive analysis, and ongoing strategic guidance for sustainable search growth."
+                      }
+                    }
+                  ]
+                },
+                "audience": {
+                  "@type": "BusinessAudience",
+                  "audienceType": "Businesses seeking foundational search engine optimization services"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "@id": "https://www.webvello.com/services/seo#faq",
+                "mainEntity": faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.webvello.com/services/seo#breadcrumb",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.webvello.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://www.webvello.com/services"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Traditional SEO Services",
+                    "item": "https://www.webvello.com/services/seo"
+                  }
+                ]
+              }
+            ]
           })
         }}
       />
-      {/* Hero Section */}
+
+      {/* Hero Section with Direct Answer */}
       <section className="py-24 bg-gradient-to-br from-primary-50 to-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-6xl">
-              Professional{" "}
-              <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
-                SEO Services
-              </span>{" "}
-              That Drive Results
+              Traditional SEO Services
             </h1>
-            <p className="mt-6 text-lg leading-8 text-secondary-600">
-              Comprehensive search engine optimization strategies that have helped hundreds of businesses 
-              achieve top search rankings and sustainable organic traffic growth. We combine proven 
-              traditional SEO techniques with modern optimization strategies to deliver measurable results 
-              that drive business growth and increase revenue.
-            </p>
+            
+            {/* Direct Answer Summary */}
+            <div className="mt-6 text-xl leading-8 text-secondary-700 bg-white/80 rounded-xl p-6 shadow-sm">
+              <p className="font-medium mb-4 text-secondary-900">
+                What is Traditional SEO?
+              </p>
+              <p className="text-lg text-secondary-600">
+                Traditional SEO is the foundational practice of optimizing websites for search engines through technical improvements, on-page optimization, and authority building. It focuses on making websites crawlable, indexable, and rankable by improving site structure, content quality, page speed, mobile responsiveness, and earning authoritative backlinks. Traditional SEO establishes the technical and content foundation that enables all other search strategies—including AI SEO and Answer Engine Optimization—to succeed.
+              </p>
+            </div>
+            
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button size="xl" asChild>
                 <Link href="/contact">
@@ -397,100 +337,234 @@ export default function SEOPage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Core Pillars Section */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Comprehensive SEO Services
+              What Traditional SEO Includes
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              From technical optimization to content strategy, we provide end-to-end SEO 
-              services that deliver sustainable, long-term results. Our comprehensive approach 
-              covers every aspect of search engine optimization to ensure maximum visibility 
-              and organic traffic growth.
+              Traditional SEO encompasses three core pillars that work together to improve search visibility
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {corePillars.map((pillar) => (
               <div
-                key={feature.title}
-                className="group rounded-3xl bg-white p-8 shadow-soft ring-1 ring-secondary-900/5 hover-lift"
+                key={pillar.title}
+                className="rounded-3xl bg-secondary-50 p-8 hover-lift"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 group-hover:bg-primary-200 transition-colors mb-6">
-                  <feature.icon className="h-6 w-6 text-primary-600" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 mb-6">
+                  <pillar.icon className="h-6 w-6 text-primary-600" />
                 </div>
                 
                 <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                  {feature.title}
+                  {pillar.title}
                 </h3>
                 
-                <p className="text-secondary-600">
-                  {feature.description}
+                <p className="text-secondary-600 mb-6">
+                  {pillar.description}
                 </p>
+
+                <ul className="space-y-3">
+                  {pillar.elements.map((element, idx) => (
+                    <li key={idx} className="flex items-start text-sm">
+                      <CheckCircle className="h-4 w-4 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-secondary-600">{element}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Detailed Process Section */}
+      {/* When Traditional SEO is Essential */}
       <section className="py-24 bg-secondary-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Our Comprehensive SEO Process
+              When Traditional SEO is Essential
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              A systematic, data-driven approach to SEO that ensures consistent progress and 
-              measurable results month after month. Our proven methodology has helped hundreds 
-              of businesses achieve top search rankings and sustainable organic growth.
+              Traditional SEO is the required foundation for all search visibility strategies
             </p>
           </div>
 
-          <div className="space-y-16">
-            {process.map((step, index) => (
-              <div key={step.step} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className={index % 2 === 0 ? "order-1" : "order-2"}>
-                  <div className="flex items-center mb-6">
-                    <div className="h-16 w-16 rounded-full bg-primary-100 flex items-center justify-center mr-6">
-                      <span className="text-2xl font-bold text-primary-600">{step.step}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold text-secondary-900">
-                        {step.title}
-                      </h3>
-                      <div className="text-sm text-primary-600 font-medium">
-                        {step.duration}
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3">✓ Launching a New Website</h3>
+              <p className="text-secondary-600">Proper technical setup, indexing configuration, and foundational optimization ensure search engines can discover and rank your site.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3">✓ Fixing Technical Issues</h3>
+              <p className="text-secondary-600">Crawl errors, slow page speeds, mobile usability problems, or indexing issues require traditional SEO expertise to diagnose and resolve.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3">✓ Building Long-Term Authority</h3>
+              <p className="text-secondary-600">Sustainable search visibility depends on earning authoritative backlinks, building domain authority, and establishing topical expertise.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3">✓ Improving Site-Wide Performance</h3>
+              <p className="text-secondary-600">Core Web Vitals, page speed, and mobile optimization impact every page on your site—traditional SEO addresses these systematically.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm md:col-span-2">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3">✓ Supporting Advanced SEO Strategies</h3>
+              <p className="text-secondary-600">AI SEO and Answer Engine Optimization (AEO) require a technically sound website foundation to deliver results. Traditional SEO creates that foundation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Traditional SEO Supports AI SEO and AEO */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
+              How Traditional SEO Supports AI SEO and AEO
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-secondary-600">
+              Traditional SEO is not replaced by AI SEO or Answer Engine Optimization—it enables them
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-blue-50 p-8 rounded-2xl">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+                Traditional SEO Creates the Foundation
+              </h3>
+              <ul className="space-y-3 text-secondary-600 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Ensures your website is crawlable and indexable by search engines</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Establishes technical health (speed, mobile responsiveness, HTTPS)</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Builds domain authority through backlinks and content quality</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Optimizes site architecture for efficient crawling and user experience</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-purple-50 p-8 rounded-2xl">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+                AI SEO Adds Intelligence and Automation
+              </h3>
+              <ul className="space-y-3 text-secondary-600 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Uses machine learning to identify high-opportunity keywords faster</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Predicts content performance before publishing</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Automates competitive analysis and optimization recommendations</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Accelerates traditional SEO tasks with data-driven insights</span>
+                </li>
+              </ul>
+              <Link href="/services/ai-seo" className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center">
+                Learn more about AI-Powered SEO Services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="bg-green-50 p-8 rounded-2xl">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+                AEO Captures Featured Snippets
+              </h3>
+              <ul className="space-y-3 text-secondary-600 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Structures content to appear in position zero (answer boxes)</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Optimizes for voice search and conversational queries</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Formats information for quick, direct answers</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Targets question-based keywords and featured snippets</span>
+                </li>
+              </ul>
+              <Link href="/services/answer-engine-optimization" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
+                Learn more about Answer Engine Optimization (AEO)
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-xl font-semibold text-secondary-900">
+              The Complete Strategy: Traditional SEO + AI SEO + AEO = Maximum search visibility across all result types
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-24 bg-secondary-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
+              Our Traditional SEO Process
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-secondary-600">
+              A systematic approach to building sustainable search visibility
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {seoProcess.map((phase, index) => (
+              <div key={phase.step} className="bg-white rounded-3xl p-8 shadow-soft">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="h-16 w-16 rounded-full bg-primary-100 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary-600">{phase.step}</span>
                     </div>
                   </div>
-                  
-                  <p className="text-lg text-secondary-600 mb-6">
-                    {step.description}
-                  </p>
-                  
-                  <ul className="space-y-3">
-                    {step.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-secondary-600">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className={index % 2 === 0 ? "order-2" : "order-1"}>
-                  <div className="bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl p-8 text-center">
-                    <div className="text-4xl font-bold text-primary-600 mb-4">
-                      {step.step}
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-2xl font-semibold text-secondary-900">
+                        {phase.title}
+                      </h3>
+                      <span className="text-sm font-medium text-primary-600 bg-primary-50 px-4 py-2 rounded-full">
+                        {phase.duration}
+                      </span>
                     </div>
-                    <div className="text-lg text-primary-700 mb-2">
-                      {step.title}
+                    <p className="text-lg text-secondary-600 mb-6">
+                      {phase.description}
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                      {phase.items.map((item, idx) => (
+                        <div key={idx} className="flex items-start">
+                          <CheckCircle className="h-5 w-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-secondary-600">{item}</span>
+                        </div>
+                      ))}
                     </div>
-                    <div className="text-sm text-primary-600">
-                      {step.duration}
+                    <div className="bg-primary-50 p-4 rounded-xl">
+                      <p className="text-sm font-medium text-primary-900">
+                        <strong>Deliverable:</strong> {phase.deliverable}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -505,12 +579,10 @@ export default function SEOPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Proven SEO Results
+              Results You Can Expect
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              Our comprehensive SEO strategies consistently deliver measurable improvements 
-              in search rankings and organic traffic growth. These results are based on 
-              real client data from our portfolio of successful SEO campaigns.
+              Traditional SEO delivers sustainable, long-term growth when implemented correctly
             </p>
           </div>
 
@@ -528,390 +600,119 @@ export default function SEOPage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-secondary-600">
+              <strong>⏱️ Time to Results:</strong> Most clients see initial improvements in <strong>60-90 days</strong>, with compounding growth over <strong>6-12 months</strong>.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* SEO Factors Section */}
+      {/* Best Practices Section */}
       <section className="py-24 bg-secondary-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Modern SEO Factors We Optimize
+              Traditional SEO Best Practices We Follow
             </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              We stay current with Google’s latest algorithm updates and optimize for 
-              the factors that matter most in today’s search landscape. Our team 
-              continuously monitors search engine changes and adapts strategies accordingly.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {seoFactors.map((factor) => (
-              <div key={factor.title} className="bg-white p-8 rounded-2xl shadow-soft ring-1 ring-secondary-900/5">
-                <div className="flex items-center mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 mr-4">
-                    <factor.icon className="h-6 w-6 text-primary-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-secondary-900">{factor.title}</h3>
-                </div>
-                <p className="text-secondary-600">{factor.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SEO Techniques Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Advanced SEO Techniques We Use
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              Our SEO experts employ a wide range of proven techniques and strategies 
-              to improve your search rankings and organic visibility. We combine 
-              traditional SEO methods with cutting-edge optimization strategies.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {seoTechniques.map((category) => (
-              <div key={category.category} className="bg-secondary-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-semibold text-secondary-900 mb-6">
-                  {category.category}
-                </h3>
-                <ul className="space-y-4">
-                  {category.techniques.map((technique, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-secondary-600">{technique}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3 flex items-center">
+                <Shield className="h-5 w-5 text-primary-600 mr-2" />
+                White Hat Methods Only
+              </h3>
+              <p className="text-secondary-600">We use only Google-approved optimization techniques that build sustainable authority. No shortcuts, no penalties.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3 flex items-center">
+                <Smartphone className="h-5 w-5 text-primary-600 mr-2" />
+                Mobile-First Optimization
+              </h3>
+              <p className="text-secondary-600">Every optimization is tested and optimized for mobile devices, reflecting Google's mobile-first indexing approach.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3 flex items-center">
+                <Zap className="h-5 w-5 text-primary-600 mr-2" />
+                Core Web Vitals Focus
+              </h3>
+              <p className="text-secondary-600">We prioritize the metrics Google uses to measure page experience: LCP, FID, and CLS.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3 flex items-center">
+                <FileText className="h-5 w-5 text-primary-600 mr-2" />
+                Content Quality Over Quantity
+              </h3>
+              <p className="text-secondary-600">We emphasize valuable, well-researched content that genuinely helps users rather than thin keyword-stuffed pages.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3 flex items-center">
+                <Globe className="h-5 w-5 text-primary-600 mr-2" />
+                Natural Link Building
+              </h3>
+              <p className="text-secondary-600">We earn backlinks through content quality, digital PR, and relationship building—not link schemes or paid directories.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-3 flex items-center">
+                <BarChart3 className="h-5 w-5 text-primary-600 mr-2" />
+                Data-Driven Decisions
+              </h3>
+              <p className="text-secondary-600">Every recommendation is backed by search data, competitive analysis, and performance metrics.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Industries Section */}
-      <section className="py-24 bg-secondary-50">
+      <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              SEO Services by Industry
+              Industries We Serve
             </h2>
             <p className="mt-4 text-lg leading-8 text-secondary-600">
-              We understand that different industries have unique SEO challenges and opportunities. 
-              Our industry-specific expertise ensures your SEO strategy is tailored to your 
-              market and competitive landscape.
+              Our traditional SEO strategies are customized for industry-specific challenges
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry) => (
-              <div key={industry.name} className="bg-white p-8 rounded-2xl shadow-soft ring-1 ring-secondary-900/5">
+              <div key={industry.name} className="bg-secondary-50 p-6 rounded-2xl">
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 mr-4">
                     <industry.icon className="h-6 w-6 text-primary-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-secondary-900">{industry.name}</h3>
                 </div>
-                <p className="text-secondary-600 mb-6">{industry.description}</p>
-                <div>
-                  <h4 className="font-semibold text-secondary-900 mb-3">Key Challenges:</h4>
-                  <ul className="space-y-2">
-                    {industry.challenges.map((challenge, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-2 h-2 bg-primary-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-secondary-600">{challenge}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <p className="text-secondary-600">{industry.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Tools Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Professional SEO Tools We Use
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              We leverage industry-leading SEO tools and platforms to deliver comprehensive 
-              analysis, monitoring, and optimization. Our tool stack ensures we have access 
-              to the most accurate data and insights.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tools.map((tool) => (
-              <div key={tool.name} className="bg-secondary-50 p-6 rounded-2xl">
-                <h3 className="text-lg font-semibold text-secondary-900 mb-2">{tool.name}</h3>
-                <p className="text-secondary-600 mb-3">{tool.description}</p>
-                <div className="text-sm text-primary-600 font-medium">{tool.category}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
+      {/* FAQ Section */}
       <section className="py-24 bg-secondary-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              SEO Service Pricing
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-12 text-center">
+              Frequently Asked Questions About Traditional SEO
             </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              Choose the SEO package that best fits your business needs and budget. 
-              All packages include our proven methodology and dedicated support.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan) => (
-              <div key={plan.name} className={`bg-white rounded-2xl p-8 shadow-soft ring-1 ring-secondary-900/5 relative ${plan.popular ? 'ring-2 ring-primary-500' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-semibold text-secondary-900 mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-primary-600 mb-2">
-                    {plan.price}
-                    <span className="text-lg text-secondary-600 font-normal">{plan.period}</span>
-                  </div>
-                  <p className="text-secondary-600">{plan.description}</p>
+            
+            <div className="space-y-8">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-sm">
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-4 flex items-start">
+                    <HelpCircle className="h-6 w-6 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                    {faq.question}
+                  </h3>
+                  <p className="text-secondary-600 leading-relaxed pl-9">
+                    {faq.answer}
+                  </p>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-secondary-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button 
-                  className={`w-full ${plan.popular ? 'bg-primary-600 hover:bg-primary-700' : ''}`}
-                  variant={plan.popular ? 'default' : 'outline'}
-                  asChild
-                >
-                  <Link href="/contact">Get Started</Link>
-                </Button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Traditional SEO Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
-                Why Professional SEO Still Works
-              </h2>
-              <p className="text-lg text-secondary-600 mb-6">
-                While AI and new technologies are changing the landscape, professional SEO 
-                fundamentals remain the foundation of sustainable search success. We combine 
-                proven techniques with modern insights to deliver results that last.
-              </p>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 mr-4 mt-1">
-                    <Shield className="h-4 w-4 text-primary-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-secondary-900 mb-1">Sustainable Results</div>
-                    <div className="text-secondary-600">Build lasting authority that withstands algorithm changes and provides long-term value</div>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 mr-4 mt-1">
-                    <Award className="h-4 w-4 text-primary-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-secondary-900 mb-1">Proven Methodology</div>
-                    <div className="text-secondary-600">Time-tested strategies that consistently deliver results across different industries and markets</div>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 mr-4 mt-1">
-                    <TrendingUp className="h-4 w-4 text-primary-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-secondary-900 mb-1">Long-term Growth</div>
-                    <div className="text-secondary-600">Organic traffic that grows steadily over time and provides compounding returns on investment</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl p-12 text-center">
-              <div className="text-6xl font-bold text-primary-600 mb-4">15+</div>
-              <div className="text-xl text-primary-700 mb-2">Years of SEO Experience</div>
-              <div className="text-lg text-primary-600 mb-6">Proven track record</div>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-primary-600">500+</div>
-                  <div className="text-sm text-primary-700">Projects Completed</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary-600">200%</div>
-                  <div className="text-sm text-primary-700">Average Growth</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Services Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
-              Related Services
-            </h2>
-            <p className="text-lg leading-8 text-secondary-600">
-              Professional SEO works best when combined with our other digital marketing services. 
-              Create a comprehensive search strategy that dominates your market and drives 
-              sustainable business growth.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI SEO */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4">
-                <Zap className="h-6 w-6 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-purple-600 transition-colors">
-                AI-Powered SEO
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Enhance traditional SEO with cutting-edge AI optimization strategies and machine learning insights.
-              </p>
-              <Link 
-                href="/services/ai-seo" 
-                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Local SEO */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
-                <Globe className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-blue-600 transition-colors">
-                Local/GEO SEO
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Dominate local search results while building national authority and visibility.
-              </p>
-              <Link 
-                href="/services/local-seo" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Content Strategy */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 group-hover:bg-green-200 transition-colors mb-4">
-                <FileText className="h-6 w-6 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-green-600 transition-colors">
-                Content Strategy
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Create high-quality content that ranks well and converts visitors into customers.
-              </p>
-              <Link 
-                href="/services/digital-marketing" 
-                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Technical SEO */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4">
-                <Settings className="h-6 w-6 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-orange-600 transition-colors">
-                Technical SEO
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Optimize your website’s technical foundation for maximum search engine performance.
-              </p>
-              <Link 
-                href="/services/web-development" 
-                className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Link Building */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 group-hover:bg-red-200 transition-colors mb-4">
-                <LinkIcon className="h-6 w-6 text-red-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-red-600 transition-colors">
-                Link Building
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Build authoritative backlinks that strengthen your SEO foundation and domain authority.
-              </p>
-              <Link 
-                href="/services/digital-marketing" 
-                className="inline-flex items-center text-red-600 hover:text-red-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* CRO Services */}
-            <div className="group bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-100 group-hover:bg-teal-200 transition-colors mb-4">
-                <TrendingUp className="h-6 w-6 text-teal-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-3 group-hover:text-teal-600 transition-colors">
-                CRO Services
-              </h3>
-              <p className="text-secondary-600 mb-4">
-                Convert SEO traffic into customers with advanced conversion rate optimization.
-              </p>
-              <Link 
-                href="/services/cro-lead-generation" 
-                className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium group-hover:underline"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -919,21 +720,20 @@ export default function SEOPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-primary-600 to-primary-500">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Dominate Search Results?
+            Ready to Build Your SEO Foundation?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Let’s implement proven SEO strategies that drive sustainable organic growth 
-            and help you capture more search traffic than ever before. Get started with 
-            a free SEO audit and discover your optimization opportunities.
+            Let's implement proven Traditional SEO strategies that create sustainable organic growth. 
+            Get started with a free SEO audit and discover your optimization opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
               <Link href="/contact">Get Free SEO Audit</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600" asChild>
-              <Link href="/pricing">View Pricing</Link>
+              <Link href="/case-studies">View Case Studies</Link>
             </Button>
           </div>
         </div>
