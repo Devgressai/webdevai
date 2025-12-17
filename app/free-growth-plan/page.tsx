@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Suspense } from 'react'
 import { GrowthPlanPageClient } from './growth-plan-client'
 
 export const metadata: Metadata = {
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
 }
 
 export default function FreeGrowthPlanPage() {
-  return <GrowthPlanPageClient />
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50" />}>
+      <GrowthPlanPageClient />
+    </Suspense>
+  )
 }
 

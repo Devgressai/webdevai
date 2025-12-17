@@ -1,5 +1,6 @@
 
 import { Metadata } from 'next'
+import { Suspense } from 'react'
 import { Hero } from '../components/sections/hero'
 import { Button } from '../components/ui/button'
 import { METRICS } from '@/lib/site-metrics'
@@ -131,7 +132,9 @@ export default function HomePage() {
         }}
       />
       <div className="min-h-screen">
-        <Hero />
+        <Suspense fallback={<div className="h-screen bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900" />}>
+          <Hero />
+        </Suspense>
         
         {/* Entity Definition Section - AEO Optimized */}
         <section className="py-16 bg-white border-b border-gray-100">
