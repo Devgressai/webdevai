@@ -18,19 +18,6 @@ declare global {
   }
 }
 
-// CTA Button Text Variants
-const CTA_VARIANTS = {
-  a: 'Get Free Growth Plan',
-  b: 'Get Free Website Growth Audit',
-  c: 'Get My Free Proposal',
-}
-
-// Microcopy Variants
-const MICROCOPY_VARIANTS = {
-  a: 'Instant SEO + conversion opportunity scan. No obligation.',
-  b: "See quick wins we'd prioritize for your site.",
-}
-
 const stats = [
   { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-blue-500 to-blue-600" },
   { id: 2, name: "Happy Clients", value: "500+", icon: Users, color: "from-slate-600 to-slate-700" },
@@ -49,12 +36,9 @@ export function Hero() {
   const [urlInput, setUrlInput] = useState('')
   const [urlError, setUrlError] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-  
-  // Get A/B test variants
   const ctaVariant = getVariant('hero_cta_button')
   const microcopyVariant = getVariant('hero_microcopy')
-  
-  // Track variant views
+
   useEffect(() => {
     trackVariantView('hero_cta_button', ctaVariant.variant, ctaVariant.source)
     trackVariantView('hero_microcopy', microcopyVariant.variant, microcopyVariant.source)
@@ -73,24 +57,21 @@ export function Hero() {
     // Analytics tracking handled elsewhere
   }
 
-  const trackGrowthPlanSubmit = (site: string, valid: boolean) => {
-    // Track via dataLayer (Google Tag Manager)
+  const trackGrowthPlanStart = (site: string, valid: boolean) => {
     if (typeof window !== 'undefined') {
       try {
-        // Push to dataLayer if available
         if (window.dataLayer) {
           window.dataLayer.push({
-            event: 'hero_growth_plan_submit',
+            event: 'growth_plan_start',
             site,
             valid,
           })
         }
 
-        // Also track via gtag if available
         if (window.gtag) {
-          window.gtag('event', 'hero_growth_plan_submit', {
+          window.gtag('event', 'growth_plan_start', {
             event_category: 'lead_generation',
-            event_label: 'hero_growth_plan',
+            event_label: 'hero_growth_plan_start',
             site,
             valid,
           })
@@ -114,18 +95,16 @@ export function Hero() {
 
     // Validate URL
     const isValid = validateUrl(trimmedUrl)
-    
+
     if (!isValid) {
       setUrlError('Please enter a valid website URL (e.g., yourdomain.com)')
-      trackGrowthPlanSubmit(trimmedUrl, false)
+      trackGrowthPlanStart(trimmedUrl, false)
       return
     }
 
-    // Normalize URL
     const normalizedUrl = normalizeUrl(trimmedUrl)
     
-    // Track valid submission
-    trackGrowthPlanSubmit(normalizedUrl, true)
+    trackGrowthPlanStart(normalizedUrl, true)
 
     // Store in localStorage
     if (typeof window !== 'undefined') {
@@ -190,7 +169,6 @@ export function Hero() {
             <span className="sm:hidden">500+ businesses trust us</span>
           </div>
 
-          {/* Slogan */}
           <div className="mb-6">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide text-white">
               <span className="text-white">Design</span>
@@ -201,14 +179,12 @@ export function Hero() {
             </h2>
           </div>
 
-          {/* Main H1 Heading for SEO */}
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
-            Professional Digital Marketing Services
+            Turn your website into a predictable growth engine.
           </h1>
 
-          {/* Subheading */}
           <p className="text-lg sm:text-xl leading-7 sm:leading-8 text-white/90 max-w-3xl mx-auto">
-            Webvello provides AI-powered SEO, conversion-focused web development, and digital marketing strategies that increase organic traffic by 300%+ and deliver measurable business results.
+            Share your website and we&apos;ll outline a clear path to stronger visibility, higher conversions, and more qualified revenue opportunities.
           </p>
 
           {/* Growth Plan URL Entry Bar */}
@@ -216,13 +192,13 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
               <div className="flex-1">
                 <label htmlFor="website-url" className="sr-only">
-                  Enter your website URL
+                  Enter your website
                 </label>
                 <Input
                   id="website-url"
                   type="text"
                   inputMode="url"
-                  placeholder="Enter your website (e.g., https://yourdomain.com)"
+                  placeholder="Enter your website (example: yourdomain.com)"
                   value={urlInput}
                   onChange={(e) => {
                     setUrlInput(e.target.value)
@@ -281,7 +257,7 @@ export function Hero() {
                   </span>
                 ) : (
                   <span className="flex items-center">
-                    {CTA_VARIANTS[ctaVariant.variant]}
+                    Get My Free Growth Plan →
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </span>
                 )}
@@ -289,7 +265,7 @@ export function Hero() {
             </div>
             <div className="mt-3 space-y-2">
               <p className="text-sm text-white/80 text-center">
-                {MICROCOPY_VARIANTS[microcopyVariant.variant]}
+                See growth opportunities tailored to your site. No obligation.
               </p>
               <div className="flex items-center justify-center gap-1.5 text-xs text-white/60">
                 <Lock className="w-3 h-3" />
@@ -314,7 +290,7 @@ export function Hero() {
               asChild
             >
               <Link href="/contact">
-                Book a Call
+                Book a Strategy Call
               </Link>
             </Button>
           </div>

@@ -8,6 +8,7 @@ type GrowthPlanPayload = {
   name: string
   email: string
   website: string
+  site?: string
   phone?: string
   goal: string
   budget?: string
@@ -51,7 +52,7 @@ export async function POST(req: NextRequest) {
 
     const name = (data.name || '').toString().trim()
     const email = (data.email || '').toString().trim()
-    const website = (data.website || '').toString().trim()
+    const website = (data.website || data.site || '').toString().trim()
     const phone = (data.phone || '').toString().trim()
     const goal = (data.goal || '').toString().trim()
     const budget = (data.budget || '').toString().trim()
