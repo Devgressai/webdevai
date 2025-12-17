@@ -134,34 +134,24 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900">
       {/* <ScrollTracker /> */}
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2070&h=1200&fit=crop&crop=center')"
-          }}
-        ></div>
-        {/* Light overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-slate-800/20 to-slate-900/30"></div>
-      </div>
-      
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Subtle professional overlays */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-500/5 via-slate-500/5 to-indigo-500/5 opacity-40"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-blue-600/8 to-indigo-600/8 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-slate-600/8 to-gray-600/8 blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-indigo-600/8 to-blue-600/8 blur-3xl animate-pulse delay-500"></div>
-        
-        {/* Subtle geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-slate-600/10 to-gray-600/10 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-2xl"></div>
+      {/* Background Layers */}
+      <div className="pointer-events-none absolute inset-0">
+        {/* Base soft gradient wash */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.16),_transparent_60%)]" />
+
+        {/* Focused glow behind content */}
+        <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-br from-blue-500/22 via-cyan-400/14 to-transparent blur-3xl" />
+
+        {/* Secondary accent in corner */}
+        <div className="absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/18 via-sky-400/10 to-transparent blur-3xl" />
+
+        {/* Subtle geometric halo shapes */}
+        <div className="absolute top-24 left-10 h-32 w-32 rounded-full border border-blue-400/10" />
+        <div className="absolute bottom-24 right-10 h-40 w-40 rounded-full border border-cyan-300/8" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-28 lg:px-10 lg:py-36">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="relative mx-auto max-w-3xl lg:max-w-4xl text-center">
           {/* Badge */}
           <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-6 sm:mb-8 shadow-2xl">
             <Star className="mr-2 h-4 w-4 sm:h-5 sm:w-5 fill-white" />
