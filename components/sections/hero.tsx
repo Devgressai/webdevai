@@ -28,7 +28,7 @@ const CTA_VARIANTS = {
 // Microcopy Variants
 const MICROCOPY_VARIANTS = {
   a: 'Instant SEO + conversion opportunity scan. No obligation.',
-  b: 'See quick wins we'd prioritize for your site.',
+  b: "See quick wins we'd prioritize for your site.",
 }
 
 const stats = [
