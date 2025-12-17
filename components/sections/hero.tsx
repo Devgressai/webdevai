@@ -1,10 +1,35 @@
 'use client'
 
+import { useState, FormEvent, KeyboardEvent, useEffect } from "react"
+import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award } from "lucide-react"
+import { Input } from "../ui/input"
+import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Lock } from "lucide-react"
+import { normalizeUrl, validateUrl } from "@/lib/url-utils"
+import { getVariant, trackVariantView } from "@/lib/variant-utils"
 // import { useConversionTracking } from "../../hooks/useConversionTracking"
 // import ScrollTracker from "../analytics/scroll-tracker"
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void
+    dataLayer?: any[]
+  }
+}
+
+// CTA Button Text Variants
+const CTA_VARIANTS = {
+  a: 'Get Free Growth Plan',
+  b: 'Get Free Website Growth Audit',
+  c: 'Get My Free Proposal',
+}
+
+// Microcopy Variants
+const MICROCOPY_VARIANTS = {
+  a: 'Instant SEO + conversion opportunity scan. No obligation.',
+  b: 'See quick wins we'd prioritize for your site.',
+}
 
 const stats = [
   { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-blue-500 to-blue-600" },
@@ -19,17 +44,112 @@ const reviews = [
 ]
 
 export function Hero() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const [urlInput, setUrlInput] = useState('')
+  const [urlError, setUrlError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  
+  // Get A/B test variants
+  const ctaVariant = getVariant('hero_cta_button')
+  const microcopyVariant = getVariant('hero_microcopy')
+  
+  // Track variant views
+  useEffect(() => {
+    trackVariantView('hero_cta_button', ctaVariant.variant, ctaVariant.source)
+    trackVariantView('hero_microcopy', microcopyVariant.variant, microcopyVariant.source)
+  }, [ctaVariant.variant, ctaVariant.source, microcopyVariant.variant, microcopyVariant.source])
+
   // Temporarily disabled conversion tracking to fix build error
   // const { trackCTAClick, trackStrategySession } = useConversionTracking()
 
   const handleCTAClick = (buttonText: string, location: string) => {
     // trackCTAClick(buttonText, location)
-    console.log('CTA clicked:', buttonText, 'at', location)
+    // Analytics tracking handled elsewhere
   }
 
   const handleStrategySessionClick = () => {
     // trackStrategySession('hero_section')
-    console.log('Strategy session requested from hero section')
+    // Analytics tracking handled elsewhere
+  }
+
+  const trackGrowthPlanSubmit = (site: string, valid: boolean) => {
+    // Track via dataLayer (Google Tag Manager)
+    if (typeof window !== 'undefined') {
+      try {
+        // Push to dataLayer if available
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'hero_growth_plan_submit',
+            site,
+            valid,
+          })
+        }
+
+        // Also track via gtag if available
+        if (window.gtag) {
+          window.gtag('event', 'hero_growth_plan_submit', {
+            event_category: 'lead_generation',
+            event_label: 'hero_growth_plan',
+            site,
+            valid,
+          })
+        }
+      } catch (err) {
+        // Analytics not available - fail silently
+      }
+    }
+  }
+
+  const handleUrlSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setUrlError('')
+    
+    const trimmedUrl = urlInput.trim()
+    
+    if (!trimmedUrl) {
+      setUrlError('Please enter your website URL')
+      return
+    }
+
+    // Validate URL
+    const isValid = validateUrl(trimmedUrl)
+    
+    if (!isValid) {
+      setUrlError('Please enter a valid website URL (e.g., yourdomain.com)')
+      trackGrowthPlanSubmit(trimmedUrl, false)
+      return
+    }
+
+    // Normalize URL
+    const normalizedUrl = normalizeUrl(trimmedUrl)
+    
+    // Track valid submission
+    trackGrowthPlanSubmit(normalizedUrl, true)
+
+    // Store in localStorage
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('webvello_site', normalizedUrl)
+      } catch (err) {
+        // localStorage not available or quota exceeded - fail silently
+      }
+    }
+
+    // Navigate to growth plan page
+    setIsSubmitting(true)
+    const encodedUrl = encodeURIComponent(normalizedUrl)
+    router.push(`/free-growth-plan?site=${encodedUrl}`)
+  }
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !isSubmitting) {
+      e.preventDefault()
+      const form = e.currentTarget.closest('form')
+      if (form) {
+        form.requestSubmit()
+      }
+    }
   }
 
   return (
@@ -91,40 +211,119 @@ export function Hero() {
             Webvello provides AI-powered SEO, conversion-focused web development, and digital marketing strategies that increase organic traffic by 300%+ and deliver measurable business results.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          {/* Growth Plan URL Entry Bar */}
+          <form onSubmit={handleUrlSubmit} className="mt-10">
+            <div className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
+              <div className="flex-1">
+                <label htmlFor="website-url" className="sr-only">
+                  Enter your website URL
+                </label>
+                <Input
+                  id="website-url"
+                  type="text"
+                  inputMode="url"
+                  placeholder="Enter your website (e.g., https://yourdomain.com)"
+                  value={urlInput}
+                  onChange={(e) => {
+                    setUrlInput(e.target.value)
+                    setUrlError('')
+                  }}
+                  onKeyDown={handleKeyDown}
+                  disabled={isSubmitting}
+                  aria-invalid={urlError ? 'true' : 'false'}
+                  aria-describedby={urlError ? 'url-error' : 'url-hint'}
+                  className={`
+                    w-full px-4 sm:px-6 py-4 text-base sm:text-lg
+                    bg-white/10 backdrop-blur-sm border-2
+                    ${urlError 
+                      ? 'border-red-400 focus-visible:border-red-400 focus-visible:ring-red-400/50' 
+                      : 'border-white/20 focus-visible:border-blue-400 focus-visible:ring-blue-400/50'
+                    }
+                    text-white placeholder-white/60
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent
+                    disabled:opacity-50 disabled:cursor-not-allowed
+                    transition-all duration-200
+                  `}
+                />
+                {urlError ? (
+                  <p 
+                    id="url-error" 
+                    className="mt-2 text-sm text-red-300 text-left"
+                    role="alert"
+                  >
+                    {urlError}
+                  </p>
+                ) : (
+                  <p id="url-hint" className="mt-2 text-xs text-white/60 text-left">
+                    Example: yourdomain.com or https://www.yourdomain.com
+                  </p>
+                )}
+              </div>
+              <Button
+                type="submit"
+                size="xl"
+                disabled={isSubmitting}
+                className="
+                  w-full sm:w-auto
+                  bg-gradient-to-r from-blue-500 to-indigo-500 
+                  hover:from-blue-600 hover:to-indigo-600 
+                  text-white px-6 sm:px-8 py-4 
+                  text-base sm:text-lg font-bold 
+                  shadow-2xl hover:shadow-blue-400/25 
+                  transition-all duration-300
+                  disabled:opacity-50 disabled:cursor-not-allowed
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-400
+                "
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center">
+                    <span className="mr-2">Loading...</span>
+                  </span>
+                ) : (
+                  <span className="flex items-center">
+                    {CTA_VARIANTS[ctaVariant.variant]}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </span>
+                )}
+              </Button>
+            </div>
+            <div className="mt-3 space-y-2">
+              <p className="text-sm text-white/80 text-center">
+                {MICROCOPY_VARIANTS[microcopyVariant.variant]}
+              </p>
+              <div className="flex items-center justify-center gap-1.5 text-xs text-white/60">
+                <Lock className="w-3 h-3" />
+                <span>We never share your info.</span>
+              </div>
+            </div>
+          </form>
+
+          {/* Secondary CTA - Free Strategy Session */}
+          <div className="mt-8 flex justify-center">
             <Button 
-              size="xl" 
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-400/25 transition-all duration-300" 
+              size="lg" 
+              variant="outline"
+              className="
+                border-2 border-white/30 text-white 
+                hover:bg-white/10 hover:text-white 
+                px-6 py-3 text-sm sm:text-base font-semibold 
+                backdrop-blur-sm
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white/50
+              " 
               onClick={handleStrategySessionClick}
               asChild
             >
               <Link href="/contact">
-                Get FREE Strategy Session (Worth $500)
-              </Link>
-            </Button>
-            <Button 
-              variant="outline" 
-              size="xl" 
-              className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-primary-900 px-6 sm:px-8 py-4 text-base sm:text-lg font-bold backdrop-blur-sm" 
-              onClick={() => handleCTAClick('See 300%+ Results', 'hero_section')}
-              asChild
-            >
-              <Link href="/case-studies" className="flex items-center">
-                <Play className="mr-2 h-5 w-5" />
-                See 300%+ Results
+                Book a Call
               </Link>
             </Button>
           </div>
           
           {/* Urgency & Scarcity */}
           <div className="mt-6 text-center">
-            <p className="text-xs sm:text-sm text-white mb-2">
-              ⏰ <span className="font-semibold">Limited Time:</span> Free strategy session (normally $500)
-            </p>
-            <p className="text-xs text-white/90">
-              <span className="hidden sm:inline">Only 3 spots available this week • 500+ businesses trust us</span>
-              <span className="sm:hidden">Only 3 spots this week</span>
+            <p className="text-xs sm:text-sm text-white/90">
+              <span className="hidden sm:inline">Limited weekly availability to keep quality high • 500+ businesses trust us</span>
+              <span className="sm:hidden">Limited weekly availability</span>
             </p>
           </div>
 

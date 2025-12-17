@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-export type LeadType = 'contact'
+export type LeadType = 'contact' | 'growth_plan'
 
 export interface ContactLead {
   id: string
@@ -18,7 +18,27 @@ export interface ContactLead {
   ipAddress?: string
 }
 
-export type Lead = ContactLead
+export interface GrowthPlanLead {
+  id: string
+  type: 'growth_plan'
+  name: string
+  email: string
+  website: string
+  phone?: string
+  goal: string
+  budget?: string
+  consent?: boolean
+  submittedAt: string
+  ipAddress?: string
+  source?: string
+  utmSource?: string
+  utmMedium?: string
+  utmCampaign?: string
+  utmTerm?: string
+  utmContent?: string
+}
+
+export type Lead = ContactLead | GrowthPlanLead
 
 const DATA_DIR = path.join(process.cwd(), 'data')
 const LEADS_FILE = path.join(DATA_DIR, 'leads.json')
@@ -137,6 +157,30 @@ export function exportAsCSV(type?: LeadType): string {
     .join('\n')
   
   return csv
+}
+
+// Save a growth plan lead
+export function saveGrowthPlanLead(lead: Omit<GrowthPlanLead, 'id' | 'type' | 'submittedAt'>): GrowthPlanLead {
+  ensureDataDir()
+  
+  const leads = getAllLeads()
+  const newLead: GrowthPlanLead = {
+    ...lead,
+    type: 'growth_plan',
+    id: `growth-plan-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    submittedAt: new Date().toISOString(),
+  }
+  
+  leads.push(newLead)
+  
+  try {
+    fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2))
+  } catch (error) {
+    console.error('Error saving growth plan lead:', error)
+    throw new Error('Failed to save lead')
+  }
+  
+  return newLead
 }
 
 // Get leads as JSON string
