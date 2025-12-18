@@ -48,7 +48,7 @@ const awards = [
 
 function SocialProof() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-900">
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-800">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
         {/* Stats Section */}
         <div className="text-center mb-10 sm:mb-12">
