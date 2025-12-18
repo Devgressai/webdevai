@@ -132,7 +132,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-slate-950">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900">
       {/* Background tech grid + glow */}
       <div className="pointer-events-none absolute inset-0">
         <div

@@ -48,7 +48,7 @@ const awards = [
 
 function SocialProof() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-950">
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-900">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
         {/* Stats Section */}
         <div className="text-center mb-10 sm:mb-12">
@@ -90,7 +90,7 @@ function SocialProof() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex flex-col h-full rounded-2xl border border-slate-800 bg-slate-900/80 px-5 py-5 sm:px-6 sm:py-6 shadow-[0_16px_35px_rgba(15,23,42,0.75)]"
+                className="flex flex-col h-full rounded-2xl border border-slate-700 bg-slate-900/70 px-5 py-5 sm:px-6 sm:py-6 shadow-[0_14px_30px_rgba(15,23,42,0.6)]"
               >
                 <div className="flex items-center mb-3">
                   <div className="flex text-yellow-400">
@@ -151,7 +151,7 @@ function SocialProof() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/80 px-6 py-7 sm:px-8 sm:py-8 shadow-[0_18px_45px_rgba(15,23,42,0.85)]">
+          <div className="rounded-2xl border border-slate-700 bg-slate-900/70 px-6 py-7 sm:px-8 sm:py-8 shadow-[0_16px_40px_rgba(15,23,42,0.75)]">
             <h3 className="text-xl sm:text-2xl font-semibold text-slate-50 mb-3">
               Ready to Join Our Success Stories?
             </h3>
