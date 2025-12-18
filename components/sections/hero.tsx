@@ -132,25 +132,23 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900">
-      {/* <ScrollTracker /> */}
-      {/* Background Layers */}
+    <section className="relative overflow-hidden bg-slate-950">
+      {/* Background tech grid + glow */}
       <div className="pointer-events-none absolute inset-0">
-        {/* Base soft gradient wash */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.16),_transparent_60%)]" />
-
-        {/* Focused glow behind content */}
-        <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-br from-blue-500/22 via-cyan-400/14 to-transparent blur-3xl" />
-
-        {/* Secondary accent in corner */}
-        <div className="absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/18 via-sky-400/10 to-transparent blur-3xl" />
-
-        {/* Subtle geometric halo shapes */}
-        <div className="absolute top-24 left-10 h-32 w-32 rounded-full border border-blue-400/10" />
-        <div className="absolute bottom-24 right-10 h-40 w-40 rounded-full border border-cyan-300/8" />
+        <div
+          className="absolute inset-0 opacity-70"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%233b82f6' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M0 20.5 H140M0 60.5 H140M0 100.5 H140'/%3E%3Cpath d='M20.5 0 V140M60.5 0 V140M100.5 0 V140'/%3E%3C/g%3E%3Ccircle cx='70' cy='70' r='2' fill='%233b82f6' fill-opacity='0.35'/%3E%3C/svg%3E\")",
+            backgroundSize: '140px 140px',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-br from-sky-500/25 via-indigo-500/10 to-transparent blur-3xl" />
+        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/25 via-sky-400/15 to-transparent blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-28 lg:px-10 lg:py-36">
+      <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-24 lg:px-10 lg:py-28">
         <div className="relative mx-auto max-w-3xl lg:max-w-4xl text-center">
           {/* Badge */}
           <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-6 sm:mb-8 shadow-2xl">
@@ -294,50 +292,6 @@ export function Hero() {
           </div>
 
 
-        </div>
-
-        {/* Stats Section */}
-        <div className="mx-auto mt-16 max-w-4xl">
-          <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 text-center">
-            {stats.map((stat) => (
-              <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-3 group">
-                <div className={`mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-                </div>
-                <dt className="text-sm sm:text-base leading-7 text-white/80">{stat.name}</dt>
-                <dd className="order-first text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-
-        {/* Social Proof */}
-        <div className="mx-auto mt-16 max-w-4xl">
-          <div className="rounded-2xl bg-white/10 backdrop-blur-md p-4 sm:p-6 lg:p-8 shadow-2xl ring-1 ring-white/20 border border-white/10">
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-1 mb-4">
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-xs sm:text-sm font-medium text-white">4.9/5 from 200+ reviews</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {reviews.map((review) => (
-                <div key={review.id} className="text-center">
-                  <div className="flex items-center justify-center space-x-1 mb-2">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-xs sm:text-sm text-white/80 mb-1">"{review.text}"</p>
-                  <p className="text-xs font-medium text-white/90">— {review.author}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
