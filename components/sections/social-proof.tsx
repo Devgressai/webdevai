@@ -39,13 +39,6 @@ const stats = [
   { number: '300%+', label: 'Traffic Growth', icon: TrendingUp }
 ]
 
-const awards = [
-  { name: 'Media Innovator Award 2020', issuer: 'Corporate Vision Magazine' },
-  { name: 'Best International Web Development Agency', issuer: 'Corporate Vision Magazine' },
-  { name: 'West Coast USA Excellence Award', issuer: 'Corporate Vision Magazine' },
-  { name: 'Client Satisfaction Excellence', issuer: 'Industry Recognition' }
-]
-
 function SocialProof() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-slate-800">
@@ -122,28 +115,6 @@ function SocialProof() {
                     </div>
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Awards & Recognition */}
-        <div className="mb-14">
-          <h3 className="text-lg sm:text-xl font-semibold text-slate-50 text-center mb-6">
-            Awards & Recognition
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {awards.map((award, index) => (
-              <div key={index} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center mx-auto mb-3">
-                  <Award className="h-7 w-7" />
-                </div>
-                <p className="font-medium text-slate-100 mb-1 text-sm">
-                  {award.name}
-                </p>
-                <p className="text-xs text-slate-400">
-                  {award.issuer}
-                </p>
               </div>
             ))}
           </div>
