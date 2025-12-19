@@ -1,0 +1,230 @@
+{
+  "version": "1.0.0",
+  "name": "AEO Readiness Rubric",
+  "description": "Assessment rubric for AI-powered search readiness",
+  "pillars": [
+    {
+      "id": "structured_data",
+      "name": "Structured Data",
+      "description": "Schema markup and structured data implementation",
+      "weight": 0.25,
+      "categories": [
+        {
+          "id": "schema_presence",
+          "name": "Schema Presence",
+          "description": "Presence and quality of schema markup",
+          "weight": 0.4,
+          "checks": [
+            {
+              "id": "has_jsonld",
+              "name": "Has JSON-LD",
+              "description": "Page contains JSON-LD structured data",
+              "weight": 0.3,
+              "issue_code": "MISSING_JSONLD"
+            },
+            {
+              "id": "has_organization_schema",
+              "name": "Has Organization Schema",
+              "description": "Page contains Organization schema",
+              "weight": 0.2,
+              "issue_code": "MISSING_ORGANIZATION_SCHEMA"
+            },
+            {
+              "id": "has_webpage_schema",
+              "name": "Has WebPage Schema",
+              "description": "Page contains WebPage schema",
+              "weight": 0.2,
+              "issue_code": "MISSING_WEBPAGE_SCHEMA"
+            },
+            {
+              "id": "schema_parseable",
+              "name": "Schema Parseable",
+              "description": "JSON-LD blocks are valid and parseable",
+              "weight": 0.3,
+              "issue_code": "INVALID_JSONLD"
+            }
+          ]
+        },
+        {
+          "id": "schema_quality",
+          "name": "Schema Quality",
+          "description": "Quality and completeness of schema markup",
+          "weight": 0.6,
+          "checks": [
+            {
+              "id": "schema_has_required_fields",
+              "name": "Schema Has Required Fields",
+              "description": "Schema contains required fields for its type",
+              "weight": 0.4,
+              "issue_code": "INCOMPLETE_SCHEMA"
+            },
+            {
+              "id": "schema_follows_best_practices",
+              "name": "Schema Follows Best Practices",
+              "description": "Schema follows Google's structured data guidelines",
+              "weight": 0.6,
+              "issue_code": "SCHEMA_BEST_PRACTICES_VIOLATION"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "content_structure",
+      "name": "Content Structure",
+      "description": "Content organization and hierarchy",
+      "weight": 0.25,
+      "categories": [
+        {
+          "id": "heading_structure",
+          "name": "Heading Structure",
+          "description": "Proper heading hierarchy and organization",
+          "weight": 0.5,
+          "checks": [
+            {
+              "id": "has_single_h1",
+              "name": "Has Single H1",
+              "description": "Page has exactly one H1 heading",
+              "weight": 0.3,
+              "issue_code": "MULTIPLE_H1_HEADINGS"
+            },
+            {
+              "id": "heading_hierarchy_valid",
+              "name": "Heading Hierarchy Valid",
+              "description": "Headings follow proper hierarchy (H1 > H2 > H3)",
+              "weight": 0.7,
+              "issue_code": "INVALID_HEADING_HIERARCHY"
+            }
+          ]
+        },
+        {
+          "id": "content_organization",
+          "name": "Content Organization",
+          "description": "Content is well-organized and structured",
+          "weight": 0.5,
+          "checks": [
+            {
+              "id": "has_sufficient_content",
+              "name": "Has Sufficient Content",
+              "description": "Page has sufficient word count for AI understanding",
+              "weight": 0.4,
+              "issue_code": "INSUFFICIENT_CONTENT"
+            },
+            {
+              "id": "content_has_sections",
+              "name": "Content Has Sections",
+              "description": "Content is organized into logical sections",
+              "weight": 0.6,
+              "issue_code": "POOR_CONTENT_ORGANIZATION"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metadata",
+      "name": "Metadata",
+      "description": "SEO and AI-readable metadata",
+      "weight": 0.2,
+      "categories": [
+        {
+          "id": "title_meta",
+          "name": "Title and Meta",
+          "description": "Title tag and meta description",
+          "weight": 0.6,
+          "checks": [
+            {
+              "id": "has_title",
+              "name": "Has Title",
+              "description": "Page has a title tag",
+              "weight": 0.3,
+              "issue_code": "MISSING_TITLE"
+            },
+            {
+              "id": "title_optimal_length",
+              "name": "Title Optimal Length",
+              "description": "Title is within optimal length (50-60 characters)",
+              "weight": 0.3,
+              "issue_code": "TITLE_LENGTH_SUBOPTIMAL"
+            },
+            {
+              "id": "has_meta_description",
+              "name": "Has Meta Description",
+              "description": "Page has a meta description",
+              "weight": 0.4,
+              "issue_code": "MISSING_META_DESCRIPTION"
+            }
+          ]
+        },
+        {
+          "id": "canonical",
+          "name": "Canonical",
+          "description": "Canonical URL implementation",
+          "weight": 0.4,
+          "checks": [
+            {
+              "id": "has_canonical",
+              "name": "Has Canonical",
+              "description": "Page has a canonical URL",
+              "weight": 1.0,
+              "issue_code": "MISSING_CANONICAL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai_readiness",
+      "name": "AI Readiness",
+      "description": "Specific AI-powered search readiness factors",
+      "weight": 0.3,
+      "categories": [
+        {
+          "id": "answer_surfaces",
+          "name": "Answer Surfaces",
+          "description": "Content optimized for answer surfaces",
+          "weight": 0.5,
+          "checks": [
+            {
+              "id": "has_faq_section",
+              "name": "Has FAQ Section",
+              "description": "Page has FAQ section with structured data",
+              "weight": 0.5,
+              "issue_code": "MISSING_FAQ_SECTION"
+            },
+            {
+              "id": "has_howto_section",
+              "name": "Has HowTo Section",
+              "description": "Page has HowTo structured data",
+              "weight": 0.5,
+              "issue_code": "MISSING_HOWTO_SECTION"
+            }
+          ]
+        },
+        {
+          "id": "content_clarity",
+          "name": "Content Clarity",
+          "description": "Content is clear and AI-readable",
+          "weight": 0.5,
+          "checks": [
+            {
+              "id": "content_uses_clear_language",
+              "name": "Content Uses Clear Language",
+              "description": "Content uses clear, direct language",
+              "weight": 0.6,
+              "issue_code": "UNCLEAR_CONTENT_LANGUAGE"
+            },
+            {
+              "id": "content_has_definitions",
+              "name": "Content Has Definitions",
+              "description": "Technical terms are defined",
+              "weight": 0.4,
+              "issue_code": "MISSING_DEFINITIONS"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,150 @@
+{
+  "version": "1.0.0",
+  "issues": [
+    {
+      "issue_code": "MISSING_JSONLD",
+      "title": "Missing JSON-LD Structured Data",
+      "description": "The page does not contain any JSON-LD structured data blocks. JSON-LD helps search engines and AI systems understand page content.",
+      "severity": "high",
+      "category": "structured_data",
+      "pillar": "structured_data"
+    },
+    {
+      "issue_code": "MISSING_ORGANIZATION_SCHEMA",
+      "title": "Missing Organization Schema",
+      "description": "The page does not contain an Organization schema. This schema helps establish brand identity and business information.",
+      "severity": "medium",
+      "category": "structured_data",
+      "pillar": "structured_data"
+    },
+    {
+      "issue_code": "MISSING_WEBPAGE_SCHEMA",
+      "title": "Missing WebPage Schema",
+      "description": "The page does not contain a WebPage schema. This schema helps search engines understand page structure and metadata.",
+      "severity": "medium",
+      "category": "structured_data",
+      "pillar": "structured_data"
+    },
+    {
+      "issue_code": "INVALID_JSONLD",
+      "title": "Invalid JSON-LD",
+      "description": "One or more JSON-LD blocks on the page contain invalid JSON or cannot be parsed.",
+      "severity": "high",
+      "category": "structured_data",
+      "pillar": "structured_data"
+    },
+    {
+      "issue_code": "INCOMPLETE_SCHEMA",
+      "title": "Incomplete Schema",
+      "description": "The schema markup is missing required fields for its type, reducing its effectiveness.",
+      "severity": "medium",
+      "category": "structured_data",
+      "pillar": "structured_data"
+    },
+    {
+      "issue_code": "SCHEMA_BEST_PRACTICES_VIOLATION",
+      "title": "Schema Best Practices Violation",
+      "description": "The schema markup does not follow Google's structured data guidelines and best practices.",
+      "severity": "low",
+      "category": "structured_data",
+      "pillar": "structured_data"
+    },
+    {
+      "issue_code": "MULTIPLE_H1_HEADINGS",
+      "title": "Multiple H1 Headings",
+      "description": "The page contains multiple H1 headings. Best practice is to have exactly one H1 per page.",
+      "severity": "medium",
+      "category": "content_structure",
+      "pillar": "content_structure"
+    },
+    {
+      "issue_code": "INVALID_HEADING_HIERARCHY",
+      "title": "Invalid Heading Hierarchy",
+      "description": "The heading structure does not follow proper hierarchy (H1 > H2 > H3). Headings should not skip levels.",
+      "severity": "medium",
+      "category": "content_structure",
+      "pillar": "content_structure"
+    },
+    {
+      "issue_code": "INSUFFICIENT_CONTENT",
+      "title": "Insufficient Content",
+      "description": "The page has insufficient word count for AI systems to understand context and meaning.",
+      "severity": "high",
+      "category": "content_structure",
+      "pillar": "content_structure"
+    },
+    {
+      "issue_code": "POOR_CONTENT_ORGANIZATION",
+      "title": "Poor Content Organization",
+      "description": "Content is not organized into logical sections, making it difficult for AI systems to parse and understand.",
+      "severity": "medium",
+      "category": "content_structure",
+      "pillar": "content_structure"
+    },
+    {
+      "issue_code": "MISSING_TITLE",
+      "title": "Missing Title Tag",
+      "description": "The page does not have a title tag. Title tags are critical for SEO and AI understanding.",
+      "severity": "critical",
+      "category": "metadata",
+      "pillar": "metadata"
+    },
+    {
+      "issue_code": "TITLE_LENGTH_SUBOPTIMAL",
+      "title": "Title Length Suboptimal",
+      "description": "The title tag is not within the optimal length range (50-60 characters) for search results display.",
+      "severity": "low",
+      "category": "metadata",
+      "pillar": "metadata"
+    },
+    {
+      "issue_code": "MISSING_META_DESCRIPTION",
+      "title": "Missing Meta Description",
+      "description": "The page does not have a meta description. Meta descriptions help search engines and AI systems understand page content.",
+      "severity": "medium",
+      "category": "metadata",
+      "pillar": "metadata"
+    },
+    {
+      "issue_code": "MISSING_CANONICAL",
+      "title": "Missing Canonical URL",
+      "description": "The page does not have a canonical URL. Canonical URLs help prevent duplicate content issues.",
+      "severity": "medium",
+      "category": "metadata",
+      "pillar": "metadata"
+    },
+    {
+      "issue_code": "MISSING_FAQ_SECTION",
+      "title": "Missing FAQ Section",
+      "description": "The page does not have an FAQ section with structured data. FAQ sections help with answer surfaces in AI-powered search.",
+      "severity": "medium",
+      "category": "ai_readiness",
+      "pillar": "ai_readiness"
+    },
+    {
+      "issue_code": "MISSING_HOWTO_SECTION",
+      "title": "Missing HowTo Section",
+      "description": "The page does not have a HowTo structured data section. HowTo sections help with step-by-step answer surfaces.",
+      "severity": "low",
+      "category": "ai_readiness",
+      "pillar": "ai_readiness"
+    },
+    {
+      "issue_code": "UNCLEAR_CONTENT_LANGUAGE",
+      "title": "Unclear Content Language",
+      "description": "The content uses unclear or overly complex language that may be difficult for AI systems to understand.",
+      "severity": "medium",
+      "category": "ai_readiness",
+      "pillar": "ai_readiness"
+    },
+    {
+      "issue_code": "MISSING_DEFINITIONS",
+      "title": "Missing Definitions",
+      "description": "Technical terms are used without definitions, making content less accessible to AI systems.",
+      "severity": "low",
+      "category": "ai_readiness",
+      "pillar": "ai_readiness"
+    }
+  ]
+}
+

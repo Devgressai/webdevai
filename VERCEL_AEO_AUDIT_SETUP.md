@@ -1,23 +1,41 @@
 # Vercel Environment Variable Setup - AEO Audit Tool
 
-## ✅ No Environment Variable Needed!
+## Environment Variable (Optional)
 
-The AEO audit proxy route now uses a **shared scan creation function** (`lib/aeo-audit/create-scan.ts`) that directly accesses the same database and queue system as the internal tool. This means:
+**Variable Name:** `INTERNAL_AEO_AUDIT_API_URL`
 
-- ✅ **No `INTERNAL_AEO_AUDIT_API_URL` needed**
-- ✅ Both apps share the same `DATABASE_URL` and `REDIS_URL`
-- ✅ Scans are created directly in the database
-- ✅ Jobs are enqueued directly to the same BullMQ queues
+The proxy route will try to call the internal audit tool's API. If the internal tool is deployed on the same domain, it will automatically use the relative path. If it's deployed separately, set this environment variable.
 
-## Required Environment Variables
+## Setup Instructions
 
-Make sure these are set in Vercel (they should already be configured for the internal tool):
+### Option 1: Same Domain (No Config Needed)
+
+If the internal tool is accessible at `/apps/aeo-audit/api/scans` on the same domain, no configuration is needed. The proxy will automatically use the relative path.
+
+### Option 2: Separate Deployment (Set Environment Variable)
+
+If the internal audit tool is deployed as a separate service:
+
+1. Go to [Vercel Dashboard](https://vercel.com)
+2. Select your project
+3. Go to **Settings** → **Environment Variables**
+4. Click **Add New**
+5. Add:
+   - **Name:** `INTERNAL_AEO_AUDIT_API_URL`
+   - **Value:** Full URL to the internal tool's API (e.g., `https://audit-tool.vercel.app/apps/aeo-audit/api/scans`)
+   - **Environment:** Select `Production`, `Preview`, and `Development`
+6. Click **Save**
+7. **Redeploy** your project
+
+## Required Environment Variables (for Internal Tool)
+
+The internal audit tool (`apps/aeo-audit`) needs these environment variables:
 
 ### Required:
 - `DATABASE_URL` - PostgreSQL connection string
 - `REDIS_URL` - Redis connection string for BullMQ queues
 
-### Optional (for the internal tool):
+### Optional:
 - `NEXT_PUBLIC_APP_URL` - Base URL of the application
 - `MAX_PAGES` - Maximum pages to scan (default: 200)
 - `MAX_DEPTH` - Maximum crawl depth (default: 2)

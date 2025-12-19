@@ -286,3 +286,4 @@ All documentation is in the repository root:
 
 Site is fully compliant with Google structured data guidelines. No fake ratings, no duplicate schemas, clean architecture throughout.
 
+

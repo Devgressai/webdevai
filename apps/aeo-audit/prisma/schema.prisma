@@ -1,0 +1,307 @@
+// Prisma schema for AEO Audit Tool
+// Postgres database schema for scans, pages, issues, evidence, clusters, and LLM evaluations
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Domain {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  domain      String   @unique // Normalized domain (e.g., "example.com")
+  displayName String?  // Optional display name
+  metadata    Json?    // Additional domain metadata
+
+  // Relations
+  scans       Scan[]
+  alertRules  AlertRule[]
+  alerts      Alert[]
+
+  @@index([domain])
+}
+
+model Scan {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  targetUrl   String
+  domainId    String?  // Link to domain for monitoring
+  status      String   @default("pending") // pending, running, completed, failed, completed_with_limits
+  startedAt   DateTime?
+  completedAt DateTime?
+  // Budget accounting
+  pagesFetched Int     @default(0)
+  pagesRendered Int    @default(0)
+  llmCalls     Int     @default(0)
+  estTokens    Int     @default(0) // Estimated tokens used
+  budgetLimits Json?   // What limits were hit: { pages: true, renders: true, llmCalls: true, tokens: true }
+  metadata    Json?    // Additional scan configuration/metadata
+
+  // Relations
+  domain      Domain?  @relation(fields: [domainId], references: [id], onDelete: SetNull)
+  pages      Page[]
+  issues     Issue[]
+  clusters   Cluster[]
+  llmEvals   LlmEval[]
+  reports    Report[]
+  snapshots  ScanSnapshot[]
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([domainId])
+}
+
+model ScanSnapshot {
+  id          String   @id @default(cuid())
+  scanId      String
+  createdAt   DateTime @default(now())
+  snapshotData Json   // Immutable snapshot of scan state
+  overallScore Float
+  pillarScores Json   // Pillar scores at snapshot time
+  issueCounts Json    // Issue counts by severity
+  clusterCounts Json   // Cluster counts
+  metadata    Json?    // Additional snapshot metadata
+
+  // Relations
+  scan Scan @relation(fields: [scanId], references: [id], onDelete: Cascade)
+
+  @@index([scanId])
+  @@index([createdAt])
+}
+
+model AlertRule {
+  id          String   @id @default(cuid())
+  domainId    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String
+  enabled     Boolean  @default(true)
+  ruleType    String   // "score_drop", "new_issue", "issue_resolved", "cluster_regression"
+  threshold   Json?    // Rule-specific threshold data
+  metadata    Json?    // Additional rule metadata
+
+  // Relations
+  domain      Domain   @relation(fields: [domainId], references: [id], onDelete: Cascade)
+  alerts      Alert[]
+
+  @@index([domainId])
+  @@index([enabled])
+}
+
+model Alert {
+  id          String   @id @default(cuid())
+  alertRuleId String
+  domainId    String
+  createdAt   DateTime @default(now())
+  triggeredAt DateTime @default(now())
+  status      String   @default("pending") // pending, acknowledged, resolved
+  severity    String   @default("medium") // low, medium, high, critical
+  message     String   @text
+  context     Json?    // Alert context data
+  metadata    Json?    // Additional alert metadata
+
+  // Relations
+  alertRule   AlertRule @relation(fields: [alertRuleId], references: [id], onDelete: Cascade)
+  domain      Domain    @relation(fields: [domainId], references: [id], onDelete: Cascade)
+
+  @@index([alertRuleId])
+  @@index([domainId])
+  @@index([status])
+  @@index([triggeredAt])
+}
+
+model Page {
+  id          String   @id @default(cuid())
+  scanId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  url         String
+  title       String?
+  statusCode  Int?
+  loadTime    Int?     // milliseconds
+  metadata    Json?    // Additional page data
+
+  // Relations
+  scan       Scan      @relation(fields: [scanId], references: [id], onDelete: Cascade)
+  evidences  Evidence[]
+  issuePages IssuePageMap[]
+  schemaBlocks SchemaBlock[]
+  clusterPages ClusterPageMap[]
+
+  @@index([scanId, url])
+  @@index([scanId])
+}
+
+model Evidence {
+  id          String   @id @default(cuid())
+  pageId      String
+  createdAt   DateTime @default(now())
+  type        String   // "schema", "structured_data", "content", "meta_tag", etc.
+  content     String   @text // The actual evidence content
+  selector    String?  // CSS selector or XPath if applicable
+  metadata    Json?    // Additional evidence metadata
+
+  // Relations
+  page       Page      @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@index([pageId])
+  @@index([type])
+}
+
+model Cluster {
+  id          String   @id @default(cuid())
+  scanId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  type      String   // "topic", "intent", "query_group", "template", etc.
+  clusterId String?  // SHA256 hash for deduplication
+  metadata  Json?    // Additional cluster data (predicates, representative URLs, etc.)
+
+  // Relations
+  scan           Scan              @relation(fields: [scanId], references: [id], onDelete: Cascade)
+  issueClusters  IssueClusterMap[]
+  clusterPages   ClusterPageMap[]
+
+  @@index([scanId])
+  @@index([type])
+  @@index([clusterId])
+  @@unique([scanId, clusterId])
+}
+
+model ClusterPageMap {
+  id        String   @id @default(cuid())
+  clusterId String
+  pageId    String
+  createdAt DateTime @default(now())
+  urlSignature String // Normalized URL signature
+  representativeType String? // "best", "typical", "worst", or null
+
+  // Relations
+  cluster Cluster @relation(fields: [clusterId], references: [id], onDelete: Cascade)
+  page    Page    @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([clusterId, pageId])
+  @@index([clusterId])
+  @@index([pageId])
+  @@index([representativeType])
+}
+
+model Issue {
+  id          String   @id @default(cuid())
+  scanId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  issueCode   String   // e.g., "MISSING_SCHEMA", "POOR_STRUCTURE", etc.
+  severity    String   @default("medium") // low, medium, high, critical
+  title       String
+  description String   @text
+  recommendation String? @text
+  metadata    Json?    // Additional issue data (scope, affectedCounts, evidencePointers, priorityScore)
+
+  // Relations
+  scan           Scan              @relation(fields: [scanId], references: [id], onDelete: Cascade)
+  issuePages     IssuePageMap[]
+  issueClusters IssueClusterMap[]
+
+  @@index([issueCode, scanId])
+  @@index([scanId])
+  @@index([severity])
+  @@unique([scanId, issueCode])
+}
+
+model IssuePageMap {
+  id        String   @id @default(cuid())
+  issueId   String
+  pageId    String
+  createdAt DateTime @default(now())
+
+  // Relations
+  issue Issue @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  page  Page  @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([issueId, pageId])
+  @@index([issueId])
+  @@index([pageId])
+}
+
+model IssueClusterMap {
+  id        String   @id @default(cuid())
+  issueId   String
+  clusterId String
+  scanId    String
+  createdAt DateTime @default(now())
+
+  // Relations
+  issue   Issue   @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  cluster Cluster @relation(fields: [clusterId], references: [id], onDelete: Cascade)
+  scan    Scan    @relation(fields: [scanId], references: [id], onDelete: Cascade)
+
+  @@unique([issueId, clusterId])
+  @@index([scanId, clusterId])
+  @@index([clusterId, scanId])
+  @@index([issueId])
+  @@index([clusterId])
+}
+
+model LlmEval {
+  id          String   @id @default(cuid())
+  scanId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  evalType   String   // "readiness_score", "schema_quality", "content_alignment", etc.
+  result      Json     // LLM evaluation result (structured data)
+  model       String?  // LLM model used
+  prompt      String?  @text // Prompt used for evaluation
+  metadata    Json?    // Additional evaluation metadata
+
+  // Relations
+  scan Scan @relation(fields: [scanId], references: [id], onDelete: Cascade)
+
+  @@index([scanId])
+  @@index([evalType])
+}
+
+model SchemaBlock {
+  id          String   @id @default(cuid())
+  pageId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  rawText     String   @text // Raw JSON-LD text
+  parsedType  String?  // Parsed @type from JSON-LD
+  parseOk     Boolean  @default(false) // Whether JSON parsed successfully
+  parsedData  Json?    // Parsed JSON-LD data
+  metadata    Json?    // Additional metadata (position, size, etc.)
+
+  // Relations
+  page Page @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@index([pageId])
+  @@index([parsedType])
+  @@index([parseOk])
+}
+
+model Report {
+  id          String   @id @default(cuid())
+  scanId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  overallScore Float   // Overall readiness score (0-100)
+  siteType    String?  // Site type for weighting (e.g., "ecommerce", "blog", "corporate")
+  rubricVersion String // Rubric version used
+  scores      Json     // Pillar and category scores
+  metadata    Json?    // Additional report data (check results, etc.)
+
+  // Relations
+  scan Scan @relation(fields: [scanId], references: [id], onDelete: Cascade)
+
+  @@index([scanId])
+  @@index([createdAt])
+}
+

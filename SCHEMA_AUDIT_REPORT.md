@@ -246,3 +246,4 @@ The site now has:
 - Monitor Search Console for structured data errors
 - Optionally add schema to remaining 15 industry GEO pages
 
+

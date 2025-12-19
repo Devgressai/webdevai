@@ -1,0 +1,237 @@
+{
+  "version": "1.0.0",
+  "fix_templates": [
+    {
+      "fix_template_id": "add_jsonld_block",
+      "issue_codes": ["MISSING_JSONLD", "MISSING_ORGANIZATION_SCHEMA", "MISSING_WEBPAGE_SCHEMA"],
+      "title": "Add JSON-LD Structured Data",
+      "description": "Add JSON-LD structured data blocks to the page",
+      "priority": "high",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Identify Schema Types",
+          "description": "Determine which schema types are appropriate for this page (Organization, WebPage, Article, etc.)"
+        },
+        {
+          "step_number": 2,
+          "title": "Create JSON-LD Block",
+          "description": "Create a JSON-LD script tag with the appropriate schema markup"
+        },
+        {
+          "step_number": 3,
+          "title": "Add to Page",
+          "description": "Insert the JSON-LD block in the <head> section of the page"
+        },
+        {
+          "step_number": 4,
+          "title": "Validate",
+          "description": "Use Google's Rich Results Test to validate the structured data"
+        }
+      ],
+      "code_example": {
+        "language": "html",
+        "code": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"name\": \"Your Company Name\",\n  \"url\": \"https://example.com\"\n}\n</script>"
+      }
+    },
+    {
+      "fix_template_id": "fix_invalid_jsonld",
+      "issue_codes": ["INVALID_JSONLD"],
+      "title": "Fix Invalid JSON-LD",
+      "description": "Fix JSON syntax errors in existing JSON-LD blocks",
+      "priority": "high",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Identify Invalid Blocks",
+          "description": "Use browser console or validation tools to identify which JSON-LD blocks have errors"
+        },
+        {
+          "step_number": 2,
+          "title": "Fix JSON Syntax",
+          "description": "Correct JSON syntax errors (missing commas, quotes, brackets, etc.)"
+        },
+        {
+          "step_number": 3,
+          "title": "Validate Structure",
+          "description": "Ensure the JSON structure matches the expected schema format"
+        },
+        {
+          "step_number": 4,
+          "title": "Test",
+          "description": "Validate the fixed JSON-LD using Google's Rich Results Test"
+        }
+      ],
+      "code_example": {
+        "language": "json",
+        "code": "// Common issues:\n// - Missing commas between properties\n// - Unclosed brackets or braces\n// - Invalid property names\n// - Incorrect data types"
+      }
+    },
+    {
+      "fix_template_id": "fix_heading_structure",
+      "issue_codes": ["MULTIPLE_H1_HEADINGS", "INVALID_HEADING_HIERARCHY"],
+      "title": "Fix Heading Structure",
+      "description": "Correct heading hierarchy and ensure single H1",
+      "priority": "medium",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Identify All Headings",
+          "description": "List all H1, H2, and H3 headings on the page"
+        },
+        {
+          "step_number": 2,
+          "title": "Ensure Single H1",
+          "description": "Keep only the main page title as H1, convert other H1s to H2"
+        },
+        {
+          "step_number": 3,
+          "title": "Fix Hierarchy",
+          "description": "Ensure headings follow proper hierarchy: H1 > H2 > H3 (no skipping levels)"
+        },
+        {
+          "step_number": 4,
+          "title": "Review Structure",
+          "description": "Review the heading structure to ensure logical organization"
+        }
+      ],
+      "code_example": {
+        "language": "html",
+        "code": "<!-- Good structure -->\n<h1>Main Page Title</h1>\n  <h2>Section Title</h2>\n    <h3>Subsection Title</h3>\n  <h2>Another Section</h2>\n\n<!-- Bad structure -->\n<h1>Title 1</h1>\n<h1>Title 2</h1> <!-- Multiple H1s -->\n<h3>Subsection</h3> <!-- Skipped H2 -->"
+      }
+    },
+    {
+      "fix_template_id": "add_meta_tags",
+      "issue_codes": ["MISSING_TITLE", "MISSING_META_DESCRIPTION", "TITLE_LENGTH_SUBOPTIMAL"],
+      "title": "Add or Optimize Meta Tags",
+      "description": "Add missing meta tags or optimize existing ones",
+      "priority": "high",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Add Title Tag",
+          "description": "Ensure page has a unique, descriptive title tag (50-60 characters)"
+        },
+        {
+          "step_number": 2,
+          "title": "Add Meta Description",
+          "description": "Add a compelling meta description (150-160 characters) that summarizes the page"
+        },
+        {
+          "step_number": 3,
+          "title": "Optimize Length",
+          "description": "Ensure title and meta description are within optimal length ranges"
+        },
+        {
+          "step_number": 4,
+          "title": "Make Unique",
+          "description": "Ensure each page has unique title and meta description"
+        }
+      ],
+      "code_example": {
+        "language": "html",
+        "code": "<head>\n  <title>Optimized Page Title (50-60 chars)</title>\n  <meta name=\"description\" content=\"Compelling meta description that summarizes the page content in 150-160 characters.\">\n</head>"
+      }
+    },
+    {
+      "fix_template_id": "add_canonical",
+      "issue_codes": ["MISSING_CANONICAL"],
+      "title": "Add Canonical URL",
+      "description": "Add canonical URL to prevent duplicate content issues",
+      "priority": "medium",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Determine Canonical URL",
+          "description": "Identify the preferred (canonical) version of the page URL"
+        },
+        {
+          "step_number": 2,
+          "title": "Add Canonical Tag",
+          "description": "Add <link rel=\"canonical\"> tag to the <head> section"
+        },
+        {
+          "step_number": 3,
+          "title": "Use Absolute URL",
+          "description": "Ensure canonical URL is absolute (includes protocol and domain)"
+        },
+        {
+          "step_number": 4,
+          "title": "Verify",
+          "description": "Verify canonical tag is present and points to correct URL"
+        }
+      ],
+      "code_example": {
+        "language": "html",
+        "code": "<head>\n  <link rel=\"canonical\" href=\"https://example.com/page\">\n</head>"
+      }
+    },
+    {
+      "fix_template_id": "add_faq_section",
+      "issue_codes": ["MISSING_FAQ_SECTION"],
+      "title": "Add FAQ Section",
+      "description": "Add FAQ section with structured data for answer surfaces",
+      "priority": "medium",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Identify Common Questions",
+          "description": "List common questions users have about the page topic"
+        },
+        {
+          "step_number": 2,
+          "title": "Create FAQ Content",
+          "description": "Write clear, concise answers to the questions"
+        },
+        {
+          "step_number": 3,
+          "title": "Add FAQ Schema",
+          "description": "Add FAQPage or Question schema markup"
+        },
+        {
+          "step_number": 4,
+          "title": "Validate",
+          "description": "Validate FAQ schema using Google's Rich Results Test"
+        }
+      ],
+      "code_example": {
+        "language": "html",
+        "code": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [{\n    \"@type\": \"Question\",\n    \"name\": \"What is this?\",\n    \"acceptedAnswer\": {\n      \"@type\": \"Answer\",\n      \"text\": \"This is the answer.\"\n    }\n  }]\n}\n</script>"
+      }
+    },
+    {
+      "fix_template_id": "improve_content_quality",
+      "issue_codes": ["INSUFFICIENT_CONTENT", "POOR_CONTENT_ORGANIZATION", "UNCLEAR_CONTENT_LANGUAGE", "MISSING_DEFINITIONS"],
+      "title": "Improve Content Quality",
+      "description": "Enhance content for better AI readability",
+      "priority": "medium",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Increase Word Count",
+          "description": "Add more substantive content to reach minimum word count (300+ words)"
+        },
+        {
+          "step_number": 2,
+          "title": "Organize into Sections",
+          "description": "Break content into logical sections with clear headings"
+        },
+        {
+          "step_number": 3,
+          "title": "Use Clear Language",
+          "description": "Simplify language and use direct, clear sentences"
+        },
+        {
+          "step_number": 4,
+          "title": "Add Definitions",
+          "description": "Define technical terms and acronyms on first use"
+        }
+      ],
+      "code_example": {
+        "language": "markdown",
+        "code": "# Clear Section Title\n\nClear, direct paragraph explaining the concept.\n\n## Subsection\n\nMore detailed explanation with definitions:\n\n- **Term**: Definition\n- **Acronym**: Full form and explanation"
+      }
+    }
+  ]
+}
+
