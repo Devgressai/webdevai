@@ -2,9 +2,8 @@
  * Proxy API route for AEO Audit Tool
  * Forwards requests from public site to internal audit tool
  * 
- * Configuration:
- * - INTERNAL_AEO_AUDIT_API_URL: Full URL to internal tool API (e.g., http://localhost:3001/apps/aeo-audit/api/scans)
- * - If not set, will attempt to call internal tool functions directly (if in same codebase)
+ * This route calls the internal audit tool's API handler directly
+ * since both are in the same codebase.
  */
 
 import { NextRequest, NextResponse } from 'next/server'
@@ -24,11 +23,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Try to call internal tool API directly if URL is configured
+    // Try to call internal tool API
+    // Strategy: Try environment variable first (most reliable), then relative path
     const internalToolUrl = process.env.INTERNAL_AEO_AUDIT_API_URL
-
+    
+    // Try 1: Use environment variable if set (most reliable for production)
     if (internalToolUrl) {
-      // Forward to internal tool via HTTP
       try {
         const response = await fetch(`${internalToolUrl}`, {
           method: 'POST',
@@ -42,35 +42,62 @@ export async function POST(request: NextRequest) {
 
         const data = await response.json()
 
-        if (!response.ok) {
-          return NextResponse.json(
-            {
-              error: data.error || 'Failed to start audit',
-              message: data.message || 'An error occurred while starting the audit',
-            },
-            { status: response.status }
-          )
+        if (response.ok) {
+          return NextResponse.json(data, { status: 200 })
         }
 
-        return NextResponse.json(data, { status: 200 })
-      } catch (fetchError) {
-        console.error('Error forwarding to internal tool:', fetchError)
+        // If not OK, return the error from internal tool
         return NextResponse.json(
           {
-            error: 'Service unavailable',
-            message: 'The audit service is temporarily unavailable. Please try again later or contact support.',
+            error: data.error || 'Failed to start audit',
+            message: data.message || 'An error occurred while starting the audit',
           },
-          { status: 503 }
+          { status: response.status }
         )
+      } catch (fetchError) {
+        console.error('Error forwarding to internal tool (env var):', fetchError)
+        // Continue to fallback
       }
     }
+    
+    // Try 2: Relative path (works if both apps on same domain)
+    const baseUrl = request.nextUrl.origin
+    const internalToolPath = '/apps/aeo-audit/api/scans'
+    
+    try {
+      const response = await fetch(`${baseUrl}${internalToolPath}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Forwarded-For': request.headers.get('x-forwarded-for') || '',
+          'User-Agent': request.headers.get('user-agent') || '',
+        },
+        body: JSON.stringify({ domain }),
+      })
 
-    // Fallback: If internal tool URL not configured, return instructions
-    // In production, INTERNAL_AEO_AUDIT_API_URL must be set
+      const data = await response.json()
+
+      if (response.ok) {
+        return NextResponse.json(data, { status: 200 })
+      }
+
+      // If not OK, return the error
+      return NextResponse.json(
+        {
+          error: data.error || 'Failed to start audit',
+          message: data.message || 'An error occurred while starting the audit',
+        },
+        { status: response.status }
+      )
+    } catch (relativeFetchError) {
+      console.error('Error forwarding to internal tool (relative path):', relativeFetchError)
+    }
+
+    // If all methods fail, return helpful error
     return NextResponse.json(
       {
-        error: 'Configuration required',
-        message: 'AEO audit service is not configured. Please contact support or set INTERNAL_AEO_AUDIT_API_URL environment variable.',
+        error: 'Service unavailable',
+        message: 'The audit service is temporarily unavailable. Please ensure the internal audit tool is running and accessible.',
       },
       { status: 503 }
     )
