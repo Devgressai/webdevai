@@ -1,103 +1,76 @@
 # Vercel Environment Variable Setup - AEO Audit Tool
 
-## Environment Variable Required
+## ✅ No Environment Variable Needed!
 
-**Variable Name:** `INTERNAL_AEO_AUDIT_API_URL`
+The AEO audit proxy route now uses a **shared scan creation function** (`lib/aeo-audit/create-scan.ts`) that directly accesses the same database and queue system as the internal tool. This means:
 
-## Setup Instructions
+- ✅ **No `INTERNAL_AEO_AUDIT_API_URL` needed**
+- ✅ Both apps share the same `DATABASE_URL` and `REDIS_URL`
+- ✅ Scans are created directly in the database
+- ✅ Jobs are enqueued directly to the same BullMQ queues
 
-### Option 1: Vercel Dashboard (Recommended)
+## Required Environment Variables
 
-1. Go to [Vercel Dashboard](https://vercel.com)
-2. Select your project
-3. Go to **Settings** → **Environment Variables**
-4. Click **Add New**
-5. Add:
-   - **Name:** `INTERNAL_AEO_AUDIT_API_URL`
-   - **Value:** `https://www.webvello.com/apps/aeo-audit/api/scans`
-   - **Environment:** Select `Production`, `Preview`, and `Development`
-6. Click **Save**
-7. **Redeploy** your project (or push a new commit)
+Make sure these are set in Vercel (they should already be configured for the internal tool):
 
-### Option 2: Vercel CLI
+### Required:
+- `DATABASE_URL` - PostgreSQL connection string
+- `REDIS_URL` - Redis connection string for BullMQ queues
 
-```bash
-# Add environment variable for all environments
-vercel env add INTERNAL_AEO_AUDIT_API_URL production
-# When prompted, enter: https://www.webvello.com/apps/aeo-audit/api/scans
-
-vercel env add INTERNAL_AEO_AUDIT_API_URL preview
-# When prompted, enter: https://www.webvello.com/apps/aeo-audit/api/scans
-
-vercel env add INTERNAL_AEO_AUDIT_API_URL development
-# When prompted, enter: http://localhost:3000/apps/aeo-audit/api/scans
-```
-
-### Option 3: If Internal Tool is Separate Service
-
-If the internal audit tool is deployed as a separate Vercel project:
-
-1. Get the deployment URL from the internal tool's Vercel project
-2. Set `INTERNAL_AEO_AUDIT_API_URL` to that URL + `/apps/aeo-audit/api/scans`
-   - Example: `https://audit-tool-xyz.vercel.app/apps/aeo-audit/api/scans`
-
-## Value Examples
-
-### Same Domain (Recommended)
-```
-https://www.webvello.com/apps/aeo-audit/api/scans
-```
-
-### Separate Service
-```
-https://your-audit-tool.vercel.app/apps/aeo-audit/api/scans
-```
-
-### Local Development
-```
-http://localhost:3000/apps/aeo-audit/api/scans
-```
+### Optional (for the internal tool):
+- `NEXT_PUBLIC_APP_URL` - Base URL of the application
+- `MAX_PAGES` - Maximum pages to scan (default: 200)
+- `MAX_DEPTH` - Maximum crawl depth (default: 2)
+- `USER_AGENT` - User agent string for crawler
+- `EVIDENCE_MODE` - "full" or "extract-only" (default: "full")
+- `AEO_AUDIT_PASSWORD` - Password for internal tool authentication
 
 ## How It Works
 
-The proxy route (`/app/api/aeo-audit/route.ts`) will:
-1. **First try**: Relative path on same domain (`/apps/aeo-audit/api/scans`)
-2. **Fallback**: Use `INTERNAL_AEO_AUDIT_API_URL` if relative path fails
-3. **Error**: If both fail, return helpful error message
+The proxy route (`/app/api/aeo-audit/route.ts`) now:
+1. **Imports** the shared `createScan` function from `lib/aeo-audit/create-scan.ts`
+2. **Calls** the function directly (no HTTP requests needed)
+3. **Uses** the same database and queues as the internal tool
+4. **Returns** the scan ID to the client
 
-## After Adding Variable
+## Setup Steps
 
-1. **Redeploy** your project:
+1. **Ensure database and Redis are configured:**
+   - `DATABASE_URL` should point to your PostgreSQL database
+   - `REDIS_URL` should point to your Redis instance
+   - Both should be the same values used by the internal tool
+
+2. **Deploy the code:**
    ```bash
-   git commit --allow-empty -m "Trigger redeploy for AEO audit env var"
-   git push
+   git push origin main
    ```
+   Vercel will automatically deploy
 
-2. **Or manually redeploy** in Vercel Dashboard:
-   - Go to **Deployments**
-   - Click `...` on latest deployment
-   - Click **Redeploy**
-
-## Testing
-
-After deployment, test the audit page:
-1. Visit: `https://www.webvello.com/aeo-audit`
-2. Enter a domain (e.g., `example.com`)
-3. Click "Start Free Audit"
-4. Should successfully create scan (no error message)
+3. **Test the audit page:**
+   - Visit: `https://www.webvello.com/aeo-audit`
+   - Enter a domain (e.g., `example.com`)
+   - Click "Start Free Audit"
+   - Should successfully create scan and return a scan ID
 
 ## Troubleshooting
 
-### Error: "Service unavailable"
-- Check that `INTERNAL_AEO_AUDIT_API_URL` is set correctly
-- Verify the internal tool is deployed and accessible
-- Check Vercel logs for connection errors
-
-### Error: "Configuration required"
-- Environment variable not set
-- Add `INTERNAL_AEO_AUDIT_API_URL` in Vercel
+### Error: "Internal server error"
+- Check that `DATABASE_URL` is set correctly
+- Check that `REDIS_URL` is set correctly
+- Verify the database schema matches the internal tool's Prisma schema
+- Check Vercel logs for detailed error messages
 
 ### Error: "Rate limit exceeded"
 - Too many requests from same IP
 - Wait a few minutes and try again
+- Default limit: 10 requests per minute per IP
+
+### Error: "Too many concurrent scans"
+- Maximum 3 concurrent scans per user/IP
+- Wait for existing scans to complete
+
+### Error: "Invalid domain"
+- Domain must be a valid hostname
+- Localhost and private IPs are not allowed (SSRF protection)
+- Check the domain format (e.g., `example.com` not `https://example.com`)
 
