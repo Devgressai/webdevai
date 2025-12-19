@@ -1,12 +1,10 @@
 /**
  * Proxy API route for AEO Audit Tool
- * Forwards requests from public site to internal audit tool
- * 
- * This route calls the internal audit tool's API handler directly
- * since both are in the same codebase.
+ * Creates scans directly using the shared scan creation function
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { createScan } from '@/lib/aeo-audit/create-scan'
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,83 +21,36 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Try to call internal tool API
-    // Strategy: Try environment variable first (most reliable), then relative path
-    const internalToolUrl = process.env.INTERNAL_AEO_AUDIT_API_URL
-    
-    // Try 1: Use environment variable if set (most reliable for production)
-    if (internalToolUrl) {
-      try {
-        const response = await fetch(`${internalToolUrl}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Forwarded-For': request.headers.get('x-forwarded-for') || '',
-            'User-Agent': request.headers.get('user-agent') || '',
-          },
-          body: JSON.stringify({ domain }),
-        })
+    // Create scan using shared function
+    const result = await createScan(domain, request)
 
-        const data = await response.json()
-
-        if (response.ok) {
-          return NextResponse.json(data, { status: 200 })
-        }
-
-        // If not OK, return the error from internal tool
-        return NextResponse.json(
-          {
-            error: data.error || 'Failed to start audit',
-            message: data.message || 'An error occurred while starting the audit',
-          },
-          { status: response.status }
-        )
-      } catch (fetchError) {
-        console.error('Error forwarding to internal tool (env var):', fetchError)
-        // Continue to fallback
-      }
-    }
-    
-    // Try 2: Relative path (works if both apps on same domain)
-    const baseUrl = request.nextUrl.origin
-    const internalToolPath = '/apps/aeo-audit/api/scans'
-    
-    try {
-      const response = await fetch(`${baseUrl}${internalToolPath}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Forwarded-For': request.headers.get('x-forwarded-for') || '',
-          'User-Agent': request.headers.get('user-agent') || '',
-        },
-        body: JSON.stringify({ domain }),
-      })
-
-      const data = await response.json()
-
-      if (response.ok) {
-        return NextResponse.json(data, { status: 200 })
-      }
-
-      // If not OK, return the error
-      return NextResponse.json(
+    if (!result.success) {
+      const response = NextResponse.json(
         {
-          error: data.error || 'Failed to start audit',
-          message: data.message || 'An error occurred while starting the audit',
+          error: result.error || 'Failed to create scan',
+          message: result.message || 'An error occurred',
         },
-        { status: response.status }
+        { status: result.statusCode || 500 }
       )
-    } catch (relativeFetchError) {
-      console.error('Error forwarding to internal tool (relative path):', relativeFetchError)
+
+      // Add headers if provided
+      if (result.headers) {
+        Object.entries(result.headers).forEach(([key, value]) => {
+          response.headers.set(key, value)
+        })
+      }
+
+      return response
     }
 
-    // If all methods fail, return helpful error
+    // Success response
     return NextResponse.json(
       {
-        error: 'Service unavailable',
-        message: 'The audit service is temporarily unavailable. Please ensure the internal audit tool is running and accessible.',
+        scanId: result.scanId,
+        message: result.message || 'Scan created successfully',
+        status: 'pending',
       },
-      { status: 503 }
+      { status: result.statusCode || 201 }
     )
   } catch (error) {
     console.error('Error in AEO audit proxy:', error)
@@ -112,4 +63,3 @@ export async function POST(request: NextRequest) {
     )
   }
 }
-
