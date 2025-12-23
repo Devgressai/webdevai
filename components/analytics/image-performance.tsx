@@ -94,3 +94,6 @@ export function ImageOptimizationReport() {
     </div>
   );
 }
+
+
+
