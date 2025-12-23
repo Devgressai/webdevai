@@ -1121,11 +1121,14 @@ export default function GenerativeEngineOptimizationPage() {
       />
 
       {/* Exit Intent Modal: Captures abandoning desktop users */}
-      <ExitIntentModal 
-        storageKey="geo-exit-intent-shown"
-        dismissDays={7}
-        zIndex={40}
-      />
+      {/* 
+        TODO: Re-enable after resolving client-side runtime crash
+        <ExitIntentModal 
+          storageKey="geo-exit-intent-shown"
+          dismissDays={7}
+          zIndex={40}
+        />
+      */}
     </div>
   )
 }
