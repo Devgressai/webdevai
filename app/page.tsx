@@ -137,21 +137,35 @@ export default function HomePage() {
         </Suspense>
         
         {/* Entity Definition Section - AEO Optimized */}
-        <section className="py-16 bg-white border-b border-gray-100">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-6">
-                What Is Webvello?
-              </h2>
-              <p className="text-xl text-secondary-700 leading-relaxed mb-8">
-                <strong>Webvello</strong> is a digital marketing agency specializing in <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 underline">SEO</Link> (Search Engine Optimization), <Link href="/services/generative-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">GEO</Link> (Generative Engine Optimization), <Link href="/services/answer-engine-optimization" className="text-primary-600 hover:text-primary-700 underline">AEO</Link> (Answer Engine Optimization), and <Link href="/services/web-development" className="text-primary-600 hover:text-primary-700 underline">custom web development</Link>. Webvello improves business visibility in traditional search engines like Google and AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
-              </p>
-              <p className="text-lg text-secondary-600 leading-relaxed">
-                Webvello serves businesses across the United States, combining data-driven strategies with transparent reporting. Core services include AI-powered SEO, local SEO for geographic targeting, and conversion-focused website development using React and Tailwind CSS.
-              </p>
-              <p className="text-lg text-secondary-600 leading-relaxed mt-4">
-                Founded in 2023, Webvello operates entirely remotely from headquarters in Roseville, California, providing SEO and web development services to over 500 businesses across 37+ US cities without requiring on-site visits. The agency serves financial services firms, legal practices, healthcare providers, e-commerce brands, and B2B technology companies seeking measurable improvements in organic search traffic, AI platform visibility, and conversion optimization.
-              </p>
+        <section className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden">
+          {/* Subtle background pattern */}
+          <div className="absolute inset-0 opacity-40">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-indigo-100/50 to-transparent rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100/50 p-8 lg:p-12">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl mb-6 shadow-lg">
+                  <HelpCircle className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
+                  What Is Webvello?
+                </h2>
+              </div>
+              
+              <div className="space-y-6 text-left">
+                <p className="text-xl text-secondary-700 leading-relaxed">
+                  <strong className="text-secondary-900">Webvello</strong> is a digital marketing agency specializing in <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">SEO</Link> (Search Engine Optimization), <Link href="/services/generative-engine-optimization" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">GEO</Link> (Generative Engine Optimization), <Link href="/services/answer-engine-optimization" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">AEO</Link> (Answer Engine Optimization), and <Link href="/services/web-development" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">custom web development</Link>. Webvello improves business visibility in traditional search engines like Google and AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
+                </p>
+                <p className="text-lg text-secondary-600 leading-relaxed">
+                  Webvello serves businesses across the United States, combining data-driven strategies with transparent reporting. Core services include AI-powered SEO, local SEO for geographic targeting, and conversion-focused website development using React and Tailwind CSS.
+                </p>
+                <p className="text-lg text-secondary-600 leading-relaxed">
+                  Founded in 2023, Webvello operates entirely remotely from headquarters in Roseville, California, providing SEO and web development services to over 500 businesses across 37+ US cities without requiring on-site visits. The agency serves financial services firms, legal practices, healthcare providers, e-commerce brands, and B2B technology companies seeking measurable improvements in organic search traffic, AI platform visibility, and conversion optimization.
+                </p>
+              </div>
             </div>
           </div>
         </section>
