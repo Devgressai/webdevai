@@ -677,17 +677,10 @@ export default function HomePage() {
               </div>
               
               {/* Main Headline */}
-              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-10 leading-tight text-center">
-                <span className="text-white block sm:inline">Improve Your Search Visibility with </span>
-                <span className="inline-block align-middle mt-3 sm:mt-0">
-                  <Image
-                    src="/newlogo.png"
-                    alt="Webvello"
-                    width={200}
-                    height={60}
-                    className="h-10 sm:h-14 lg:h-20 w-auto object-contain inline-block"
-                    priority
-                  />
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-10 leading-tight">
+                Improve Your Search Visibility with{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
+                  Webvello
                 </span>
               </h2>
               

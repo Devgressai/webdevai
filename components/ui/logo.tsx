@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 interface LogoProps {
   className?: string
@@ -7,20 +6,13 @@ interface LogoProps {
 }
 
 export function Logo({ className = '', size = 64 }: LogoProps) {
-  // Calculate height based on size prop (default to 64px)
-  const height = size || 64
-  const width = Math.round(height * 3.33) // Maintain aspect ratio (approximately 3.33:1 based on typical logo dimensions)
+  // Calculate font size based on size prop (default to text-xl equivalent)
+  const fontSize = size ? `${size * 0.4}px` : '1.25rem'
   
   return (
-    <div className={`flex items-center ${className}`}>
-      <Image
-        src="/newlogo.png"
-        alt="Webvello"
-        width={width}
-        height={height}
-        className="h-auto w-auto object-contain"
-        priority={size && size > 40} // Priority for larger logos (header)
-      />
+    <div className={`flex items-baseline gap-1 ${className}`} style={{ fontSize }}>
+      <span className="font-bold text-slate-900">Web</span>
+      <span className="font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Vello</span>
     </div>
   )
 }
