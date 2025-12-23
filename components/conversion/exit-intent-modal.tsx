@@ -36,8 +36,13 @@ export function ExitIntentModal({
     if (typeof window === 'undefined') return
     
     // Check for touch capability
-    const desktop = !('ontouchstart' in window || navigator.maxTouchPoints > 0)
-    setIsDesktopDevice(desktop)
+    try {
+      const desktop = !('ontouchstart' in window || (typeof navigator !== 'undefined' && navigator.maxTouchPoints > 0))
+      setIsDesktopDevice(desktop)
+    } catch (error) {
+      // If detection fails, default to non-desktop to be safe
+      setIsDesktopDevice(false)
+    }
   }, [])
 
   // Check if modal was shown recently (frequency cap)
@@ -64,23 +69,28 @@ export function ExitIntentModal({
 
   // Track scroll depth and time on page
   useEffect(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return
     if (!isDesktopDevice || hasTriggered || thresholdsMet) return
 
     let startTime = Date.now()
 
     const checkThresholds = () => {
-      // Check scroll depth
-      const scrollHeight = document.documentElement.scrollHeight
-      const clientHeight = document.documentElement.clientHeight
-      const scrollTop = window.scrollY || document.documentElement.scrollTop
-      const scrollPercentage = (scrollTop + clientHeight) / scrollHeight
+      try {
+        // Check scroll depth
+        const scrollHeight = document.documentElement.scrollHeight
+        const clientHeight = document.documentElement.clientHeight
+        const scrollTop = window.scrollY || document.documentElement.scrollTop
+        const scrollPercentage = (scrollTop + clientHeight) / scrollHeight
 
-      // Check time on page
-      const timeOnPage = (Date.now() - startTime) / 1000
+        // Check time on page
+        const timeOnPage = (Date.now() - startTime) / 1000
 
-      // Set threshold as met if either condition is satisfied
-      if (scrollPercentage >= 0.45 || timeOnPage >= 20) {
-        setThresholdsMet(true)
+        // Set threshold as met if either condition is satisfied
+        if (scrollPercentage >= 0.45 || timeOnPage >= 20) {
+          setThresholdsMet(true)
+        }
+      } catch (error) {
+        // Silently fail if DOM access fails
       }
     }
 
@@ -107,35 +117,40 @@ export function ExitIntentModal({
 
   // Exit intent detection: mouse leaving viewport near top
   useEffect(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return
     if (!isDesktopDevice || hasTriggered || !thresholdsMet) return
 
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse is leaving near the top of the viewport
-      if (e.clientY <= 0) {
-        // Check frequency cap
-        const shownData = localStorage.getItem(storageKey)
-        if (shownData) {
-          const { timestamp } = JSON.parse(shownData)
-          const daysSinceShown = (Date.now() - timestamp) / (1000 * 60 * 60 * 24)
-          if (daysSinceShown < dismissDays) {
-            return // Still within frequency cap
+      try {
+        // Only trigger if mouse is leaving near the top of the viewport
+        if (e.clientY <= 0) {
+          // Check frequency cap
+          const shownData = localStorage.getItem(storageKey)
+          if (shownData) {
+            const { timestamp } = JSON.parse(shownData)
+            const daysSinceShown = (Date.now() - timestamp) / (1000 * 60 * 60 * 24)
+            if (daysSinceShown < dismissDays) {
+              return // Still within frequency cap
+            }
           }
+
+          setIsOpen(true)
+          setHasTriggered(true)
+          
+          // Track modal shown
+          trackEvent('geo_exit_intent_shown', {
+            page: 'geo-service',
+            cta_location: 'exit_intent',
+            cta_label: 'Get Free GEO Audit',
+          })
+
+          // Store in localStorage for frequency cap
+          localStorage.setItem(storageKey, JSON.stringify({
+            timestamp: Date.now(),
+          }))
         }
-
-        setIsOpen(true)
-        setHasTriggered(true)
-        
-        // Track modal shown
-        trackEvent('geo_exit_intent_shown', {
-          page: 'geo-service',
-          cta_location: 'exit_intent',
-          cta_label: 'Get Free GEO Audit',
-        })
-
-        // Store in localStorage for frequency cap
-        localStorage.setItem(storageKey, JSON.stringify({
-          timestamp: Date.now(),
-        }))
+      } catch (error) {
+        // Silently fail if there's an error
       }
     }
 
@@ -149,6 +164,7 @@ export function ExitIntentModal({
 
   // Focus trap: minimal implementation
   useEffect(() => {
+    if (typeof document === 'undefined') return
     if (!isOpen) return
 
     const modal = modalRef.current
@@ -159,7 +175,11 @@ export function ExitIntentModal({
     if (input) {
       // Small delay to ensure modal is fully rendered
       setTimeout(() => {
-        input.focus()
+        try {
+          input.focus()
+        } catch (error) {
+          // Silently fail if focus fails
+        }
       }, 100)
     }
 
@@ -174,24 +194,28 @@ export function ExitIntentModal({
     const handleTab = (e: KeyboardEvent) => {
       if (e.key !== 'Tab') return
 
-      const focusableElements = modal.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      )
-      const firstElement = focusableElements[0] as HTMLElement
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+      try {
+        const focusableElements = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+        const firstElement = focusableElements[0] as HTMLElement
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
 
-      if (e.shiftKey) {
-        // Shift + Tab
-        if (document.activeElement === firstElement) {
-          e.preventDefault()
-          lastElement?.focus()
+        if (e.shiftKey) {
+          // Shift + Tab
+          if (document.activeElement === firstElement) {
+            e.preventDefault()
+            lastElement?.focus()
+          }
+        } else {
+          // Tab
+          if (document.activeElement === lastElement) {
+            e.preventDefault()
+            firstElement?.focus()
+          }
         }
-      } else {
-        // Tab
-        if (document.activeElement === lastElement) {
-          e.preventDefault()
-          firstElement?.focus()
-        }
+      } catch (error) {
+        // Silently fail if focus trap fails
       }
     }
 
