@@ -103,7 +103,7 @@ export function ExitIntentModal({
       window.removeEventListener('scroll', handleScroll)
       clearInterval(timeInterval)
     }
-  }, [hasTriggered, thresholdsMet])
+  }, [hasTriggered, thresholdsMet, isDesktopDevice])
 
   // Exit intent detection: mouse leaving viewport near top
   useEffect(() => {
@@ -144,7 +144,7 @@ export function ExitIntentModal({
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave)
     }
-  }, [hasTriggered, thresholdsMet, storageKey, dismissDays])
+  }, [hasTriggered, thresholdsMet, storageKey, dismissDays, isDesktopDevice])
 
 
   // Focus trap: minimal implementation
