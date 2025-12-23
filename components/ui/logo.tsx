@@ -7,19 +7,19 @@ interface LogoProps {
 }
 
 export function Logo({ className = '', size = 64 }: LogoProps) {
-  // Calculate height based on size prop (default to 64px)
+  // Use the size prop directly for height, maintain aspect ratio
   const height = size || 64
-  const width = Math.round(height * 3.33) // Maintain aspect ratio
   
   return (
-    <div className={`flex items-center ${className}`}>
+    <div className={`flex items-center ${className}`} style={{ height: `${height}px` }}>
       <Image
-        src="/logo.png"
+        src="/webvello_logo.jpg"
         alt="Webvello"
-        width={width}
+        width={height * 3}
         height={height}
-        className="h-auto w-auto object-contain"
-        priority={size && size > 40}
+        className="h-full w-auto object-contain"
+        priority={size ? size > 40 : false}
+        unoptimized
       />
     </div>
   )

@@ -361,7 +361,7 @@ export function NewHeader() {
 
       {/* Main Navigation */}
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
-        <div className="flex items-center py-4 lg:py-5">
+        <div className="flex items-center py-2 lg:py-3">
           {/* Logo - Far Left */}
           <div className="flex-shrink-0">
             <Link
@@ -369,7 +369,7 @@ export function NewHeader() {
               className="group flex items-center rounded-lg px-2 py-1.5 transition-all duration-200 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <span className="sr-only">Web Vello</span>
-              <Logo size={52} className="transition-transform duration-200 group-hover:scale-105" />
+              <Logo size={40} className="transition-transform duration-200 group-hover:scale-105" />
             </Link>
           </div>
           
@@ -502,7 +502,7 @@ export function NewHeader() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Web Vello</span>
-                <Logo size={48} />
+                <Logo size={36} />
               </Link>
               <button
                 type="button"
