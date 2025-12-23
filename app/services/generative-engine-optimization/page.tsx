@@ -10,6 +10,11 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { StickyCta } from '../../../components/conversion/sticky-cta'
+import { ProofStrip } from '../../../components/conversion/proof-strip'
+import { InlineCta } from '../../../components/conversion/inline-cta'
+import { TrackedButtonLink } from '../../../components/conversion/tracked-button-link'
+import { ExitIntentModal } from '../../../components/conversion/exit-intent-modal'
 
 export const metadata: Metadata = {
   title: 'GEO Services: Get Cited by ChatGPT & AI Search | Webvello',
@@ -29,33 +34,39 @@ export const metadata: Metadata = {
 const features = [
   {
     icon: Brain,
-    title: "AI Content Optimization",
-    description: "Optimize your content for AI-powered search engines and generative AI platforms."
+    title: "Content AI Engines Can Understand",
+    description: "We structure your content so AI systems can extract, summarize, and reference your information accurately in generated answers.",
+    improves: ["AI citation likelihood", "Answer accuracy", "Brand authority"]
   },
   {
     icon: Cpu,
-    title: "Machine Learning Integration",
-    description: "Leverage advanced ML algorithms to improve your search engine visibility."
+    title: "Higher AI Recommendation Rates",
+    description: "We optimize your content signals so AI algorithms prioritize your brand when generating recommendations and comparisons.",
+    improves: ["AI recommendation frequency", "Competitive positioning", "Query coverage"]
   },
   {
     icon: Network,
-    title: "Semantic Search Optimization",
-    description: "Optimize for meaning-based search rather than just keyword matching."
+    title: "Visibility in Meaning-Based Queries",
+    description: "We align your content with how AI systems understand intent and context, not just keyword matching.",
+    improves: ["Intent match rate", "Long-tail query visibility", "Contextual relevance"]
   },
   {
     icon: Database,
-    title: "Structured Data Enhancement",
-    description: "Implement comprehensive schema markup for better AI understanding."
+    title: "Faster AI Extraction and Citation",
+    description: "We implement comprehensive schema markup that enables AI systems to extract facts, entities, and relationships from your content instantly.",
+    improves: ["Extraction speed", "Citation accuracy", "Entity recognition"]
   },
   {
     icon: Code,
-    title: "Technical SEO for AI",
-    description: "Ensure your website is technically optimized for AI crawlers and algorithms."
+    title: "AI Crawler Accessibility and Performance",
+    description: "We ensure your site architecture, performance, and technical signals meet AI crawler requirements for content discovery and indexing.",
+    improves: ["Crawl efficiency", "Index coverage", "Response time"]
   },
   {
     icon: Bot,
-    title: "AI-Friendly Content",
-    description: "Create content that AI systems can easily understand and recommend."
+    title: "Higher Answer Inclusion Probability",
+    description: "We format and structure your content in ways that increase the likelihood AI systems will include your information in generated responses.",
+    improves: ["Answer inclusion rate", "Source attribution", "Information extraction"]
   }
 ]
 
@@ -271,143 +282,191 @@ export default function GenerativeEngineOptimizationPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <section className="py-20 sm:py-24 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-6xl">
-              Generative Engine{" "}
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-secondary-900 leading-tight">
+              Get Cited by{" "}
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Optimization (GEO)
-              </span>{" "}
-              for AI-Powered Search
+                ChatGPT, Perplexity & Google AI
+              </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-secondary-600">
-              Optimize your website for the future of search. Our GEO strategies ensure your content 
-              is perfectly positioned for AI-powered search engines, generative AI platforms, and 
-              machine learning algorithms that are reshaping digital discovery.
+            <p className="mt-6 text-lg sm:text-xl leading-8 text-secondary-700 max-w-2xl mx-auto">
+              Join 500+ businesses dominating AI search. See how often ChatGPT, Perplexity, Claude, and Google SGE 
+              cite your brand—and get a clear roadmap to 3x your AI visibility.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
+              <div className="bg-white/20 backdrop-blur px-3 sm:px-4 py-2 rounded-full border border-white/30">
                 <span className="font-semibold">1.2B+</span> monthly AI users
               </div>
-              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+              <div className="bg-white/20 backdrop-blur px-3 sm:px-4 py-2 rounded-full border border-white/30">
                 <span className="font-semibold">64%</span> prefer AI over Google
               </div>
-              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+              <div className="bg-white/20 backdrop-blur px-3 sm:px-4 py-2 rounded-full border border-white/30">
                 <span className="font-semibold">84%</span> of queries show SGE
               </div>
-              <div className="bg-white/20 backdrop-blur px-4 py-2 rounded-full">
+              <div className="bg-white/20 backdrop-blur px-3 sm:px-4 py-2 rounded-full border border-white/30">
                 <span className="font-semibold">59%</span> zero-click searches
               </div>
             </div>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="xl" asChild>
-                <Link href="/contact">
-                  Get Free GEO Audit
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+              {/* Hero CTA: Primary conversion point above the fold */}
+              <TrackedButtonLink
+                href="/contact?service=geo"
+                eventName="geo_hero_cta_click"
+                ctaLocation="hero"
+                size="xl"
+                className="w-full sm:w-auto px-8 sm:px-10"
+                showArrow
+              >
+                Get Free GEO Audit
+              </TrackedButtonLink>
+              <Button variant="outline" size="xl" className="w-full sm:w-auto px-8 sm:px-10" asChild>
                 <Link href="/case-studies">
                   View Success Stories
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
+            
+            {/* Microcopy under CTAs */}
+            <div className="mt-6 space-y-2">
+              <p className="text-sm sm:text-base text-secondary-600">
+                <span className="font-semibold">100% Free</span> • No obligation • <span className="font-semibold">Delivered in 3–5 business days</span>
+              </p>
+              <p className="text-xs sm:text-sm text-secondary-500 max-w-xl mx-auto">
+                Includes: Schema markup review, content extraction analysis, AI visibility score, and priority action roadmap
+              </p>
+            </div>
+
+            {/* Trust Micro-Row */}
+            <div className="mt-8 pt-8 border-t border-white/30">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-sm">
+                <div className="flex items-start justify-center sm:justify-start gap-2 sm:gap-3">
+                  <CheckCircle className="h-5 w-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-secondary-700 text-left">
+                    <span className="font-semibold">Schema + content extraction review</span>
+                  </span>
+                </div>
+                <div className="flex items-start justify-center sm:justify-start gap-2 sm:gap-3">
+                  <CheckCircle className="h-5 w-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-secondary-700 text-left">
+                    <span className="font-semibold">Clear priority roadmap</span>
+                  </span>
+                </div>
+                <div className="flex items-start justify-center sm:justify-start gap-2 sm:gap-3">
+                  <CheckCircle className="h-5 w-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-secondary-700 text-left">
+                    <span className="font-semibold">Delivered in 3–5 business days</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proof Strip */}
+      <ProofStrip resultsAnchor="#results" linkText="View Success Stories" />
+
+      {/* Why GEO Matters Now Section */}
+      <section className="py-20 sm:py-24 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 sm:p-10 shadow-lg border border-indigo-100">
+              <h2 className="text-2xl sm:text-3xl font-bold text-secondary-900 mb-6 text-center">
+                Why GEO Matters Now
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3 p-4 bg-white rounded-lg">
+                  <Brain className="h-5 w-5 text-indigo-600 flex-shrink-0" />
+                  <span className="font-medium text-secondary-900">AI-Powered Search Dominance</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-white rounded-lg">
+                  <Cpu className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="font-medium text-secondary-900">Machine Learning Algorithms</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-white rounded-lg">
+                  <Network className="h-5 w-5 text-pink-600 flex-shrink-0" />
+                  <span className="font-medium text-secondary-900">Semantic Search Evolution</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-white rounded-lg">
+                  <Building2 className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="font-medium text-secondary-900">Future-Proof Strategy</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* What is GEO Section */}
-      <section className="py-24 bg-white">
+      <section className="py-20 sm:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-6">
-                What is Generative Engine Optimization (GEO)?
-              </h2>
-              <p className="text-lg text-secondary-600 mb-6">
-                Generative Engine Optimization (GEO) is the next evolution of search engine optimization, 
-                specifically designed for AI-powered search engines and generative AI platforms. Unlike 
-                traditional SEO that focuses on keyword optimization and backlinks, GEO optimizes your 
-                content and website for artificial intelligence systems that understand meaning, context, 
-                and user intent.
-              </p>
-              <p className="text-lg text-secondary-600 mb-6">
-                GEO involves optimizing your content structure, implementing comprehensive schema markup, 
-                ensuring technical AI readiness, and creating content that AI systems can easily understand, 
-                process, and recommend. This approach is essential as search engines increasingly rely on 
-                machine learning algorithms and AI-powered content discovery.
-              </p>
-              <p className="text-lg text-secondary-600 mb-6">
-                When someone asks ChatGPT "What's the best CRM for small businesses?" or asks Perplexity 
-                "How do I optimize my website speed?", the AI system pulls from its training data and 
-                real-time web sources to construct an answer. The businesses and websites that get mentioned 
-                in that answer win the visibility and trust. Those that don't exist in a void.
-              </p>
-              <div className="bg-blue-50 p-6 rounded-xl mb-6">
-                <h4 className="font-bold text-lg mb-3 text-secondary-900">The Search Landscape Has Transformed:</h4>
-                <ul className="space-y-2 text-secondary-700">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span><strong>1.2+ billion monthly users</strong> actively use ChatGPT, Claude, Perplexity, and similar AI search tools</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span><strong>64% of users under 35</strong> now prefer asking AI chatbots over traditional Google searches</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span><strong>Google's SGE</strong> now appears in 84% of commercial queries, pushing traditional results down</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span><strong>Zero-click searches reached 59%</strong> in 2024, meaning users get answers without visiting websites</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span><strong>B2B buyers conduct 83%</strong> of their research using AI tools before contacting vendors</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Optimize for AI-powered search engines and algorithms</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Improve semantic search and AI content recognition</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Enhance featured snippet and voice search performance</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
-                  <p className="text-secondary-600">Future-proof your search engine optimization strategy</p>
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-6">
+              What is Generative Engine Optimization (GEO)?
+            </h2>
+            <p className="text-lg text-secondary-600 mb-6">
+              Generative Engine Optimization (GEO) is the next evolution of search engine optimization, 
+              specifically designed for AI-powered search engines and generative AI platforms. Unlike 
+              traditional SEO that focuses on keyword optimization and backlinks, GEO optimizes your 
+              content and website for artificial intelligence systems that understand meaning, context, 
+              and user intent.
+            </p>
+            <p className="text-lg text-secondary-600 mb-6">
+              GEO involves optimizing your content structure, implementing comprehensive schema markup, 
+              ensuring technical AI readiness, and creating content that AI systems can easily understand, 
+              process, and recommend. This approach is essential as search engines increasingly rely on 
+              machine learning algorithms and AI-powered content discovery.
+            </p>
+            <p className="text-lg text-secondary-600 mb-6">
+              When someone asks ChatGPT "What's the best CRM for small businesses?" or asks Perplexity 
+              "How do I optimize my website speed?", the AI system pulls from its training data and 
+              real-time web sources to construct an answer. The businesses and websites that get mentioned 
+              in that answer win the visibility and trust. Those that don't exist in a void.
+            </p>
+            <div className="bg-blue-50 p-6 rounded-xl mb-6">
+              <h4 className="font-bold text-lg mb-3 text-secondary-900">The Search Landscape Has Transformed:</h4>
+              <ul className="space-y-2 text-secondary-700">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span><strong>1.2+ billion monthly users</strong> actively use ChatGPT, Claude, Perplexity, and similar AI search tools</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span><strong>64% of users under 35</strong> now prefer asking AI chatbots over traditional Google searches</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span><strong>Google's SGE</strong> now appears in 84% of commercial queries, pushing traditional results down</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span><strong>Zero-click searches reached 59%</strong> in 2024, meaning users get answers without visiting websites</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span><strong>B2B buyers conduct 83%</strong> of their research using AI tools before contacting vendors</span>
+                </li>
+              </ul>
             </div>
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-4">Why GEO Matters Now</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <Brain className="h-5 w-5 text-indigo-600" />
-                  <span className="font-medium text-secondary-900">AI-Powered Search Dominance</span>
-                </div>
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <Cpu className="h-5 w-5 text-purple-600" />
-                  <span className="font-medium text-secondary-900">Machine Learning Algorithms</span>
-                </div>
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <Network className="h-5 w-5 text-pink-600" />
-                  <span className="font-medium text-secondary-900">Semantic Search Evolution</span>
-                </div>
-                <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                  <Building2 className="h-5 w-5 text-blue-600" />
-                  <span className="font-medium text-secondary-900">Future-Proof Strategy</span>
-                </div>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                <p className="text-secondary-600">Optimize for AI-powered search engines and algorithms</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                <p className="text-secondary-600">Improve semantic search and AI content recognition</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                <p className="text-secondary-600">Enhance featured snippet and voice search performance</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                <p className="text-secondary-600">Future-proof your search engine optimization strategy</p>
               </div>
             </div>
           </div>
@@ -441,9 +500,25 @@ export default function GenerativeEngineOptimizationPage() {
                   {feature.title}
                 </h3>
                 
-                <p className="text-secondary-600">
+                <p className="text-secondary-600 mb-4">
                   {feature.description}
                 </p>
+
+                {feature.improves && (
+                  <div className="pt-4 border-t border-gray-100">
+                    <p className="text-xs font-semibold text-secondary-500 uppercase tracking-wide mb-2">
+                      What this improves:
+                    </p>
+                    <ul className="space-y-1.5">
+                      {feature.improves.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-secondary-700">
+                          <span className="text-indigo-600 mt-0.5">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -514,7 +589,7 @@ export default function GenerativeEngineOptimizationPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section id="process" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
@@ -550,8 +625,11 @@ export default function GenerativeEngineOptimizationPage() {
         </div>
       </section>
 
+      {/* Inline CTA 1: After Process section - captures intent after learning methodology */}
+      <InlineCta eventName="geo_inline_cta_process_click" />
+
       {/* Results Section */}
-      <section className="py-24 bg-white">
+      <section id="results" className="py-24 bg-white scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
@@ -627,6 +705,9 @@ export default function GenerativeEngineOptimizationPage() {
           </div>
         </div>
       </section>
+
+      {/* Inline CTA 2: After Results/Case Studies - captures intent after seeing proof */}
+      <InlineCta eventName="geo_inline_cta_results_click" />
 
       {/* Tools & Technology Section */}
       <section className="py-24 bg-white">
@@ -723,7 +804,7 @@ export default function GenerativeEngineOptimizationPage() {
       </section>
 
       {/* Implementation Framework Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-indigo-50">
+      <section id="pricing" className="py-24 bg-gradient-to-br from-gray-50 to-indigo-50 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
@@ -779,6 +860,31 @@ export default function GenerativeEngineOptimizationPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+
+          {/* Which Option Fits? Guidance */}
+          <div className="mt-8 mb-8">
+            <h3 className="text-xl font-semibold text-secondary-900 mb-4 text-center">Which option fits?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white rounded-xl p-6 border border-gray-200">
+                <h4 className="font-semibold text-secondary-900 mb-2">Validation</h4>
+                <p className="text-sm font-medium text-indigo-600 mb-3">$2,000 - $5,000</p>
+                <p className="text-sm text-secondary-600">AI readiness, audit, roadmap</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-indigo-200 border-2">
+                <h4 className="font-semibold text-secondary-900 mb-2">Growth</h4>
+                <p className="text-sm font-medium text-indigo-600 mb-3">$5,000 - $15,000</p>
+                <p className="text-sm text-secondary-600">Authority expansion, coverage, optimization</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-200">
+                <h4 className="font-semibold text-secondary-900 mb-2">Dominance</h4>
+                <p className="text-sm font-medium text-indigo-600 mb-3">$15,000+</p>
+                <p className="text-sm text-secondary-600">Category leadership, ongoing GEO</p>
+              </div>
+            </div>
+            <p className="text-sm text-secondary-600 text-center mt-6 italic">
+              We'll always recommend the smallest engagement that achieves your goal.
+            </p>
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -851,6 +957,26 @@ export default function GenerativeEngineOptimizationPage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* CTAs */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Pricing CTA: Self-qualification after pricing framework */}
+            <TrackedButtonLink
+              href="/contact?service=geo"
+              eventName="geo_pricing_cta_click"
+              ctaLocation="pricing"
+              size="lg"
+              showArrow
+            >
+              Get Recommended Package
+            </TrackedButtonLink>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/contact?service=geo&type=consultation">
+                Talk to a GEO Specialist
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -952,22 +1078,54 @@ export default function GenerativeEngineOptimizationPage() {
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Optimize for the Future of Search?
+            Ready to Be the Brand AI Recommends?
           </h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Let’s optimize your website for AI-powered search engines and ensure you’re 
-            ready for the future of digital discovery. Get started with a free GEO audit today.
+            Most companies don't realize they're invisible in AI answers until competitors own the citations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Get Free GEO Audit</Link>
-            </Button>
+            <div className="flex flex-col items-center gap-2">
+              {/* Final CTA: Last conversion opportunity before footer */}
+              <TrackedButtonLink
+                href="/contact?service=geo"
+                eventName="geo_final_cta_click"
+                ctaLocation="final"
+                size="lg"
+                variant="secondary"
+                showArrow
+              >
+                Get Free GEO Audit
+              </TrackedButtonLink>
+              <p className="text-sm text-indigo-200">
+                Free • No obligation • Delivered in 3–5 business days
+              </p>
+            </div>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-indigo-600" asChild>
-              <Link href="/pricing">View Pricing</Link>
+              <Link href="#pricing">
+                View Pricing
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
       </section>
+
+      {/* Sticky CTA Bar: Persistent conversion opportunity after scroll engagement */}
+      <StickyCta 
+        scrollThreshold={400}
+        ctaUrl="/contact?service=geo"
+        ctaText="Get Free GEO Audit"
+        storageKey="geo-sticky-cta-dismissed"
+        dismissDays={7}
+        eventName="geo_sticky_cta_click"
+      />
+
+      {/* Exit Intent Modal: Captures abandoning desktop users */}
+      <ExitIntentModal 
+        storageKey="geo-exit-intent-shown"
+        dismissDays={7}
+        zIndex={40}
+      />
     </div>
   )
 }

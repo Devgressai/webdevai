@@ -250,3 +250,5 @@ export default function GEO[Industry]Page() {
 **REMAINING**: 15 industry GEO pages need schema added (non-breaking, low priority)
 
 
+
+

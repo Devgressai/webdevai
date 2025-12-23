@@ -247,3 +247,5 @@ The site now has:
 - Optionally add schema to remaining 15 industry GEO pages
 
 
+
+
