@@ -33,8 +33,8 @@ export function InlineCta({
   primaryCtaUrl = '/contact?service=geo',
   secondaryCtaText = 'View Pricing',
   secondaryCtaAnchor = '#pricing',
-  title = 'See What Phase You're In',
-  subtext = 'We'll audit your current AI visibility, extraction readiness, and schema foundation—then deliver a prioritized roadmap.',
+  title = "See What Phase You're In",
+  subtext = "We'll audit your current AI visibility, extraction readiness, and schema foundation—then deliver a prioritized roadmap.",
   bullets = [
     'AI visibility snapshot',
     'Top fixes ranked by impact',

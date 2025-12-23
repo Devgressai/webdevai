@@ -1,18 +1,3 @@
-SAFETY RULES:
-- New tool only.
-
-TASK:
-Implement monitoring:
-- Add BullMQ repeatable job "scheduled_scan"
-- Store immutable scan snapshots
-- Diff engine that compares latest scan to previous scan for same domain:
-  - score deltas
-  - new/resolved issues
-  - regressed clusters metrics
-- UI: /domains/[domainId]/monitoring shows trends and “what changed”
-
-Add alert rules (DB stored), but do not send emails yet (just store alerts).
-Output: created files + diff logic.
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Code, Smartphone, Zap, TrendingUp, Users, Shield, BarChart3, Globe, ShoppingBag, CheckCircle, Brain, Sparkles, Layers, FileText, Palette, Server, Database, Cloud, HardDrive } from 'lucide-react'
 import Link from 'next/link'
