@@ -133,10 +133,24 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900">
-      {/* Background tech grid + glow */}
+      {/* Background image from Unsplash (WebP format for fast loading) */}
       <div className="pointer-events-none absolute inset-0">
         <div
-          className="absolute inset-0 opacity-70"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/images/hero-background.webp')",
+          }}
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/75 to-blue-900/80" />
+        {/* Additional gradient overlay for better contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-indigo-900/50 to-blue-900/60" />
+      </div>
+      
+      {/* Background tech grid + glow (subtle overlay) */}
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage:
               "url(\"data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%233b82f6' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M0 20.5 H140M0 60.5 H140M0 100.5 H140'/%3E%3Cpath d='M20.5 0 V140M60.5 0 V140M100.5 0 V140'/%3E%3C/g%3E%3Ccircle cx='70' cy='70' r='2' fill='%233b82f6' fill-opacity='0.35'/%3E%3C/svg%3E\")",
@@ -144,8 +158,8 @@ export function Hero() {
             backgroundPosition: 'center',
           }}
         />
-        <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-br from-sky-500/25 via-indigo-500/10 to-transparent blur-3xl" />
-        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/25 via-sky-400/15 to-transparent blur-3xl" />
+        <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-br from-sky-500/20 via-indigo-500/10 to-transparent blur-3xl" />
+        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/20 via-sky-400/10 to-transparent blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-24 lg:px-10 lg:py-28">
