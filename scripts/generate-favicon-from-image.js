@@ -3,9 +3,11 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-// Try multiple possible source file formats
+// Try multiple possible source file formats (prioritize logo files)
 const POSSIBLE_SOURCES = [
   path.join(__dirname, '..', 'public', 'favicon-source.png'),
+  path.join(__dirname, '..', 'public', 'webvello_logo.jpg'),
+  path.join(__dirname, '..', 'public', 'logo.png'),
   path.join(__dirname, '..', 'public', 'favicon-source.jpg'),
   path.join(__dirname, '..', 'public', 'favicon-source.jpeg'),
   path.join(__dirname, '..', 'public', 'favicon-source.svg'),
