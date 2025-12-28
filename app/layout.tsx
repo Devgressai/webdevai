@@ -4,6 +4,7 @@ import './globals.css'
 import { NewHeader as Header } from '../components/layout/new-header'
 import MobileHeader from '../components/layout/mobile-header'
 import { Footer } from '../components/layout/footer'
+import { MobileFloatingCTA } from '../components/ui/mobile-floating-cta'
 import dynamic from 'next/dynamic'
 const PerformanceMonitor = dynamic(() => import('../components/performance/performance-monitor').then(m => m.PerformanceMonitor), {
   ssr: false
@@ -300,8 +301,11 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_ENABLE_PERF_MONITOR === 'true' ? <PerformanceMonitor /> : null}
         <Header />
         <MobileHeader />
-        <main>{children}</main>
+        <main className="pb-20 md:pb-0">
+          {children}
+        </main>
         <Footer />
+        <MobileFloatingCTA />
         <AIChatbot businessName="Web Vello" primaryColor="#3b82f6" position="bottom-right" />
         
         {/* Structured Data for Website */}
