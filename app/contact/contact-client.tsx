@@ -89,24 +89,24 @@ const testimonials = [
 
 const faqs = [
   {
-    question: "Why do you limit your client roster?",
-    answer: "Quality over quantity. We maintain a roster of 12-15 active partnerships to ensure each client receives dedicated attention from our senior team. This approach has proven to deliver superior results compared to agencies juggling dozens of clients."
+    question: "Why do you limit active partnerships?",
+    answer: "We intentionally cap our roster at 12-15 simultaneous projects to ensure every client receives consistent senior attention. This structure allows us to maintain quality, avoid delegation to junior staff, and deliver thoughtful, strategic work rather than rushed execution."
   },
   {
-    question: "What's your typical project investment range?",
-    answer: "Our partnerships typically start at $10K/month for ongoing services or $50K+ for comprehensive development projects. We work with businesses that view digital marketing as a strategic investment, not an expense."
+    question: "What is your typical engagement investment?",
+    answer: "Most partnerships begin at $10K/month for ongoing strategic services, or $50K+ for comprehensive development initiatives. We work with businesses that approach digital marketing as a core growth driver, not a discretionary expense."
   },
   {
-    question: "How selective is your application process?",
-    answer: "Very. We review each application carefully and only partner with businesses that align with our standards and have realistic growth goals. We look for established businesses or well-funded startups with clear vision and adequate resources."
+    question: "How do you evaluate partnership fit?",
+    answer: "We assess alignment based on business maturity, budget availability, growth goals, and strategic readiness. We work best with established companies or well-capitalized startups that have clear objectives and the resources to execute properly."
   },
   {
-    question: "Do you offer ongoing support or one-time projects?",
-    answer: "Both. Our most successful partnerships are ongoing retainer relationships where we become an extension of your team. We also take on select high-value development projects for the right clients."
+    question: "Do you offer project-based or ongoing support?",
+    answer: "We offer both. Our deepest impact comes from long-term retainer relationships where we integrate as strategic partners. We also accept select high-value project engagements when scope, budget, and timing align with our capacity."
   },
   {
-    question: "What makes Web Vello different from other agencies?",
-    answer: "We're not an agency—we're a boutique consultancy. No account managers or junior staff handling your work. You get direct access to senior strategists, developers, and marketers who have built and scaled multiple successful businesses."
+    question: "How is Web Vello structured differently?",
+    answer: "We operate as a senior-led consultancy, not a traditional agency. There are no account coordinators or junior team members executing your work. You work directly with experienced strategists, developers, and marketers who have built and scaled businesses at scale."
   }
 ]
 
@@ -184,13 +184,13 @@ export function ContactPageClient() {
               <div>
                 <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-full text-sm font-medium mb-4 shadow-sm">
                   <Award className="h-4 w-4 mr-1" />
-                  Selective Client Partnerships
+                  Strategic Partnerships
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
-                  We Don't Work With Everyone
+                  Partner With a Senior-Led Team
                 </h1>
                 <p className="text-xl text-secondary-600 mb-6">
-                  Our elite development and marketing team carefully selects partnerships with businesses ready for exponential growth. If you're serious about dominating your market, let's talk.
+                  We maintain a focused roster of long-term partnerships to ensure every client receives dedicated senior attention. If you're building for sustainable growth, we'd like to learn about your business.
                 </p>
               </div>
 
@@ -201,8 +201,8 @@ export function ContactPageClient() {
                     <Shield className="h-4 w-4 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-semibold text-secondary-900">Selective Partnerships</h3>
-                    <p className="text-secondary-600">We only work with 12-15 clients at a time to ensure excellence</p>
+                    <h3 className="font-semibold text-secondary-900">Focused Client Capacity</h3>
+                    <p className="text-secondary-600">We limit active projects to 12-15 partnerships for quality and senior involvement</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -210,8 +210,8 @@ export function ContactPageClient() {
                     <Award className="h-4 w-4 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-semibold text-secondary-900">Elite Expertise</h3>
-                    <p className="text-secondary-600">Senior-level strategists, developers, and marketers only</p>
+                    <h3 className="font-semibold text-secondary-900">Senior-Level Execution</h3>
+                    <p className="text-secondary-600">Your work is handled by experienced strategists, developers, and marketers—not junior staff</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -219,8 +219,8 @@ export function ContactPageClient() {
                     <TrendingUp className="h-4 w-4 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-semibold text-secondary-900">Proven Performance</h3>
-                    <p className="text-secondary-600">300%+ average growth - our clients outperform their competitors</p>
+                    <h3 className="font-semibold text-secondary-900">Proven, Sustainable Results</h3>
+                    <p className="text-secondary-600">Our clients see 300%+ average growth through long-term, strategic execution</p>
                   </div>
                 </div>
               </div>
@@ -248,12 +248,12 @@ export function ContactPageClient() {
               <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-5">
                 <h3 className="font-semibold text-secondary-900 mb-2 flex items-center">
                   <AlertCircle className="h-5 w-5 mr-2 text-blue-500" />
-                  Who We Work With
+                  Ideal Partnership Fit
                 </h3>
                 <p className="text-sm text-secondary-700">
-                  We partner with established businesses and ambitious startups that have clear growth goals, 
-                  adequate marketing budgets, and are ready to implement aggressive strategies. If you're looking 
-                  for quick fixes or budget solutions, we're likely not the right fit.
+                  We work best with established businesses and well-funded startups that have clear revenue goals, 
+                  sufficient budget for strategic execution, and commitment to a long-term growth roadmap. 
+                  Our engagements are designed for sustainable results, not quick-fix campaigns.
                 </p>
               </div>
 
@@ -285,8 +285,8 @@ export function ContactPageClient() {
             {/* Right Column - Contact Form */}
             <div id="contact-form" className="bg-white rounded-2xl shadow-xl border border-primary-100 p-8 lg:sticky lg:top-8">
               <div className="mb-6">
-                <h2 className="text-2xl font-bold text-secondary-900 mb-2">Apply for Partnership</h2>
-                <p className="text-secondary-600">Tell us about your business. We'll review and respond within 48 hours if we're a good fit.</p>
+                <h2 className="text-2xl font-bold text-secondary-900 mb-2">Start a Conversation</h2>
+                <p className="text-secondary-600">Share your business goals with us. We'll respond within 48 hours to explore how we can help.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -336,7 +336,7 @@ export function ContactPageClient() {
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="(555) 123-4567"
                   />
-                  <p className="mt-1.5 text-xs text-secondary-500">For qualified leads, we'll schedule a strategy call</p>
+                  <p className="mt-1.5 text-xs text-secondary-500">We'll schedule a discovery call if there's a potential fit</p>
                 </div>
 
                 <div>
@@ -373,7 +373,7 @@ export function ContactPageClient() {
                     required
                     rows={4}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
-                    placeholder="Your website URL, current challenges, goals, and approximate budget range. Be specific—this helps us determine if we're a good fit."
+                    placeholder="Your website URL, current challenges, growth goals, and estimated budget. The more detail you share, the better we can assess fit and provide helpful insights."
                   />
                 </div>
 
@@ -381,8 +381,8 @@ export function ContactPageClient() {
                   <div className="flex items-center p-4 bg-green-50 border-2 border-green-500 rounded-lg">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                     <div>
-                      <p className="text-green-900 text-sm font-semibold">Application Received</p>
-                      <p className="text-green-700 text-xs mt-1">We'll review your information and respond within 48 hours if we're a good match.</p>
+                      <p className="text-green-900 text-sm font-semibold">Message Received</p>
+                      <p className="text-green-700 text-xs mt-1">Thank you for reaching out. We'll review your information and respond within 48 hours.</p>
                     </div>
                   </div>
                 )}
@@ -403,18 +403,18 @@ export function ContactPageClient() {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Submitting Application...
+                      Sending...
                     </>
                   ) : (
                     <>
                       <MessageSquare className="mr-2 h-5 w-5" />
-                      Submit Application
+                      Request a Consultation
                     </>
                   )}
                 </Button>
                 
-                <p className="text-xs text-gray-500 text-center">
-                  By submitting, you agree that we may contact you regarding potential partnership opportunities.
+                <p className="text-xs text-secondary-500 text-center leading-relaxed">
+                  Your information is confidential. We'll use it only to assess partnership fit and respond to your inquiry. No spam, no unwanted follow-ups.
                 </p>
               </form>
             </div>
@@ -426,9 +426,9 @@ export function ContactPageClient() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-secondary-900 mb-4">What Sets Us Apart</h2>
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">How We Work Differently</h2>
             <p className="text-secondary-600 max-w-2xl mx-auto">
-              We're not for everyone. We're for businesses that demand excellence and are ready to invest in their success.
+              Our approach prioritizes long-term partnership quality over volume—resulting in better outcomes for every client we serve.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -436,22 +436,22 @@ export function ContactPageClient() {
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mx-auto mb-4 shadow-lg">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Elite Standards</h3>
-              <p className="text-secondary-600">We maintain strict quality standards. Only senior-level team members work on client projects—no junior developers or interns.</p>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Senior Team Standards</h3>
+              <p className="text-secondary-600">Every project is led and executed by senior strategists, developers, and marketers with 10+ years of experience in their discipline.</p>
             </div>
             <div className="text-center">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mx-auto mb-4 shadow-lg">
                 <Award className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Limited Partnerships</h3>
-              <p className="text-secondary-600">We cap our client roster at 12-15 active partnerships. This ensures each client receives our full attention and resources.</p>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Limited Active Projects</h3>
+              <p className="text-secondary-600">We cap our roster at 12-15 simultaneous partnerships to ensure dedicated attention, thoughtful strategy, and consistent senior involvement.</p>
             </div>
             <div className="text-center">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mx-auto mb-4 shadow-lg">
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Results-Driven</h3>
-              <p className="text-secondary-600">Our clients average 300%+ growth because we don't take on projects we can't deliver exceptional results for.</p>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Long-Term Mindset</h3>
+              <p className="text-secondary-600">We build for sustainable, compounding growth. Our average client partnership spans 18+ months with 300%+ average performance improvement.</p>
             </div>
           </div>
         </div>
@@ -527,7 +527,7 @@ export function ContactPageClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-secondary-900 mb-4">Common Questions</h2>
             <p className="text-secondary-600">
-              Understanding our selective approach and what it means for potential partners.
+              What to expect when considering a partnership with Web Vello.
             </p>
           </div>
           <div className="space-y-4">
@@ -545,10 +545,10 @@ export function ContactPageClient() {
       <section className="py-16 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Dominate Your Market?
+            Ready to Explore a Partnership?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            If you're serious about growth and have the resources to invest in excellence, let's discuss your vision.
+            If you're committed to sustainable growth and seeking a strategic partner, we'd like to hear about your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -562,7 +562,7 @@ export function ContactPageClient() {
               }}
             >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Apply Now
+              Start a Conversation
             </Button>
             <Button 
               size="lg" 
