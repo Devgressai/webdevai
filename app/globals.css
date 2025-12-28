@@ -288,15 +288,54 @@
   }
 
   .section-padding {
-    @apply py-16 sm:py-20 lg:py-24;
-  }
-
-  .section-padding-sm {
     @apply py-12 sm:py-16 lg:py-20;
   }
 
+  .section-padding-sm {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+
   .section-padding-lg {
-    @apply py-20 sm:py-24 lg:py-32;
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* Mobile Typography Utilities */
+  .mobile-h1 {
+    @apply text-[30px] leading-[38px] sm:text-4xl sm:leading-tight lg:text-6xl lg:leading-tight font-bold;
+  }
+
+  .mobile-h2 {
+    @apply text-[24px] leading-[32px] sm:text-3xl sm:leading-normal lg:text-5xl lg:leading-tight font-bold;
+  }
+
+  .mobile-h3 {
+    @apply text-xl leading-snug sm:text-2xl sm:leading-normal lg:text-3xl lg:leading-normal font-semibold;
+  }
+
+  .mobile-body {
+    @apply text-base leading-relaxed sm:text-lg sm:leading-relaxed;
+  }
+
+  .mobile-body-lg {
+    @apply text-lg leading-relaxed sm:text-xl sm:leading-relaxed;
+  }
+
+  /* Mobile Tap Targets */
+  .tap-target {
+    @apply min-h-[48px] min-w-[48px];
+  }
+
+  .tap-target-lg {
+    @apply min-h-[56px] min-w-[56px];
+  }
+
+  /* Mobile Spacing */
+  .mobile-section-gap {
+    @apply space-y-8 sm:space-y-12 lg:space-y-16;
+  }
+
+  .mobile-card-gap {
+    @apply gap-4 sm:gap-6 lg:gap-8;
   }
 }
 

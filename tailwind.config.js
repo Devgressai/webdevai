@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '390px', // Mobile-specific breakpoint for 390-430px optimization
+      },
       colors: {
         // Balanced and engaging color palette
         primary: {
@@ -87,19 +90,19 @@ module.exports = {
         display: ['Poppins', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'xs': ['0.75rem', { lineHeight: '1rem' }],
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-        'base': ['1rem', { lineHeight: '1.5rem' }],
-        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
-        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
-        '2xl': ['1.5rem', { lineHeight: '2rem' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
-        '7xl': ['4.5rem', { lineHeight: '1' }],
-        '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }],
+        'xs': ['0.75rem', { lineHeight: '1.125rem' }],      // 12px / 18px
+        'sm': ['0.875rem', { lineHeight: '1.375rem' }],     // 14px / 22px
+        'base': ['1rem', { lineHeight: '1.625rem' }],       // 16px / 26px - mobile body text
+        'lg': ['1.125rem', { lineHeight: '1.75rem' }],      // 18px / 28px - mobile large body
+        'xl': ['1.25rem', { lineHeight: '1.875rem' }],      // 20px / 30px
+        '2xl': ['1.5rem', { lineHeight: '2.125rem' }],      // 24px / 34px - mobile H2
+        '3xl': ['1.875rem', { lineHeight: '2.375rem' }],    // 30px / 38px - mobile H1
+        '4xl': ['2.25rem', { lineHeight: '2.75rem' }],      // 36px / 44px
+        '5xl': ['3rem', { lineHeight: '3.25rem' }],         // 48px / 52px
+        '6xl': ['3.75rem', { lineHeight: '4rem' }],         // 60px / 64px
+        '7xl': ['4.5rem', { lineHeight: '4.75rem' }],       // 72px / 76px
+        '8xl': ['6rem', { lineHeight: '6.25rem' }],         // 96px / 100px
+        '9xl': ['8rem', { lineHeight: '8.25rem' }],         // 128px / 132px
       },
       spacing: {
         '18': '4.5rem',

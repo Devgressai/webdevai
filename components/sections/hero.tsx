@@ -162,21 +162,21 @@ export function Hero() {
         <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/20 via-sky-400/10 to-transparent blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-24">
         <div className="relative mx-auto max-w-3xl lg:max-w-4xl text-center">
           {/* Badge - Compact on mobile */}
           <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 sm:px-6 py-1.5 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-4 sm:mb-6 shadow-2xl">
-            <Star className="mr-1.5 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5 fill-white" />
+            <Star className="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4 fill-white" />
             <span className="hidden sm:inline">Trusted by 500+ businesses nationwide</span>
             <span className="sm:hidden">500+ Businesses</span>
           </div>
 
           {/* Mobile-First Outcome-Driven Headlines */}
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-4 sm:mb-6">
+          <h1 className="text-[30px] leading-[38px] sm:text-4xl sm:leading-tight lg:text-6xl lg:leading-tight font-bold tracking-tight text-white mb-4 sm:mb-6">
             Get More Customers From Your Website
           </h1>
 
-          <p className="text-base sm:text-xl leading-relaxed sm:leading-8 text-white/95 max-w-2xl mx-auto mb-6 sm:mb-8">
+          <p className="text-base leading-relaxed sm:text-xl sm:leading-relaxed text-white/95 max-w-2xl mx-auto mb-6 sm:mb-8">
             Free growth plan shows you exactly how to increase traffic and conversions.
           </p>
 
@@ -209,21 +209,21 @@ export function Hero() {
           </div>
 
           {/* Mobile Trust Strip - Compact Metrics */}
-          <div className="mb-8 sm:mb-10">
-            <div className="flex items-center justify-center gap-4 sm:gap-8 text-white/90">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-green-400" />
-                <span className="text-sm sm:text-base font-semibold">500+ Sites</span>
+          <div className="mb-6 sm:mb-8">
+            <div className="flex items-center justify-center gap-3 sm:gap-6 text-white/95">
+              <div className="flex items-center gap-1.5">
+                <TrendingUp className="h-4 w-4 text-green-400 flex-shrink-0" />
+                <span className="text-sm sm:text-base font-semibold whitespace-nowrap">500+ Sites</span>
               </div>
               <div className="w-px h-4 bg-white/30"></div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
-                <span className="text-sm sm:text-base font-semibold">300%+ Growth</span>
+              <div className="flex items-center gap-1.5">
+                <Zap className="h-4 w-4 text-yellow-400 flex-shrink-0" />
+                <span className="text-sm sm:text-base font-semibold whitespace-nowrap">300%+ Growth</span>
               </div>
               <div className="w-px h-4 bg-white/30"></div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <Award className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400" />
-                <span className="text-sm sm:text-base font-semibold">1,200% ROI</span>
+              <div className="flex items-center gap-1.5">
+                <Award className="h-4 w-4 text-blue-300 flex-shrink-0" />
+                <span className="text-sm sm:text-base font-semibold whitespace-nowrap">1,200% ROI</span>
               </div>
             </div>
           </div>

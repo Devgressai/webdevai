@@ -137,32 +137,32 @@ export default function HomePage() {
         </Suspense>
         
         {/* Entity Definition Section - AEO Optimized */}
-        <section className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden">
+        <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden">
           {/* Subtle background pattern */}
           <div className="absolute inset-0 opacity-40">
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-indigo-100/50 to-transparent rounded-full blur-3xl"></div>
           </div>
           
-          <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100/50 p-8 lg:p-12">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl mb-6 shadow-lg">
-                  <HelpCircle className="w-8 h-8 text-white" />
+          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl shadow-xl border border-gray-100/50 p-6 sm:p-8 lg:p-12">
+              <div className="text-center mb-6 sm:mb-8">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 shadow-lg">
+                  <HelpCircle className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-secondary-900 mb-4">
+                <h2 className="text-[26px] leading-[34px] sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight font-bold text-secondary-900 mb-3 sm:mb-4">
                   What Is Webvello?
                 </h2>
               </div>
               
-              <div className="space-y-6 text-left">
-                <p className="text-xl text-secondary-700 leading-relaxed">
+              <div className="space-y-4 sm:space-y-6 text-left">
+                <p className="text-lg leading-relaxed sm:text-xl sm:leading-relaxed text-secondary-800">
                   <strong className="text-secondary-900">Webvello</strong> is a digital marketing agency specializing in <Link href="/services/seo" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">SEO</Link> (Search Engine Optimization), <Link href="/services/generative-engine-optimization" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">GEO</Link> (Generative Engine Optimization), <Link href="/services/answer-engine-optimization" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">AEO</Link> (Answer Engine Optimization), and <Link href="/services/web-development" className="text-primary-600 hover:text-primary-700 underline font-medium transition-colors">custom web development</Link>. Webvello improves business visibility in traditional search engines like Google and AI-powered search platforms including ChatGPT, Perplexity, and Google AI Overviews.
                 </p>
-                <p className="text-lg text-secondary-600 leading-relaxed">
+                <p className="text-base leading-relaxed sm:text-lg sm:leading-relaxed text-secondary-700">
                   Webvello serves businesses across the United States, combining data-driven strategies with transparent reporting. Core services include AI-powered SEO, local SEO for geographic targeting, and conversion-focused website development using React and Tailwind CSS.
                 </p>
-                <p className="text-lg text-secondary-600 leading-relaxed">
+                <p className="text-base leading-relaxed sm:text-lg sm:leading-relaxed text-secondary-700">
                   Founded in 2023, Webvello operates entirely remotely from headquarters in Roseville, California, providing SEO and web development services to over 500 businesses across 37+ US cities without requiring on-site visits. The agency serves financial services firms, legal practices, healthcare providers, e-commerce brands, and B2B technology companies seeking measurable improvements in organic search traffic, AI platform visibility, and conversion optimization.
                 </p>
               </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
       
       {/* Global Results & Trust Section */}
       <LazySection>
-        <section className="relative py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+        <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
           {/* Space-themed background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/80 to-slate-800/90"></div>
@@ -183,22 +183,22 @@ export default function HomePage() {
             <div className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-purple-400/20 to-pink-400/20 blur-3xl"></div>
           </div>
           
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               {/* Left Content */}
-              <div className="space-y-8">
-                <div className="space-y-4">
+              <div className="space-y-6 sm:space-y-8">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-1 h-12 bg-gradient-to-b from-red-500 to-red-600 rounded-full"></div>
-                    <span className="text-red-400 font-semibold text-sm uppercase tracking-wider">Quality Assurance</span>
+                    <div className="w-1 h-10 sm:h-12 bg-gradient-to-b from-red-500 to-red-600 rounded-full"></div>
+                    <span className="text-red-400 font-semibold text-xs sm:text-sm uppercase tracking-wider">Quality Assurance</span>
                   </div>
-            <h2 className="text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h2 className="text-[32px] leading-[40px] sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight font-bold text-white">
               Clients Around The World Trust Us To Deliver{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
                 Quality Work
               </span>
             </h2>
-            <p className="text-2xl text-gray-300 leading-relaxed">
+            <p className="text-lg leading-relaxed sm:text-xl sm:leading-relaxed lg:text-2xl lg:leading-relaxed text-gray-200">
               Our team of experienced professionals strives to provide top-notch services that meet the unique needs of each client. As a result, clients around the world have trusted us with their website design, development, and SEO needs.
             </p>
                 </div>
@@ -206,8 +206,8 @@ export default function HomePage() {
                 {/* Trust Indicators */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <div className="text-center sm:text-left">
-                  <div className="text-6xl font-bold text-white mb-2">500+</div>
-                  <div className="text-gray-300 text-base">Websites Launched</div>
+                  <div className="text-5xl sm:text-6xl font-bold text-white mb-2">500+</div>
+                  <div className="text-gray-300 text-sm sm:text-base">Websites Launched</div>
                 </div>
                 <div className="text-center sm:text-left">
                   <div className="text-6xl font-bold text-white mb-2">37</div>
