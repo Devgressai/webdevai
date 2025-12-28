@@ -57,7 +57,7 @@ export function EnhancedOrganizationSchema() {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+1-737-888-5723",
+        "telephone": "+1-530-553-8883",
         "contactType": "sales",
         "email": "hello@webvello.com",
         "areaServed": "US",

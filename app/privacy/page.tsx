@@ -76,7 +76,7 @@ export default function PrivacyPage() {
             </p>
             <p className="text-gray-600">
               Email: hello@webvello.com<br />
-              Phone: +1-737-888-5723
+              Phone: +1-530-553-8883
             </p>
           </section>
         </div>

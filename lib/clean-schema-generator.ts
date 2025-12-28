@@ -40,7 +40,7 @@ export function generateOrganizationSchema() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-737-888-5723",
+      "telephone": "+1-530-553-8883",
       "contactType": "sales",
       "email": "hello@webvello.com",
       "areaServed": "US",
@@ -174,7 +174,7 @@ export function generateGEOLocalBusinessSchema(options: {
     "name": `Webvello - ${options.cityState}`,
     "description": `Digital marketing services including SEO, GEO, and web development serving ${options.cityState}`,
     "url": options.serviceUrl,
-    "telephone": "+1-737-888-5723",
+    "telephone": "+1-530-553-8883",
     "email": "hello@webvello.com",
     "areaServed": {
       "@type": "City",

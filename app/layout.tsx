@@ -285,7 +285,7 @@ export default function RootLayout({
                 "Web Development"
               ],
               "areaServed": "US",
-              "telephone": "+1-737-888-5723",
+              "telephone": "+1-530-553-8883",
               "sameAs": [
                 "https://twitter.com/webvello",
                 "https://linkedin.com/company/webvello",

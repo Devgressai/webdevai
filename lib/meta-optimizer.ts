@@ -22,7 +22,7 @@ interface MetaDescriptionOptions {
 const META_TEMPLATES = {
   // Service pages
   service: [
-    "{service} in {city}. {benefit}. Free consultation. {uniqueValue}. Call +1-737-888-5723 today!",
+    "{service} in {city}. {benefit}. Free consultation. {uniqueValue}. Call +1-530-553-8883 today!",
     "Professional {service} services in {city}. {benefit}. {uniqueValue}. Get a free quote!",
     "{city} {service} experts. {benefit}. {uniqueValue}. Contact us for a free strategy session!",
     "Get expert {service} in {city}. {benefit}. Trusted by 100+ businesses. {uniqueValue}.",
@@ -31,7 +31,7 @@ const META_TEMPLATES = {
   // City-specific pages
   city: [
     "{service} services in {city}. {benefit}. Local experts with proven results. Free consultation available!",
-    "Looking for {service} in {city}? {benefit}. {uniqueValue}. Call +1-737-888-5723!",
+    "Looking for {service} in {city}? {benefit}. {uniqueValue}. Call +1-530-553-8883!",
     "{city} {service} agency. {benefit}. Trusted by local businesses. Get your free quote today!",
   ],
   
@@ -39,7 +39,7 @@ const META_TEMPLATES = {
   cityService: [
     "{service} in {city} | {benefit}. Local experts delivering results. Free consultation. Call now!",
     "Professional {service} services in {city}. {benefit}. {uniqueValue}. Get started today!",
-    "{city}'s trusted {service} experts. {benefit}. Free strategy session. Call +1-737-888-5723!",
+    "{city}'s trusted {service} experts. {benefit}. Free strategy session. Call +1-530-553-8883!",
   ],
   
   // Industry-specific pages
@@ -56,7 +56,7 @@ const META_TEMPLATES = {
   
   // Homepage
   homepage: [
-    "Digital marketing agency specializing in AI SEO, web development & local SEO. 300%+ traffic growth. Free consultation. Call +1-737-888-5723!",
+    "Digital marketing agency specializing in AI SEO, web development & local SEO. 300%+ traffic growth. Free consultation. Call +1-530-553-8883!",
   ]
 }
 

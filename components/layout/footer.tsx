@@ -79,7 +79,7 @@ export function Footer() {
                 <Mail className="h-5 w-5" />
               </a>
               <a
-                href="tel:+17378885723"
+                href="tel:+15305538883"
                 className="text-slate-400 hover:text-slate-100 transition-colors"
                 aria-label="Call us"
               >

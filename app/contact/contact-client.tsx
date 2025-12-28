@@ -10,9 +10,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "737-888-5723",
+    value: "(530) 553-8883",
     description: "Call us for immediate assistance",
-    href: "tel:+17378885723"
+    href: "tel:+15305538883"
   },
   {
     icon: Mail,
@@ -260,13 +260,13 @@ export function ContactPageClient() {
               {/* Contact Info Cards - Compact */}
               <div className="grid grid-cols-2 gap-4">
                 <a 
-                  href="tel:+17378885723"
+                  href="tel:+15305538883"
                   className="flex items-center p-4 bg-white rounded-lg border-2 border-primary-200 hover:border-primary-600 hover:shadow-md transition-all group"
                 >
                   <Phone className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
                   <div>
                     <p className="text-xs text-secondary-500">Direct line</p>
-                    <p className="font-semibold text-secondary-900 text-sm">737-888-5723</p>
+                    <p className="font-semibold text-secondary-900 text-sm">(530) 553-8883</p>
                   </div>
                 </a>
                 <a 
@@ -570,9 +570,9 @@ export function ContactPageClient() {
               className="border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-4 text-lg font-semibold"
               asChild
             >
-              <Link href="tel:+17378885723">
+              <Link href="tel:+15305538883">
                 <Phone className="mr-2 h-5 w-5" />
-                737-888-5723
+                (530) 553-8883
               </Link>
             </Button>
           </div>

@@ -367,9 +367,9 @@ export function Header() {
               <Link href="/contact" className="text-slate-600 hover:text-slate-900 transition-colors">
                 Partner Portal
               </Link>
-              <Link href="/contact" className="flex items-center space-x-1 text-slate-700 hover:text-slate-900 transition-colors">
+              <Link href="tel:+15305538883" className="flex items-center space-x-1 text-slate-700 hover:text-slate-900 transition-colors">
                 <Phone className="h-3 w-3" />
-                <span className="font-medium">737-888-5723</span>
+                <span className="font-medium">(530) 553-8883</span>
               </Link>
             </div>
           </div>
