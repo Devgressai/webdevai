@@ -180,7 +180,7 @@ export function ContactPageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
             {/* Left Column - Value Proposition */}
-            <div className="space-y-8">
+            <div className="space-y-8 order-2 lg:order-1">
               <div>
                 <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-full text-sm font-medium mb-4 shadow-sm">
                   <Award className="h-4 w-4 mr-1" />
@@ -283,13 +283,13 @@ export function ContactPageClient() {
             </div>
 
             {/* Right Column - Contact Form */}
-            <div id="contact-form" className="bg-white rounded-2xl shadow-xl border border-primary-100 p-8 lg:sticky lg:top-8">
+            <div id="contact-form" className="bg-white rounded-2xl shadow-xl border border-primary-100 p-6 sm:p-8 lg:sticky lg:top-8 order-1 lg:order-2">
               <div className="mb-6">
                 <h2 className="text-2xl font-bold text-secondary-900 mb-2">Start a Conversation</h2>
-                <p className="text-secondary-600">Share your business goals with us. We'll respond within 48 hours to explore how we can help.</p>
+                <p className="text-sm sm:text-base text-secondary-600">Share your business goals with us. We'll respond within 48 hours to explore how we can help.</p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-secondary-900 mb-1.5">
                     Full Name <span className="text-red-500">*</span>
@@ -301,7 +301,7 @@ export function ContactPageClient() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="John Smith"
                   />
                 </div>
@@ -317,7 +317,7 @@ export function ContactPageClient() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -333,7 +333,7 @@ export function ContactPageClient() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="(555) 123-4567"
                   />
                   <p className="mt-1.5 text-xs text-secondary-500">We'll schedule a discovery call if there's a potential fit</p>
@@ -349,7 +349,7 @@ export function ContactPageClient() {
                     value={formData.service}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all appearance-none bg-white bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%227%22%3E%3Cpath%20d%3D%22M1%201l5%205%205-5%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[position:right_1rem_center] bg-no-repeat pr-10"
                   >
                     <option value="">Select your need</option>
                     <option value="ai-seo">Enterprise SEO Strategy</option>
@@ -371,46 +371,52 @@ export function ContactPageClient() {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={4}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    rows={6}
+                    className="w-full min-h-[160px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-y"
                     placeholder="Your website URL, current challenges, growth goals, and estimated budget. The more detail you share, the better we can assess fit and provide helpful insights."
                   />
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="flex items-center p-4 bg-green-50 border-2 border-green-500 rounded-lg">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
+                  <div className="flex items-start p-4 bg-green-50 border-2 border-green-500 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-green-900 text-sm font-semibold">Message Received</p>
-                      <p className="text-green-700 text-xs mt-1">Thank you for reaching out. We'll review your information and respond within 48 hours.</p>
+                      <p className="text-green-900 font-semibold text-base mb-1">Message Received</p>
+                      <p className="text-green-700 text-sm leading-relaxed">Thank you for reaching out. We'll review your information and respond within 48 hours.</p>
                     </div>
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="flex items-center p-4 bg-red-50 border-2 border-red-500 rounded-lg">
-                    <AlertCircle className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
-                    <p className="text-red-800 text-sm">Submission failed. Please email us directly at hello@webvello.com</p>
+                  <div className="flex items-start p-4 bg-red-50 border-2 border-red-500 rounded-lg">
+                    <AlertCircle className="h-6 w-6 text-red-600 mr-3 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-red-900 font-semibold text-base mb-1">Submission Failed</p>
+                      <p className="text-red-700 text-sm leading-relaxed">Please email us directly at <a href="mailto:hello@webvello.com" className="underline font-medium">hello@webvello.com</a></p>
+                    </div>
                   </div>
                 )}
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                  className="w-full min-h-[56px] bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-4 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all active:scale-[0.98]"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <MessageSquare className="mr-2 h-5 w-5" />
-                      Request a Consultation
-                    </>
-                  )}
+                  <span className="flex items-center justify-center whitespace-nowrap">
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <MessageSquare className="mr-2 h-5 w-5 flex-shrink-0" />
+                        <span className="whitespace-nowrap">Request a Consultation</span>
+                      </>
+                    )}
+                  </span>
+                </Button>
                 </Button>
                 
                 <p className="text-xs text-secondary-500 text-center leading-relaxed">
