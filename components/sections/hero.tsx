@@ -162,149 +162,163 @@ export function Hero() {
         <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/20 via-sky-400/10 to-transparent blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-24 lg:px-10 lg:py-28">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
         <div className="relative mx-auto max-w-3xl lg:max-w-4xl text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-6 sm:mb-8 shadow-2xl">
-            <Star className="mr-2 h-4 w-4 sm:h-5 sm:w-5 fill-white" />
+          {/* Badge - Compact on mobile */}
+          <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 sm:px-6 py-1.5 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-4 sm:mb-6 shadow-2xl">
+            <Star className="mr-1.5 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5 fill-white" />
             <span className="hidden sm:inline">Trusted by 500+ businesses nationwide</span>
-            <span className="sm:hidden">500+ businesses trust us</span>
+            <span className="sm:hidden">500+ Businesses</span>
           </div>
 
-          <div className="mb-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide text-white">
-              <span className="text-white">Design</span>
-              <span className="text-white/70 mx-2">•</span>
-              <span className="text-white">Develop</span>
-              <span className="text-white/70 mx-2">•</span>
-              <span className="text-white">Dominate</span>
-            </h2>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
-            Turn your website into a predictable growth engine.
+          {/* Mobile-First Outcome-Driven Headlines */}
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-4 sm:mb-6">
+            Get More Customers From Your Website
           </h1>
 
-          <p className="text-lg sm:text-xl leading-7 sm:leading-8 text-white/90 max-w-3xl mx-auto">
-            Share your website and we&apos;ll outline a clear path to stronger visibility, higher conversions, and more qualified revenue opportunities.
+          <p className="text-base sm:text-xl leading-relaxed sm:leading-8 text-white/95 max-w-2xl mx-auto mb-6 sm:mb-8">
+            Free growth plan shows you exactly how to increase traffic and conversions.
           </p>
 
-          {/* Growth Plan URL Entry Bar */}
-          <form onSubmit={handleUrlSubmit} className="mt-10">
-            <div className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
-              <div className="flex-1">
-                <label htmlFor="website-url" className="sr-only">
-                  Enter your website
-                </label>
-                <Input
-                  id="website-url"
-                  type="text"
-                  inputMode="url"
-                  placeholder="Enter your website (example: yourdomain.com)"
-                  value={urlInput}
-                  onChange={(e) => {
-                    setUrlInput(e.target.value)
-                    setUrlError('')
-                  }}
-                  onKeyDown={handleKeyDown}
-                  disabled={isSubmitting}
-                  aria-invalid={urlError ? 'true' : 'false'}
-                  aria-describedby={urlError ? 'url-error' : 'url-hint'}
-                  className={`
-                    w-full px-4 sm:px-6 py-4 text-base sm:text-lg
-                    bg-white/10 backdrop-blur-sm border-2
-                    ${urlError 
-                      ? 'border-red-400 focus-visible:border-red-400 focus-visible:ring-red-400/50' 
-                      : 'border-white/20 focus-visible:border-blue-400 focus-visible:ring-blue-400/50'
-                    }
-                    text-white placeholder-white/60
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent
-                    disabled:opacity-50 disabled:cursor-not-allowed
-                    transition-all duration-200
-                  `}
-                />
-                {urlError ? (
-                  <p 
-                    id="url-error" 
-                    className="mt-2 text-sm text-red-300 text-left"
-                    role="alert"
-                  >
-                    {urlError}
-                  </p>
-                ) : (
-                  <p id="url-hint" className="mt-2 text-xs text-white/60 text-left">
-                    Example: yourdomain.com or https://www.yourdomain.com
-                  </p>
-                )}
-              </div>
-              <Button
-                type="submit"
-                size="xl"
-                disabled={isSubmitting}
-                className="
-                  w-full sm:w-auto
-                  bg-gradient-to-r from-blue-500 to-indigo-500 
-                  hover:from-blue-600 hover:to-indigo-600 
-                  text-white px-6 sm:px-8 py-4 
-                  text-base sm:text-lg font-bold 
-                  shadow-2xl hover:shadow-blue-400/25 
-                  transition-all duration-300
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-400
-                "
-              >
-                {isSubmitting ? (
-                  <span className="flex items-center">
-                    <span className="mr-2">Loading...</span>
-                  </span>
-                ) : (
-                  <span className="flex items-center">
-                    Get My Free Growth Plan →
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </span>
-                )}
-              </Button>
-            </div>
-            <div className="mt-3 space-y-2">
-              <p className="text-sm text-white/80 text-center">
-                See growth opportunities tailored to your site. No obligation.
-              </p>
-              <div className="flex items-center justify-center gap-1.5 text-xs text-white/60">
-                <Lock className="w-3 h-3" />
-                <span>We never share your info.</span>
-              </div>
-            </div>
-          </form>
-
-          {/* Secondary CTA - Free Strategy Session */}
-          <div className="mt-8 flex justify-center">
+          {/* Primary CTA - High Contrast, Above the Fold */}
+          <div className="mb-6 sm:mb-8">
             <Button 
-              size="lg" 
-              variant="outline"
-              className="
-                border-2 border-white/30 text-white 
-                hover:bg-white/10 hover:text-white 
-                px-6 py-3 text-sm sm:text-base font-semibold 
-                backdrop-blur-sm
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white/50
-              " 
+              size="lg"
               onClick={handleStrategySessionClick}
+              className="
+                w-full sm:w-auto
+                min-h-[56px] sm:min-h-[60px]
+                bg-white text-blue-600 
+                hover:bg-blue-50 hover:text-blue-700
+                px-8 sm:px-10 py-4 sm:py-5
+                text-lg sm:text-xl font-bold 
+                shadow-2xl hover:shadow-white/50
+                transition-all duration-300
+                focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
+                active:scale-[0.98]
+              " 
               asChild
             >
               <Link href="/contact">
-                Book a Strategy Call
+                <span className="flex items-center justify-center whitespace-nowrap">
+                  Get Free Growth Plan
+                  <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
+                </span>
               </Link>
             </Button>
           </div>
-          
-          {/* Urgency & Scarcity */}
-          <div className="mt-6 text-center">
-            <p className="text-xs sm:text-sm text-white/90">
-              <span className="hidden sm:inline">Limited weekly availability to keep quality high • 500+ businesses trust us</span>
-              <span className="sm:hidden">Limited weekly availability</span>
-            </p>
+
+          {/* Mobile Trust Strip - Compact Metrics */}
+          <div className="mb-8 sm:mb-10">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 text-white/90">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-green-400" />
+                <span className="text-sm sm:text-base font-semibold">500+ Sites</span>
+              </div>
+              <div className="w-px h-4 bg-white/30"></div>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
+                <span className="text-sm sm:text-base font-semibold">300%+ Growth</span>
+              </div>
+              <div className="w-px h-4 bg-white/30"></div>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Award className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400" />
+                <span className="text-sm sm:text-base font-semibold">1,200% ROI</span>
+              </div>
+            </div>
           </div>
 
+          {/* Secondary Option - URL Form (Below Primary CTA on Mobile) */}
+          <details className="group mb-6 sm:mb-8">
+            <summary className="cursor-pointer list-none text-sm sm:text-base text-white/80 hover:text-white transition-colors font-medium flex items-center justify-center gap-2">
+              <span>Or analyze your website now</span>
+              <svg className="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            
+            <form onSubmit={handleUrlSubmit} className="mt-6">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-2xl mx-auto">
+                <div className="flex-1">
+                  <label htmlFor="website-url" className="sr-only">
+                    Enter your website
+                  </label>
+                  <Input
+                    id="website-url"
+                    type="url"
+                    inputMode="url"
+                    placeholder="yourdomain.com"
+                    value={urlInput}
+                    onChange={(e) => {
+                      setUrlInput(e.target.value)
+                      setUrlError('')
+                    }}
+                    onKeyDown={handleKeyDown}
+                    disabled={isSubmitting}
+                    aria-invalid={urlError ? 'true' : 'false'}
+                    aria-describedby={urlError ? 'url-error' : 'url-hint'}
+                    className={`
+                      w-full px-4 sm:px-6 py-4 text-base sm:text-lg min-h-[56px]
+                      bg-white/10 backdrop-blur-sm border-2
+                      ${urlError 
+                        ? 'border-red-400 focus-visible:border-red-400 focus-visible:ring-red-400/50' 
+                        : 'border-white/30 focus-visible:border-white focus-visible:ring-white/50'
+                      }
+                      text-white placeholder-white/60
+                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent
+                      disabled:opacity-50 disabled:cursor-not-allowed
+                      transition-all duration-200
+                    `}
+                  />
+                  {urlError && (
+                    <p 
+                      id="url-error" 
+                      className="mt-2 text-sm sm:text-base text-red-300 text-left font-medium"
+                      role="alert"
+                    >
+                      {urlError}
+                    </p>
+                  )}
+                </div>
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={isSubmitting}
+                  className="
+                    w-full sm:w-auto min-h-[56px]
+                    bg-white/20 backdrop-blur-md
+                    border-2 border-white/40
+                    hover:bg-white/30 hover:border-white/60
+                    text-white px-6 sm:px-8 py-4 
+                    text-base sm:text-lg font-bold 
+                    shadow-xl
+                    transition-all duration-300
+                    disabled:opacity-50 disabled:cursor-not-allowed
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white/50
+                    active:scale-[0.98]
+                  "
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center">
+                      <span>Analyzing...</span>
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center whitespace-nowrap">
+                      <span className="sm:hidden">Analyze</span>
+                      <span className="hidden sm:inline">Analyze Site</span>
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </span>
+                  )}
+                </Button>
+              </div>
+            </form>
+          </details>
+          
+          {/* Trust Indicator */}
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white/70">
+            <Lock className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span>No cost. No obligation. Results in 24 hours.</span>
+          </div>
 
         </div>
       </div>
