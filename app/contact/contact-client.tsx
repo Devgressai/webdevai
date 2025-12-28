@@ -418,7 +418,6 @@ export function ContactPageClient() {
                     )}
                   </span>
                 </Button>
-                </Button>
                 
                 <p className="text-xs text-secondary-500 text-center leading-relaxed">
                   Your information is confidential. We'll use it only to assess partnership fit and respond to your inquiry. No spam, no unwanted follow-ups.
