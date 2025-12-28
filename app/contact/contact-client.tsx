@@ -1,12 +1,10 @@
 'use client'
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from '../../components/ui/button'
-import { Phone, Mail, MapPin, Clock, MessageSquare, Users, Zap, CheckCircle, AlertCircle, Star, TrendingUp, Award, Shield, Globe, Calendar, ArrowRight, X } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, MessageSquare, Users, Zap, CheckCircle, AlertCircle, Star, TrendingUp, Award, Shield, Globe, Calendar, ArrowRight, Check } from 'lucide-react'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
 import Link from 'next/link'
-// import { useConversionTracking } from '@/hooks/useConversionTracking'
-// import ScrollTracker from '../../components/analytics/scroll-tracker'
 
 const contactInfo = [
   {
@@ -91,24 +89,24 @@ const testimonials = [
 
 const faqs = [
   {
-    question: "How quickly can you start working on my project?",
-    answer: "We typically begin new projects within 1-2 weeks of contract signing. For urgent projects, we can often accommodate faster timelines."
+    question: "Why do you limit your client roster?",
+    answer: "Quality over quantity. We maintain a roster of 12-15 active partnerships to ensure each client receives dedicated attention from our senior team. This approach has proven to deliver superior results compared to agencies juggling dozens of clients."
   },
   {
-    question: "Do you work with businesses outside the US?",
-    answer: "Yes! We work with businesses worldwide. Our digital marketing strategies are effective regardless of location."
+    question: "What's your typical project investment range?",
+    answer: "Our partnerships typically start at $10K/month for ongoing services or $50K+ for comprehensive development projects. We work with businesses that view digital marketing as a strategic investment, not an expense."
   },
   {
-    question: "What’s included in your free strategy session?",
-    answer: "Our free strategy session includes a comprehensive audit of your current digital presence, competitive analysis, and a customized roadmap for growth."
+    question: "How selective is your application process?",
+    answer: "Very. We review each application carefully and only partner with businesses that align with our standards and have realistic growth goals. We look for established businesses or well-funded startups with clear vision and adequate resources."
   },
   {
-    question: "Do you offer ongoing support after project completion?",
-    answer: "Absolutely! We offer various maintenance and support packages to ensure your digital assets continue performing optimally."
+    question: "Do you offer ongoing support or one-time projects?",
+    answer: "Both. Our most successful partnerships are ongoing retainer relationships where we become an extension of your team. We also take on select high-value development projects for the right clients."
   },
   {
-    question: "Can you help with existing websites or only new projects?",
-    answer: "We work with both new and existing websites. We can audit, optimize, and improve your current digital presence."
+    question: "What makes Web Vello different from other agencies?",
+    answer: "We're not an agency—we're a boutique consultancy. No account managers or junior staff handling your work. You get direct access to senior strategists, developers, and marketers who have built and scaled multiple successful businesses."
   }
 ]
 
@@ -122,7 +120,6 @@ export function ContactPageClient() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [showExitIntent, setShowExitIntent] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -168,195 +165,166 @@ export function ContactPageClient() {
     }
   }
 
-  const handleStrategySessionClick = () => {
-    // Track strategy session request
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'click', {
-        event_category: 'CTA',
-        event_label: 'Strategy Session Button'
-      })
-    }
-    // Scroll to form
-    const formElement = document.getElementById('contact-form')
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
-
-  // Exit-intent detection
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    let exitIntentTriggered = false
-    
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !exitIntentTriggered && submitStatus !== 'success') {
-        exitIntentTriggered = true
-        setShowExitIntent(true)
-        
-        // Track exit intent
-        if ((window as any).gtag) {
-          (window as any).gtag('event', 'exit_intent_shown', {
-            event_category: 'Popup',
-            event_label: 'Contact Page'
-          })
-        }
-      }
-    }
-
-    document.addEventListener('mouseout', handleMouseLeave)
-    return () => document.removeEventListener('mouseout', handleMouseLeave)
-  }, [submitStatus])
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <Breadcrumb items={generateBreadcrumbs('page', { title: 'Contact' })} />
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Let’s Grow Your Business
-              <span className="block text-blue-600">Together</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Ready to transform your digital presence? Get your free strategy session and discover how we can help you achieve 300%+ growth in traffic and conversions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
-                onClick={handleStrategySessionClick}
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Get Free Strategy Session
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
-                asChild
-              >
-                <Link href="tel:+17378885723">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call 737-888-5723
-                </Link>
-              </Button>
+      {/* Hero Form Section - Above the Fold */}
+      <section className="py-12 md:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            {/* Left Column - Value Proposition */}
+            <div className="space-y-8">
+              <div>
+                <div className="inline-flex items-center px-3 py-1 bg-gray-900 text-white rounded-full text-sm font-medium mb-4">
+                  <Award className="h-4 w-4 mr-1" />
+                  Selective Client Partnerships
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  We Don't Work With Everyone
+                </h1>
+                <p className="text-xl text-gray-600 mb-6">
+                  Our elite development and marketing team carefully selects partnerships with businesses ready for exponential growth. If you're serious about dominating your market, let's talk.
+                </p>
+              </div>
+
+              {/* Benefits List */}
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gray-900 flex items-center justify-center mt-1">
+                    <Shield className="h-4 w-4 text-white" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-semibold text-gray-900">Selective Partnerships</h3>
+                    <p className="text-gray-600">We only work with 12-15 clients at a time to ensure excellence</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gray-900 flex items-center justify-center mt-1">
+                    <Award className="h-4 w-4 text-white" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-semibold text-gray-900">Elite Expertise</h3>
+                    <p className="text-gray-600">Senior-level strategists, developers, and marketers only</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gray-900 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-4 w-4 text-white" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="font-semibold text-gray-900">Proven Performance</h3>
+                    <p className="text-gray-600">300%+ average growth - our clients outperform their competitors</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Proof */}
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 shadow-lg text-white">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                    <span className="ml-2 text-sm font-semibold">4.9/5</span>
+                  </div>
+                  <span className="text-sm text-gray-300">Verified Clients</span>
+                </div>
+                <p className="text-gray-100 italic mb-3">
+                  "Web Vello doesn't just deliver results—they set a new standard. Our organic traffic tripled, but more importantly, our revenue quadrupled."
+                </p>
+                <p className="text-sm text-gray-300">— Sarah Johnson, CEO at TechStart Inc.</p>
+              </div>
+
+              {/* Qualification Statement */}
+              <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
+                <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                  <AlertCircle className="h-5 w-5 mr-2 text-blue-600" />
+                  Who We Work With
+                </h3>
+                <p className="text-sm text-gray-700">
+                  We partner with established businesses and ambitious startups that have clear growth goals, 
+                  adequate marketing budgets, and are ready to implement aggressive strategies. If you're looking 
+                  for quick fixes or budget solutions, we're likely not the right fit.
+                </p>
+              </div>
+
+              {/* Contact Info Cards - Compact */}
+              <div className="grid grid-cols-2 gap-4">
+                <a 
+                  href="tel:+17378885723"
+                  className="flex items-center p-4 bg-white rounded-lg border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-all group"
+                >
+                  <Phone className="h-5 w-5 text-gray-900 group-hover:text-white mr-3 flex-shrink-0" />
+                  <div>
+                    <p className="text-xs text-gray-500 group-hover:text-gray-300">Direct line</p>
+                    <p className="font-semibold text-gray-900 group-hover:text-white text-sm">737-888-5723</p>
+                  </div>
+                </a>
+                <a 
+                  href="mailto:hello@webvello.com"
+                  className="flex items-center p-4 bg-white rounded-lg border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-all group"
+                >
+                  <Mail className="h-5 w-5 text-gray-900 group-hover:text-white mr-3 flex-shrink-0" />
+                  <div>
+                    <p className="text-xs text-gray-500 group-hover:text-gray-300">Email us</p>
+                    <p className="font-semibold text-gray-900 group-hover:text-white text-sm">hello@webvello.com</p>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Contact Info Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 group-hover:bg-blue-200 transition-colors mx-auto mb-4">
-                  <info.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
-                {info.href ? (
-                  <a 
-                    href={info.href}
-                    className="text-blue-600 hover:text-blue-700 font-medium block mb-1"
-                  >
-                    {info.value}
-                  </a>
-                ) : (
-                  <p className="text-gray-900 font-medium mb-1">{info.value}</p>
-                )}
-                <p className="text-gray-600 text-sm">{info.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div id="contact-form" className="bg-white rounded-2xl p-8 shadow-soft">
-              {/* Urgency Banner */}
-              <div className="mb-6 p-4 bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-500 rounded-lg">
-                <p className="text-orange-800 font-semibold flex items-center">
-                  <span className="mr-2">🔥</span>
-                  Only 3 free SEO audits left this week
-                </p>
-              </div>
-
+            {/* Right Column - Contact Form */}
+            <div id="contact-form" className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-8 lg:sticky lg:top-8">
               <div className="mb-6">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Get Your Free SEO Audit</h2>
-                <p className="text-xl text-blue-600 font-semibold mb-4">Worth $500 - Limited Time Offer</p>
-                <p className="text-gray-600">
-                  We'll analyze your website and show you exactly how to 3x your organic traffic in 6 months.
-                </p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Apply for Partnership</h2>
+                <p className="text-gray-600">Tell us about your business. We'll review and respond within 48 hours if we're a good fit.</p>
               </div>
 
-              {/* Trust Signals */}
-              <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <div className="flex flex-wrap gap-4 items-center justify-center text-sm">
-                  <div className="flex items-center text-gray-700">
-                    <Shield className="h-4 w-4 text-green-600 mr-2" />
-                    100% Secure
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <Star className="h-4 w-4 text-yellow-400 mr-1 fill-current" />
-                    4.9/5 Stars (127 Reviews)
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <Users className="h-4 w-4 text-blue-600 mr-2" />
-                    Join 500+ Businesses
-                  </div>
-                </div>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your@email.com"
-                    />
-                  </div>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-1.5">
+                    Full Name <span className="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    placeholder="John Smith"
+                  />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number (Optional)
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-1.5">
+                    Business Email <span className="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    placeholder="john@company.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-900 mb-1.5">
+                    Phone Number <span className="text-red-600">*</span>
                   </label>
                   <input
                     type="tel"
@@ -364,155 +332,156 @@ export function ContactPageClient() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
                     placeholder="(555) 123-4567"
                   />
-                  <p className="mt-1 text-xs text-gray-500">We'll call you back within 1 hour (business hours)</p>
+                  <p className="mt-1.5 text-xs text-gray-500">For qualified leads, we'll schedule a strategy call</p>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    What can we help you with?
+                  <label htmlFor="service" className="block text-sm font-semibold text-gray-900 mb-1.5">
+                    What Are You Looking For? <span className="text-red-600">*</span>
                   </label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
                   >
-                    <option value="">Select a service</option>
-                    <option value="ai-seo">AI-Powered SEO (Get 300%+ Traffic Growth)</option>
-                    <option value="local-seo">Local SEO (Dominate Local Search)</option>
-                    <option value="web-development">Web Development (Custom Websites)</option>
-                    <option value="ui-ux-design">UI/UX Design (Beautiful Interfaces)</option>
-                    <option value="digital-marketing">Digital Marketing (Full Service)</option>
-                    <option value="consulting">Not Sure - Need Consultation</option>
+                    <option value="">Select your need</option>
+                    <option value="ai-seo">Enterprise SEO Strategy</option>
+                    <option value="local-seo">Local Market Domination</option>
+                    <option value="web-development">Custom Development (100K+)</option>
+                    <option value="ui-ux-design">Premium UI/UX Design</option>
+                    <option value="digital-marketing">Full-Service Digital Marketing</option>
+                    <option value="consulting">Strategic Consulting</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Tell us about your website (Optional)
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-1.5">
+                    Tell Us About Your Business <span className="text-red-600">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="What's your website URL and main goals? (e.g., increase traffic, improve rankings, generate more leads)"
+                    required
+                    rows={4}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    placeholder="Your website URL, current challenges, goals, and approximate budget range. Be specific—this helps us determine if we're a good fit."
                   />
                 </div>
 
-                {/* Privacy Notice */}
-                <div className="text-xs text-gray-500 flex items-start">
-                  <Shield className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0 text-green-600" />
-                  <p>
-                    We respect your privacy. Your information is 100% secure and will never be shared. 
-                    Read our <Link href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>.
-                  </p>
-                </div>
-
                 {submitStatus === 'success' && (
-                  <div className="flex items-center p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
-                    <p className="text-green-800">Thank you! We’ll be in touch within 24 hours.</p>
+                  <div className="flex items-center p-4 bg-green-50 border-2 border-green-600 rounded-lg">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
+                    <div>
+                      <p className="text-green-900 text-sm font-semibold">Application Received</p>
+                      <p className="text-green-700 text-xs mt-1">We'll review your information and respond within 48 hours if we're a good match.</p>
+                    </div>
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="flex items-center p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <AlertCircle className="h-5 w-5 text-red-600 mr-3" />
-                    <p className="text-red-800">Something went wrong. Please try again.</p>
+                  <div className="flex items-center p-4 bg-red-50 border-2 border-red-600 rounded-lg">
+                    <AlertCircle className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
+                    <p className="text-red-800 text-sm">Submission failed. Please email us directly at hello@webvello.com</p>
                   </div>
                 )}
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
+                  className="w-full bg-gray-900 hover:bg-gray-800 text-white py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending Your Request...
+                      Submitting Application...
                     </>
                   ) : (
                     <>
-                      <Zap className="mr-2 h-5 w-5" />
-                      Get My Free $500 SEO Audit →
+                      <MessageSquare className="mr-2 h-5 w-5" />
+                      Submit Application
                     </>
                   )}
                 </Button>
                 
-                <p className="text-center text-sm text-gray-500 mt-2">
-                  ⚡ Get results within 24 hours • No credit card required
+                <p className="text-xs text-gray-500 text-center">
+                  By submitting, you agree that we may contact you regarding potential partnership opportunities.
                 </p>
               </form>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Why Choose Us */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Web Vello?</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 mr-4">
-                      <Zap className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Results</h3>
-                      <p className="text-gray-600">Our clients see an average of 300%+ traffic growth within 6 months.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 mr-4">
-                      <Users className="h-6 w-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Expert Team</h3>
-                      <p className="text-gray-600">Certified professionals with years of experience in digital marketing.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 mr-4">
-                      <Shield className="h-6 w-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Transparent Process</h3>
-                      <p className="text-gray-600">Regular reporting and clear communication throughout your project.</p>
-                    </div>
-                  </div>
-                </div>
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Sets Us Apart</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We're not for everyone. We're for businesses that demand excellence and are ready to invest in their success.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-900 mx-auto mb-4">
+                <Shield className="h-8 w-8 text-white" />
               </div>
-
-              {/* Services Quick Links */}
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Services</h3>
-                <div className="grid grid-cols-1 gap-3">
-                  {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      href={service.href}
-                      className="group p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
-                            {service.name}
-                          </h4>
-                          <p className="text-sm text-gray-600">{service.description}</p>
-                        </div>
-                        <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Elite Standards</h3>
+              <p className="text-gray-600">We maintain strict quality standards. Only senior-level team members work on client projects—no junior developers or interns.</p>
             </div>
+            <div className="text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-900 mx-auto mb-4">
+                <Award className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Limited Partnerships</h3>
+              <p className="text-gray-600">We cap our client roster at 12-15 active partnerships. This ensures each client receives our full attention and resources.</p>
+            </div>
+            <div className="text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-900 mx-auto mb-4">
+                <TrendingUp className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Results-Driven</h3>
+              <p className="text-gray-600">Our clients average 300%+ growth because we don't take on projects we can't deliver exceptional results for.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Services</h2>
+            <p className="text-gray-600">Premium solutions for businesses serious about digital dominance</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                href={service.href}
+                className="group p-6 bg-white rounded-xl border-2 border-gray-200 hover:border-gray-900 hover:shadow-xl transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-gray-900 transition-colors mb-1">
+                      {service.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">{service.description}</p>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -521,29 +490,29 @@ export function ContactPageClient() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Client Results</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Don’t just take our word for it. Here’s what our clients have to say about working with Web Vello.
+              We let our work speak for itself. Here's what our select clients have achieved.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl p-6">
+              <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border-2 border-gray-200">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">“{testimonial.content}”</p>
+                <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-blue-600 font-semibold text-lg">
+                  <div className="h-12 w-12 bg-gray-900 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-semibold text-sm">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                    <h4 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h4>
+                    <p className="text-xs text-gray-600">{testimonial.role}, {testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -556,15 +525,15 @@ export function ContactPageClient() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Common Questions</h2>
             <p className="text-gray-600">
-              Got questions? We’ve got answers. Here are some common questions we receive.
+              Understanding our selective approach and what it means for potential partners.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-soft">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+              <div key={index} className="bg-white rounded-xl p-6 border-2 border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
             ))}
@@ -572,106 +541,69 @@ export function ContactPageClient() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-500">
+      {/* Bottom CTA */}
+      <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Digital Presence?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Dominate Your Market?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of businesses that have achieved remarkable growth with Web Vello.
+          <p className="text-xl text-gray-300 mb-8">
+            If you're serious about growth and have the resources to invest in excellence, let's discuss your vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-4 text-lg"
-              onClick={handleStrategySessionClick}
+              className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+              onClick={() => {
+                const formElement = document.getElementById('contact-form')
+                if (formElement) {
+                  formElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                }
+              }}
             >
-              <Calendar className="mr-2 h-5 w-5" />
-              Get Free Strategy Session
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Apply Now
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold"
               asChild
             >
               <Link href="tel:+17378885723">
                 <Phone className="mr-2 h-5 w-5" />
-                Call 737-888-5723
+                737-888-5723
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Exit-Intent Popup */}
-      {showExitIntent && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-slide-up">
-            <button
-              onClick={() => setShowExitIntent(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-              aria-label="Close"
-            >
-              <X className="h-6 w-6" />
-            </button>
-            
-            <div className="text-center">
-              <div className="mb-4">
-                <span className="text-6xl">⚡</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Wait! Before You Go...
-              </h3>
-              <p className="text-lg text-gray-600 mb-4">
-                Get a <span className="text-blue-600 font-bold">FREE Website Audit</span> worth $500
-              </p>
-              <p className="text-gray-600 mb-6">
-                We'll show you exactly what's holding your website back and how to fix it.
-              </p>
-              
-              <div className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      const email = (e.target as HTMLInputElement).value
-                      if (email) {
-                        setFormData(prev => ({ ...prev, email }))
-                        setShowExitIntent(false)
-                        const formElement = document.getElementById('contact-form')
-                        if (formElement) {
-                          formElement.scrollIntoView({ behavior: 'smooth' })
-                        }
-                      }
-                    }
-                  }}
-                />
-                <Button
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-3 font-bold"
-                  onClick={() => {
-                    setShowExitIntent(false)
-                    const formElement = document.getElementById('contact-form')
-                    if (formElement) {
-                      formElement.scrollIntoView({ behavior: 'smooth' })
-                    }
-                  }}
-                >
-                  <Zap className="mr-2 h-5 w-5" />
-                  Get My Free Audit
-                </Button>
-              </div>
-              
-              <p className="text-xs text-gray-500 mt-4">
-                No credit card required • 100% free • Results in 24 hours
-              </p>
+      {/* Location & Hours */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <MapPin className="h-8 w-8 text-gray-900 mx-auto mb-3" />
+              <h3 className="font-semibold text-gray-900 mb-1">Headquarters</h3>
+              <p className="text-gray-600 text-sm">2281 Lava Ridge Ct</p>
+              <p className="text-gray-600 text-sm">Roseville, CA 95661</p>
+            </div>
+            <div>
+              <Clock className="h-8 w-8 text-gray-900 mx-auto mb-3" />
+              <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
+              <p className="text-gray-600 text-sm">Monday - Friday</p>
+              <p className="text-gray-600 text-sm">9:00 AM - 6:00 PM PST</p>
+            </div>
+            <div>
+              <Globe className="h-8 w-8 text-gray-900 mx-auto mb-3" />
+              <h3 className="font-semibold text-gray-900 mb-1">Nationwide Service</h3>
+              <p className="text-gray-600 text-sm">Elite partnerships</p>
+              <p className="text-gray-600 text-sm">Coast to coast</p>
             </div>
           </div>
         </div>
-      )}
+      </section>
     </div>
   )
 }
