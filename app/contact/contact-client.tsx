@@ -166,9 +166,9 @@ export function ContactPageClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
       {/* Breadcrumb */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <Breadcrumb items={generateBreadcrumbs('page', { title: 'Contact' })} />
         </div>
@@ -182,14 +182,14 @@ export function ContactPageClient() {
             {/* Left Column - Value Proposition */}
             <div className="space-y-8">
               <div>
-                <div className="inline-flex items-center px-3 py-1 bg-gray-900 text-white rounded-full text-sm font-medium mb-4">
+                <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-full text-sm font-medium mb-4 shadow-sm">
                   <Award className="h-4 w-4 mr-1" />
                   Selective Client Partnerships
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
                   We Don't Work With Everyone
                 </h1>
-                <p className="text-xl text-gray-600 mb-6">
+                <p className="text-xl text-secondary-600 mb-6">
                   Our elite development and marketing team carefully selects partnerships with businesses ready for exponential growth. If you're serious about dominating your market, let's talk.
                 </p>
               </div>
@@ -197,36 +197,36 @@ export function ContactPageClient() {
               {/* Benefits List */}
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gray-900 flex items-center justify-center mt-1">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mt-1 shadow-sm">
                     <Shield className="h-4 w-4 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900">Selective Partnerships</h3>
-                    <p className="text-gray-600">We only work with 12-15 clients at a time to ensure excellence</p>
+                    <h3 className="font-semibold text-secondary-900">Selective Partnerships</h3>
+                    <p className="text-secondary-600">We only work with 12-15 clients at a time to ensure excellence</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gray-900 flex items-center justify-center mt-1">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mt-1 shadow-sm">
                     <Award className="h-4 w-4 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900">Elite Expertise</h3>
-                    <p className="text-gray-600">Senior-level strategists, developers, and marketers only</p>
+                    <h3 className="font-semibold text-secondary-900">Elite Expertise</h3>
+                    <p className="text-secondary-600">Senior-level strategists, developers, and marketers only</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gray-900 flex items-center justify-center mt-1">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mt-1 shadow-sm">
                     <TrendingUp className="h-4 w-4 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900">Proven Performance</h3>
-                    <p className="text-gray-600">300%+ average growth - our clients outperform their competitors</p>
+                    <h3 className="font-semibold text-secondary-900">Proven Performance</h3>
+                    <p className="text-secondary-600">300%+ average growth - our clients outperform their competitors</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Proof */}
-              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 shadow-lg text-white">
+              <div className="bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 rounded-xl p-6 shadow-lg text-white">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
                     <Star className="h-5 w-5 text-yellow-400 fill-current" />
@@ -236,21 +236,21 @@ export function ContactPageClient() {
                     <Star className="h-5 w-5 text-yellow-400 fill-current" />
                     <span className="ml-2 text-sm font-semibold">4.9/5</span>
                   </div>
-                  <span className="text-sm text-gray-300">Verified Clients</span>
+                  <span className="text-sm text-white/90">Verified Clients</span>
                 </div>
-                <p className="text-gray-100 italic mb-3">
+                <p className="text-white/95 italic mb-3">
                   "Web Vello doesn't just deliver results—they set a new standard. Our organic traffic tripled, but more importantly, our revenue quadrupled."
                 </p>
-                <p className="text-sm text-gray-300">— Sarah Johnson, CEO at TechStart Inc.</p>
+                <p className="text-sm text-white/80">— Sarah Johnson, CEO at TechStart Inc.</p>
               </div>
 
               {/* Qualification Statement */}
-              <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
-                <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
-                  <AlertCircle className="h-5 w-5 mr-2 text-blue-600" />
+              <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-5">
+                <h3 className="font-semibold text-secondary-900 mb-2 flex items-center">
+                  <AlertCircle className="h-5 w-5 mr-2 text-blue-500" />
                   Who We Work With
                 </h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-secondary-700">
                   We partner with established businesses and ambitious startups that have clear growth goals, 
                   adequate marketing budgets, and are ready to implement aggressive strategies. If you're looking 
                   for quick fixes or budget solutions, we're likely not the right fit.
@@ -261,38 +261,38 @@ export function ContactPageClient() {
               <div className="grid grid-cols-2 gap-4">
                 <a 
                   href="tel:+17378885723"
-                  className="flex items-center p-4 bg-white rounded-lg border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-all group"
+                  className="flex items-center p-4 bg-white rounded-lg border-2 border-primary-200 hover:border-primary-600 hover:shadow-md transition-all group"
                 >
-                  <Phone className="h-5 w-5 text-gray-900 group-hover:text-white mr-3 flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
                   <div>
-                    <p className="text-xs text-gray-500 group-hover:text-gray-300">Direct line</p>
-                    <p className="font-semibold text-gray-900 group-hover:text-white text-sm">737-888-5723</p>
+                    <p className="text-xs text-secondary-500">Direct line</p>
+                    <p className="font-semibold text-secondary-900 text-sm">737-888-5723</p>
                   </div>
                 </a>
                 <a 
                   href="mailto:hello@webvello.com"
-                  className="flex items-center p-4 bg-white rounded-lg border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-all group"
+                  className="flex items-center p-4 bg-white rounded-lg border-2 border-primary-200 hover:border-primary-600 hover:shadow-md transition-all group"
                 >
-                  <Mail className="h-5 w-5 text-gray-900 group-hover:text-white mr-3 flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0" />
                   <div>
-                    <p className="text-xs text-gray-500 group-hover:text-gray-300">Email us</p>
-                    <p className="font-semibold text-gray-900 group-hover:text-white text-sm">hello@webvello.com</p>
+                    <p className="text-xs text-secondary-500">Email us</p>
+                    <p className="font-semibold text-secondary-900 text-sm">hello@webvello.com</p>
                   </div>
                 </a>
               </div>
             </div>
 
             {/* Right Column - Contact Form */}
-            <div id="contact-form" className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-8 lg:sticky lg:top-8">
+            <div id="contact-form" className="bg-white rounded-2xl shadow-xl border border-primary-100 p-8 lg:sticky lg:top-8">
               <div className="mb-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Apply for Partnership</h2>
-                <p className="text-gray-600">Tell us about your business. We'll review and respond within 48 hours if we're a good fit.</p>
+                <h2 className="text-2xl font-bold text-secondary-900 mb-2">Apply for Partnership</h2>
+                <p className="text-secondary-600">Tell us about your business. We'll review and respond within 48 hours if we're a good fit.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-1.5">
-                    Full Name <span className="text-red-600">*</span>
+                  <label htmlFor="name" className="block text-sm font-semibold text-secondary-900 mb-1.5">
+                    Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -301,14 +301,14 @@ export function ContactPageClient() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="John Smith"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-1.5">
-                    Business Email <span className="text-red-600">*</span>
+                  <label htmlFor="email" className="block text-sm font-semibold text-secondary-900 mb-1.5">
+                    Business Email <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -317,14 +317,14 @@ export function ContactPageClient() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="john@company.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-900 mb-1.5">
-                    Phone Number <span className="text-red-600">*</span>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-secondary-900 mb-1.5">
+                    Phone Number <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
@@ -333,15 +333,15 @@ export function ContactPageClient() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="(555) 123-4567"
                   />
-                  <p className="mt-1.5 text-xs text-gray-500">For qualified leads, we'll schedule a strategy call</p>
+                  <p className="mt-1.5 text-xs text-secondary-500">For qualified leads, we'll schedule a strategy call</p>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-semibold text-gray-900 mb-1.5">
-                    What Are You Looking For? <span className="text-red-600">*</span>
+                  <label htmlFor="service" className="block text-sm font-semibold text-secondary-900 mb-1.5">
+                    What Are You Looking For? <span className="text-red-500">*</span>
                   </label>
                   <select
                     id="service"
@@ -349,7 +349,7 @@ export function ContactPageClient() {
                     value={formData.service}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                   >
                     <option value="">Select your need</option>
                     <option value="ai-seo">Enterprise SEO Strategy</option>
@@ -362,8 +362,8 @@ export function ContactPageClient() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-1.5">
-                    Tell Us About Your Business <span className="text-red-600">*</span>
+                  <label htmlFor="message" className="block text-sm font-semibold text-secondary-900 mb-1.5">
+                    Tell Us About Your Business <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -372,13 +372,13 @@ export function ContactPageClient() {
                     onChange={handleInputChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder="Your website URL, current challenges, goals, and approximate budget range. Be specific—this helps us determine if we're a good fit."
                   />
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="flex items-center p-4 bg-green-50 border-2 border-green-600 rounded-lg">
+                  <div className="flex items-center p-4 bg-green-50 border-2 border-green-500 rounded-lg">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                     <div>
                       <p className="text-green-900 text-sm font-semibold">Application Received</p>
@@ -388,7 +388,7 @@ export function ContactPageClient() {
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="flex items-center p-4 bg-red-50 border-2 border-red-600 rounded-lg">
+                  <div className="flex items-center p-4 bg-red-50 border-2 border-red-500 rounded-lg">
                     <AlertCircle className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
                     <p className="text-red-800 text-sm">Submission failed. Please email us directly at hello@webvello.com</p>
                   </div>
@@ -397,7 +397,7 @@ export function ContactPageClient() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gray-900 hover:bg-gray-800 text-white py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -426,59 +426,59 @@ export function ContactPageClient() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Sets Us Apart</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">What Sets Us Apart</h2>
+            <p className="text-secondary-600 max-w-2xl mx-auto">
               We're not for everyone. We're for businesses that demand excellence and are ready to invest in their success.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-900 mx-auto mb-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mx-auto mb-4 shadow-lg">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Elite Standards</h3>
-              <p className="text-gray-600">We maintain strict quality standards. Only senior-level team members work on client projects—no junior developers or interns.</p>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Elite Standards</h3>
+              <p className="text-secondary-600">We maintain strict quality standards. Only senior-level team members work on client projects—no junior developers or interns.</p>
             </div>
             <div className="text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-900 mx-auto mb-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mx-auto mb-4 shadow-lg">
                 <Award className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Limited Partnerships</h3>
-              <p className="text-gray-600">We cap our client roster at 12-15 active partnerships. This ensures each client receives our full attention and resources.</p>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Limited Partnerships</h3>
+              <p className="text-secondary-600">We cap our client roster at 12-15 active partnerships. This ensures each client receives our full attention and resources.</p>
             </div>
             <div className="text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-900 mx-auto mb-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mx-auto mb-4 shadow-lg">
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Results-Driven</h3>
-              <p className="text-gray-600">Our clients average 300%+ growth because we don't take on projects we can't deliver exceptional results for.</p>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Results-Driven</h3>
+              <p className="text-secondary-600">Our clients average 300%+ growth because we don't take on projects we can't deliver exceptional results for.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Services</h2>
-            <p className="text-gray-600">Premium solutions for businesses serious about digital dominance</p>
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">Enterprise Services</h2>
+            <p className="text-secondary-600">Premium solutions for businesses serious about digital dominance</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
-                className="group p-6 bg-white rounded-xl border-2 border-gray-200 hover:border-gray-900 hover:shadow-xl transition-all"
+                className="group p-6 bg-white rounded-xl border-2 border-gray-100 hover:border-primary-300 hover:shadow-xl transition-all"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-gray-900 transition-colors mb-1">
+                    <h3 className="text-lg font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors mb-1">
                       {service.name}
                     </h3>
-                    <p className="text-sm text-gray-600">{service.description}</p>
+                    <p className="text-sm text-secondary-600">{service.description}</p>
                   </div>
-                  <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" />
+                  <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" />
                 </div>
               </Link>
             ))}
@@ -490,29 +490,29 @@ export function ContactPageClient() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Client Results</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">Client Results</h2>
+            <p className="text-secondary-600 max-w-2xl mx-auto">
               We let our work speak for itself. Here's what our select clients have achieved.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border-2 border-gray-200">
+              <div key={index} className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 border-2 border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-secondary-700 mb-4 italic">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <div className="h-12 w-12 bg-gray-900 rounded-full flex items-center justify-center mr-3">
+                  <div className="h-12 w-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-3">
                     <span className="text-white font-semibold text-sm">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h4>
-                    <p className="text-xs text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                    <h4 className="font-semibold text-secondary-900 text-sm">{testimonial.name}</h4>
+                    <p className="text-xs text-secondary-600">{testimonial.role}, {testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -522,19 +522,19 @@ export function ContactPageClient() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Common Questions</h2>
-            <p className="text-gray-600">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">Common Questions</h2>
+            <p className="text-secondary-600">
               Understanding our selective approach and what it means for potential partners.
             </p>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+              <div key={index} className="bg-white rounded-xl p-6 border-2 border-gray-100 shadow-sm hover:shadow-md hover:border-primary-200 transition-all">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2">{faq.question}</h3>
+                <p className="text-secondary-600">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -542,18 +542,18 @@ export function ContactPageClient() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-800">
+      <section className="py-16 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Dominate Your Market?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             If you're serious about growth and have the resources to invest in excellence, let's discuss your vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+              className="bg-white text-primary-700 hover:bg-blue-50 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
               onClick={() => {
                 const formElement = document.getElementById('contact-form')
                 if (formElement) {
@@ -567,7 +567,7 @@ export function ContactPageClient() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-4 text-lg font-semibold"
               asChild
             >
               <Link href="tel:+17378885723">
@@ -580,26 +580,26 @@ export function ContactPageClient() {
       </section>
 
       {/* Location & Hours */}
-      <section className="py-12 bg-white border-t border-gray-200">
+      <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <MapPin className="h-8 w-8 text-gray-900 mx-auto mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-1">Headquarters</h3>
-              <p className="text-gray-600 text-sm">2281 Lava Ridge Ct</p>
-              <p className="text-gray-600 text-sm">Roseville, CA 95661</p>
+              <MapPin className="h-8 w-8 text-primary-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-secondary-900 mb-1">Headquarters</h3>
+              <p className="text-secondary-600 text-sm">2281 Lava Ridge Ct</p>
+              <p className="text-secondary-600 text-sm">Roseville, CA 95661</p>
             </div>
             <div>
-              <Clock className="h-8 w-8 text-gray-900 mx-auto mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
-              <p className="text-gray-600 text-sm">Monday - Friday</p>
-              <p className="text-gray-600 text-sm">9:00 AM - 6:00 PM PST</p>
+              <Clock className="h-8 w-8 text-primary-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-secondary-900 mb-1">Business Hours</h3>
+              <p className="text-secondary-600 text-sm">Monday - Friday</p>
+              <p className="text-secondary-600 text-sm">9:00 AM - 6:00 PM PST</p>
             </div>
             <div>
-              <Globe className="h-8 w-8 text-gray-900 mx-auto mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-1">Nationwide Service</h3>
-              <p className="text-gray-600 text-sm">Elite partnerships</p>
-              <p className="text-gray-600 text-sm">Coast to coast</p>
+              <Globe className="h-8 w-8 text-primary-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-secondary-900 mb-1">Nationwide Service</h3>
+              <p className="text-secondary-600 text-sm">Elite partnerships</p>
+              <p className="text-secondary-600 text-sm">Coast to coast</p>
             </div>
           </div>
         </div>
