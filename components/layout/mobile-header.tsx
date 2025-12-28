@@ -116,12 +116,12 @@ export default function MobileHeader() {
                 <Logo size={40} className="transition-transform duration-200 group-hover:scale-105" />
               </Link>
 
-              {/* Mobile Menu Button - BOLDER COLORS */}
+              {/* Mobile Menu Button - INCREASED TAP TARGET */}
               <div className="flex items-center gap-2">
                 <a 
-                  href="tel:5305538883" 
-                  className="inline-flex items-center justify-center rounded-lg p-2.5 text-accent-500 hover:bg-accent-50 hover:text-accent-600 transition-all duration-200 hover:scale-110 shadow-sm hover:shadow-md"
-                  aria-label="Call us"
+                  href="tel:+15305538883"
+                  className="inline-flex items-center justify-center rounded-lg min-w-[48px] min-h-[48px] p-3 text-accent-500 hover:bg-accent-50 hover:text-accent-600 transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md"
+                  aria-label="Call us at (530) 553-8883"
                 >
                   <Phone className="h-5 w-5" />
                 </a>
@@ -129,8 +129,10 @@ export default function MobileHeader() {
                   variant="outline"
                   size="sm"
                   onClick={() => setIsMenuOpen(true)}
-                  className="p-2.5 border-2 border-primary-500 text-primary-600 hover:bg-primary-50 hover:border-primary-600 hover:scale-105 transition-all duration-200"
-                  aria-label="Open menu"
+                  className="min-w-[48px] min-h-[48px] p-3 border-2 border-primary-500 text-primary-600 hover:bg-primary-50 hover:border-primary-600 hover:scale-105 active:scale-95 transition-all duration-200"
+                  aria-label="Open navigation menu"
+                  aria-expanded={isMenuOpen}
+                  aria-controls="mobile-menu"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -145,24 +147,38 @@ export default function MobileHeader() {
       {/* Mobile Navigation */}
       <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
         <nav className="space-y-6">
-          {/* Main Navigation - IMPROVED HIERARCHY & COLORS */}
-          <div className="space-y-3">
+          {/* Main Navigation - IMPROVED TAP TARGETS & FEEDBACK */}
+          <div className="space-y-2">
             {navigationItems.map((item) => (
-              <div key={item.name} className="border-b border-gray-100 last:border-0 pb-3 last:pb-0">
+              <div key={item.name} className="border-b border-gray-100 last:border-0 pb-2 last:pb-0">
                 <Link
                   href={item.href}
-                  className="block text-lg font-bold text-slate-900 hover:text-primary-600 transition-all duration-200 py-2.5 hover:translate-x-1"
+                  className="
+                    block min-h-[48px] flex items-center
+                    text-lg font-bold text-slate-900 
+                    hover:text-primary-600 hover:bg-primary-50
+                    active:bg-primary-100 active:scale-[0.98]
+                    transition-all duration-200 
+                    py-3 px-3 -mx-3 rounded-lg
+                  "
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
                 {item.submenu && (
-                  <div className="ml-4 mt-2 space-y-1.5 border-l-2 border-primary-100 pl-3">
+                  <div className="ml-4 mt-2 space-y-1 border-l-2 border-primary-100 pl-3">
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="block text-sm font-medium text-slate-600 hover:text-primary-600 hover:font-semibold transition-all duration-200 py-1.5 hover:translate-x-1"
+                        className="
+                          block min-h-[48px] flex items-center
+                          text-base font-medium text-slate-600 
+                          hover:text-primary-600 hover:bg-primary-50 hover:font-semibold
+                          active:bg-primary-100 active:scale-[0.98]
+                          transition-all duration-200 
+                          py-2.5 px-2 -mx-2 rounded-lg
+                        "
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.name}
@@ -174,14 +190,23 @@ export default function MobileHeader() {
             ))}
           </div>
 
-          {/* Quick Actions - BOLDER, MORE PROMINENT CTAs */}
+          {/* Quick Actions - IMPROVED TAP TARGETS */}
           <div className="pt-6 border-t-2 border-primary-200 space-y-3">
             <TouchButton
               variant="primary"
               size="lg"
               fullWidth
               onClick={() => setIsMenuOpen(false)}
-              className="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold text-base shadow-lg hover:shadow-xl hover:shadow-accent-500/50 transition-all duration-300 hover:scale-105"
+              className="
+                min-h-[56px] 
+                bg-gradient-to-r from-accent-500 to-accent-600 
+                hover:from-accent-600 hover:to-accent-700 
+                active:from-accent-700 active:to-accent-800
+                text-white font-bold text-base 
+                shadow-lg hover:shadow-xl hover:shadow-accent-500/50 
+                transition-all duration-300 
+                active:scale-[0.98]
+              "
             >
               <Link href="/contact" className="w-full flex items-center justify-center gap-2">
                 <span>Get Started</span>
@@ -196,33 +221,58 @@ export default function MobileHeader() {
               size="lg"
               fullWidth
               onClick={() => setIsMenuOpen(false)}
-              className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-bold text-base shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="
+                min-h-[56px]
+                border-2 border-primary-600 text-primary-600 
+                hover:bg-primary-600 hover:text-white 
+                active:bg-primary-700 active:border-primary-700
+                font-bold text-base 
+                shadow-md hover:shadow-lg 
+                transition-all duration-300 
+                active:scale-[0.98]
+              "
             >
-              <Link href="/seo-audit" className="w-full flex items-center justify-center gap-2">
+              <Link href="/free-growth-plan" className="w-full flex items-center justify-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span>Free SEO Audit</span>
+                <span>Free Growth Plan</span>
               </Link>
             </TouchButton>
           </div>
 
-          {/* Contact Info - BOLDER COLORS & BETTER VISIBILITY */}
+          {/* Contact Info - IMPROVED TAP TARGETS */}
           <div className="pt-6 border-t-2 border-primary-200 space-y-3 bg-gradient-to-br from-primary-50/50 to-accent-50/30 rounded-xl p-4 -mx-2">
-            <div className="flex items-start gap-3 text-sm font-medium text-slate-700">
+            <div className="flex items-start gap-3 text-sm font-medium text-slate-700 min-h-[44px]">
               <MapPin className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
               <span className="leading-relaxed">2281 Lava Ridge Ct, Roseville, CA 95661</span>
             </div>
             <a 
-              href="tel:5305538883" 
-              className="flex items-center gap-3 text-sm font-semibold text-slate-700 hover:text-primary-600 transition-all duration-200 hover:translate-x-1"
+              href="tel:+15305538883"
+              className="
+                flex items-center gap-3 
+                min-h-[48px]
+                text-base font-semibold text-slate-700 
+                hover:text-primary-600 hover:bg-primary-50
+                active:bg-primary-100 active:scale-[0.98]
+                transition-all duration-200 
+                py-2 px-2 -mx-2 rounded-lg
+              "
             >
               <Phone className="w-5 h-5 text-primary-600 flex-shrink-0" />
               <span className="font-bold">(530) 553-8883</span>
             </a>
             <a 
               href="mailto:info@webvello.com" 
-              className="flex items-center gap-3 text-sm font-semibold text-slate-700 hover:text-primary-600 transition-all duration-200 hover:translate-x-1"
+              className="
+                flex items-center gap-3 
+                min-h-[48px]
+                text-base font-semibold text-slate-700 
+                hover:text-primary-600 hover:bg-primary-50
+                active:bg-primary-100 active:scale-[0.98]
+                transition-all duration-200 
+                py-2 px-2 -mx-2 rounded-lg
+              "
             >
               <svg className="w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

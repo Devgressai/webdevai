@@ -159,6 +159,18 @@ interface MobileNavProps {
 export function MobileNav({ isOpen, onClose, children }: MobileNavProps) {
   const { isMobile } = useMobileDetection()
   
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+  
   if (!isMobile) return <>{children}</>
   
   return (
@@ -166,31 +178,47 @@ export function MobileNav({ isOpen, onClose, children }: MobileNavProps) {
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300"
           onClick={onClose}
+          aria-hidden="true"
         />
       )}
       
-      {/* Mobile menu */}
-      <div className={`
-        fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl z-50
-        transform transition-transform duration-300 ease-in-out
-        flex flex-col
-        ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-      `}>
-        <div className="flex items-center justify-between p-4 border-b border-gray-200 flex-shrink-0">
+      {/* Mobile menu - CONSTRAINED WIDTH & IMPROVED SCROLLING */}
+      <div 
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation menu"
+        className={`
+          fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white shadow-2xl z-50
+          transform transition-transform duration-300 ease-in-out
+          flex flex-col
+          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+        `}
+        style={{
+          WebkitOverflowScrolling: 'touch', // iOS momentum scrolling
+        }}
+      >
+        <div className="flex items-center justify-between p-4 border-b border-gray-200 flex-shrink-0 bg-white sticky top-0 z-10">
           <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Close menu"
+            className="min-w-[48px] min-h-[48px] p-3 -mr-3 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors active:scale-95"
+            aria-label="Close navigation menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <div className="flex-1 overflow-y-auto p-4">
+        <div 
+          className="flex-1 overflow-y-auto p-4"
+          style={{
+            overscrollBehavior: 'contain', // Prevent pull-to-refresh on iOS
+            WebkitOverflowScrolling: 'touch', // Smooth momentum scrolling
+          }}
+        >
           {children}
         </div>
       </div>
