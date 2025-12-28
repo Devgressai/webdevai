@@ -3,6 +3,7 @@
 import { useState, FormEvent, KeyboardEvent, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Lock } from "lucide-react"
@@ -133,13 +134,17 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900">
-      {/* Background image from Unsplash (WebP format for fast loading) */}
+      {/* Background image - Fixed CLS with next/image */}
       <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/images/hero-background.webp')",
-          }}
+        <Image
+          src="/images/hero-background.webp"
+          alt=""
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover object-center"
+          style={{ objectFit: 'cover' }}
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/75 to-blue-900/80" />

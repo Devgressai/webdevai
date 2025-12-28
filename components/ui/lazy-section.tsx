@@ -7,13 +7,15 @@ interface LazySectionProps {
   className?: string
   threshold?: number
   rootMargin?: string
+  minHeight?: string
 }
 
 export function LazySection({ 
   children, 
   className = '', 
   threshold = 0.1,
-  rootMargin = '50px'
+  rootMargin = '200px 0px 400px 0px', // Mobile optimized: load earlier above, much later below
+  minHeight = '200px'
 }: LazySectionProps) {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -42,7 +44,7 @@ export function LazySection({
   return (
     <div ref={ref} className={className}>
       {isVisible ? children : (
-        <div className="min-h-[200px] bg-gray-100 animate-pulse rounded-lg" />
+        <div className="animate-pulse rounded-lg bg-gray-100" style={{ minHeight }} />
       )}
     </div>
   )

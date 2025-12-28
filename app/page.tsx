@@ -40,12 +40,12 @@ export const metadata: Metadata = {
 // Lazy load heavy components to reduce initial bundle
 const Pricing = dynamic(() => import('../components/sections/pricing'), { 
   ssr: true,
-  loading: () => <div className="h-96 animate-pulse bg-gray-100 rounded-lg" />
+  loading: () => <div className="animate-pulse bg-gray-100 rounded-lg" style={{ minHeight: '800px' }} />
 })
 
 const SocialProof = dynamic(() => import('../components/sections/social-proof'), { 
   ssr: false,
-  loading: () => <div className="h-48 animate-pulse bg-gray-100 rounded-lg" />
+  loading: () => <div className="animate-pulse bg-gray-100 rounded-lg" style={{ minHeight: '400px' }} />
 })
 
 const services = [

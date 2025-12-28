@@ -7,19 +7,19 @@ import Link from 'next/link'
 
 // Dynamic imports for better code splitting
 const Hero = dynamic(() => import('../components/sections/hero').then(mod => ({ default: mod.Hero })), {
-  loading: () => <div className="h-96 bg-gradient-to-br from-primary-50 to-white animate-pulse" />
+  loading: () => <div className="bg-gradient-to-br from-primary-50 to-white animate-pulse" style={{ minHeight: '600px' }} />
 })
 
 const Pricing = dynamic(() => import('../components/sections/pricing').then(mod => ({ default: mod.Pricing })), {
-  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />
+  loading: () => <div className="bg-gray-50 animate-pulse" style={{ minHeight: '800px' }} />
 })
 
 const WebsiteAssessment = dynamic(() => import('../components/sections/website-assessment').then(mod => ({ default: mod.WebsiteAssessment })), {
-  loading: () => <div className="h-96 bg-gradient-to-br from-primary-50 to-white animate-pulse" />
+  loading: () => <div className="bg-gradient-to-br from-primary-50 to-white animate-pulse" style={{ minHeight: '500px' }} />
 })
 
 const SocialProof = dynamic(() => import('../components/sections/social-proof').then(mod => ({ default: mod.SocialProof })), {
-  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />
+  loading: () => <div className="bg-gray-50 animate-pulse" style={{ minHeight: '400px' }} />
 })
 
 const services = [
