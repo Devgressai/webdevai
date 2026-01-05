@@ -2,17 +2,25 @@
 
 import { useEffect, useState } from 'react'
 import { getCalendlyEmbedUrl } from '@/lib/calendly'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, Calendar, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 
 export function BookPageClient() {
   const [calendlyUrl, setCalendlyUrl] = useState<string>('')
   const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
     // Get the Calendly URL with UTM params on client side
     const url = getCalendlyEmbedUrl()
+    console.log('Calendly URL:', url) // Debug log
     setCalendlyUrl(url)
     setIsLoading(false)
+    
+    // Check if URL is valid (not the placeholder)
+    if (url.includes('YOUR-USERNAME') || !url.includes('calendly.com')) {
+      setHasError(true)
+    }
   }, [])
 
   return (
@@ -62,8 +70,30 @@ export function BookPageClient() {
                 <p className="text-slate-600">Loading calendar...</p>
               </div>
             </div>
-          ) : calendlyUrl ? (
-            <div className="w-full" style={{ minHeight: '800px' }}>
+          ) : hasError || !calendlyUrl || calendlyUrl.includes('YOUR-USERNAME') ? (
+            <div className="flex flex-col items-center justify-center h-[800px] p-8">
+              <Calendar className="h-16 w-16 text-slate-400 mb-4" />
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Calendar Not Configured</h3>
+              <p className="text-slate-600 mb-6 text-center max-w-md">
+                Please set your Calendly username in environment variables, or book directly on Calendly.
+              </p>
+              <Link
+                href="https://calendly.com/webvello/discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+              >
+                <span>Book on Calendly</span>
+                <ExternalLink className="h-4 w-4" />
+              </Link>
+              {process.env.NODE_ENV === 'development' && (
+                <p className="text-xs text-slate-400 mt-4">
+                  Debug: {calendlyUrl || 'No URL generated'}
+                </p>
+              )}
+            </div>
+          ) : (
+            <div className="w-full" style={{ minHeight: '800px', position: 'relative' }}>
               <iframe
                 src={calendlyUrl}
                 width="100%"
@@ -73,18 +103,20 @@ export function BookPageClient() {
                 className="w-full border-0"
                 style={{ minHeight: '800px' }}
                 allow="camera; microphone; geolocation"
+                onError={() => setHasError(true)}
+                onLoad={() => setHasError(false)}
               />
-            </div>
-          ) : (
-            <div className="flex items-center justify-center h-[800px]">
-              <div className="text-center">
-                <p className="text-slate-600 mb-4">Unable to load calendar.</p>
-                <p className="text-sm text-slate-500">
-                  Please check your Calendly configuration or{' '}
-                  <a href="https://calendly.com/webvello/discovery-call" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                    book directly on Calendly
-                  </a>
-                </p>
+              {/* Fallback link if iframe fails */}
+              <div className="absolute bottom-4 right-4">
+                <a
+                  href={calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-slate-500 hover:text-blue-600 flex items-center gap-1"
+                >
+                  Open in new tab
+                  <ExternalLink className="h-3 w-3" />
+                </a>
               </div>
             </div>
           )}
