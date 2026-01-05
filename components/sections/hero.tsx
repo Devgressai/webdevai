@@ -214,20 +214,20 @@ export function Hero() {
                 </Link>
               </Button>
               
-              {/* Dual CTAs - Right side */}
-              <div className="flex items-center gap-3 w-full sm:w-auto">
+              {/* Dual CTAs - Contact Us & Book Discovery Call */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
                   className="
-                    flex-1 sm:flex-none
+                    w-full sm:w-auto
                     min-h-[56px] sm:min-h-[60px]
-                    border-2 border-white/40 text-white
-                    hover:bg-white/20 hover:border-white/60
+                    border-2 border-white text-white
+                    hover:bg-white hover:text-blue-600
                     px-6 sm:px-8 py-4 sm:py-5
                     text-base sm:text-lg font-semibold
                     rounded-xl
-                    backdrop-blur-sm
+                    backdrop-blur-sm bg-white/10
                     transition-all duration-300
                     focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
                     active:scale-[0.98]
@@ -246,7 +246,7 @@ export function Hero() {
                     openCalendlyPopup()
                   }}
                   className="
-                    flex-1 sm:flex-none
+                    w-full sm:w-auto
                     min-h-[56px] sm:min-h-[60px]
                     bg-blue-600 text-white
                     hover:bg-blue-700
