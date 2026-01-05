@@ -4,14 +4,14 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo-config'
 
 export const metadata: Metadata = {
   title: 'Book a Discovery Call | Web Vello',
-  description: 'Schedule a dedicated time to discuss your project, goals, and challenges. We'll evaluate your current digital presence and outline clear next steps.',
+  description: 'Schedule a dedicated time to discuss your project, goals, and challenges. We will evaluate your current digital presence and outline clear next steps.',
   keywords: ['book discovery call', 'schedule consultation', 'web development consultation', 'SEO consultation', 'digital marketing consultation'],
   alternates: {
     canonical: 'https://www.webvello.com/book',
   },
   openGraph: {
     title: 'Book a Discovery Call | Web Vello',
-    description: 'Schedule a dedicated time to discuss your project, goals, and challenges. We'll evaluate your current digital presence and outline clear next steps.',
+    description: 'Schedule a dedicated time to discuss your project, goals, and challenges. We will evaluate your current digital presence and outline clear next steps.',
     url: 'https://www.webvello.com/book',
     type: 'website',
     images: [
