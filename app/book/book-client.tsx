@@ -1,55 +1,18 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { getCalendlyEmbedUrl } from '@/lib/calendly'
 import { CheckCircle } from 'lucide-react'
 
 export function BookPageClient() {
   const [calendlyUrl, setCalendlyUrl] = useState<string>('')
-  const calendlyInlineRef = useRef<HTMLDivElement>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     // Get the Calendly URL with UTM params on client side
     const url = getCalendlyEmbedUrl()
     setCalendlyUrl(url)
-
-    // Initialize Calendly inline widget
-    const initCalendly = () => {
-      if (typeof (window as any).Calendly !== 'undefined' && calendlyInlineRef.current) {
-        try {
-          ;(window as any).Calendly.initInlineWidget({
-            url: url,
-            parentElement: calendlyInlineRef.current,
-            prefill: {},
-            utm: {}
-          })
-        } catch (error) {
-          console.error('Error initializing Calendly widget:', error)
-        }
-      }
-    }
-
-    // Check if Calendly is already loaded (from layout.tsx)
-    if (typeof (window as any).Calendly !== 'undefined') {
-      // Script already loaded, initialize immediately
-      initCalendly()
-    } else {
-      // Script not loaded yet, wait for it
-      const checkCalendly = setInterval(() => {
-        if (typeof (window as any).Calendly !== 'undefined') {
-          clearInterval(checkCalendly)
-          initCalendly()
-        }
-      }, 100)
-
-      // Timeout after 5 seconds
-      setTimeout(() => {
-        clearInterval(checkCalendly)
-        if (typeof (window as any).Calendly === 'undefined') {
-          console.warn('Calendly script not loaded after 5 seconds')
-        }
-      }, 5000)
-    }
+    setIsLoading(false)
   }, [])
 
   return (
@@ -89,28 +52,40 @@ export function BookPageClient() {
         </div>
       </div>
 
-      {/* Calendly Inline Embed Section */}
+      {/* Calendly Embed Section */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-          {/* Calendly inline widget container */}
-          <div 
-            ref={calendlyInlineRef}
-            className="calendly-inline-widget w-full"
-            style={{ minHeight: '800px', height: '800px' }}
-          />
-          
-          {/* Fallback iframe if inline widget doesn't load */}
-          {calendlyUrl && (
-            <div className="hidden" style={{ display: 'none' }}>
+          {isLoading ? (
+            <div className="flex items-center justify-center h-[800px]">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                <p className="text-slate-600">Loading calendar...</p>
+              </div>
+            </div>
+          ) : calendlyUrl ? (
+            <div className="w-full" style={{ minHeight: '800px' }}>
               <iframe
                 src={calendlyUrl}
                 width="100%"
                 height="800"
                 frameBorder="0"
                 title="Book a Discovery Call"
-                className="w-full"
+                className="w-full border-0"
                 style={{ minHeight: '800px' }}
+                allow="camera; microphone; geolocation"
               />
+            </div>
+          ) : (
+            <div className="flex items-center justify-center h-[800px]">
+              <div className="text-center">
+                <p className="text-slate-600 mb-4">Unable to load calendar.</p>
+                <p className="text-sm text-slate-500">
+                  Please check your Calendly configuration or{' '}
+                  <a href="https://calendly.com/webvello/discovery-call" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                    book directly on Calendly
+                  </a>
+                </p>
+              </div>
             </div>
           )}
         </div>
