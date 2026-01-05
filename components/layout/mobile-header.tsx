@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useMobileDetection, TouchButton, MobileNav } from '@/components/ui/mobile-optimizations'
 import { Logo } from '@/components/ui/logo'
 import { Phone, MapPin, Mail } from 'lucide-react'
+import { openCalendlyPopup } from '@/lib/calendly'
 
 export default function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -193,34 +194,13 @@ export default function MobileHeader() {
           {/* Quick Actions - IMPROVED TAP TARGETS */}
           <div className="pt-6 border-t-2 border-primary-200 space-y-3">
             <TouchButton
-              variant="primary"
-              size="lg"
-              fullWidth
-              onClick={() => setIsMenuOpen(false)}
-              className="
-                min-h-[56px] 
-                bg-gradient-to-r from-accent-500 to-accent-600 
-                hover:from-accent-600 hover:to-accent-700 
-                active:from-accent-700 active:to-accent-800
-                text-white font-bold text-base 
-                shadow-lg hover:shadow-xl hover:shadow-accent-500/50 
-                transition-all duration-300 
-                active:scale-[0.98]
-              "
-            >
-              <Link href="/contact" className="w-full flex items-center justify-center gap-2">
-                <span>Get Started</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            </TouchButton>
-            
-            <TouchButton
               variant="outline"
               size="lg"
               fullWidth
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                setIsMenuOpen(false)
+                // Navigation will happen via Link
+              }}
               className="
                 min-h-[56px]
                 border-2 border-primary-600 text-primary-600 
@@ -230,14 +210,52 @@ export default function MobileHeader() {
                 shadow-md hover:shadow-lg 
                 transition-all duration-300 
                 active:scale-[0.98]
+                rounded-xl
               "
+              data-cta="header-contact"
+              aria-label="Contact Us"
             >
-              <Link href="/free-growth-plan" className="w-full flex items-center justify-center gap-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Free Growth Plan</span>
+              <Link 
+                href="/contact" 
+                className="w-full flex items-center justify-center gap-2"
+                onClick={(e) => {
+                  // Let the link handle navigation
+                  setIsMenuOpen(false)
+                }}
+              >
+                <span>Contact Us</span>
               </Link>
+            </TouchButton>
+            
+            <TouchButton
+              variant="primary"
+              size="lg"
+              fullWidth
+              onClick={(e) => {
+                e.preventDefault()
+                setIsMenuOpen(false)
+                openCalendlyPopup()
+              }}
+              className="
+                min-h-[56px] 
+                bg-gradient-to-r from-primary-500 to-primary-600 
+                hover:from-primary-600 hover:to-primary-700 
+                active:from-primary-700 active:to-primary-800
+                text-white font-bold text-base 
+                shadow-lg hover:shadow-xl hover:shadow-primary-500/50 
+                transition-all duration-300 
+                active:scale-[0.98]
+                rounded-xl
+              "
+              data-cta="header-book-discovery-call"
+              aria-label="Book a Discovery Call"
+            >
+              <span className="w-full flex items-center justify-center gap-2">
+                <span>Book a Discovery Call</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
             </TouchButton>
           </div>
 

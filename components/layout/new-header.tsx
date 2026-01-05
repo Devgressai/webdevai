@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "../ui/button"
 import { Logo } from "../ui/logo"
+import { openCalendlyPopup } from "../../lib/calendly"
 // Import only essential icons to reduce bundle size
 import { 
   Menu, X, ChevronDown, Phone, BarChart3, 
@@ -467,10 +468,27 @@ export function NewHeader() {
              ))}
            </div>
           
-          {/* Get Started Button - Far Right */}
-          <div className="hidden lg:flex lg:flex-shrink-0 lg:ml-auto">
-            <Button asChild className="rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-md">
-              <Link href="/contact">Get Started</Link>
+          {/* CTA Buttons - Far Right */}
+          <div className="hidden lg:flex lg:flex-shrink-0 lg:ml-auto lg:items-center lg:gap-3">
+            <Button
+              variant="outline"
+              className="rounded-xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-5 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
+              data-cta="header-contact"
+              aria-label="Contact Us"
+              asChild
+            >
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+            <Button
+              onClick={(e) => {
+                e.preventDefault()
+                openCalendlyPopup()
+              }}
+              className="rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
+              data-cta="header-book-discovery-call"
+              aria-label="Book a Discovery Call"
+            >
+              Book a Discovery Call
             </Button>
           </div>
           
@@ -555,10 +573,28 @@ export function NewHeader() {
                   ))}
                 </div>
                 <div className="py-6 space-y-3">
-                  <Button asChild className="w-full rounded-lg bg-blue-600 hover:bg-blue-700 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200">
+                  <Button
+                    variant="outline"
+                    className="w-full rounded-xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
+                    data-cta="header-contact"
+                    aria-label="Contact Us"
+                    asChild
+                  >
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                      Get Started
+                      Contact Us
                     </Link>
+                  </Button>
+                  <Button
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setMobileMenuOpen(false)
+                      openCalendlyPopup()
+                    }}
+                    className="w-full rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
+                    data-cta="header-book-discovery-call"
+                    aria-label="Book a Discovery Call"
+                  >
+                    Book a Discovery Call
                   </Button>
                   <div className="pt-4 border-t border-slate-200 space-y-3">
                     <div className="flex items-center gap-2 text-sm text-slate-600">

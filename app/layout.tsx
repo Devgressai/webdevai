@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { NewHeader as Header } from '../components/layout/new-header'
@@ -370,6 +371,12 @@ export default function RootLayout({
               ]
             })
           }}
+        />
+        
+        {/* Calendly Widget Script */}
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="afterInteractive"
         />
       </body>
     </html>

@@ -9,6 +9,7 @@ import { Input } from "../ui/input"
 import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Lock } from "lucide-react"
 import { normalizeUrl, validateUrl } from "@/lib/url-utils"
 import { getVariant, trackVariantView } from "@/lib/variant-utils"
+import { openCalendlyPopup } from "@/lib/calendly"
 // import { useConversionTracking } from "../../hooks/useConversionTracking"
 // import ScrollTracker from "../analytics/scroll-tracker"
 
@@ -187,30 +188,83 @@ export function Hero() {
 
           {/* Primary CTA - High Contrast, Above the Fold */}
           <div className="mb-6 sm:mb-8">
-            <Button 
-              size="lg"
-              onClick={handleStrategySessionClick}
-              className="
-                w-full sm:w-auto
-                min-h-[56px] sm:min-h-[60px]
-                bg-white text-blue-600 
-                hover:bg-blue-50 hover:text-blue-700
-                px-8 sm:px-10 py-4 sm:py-5
-                text-lg sm:text-xl font-bold 
-                shadow-2xl hover:shadow-white/50
-                transition-all duration-300
-                focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
-                active:scale-[0.98]
-              " 
-              asChild
-            >
-              <Link href="/contact">
-                <span className="flex items-center justify-center whitespace-nowrap">
-                  Get Free Growth Plan
-                  <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
-                </span>
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+              <Button 
+                size="lg"
+                onClick={handleStrategySessionClick}
+                className="
+                  w-full sm:w-auto
+                  min-h-[56px] sm:min-h-[60px]
+                  bg-white text-blue-600 
+                  hover:bg-blue-50 hover:text-blue-700
+                  px-8 sm:px-10 py-4 sm:py-5
+                  text-lg sm:text-xl font-bold 
+                  shadow-2xl hover:shadow-white/50
+                  transition-all duration-300
+                  focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
+                  active:scale-[0.98]
+                " 
+                asChild
+              >
+                <Link href="/contact">
+                  <span className="flex items-center justify-center whitespace-nowrap">
+                    Get Free Growth Plan
+                    <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
+                  </span>
+                </Link>
+              </Button>
+              
+              {/* Dual CTAs - Right side */}
+              <div className="flex items-center gap-3 w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="
+                    flex-1 sm:flex-none
+                    min-h-[56px] sm:min-h-[60px]
+                    border-2 border-white/40 text-white
+                    hover:bg-white/20 hover:border-white/60
+                    px-6 sm:px-8 py-4 sm:py-5
+                    text-base sm:text-lg font-semibold
+                    rounded-xl
+                    backdrop-blur-sm
+                    transition-all duration-300
+                    focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
+                    active:scale-[0.98]
+                  "
+                  data-cta="hero-contact"
+                  aria-label="Contact Us"
+                  asChild
+                >
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
+                
+                <Button
+                  size="lg"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    openCalendlyPopup()
+                  }}
+                  className="
+                    flex-1 sm:flex-none
+                    min-h-[56px] sm:min-h-[60px]
+                    bg-blue-600 text-white
+                    hover:bg-blue-700
+                    px-6 sm:px-8 py-4 sm:py-5
+                    text-base sm:text-lg font-semibold
+                    rounded-xl
+                    shadow-xl hover:shadow-2xl
+                    transition-all duration-300
+                    focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
+                    active:scale-[0.98]
+                  "
+                  data-cta="hero-book-discovery-call"
+                  aria-label="Book a Discovery Call"
+                >
+                  Book a Discovery Call
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Mobile Trust Strip - Compact Metrics */}
