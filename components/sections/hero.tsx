@@ -147,10 +147,6 @@ export function Hero() {
           className="object-cover object-center"
           style={{ objectFit: 'cover' }}
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/75 to-blue-900/80" />
-        {/* Additional gradient overlay for better contrast */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-indigo-900/50 to-blue-900/60" />
       </div>
       
       {/* Background tech grid + glow (subtle overlay) */}
