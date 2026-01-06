@@ -18,11 +18,14 @@ export function BookPageClient() {
     setCalendlyUrl(url)
     
     // Check if URL is valid (not the placeholder)
-    if (url.includes('YOUR-USERNAME') || !url.includes('calendly.com')) {
+    if (url.includes('YOUR-USERNAME') || !url.includes('calendly.com') || url.includes('calendly.com/YOUR-USERNAME')) {
       setHasError(true)
       setIsLoading(false)
       return
     }
+    
+    // URL is valid, proceed with initialization
+    setHasError(false)
 
     // Initialize Calendly inline widget (recommended method)
     const initCalendly = () => {
