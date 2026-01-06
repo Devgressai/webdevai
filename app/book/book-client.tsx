@@ -32,18 +32,55 @@ export function BookPageClient() {
       if (typeof (window as any).Calendly !== 'undefined' && calendlyRef.current) {
         try {
           console.log('Initializing Calendly with URL:', url)
+          // Clear any existing content
+          if (calendlyRef.current) {
+            calendlyRef.current.innerHTML = ''
+          }
+          
           ;(window as any).Calendly.initInlineWidget({
             url: url,
             parentElement: calendlyRef.current,
             prefill: {},
             utm: {}
           })
-          setIsLoading(false)
-          setHasError(false)
+          
+          // Wait a bit then check if widget loaded
+          setTimeout(() => {
+            if (calendlyRef.current && calendlyRef.current.children.length === 0) {
+              console.warn('Calendly widget did not load, trying iframe fallback')
+              // Fallback to iframe
+              const iframe = document.createElement('iframe')
+              iframe.src = url
+              iframe.width = '100%'
+              iframe.height = '800'
+              iframe.frameBorder = '0'
+              iframe.style.minHeight = '800px'
+              iframe.title = 'Book a Discovery Call'
+              iframe.allow = 'camera; microphone; geolocation'
+              if (calendlyRef.current) {
+                calendlyRef.current.innerHTML = ''
+                calendlyRef.current.appendChild(iframe)
+              }
+            }
+            setIsLoading(false)
+          }, 2000)
         } catch (error) {
           console.error('Error initializing Calendly:', error)
-          setHasError(true)
+          // Fallback to iframe on error
+          if (calendlyRef.current) {
+            const iframe = document.createElement('iframe')
+            iframe.src = url
+            iframe.width = '100%'
+            iframe.height = '800'
+            iframe.frameBorder = '0'
+            iframe.style.minHeight = '800px'
+            iframe.title = 'Book a Discovery Call'
+            iframe.allow = 'camera; microphone; geolocation'
+            calendlyRef.current.innerHTML = ''
+            calendlyRef.current.appendChild(iframe)
+          }
           setIsLoading(false)
+          setHasError(false)
         }
       } else {
         console.log('Calendly not ready:', {
@@ -55,23 +92,35 @@ export function BookPageClient() {
 
     // Check if Calendly script is already loaded
     if (typeof (window as any).Calendly !== 'undefined') {
-      initCalendly()
+      // Small delay to ensure DOM is ready
+      setTimeout(initCalendly, 100)
     } else {
       // Wait for script to load
       const checkInterval = setInterval(() => {
         if (typeof (window as any).Calendly !== 'undefined') {
           clearInterval(checkInterval)
-          initCalendly()
+          setTimeout(initCalendly, 100)
         }
       }, 100)
 
-      // Timeout after 10 seconds
+      // Timeout after 10 seconds - fallback to iframe
       setTimeout(() => {
         clearInterval(checkInterval)
         if (typeof (window as any).Calendly === 'undefined') {
-          console.error('Calendly script failed to load')
-          setHasError(true)
-          setIsLoading(false)
+          console.warn('Calendly script failed to load, using iframe fallback')
+          if (calendlyRef.current && url) {
+            const iframe = document.createElement('iframe')
+            iframe.src = url
+            iframe.width = '100%'
+            iframe.height = '800'
+            iframe.frameBorder = '0'
+            iframe.style.minHeight = '800px'
+            iframe.title = 'Book a Discovery Call'
+            iframe.allow = 'camera; microphone; geolocation'
+            calendlyRef.current.innerHTML = ''
+            calendlyRef.current.appendChild(iframe)
+            setIsLoading(false)
+          }
         }
       }, 10000)
     }
