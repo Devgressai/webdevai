@@ -8,9 +8,10 @@
  */
 
 // Calendly configuration
-// Set NEXT_PUBLIC_CALENDLY_USERNAME in your .env.local file
+// Set NEXT_PUBLIC_CALENDLY_USERNAME in your .env.local file or Vercel environment variables
 // Example: NEXT_PUBLIC_CALENDLY_USERNAME=your-username
-const CALENDLY_USERNAME = process.env.NEXT_PUBLIC_CALENDLY_USERNAME || 'YOUR-USERNAME'
+// Temporary fallback: using webvello as default (update this if your username is different)
+const CALENDLY_USERNAME = process.env.NEXT_PUBLIC_CALENDLY_USERNAME || 'webvello'
 const CALENDLY_EVENT_TYPE = process.env.NEXT_PUBLIC_CALENDLY_EVENT_TYPE || 'discovery-call'
 const CALENDLY_BASE_URL = `https://calendly.com/${CALENDLY_USERNAME}/${CALENDLY_EVENT_TYPE}`
 
