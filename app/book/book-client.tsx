@@ -117,7 +117,7 @@ export function BookPageClient() {
       {/* Calendly Embed Section */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-          {hasError || !calendlyUrl || calendlyUrl.includes('YOUR-USERNAME') ? (
+          {!calendlyUrl || calendlyUrl.includes('YOUR-USERNAME') ? (
             <div className="flex flex-col items-center justify-center h-[800px] p-8">
               <Calendar className="h-16 w-16 text-slate-400 mb-4" />
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Calendar Not Configured</h3>
