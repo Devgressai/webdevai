@@ -31,6 +31,7 @@ export function BookPageClient() {
     const initCalendly = () => {
       if (typeof (window as any).Calendly !== 'undefined' && calendlyRef.current) {
         try {
+          console.log('Initializing Calendly with URL:', url)
           ;(window as any).Calendly.initInlineWidget({
             url: url,
             parentElement: calendlyRef.current,
@@ -38,11 +39,17 @@ export function BookPageClient() {
             utm: {}
           })
           setIsLoading(false)
+          setHasError(false)
         } catch (error) {
           console.error('Error initializing Calendly:', error)
           setHasError(true)
           setIsLoading(false)
         }
+      } else {
+        console.log('Calendly not ready:', {
+          CalendlyExists: typeof (window as any).Calendly !== 'undefined',
+          refExists: !!calendlyRef.current
+        })
       }
     }
 
