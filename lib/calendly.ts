@@ -10,10 +10,12 @@
 // Calendly configuration
 // Set NEXT_PUBLIC_CALENDLY_USERNAME in your .env.local file or Vercel environment variables
 // Example: NEXT_PUBLIC_CALENDLY_USERNAME=your-username
-// Temporary fallback: using webvello as default (update this if your username is different)
+// If your Calendly link is just https://calendly.com/webvello (no event type), leave CALENDLY_EVENT_TYPE empty
 const CALENDLY_USERNAME = process.env.NEXT_PUBLIC_CALENDLY_USERNAME || 'webvello'
-const CALENDLY_EVENT_TYPE = process.env.NEXT_PUBLIC_CALENDLY_EVENT_TYPE || 'discovery-call'
-const CALENDLY_BASE_URL = `https://calendly.com/${CALENDLY_USERNAME}/${CALENDLY_EVENT_TYPE}`
+const CALENDLY_EVENT_TYPE = process.env.NEXT_PUBLIC_CALENDLY_EVENT_TYPE || '' // Empty if no event type
+const CALENDLY_BASE_URL = CALENDLY_EVENT_TYPE 
+  ? `https://calendly.com/${CALENDLY_USERNAME}/${CALENDLY_EVENT_TYPE}`
+  : `https://calendly.com/${CALENDLY_USERNAME}`
 
 /**
  * Get UTM parameters from current URL
