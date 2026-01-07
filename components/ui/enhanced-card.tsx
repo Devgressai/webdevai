@@ -67,7 +67,6 @@ const EnhancedCard = forwardRef<HTMLDivElement, EnhancedCardProps>(
       }
     }
 
-    const Component = clickable ? 'button' : 'div'
     const clickableProps = clickable ? {
       onClick: handleCardClick,
       onKeyDown: handleKeyDown,
@@ -75,15 +74,20 @@ const EnhancedCard = forwardRef<HTMLDivElement, EnhancedCardProps>(
       'aria-label': props['aria-label'] || 'Card action'
     } : {}
 
-    return (
-      <Component
-        ref={ref}
-        className={baseClasses}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        {...clickableProps}
-        {...props}
-      >
+    const commonProps = {
+      ref: ref as any,
+      className: baseClasses,
+      onMouseEnter: () => setIsHovered(true),
+      onMouseLeave: () => setIsHovered(false),
+      ...clickableProps,
+      ...props
+    }
+
+    if (clickable) {
+      return (
+        <button
+          {...commonProps}
+        >
         {/* Background pattern for glass variant */}
         {variant === 'glass' && (
           <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-50" />
@@ -141,6 +145,64 @@ const EnhancedCard = forwardRef<HTMLDivElement, EnhancedCardProps>(
             <ArrowUpRight className="h-5 w-5 text-primary-600" />
           </div>
         )}
+        </button>
+      )
+    }
+
+    return (
+      <div
+        {...commonProps}
+      >
+        {/* Background pattern for glass variant */}
+        {variant === 'glass' && (
+          <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-50" />
+        )}
+        
+        {/* Hover overlay */}
+        {hover && (
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
+        )}
+        
+        {/* Interactive elements */}
+        {interactive && (
+          <div className="absolute top-4 right-4 flex items-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation()
+                setIsLiked(!isLiked)
+              }}
+              aria-label={isLiked ? 'Unlike' : 'Like'}
+              className={`p-2 rounded-full transition-all duration-200 hover:bg-white/20 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 ${
+                isLiked ? 'text-red-500' : 'text-white/70'
+              }`}
+            >
+              <Heart className={`h-4 w-4 ${isLiked ? 'fill-current' : ''}`} />
+            </button>
+            <button
+              type="button"
+              aria-label="Share"
+              className="p-2 rounded-full text-white/70 hover:bg-white/20 hover:scale-110 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+            >
+              <Share2 className="h-4 w-4" />
+            </button>
+          </div>
+        )}
+        
+        {/* Featured badge */}
+        {featured && (
+          <div className="absolute top-4 left-4">
+            <div className="flex items-center gap-1 px-2 py-1 bg-primary-500 text-white text-xs font-medium rounded-full">
+              <Star className="h-3 w-3 fill-current" />
+              Featured
+            </div>
+          </div>
+        )}
+        
+        {/* Content */}
+        <div className="relative z-10">
+          {children}
+        </div>
       </div>
     )
   }
