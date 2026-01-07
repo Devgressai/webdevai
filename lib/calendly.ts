@@ -13,9 +13,16 @@
 // If your Calendly link is just https://calendly.com/webvello (no event type), leave CALENDLY_EVENT_TYPE empty
 const CALENDLY_USERNAME = process.env.NEXT_PUBLIC_CALENDLY_USERNAME || 'webvello'
 const CALENDLY_EVENT_TYPE = process.env.NEXT_PUBLIC_CALENDLY_EVENT_TYPE || '' // Empty if no event type
+
+// Base URL for regular links (popup/redirect)
 const CALENDLY_BASE_URL = CALENDLY_EVENT_TYPE 
   ? `https://calendly.com/${CALENDLY_USERNAME}/${CALENDLY_EVENT_TYPE}`
   : `https://calendly.com/${CALENDLY_USERNAME}`
+
+// Embed URL for iframe (requires /embed/ path)
+const CALENDLY_EMBED_URL = CALENDLY_EVENT_TYPE 
+  ? `https://calendly.com/${CALENDLY_USERNAME}/${CALENDLY_EVENT_TYPE}/embed`
+  : `https://calendly.com/${CALENDLY_USERNAME}/embed`
 
 /**
  * Get UTM parameters from current URL
@@ -38,7 +45,7 @@ function getUTMParams(): Record<string, string> {
 }
 
 /**
- * Build Calendly URL with UTM parameters
+ * Build Calendly URL with UTM parameters (for popup/redirect)
  */
 function buildCalendlyUrl(): string {
   if (typeof window === 'undefined') {
@@ -52,6 +59,31 @@ function buildCalendlyUrl(): string {
   Object.entries(utmParams).forEach(([key, value]) => {
     url.searchParams.append(key, value)
   })
+  
+  return url.toString()
+}
+
+/**
+ * Build Calendly embed URL with UTM parameters (for iframe)
+ * Uses /embed/ path which is required for iframe embeds
+ */
+function buildCalendlyEmbedUrl(): string {
+  if (typeof window === 'undefined') {
+    // SSR fallback - return embed URL without UTM params
+    return CALENDLY_EMBED_URL
+  }
+  
+  const utmParams = getUTMParams()
+  const url = new URL(CALENDLY_EMBED_URL)
+  
+  // Add UTM parameters
+  Object.entries(utmParams).forEach(([key, value]) => {
+    url.searchParams.append(key, value)
+  })
+  
+  // Add embed-specific parameters for better UX
+  url.searchParams.append('hide_event_type_details', '1')
+  url.searchParams.append('hide_gdpr_banner', '1')
   
   return url.toString()
 }
@@ -81,8 +113,9 @@ export function openCalendlyPopup(): void {
 
 /**
  * Get the Calendly embed URL for iframe usage
+ * Uses the /embed/ path which is required for iframe embeds
  */
 export function getCalendlyEmbedUrl(): string {
-  return buildCalendlyUrl()
+  return buildCalendlyEmbedUrl()
 }
 
