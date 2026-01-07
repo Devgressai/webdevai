@@ -6,12 +6,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
-import { ArrowRight, Play, Star, Users, TrendingUp, Zap, Target, Award, Lock } from "lucide-react"
+import { ArrowRight, TrendingUp, Zap, Award } from "lucide-react"
 import { normalizeUrl, validateUrl } from "@/lib/url-utils"
 import { getVariant, trackVariantView } from "@/lib/variant-utils"
 import { openCalendlyPopup } from "@/lib/calendly"
-// import { useConversionTracking } from "../../hooks/useConversionTracking"
-// import ScrollTracker from "../analytics/scroll-tracker"
 
 declare global {
   interface Window {
@@ -19,18 +17,6 @@ declare global {
     dataLayer?: any[]
   }
 }
-
-const stats = [
-  { id: 1, name: "Projects Completed", value: "500+", icon: TrendingUp, color: "from-blue-500 to-blue-600" },
-  { id: 2, name: "Happy Clients", value: "500+", icon: Users, color: "from-slate-600 to-slate-700" },
-  { id: 3, name: "ROI Average", value: "1,200%", icon: Zap, color: "from-indigo-500 to-indigo-600" },
-]
-
-const reviews = [
-  { id: 1, rating: 5, text: "Outstanding results and professional service", author: "Sarah M." },
-  { id: 2, rating: 5, text: "Transformed our online presence completely", author: "Mike R." },
-  { id: 3, rating: 5, text: "Best investment we've made this year", author: "Jennifer L." },
-]
 
 export function Hero() {
   const router = useRouter()
@@ -46,16 +32,7 @@ export function Hero() {
     trackVariantView('hero_microcopy', microcopyVariant.variant, microcopyVariant.source)
   }, [ctaVariant.variant, ctaVariant.source, microcopyVariant.variant, microcopyVariant.source])
 
-  // Temporarily disabled conversion tracking to fix build error
-  // const { trackCTAClick, trackStrategySession } = useConversionTracking()
-
-  const handleCTAClick = (buttonText: string, location: string) => {
-    // trackCTAClick(buttonText, location)
-    // Analytics tracking handled elsewhere
-  }
-
   const handleStrategySessionClick = () => {
-    // trackStrategySession('hero_section')
     // Analytics tracking handled elsewhere
   }
 
@@ -134,8 +111,8 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900">
-      {/* Background image - Fixed CLS with next/image */}
+    <section className="relative overflow-hidden bg-slate-900">
+      {/* Background image */}
       <div className="pointer-events-none absolute inset-0">
         <Image
           src="/images/hero-background.webp"
@@ -149,143 +126,138 @@ export function Hero() {
         />
       </div>
       
-      {/* Background tech grid + glow (subtle overlay) */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%233b82f6' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M0 20.5 H140M0 60.5 H140M0 100.5 H140'/%3E%3Cpath d='M20.5 0 V140M60.5 0 V140M100.5 0 V140'/%3E%3C/g%3E%3Ccircle cx='70' cy='70' r='2' fill='%233b82f6' fill-opacity='0.35'/%3E%3C/svg%3E\")",
-            backgroundSize: '140px 140px',
-            backgroundPosition: 'center',
-          }}
-        />
-        <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-gradient-to-br from-sky-500/20 via-indigo-500/10 to-transparent blur-3xl" />
-        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-indigo-500/20 via-sky-400/10 to-transparent blur-3xl" />
-      </div>
+      {/* Dark scrim overlay for text readability - WCAG AA compliant */}
+      <div 
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: 'linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.8) 100%)',
+        }}
+      />
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-24">
-        <div className="relative mx-auto max-w-3xl lg:max-w-4xl text-center">
-          {/* Badge - Compact on mobile */}
-          <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 sm:px-6 py-1.5 sm:py-3 text-xs sm:text-sm font-bold text-white ring-2 ring-inset ring-white/20 mb-4 sm:mb-6 shadow-2xl">
-            <Star className="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4 fill-white" />
+      {/* Content Container - Left-aligned for better readability */}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div className="max-w-3xl">
+          {/* Trust Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-primary-500/90 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-white mb-6 sm:mb-8 ring-1 ring-white/20">
+            <Award className="h-4 w-4" />
             <span className="hidden sm:inline">Trusted by 500+ businesses nationwide</span>
             <span className="sm:hidden">500+ Businesses</span>
           </div>
 
-          {/* Mobile-First Outcome-Driven Headlines */}
-          <h1 className="text-[30px] leading-[38px] sm:text-4xl sm:leading-tight lg:text-6xl lg:leading-tight font-bold tracking-tight text-white mb-4 sm:mb-6">
-            Get More Customers From Your Website
+          {/* Headline Options - Using Option 1 (AI-powered positioning) */}
+          {/* Option 1: AI-powered SEO/GEO/AEO positioning */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+            AI-Powered SEO That{' '}
+            <span className="text-primary-400">3–5x</span> Your Organic Growth
           </h1>
+          
+          {/* Option 2: Alternative headline (commented out)
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+            Transform Your Website Into a{' '}
+            <span className="text-primary-400">Revenue-Generating</span> Machine
+          </h1>
+          */}
 
-          <p className="text-base leading-relaxed sm:text-xl sm:leading-relaxed text-white/95 max-w-2xl mx-auto mb-6 sm:mb-8">
-            Free growth plan shows you exactly how to increase traffic and conversions.
+          {/* Subheadline */}
+          <p className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
+            We combine AI-driven SEO, GEO targeting, and conversion optimization to deliver measurable results. Get a free growth plan that shows exactly how to increase traffic and conversions.
           </p>
 
-          {/* Primary CTA - High Contrast, Above the Fold */}
-          <div className="mb-6 sm:mb-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <Button 
-                size="lg"
-                onClick={handleStrategySessionClick}
-                className="
-                  w-full sm:w-auto
-                  min-h-[56px] sm:min-h-[60px]
-                  bg-white text-blue-600 
-                  hover:bg-blue-50 hover:text-blue-700
-                  px-8 sm:px-10 py-4 sm:py-5
-                  text-lg sm:text-xl font-bold 
-                  shadow-2xl hover:shadow-white/50
-                  transition-all duration-300
-                  focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
-                  active:scale-[0.98]
-                " 
-                asChild
-              >
-                <Link href="/contact">
-                  <span className="flex items-center justify-center whitespace-nowrap">
-                    Get Free Growth Plan
-                    <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
-                  </span>
-                </Link>
-              </Button>
-              
-              {/* Dual CTAs - Contact Us & Book Discovery Call */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="
-                    w-full sm:w-auto
-                    min-h-[56px] sm:min-h-[60px]
-                    border-2 border-white text-white
-                    hover:bg-white hover:text-blue-600
-                    px-6 sm:px-8 py-4 sm:py-5
-                    text-base sm:text-lg font-semibold
-                    rounded-xl
-                    backdrop-blur-sm bg-white/10
-                    transition-all duration-300
-                    focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
-                    active:scale-[0.98]
-                  "
-                  data-cta="hero-contact"
-                  aria-label="Contact Us"
-                  asChild
-                >
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
-                
-                <Button
-                  size="lg"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    openCalendlyPopup()
-                  }}
-                  className="
-                    w-full sm:w-auto
-                    min-h-[56px] sm:min-h-[60px]
-                    bg-blue-600 text-white
-                    hover:bg-blue-700
-                    px-6 sm:px-8 py-4 sm:py-5
-                    text-base sm:text-lg font-semibold
-                    rounded-xl
-                    shadow-xl hover:shadow-2xl
-                    transition-all duration-300
-                    focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600
-                    active:scale-[0.98]
-                  "
-                  data-cta="hero-book-discovery-call"
-                  aria-label="Book a Discovery Call"
-                >
-                  Book a Discovery Call
-                </Button>
+          {/* Primary CTAs - Simplified to 2 buttons */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10 sm:mb-12">
+            {/* Primary CTA */}
+            <Button
+              size="lg"
+              onClick={(e) => {
+                e.preventDefault()
+                openCalendlyPopup()
+              }}
+              className="
+                w-full sm:w-auto
+                min-h-[56px] sm:min-h-[60px]
+                bg-primary-600 text-white
+                hover:bg-primary-700
+                px-8 sm:px-10 py-4 sm:py-5
+                text-base sm:text-lg font-semibold
+                rounded-xl
+                shadow-xl hover:shadow-2xl hover:shadow-primary-600/25
+                transition-all duration-300
+                focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-500 focus-visible:ring-offset-2
+                active:scale-[0.98]
+              "
+              data-cta="hero-book-discovery-call"
+              aria-label="Book a Discovery Call"
+            >
+              <span className="flex items-center justify-center gap-2">
+                Book a Discovery Call
+                <ArrowRight className="h-5 w-5" />
+              </span>
+            </Button>
+
+            {/* Secondary CTA */}
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={handleStrategySessionClick}
+              className="
+                w-full sm:w-auto
+                min-h-[56px] sm:min-h-[60px]
+                border-2 border-white/40 text-white
+                bg-white/10 backdrop-blur-sm
+                hover:bg-white/20 hover:border-white/60
+                px-8 sm:px-10 py-4 sm:py-5
+                text-base sm:text-lg font-semibold
+                rounded-xl
+                transition-all duration-300
+                focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2
+                active:scale-[0.98]
+              "
+              data-cta="hero-get-growth-plan"
+              aria-label="Get a Free Growth Plan"
+              asChild
+            >
+              <Link href="/contact">
+                Get a Free Growth Plan
+              </Link>
+            </Button>
+          </div>
+
+          {/* Trust Indicators - Compact proof points */}
+          <div className="flex flex-wrap items-center gap-6 sm:gap-8 text-white/90 mb-8">
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-500/20 backdrop-blur-sm flex items-center justify-center">
+                <TrendingUp className="h-5 w-5 text-primary-400" />
+              </div>
+              <div>
+                <div className="text-lg sm:text-xl font-bold">500+</div>
+                <div className="text-xs sm:text-sm text-white/70">Businesses</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-500/20 backdrop-blur-sm flex items-center justify-center">
+                <Zap className="h-5 w-5 text-primary-400" />
+              </div>
+              <div>
+                <div className="text-lg sm:text-xl font-bold">3–5x</div>
+                <div className="text-xs sm:text-sm text-white/70">Organic Growth</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-500/20 backdrop-blur-sm flex items-center justify-center">
+                <Award className="h-5 w-5 text-primary-400" />
+              </div>
+              <div>
+                <div className="text-lg sm:text-xl font-bold">1,200%</div>
+                <div className="text-xs sm:text-sm text-white/70">Average ROI</div>
               </div>
             </div>
           </div>
 
-          {/* Mobile Trust Strip - Compact Metrics */}
-          <div className="mb-6 sm:mb-8">
-            <div className="flex items-center justify-center gap-3 sm:gap-6 text-white/95">
-              <div className="flex items-center gap-1.5">
-                <TrendingUp className="h-4 w-4 text-green-400 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-semibold whitespace-nowrap">500+ Sites</span>
-              </div>
-              <div className="w-px h-4 bg-white/30"></div>
-              <div className="flex items-center gap-1.5">
-                <Zap className="h-4 w-4 text-yellow-400 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-semibold whitespace-nowrap">300%+ Growth</span>
-              </div>
-              <div className="w-px h-4 bg-white/30"></div>
-              <div className="flex items-center gap-1.5">
-                <Award className="h-4 w-4 text-blue-300 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-semibold whitespace-nowrap">1,200% ROI</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Secondary Option - URL Form (Below Primary CTA on Mobile) */}
-          <details className="group mb-6 sm:mb-8">
-            <summary className="cursor-pointer list-none text-sm sm:text-base text-white/80 hover:text-white transition-colors font-medium flex items-center justify-center gap-2">
+          {/* Secondary Option - URL Form (Collapsible) */}
+          <details className="group">
+            <summary className="cursor-pointer list-none text-sm sm:text-base text-white/80 hover:text-white transition-colors font-medium flex items-center gap-2 mb-4">
               <span>Or analyze your website now</span>
               <svg className="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -293,7 +265,7 @@ export function Hero() {
             </summary>
             
             <form onSubmit={handleUrlSubmit} className="mt-6">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-2xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-xl">
                 <div className="flex-1">
                   <label htmlFor="website-url" className="sr-only">
                     Enter your website
@@ -323,12 +295,13 @@ export function Hero() {
                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent
                       disabled:opacity-50 disabled:cursor-not-allowed
                       transition-all duration-200
+                      rounded-xl
                     `}
                   />
                   {urlError && (
                     <p 
                       id="url-error" 
-                      className="mt-2 text-sm sm:text-base text-red-300 text-left font-medium"
+                      className="mt-2 text-sm sm:text-base text-red-300 font-medium"
                       role="alert"
                     >
                       {urlError}
@@ -345,12 +318,13 @@ export function Hero() {
                     border-2 border-white/40
                     hover:bg-white/30 hover:border-white/60
                     text-white px-6 sm:px-8 py-4 
-                    text-base sm:text-lg font-bold 
+                    text-base sm:text-lg font-semibold 
                     shadow-xl
                     transition-all duration-300
                     disabled:opacity-50 disabled:cursor-not-allowed
                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white/50
                     active:scale-[0.98]
+                    rounded-xl
                   "
                 >
                   {isSubmitting ? (
@@ -358,23 +332,16 @@ export function Hero() {
                       <span>Analyzing...</span>
                     </span>
                   ) : (
-                    <span className="flex items-center justify-center whitespace-nowrap">
+                    <span className="flex items-center justify-center whitespace-nowrap gap-2">
                       <span className="sm:hidden">Analyze</span>
                       <span className="hidden sm:inline">Analyze Site</span>
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                      <ArrowRight className="h-5 w-5" />
                     </span>
                   )}
                 </Button>
               </div>
             </form>
           </details>
-          
-          {/* Trust Indicator */}
-          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white/70">
-            <Lock className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span>No cost. No obligation. Results in 24 hours.</span>
-          </div>
-
         </div>
       </div>
     </section>
