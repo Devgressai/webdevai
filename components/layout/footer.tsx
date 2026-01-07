@@ -52,7 +52,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-950/95 border-t border-slate-800/70 text-slate-100">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10 py-10 sm:py-12 lg:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10 lg:gap-12">
           {/* Company Info */}
           <div className="md:col-span-2 space-y-4">
             <h3 className="text-xl sm:text-2xl font-semibold text-slate-50">Web Vello</h3>
@@ -139,6 +139,39 @@ export function Footer() {
                   className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   View All Services →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-xs sm:text-sm font-semibold tracking-wide text-slate-200 uppercase mb-3">
+              Company
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/accessibility"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  Accessibility
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
