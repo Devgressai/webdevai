@@ -1,94 +1,42 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { getCalendlyEmbedUrl } from '@/lib/calendly'
 import { CheckCircle, Calendar, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 
-// Declare Calendly global type
-declare global {
-  interface Window {
-    Calendly?: {
-      initInlineWidget: (options: { url: string; parentElement: HTMLElement }) => void
-    }
-  }
-}
-
 export function BookPageClient() {
   const [calendlyUrl, setCalendlyUrl] = useState<string>('')
+  const [calendlyDirectUrl, setCalendlyDirectUrl] = useState<string>('')
   const [isLoading, setIsLoading] = useState(true)
   const [embedError, setEmbedError] = useState<string | null>(null)
-  const calendlyEmbedRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Get the Calendly URL with UTM params on client side
-    const url = getCalendlyEmbedUrl()
-    console.log('Calendly URL:', url)
-    setCalendlyUrl(url)
+    // Get the Calendly embed URL with UTM params on client side
+    const embedUrl = getCalendlyEmbedUrl()
+    console.log('Calendly Embed URL:', embedUrl)
+    setCalendlyUrl(embedUrl)
+    
+    // Get direct URL (without /embed) for fallback links
+    const directUrl = embedUrl.replace('/embed', '').split('?')[0]
+    const urlParams = new URL(embedUrl).searchParams.toString()
+    const fullDirectUrl = urlParams ? `${directUrl}?${urlParams}` : directUrl
+    setCalendlyDirectUrl(fullDirectUrl)
     
     // Check if URL is valid
-    if (!url || url.includes('YOUR-USERNAME') || !url.includes('calendly.com')) {
+    if (!embedUrl || embedUrl.includes('YOUR-USERNAME') || !embedUrl.includes('calendly.com')) {
       setIsLoading(false)
       setEmbedError('Invalid Calendly URL')
       return
     }
 
-    // Wait for Calendly script to load and initialize widget
-    const initCalendlyWidget = () => {
-      if (typeof window === 'undefined' || !calendlyEmbedRef.current) {
-        return
-      }
+    // Set loading to false after iframe loads
+    // The onLoad handler will handle this, but set a timeout as fallback
+    const timeout = setTimeout(() => {
+      setIsLoading(false)
+    }, 3000)
 
-      // Check if Calendly script is loaded
-      if (window.Calendly) {
-        try {
-          // Convert embed URL to regular URL for inline widget (remove /embed)
-          const widgetUrl = url.replace('/embed', '').split('?')[0]
-          const urlParams = new URL(url).searchParams.toString()
-          const fullUrl = urlParams ? `${widgetUrl}?${urlParams}` : widgetUrl
-          
-          console.log('Initializing Calendly inline widget with URL:', fullUrl)
-          
-          window.Calendly.initInlineWidget({
-            url: fullUrl,
-            parentElement: calendlyEmbedRef.current,
-          })
-          
-          // Set loading to false after a short delay
-          setTimeout(() => {
-            setIsLoading(false)
-          }, 1500)
-        } catch (error) {
-          console.error('Error initializing Calendly widget:', error)
-          setEmbedError('Failed to load calendar')
-          setIsLoading(false)
-        }
-      } else {
-        // Retry after 200ms if script not loaded yet
-        setTimeout(initCalendlyWidget, 200)
-      }
-    }
-
-    // Start checking for Calendly script
-    const maxAttempts = 25 // 5 seconds max (25 * 200ms)
-    let attempts = 0
-    
-    const checkInterval = setInterval(() => {
-      attempts++
-      if (typeof window !== 'undefined' && window.Calendly) {
-        clearInterval(checkInterval)
-        initCalendlyWidget()
-      } else if (attempts >= maxAttempts) {
-        clearInterval(checkInterval)
-        console.error('Calendly script not loaded after 5 seconds')
-        setEmbedError('Calendar failed to load. Please try again or use the direct link.')
-        setIsLoading(false)
-      }
-    }, 200)
-
-    return () => {
-      clearInterval(checkInterval)
-    }
+    return () => clearTimeout(timeout)
   }, [])
 
   const isValidUrl = calendlyUrl && !calendlyUrl.includes('YOUR-USERNAME') && calendlyUrl.includes('calendly.com')
@@ -166,7 +114,7 @@ export function BookPageClient() {
                   <h3 className="text-xl font-semibold text-slate-900 mb-2">Calendar Loading Error</h3>
                   <p className="text-slate-600 mb-6 text-center max-w-md">{embedError}</p>
                   <Link
-                    href={calendlyUrl.replace('/embed', '')}
+                    href={calendlyDirectUrl || 'https://calendly.com/webvello'}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-colors"
@@ -176,17 +124,34 @@ export function BookPageClient() {
                   </Link>
                 </div>
               )}
-              {/* Calendly inline widget container */}
-              <div 
-                ref={calendlyEmbedRef}
-                className="calendly-inline-widget"
-                style={{ minWidth: '320px', height: '800px', minHeight: '800px' }}
-                data-auto-load="false"
-              />
+              {/* Direct iframe embed - most reliable method */}
+              {!embedError && (
+                <iframe
+                  src={calendlyUrl}
+                  width="100%"
+                  height="800"
+                  frameBorder="0"
+                  title="Book a Discovery Call"
+                  className="w-full border-0"
+                  style={{ minHeight: '800px' }}
+                  allow="camera; microphone; geolocation"
+                  loading="lazy"
+                  onLoad={() => {
+                    console.log('Calendly iframe loaded successfully')
+                    setIsLoading(false)
+                    setEmbedError(null)
+                  }}
+                  onError={() => {
+                    console.error('Calendly iframe failed to load')
+                    setIsLoading(false)
+                    setEmbedError('Failed to load calendar. Please try the direct link.')
+                  }}
+                />
+              )}
               {/* Direct link option */}
               <div className="absolute bottom-4 right-4 z-20">
                 <a
-                  href={calendlyUrl.replace('/embed', '')}
+                  href={calendlyDirectUrl || 'https://calendly.com/webvello'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-slate-500 hover:text-primary-600 flex items-center gap-1 bg-white/90 px-2 py-1 rounded shadow-sm transition-colors"
