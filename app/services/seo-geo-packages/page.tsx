@@ -349,7 +349,7 @@ export default function SEOGEOPackagesPage() {
                       <span className={`text-sm ${
                         feature.included 
                           ? (pkg.popular ? 'text-white/90' : 'text-slate-700')
-                          : (pkg.popular ? 'text-white/40' : 'text-slate-400')
+                          : (pkg.popular ? 'text-white/50' : 'text-slate-600')
                       }`}>
                         {feature.text}
                       </span>

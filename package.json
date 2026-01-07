@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "a11y:lint": "next lint",
     "seed:cis": "ts-node scripts/seed-cis-pages.ts",
     "index-pages": "node scripts/index-pages-simple.js",
     "generate-favicon": "node scripts/generate-favicon-from-image.js"
@@ -46,10 +47,12 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
+    "@axe-core/react": "^4.8.4",
     "@next/bundle-analyzer": "^15.5.3",
     "@types/nodemailer": "^7.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.0.0"
+    "eslint-config-next": "14.0.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0"
   },
   "browserslist": [
     "defaults and supports es6-module",

@@ -90,7 +90,11 @@ export default function LoginPage() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {error && (
-            <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+            <div 
+              className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800"
+              role="alert"
+              aria-live="assertive"
+            >
               {error}
             </div>
           )}
@@ -98,18 +102,25 @@ export default function LoginPage() {
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-secondary-900 mb-2">
               Password
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                disabled={isLoading}
+                aria-invalid={error ? 'true' : 'false'}
+                aria-describedby={error ? 'password-error' : undefined}
+                className="mt-2 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                placeholder="Enter admin password"
+              />
             </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              disabled={isLoading}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
-              placeholder="Enter admin password"
-              autoFocus
-            />
+            {error && (
+              <p id="password-error" className="mt-2 text-sm text-red-600" role="alert" aria-live="assertive">
+                {error}
+              </p>
+            )}
           </div>
 
           <Button

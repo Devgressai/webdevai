@@ -56,7 +56,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2 space-y-4">
             <h3 className="text-xl sm:text-2xl font-semibold text-slate-50">Web Vello</h3>
-            <p className="text-sm sm:text-[15px] text-slate-400 leading-relaxed max-w-md">
+            <p className="text-sm sm:text-[15px] text-slate-300 leading-relaxed max-w-md">
               Professional digital marketing services that drive real results. 
               From AI-powered SEO to custom web development, we help businesses 
               dominate their markets.
@@ -66,28 +66,28 @@ export function Footer() {
                 href="https://www.facebook.com/people/Webvello/61583979327301/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-slate-400 hover:text-slate-100 transition-colors"
+                className="text-slate-300 hover:text-slate-100 transition-colors"
                 aria-label="Visit our Facebook page"
               >
                 <FacebookIcon className="h-5 w-5" />
               </a>
               <a
                 href="mailto:info@webvello.com"
-                className="text-slate-400 hover:text-slate-100 transition-colors"
+                className="text-slate-300 hover:text-slate-100 transition-colors"
                 aria-label="Send us an email"
               >
                 <Mail className="h-5 w-5" />
               </a>
               <a
                 href="tel:+15305538883"
-                className="text-slate-400 hover:text-slate-100 transition-colors"
+                className="text-slate-300 hover:text-slate-100 transition-colors"
                 aria-label="Call us"
               >
                 <Phone className="h-5 w-5" />
               </a>
               <a
                 href="https://www.webvello.com"
-                className="text-slate-400 hover:text-slate-100 transition-colors"
+                className="text-slate-300 hover:text-slate-100 transition-colors"
                 aria-label="Visit our website"
               >
                 <Globe className="h-5 w-5" />
@@ -104,7 +104,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/website-design"
-                  className="text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   Website Design
                 </Link>
@@ -112,7 +112,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/web-development"
-                  className="text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   Web Development
                 </Link>
@@ -120,7 +120,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/ai-consulting"
-                  className="text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   AI Consulting
                 </Link>
@@ -128,7 +128,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/seo"
-                  className="text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   SEO Services
                 </Link>
@@ -136,7 +136,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   View All Services →
                 </Link>
@@ -154,7 +154,7 @@ export function Footer() {
                 <Link 
                   key={city.slug}
                   href={`/${city.slug}`} 
-                  className="flex items-center text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                  className="flex items-center text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   <MapPin className="h-3 w-3 mr-2 text-sky-400 flex-shrink-0" />
                   <span className="truncate">{city.name}</span>
@@ -169,7 +169,7 @@ export function Footer() {
                 <MapPin className="h-4 w-4 mr-2" />
                 View All {cities.length}+ Locations →
               </Link>
-              <div className="text-xs text-slate-500">
+              <div className="text-xs text-slate-400">
                 Nationwide coverage available
               </div>
             </div>
@@ -179,31 +179,31 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-10 pt-6 border-t border-slate-800/70">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-            <p className="text-xs sm:text-sm text-slate-500">
+            <p className="text-xs sm:text-sm text-slate-400">
               © 2025 Web Vello. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/privacy"
-                className="text-xs sm:text-sm text-slate-500 hover:text-slate-200 transition-colors"
+                className="text-xs sm:text-sm text-slate-400 hover:text-slate-200 transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-xs sm:text-sm text-slate-500 hover:text-slate-200 transition-colors"
+                className="text-xs sm:text-sm text-slate-400 hover:text-slate-200 transition-colors"
               >
                 Terms of Service
               </Link>
               <Link
                 href="/sitemap"
-                className="text-xs sm:text-sm text-slate-500 hover:text-slate-200 transition-colors"
+                className="text-xs sm:text-sm text-slate-400 hover:text-slate-200 transition-colors"
               >
                 HTML Sitemap
               </Link>
               <Link
                 href="/contact"
-                className="text-xs sm:text-sm text-slate-500 hover:text-slate-200 transition-colors"
+                className="text-xs sm:text-sm text-slate-400 hover:text-slate-200 transition-colors"
               >
                 Contact
               </Link>

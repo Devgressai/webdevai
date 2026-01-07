@@ -6,11 +6,16 @@ import { NewHeader as Header } from '../components/layout/new-header'
 import MobileHeader from '../components/layout/mobile-header'
 import { Footer } from '../components/layout/footer'
 import { MobileFloatingCTA } from '../components/ui/mobile-floating-cta'
+import { SkipToMainContent } from '../components/ui/accessibility'
 import dynamic from 'next/dynamic'
 const PerformanceMonitor = dynamic(() => import('../components/performance/performance-monitor').then(m => m.PerformanceMonitor), {
   ssr: false
 })
 const AIChatbot = dynamic(() => import('../components/chat/ai-chatbot').then(m => m.AIChatbot), {
+  ssr: false
+})
+// Axe accessibility checker - dev only, client-side only
+const AxeClient = dynamic(() => import('../components/a11y/axe-client').then(m => m.AxeClient), {
   ssr: false
 })
 // import GoogleAnalytics from '../components/analytics/google-analytics'
@@ -298,11 +303,15 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-white">
+        {/* Skip to main content link - first focusable element for keyboard users */}
+        <SkipToMainContent />
         {/* <GoogleAnalytics /> */}
+        {/* Axe accessibility checker - dev only, never SSR */}
+        {process.env.NODE_ENV === 'development' && <AxeClient />}
         {process.env.NEXT_PUBLIC_ENABLE_PERF_MONITOR === 'true' ? <PerformanceMonitor /> : null}
         <Header />
         <MobileHeader />
-        <main className="pb-20 md:pb-0">
+        <main id="main-content" tabIndex={-1} className="pb-20 md:pb-0">
           {children}
         </main>
         <Footer />

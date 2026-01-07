@@ -163,7 +163,7 @@ export default function AIDigitalMarketingPage() {
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
               Transform your digital marketing with AI-powered strategies that deliver 
               <span className="text-cyan-300 font-medium"> unprecedented results</span>. 
               Our AI systems don't just automate—they 
@@ -201,7 +201,7 @@ export default function AIDigitalMarketingPage() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <item.icon className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm text-gray-400">{item.label}</span>
+                  <span className="text-sm text-gray-600">{item.label}</span>
                 </div>
               ))}
             </div>
@@ -221,7 +221,7 @@ export default function AIDigitalMarketingPage() {
               Why Choose 
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"> AI-Powered Marketing</span>?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
               AI doesn't just make marketing easier—it makes it smarter, more efficient, 
               and more effective than traditional methods.
             </p>
@@ -247,12 +247,12 @@ export default function AIDigitalMarketingPage() {
                       <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                   <ul className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-gray-800">
                     {feature.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-center text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
+                      <li key={benefit} className="flex items-center text-sm text-gray-600 group-hover:text-gray-700 transition-colors">
                         <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -276,7 +276,7 @@ export default function AIDigitalMarketingPage() {
               Comprehensive 
               <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent"> AI Marketing Services</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
               From content creation to campaign optimization, our AI-powered services 
               cover every aspect of modern digital marketing.
             </p>
@@ -297,7 +297,7 @@ export default function AIDigitalMarketingPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">{service.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
                   </div>
                 </div>
               </div>
@@ -318,7 +318,7 @@ export default function AIDigitalMarketingPage() {
               Real Results from 
               <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent"> AI-Powered Marketing</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
               Our AI marketing systems consistently deliver measurable improvements 
               in efficiency, ROI, and overall marketing performance.
             </p>
@@ -363,7 +363,7 @@ export default function AIDigitalMarketingPage() {
               Marketing with AI?
             </span>
           </h2>
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             Don't get left behind. Our AI-powered marketing services will transform 
             your digital marketing and deliver results that traditional methods can't match.
           </p>
@@ -385,7 +385,7 @@ export default function AIDigitalMarketingPage() {
             </Button>
           </div>
           
-          <div className="mt-14 flex flex-wrap items-center justify-center gap-8 text-gray-400">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-8 text-gray-600">
             <div className="flex items-center gap-2.5 bg-gray-900/50 px-5 py-2.5 rounded-full border border-gray-800">
               <CheckCircle className="w-5 h-5 text-emerald-400" />
               <span className="text-sm font-medium">Free AI Consultation</span>

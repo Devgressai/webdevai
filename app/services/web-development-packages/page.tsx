@@ -228,7 +228,7 @@ export default function WebDevelopmentPackagesPage() {
                       ) : (
                         <X className={`w-5 h-5 flex-shrink-0 ${pkg.popular ? 'text-white/30' : 'text-slate-300'}`} />
                       )}
-                      <span className={feature.included ? '' : (pkg.popular ? 'text-white/40' : 'text-slate-400')}>
+                      <span className={feature.included ? '' : (pkg.popular ? 'text-white/50' : 'text-slate-600')}>
                         {feature.name}
                       </span>
                     </li>

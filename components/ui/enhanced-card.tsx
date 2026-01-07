@@ -60,13 +60,28 @@ const EnhancedCard = forwardRef<HTMLDivElement, EnhancedCardProps>(
       }
     }
 
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+      if (clickable && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault()
+        handleCardClick()
+      }
+    }
+
+    const Component = clickable ? 'button' : 'div'
+    const clickableProps = clickable ? {
+      onClick: handleCardClick,
+      onKeyDown: handleKeyDown,
+      type: 'button' as const,
+      'aria-label': props['aria-label'] || 'Card action'
+    } : {}
+
     return (
-      <div
+      <Component
         ref={ref}
         className={baseClasses}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={handleCardClick}
+        {...clickableProps}
         {...props}
       >
         {/* Background pattern for glass variant */}
@@ -83,17 +98,23 @@ const EnhancedCard = forwardRef<HTMLDivElement, EnhancedCardProps>(
         {interactive && (
           <div className="absolute top-4 right-4 flex items-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100">
             <button
+              type="button"
               onClick={(e) => {
                 e.stopPropagation()
                 setIsLiked(!isLiked)
               }}
-              className={`p-2 rounded-full transition-all duration-200 hover:bg-white/20 hover:scale-110 ${
+              aria-label={isLiked ? 'Unlike' : 'Like'}
+              className={`p-2 rounded-full transition-all duration-200 hover:bg-white/20 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 ${
                 isLiked ? 'text-red-500' : 'text-white/70'
               }`}
             >
               <Heart className={`h-4 w-4 ${isLiked ? 'fill-current' : ''}`} />
             </button>
-            <button className="p-2 rounded-full text-white/70 hover:bg-white/20 hover:scale-110 transition-all duration-200">
+            <button
+              type="button"
+              aria-label="Share"
+              className="p-2 rounded-full text-white/70 hover:bg-white/20 hover:scale-110 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+            >
               <Share2 className="h-4 w-4" />
             </button>
           </div>

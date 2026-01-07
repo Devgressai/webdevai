@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, FormEvent, KeyboardEvent, useEffect } from "react"
+import { useState, FormEvent, KeyboardEvent, useEffect, useRef } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
@@ -24,6 +24,7 @@ export function Hero() {
   const [urlInput, setUrlInput] = useState('')
   const [urlError, setUrlError] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const errorSummaryRef = useRef<HTMLDivElement>(null)
   const ctaVariant = getVariant('hero_cta_button')
   const microcopyVariant = getVariant('hero_microcopy')
 
@@ -69,6 +70,10 @@ export function Hero() {
     
     if (!trimmedUrl) {
       setUrlError('Please enter your website URL')
+      // Focus error summary after state update
+      setTimeout(() => {
+        errorSummaryRef.current?.focus()
+      }, 0)
       return
     }
 
@@ -78,6 +83,10 @@ export function Hero() {
     if (!isValid) {
       setUrlError('Please enter a valid website URL (e.g., yourdomain.com)')
       trackGrowthPlanStart(trimmedUrl, false)
+      // Focus error summary after state update
+      setTimeout(() => {
+        errorSummaryRef.current?.focus()
+      }, 0)
       return
     }
 
@@ -112,8 +121,8 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-slate-900">
-      {/* Background image */}
-      <div className="pointer-events-none absolute inset-0">
+      {/* Background image - decorative */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <Image
           src="/images/hero-background.webp"
           alt=""
@@ -123,6 +132,7 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-center"
           style={{ objectFit: 'cover' }}
+          aria-hidden="true"
         />
       </div>
       
@@ -160,7 +170,7 @@ export function Hero() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed">
-            We combine AI-driven SEO, GEO targeting, and conversion optimization to deliver measurable results. Get a free growth plan that shows exactly how to increase traffic and conversions.
+            We combine AI-driven SEO, GEO targeting, and conversion optimization to deliver measurable results.
           </p>
 
           {/* Primary CTAs - Simplified to 2 buttons */}
@@ -265,10 +275,37 @@ export function Hero() {
             </summary>
             
             <form onSubmit={handleUrlSubmit} className="mt-6">
+              {/* Error Summary - shown at top when there are errors */}
+              {urlError && (
+                <div
+                  ref={errorSummaryRef}
+                  role="alert"
+                  aria-live="assertive"
+                  tabIndex={-1}
+                  className="mb-4 p-4 bg-red-900/90 backdrop-blur-sm border-2 border-red-400 rounded-xl text-white"
+                >
+                  <h3 className="font-semibold text-base mb-1">Please fix the following error:</h3>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>
+                      <a
+                        href="#website-url"
+                        className="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-900 rounded"
+                        onClick={(e) => {
+                          e.preventDefault()
+                          document.getElementById('website-url')?.focus()
+                        }}
+                      >
+                        {urlError}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
+              
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-xl">
                 <div className="flex-1">
                   <label htmlFor="website-url" className="sr-only">
-                    Enter your website
+                    Website URL
                   </label>
                   <Input
                     id="website-url"
@@ -282,8 +319,9 @@ export function Hero() {
                     }}
                     onKeyDown={handleKeyDown}
                     disabled={isSubmitting}
+                    required
                     aria-invalid={urlError ? 'true' : 'false'}
-                    aria-describedby={urlError ? 'url-error' : 'url-hint'}
+                    aria-describedby={urlError ? 'url-error' : undefined}
                     className={`
                       w-full px-4 sm:px-6 py-4 text-base sm:text-lg min-h-[56px]
                       bg-white/10 backdrop-blur-sm border-2
@@ -302,7 +340,6 @@ export function Hero() {
                     <p 
                       id="url-error" 
                       className="mt-2 text-sm sm:text-base text-red-300 font-medium"
-                      role="alert"
                     >
                       {urlError}
                     </p>

@@ -87,9 +87,14 @@ export function MobileInput({
   error, 
   fullWidth = false,
   className = '',
+  id,
   ...props 
 }: MobileInputProps) {
   const { isMobile } = useMobileDetection()
+  
+  // Generate unique ID if not provided
+  const inputId = id || (label ? `mobile-input-${label.replace(/\s+/g, '-').toLowerCase()}` : undefined)
+  const errorId = error && inputId ? `${inputId}-error` : undefined
   
   const inputClasses = `
     block w-full rounded-lg border border-gray-300 px-4 py-3 text-base
@@ -104,16 +109,21 @@ export function MobileInput({
   return (
     <div className={fullWidth ? 'w-full' : ''}>
       {label && (
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor={inputId} className="block text-sm font-medium text-gray-700 mb-2">
           {label}
         </label>
       )}
       <input
+        id={inputId}
         className={inputClasses}
+        aria-invalid={error ? 'true' : 'false'}
+        aria-describedby={errorId}
         {...props}
       />
       {error && (
-        <p className="mt-1 text-sm text-red-600">{error}</p>
+        <p id={errorId} className="mt-1 text-sm text-red-600" role="alert">
+          {error}
+        </p>
       )}
     </div>
   )

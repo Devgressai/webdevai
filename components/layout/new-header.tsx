@@ -384,26 +384,19 @@ export function NewHeader() {
                      onMouseEnter={() => handleMouseEnter(item.name)}
                      onMouseLeave={handleMouseLeave}
                    >
-                     <div 
+                     <button
+                       type="button"
                        className={cn(
-                         "flex items-center gap-1 rounded-lg px-3.5 py-2 text-sm font-semibold tracking-tight transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 cursor-pointer",
+                         "flex items-center gap-1 rounded-lg px-3.5 py-2 text-sm font-semibold tracking-tight transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
                          openDropdown === item.name ? "bg-blue-50 text-blue-700 shadow-sm" : "text-slate-700"
                        )}
-                       role="button"
-                       tabIndex={0}
                        aria-expanded={openDropdown === item.name}
                        aria-haspopup="true"
                        onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                       onKeyDown={(event) => {
-                         if (event.key === 'Enter' || event.key === ' ') {
-                           event.preventDefault()
-                           setOpenDropdown(openDropdown === item.name ? null : item.name)
-                         }
-                       }}
                      >
                        {item.name}
                        <ChevronDown className={cn("h-3.5 w-3.5 text-slate-500 transition-transform duration-200", openDropdown === item.name && "rotate-180 text-blue-600")} />
-                     </div>
+                     </button>
                      
                      {openDropdown === item.name && (
                        <div 

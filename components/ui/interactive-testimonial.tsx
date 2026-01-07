@@ -59,9 +59,16 @@ const InteractiveTestimonial = forwardRef<HTMLDivElement, InteractiveTestimonial
       setIsPlaying(!isPlaying)
     }
 
-    // Auto-play functionality
+    // Auto-play functionality - respect prefers-reduced-motion
     useEffect(() => {
       if (!autoPlay || !isPlaying) return
+      
+      // Check for prefers-reduced-motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (prefersReducedMotion) {
+        setIsPlaying(false)
+        return
+      }
 
       const interval = setInterval(() => {
         nextTestimonial()

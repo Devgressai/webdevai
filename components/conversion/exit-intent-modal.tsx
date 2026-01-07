@@ -300,7 +300,7 @@ export function ExitIntentModal({
           <button
             ref={closeButtonRef}
             onClick={handleDismiss}
-            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-md"
+            className="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-md"
             aria-label="Close modal"
             type="button"
           >

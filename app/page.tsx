@@ -493,9 +493,9 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-800 relative overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 opacity-20">
-          <Image src="/images/hero-data-analysis.webp" alt="" fill sizes="100vw" className="object-cover" />
+        {/* Background image - decorative */}
+        <div className="absolute inset-0 opacity-20" aria-hidden="true">
+          <Image src="/images/hero-data-analysis.webp" alt="" fill sizes="100vw" className="object-cover" aria-hidden="true" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-primary-600/80 via-primary-700/80 to-secondary-800/80"></div>
         {/* Background pattern */}
@@ -673,9 +673,9 @@ export default function HomePage() {
       {/* CTA Section */}
       <LazySection>
       <section className="py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden">
-        {/* Background image and gradient flow */}
-        <div className="absolute inset-0 opacity-20">
-          <Image src="/images/hero-business-meeting.webp" alt="" fill sizes="100vw" className="object-cover" />
+        {/* Background image - decorative */}
+        <div className="absolute inset-0 opacity-20" aria-hidden="true">
+          <Image src="/images/hero-business-meeting.webp" alt="" fill sizes="100vw" className="object-cover" aria-hidden="true" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/25 via-pink-500/25 to-blue-500/25"></div>
         

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useMobileDetection, TouchButton, MobileInput, MobileCard } from '@/components/ui/mobile-optimizations'
 
 interface FormData {
@@ -56,6 +56,8 @@ export default function MobileContactForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
+  const errorSummaryRef = useRef<HTMLDivElement>(null)
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }))
@@ -65,6 +67,34 @@ export default function MobileContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+    setFieldErrors({})
+
+    // Client-side validation
+    const errors: Record<string, string> = {}
+    if (!formData.name.trim()) {
+      errors.name = 'Full name is required'
+    }
+    if (!formData.email.trim()) {
+      errors.email = 'Email address is required'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = 'Please enter a valid email address'
+    }
+    if (!formData.service) {
+      errors.service = 'Please select a service'
+    }
+    if (!formData.message.trim()) {
+      errors.message = 'Project description is required'
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors)
+      setIsSubmitting(false)
+      // Focus error summary after state update
+      setTimeout(() => {
+        errorSummaryRef.current?.focus()
+      }, 0)
+      return
+    }
 
     try {
       const response = await fetch('/api/contact', {
@@ -89,10 +119,18 @@ export default function MobileContactForm() {
         })
       } else {
         setSubmitStatus('error')
+        // Focus error summary after state update
+        setTimeout(() => {
+          errorSummaryRef.current?.focus()
+        }, 0)
       }
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')
+      // Focus error summary after state update
+      setTimeout(() => {
+        errorSummaryRef.current?.focus()
+      }, 0)
     } finally {
       setIsSubmitting(false)
     }
@@ -101,7 +139,11 @@ export default function MobileContactForm() {
   if (submitStatus === 'success') {
     return (
       <MobileCard className="text-center">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div 
+          role="status"
+          aria-live="polite"
+          className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
           <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
@@ -132,29 +174,98 @@ export default function MobileContactForm() {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Error Summary */}
+        {(submitStatus === 'error' || Object.keys(fieldErrors).length > 0) && (
+          <div
+            ref={errorSummaryRef}
+            role="alert"
+            aria-live="assertive"
+            tabIndex={-1}
+            className="bg-red-50 border border-red-200 rounded-lg p-4"
+          >
+            <h3 className="font-semibold text-red-900 text-base mb-2">
+              {submitStatus === 'error' 
+                ? 'Submission failed. Please fix the following:' 
+                : 'Please fix the following errors:'}
+            </h3>
+            <ul className="list-disc list-inside space-y-1">
+              {submitStatus === 'error' && (
+                <li className="text-sm text-red-700">
+                  There was an error sending your message. Please try again.
+                </li>
+              )}
+              {Object.entries(fieldErrors).map(([field, error]) => {
+                const fieldIdMap: Record<string, string> = {
+                  name: 'mobile-contact-name',
+                  email: 'mobile-contact-email',
+                  service: 'mobile-contact-service',
+                  message: 'mobile-contact-message'
+                }
+                const fieldId = fieldIdMap[field] || `mobile-contact-${field}`
+                return (
+                  <li key={field} className="text-sm text-red-700">
+                    <a
+                      href={`#${fieldId}`}
+                      className="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        document.getElementById(fieldId)?.focus()
+                      }}
+                    >
+                      {error}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        )}
+
         {/* Personal Information */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-gray-900">Personal Information</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <MobileInput
+              id="mobile-contact-name"
               label="Full Name *"
               type="text"
               value={formData.name}
-              onChange={(e) => handleInputChange('name', e.target.value)}
+              onChange={(e) => {
+                handleInputChange('name', e.target.value)
+                if (fieldErrors.name) {
+                  setFieldErrors(prev => {
+                    const newErrors = { ...prev }
+                    delete newErrors.name
+                    return newErrors
+                  })
+                }
+              }}
               placeholder="John Doe"
               required
               fullWidth
+              error={fieldErrors.name}
             />
             
             <MobileInput
+              id="mobile-contact-email"
               label="Email Address *"
               type="email"
               value={formData.email}
-              onChange={(e) => handleInputChange('email', e.target.value)}
+              onChange={(e) => {
+                handleInputChange('email', e.target.value)
+                if (fieldErrors.email) {
+                  setFieldErrors(prev => {
+                    const newErrors = { ...prev }
+                    delete newErrors.email
+                    return newErrors
+                  })
+                }
+              }}
               placeholder="john@company.com"
               required
               fullWidth
+              error={fieldErrors.email}
             />
           </div>
 
@@ -184,13 +295,30 @@ export default function MobileContactForm() {
           <h3 className="text-lg font-semibold text-gray-900">Project Details</h3>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="mobile-contact-service" className="block text-sm font-medium text-gray-700 mb-2">
               Service Needed *
             </label>
             <select
+              id="mobile-contact-service"
+              name="service"
               value={formData.service}
-              onChange={(e) => handleInputChange('service', e.target.value)}
-              className="block w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => {
+                handleInputChange('service', e.target.value)
+                if (fieldErrors.service) {
+                  setFieldErrors(prev => {
+                    const newErrors = { ...prev }
+                    delete newErrors.service
+                    return newErrors
+                  })
+                }
+              }}
+              aria-invalid={fieldErrors.service ? 'true' : 'false'}
+              aria-describedby={fieldErrors.service ? 'service-error' : undefined}
+              className={`block w-full rounded-lg border px-4 py-3 text-base focus:ring-2 focus:ring-blue-500 ${
+                fieldErrors.service 
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500' 
+                  : 'border-gray-300 focus:border-blue-500'
+              }`}
               required
             >
               <option value="">Select a service</option>
@@ -200,6 +328,11 @@ export default function MobileContactForm() {
                 </option>
               ))}
             </select>
+            {fieldErrors.service && (
+              <p id="service-error" className="mt-1 text-sm text-red-600">
+                {fieldErrors.service}
+              </p>
+            )}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -241,17 +374,39 @@ export default function MobileContactForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="mobile-contact-message" className="block text-sm font-medium text-gray-700 mb-2">
               Project Description *
             </label>
             <textarea
+              id="mobile-contact-message"
+              name="message"
               value={formData.message}
-              onChange={(e) => handleInputChange('message', e.target.value)}
+              onChange={(e) => {
+                handleInputChange('message', e.target.value)
+                if (fieldErrors.message) {
+                  setFieldErrors(prev => {
+                    const newErrors = { ...prev }
+                    delete newErrors.message
+                    return newErrors
+                  })
+                }
+              }}
               placeholder="Tell us about your project goals, requirements, and any specific features you need..."
               rows={isMobile ? 4 : 6}
-              className="block w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-blue-500 focus:ring-2 focus:ring-blue-500 resize-none"
+              aria-invalid={fieldErrors.message ? 'true' : 'false'}
+              aria-describedby={fieldErrors.message ? 'message-error' : undefined}
+              className={`block w-full rounded-lg border px-4 py-3 text-base focus:ring-2 focus:ring-blue-500 resize-none ${
+                fieldErrors.message 
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500' 
+                  : 'border-gray-300 focus:border-blue-500'
+              }`}
               required
             />
+            {fieldErrors.message && (
+              <p id="message-error" className="mt-1 text-sm text-red-600">
+                {fieldErrors.message}
+              </p>
+            )}
           </div>
         </div>
 
@@ -276,19 +431,6 @@ export default function MobileContactForm() {
           </TouchButton>
         </div>
 
-        {/* Error Message */}
-        {submitStatus === 'error' && (
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-            <div className="flex items-center space-x-2">
-              <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="text-sm text-red-600">
-                There was an error sending your message. Please try again.
-              </span>
-            </div>
-          </div>
-        )}
 
         {/* Trust Indicators */}
         <div className="pt-4 border-t border-gray-200">

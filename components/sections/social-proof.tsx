@@ -102,7 +102,7 @@ function SocialProof() {
                   <p className="text-sm font-semibold text-slate-50">
                     {testimonial.name}
                   </p>
-                  <p className="text-xs sm:text-sm text-slate-400">
+                  <p className="text-xs sm:text-sm text-slate-300">
                     {testimonial.role}, {testimonial.company}
                   </p>
                 </div>

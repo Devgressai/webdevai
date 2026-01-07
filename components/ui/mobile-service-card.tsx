@@ -46,10 +46,11 @@ export default function MobileServiceCard({
         <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
           <Image
             src={icon}
-            alt={title}
+            alt=""
             width={24}
             height={24}
             className="text-blue-600"
+            aria-hidden="true"
           />
         </div>
       )}

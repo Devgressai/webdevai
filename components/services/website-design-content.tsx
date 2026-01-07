@@ -192,7 +192,7 @@ export default function WebsiteDesignContent() {
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
               Transform your online presence with custom website design that combines 
               <span className="text-violet-300 font-medium"> stunning aesthetics </span>
               with 
@@ -256,7 +256,7 @@ export default function WebsiteDesignContent() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors duration-300">
                     {showcase.title}
                   </h3>
-                  <p className="text-gray-400 mb-6 text-sm leading-relaxed">{showcase.description}</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{showcase.description}</p>
                   
                   <ul className="grid grid-cols-2 gap-3">
                     {showcase.features.map((feature, featureIndex) => (
@@ -283,7 +283,7 @@ export default function WebsiteDesignContent() {
         <div className="mx-auto max-w-5xl px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Website Design FAQs</h2>
-            <p className="text-gray-400">Common questions about our design process</p>
+            <p className="text-gray-600">Common questions about our design process</p>
           </div>
           <div className="space-y-4">
             {[
@@ -302,7 +302,7 @@ export default function WebsiteDesignContent() {
             ].map((f, i) => (
               <div key={i} className="group bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-violet-500/30 hover:bg-gray-900/80 transition-all duration-300 backdrop-blur-sm">
                 <h3 className="font-semibold text-white mb-3 group-hover:text-violet-300 transition-colors">{f.q}</h3>
-                <p className="text-gray-400 leading-relaxed">{f.a}</p>
+                <p className="text-gray-600 leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
@@ -321,7 +321,7 @@ export default function WebsiteDesignContent() {
               Why Choose Our 
               <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent"> Website Design</span>?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
               We combine creativity with strategy to deliver websites that exceed expectations and drive measurable business results.
             </p>
           </div>
@@ -346,12 +346,12 @@ export default function WebsiteDesignContent() {
                       <h3 className="text-xl font-bold text-white group-hover:text-violet-300 transition-colors mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                   <ul className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-gray-800">
                     {feature.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-center text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
+                      <li key={benefit} className="flex items-center text-sm text-gray-600 group-hover:text-gray-700 transition-colors">
                         <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -375,7 +375,7 @@ export default function WebsiteDesignContent() {
               Our 
               <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"> Design Process</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
               A proven methodology that ensures your website design exceeds expectations and drives results.
             </p>
           </div>
@@ -398,7 +398,7 @@ export default function WebsiteDesignContent() {
                     <step.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">{step.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -418,7 +418,7 @@ export default function WebsiteDesignContent() {
               Results That 
               <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"> Speak for Themselves</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
               Our custom website designs consistently deliver exceptional results for businesses across all industries.
             </p>
           </div>
@@ -461,7 +461,7 @@ export default function WebsiteDesignContent() {
               Your Website?
             </span>
           </h2>
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             Join hundreds of businesses that have already achieved remarkable growth with our custom website designs.
           </p>
           
@@ -482,7 +482,7 @@ export default function WebsiteDesignContent() {
             </Button>
           </div>
           
-          <div className="mt-14 flex flex-wrap items-center justify-center gap-8 text-gray-400">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-8 text-gray-600">
             <div className="flex items-center gap-2.5 bg-gray-900/50 px-5 py-2.5 rounded-full border border-gray-800">
               <CheckCircle className="w-5 h-5 text-emerald-400" />
               <span className="text-sm font-medium">Free Consultation</span>

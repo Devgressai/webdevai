@@ -106,6 +106,10 @@ const EnhancedButton = forwardRef<HTMLButtonElement, EnhancedButtonProps>(
       return children
     }
 
+    // Check if this is an icon-only button (no children text)
+    const isIconOnly = size === 'icon' && !children && !loading && !success && !error
+    const ariaLabel = props['aria-label'] || (isIconOnly ? 'Button' : undefined)
+
     return (
       <button
         className={baseClasses}
@@ -114,6 +118,7 @@ const EnhancedButton = forwardRef<HTMLButtonElement, EnhancedButtonProps>(
         onMouseDown={() => setIsPressed(true)}
         onMouseUp={() => setIsPressed(false)}
         onMouseLeave={() => setIsPressed(false)}
+        aria-label={ariaLabel}
         {...props}
       >
         {/* Shimmer effect for gradient buttons */}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from '../../components/ui/button'
 import { Phone, Mail, MapPin, Clock, MessageSquare, Users, Zap, CheckCircle, AlertCircle, Star, TrendingUp, Award, Shield, Globe, Calendar, ArrowRight, Check } from 'lucide-react'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
@@ -120,6 +120,8 @@ export function ContactPageClient() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
+  const errorSummaryRef = useRef<HTMLDivElement>(null)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -127,12 +129,51 @@ export function ContactPageClient() {
       ...prev,
       [name]: value
     }))
+    // Clear field error when user starts typing
+    if (fieldErrors[name]) {
+      setFieldErrors(prev => {
+        const newErrors = { ...prev }
+        delete newErrors[name]
+        return newErrors
+      })
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+    setFieldErrors({})
+
+    // Client-side validation
+    const errors: Record<string, string> = {}
+    if (!formData.name.trim()) {
+      errors.name = 'Full name is required'
+    }
+    if (!formData.email.trim()) {
+      errors.email = 'Business email is required'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = 'Please enter a valid email address'
+    }
+    if (!formData.phone.trim()) {
+      errors.phone = 'Phone number is required'
+    }
+    if (!formData.service) {
+      errors.service = 'Please select a service'
+    }
+    if (!formData.message.trim()) {
+      errors.message = 'Please tell us about your business'
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors)
+      setIsSubmitting(false)
+      // Focus error summary after state update
+      setTimeout(() => {
+        errorSummaryRef.current?.focus()
+      }, 0)
+      return
+    }
 
     try {
       const res = await fetch('/api/contact', {
@@ -160,6 +201,10 @@ export function ContactPageClient() {
       }
     } catch (error) {
       setSubmitStatus('error')
+      // Focus error summary after state update
+      setTimeout(() => {
+        errorSummaryRef.current?.focus()
+      }, 0)
     } finally {
       setIsSubmitting(false)
     }
@@ -291,6 +336,53 @@ export function ContactPageClient() {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                {/* Error Summary */}
+                {(submitStatus === 'error' || Object.keys(fieldErrors).length > 0) && (
+                  <div
+                    ref={errorSummaryRef}
+                    role="alert"
+                    aria-live="assertive"
+                    tabIndex={-1}
+                    className="p-4 bg-red-50 border-2 border-red-500 rounded-lg"
+                  >
+                    <h3 className="font-semibold text-red-900 text-base mb-2">
+                      {submitStatus === 'error' 
+                        ? 'Submission failed. Please fix the following:' 
+                        : 'Please fix the following errors:'}
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1">
+                      {submitStatus === 'error' && (
+                        <li>
+                          <a
+                            href="#contact-form-error"
+                            className="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
+                            onClick={(e) => {
+                              e.preventDefault()
+                              document.getElementById('contact-form-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }}
+                          >
+                            Unable to submit form. Please email us directly at hello@webvello.com
+                          </a>
+                        </li>
+                      )}
+                      {Object.entries(fieldErrors).map(([field, error]) => (
+                        <li key={field}>
+                          <a
+                            href={`#${field}`}
+                            className="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
+                            onClick={(e) => {
+                              e.preventDefault()
+                              document.getElementById(field)?.focus()
+                            }}
+                          >
+                            {error}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-secondary-900 mb-1.5">
                     Full Name <span className="text-red-500">*</span>
@@ -302,9 +394,18 @@ export function ContactPageClient() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    aria-invalid={fieldErrors.name ? 'true' : 'false'}
+                    aria-describedby={fieldErrors.name ? 'name-error' : undefined}
+                    className={`w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all ${
+                      fieldErrors.name ? 'border-red-500' : 'border-gray-200'
+                    }`}
                     placeholder="John Smith"
                   />
+                  {fieldErrors.name && (
+                    <p id="name-error" className="mt-1.5 text-sm text-red-600">
+                      {fieldErrors.name}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -318,9 +419,18 @@ export function ContactPageClient() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    aria-invalid={fieldErrors.email ? 'true' : 'false'}
+                    aria-describedby={fieldErrors.email ? 'email-error' : undefined}
+                    className={`w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all ${
+                      fieldErrors.email ? 'border-red-500' : 'border-gray-200'
+                    }`}
                     placeholder="john@company.com"
                   />
+                  {fieldErrors.email && (
+                    <p id="email-error" className="mt-1.5 text-sm text-red-600">
+                      {fieldErrors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -334,9 +444,18 @@ export function ContactPageClient() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    aria-invalid={fieldErrors.phone ? 'true' : 'false'}
+                    aria-describedby={fieldErrors.phone ? 'phone-error' : undefined}
+                    className={`w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all ${
+                      fieldErrors.phone ? 'border-red-500' : 'border-gray-200'
+                    }`}
                     placeholder="(555) 123-4567"
                   />
+                  {fieldErrors.phone && (
+                    <p id="phone-error" className="mt-1.5 text-sm text-red-600">
+                      {fieldErrors.phone}
+                    </p>
+                  )}
                   <p className="mt-1.5 text-xs text-secondary-500">We'll schedule a discovery call if there's a potential fit</p>
                 </div>
 
@@ -350,7 +469,11 @@ export function ContactPageClient() {
                     value={formData.service}
                     onChange={handleInputChange}
                     required
-                    className="w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all appearance-none bg-white bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%227%22%3E%3Cpath%20d%3D%22M1%201l5%205%205-5%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[position:right_1rem_center] bg-no-repeat pr-10"
+                    aria-invalid={fieldErrors.service ? 'true' : 'false'}
+                    aria-describedby={fieldErrors.service ? 'service-error' : undefined}
+                    className={`w-full min-h-[56px] px-4 py-3 sm:py-3.5 text-base border-2 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all appearance-none bg-white bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%227%22%3E%3Cpath%20d%3D%22M1%201l5%205%205-5%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[position:right_1rem_center] bg-no-repeat pr-10 ${
+                      fieldErrors.service ? 'border-red-500' : 'border-gray-200'
+                    }`}
                   >
                     <option value="">Select your need</option>
                     <option value="ai-seo">Enterprise SEO Strategy</option>
@@ -360,6 +483,11 @@ export function ContactPageClient() {
                     <option value="digital-marketing">Full-Service Digital Marketing</option>
                     <option value="consulting">Strategic Consulting</option>
                   </select>
+                  {fieldErrors.service && (
+                    <p id="service-error" className="mt-1.5 text-sm text-red-600">
+                      {fieldErrors.service}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -373,13 +501,27 @@ export function ContactPageClient() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full min-h-[160px] px-4 py-3 sm:py-3.5 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-y"
+                    aria-invalid={fieldErrors.message ? 'true' : 'false'}
+                    aria-describedby={fieldErrors.message ? 'message-error' : undefined}
+                    className={`w-full min-h-[160px] px-4 py-3 sm:py-3.5 text-base border-2 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-y ${
+                      fieldErrors.message ? 'border-red-500' : 'border-gray-200'
+                    }`}
                     placeholder="Your website URL, current challenges, growth goals, and estimated budget. The more detail you share, the better we can assess fit and provide helpful insights."
                   />
+                  {fieldErrors.message && (
+                    <p id="message-error" className="mt-1.5 text-sm text-red-600">
+                      {fieldErrors.message}
+                    </p>
+                  )}
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="flex items-start p-4 bg-green-50 border-2 border-green-500 rounded-lg">
+                  <div 
+                    id="contact-form-success"
+                    role="status"
+                    aria-live="polite"
+                    className="flex items-start p-4 bg-green-50 border-2 border-green-500 rounded-lg"
+                  >
                     <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-green-900 font-semibold text-base mb-1">Message Received</p>
@@ -389,7 +531,12 @@ export function ContactPageClient() {
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="flex items-start p-4 bg-red-50 border-2 border-red-500 rounded-lg">
+                  <div 
+                    id="contact-form-error"
+                    role="alert"
+                    aria-live="assertive"
+                    className="flex items-start p-4 bg-red-50 border-2 border-red-500 rounded-lg"
+                  >
                     <AlertCircle className="h-6 w-6 text-red-600 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-red-900 font-semibold text-base mb-1">Submission Failed</p>

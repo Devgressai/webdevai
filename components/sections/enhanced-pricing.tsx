@@ -190,8 +190,8 @@ export function EnhancedPricing({
                         
                         {tier.excluded?.map((excluded, excludedIndex) => (
                           <li key={excludedIndex} className="flex items-start gap-3">
-                            <XCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-400" />
-                            <span className="text-sm text-gray-400 line-through">
+                            <XCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-500" />
+                            <span className="text-sm text-gray-500 line-through">
                               {excluded}
                             </span>
                           </li>

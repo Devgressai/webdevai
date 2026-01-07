@@ -27,8 +27,8 @@ export function CTAWithTracking({ className = "" }: CTAWithTrackingProps) {
 
   return (
     <section className={`py-24 bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900 relative overflow-hidden ${className}`}>
-      {/* Background image and gradient flow */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Background image - decorative */}
+      <div className="absolute inset-0 opacity-20" aria-hidden="true">
         <Image
           src="/images/hero-business-meeting.webp"
           alt=""
@@ -36,6 +36,7 @@ export function CTAWithTracking({ className = "" }: CTAWithTrackingProps) {
           className="object-cover"
           priority
           sizes="100vw"
+          aria-hidden="true"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/25 via-pink-500/25 to-blue-500/25"></div>
