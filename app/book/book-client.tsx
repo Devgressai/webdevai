@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { getCalendlyEmbedUrl } from '@/lib/calendly'
 import { CheckCircle, Calendar, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
@@ -8,123 +8,28 @@ import Link from 'next/link'
 export function BookPageClient() {
   const [calendlyUrl, setCalendlyUrl] = useState<string>('')
   const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
-  const calendlyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Get the Calendly URL with UTM params on client side
     const url = getCalendlyEmbedUrl()
-    console.log('Calendly URL:', url) // Debug log
+    console.log('Calendly URL:', url)
     setCalendlyUrl(url)
     
-    // Check if URL is valid (not the placeholder)
-    if (url.includes('YOUR-USERNAME') || !url.includes('calendly.com') || url.includes('calendly.com/YOUR-USERNAME')) {
-      setHasError(true)
+    // Check if URL is valid
+    if (!url || url.includes('YOUR-USERNAME') || !url.includes('calendly.com')) {
       setIsLoading(false)
       return
     }
     
-    // URL is valid, proceed with initialization
-    setHasError(false)
+    // Small delay to ensure iframe loads properly
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
 
-    // Initialize Calendly inline widget (recommended method)
-    const initCalendly = () => {
-      if (typeof (window as any).Calendly !== 'undefined' && calendlyRef.current) {
-        try {
-          console.log('Initializing Calendly with URL:', url)
-          // Clear any existing content
-          if (calendlyRef.current) {
-            calendlyRef.current.innerHTML = ''
-          }
-          
-          ;(window as any).Calendly.initInlineWidget({
-            url: url,
-            parentElement: calendlyRef.current,
-            prefill: {},
-            utm: {}
-          })
-          
-          // Wait a bit then check if widget loaded
-          setTimeout(() => {
-            if (calendlyRef.current && calendlyRef.current.children.length === 0) {
-              console.warn('Calendly widget did not load, trying iframe fallback')
-              // Fallback to iframe
-              const iframe = document.createElement('iframe')
-              iframe.src = url
-              iframe.width = '100%'
-              iframe.height = '800'
-              iframe.frameBorder = '0'
-              iframe.style.minHeight = '800px'
-              iframe.title = 'Book a Discovery Call'
-              iframe.allow = 'camera; microphone; geolocation'
-              if (calendlyRef.current) {
-                calendlyRef.current.innerHTML = ''
-                calendlyRef.current.appendChild(iframe)
-              }
-            }
-            setIsLoading(false)
-          }, 2000)
-        } catch (error) {
-          console.error('Error initializing Calendly:', error)
-          // Fallback to iframe on error
-          if (calendlyRef.current) {
-            const iframe = document.createElement('iframe')
-            iframe.src = url
-            iframe.width = '100%'
-            iframe.height = '800'
-            iframe.frameBorder = '0'
-            iframe.style.minHeight = '800px'
-            iframe.title = 'Book a Discovery Call'
-            iframe.allow = 'camera; microphone; geolocation'
-            calendlyRef.current.innerHTML = ''
-            calendlyRef.current.appendChild(iframe)
-          }
-          setIsLoading(false)
-          setHasError(false)
-        }
-      } else {
-        console.log('Calendly not ready:', {
-          CalendlyExists: typeof (window as any).Calendly !== 'undefined',
-          refExists: !!calendlyRef.current
-        })
-      }
-    }
-
-    // Check if Calendly script is already loaded
-    if (typeof (window as any).Calendly !== 'undefined') {
-      // Small delay to ensure DOM is ready
-      setTimeout(initCalendly, 100)
-    } else {
-      // Wait for script to load
-      const checkInterval = setInterval(() => {
-        if (typeof (window as any).Calendly !== 'undefined') {
-          clearInterval(checkInterval)
-          setTimeout(initCalendly, 100)
-        }
-      }, 100)
-
-      // Timeout after 10 seconds - fallback to iframe
-      setTimeout(() => {
-        clearInterval(checkInterval)
-        if (typeof (window as any).Calendly === 'undefined') {
-          console.warn('Calendly script failed to load, using iframe fallback')
-          if (calendlyRef.current && url) {
-            const iframe = document.createElement('iframe')
-            iframe.src = url
-            iframe.width = '100%'
-            iframe.height = '800'
-            iframe.frameBorder = '0'
-            iframe.style.minHeight = '800px'
-            iframe.title = 'Book a Discovery Call'
-            iframe.allow = 'camera; microphone; geolocation'
-            calendlyRef.current.innerHTML = ''
-            calendlyRef.current.appendChild(iframe)
-            setIsLoading(false)
-          }
-        }
-      }, 10000)
-    }
+    return () => clearTimeout(timer)
   }, [])
+
+  const isValidUrl = calendlyUrl && !calendlyUrl.includes('YOUR-USERNAME') && calendlyUrl.includes('calendly.com')
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -136,25 +41,25 @@ export function BookPageClient() {
           </h1>
           <p className="text-lg sm:text-xl text-slate-600 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
             Schedule a dedicated time to discuss your project, goals, and challenges.
-            We'll evaluate your current digital presence and outline clear next steps.
+            We will evaluate your current digital presence and outline clear next steps.
           </p>
           
           {/* Bullet Points */}
           <div className="max-w-2xl mx-auto space-y-4 mb-8">
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+              <CheckCircle className="h-6 w-6 text-primary-600 flex-shrink-0 mt-0.5" />
               <p className="text-base sm:text-lg text-slate-700">
                 Review your current website or digital presence
               </p>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+              <CheckCircle className="h-6 w-6 text-primary-600 flex-shrink-0 mt-0.5" />
               <p className="text-base sm:text-lg text-slate-700">
                 Identify SEO, AI, and conversion opportunities
               </p>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+              <CheckCircle className="h-6 w-6 text-primary-600 flex-shrink-0 mt-0.5" />
               <p className="text-base sm:text-lg text-slate-700">
                 Align on a clear path forward
               </p>
@@ -166,7 +71,7 @@ export function BookPageClient() {
       {/* Calendly Embed Section */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-          {!calendlyUrl || calendlyUrl.includes('YOUR-USERNAME') ? (
+          {!isValidUrl ? (
             <div className="flex flex-col items-center justify-center h-[800px] p-8">
               <Calendar className="h-16 w-16 text-slate-400 mb-4" />
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Calendar Not Configured</h3>
@@ -174,50 +79,56 @@ export function BookPageClient() {
                 Please set your Calendly username in environment variables, or book directly on Calendly.
               </p>
               <Link
-                href="https://calendly.com/webvello/discovery-call"
+                href="https://calendly.com/webvello"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-colors"
               >
                 <span>Book on Calendly</span>
                 <ExternalLink className="h-4 w-4" />
               </Link>
-              {process.env.NODE_ENV === 'development' && (
-                <p className="text-xs text-slate-400 mt-4">
-                  Debug: {calendlyUrl || 'No URL generated'}
-                </p>
-              )}
             </div>
           ) : (
-            <div className="w-full" style={{ minHeight: '800px', position: 'relative' }}>
+            <div className="w-full relative" style={{ minHeight: '800px' }}>
               {isLoading && (
                 <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
                   <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
                     <p className="text-slate-600">Loading calendar...</p>
                   </div>
                 </div>
               )}
-              {/* Calendly inline widget container */}
-              <div 
-                ref={calendlyRef}
-                className="calendly-inline-widget w-full"
-                style={{ minHeight: '800px', height: '800px' }}
+              {/* Direct iframe embed - most reliable method */}
+              <iframe
+                src={calendlyUrl}
+                width="100%"
+                height="800"
+                frameBorder="0"
+                title="Book a Discovery Call"
+                className="w-full border-0"
+                style={{ minHeight: '800px' }}
+                allow="camera; microphone; geolocation"
+                onLoad={() => {
+                  console.log('Calendly iframe loaded successfully')
+                  setIsLoading(false)
+                }}
+                onError={() => {
+                  console.error('Calendly iframe failed to load')
+                  setIsLoading(false)
+                }}
               />
-              {/* Fallback: Direct link if widget doesn't load */}
-              {!isLoading && (
-                <div className="absolute bottom-4 right-4 z-20">
-                  <a
-                    href={calendlyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-slate-500 hover:text-blue-600 flex items-center gap-1 bg-white/90 px-2 py-1 rounded"
-                  >
-                    Open in new tab
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </div>
-              )}
+              {/* Direct link option */}
+              <div className="absolute bottom-4 right-4 z-20">
+                <a
+                  href={calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-slate-500 hover:text-primary-600 flex items-center gap-1 bg-white/90 px-2 py-1 rounded shadow-sm transition-colors"
+                >
+                  Open in new tab
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
             </div>
           )}
         </div>
@@ -230,4 +141,3 @@ export function BookPageClient() {
     </div>
   )
 }
-
