@@ -91,6 +91,34 @@ const nextConfig = {
         ],
       },
       {
+        source: '/book',
+        headers: [
+          // Allow iframes for Calendly on /book page
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          // Content Security Policy - allow Calendly iframes
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live https://assets.calendly.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com",
+              "img-src 'self' data: https: blob:",
+              "font-src 'self' https://fonts.gstatic.com https://assets.calendly.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://vitals.vercel-insights.com https://calendly.com https://*.calendly.com",
+              "frame-src 'self' https://calendly.com https://*.calendly.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "frame-ancestors 'none'",
+              "upgrade-insecure-requests"
+            ].join('; '),
+          },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           // Prevent clickjacking attacks
