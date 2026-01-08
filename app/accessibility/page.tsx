@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 }
 
 export default function AccessibilityPage() {
-  const lastReviewDate = 'January 2025'
+  const lastReviewDate = 'January 2026'
 
   return (
     <div className="min-h-screen bg-white">
