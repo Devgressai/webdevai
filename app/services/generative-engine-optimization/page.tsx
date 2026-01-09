@@ -28,6 +28,20 @@ export const metadata: Metadata = {
     description: 'Ensure your brand appears in AI-powered SERPs with Web Vello\'s GEO strategy for structured data, intent modeling, and conversational relevance.',
     url: 'https://www.webvello.com/services/generative-engine-optimization',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.webvello.com/api/og?title=Generative%20Engine%20Optimization&subtitle=Get%20Found%20in%20ChatGPT%2C%20Perplexity%20%26%20Google%20AI&type=geo',
+        width: 1200,
+        height: 630,
+        alt: 'GEO Services - AI Search Optimization with code preview',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GEO Services: Get Cited by ChatGPT & AI Search | Webvello',
+    description: 'Get cited by ChatGPT, Perplexity & Google AI. AI-powered search optimization.',
+    images: ['https://www.webvello.com/api/og?title=Generative%20Engine%20Optimization&subtitle=AI%20Search%20Optimization&type=geo'],
   }
 }
 

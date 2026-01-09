@@ -327,17 +327,18 @@ export const pageMetadata: Record<string, Metadata> = {
       url: 'https://www.webvello.com/contact',
       images: [
         {
-          url: '/og-contact.jpg',
+          url: 'https://www.webvello.com/api/og?title=Let%27s%20Connect&subtitle=Free%20Digital%20Marketing%20Strategy&type=contact',
           width: 1200,
           height: 630,
-          alt: 'Contact Web Vello - Free Marketing Strategy',
+          alt: 'Contact Web Vello - Free Marketing Strategy with code preview',
         },
       ],
     },
     twitter: {
+      card: 'summary_large_image',
       title: 'Contact Web Vello | Free Digital Marketing Strategy',
       description: 'Get your free digital marketing strategy session. Expert advice on growth.',
-      images: ['/og-contact.jpg'],
+      images: ['https://www.webvello.com/api/og?title=Let%27s%20Connect&subtitle=Free%20Strategy%20Session&type=contact'],
     },
     alternates: {
       canonical: 'https://www.webvello.com/contact',

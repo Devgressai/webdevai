@@ -18,12 +18,18 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.webvello.com/og-image.jpg',
+        url: 'https://www.webvello.com/api/og?title=SEO%20Services&subtitle=Technical%2C%20On-Page%20%26%20Link%20Building&type=seo',
         width: 1200,
         height: 630,
-        alt: 'Webvello Traditional SEO Services',
+        alt: 'SEO Services - Technical optimization with code preview',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Traditional SEO: Technical, On-Page & Link Building | Webvello',
+    description: 'Expert SEO services - technical optimization, on-page strategy, and authority building.',
+    images: ['https://www.webvello.com/api/og?title=SEO%20Services&subtitle=Technical%20%26%20On-Page%20Optimization&type=seo'],
   }
 }
 

@@ -15,6 +15,20 @@ export const metadata: Metadata = {
     description: 'Custom web development using React and Tailwind CSS. Performance-optimized, SEO-ready websites built for visibility and conversions.',
     url: 'https://www.webvello.com/services/web-development',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.webvello.com/api/og?title=Web%20Development&subtitle=React%20%2B%20Tailwind%20%2B%20Next.js&type=web',
+        width: 1200,
+        height: 630,
+        alt: 'Web Development Services - React code preview',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom React + Tailwind Web Development | Webvello',
+    description: 'Performance-optimized, SEO-ready websites built with React and Tailwind CSS.',
+    images: ['https://www.webvello.com/api/og?title=Web%20Development&subtitle=React%20%2B%20Tailwind%20%2B%20Next.js&type=web'],
   }
 }
 
