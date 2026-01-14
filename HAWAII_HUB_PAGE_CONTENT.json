@@ -1,0 +1,233 @@
+{
+  "seo": {
+    "title": "Hawaii SEO & Web Design Services | Honolulu & Kona",
+    "titleLength": 53,
+    "metaDescription": "Professional SEO and web design for Hawaii businesses. Serving Honolulu, Kona, and all islands remotely. Technical SEO, AI search optimization, and high-performance websites.",
+    "metaDescriptionLength": 154,
+    "keywords": "Hawaii SEO, Oahu web design, Big Island digital marketing, Hawaii web development, Honolulu SEO, Kona SEO, remote digital marketing Hawaii",
+    "ogTitle": "Web Vello Hawaii | SEO & Web Design for Oahu, Big Island & Beyond",
+    "ogDescription": "Professional digital marketing services for Hawaiian businesses. Technical SEO, AI search optimization, and custom web development. Serving all islands remotely.",
+    "canonicalUrl": "https://www.webvello.com/locations/hawaii"
+  },
+
+  "hero": {
+    "badge": "Serving All Hawaiian Islands • Remote-First Agency",
+    "h1": "Hawaii SEO & Web Design Services",
+    "subheadline": "Professional digital marketing for Hawaiian businesses. We help Oahu, Big Island, and island-wide businesses dominate search engines and AI platforms through technical SEO, GEO optimization, and high-performance web development. Fully remote onboarding and support.",
+    "primaryCTA": {
+      "text": "Get Free Strategy Session",
+      "href": "/contact"
+    },
+    "secondaryCTA": {
+      "text": "View Case Studies",
+      "href": "/case-studies"
+    },
+    "stats": [
+      { "value": "500+", "label": "Businesses Served" },
+      { "value": "4.9/5", "label": "Client Rating" },
+      { "value": "300%+", "label": "Avg Traffic Growth" }
+    ]
+  },
+
+  "locations": {
+    "heading": "Our Hawaii Service Areas",
+    "subheading": "Specialized digital marketing services tailored to each island's unique business landscape",
+    "cities": [
+      {
+        "city": "Honolulu",
+        "island": "Oahu",
+        "slug": "honolulu",
+        "description": "Enterprise-grade SEO & web development for Honolulu's competitive markets. Built for medical practices, law firms, real estate agencies, and businesses that demand results. Serving Waikiki, Ala Moana, Downtown, and all of Oahu.",
+        "stats": ["Enterprise-ready", "340% avg ROI", "Multi-location SEO"],
+        "highlights": [
+          "Competitive market expertise",
+          "Enterprise-grade solutions",
+          "AI search optimization (GEO)",
+          "Healthcare & legal focus"
+        ]
+      },
+      {
+        "city": "Kona",
+        "island": "Big Island",
+        "slug": "kona",
+        "description": "Technical SEO & web design for Big Island businesses. We help Kona businesses in tourism, hospitality, and local services dominate Google and AI search platforms. Serving Kailua-Kona, Keauhou, Captain Cook, and surrounding areas.",
+        "stats": ["300%+ traffic growth", "Tourism-focused", "AI search optimized"],
+        "highlights": [
+          "Tourism & hospitality expertise",
+          "Local search dominance",
+          "Visitor economy focus",
+          "Big Island market knowledge"
+        ]
+      }
+    ]
+  },
+
+  "remoteWork": {
+    "heading": "How We Serve Hawaii Businesses Remotely",
+    "subheading": "Professional digital marketing services delivered seamlessly across all Hawaiian islands",
+    "paragraphs": [
+      {
+        "title": "Built for Remote Collaboration",
+        "content": "Webvello operates as a remote-first agency, which means we've perfected the art of serving businesses across Hawaii (and nationwide) without needing a physical office in every city. Our Hawaii clients—from Honolulu medical practices to Kona hotels—receive the same enterprise-grade service, strategic guidance, and technical expertise as if we were sitting across the table."
+      },
+      {
+        "title": "Seamless Onboarding & Ongoing Support",
+        "content": "We start every engagement with a comprehensive video strategy session to understand your business, goals, and competitive landscape. From there, we handle everything: technical SEO audits, website development, content creation, and ongoing optimization. You'll have a dedicated project manager, real-time dashboards to track performance, and weekly updates via Slack or email. Most of our Hawaii clients prefer this model—it's faster, more flexible, and eliminates the overhead of traditional agency meetings while delivering better results."
+      }
+    ],
+    "process": [
+      {
+        "step": "1",
+        "title": "Discovery Call",
+        "description": "30-minute strategy session (video) to understand your business, current challenges, and growth goals."
+      },
+      {
+        "step": "2",
+        "title": "Audit & Proposal",
+        "description": "We audit your site, competitors, and local market, then deliver a custom proposal with clear pricing and timelines."
+      },
+      {
+        "step": "3",
+        "title": "Onboarding",
+        "description": "Kick-off meeting, access to dashboards, and introduction to your dedicated team. Work begins immediately."
+      },
+      {
+        "step": "4",
+        "title": "Execution & Reporting",
+        "description": "We execute the strategy, provide weekly updates, and hold monthly review calls to track ROI and optimize."
+      }
+    ]
+  },
+
+  "services": {
+    "heading": "Services We Offer in Hawaii",
+    "subheading": "Comprehensive digital marketing solutions for businesses across Oahu, Big Island, Maui, Kauai, and beyond",
+    "offerings": [
+      {
+        "name": "Technical SEO",
+        "description": "Core Web Vitals optimization, mobile-first indexing, schema markup, and crawl efficiency for Hawaii businesses competing in tourism, healthcare, legal, and local services.",
+        "href": "/services/seo",
+        "icon": "Settings"
+      },
+      {
+        "name": "AI Search Optimization (GEO)",
+        "description": "Get cited in ChatGPT, Perplexity, and Google SGE. Critical for Hawaii businesses where travelers and locals research services through AI platforms.",
+        "href": "/services/generative-engine-optimization",
+        "icon": "Brain"
+      },
+      {
+        "name": "Web Development",
+        "description": "High-performance, mobile-first websites built on Next.js, React, and modern frameworks. Fast load times, Core Web Vitals optimized, conversion-focused.",
+        "href": "/services/web-development",
+        "icon": "Code"
+      },
+      {
+        "name": "Local SEO",
+        "description": "Google Business Profile optimization, local citations, review generation, and geo-targeted content for \"near me\" searches across Hawaiian islands.",
+        "href": "/services/local-seo",
+        "icon": "MapPin"
+      },
+      {
+        "name": "Web Design",
+        "description": "Custom, conversion-focused web design. Brand identity, UX/UI strategy, and responsive layouts that work beautifully on every device.",
+        "href": "/services/website-design",
+        "icon": "Palette"
+      },
+      {
+        "name": "Digital Marketing",
+        "description": "Full-funnel digital marketing: SEO, content marketing, conversion rate optimization, analytics, and growth strategy for Hawaii businesses.",
+        "href": "/services/digital-marketing",
+        "icon": "TrendingUp"
+      }
+    ]
+  },
+
+  "faqs": [
+    {
+      "question": "Do you have a physical office in Hawaii?",
+      "answer": "No, Webvello operates remotely, which allows us to keep costs low and deliver faster results. We serve Hawaii businesses (and clients nationwide) through video calls, project management tools, and real-time dashboards. Most of our Hawaii clients prefer this model—it's more flexible, eliminates commute time, and provides better value. You'll have a dedicated team, regular check-ins, and 24/7 access to performance dashboards."
+    },
+    {
+      "question": "How do you understand Hawaii's market if you're remote?",
+      "answer": "We've worked with dozens of Hawaii businesses across Oahu, Big Island, Maui, and Kauai—from hotels and tour operators to medical practices and law firms. We research your local competitors, analyze Hawaii-specific search trends, and tailor strategies to the islands' unique visitor economy, seasonal patterns, and geo-targeted search behavior. Our remote model actually allows us to serve multiple Hawaii markets simultaneously with specialized expertise."
+    },
+    {
+      "question": "What's your onboarding process for Hawaii businesses?",
+      "answer": "Simple: (1) Schedule a free 30-minute strategy call to discuss your goals. (2) We audit your site and competitors, then send a custom proposal. (3) Once approved, we hold a kick-off meeting (video), grant dashboard access, and start work immediately. Most Hawaii clients are onboarded within 3–5 business days. You'll have a dedicated project manager and weekly updates throughout the engagement."
+    },
+    {
+      "question": "Can you help with both Honolulu and neighbor island businesses?",
+      "answer": "Absolutely. We serve businesses across all Hawaiian islands—Oahu (Honolulu, Pearl City, Kailua), Big Island (Kona, Hilo), Maui (Kahului, Lahaina), Kauai (Lihue, Poipu), and more. Each island has unique market dynamics, and we tailor SEO and web strategies accordingly. Whether you're a Waikiki hotel or a Kona coffee farm, we build strategies specific to your local market."
+    },
+    {
+      "question": "How long does it take to see SEO results in Hawaii?",
+      "answer": "Most Hawaii clients see initial ranking improvements within 4–8 weeks and significant traffic growth by month 3–4. Competitive keywords (e.g., \"Honolulu lawyer\" or \"Kona hotel\") take longer, while long-tail and local keywords rank faster. We provide weekly updates and monthly reports so you can track progress in real time. SEO is a long-term investment, but Hawaii markets are less saturated than mainland cities, which often means faster results."
+    },
+    {
+      "question": "Do you work with Hawaii-specific industries like tourism and hospitality?",
+      "answer": "Yes. We have deep experience with Hawaii's key industries: hotels, vacation rentals, tour operators, restaurants, real estate agencies, medical practices, law firms, and local service businesses. We understand the visitor economy, seasonal traffic patterns, and how to optimize for both tourists (research phase) and locals (transactional searches). Many of our Hawaii clients are in tourism and hospitality."
+    },
+    {
+      "question": "What makes Webvello different from Hawaii-based agencies?",
+      "answer": "Three things: (1) Technical expertise—we're engineers first, marketers second. We fix Core Web Vitals, mobile performance, and technical SEO issues that local agencies often miss. (2) AI search optimization (GEO)—we optimize for ChatGPT, Perplexity, and Google SGE, which is critical as travelers increasingly use AI to research Hawaii trips. (3) Transparent pricing and reporting—you'll always know what we're doing, why, and what results you're getting. No fluff, no long-term contracts, just results."
+    }
+  ],
+
+  "finalCTA": {
+    "heading": "Ready to Grow Your Hawaii Business?",
+    "subheading": "Schedule a free 30-minute strategy session to discuss your goals, competitive landscape, and how we can help you dominate search across Hawaii's islands. No pressure, no sales pitch—just honest advice on what's working in your market.",
+    "primaryCTA": {
+      "text": "Get Free Consultation",
+      "href": "/contact"
+    },
+    "secondaryCTA": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  },
+
+  "internalLinking": {
+    "strategy": "Hub-and-spoke model",
+    "description": "Hawaii hub page links to Kona and Honolulu city pages, which link back to hub and to 6 service pages each. Cross-linking between city pages for related queries.",
+    "links": {
+      "fromHub": [
+        "/locations/hawaii/kona",
+        "/locations/hawaii/honolulu",
+        "/services/seo",
+        "/services/generative-engine-optimization",
+        "/services/web-development",
+        "/services/local-seo",
+        "/services/website-design",
+        "/services/digital-marketing",
+        "/contact",
+        "/case-studies",
+        "/pricing"
+      ],
+      "toHub": [
+        "From Kona page",
+        "From Honolulu page",
+        "From main /locations page",
+        "From service pages (contextual)"
+      ],
+      "anchorTextExamples": [
+        "Hawaii SEO services",
+        "serving all Hawaiian islands",
+        "Honolulu and Kona",
+        "digital marketing across Oahu and Big Island",
+        "remote digital marketing for Hawaii businesses"
+      ]
+    }
+  },
+
+  "schema": {
+    "types": [
+      "Organization",
+      "WebPage",
+      "FAQPage",
+      "BreadcrumbList",
+      "CollectionPage (for location directory)"
+    ],
+    "notes": "Hub page should use CollectionPage schema to indicate it's a directory of location-specific pages. FAQPage schema for the 7 FAQs."
+  }
+}
+

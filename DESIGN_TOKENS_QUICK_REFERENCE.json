@@ -1,0 +1,95 @@
+{
+  "colors": {
+    "primary": {
+      "main": "#4C74B9",
+      "dark": "#004085",
+      "usage": "Primary CTAs, links, accents"
+    },
+    "secondary": {
+      "main": "#64748b",
+      "dark": "#0f172a",
+      "usage": "Body text, muted elements"
+    },
+    "accent": {
+      "main": "#f97316",
+      "usage": "Highlights, secondary CTAs"
+    }
+  },
+  "typography": {
+    "headings": {
+      "font": "Poppins",
+      "h1": "text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-bold",
+      "h3": "text-2xl sm:text-3xl font-semibold"
+    },
+    "body": {
+      "font": "Inter",
+      "large": "text-lg sm:text-xl leading-relaxed",
+      "base": "text-base leading-relaxed",
+      "small": "text-sm sm:text-base"
+    }
+  },
+  "spacing": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section": "py-12 sm:py-16 lg:py-20",
+    "sectionLarge": "py-16 sm:py-20 lg:py-24",
+    "cardGap": "gap-6 sm:gap-8"
+  },
+  "borderRadius": {
+    "button": "rounded-xl",
+    "card": "rounded-2xl",
+    "badge": "rounded-full"
+  },
+  "shadows": {
+    "card": "shadow-lg hover:shadow-xl",
+    "button": "shadow-xl hover:shadow-2xl",
+    "soft": "shadow-sm"
+  },
+  "gradients": {
+    "lightSection": "bg-gradient-to-br from-gray-50 via-white to-blue-50/30",
+    "darkSection": "bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800",
+    "primaryCTA": "bg-gradient-to-r from-blue-500 to-indigo-500",
+    "iconBackground": "bg-gradient-to-br from-blue-500 to-cyan-600"
+  },
+  "animations": {
+    "transition": "transition-all duration-300",
+    "hover": "hover:-translate-y-1",
+    "scale": "hover:scale-110"
+  },
+  "components": {
+    "button": {
+      "primary": "bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300",
+      "secondary": "border-2 border-white/40 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+    },
+    "card": {
+      "base": "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-1",
+      "iconContainer": "w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6"
+    },
+    "sectionHeader": {
+      "badge": "inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 text-sm font-semibold mb-6 shadow-lg",
+      "title": "text-4xl lg:text-5xl font-bold text-secondary-900 mb-6",
+      "description": "text-xl text-secondary-600 max-w-3xl mx-auto"
+    }
+  },
+  "pageStructure": [
+    "Hero (dark background, left-aligned)",
+    "Entity Definition (light gradient)",
+    "Stats/Trust (dark gradient)",
+    "Social Proof/Testimonials",
+    "How It Works/Process",
+    "Services Grid",
+    "Why Choose Us",
+    "FAQ",
+    "Final CTA (dark gradient)",
+    "Pricing (optional)"
+  ],
+  "reusableComponents": {
+    "hero": "/components/sections/hero.tsx",
+    "faq": "/components/sections/homepage-faq.tsx",
+    "pricing": "/components/sections/pricing.tsx",
+    "socialProof": "/components/sections/social-proof.tsx",
+    "button": "/components/ui/button.tsx",
+    "card": "/components/ui/card.tsx"
+  }
+}
+

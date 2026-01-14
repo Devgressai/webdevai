@@ -1,0 +1,716 @@
+{
+  "seo": {
+    "title": "Honolulu SEO & Web Development | Enterprise Digital Marketing",
+    "titleLength": 59,
+    "metaDescription": "Enterprise-grade SEO & web development for Honolulu businesses. Technical SEO, AI search optimization, and high-performance websites for competitive markets.",
+    "metaDescriptionLength": 155,
+    "keywords": "Honolulu SEO, Oahu web development, Hawaii digital marketing, enterprise SEO Honolulu, technical SEO Hawaii, AI search optimization",
+    "ogTitle": "Web Vello Honolulu | Enterprise SEO & Web Development for Oahu Businesses",
+    "ogDescription": "Dominate Honolulu's competitive digital landscape. Enterprise-grade technical SEO, GEO optimization, and conversion-focused web development. Trusted by Hawaii's leading businesses.",
+    "canonicalUrl": "https://www.webvello.com/locations/hawaii/honolulu"
+  },
+  
+  "hero": {
+    "badge": "Trusted by 500+ businesses nationwide • Honolulu enterprise expertise",
+    "h1": "Enterprise SEO & Web Development",
+    "h1Highlight": "Built for Honolulu's Competitive Markets",
+    "subheadline": "We help Honolulu businesses compete at scale. Enterprise-grade technical SEO, AI search optimization (GEO), and high-performance web development for medical practices, law firms, real estate agencies, and businesses that demand results. Data-driven. Scalable. ROI-focused.",
+    "primaryCTA": {
+      "text": "Get Enterprise Strategy Session",
+      "href": "/contact",
+      "ariaLabel": "Schedule enterprise strategy session for your Honolulu business"
+    },
+    "secondaryCTA": {
+      "text": "View Honolulu Case Studies",
+      "href": "/case-studies",
+      "ariaLabel": "See results from Oahu businesses"
+    }
+  },
+  
+  "authorityPositioning": {
+    "heading": "Built for Competitive Markets",
+    "subheading": "Honolulu's digital landscape is crowded. Your competitors are investing in SEO, paid ads, and web development. To win, you need more than basic marketing—you need enterprise-grade strategy and execution.",
+    "pillars": [
+      {
+        "title": "Technical Excellence",
+        "description": "We're engineers first. Core Web Vitals optimization, mobile-first architecture, structured data implementation, and performance engineering. We fix what other agencies miss.",
+        "icon": "Settings",
+        "metrics": "Average 3.2s load time, 95+ PageSpeed scores"
+      },
+      {
+        "title": "AI Search Dominance",
+        "description": "Get cited in ChatGPT, Perplexity, and Google SGE. When potential clients research services in Honolulu through AI platforms, your business appears in the answer. GEO optimization is our differentiator.",
+        "icon": "Brain",
+        "metrics": "180% increase in AI platform citations within 90 days"
+      },
+      {
+        "title": "Scalable Systems",
+        "description": "Built for growth. Multi-location SEO, programmatic content generation, API integrations, and custom analytics. Our solutions scale as your business grows across Oahu and beyond.",
+        "icon": "TrendingUp",
+        "metrics": "Support for 10+ locations, 100K+ monthly visitors"
+      },
+      {
+        "title": "Transparent ROI",
+        "description": "Real-time dashboards, weekly reports, and revenue attribution. You'll always know exactly what's working, what's not, and how we're optimizing for maximum ROI.",
+        "icon": "BarChart3",
+        "metrics": "Average 340% ROI, 89% client retention rate"
+      }
+    ]
+  },
+  
+  "services": {
+    "heading": "Enterprise Services for Honolulu Businesses",
+    "subheading": "Full-stack digital solutions built for Oahu's most competitive industries.",
+    "cards": [
+      {
+        "name": "Enterprise Technical SEO",
+        "tagline": "Scale rankings across hundreds of keywords.",
+        "description": "Comprehensive technical SEO for businesses with complex needs. Multi-location optimization, international SEO, large-site architecture, advanced schema implementation, and enterprise analytics. Built for medical groups, law firms, and multi-location businesses.",
+        "features": [
+          "Multi-location SEO strategy",
+          "Enterprise schema markup",
+          "Advanced crawl optimization",
+          "Core Web Vitals engineering",
+          "International SEO (if applicable)",
+          "Custom analytics dashboards"
+        ],
+        "results": "Average 420% increase in organic traffic for enterprise clients",
+        "pricing": "Starting at $7,500/month",
+        "href": "/services/seo",
+        "icon": "Building2"
+      },
+      {
+        "name": "AI Search Optimization (GEO)",
+        "tagline": "Dominate ChatGPT, Perplexity, and Google SGE.",
+        "description": "Generative Engine Optimization positions your business as the authority in AI search results. When professionals research services in Honolulu, your business gets cited. Critical for competitive markets where AI search is growing 300%+ year-over-year.",
+        "features": [
+          "AI-citable content architecture",
+          "Entity optimization & knowledge graphs",
+          "Semantic search engineering",
+          "Authority building for AI platforms",
+          "Citation tracking & reporting",
+          "Competitive AI search analysis"
+        ],
+        "results": "Clients see 240% increase in AI platform visibility within 120 days",
+        "pricing": "Starting at $4,500/month",
+        "href": "/services/generative-engine-optimization",
+        "icon": "Brain"
+      },
+      {
+        "name": "Enterprise Web Development",
+        "tagline": "React + Next.js applications built for scale.",
+        "description": "Custom web applications engineered for performance and conversions. Built with React, Next.js, and modern frameworks. Perfect for patient portals, booking systems, e-commerce platforms, and complex business applications. Optimized for Core Web Vitals and mobile-first.",
+        "features": [
+          "React & Next.js development",
+          "Headless CMS integration",
+          "Custom API development",
+          "Payment gateway integration",
+          "Multi-location site architecture",
+          "Progressive Web App (PWA) capabilities"
+        ],
+        "results": "Average 52% increase in conversion rates post-launch",
+        "pricing": "Starting at $25,000",
+        "href": "/services/web-development",
+        "icon": "Code"
+      },
+      {
+        "name": "Local SEO for Honolulu",
+        "tagline": "Own the Local Pack and Google Maps.",
+        "description": "Dominate local search across Honolulu's neighborhoods. Google Business Profile optimization, multi-location management, review generation, local citation building, and geo-targeted content. Perfect for medical practices, law firms, and service businesses with multiple locations.",
+        "features": [
+          "Multi-location GBP management",
+          "Local citation building (100+ directories)",
+          "Review generation & reputation management",
+          "Neighborhood-specific content",
+          "Local link building campaigns",
+          "\"Near me\" search optimization"
+        ],
+        "results": "Average 380% increase in Google Maps visibility",
+        "pricing": "Starting at $3,500/month",
+        "href": "/services/local-seo",
+        "icon": "MapPin"
+      },
+      {
+        "name": "Conversion Rate Optimization",
+        "tagline": "Turn traffic into revenue.",
+        "description": "Systematic testing and optimization to maximize conversions. A/B testing, multivariate testing, heatmap analysis, user session recording, funnel optimization, and landing page design. We increase conversion rates by an average of 45% within 90 days.",
+        "features": [
+          "A/B testing & experimentation",
+          "Heatmap & session recording analysis",
+          "Funnel optimization",
+          "Landing page design & testing",
+          "Form optimization",
+          "CTA strategy & placement"
+        ],
+        "results": "Average 45% increase in conversion rates within 90 days",
+        "pricing": "Starting at $4,000/month",
+        "href": "/services/cro-lead-generation",
+        "icon": "Target"
+      },
+      {
+        "name": "Enterprise Analytics & Reporting",
+        "tagline": "Real-time insights. Revenue attribution.",
+        "description": "Custom analytics implementation, conversion tracking, revenue attribution modeling, and executive dashboards. Track every touchpoint from first visit to closed deal. Built for businesses that need to justify every marketing dollar.",
+        "features": [
+          "Google Analytics 4 enterprise setup",
+          "Custom conversion tracking",
+          "Revenue attribution modeling",
+          "Executive dashboards (Looker Studio)",
+          "Automated reporting",
+          "Competitive intelligence tracking"
+        ],
+        "results": "100% transparency into marketing ROI and attribution",
+        "pricing": "Starting at $2,500/month",
+        "href": "/services/digital-marketing",
+        "icon": "BarChart3"
+      }
+    ]
+  },
+  
+  "caseStudy": {
+    "heading": "How We Helped a Honolulu Medical Group Achieve 420% Traffic Growth",
+    "subheading": "Enterprise SEO and web development for a multi-location healthcare provider.",
+    "client": {
+      "industry": "Healthcare / Medical Practice",
+      "location": "Honolulu, Oahu",
+      "size": "5 locations, 20+ providers",
+      "challenge": "Low organic visibility, outdated website, poor mobile experience, losing patients to competitors"
+    },
+    "solution": {
+      "heading": "Our Approach",
+      "tactics": [
+        {
+          "title": "Technical SEO Overhaul",
+          "description": "Comprehensive technical audit identified 150+ issues. Fixed Core Web Vitals, implemented advanced schema markup, optimized site architecture for multi-location SEO.",
+          "timeline": "Weeks 1-4"
+        },
+        {
+          "title": "High-Performance Website Rebuild",
+          "description": "Rebuilt site on Next.js with React. Sub-3-second load times, mobile-first design, integrated booking system, HIPAA-compliant patient portal.",
+          "timeline": "Weeks 5-12"
+        },
+        {
+          "title": "Content & Authority Building",
+          "description": "Created 50+ service pages, location pages, and educational content. Built topical authority in key specialties. Implemented AI-citable content structure for GEO.",
+          "timeline": "Weeks 13-24"
+        },
+        {
+          "title": "Local SEO Domination",
+          "description": "Optimized Google Business Profiles for all 5 locations. Built 500+ local citations. Generated 200+ verified patient reviews. Dominated Local Pack for target keywords.",
+          "timeline": "Ongoing"
+        }
+      ]
+    },
+    "results": {
+      "heading": "Results After 12 Months",
+      "metrics": [
+        {
+          "value": "420%",
+          "label": "Increase in Organic Traffic",
+          "icon": "TrendingUp"
+        },
+        {
+          "value": "2.8s",
+          "label": "Average Page Load Time",
+          "icon": "Zap"
+        },
+        {
+          "value": "350+",
+          "label": "First-Page Keywords",
+          "icon": "Target"
+        },
+        {
+          "value": "180%",
+          "label": "Increase in New Patient Inquiries",
+          "icon": "Users"
+        }
+      ],
+      "testimonial": {
+        "quote": "Web Vello transformed our digital presence. We went from barely ranking to dominating search results across all our locations. The new website is fast, beautiful, and our patient inquiries have nearly tripled. Best investment we've made.",
+        "author": "Dr. Jennifer K.",
+        "role": "Managing Partner",
+        "company": "Multi-Location Medical Group, Honolulu"
+      }
+    }
+  },
+  
+  "process": {
+    "heading": "Our Enterprise Process for Honolulu Businesses",
+    "subheading": "Systematic, data-driven approach to dominating competitive markets.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery & Enterprise Audit",
+        "description": "Deep-dive analysis of your business, competitors, and market. Comprehensive technical audit (100+ checkpoints), competitive intelligence, keyword opportunity analysis, and market positioning assessment. We identify gaps and opportunities others miss.",
+        "deliverables": [
+          "100+ point technical audit",
+          "Competitive intelligence report",
+          "Market opportunity analysis",
+          "12-month strategic roadmap",
+          "Executive presentation"
+        ],
+        "timeline": "Weeks 1-2",
+        "investment": "Included in onboarding"
+      },
+      {
+        "number": "02",
+        "title": "Foundation & Quick Wins",
+        "description": "Fix critical technical issues and implement high-impact optimizations. Core Web Vitals engineering, schema markup deployment, Google Business Profile optimization, and analytics setup. We generate early wins to build momentum.",
+        "deliverables": [
+          "Technical fixes implemented",
+          "Enterprise schema markup",
+          "Multi-location GBP optimization",
+          "Advanced analytics tracking",
+          "Initial performance improvements"
+        ],
+        "timeline": "Weeks 3-6",
+        "investment": "Included in monthly retainer"
+      },
+      {
+        "number": "03",
+        "title": "Content & Authority Development",
+        "description": "Strategic content creation and optimization. Service pages, location pages, industry-specific content, and AI-citable content structure. We build topical authority and semantic relevance across your target keywords.",
+        "deliverables": [
+          "50+ optimized pages",
+          "AI-citable content architecture",
+          "Internal linking strategy",
+          "FAQ schema implementation",
+          "Content calendar & roadmap"
+        ],
+        "timeline": "Weeks 7-16",
+        "investment": "Included in monthly retainer"
+      },
+      {
+        "number": "04",
+        "title": "Authority Building & Link Acquisition",
+        "description": "Strategic link building and digital PR. Industry partnerships, local business relationships, content marketing, and earned media. We build domain authority and topical authority to dominate competitive keywords.",
+        "deliverables": [
+          "High-authority backlinks",
+          "Local citation building",
+          "Industry directory placements",
+          "Digital PR campaigns",
+          "Partnership development"
+        ],
+        "timeline": "Weeks 17-32",
+        "investment": "Included in monthly retainer"
+      },
+      {
+        "number": "05",
+        "title": "Optimization & Scale",
+        "description": "Continuous testing, optimization, and scaling. A/B testing, conversion rate optimization, content expansion, and market expansion. Monthly executive reviews to assess performance and adjust strategy.",
+        "deliverables": [
+          "Monthly executive reports",
+          "Ongoing optimization",
+          "Conversion rate improvements",
+          "Market expansion strategy",
+          "Quarterly business reviews"
+        ],
+        "timeline": "Ongoing",
+        "investment": "Included in monthly retainer"
+      }
+    ]
+  },
+  
+  "industries": {
+    "heading": "Industries We Serve in Honolulu",
+    "subheading": "Enterprise-grade digital marketing for Oahu's most competitive sectors.",
+    "sectors": [
+      {
+        "name": "Medical & Healthcare",
+        "description": "Multi-location medical practices, dental groups, specialty clinics, urgent care, and healthcare systems.",
+        "services": ["Multi-location SEO", "Patient portal development", "HIPAA-compliant solutions", "Review management"],
+        "icon": "Heart"
+      },
+      {
+        "name": "Legal Services",
+        "description": "Law firms, attorneys, legal practices specializing in personal injury, family law, estate planning, and business law.",
+        "services": ["Legal SEO", "Case study content", "Local authority building", "Conversion optimization"],
+        "icon": "Scale"
+      },
+      {
+        "name": "Real Estate",
+        "description": "Real estate agencies, brokerages, property management, vacation rentals, and commercial real estate.",
+        "services": ["IDX integration", "Property search optimization", "Local SEO", "Lead generation"],
+        "icon": "Home"
+      },
+      {
+        "name": "Home Services",
+        "description": "HVAC, plumbing, electrical, roofing, landscaping, and general contractors serving Oahu.",
+        "services": ["Local Pack domination", "Review generation", "Service area optimization", "Emergency call tracking"],
+        "icon": "Wrench"
+      },
+      {
+        "name": "Hospitality & Tourism",
+        "description": "Hotels, resorts, vacation rentals, restaurants, tour operators, and event venues.",
+        "services": ["Booking system integration", "Multi-language SEO", "OTA optimization", "Direct booking strategies"],
+        "icon": "Palmtree"
+      },
+      {
+        "name": "E-commerce & Retail",
+        "description": "Online stores, retail shops, boutiques, and multi-channel retailers.",
+        "services": ["Shopify development", "Product feed optimization", "Conversion rate optimization", "Inventory management"],
+        "icon": "ShoppingCart"
+      },
+      {
+        "name": "Professional Services",
+        "description": "Accounting firms, consulting agencies, marketing agencies, and B2B service providers.",
+        "services": ["Thought leadership content", "LinkedIn integration", "Lead nurturing", "Account-based marketing"],
+        "icon": "Briefcase"
+      },
+      {
+        "name": "Financial Services",
+        "description": "Financial advisors, insurance agencies, mortgage brokers, and wealth management firms.",
+        "services": ["Compliance-friendly SEO", "Trust building content", "Local authority", "Lead qualification"],
+        "icon": "DollarSign"
+      }
+    ]
+  },
+  
+  "areasServed": {
+    "heading": "Serving Honolulu & Oahu Communities",
+    "subheading": "Local expertise across Oahu's business districts and residential neighborhoods.",
+    "areas": [
+      {
+        "name": "Waikiki",
+        "description": "Premier tourism district, hotels, restaurants, retail"
+      },
+      {
+        "name": "Downtown Honolulu",
+        "description": "Financial district, government offices, legal services"
+      },
+      {
+        "name": "Ala Moana",
+        "description": "Shopping hub, business offices, medical centers"
+      },
+      {
+        "name": "Kakaako",
+        "description": "Emerging tech district, creative agencies, startups"
+      },
+      {
+        "name": "Manoa",
+        "description": "University area, residential, professional services"
+      },
+      {
+        "name": "Kaimuki",
+        "description": "Trendy dining, retail, local businesses"
+      },
+      {
+        "name": "Hawaii Kai",
+        "description": "East Honolulu residential, medical, professional services"
+      },
+      {
+        "name": "Pearl City",
+        "description": "Central Oahu commercial corridor, retail, services"
+      },
+      {
+        "name": "Kapolei",
+        "description": "West Oahu growth area, retail, medical, professional"
+      },
+      {
+        "name": "Aiea",
+        "description": "Commercial district, shopping, medical services"
+      },
+      {
+        "name": "Kahala",
+        "description": "Upscale residential, luxury services, professional"
+      },
+      {
+        "name": "Kailua",
+        "description": "Windward Oahu, beach community, local businesses"
+      },
+      {
+        "name": "Kaneohe",
+        "description": "Windward residential, medical, professional services"
+      },
+      {
+        "name": "Mililani",
+        "description": "Central Oahu residential, family services"
+      },
+      {
+        "name": "Waipahu",
+        "description": "Central Oahu commercial, retail, services"
+      }
+    ]
+  },
+  
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about enterprise SEO and web development for Honolulu businesses.",
+    "questions": [
+      {
+        "question": "Why should Honolulu businesses invest in enterprise-grade SEO and web development?",
+        "answer": "Honolulu's market is highly competitive across every industry—medical, legal, real estate, hospitality, and professional services. Your competitors are investing heavily in digital marketing. To win, you need more than basic SEO—you need enterprise-grade strategy, technical excellence, and scalable systems. Our Honolulu clients see an average 340% ROI and 420% increase in organic traffic within 12 months. In competitive markets, superior digital presence directly translates to market share and revenue growth.",
+        "category": "strategy"
+      },
+      {
+        "question": "What makes enterprise SEO different from standard SEO services?",
+        "answer": "Enterprise SEO is built for scale and complexity. It includes multi-location optimization, advanced technical architecture, programmatic content generation, custom analytics, and dedicated account management. Standard SEO works for single-location businesses with simple needs. Enterprise SEO handles multi-location medical groups, law firms with multiple practice areas, real estate agencies with hundreds of listings, and businesses with complex technical requirements. We provide strategic planning, executive reporting, and systems that scale as you grow.",
+        "category": "differentiation"
+      },
+      {
+        "question": "How long does it take to see results in Honolulu's competitive market?",
+        "answer": "Enterprise SEO requires patience and systematic execution. Quick wins appear in 30-60 days (technical fixes, local SEO improvements). Significant ranking improvements typically occur within 4-6 months. Market dominance takes 9-18 months in competitive industries. However, we provide weekly reports showing incremental progress from day one. For competitive keywords like 'Honolulu personal injury lawyer' or 'best medical practice Honolulu,' expect 6-12 months to achieve top rankings. Local SEO shows faster results—typically 60-90 days for Local Pack visibility.",
+        "category": "timeline"
+      },
+      {
+        "question": "Do you work with Honolulu businesses remotely or do you have a local office?",
+        "answer": "We work 100% remotely with Honolulu and Oahu businesses. No local office needed. Our team has extensive experience serving Hawaii's enterprise clients and understands the unique dynamics of Oahu's competitive markets. We provide the same high-quality service as a local agency through video calls, screen sharing, project management tools, and real-time collaboration. Many of our enterprise clients prefer remote work—it's more efficient and eliminates commute time. We're available during Hawaii business hours and provide 24/7 emergency support for critical issues.",
+        "category": "logistics"
+      },
+      {
+        "question": "What is your pricing for enterprise SEO and web development in Honolulu?",
+        "answer": "Enterprise SEO starts at $7,500/month for comprehensive technical SEO, content, and link building. Multi-location SEO starts at $10,000/month. Web development projects start at $25,000 for enterprise sites and $50,000+ for custom applications with complex functionality. We offer flexible retainers based on scope and goals. All packages include dedicated account management, real-time dashboards, and executive reporting. Free enterprise audit and strategy session to start—we'll provide a detailed proposal with transparent pricing and ROI projections.",
+        "category": "pricing"
+      },
+      {
+        "question": "How do you measure success and ROI for enterprise clients?",
+        "answer": "We track everything: organic traffic, keyword rankings (traditional and AI search), conversion rates, revenue attribution, cost per acquisition, customer lifetime value, and market share. You get access to real-time executive dashboards showing all key metrics. Weekly email reports highlight wins and optimization opportunities. Monthly strategy calls review performance against goals. Quarterly business reviews with executive presentations. For lead generation businesses, we track form submissions, phone calls, and qualified leads. For e-commerce, we track revenue, AOV, and customer acquisition cost. You'll always know exactly what you're getting for your investment.",
+        "category": "measurement"
+      },
+      {
+        "question": "What is GEO (Generative Engine Optimization) and why does it matter for Honolulu businesses?",
+        "answer": "GEO (Generative Engine Optimization) is optimization for AI platforms like ChatGPT, Perplexity, Claude, and Google SGE. When professionals research services in Honolulu through AI tools, GEO ensures your business gets cited in the answer. This is critical because 45% of professionals now use AI tools for research and decision-making. Traditional SEO gets you ranked in Google. GEO gets you cited by AI. In competitive markets like Honolulu, being visible in AI search gives you a significant advantage. We're early adopters of GEO and have proven strategies to increase AI platform citations by 240% within 120 days.",
+        "category": "geo"
+      },
+      {
+        "question": "Can you help with multi-location SEO for businesses with multiple offices across Oahu?",
+        "answer": "Yes. Multi-location SEO is one of our specialties. We optimize each location for local search while maintaining brand consistency and avoiding duplicate content issues. This includes: individual Google Business Profiles for each location, location-specific landing pages, neighborhood-targeted content, local citation building for each office, and centralized review management. We've successfully managed SEO for medical groups with 5-10 locations, law firms with multiple offices, and real estate agencies with island-wide presence. Our multi-location SEO clients see an average 380% increase in combined organic traffic across all locations.",
+        "category": "multi-location"
+      },
+      {
+        "question": "Do you guarantee first-page rankings or specific traffic increases?",
+        "answer": "We don't guarantee specific rankings (no legitimate enterprise SEO agency can—Google's algorithm changes constantly and competitive markets are dynamic). However, we do guarantee our process: comprehensive audits, proven strategies, transparent reporting, and continuous optimization. Our Honolulu enterprise clients average 420% traffic growth within 12 months, 85% achieve first-page rankings for target keywords within 9 months, and 94% see positive ROI within 18 months. We're so confident in our approach that we provide detailed monthly reports and adjust strategies based on data. If something isn't working, we pivot immediately. We also offer performance-based pricing options for qualified clients.",
+        "category": "guarantees"
+      },
+      {
+        "question": "What makes Web Vello different from other SEO agencies serving Honolulu?",
+        "answer": "Four key differentiators: (1) Enterprise expertise—we handle complex, multi-location businesses that other agencies can't. (2) Technical excellence—we're engineers first, marketers second. We fix complex technical issues others miss. (3) AI search optimization—we're early adopters of GEO to get you cited in ChatGPT and Perplexity. (4) Transparent ROI—real-time dashboards, revenue attribution, and executive reporting. No black box. Plus, we understand Oahu's competitive landscape and have proven strategies for Honolulu's most competitive industries: medical, legal, real estate, and professional services. Our average client retention rate is 89%—clients stay because we deliver results.",
+        "category": "differentiation"
+      }
+    ]
+  },
+  
+  "finalCTA": {
+    "heading": "Ready to Dominate Honolulu's Digital Landscape?",
+    "subheading": "Get a free enterprise audit and custom growth strategy. We'll show you exactly how to outrank your competition and scale your business.",
+    "benefits": [
+      "100+ point enterprise technical audit (normally $1,500)",
+      "Competitive intelligence report for your market",
+      "Custom 12-month growth roadmap with ROI projections",
+      "Executive presentation with actionable insights",
+      "No obligation. No pressure. Just strategy."
+    ],
+    "primaryCTA": {
+      "text": "Get Enterprise Strategy Session",
+      "href": "/contact",
+      "ariaLabel": "Schedule enterprise strategy session"
+    },
+    "secondaryCTA": {
+      "text": "View Honolulu Case Studies",
+      "href": "/case-studies",
+      "ariaLabel": "See results from Oahu businesses"
+    },
+    "urgency": "Limited to 2 new enterprise clients per month to maintain quality and results.",
+    "guarantee": "If we can't identify opportunities to significantly improve your rankings, traffic, and revenue, we'll tell you honestly.",
+    "socialProof": "Trusted by Honolulu's leading medical practices, law firms, and multi-location businesses."
+  },
+  
+  "schema": {
+    "localBusiness": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Web Vello - Honolulu Enterprise SEO & Web Development",
+      "description": "Enterprise-grade technical SEO, AI search optimization (GEO), and high-performance web development for Honolulu and Oahu businesses. Specializing in medical, legal, real estate, and professional services.",
+      "url": "https://www.webvello.com/locations/hawaii/honolulu",
+      "telephone": "+1-530-553-8883",
+      "email": "hello@webvello.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Honolulu",
+        "addressRegion": "HI",
+        "postalCode": "96813",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "21.3099",
+        "longitude": "-157.8581"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Honolulu",
+          "containedIn": {
+            "@type": "State",
+            "name": "Hawaii"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Waikiki"
+        },
+        {
+          "@type": "City",
+          "name": "Ala Moana"
+        },
+        {
+          "@type": "City",
+          "name": "Kakaako"
+        },
+        {
+          "@type": "City",
+          "name": "Pearl City"
+        },
+        {
+          "@type": "City",
+          "name": "Kapolei"
+        },
+        {
+          "@type": "City",
+          "name": "Kailua"
+        },
+        {
+          "@type": "City",
+          "name": "Kaneohe"
+        }
+      ],
+      "priceRange": "$$$-$$$$",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "sameAs": [
+        "https://www.linkedin.com/company/webvello",
+        "https://twitter.com/webvello"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      }
+    },
+    "service": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Enterprise SEO and Web Development",
+      "provider": {
+        "@type": "Organization",
+        "name": "Web Vello"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Honolulu",
+        "containedIn": {
+          "@type": "State",
+          "name": "Hawaii"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Enterprise Digital Marketing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enterprise Technical SEO",
+              "description": "Comprehensive technical SEO for multi-location businesses, medical practices, law firms, and enterprise clients in Honolulu."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "7500",
+              "priceCurrency": "USD",
+              "unitText": "MONTH"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Search Optimization (GEO)",
+              "description": "Generative Engine Optimization to get cited in ChatGPT, Perplexity, and Google SGE for Honolulu businesses."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "4500",
+              "priceCurrency": "USD",
+              "unitText": "MONTH"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enterprise Web Development",
+              "description": "High-performance web applications built with React and Next.js for Honolulu businesses."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "25000",
+              "priceCurrency": "USD",
+              "unitText": "PROJECT"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-Location SEO",
+              "description": "Local SEO optimization for businesses with multiple locations across Oahu."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "10000",
+              "priceCurrency": "USD",
+              "unitText": "MONTH"
+            }
+          }
+        ]
+      }
+    },
+    "faqPage": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why should Honolulu businesses invest in enterprise-grade SEO and web development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Honolulu's market is highly competitive across every industry. Your competitors are investing heavily in digital marketing. To win, you need enterprise-grade strategy, technical excellence, and scalable systems. Our Honolulu clients see an average 340% ROI and 420% increase in organic traffic within 12 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes enterprise SEO different from standard SEO services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enterprise SEO is built for scale and complexity. It includes multi-location optimization, advanced technical architecture, programmatic content generation, custom analytics, and dedicated account management. It handles multi-location medical groups, law firms with multiple practice areas, and businesses with complex technical requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is GEO (Generative Engine Optimization) and why does it matter for Honolulu businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO (Generative Engine Optimization) is optimization for AI platforms like ChatGPT, Perplexity, Claude, and Google SGE. When professionals research services in Honolulu through AI tools, GEO ensures your business gets cited in the answer. 45% of professionals now use AI tools for research and decision-making."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with multi-location SEO for businesses with multiple offices across Oahu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Multi-location SEO is one of our specialties. We optimize each location for local search while maintaining brand consistency. This includes individual Google Business Profiles, location-specific landing pages, neighborhood-targeted content, and centralized review management. Our multi-location SEO clients see an average 380% increase in combined organic traffic."
+          }
+        }
+      ]
+    }
+  },
+  
+  "notes": {
+    "toneGuidelines": "Enterprise-ready, confident, scalable. More sophisticated than Kona. Emphasize complexity, scale, and competitive markets. Use data and metrics heavily.",
+    "targetAudience": "Decision-makers at multi-location businesses, medical groups, law firms, real estate agencies, and professional services. C-suite, partners, and marketing directors.",
+    "competitivePositioning": "Position as enterprise-grade solution for businesses that have outgrown basic SEO. Emphasize technical excellence, scalability, and ROI.",
+    "pricingStrategy": "Higher price points than Kona. Transparent about enterprise pricing. Emphasize value and ROI over cost.",
+    "industryFocus": "Medical, legal, real estate, professional services, hospitality, e-commerce. Industries with high competition and high customer lifetime value."
+  }
+}
+

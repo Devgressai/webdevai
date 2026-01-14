@@ -19,11 +19,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/case-studies',
     '/industries',
     '/locations',
+    '/locations/hawaii',
     '/solutions',
     '/blog',
     '/seo-audit',
     '/website-speed-test',
     '/enhanced-demo'
+  ]
+
+  // Hawaii location pages - high priority for local SEO
+  const hawaiiLocationPages = [
+    '/locations/hawaii/kona',
+    '/locations/hawaii/honolulu'
   ]
 
   // Solutions pages
@@ -369,11 +376,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
+  // Generate Hawaii location page entries
+  const hawaiiLocationEntries = hawaiiLocationPages.map((page) => ({
+    url: `${baseUrl}${page}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
   return [
     ...coreEntries,
     ...solutionsEntries,
     ...serviceEntries,
     ...blogEntries,
+    ...hawaiiLocationEntries,
     ...cityEntries,
     ...cityServiceEntries,
     ...cityIndustryEntries,

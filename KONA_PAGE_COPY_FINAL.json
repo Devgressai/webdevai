@@ -1,0 +1,559 @@
+{
+  "seo": {
+    "title": "Kona SEO & Web Design | AI-Powered Digital Marketing",
+    "titleLength": 55,
+    "metaDescription": "Kona's premier SEO & web design agency. We help Big Island businesses dominate Google + AI search with technical SEO, GEO optimization, and high-performance websites.",
+    "metaDescriptionLength": 154,
+    "keywords": "Kona SEO, Big Island web design, Hawaii digital marketing, Kona web development, local SEO Kona, AI search optimization Hawaii",
+    "ogTitle": "Web Vello Kona | Technical SEO & Web Development for Big Island Businesses",
+    "ogDescription": "Dominate local search and AI platforms. Technical SEO, GEO optimization, and conversion-focused web development for Kona businesses. Free strategy session.",
+    "canonicalUrl": "https://www.webvello.com/locations/hawaii/kona"
+  },
+  
+  "hero": {
+    "badge": "Trusted by 500+ businesses nationwide • Big Island expertise",
+    "h1": "Kona Businesses Win in Google + AI Search",
+    "h1Highlight": "Technical SEO & Web Development",
+    "subheadline": "We help Big Island businesses dominate traditional search and AI platforms (ChatGPT, Perplexity, Google SGE) through technical SEO, GEO optimization, and high-performance web development. Data-driven. Transparent. Results-focused.",
+    "primaryCTA": {
+      "text": "Get Free Technical Audit",
+      "href": "/contact",
+      "ariaLabel": "Schedule free technical SEO audit for your Kona business"
+    },
+    "secondaryCTA": {
+      "text": "View Big Island Case Studies",
+      "href": "/case-studies",
+      "ariaLabel": "See results from Hawaii businesses"
+    }
+  },
+  
+  "trustStrip": {
+    "heading": "Proven Results for Kona Businesses",
+    "stats": [
+      {
+        "value": "300%+",
+        "label": "Avg. Organic Traffic Growth",
+        "icon": "TrendingUp"
+      },
+      {
+        "value": "4.2s",
+        "label": "Avg. Page Load Time",
+        "icon": "Zap"
+      },
+      {
+        "value": "89%",
+        "label": "First-Page Rankings",
+        "icon": "Target"
+      },
+      {
+        "value": "24/7",
+        "label": "Performance Monitoring",
+        "icon": "Activity"
+      }
+    ]
+  },
+  
+  "howWeHelp": {
+    "heading": "How We Help Kona Businesses Win in Google + AI Search",
+    "subheading": "Technical SEO and AI optimization strategies built for Big Island's tourism and service economy.",
+    "bullets": [
+      {
+        "title": "Technical SEO Foundation",
+        "description": "Core Web Vitals optimization, mobile-first indexing, structured data markup, and crawl efficiency. We fix the technical issues holding your site back from page 1.",
+        "icon": "Settings"
+      },
+      {
+        "title": "AI Search Optimization (GEO)",
+        "description": "Get cited in ChatGPT, Perplexity, and Google SGE results. We optimize your content for generative AI platforms where travelers research Kona activities, hotels, and services.",
+        "icon": "Brain"
+      },
+      {
+        "title": "Local Search Dominance",
+        "description": "Own the \"near me\" searches. Google Business Profile optimization, local citations, review generation, and geo-targeted content for Kailua-Kona, Keauhou, and surrounding areas.",
+        "icon": "MapPin"
+      },
+      {
+        "title": "Performance Engineering",
+        "description": "Sub-3-second load times on mobile. Image optimization, lazy loading, CDN implementation, and code splitting. Fast sites rank higher and convert better.",
+        "icon": "Gauge"
+      },
+      {
+        "title": "Conversion Rate Optimization",
+        "description": "Turn visitors into bookings and customers. A/B testing, heatmap analysis, user flow optimization, and strategic CTA placement. More traffic means nothing without conversions.",
+        "icon": "Target"
+      },
+      {
+        "title": "Analytics & Reporting",
+        "description": "Real-time dashboards, weekly performance reports, and transparent ROI tracking. You'll always know exactly what's working and what we're optimizing next.",
+        "icon": "BarChart3"
+      }
+    ]
+  },
+  
+  "services": {
+    "heading": "Technical Services for Kona Businesses",
+    "subheading": "Full-stack digital marketing built for Big Island's competitive tourism and service markets.",
+    "cards": [
+      {
+        "name": "Technical SEO",
+        "tagline": "Fix what's broken. Optimize what works.",
+        "description": "Comprehensive technical audits, Core Web Vitals optimization, mobile-first indexing, structured data implementation, and crawl efficiency improvements. We identify and fix the technical issues preventing your site from ranking.",
+        "features": [
+          "Site speed optimization (sub-3s load times)",
+          "Mobile-first responsive design",
+          "Schema markup implementation",
+          "XML sitemap optimization",
+          "Robots.txt configuration",
+          "Canonical URL management"
+        ],
+        "results": "Average 250% increase in organic traffic within 6 months",
+        "href": "/services/seo",
+        "icon": "Settings"
+      },
+      {
+        "name": "AI Search Optimization (GEO)",
+        "tagline": "Get cited by ChatGPT, Perplexity, and Google SGE.",
+        "description": "Generative Engine Optimization positions your business to be cited by AI platforms. When travelers ask ChatGPT \"best coffee tours in Kona\" or \"where to stay in Kailua-Kona,\" your business appears in the answer.",
+        "features": [
+          "AI-citable content structure",
+          "Entity optimization",
+          "Knowledge graph integration",
+          "Semantic search optimization",
+          "Answer-focused content",
+          "Citation-worthy authority building"
+        ],
+        "results": "Clients see 180% increase in AI platform citations within 90 days",
+        "href": "/services/generative-engine-optimization",
+        "icon": "Brain"
+      },
+      {
+        "name": "High-Performance Web Development",
+        "tagline": "React + Next.js sites built for speed and conversions.",
+        "description": "Custom web applications engineered for performance. Built with React, Next.js, and Tailwind CSS. Optimized for Core Web Vitals, mobile-first, and conversion-focused. Perfect for booking systems, e-commerce, and complex business needs.",
+        "features": [
+          "React & Next.js development",
+          "Sub-3-second load times",
+          "Booking system integration",
+          "Payment gateway setup",
+          "Custom API development",
+          "Progressive Web App (PWA) capabilities"
+        ],
+        "results": "Average 45% increase in conversion rates post-launch",
+        "href": "/services/web-development",
+        "icon": "Code"
+      },
+      {
+        "name": "Local SEO for Kona",
+        "tagline": "Dominate \"near me\" searches on Big Island.",
+        "description": "Geo-targeted optimization for Kona's tourism and service economy. Google Business Profile management, local citation building, review generation, and neighborhood-specific content targeting Kailua-Kona, Keauhou, Holualoa, and beyond.",
+        "features": [
+          "Google Business Profile optimization",
+          "Local citation building (50+ directories)",
+          "Review generation & management",
+          "Geo-targeted content creation",
+          "Local link building",
+          "\"Near me\" search optimization"
+        ],
+        "results": "Average 320% increase in Google Maps visibility",
+        "href": "/services/local-seo",
+        "icon": "MapPin"
+      },
+      {
+        "name": "Performance Analytics",
+        "tagline": "Real-time insights. Transparent reporting.",
+        "description": "Custom analytics dashboards, conversion tracking, user behavior analysis, and ROI reporting. We track everything: organic traffic, keyword rankings, conversion rates, page speed, and revenue attribution.",
+        "features": [
+          "Google Analytics 4 setup",
+          "Custom conversion tracking",
+          "Real-time performance dashboards",
+          "Weekly progress reports",
+          "Competitor analysis",
+          "ROI attribution modeling"
+        ],
+        "results": "100% transparency into campaign performance and ROI",
+        "href": "/services/digital-marketing",
+        "icon": "BarChart3"
+      },
+      {
+        "name": "Content Strategy & Creation",
+        "tagline": "SEO-optimized content that ranks and converts.",
+        "description": "Strategic content planning and creation optimized for both traditional search and AI platforms. Blog posts, landing pages, service pages, and FAQ content designed to rank, get cited, and drive conversions.",
+        "features": [
+          "Keyword research & strategy",
+          "SEO-optimized blog posts",
+          "Landing page copywriting",
+          "FAQ schema implementation",
+          "Content refresh & optimization",
+          "AI-citable content structure"
+        ],
+        "results": "Average 280% increase in organic traffic from content",
+        "href": "/services/digital-marketing",
+        "icon": "FileText"
+      }
+    ]
+  },
+  
+  "process": {
+    "heading": "Our 5-Step Process for Kona Businesses",
+    "subheading": "Systematic, data-driven approach to dominating search and driving revenue.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Technical Audit & Strategy",
+        "description": "Comprehensive technical SEO audit covering site speed, mobile optimization, crawlability, indexation, and Core Web Vitals. We identify quick wins and long-term opportunities. Includes competitor analysis and keyword research specific to Kona's market.",
+        "deliverables": [
+          "50+ point technical audit",
+          "Competitor gap analysis",
+          "Keyword opportunity report",
+          "6-month roadmap"
+        ],
+        "timeline": "Week 1"
+      },
+      {
+        "number": "02",
+        "title": "Foundation & Quick Wins",
+        "description": "Fix critical technical issues, optimize Core Web Vitals, implement structured data, and launch Google Business Profile optimization. We tackle the high-impact items first to start generating results quickly.",
+        "deliverables": [
+          "Technical fixes implemented",
+          "Schema markup deployed",
+          "GBP optimization complete",
+          "Analytics tracking setup"
+        ],
+        "timeline": "Weeks 2-4"
+      },
+      {
+        "number": "03",
+        "title": "Content & On-Page Optimization",
+        "description": "Optimize existing pages and create new SEO-focused content. Implement AI-citable content structure for GEO. Build out service pages, location pages, and blog content targeting high-value keywords.",
+        "deliverables": [
+          "On-page SEO optimization",
+          "New content creation",
+          "Internal linking strategy",
+          "FAQ schema implementation"
+        ],
+        "timeline": "Weeks 5-8"
+      },
+      {
+        "number": "04",
+        "title": "Authority Building & Link Acquisition",
+        "description": "Strategic link building through local partnerships, industry directories, and content marketing. Build topical authority and domain authority to improve rankings across all target keywords.",
+        "deliverables": [
+          "Local citation building",
+          "Quality backlink acquisition",
+          "Industry directory listings",
+          "Content outreach campaign"
+        ],
+        "timeline": "Weeks 9-16"
+      },
+      {
+        "number": "05",
+        "title": "Optimization & Scaling",
+        "description": "Continuous testing, optimization, and scaling. A/B test landing pages, refine content strategy, expand keyword targeting, and optimize conversion funnels. Monthly strategy calls to review performance and adjust tactics.",
+        "deliverables": [
+          "Monthly performance reports",
+          "Ongoing optimization",
+          "Strategy refinement",
+          "Conversion rate improvements"
+        ],
+        "timeline": "Ongoing"
+      }
+    ]
+  },
+  
+  "areasServed": {
+    "heading": "Serving Kona & Big Island Communities",
+    "subheading": "Local expertise across West Hawaii's tourism and service corridors.",
+    "areas": [
+      {
+        "name": "Kailua-Kona",
+        "description": "Downtown waterfront, Ali'i Drive, and central business district"
+      },
+      {
+        "name": "Keauhou",
+        "description": "South Kona resort area and shopping center"
+      },
+      {
+        "name": "Holualoa",
+        "description": "Upcountry coffee country and artist village"
+      },
+      {
+        "name": "Kealakekua",
+        "description": "Historic bay, coffee farms, and residential area"
+      },
+      {
+        "name": "Captain Cook",
+        "description": "South Kona residential and agricultural corridor"
+      },
+      {
+        "name": "Honalo",
+        "description": "Central Kona highway corridor"
+      },
+      {
+        "name": "Kainaliu",
+        "description": "Small-town Kona charm and local businesses"
+      },
+      {
+        "name": "Waikoloa",
+        "description": "North Kona resort destination and retail hub"
+      },
+      {
+        "name": "Kona Coast",
+        "description": "Entire West Hawaii coastline from Kailua to South Point"
+      },
+      {
+        "name": "Makalawena",
+        "description": "North Kona beach and resort area"
+      }
+    ],
+    "industries": {
+      "heading": "Industries We Serve in Kona",
+      "list": [
+        "Hotels & Resorts",
+        "Vacation Rentals (VRBO, Airbnb hosts)",
+        "Restaurants & Cafes",
+        "Coffee Farms & Tours",
+        "Snorkeling & Diving Operations",
+        "Adventure Tours (zipline, ATV, helicopter)",
+        "Wedding & Event Services",
+        "Retail & Boutique Shops",
+        "Real Estate Agencies",
+        "Medical & Dental Practices",
+        "Legal Services",
+        "Property Management"
+      ]
+    }
+  },
+  
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about SEO and web development for Kona businesses.",
+    "questions": [
+      {
+        "question": "Why should Kona businesses invest in technical SEO and AI search optimization?",
+        "answer": "Kona's economy depends on visitors finding your business online. 87% of travelers research online before booking. Technical SEO ensures your site loads fast, ranks high, and converts visitors. AI search optimization (GEO) gets your business cited when travelers ask ChatGPT or Perplexity about Kona activities, hotels, and services. Together, they capture both traditional Google search and the growing AI search market. Our Kona clients see an average 300% increase in qualified traffic within 6 months.",
+        "category": "strategy"
+      },
+      {
+        "question": "How long does it take to see SEO results in Kona's competitive tourism market?",
+        "answer": "Quick wins appear in 30-45 days (technical fixes, Google Business Profile optimization, local citations). Significant ranking improvements typically occur within 3-6 months. Full market dominance takes 6-12 months. Kona's tourism market is seasonal—we time optimization to maximize impact during peak visitor seasons (December-March, June-August). Local SEO shows faster results than competitive tourism keywords. We provide weekly reports so you see progress from day one.",
+        "category": "timeline"
+      },
+      {
+        "question": "Do you work with Kona businesses remotely, or do you have a local office?",
+        "answer": "We work 100% remotely with Kona and Big Island businesses. No local office needed. Our team has extensive experience serving Hawaii businesses and understands the unique challenges of island markets: tourism seasonality, shipping logistics, local competition, and visitor behavior patterns. We provide the same high-quality service as a local agency through video calls, screen sharing, and real-time collaboration tools. Many of our Hawaii clients prefer remote work—no need to commute to meetings.",
+        "category": "logistics"
+      },
+      {
+        "question": "What makes Web Vello different from other SEO agencies serving Kona?",
+        "answer": "Three key differentiators: (1) Technical expertise—we're engineers first, marketers second. We fix complex technical issues other agencies miss. (2) AI search optimization—we're early adopters of GEO (Generative Engine Optimization) to get you cited in ChatGPT and Perplexity. (3) Transparent reporting—real-time dashboards, weekly reports, and direct access to analytics. No black box. You see exactly what we're doing and the results we're driving. Plus, we understand Hawaii's tourism economy and seasonal patterns.",
+        "category": "differentiation"
+      },
+      {
+        "question": "What industries do you serve in Kona and on the Big Island?",
+        "answer": "We specialize in Kona's core industries: hotels and resorts, vacation rentals, restaurants and cafes, coffee farms and tours, snorkeling and diving operations, adventure tours (zipline, ATV, helicopter), wedding and event services, retail shops, real estate agencies, medical and dental practices, legal services, and property management. We understand the unique SEO challenges of each industry and have proven strategies for tourism, hospitality, and local service businesses.",
+        "category": "industries"
+      },
+      {
+        "question": "How much does SEO and web development cost for Kona businesses?",
+        "answer": "SEO services start at $2,500/month for local SEO and $4,500/month for comprehensive technical SEO + content + link building. Web development projects start at $5,000 for basic sites and $15,000+ for custom booking systems and e-commerce platforms. We offer flexible packages based on your goals and budget. All packages include transparent reporting and direct access to our team. Free technical audit and strategy session to start—we'll show you exactly what needs to be done and provide a custom quote.",
+        "category": "pricing"
+      },
+      {
+        "question": "What is GEO (Generative Engine Optimization) and why does it matter for Kona businesses?",
+        "answer": "GEO (Generative Engine Optimization) is optimization for AI platforms like ChatGPT, Perplexity, Claude, and Google SGE. When travelers ask these AI tools \"best coffee tours in Kona\" or \"where to stay in Kailua-Kona,\" GEO ensures your business gets cited in the answer. This is critical because 40% of travelers now use AI tools for trip planning. Traditional SEO gets you ranked in Google. GEO gets you cited by AI. We optimize for both to maximize your visibility across all search channels.",
+        "category": "geo"
+      },
+      {
+        "question": "Can you help with Google Business Profile optimization and review management?",
+        "answer": "Yes. Google Business Profile (GBP) optimization is included in all our local SEO packages. We optimize your profile for maximum visibility in Google Maps and Local Pack results. This includes: category optimization, business description, service area setup, post scheduling, photo optimization, Q&A management, and review generation campaigns. We also provide review monitoring and response templates. GBP optimization typically shows results within 2-4 weeks and is one of the fastest ways to increase local visibility.",
+        "category": "local-seo"
+      },
+      {
+        "question": "Do you guarantee first-page rankings or specific traffic increases?",
+        "answer": "We don't guarantee specific rankings (no legitimate SEO agency can—Google's algorithm changes constantly). However, we do guarantee our process: comprehensive technical audits, proven optimization strategies, transparent reporting, and continuous improvement. Our Kona clients average 300% traffic growth within 6 months, 89% achieve first-page rankings for target keywords, and 95% see positive ROI within 12 months. We're so confident in our approach that we provide monthly performance reports and adjust strategies based on data. If something isn't working, we pivot immediately.",
+        "category": "guarantees"
+      },
+      {
+        "question": "How do you measure success and ROI for Kona businesses?",
+        "answer": "We track everything: organic traffic, keyword rankings (both Google and AI platforms), conversion rates, page load speed, bounce rate, time on site, and most importantly—revenue attribution. You get access to a real-time dashboard showing all key metrics. Weekly email reports highlight wins and areas for improvement. Monthly strategy calls review performance and adjust tactics. For e-commerce and booking businesses, we track revenue directly. For lead generation businesses, we track form submissions, phone calls, and qualified leads. You'll always know exactly what you're getting for your investment.",
+        "category": "measurement"
+      }
+    ]
+  },
+  
+  "finalCTA": {
+    "heading": "Ready to Dominate Kona's Digital Landscape?",
+    "subheading": "Get a free technical audit and custom strategy session. We'll show you exactly what's holding your site back and how to fix it.",
+    "benefits": [
+      "50+ point technical SEO audit (normally $500)",
+      "Competitor gap analysis for your market",
+      "Custom 6-month growth roadmap",
+      "No obligation. No pressure. Just insights."
+    ],
+    "primaryCTA": {
+      "text": "Get Free Technical Audit",
+      "href": "/contact",
+      "ariaLabel": "Schedule free technical SEO audit"
+    },
+    "secondaryCTA": {
+      "text": "View Kona Case Studies",
+      "href": "/case-studies",
+      "ariaLabel": "See results from Big Island businesses"
+    },
+    "urgency": "Limited to 3 new clients per month to maintain quality.",
+    "guarantee": "If we can't find opportunities to improve your rankings and traffic, we'll tell you honestly."
+  },
+  
+  "schema": {
+    "localBusiness": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Web Vello - Kona SEO & Web Development",
+      "description": "Technical SEO, AI search optimization (GEO), and high-performance web development for Kona and Big Island businesses. Specializing in tourism, hospitality, and local service industries.",
+      "url": "https://www.webvello.com/locations/hawaii/kona",
+      "telephone": "+1-530-553-8883",
+      "email": "hello@webvello.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kailua-Kona",
+        "addressRegion": "HI",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "19.6400",
+        "longitude": "-155.9969"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Kailua-Kona",
+          "containedIn": {
+            "@type": "State",
+            "name": "Hawaii"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Keauhou"
+        },
+        {
+          "@type": "City",
+          "name": "Holualoa"
+        },
+        {
+          "@type": "City",
+          "name": "Kealakekua"
+        },
+        {
+          "@type": "City",
+          "name": "Captain Cook"
+        },
+        {
+          "@type": "City",
+          "name": "Waikoloa"
+        }
+      ],
+      "priceRange": "$$-$$$",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "sameAs": [
+        "https://www.linkedin.com/company/webvello",
+        "https://twitter.com/webvello"
+      ]
+    },
+    "service": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Technical SEO and Web Development",
+      "provider": {
+        "@type": "Organization",
+        "name": "Web Vello"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Kona",
+        "containedIn": {
+          "@type": "State",
+          "name": "Hawaii"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "SEO and Web Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Technical SEO",
+              "description": "Comprehensive technical SEO audits, Core Web Vitals optimization, and site speed improvements for Kona businesses."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Search Optimization (GEO)",
+              "description": "Generative Engine Optimization to get cited in ChatGPT, Perplexity, and Google SGE results."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Development",
+              "description": "High-performance web development with React and Next.js for Kona tourism and hospitality businesses."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Local SEO",
+              "description": "Google Business Profile optimization and local citation building for Kona businesses."
+            }
+          }
+        ]
+      }
+    },
+    "faqPage": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why should Kona businesses invest in technical SEO and AI search optimization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kona's economy depends on visitors finding your business online. 87% of travelers research online before booking. Technical SEO ensures your site loads fast, ranks high, and converts visitors. AI search optimization (GEO) gets your business cited when travelers ask ChatGPT or Perplexity about Kona activities, hotels, and services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to see SEO results in Kona's competitive tourism market?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quick wins appear in 30-45 days (technical fixes, Google Business Profile optimization, local citations). Significant ranking improvements typically occur within 3-6 months. Full market dominance takes 6-12 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is GEO (Generative Engine Optimization) and why does it matter for Kona businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO (Generative Engine Optimization) is optimization for AI platforms like ChatGPT, Perplexity, Claude, and Google SGE. When travelers ask these AI tools about Kona, GEO ensures your business gets cited in the answer. 40% of travelers now use AI tools for trip planning."
+          }
+        }
+      ]
+    }
+  },
+  
+  "notes": {
+    "toneGuidelines": "Confident, technical, modern. Use short paragraphs. Lead with benefits. Back claims with data. Avoid fluff.",
+    "localContext": "Emphasize Kona's tourism economy, seasonal patterns, visitor behavior, and Big Island geography. Mention specific neighborhoods and industries.",
+    "technicalEmphasis": "Focus on technical SEO, Core Web Vitals, site speed, and engineering excellence. Position as technical experts, not just marketers.",
+    "geoFocus": "Highlight AI search optimization (GEO) as a differentiator. Explain why it matters for tourism businesses.",
+    "conversionOptimization": "Every section should drive toward the free audit CTA. Use social proof, urgency, and specific results."
+  }
+}
+
