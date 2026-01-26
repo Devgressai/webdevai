@@ -253,6 +253,10 @@ function checkHardFailTriggers(params: IndexPolicyParams): string | null {
   }
   
   // Trigger 5: Missing required blocks (programmatic only)
+  // GOVERNANCE RULE: Missing required blocks MUST result in noindex
+  // Rationale: Programmatic pages without uniqueness blocks are duplicate content.
+  // Blocks (LocalDataCard, IndustryKpiMap, ProofSlot) inject unique, location/industry-specific
+  // data that prevents content duplication. Without them, pages fail quality gates.
   if (routeType === 'city-service') {
     if (!blocks?.LOCAL_DATA_CARD || !blocks?.PROOF_SLOT) {
       const missing = []
@@ -554,10 +558,36 @@ function getCanonicalUrl(params: IndexPolicyParams): string {
 
 /**
  * Single source of truth: Get SEO directives for a URL
+ * 
+ * DEFENSIVE GUARDS:
+ * - Unknown routeType defaults to safest behavior (noindex,follow,inSitemap=false)
+ * - Missing required blocks for programmatic routes always result in noindex
+ * - City×Industry hubs are ALWAYS noindex (hard-pass cannot override)
  */
 export function getSeoDirectives(url: string, params: IndexPolicyParams): SeoDirectives {
   const { routeType } = params
   const reasonCodes: string[] = []
+  
+  // DEFENSIVE: Unknown routeType defaults to safest behavior for programmatic routes
+  // This prevents accidental indexing of malformed or unexpected route types
+  const validRouteTypes: RouteType[] = ['core', 'service', 'city', 'city-service', 'city-industry', 'city-industry-service']
+  if (!validRouteTypes.includes(routeType)) {
+    log('warn', 'Unknown routeType, defaulting to safest behavior', { url, routeType })
+    return {
+      index: false,
+      follow: true,
+      canonical: getCanonicalUrl(params),
+      inSitemap: false,
+      score: 0.0,
+      reasonCodes: ['UNKNOWN_ROUTE_TYPE'],
+      gates: {
+        twoOfThree: false,
+        scorePass: false,
+        hardFail: false,
+        hardPass: false
+      }
+    }
+  }
   
   // Hard-fail check (overrides everything)
   const hardFailReason = checkHardFailTriggers(params)
@@ -580,6 +610,11 @@ export function getSeoDirectives(url: string, params: IndexPolicyParams): SeoDir
   }
   
   // City×Industry hub: ALWAYS noindex,follow, excluded from sitemap
+  // GOVERNANCE RULE: City×Industry hubs are ALWAYS noindex,follow (hard-pass cannot override)
+  // Rationale: These are navigation/intermediate pages that aggregate City×Industry×Service pages.
+  // They have high content overlap with parent City and Industry pages (per canonical rules).
+  // Indexing them would create duplicate content issues. They serve as navigation hubs only.
+  // This rule is enforced BEFORE hard-pass checks to prevent accidental indexing.
   if (routeType === 'city-industry') {
     return {
       index: false,
@@ -598,15 +633,32 @@ export function getSeoDirectives(url: string, params: IndexPolicyParams): SeoDir
   }
   
   // Hard-pass check (bypasses Stage A/B)
+  // DEFENSIVE: Hard-pass NEVER overrides explicitly excluded routes (city-industry)
+  // This prevents accidental indexing of navigation-only pages even if they pass quality gates
   const hardPassReason = checkHardPassTriggers(params)
   if (hardPassReason) {
     reasonCodes.push(hardPassReason)
     // CRITICAL: City×Industry hub exception - hard-pass NEVER overrides noindex rule
     // This check is redundant (city-industry already returned above) but defensive
+    // Guards against future code changes that might reorder logic
     if (routeType === 'city-industry') {
       // This should never happen due to early return above, but guard against logic errors
       log('error', 'Hard-pass attempted on city-industry hub (should be impossible)', { url, routeType, reason: hardPassReason })
-      // Fall through - city-industry hub is already handled above
+      // Return noindex even if hard-pass triggered (explicit exclusion takes precedence)
+      return {
+        index: false,
+        follow: true,
+        canonical: getCanonicalUrl(params),
+        inSitemap: false,
+        score: 0.0,
+        reasonCodes: ['CITY_INDUSTRY_HUB_ALWAYS_NOINDEX', hardPassReason],
+        gates: {
+          twoOfThree: false,
+          scorePass: false,
+          hardFail: false,
+          hardPass: true // Note: hardPass=true but index=false (explicit exclusion wins)
+        }
+      }
     }
     // City×Industry hub exception: hard-pass doesn't override noindex rule
     if (routeType !== 'city-industry') {

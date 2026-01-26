@@ -354,9 +354,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // This is correct behavior because:
   // 1. Sitemap is a crawl surface generator, not a page renderer
   // 2. getSeoDirectives() will treat missing blocks as non-indexable for programmatic routes
+  //    (missing blocks trigger MISSING_REQUIRED_BLOCKS hard-fail, resulting in noindex)
   // 3. Pages with missing blocks will be noindex at page generation time (where blocks are fetched)
   // 4. Sitemap should reflect actual indexability, not potential indexability
   // 5. Only pages that pass quality gates at render time will be indexed
+  //
+  // WHY EMPTY BLOCKS IN SITEMAP:
+  // - Sitemap runs at build time, before page rendering
+  // - Blocks are fetched during page rendering (async data fetching)
+  // - Passing empty blocks lets governance system decide: if blocks are required and missing,
+  //   getSeoDirectives() returns noindex/inSitemap=false, so page is excluded from sitemap
+  // - This ensures sitemap only includes pages that WILL be indexable when rendered
   //
   // Result: Sitemap includes only:
   // - Pre-approved always-index routes (core, service, city)

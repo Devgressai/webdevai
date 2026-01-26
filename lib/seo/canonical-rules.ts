@@ -2,7 +2,12 @@
  * Canonical Governance System for City×Industry Hub Pages
  * 
  * Uses precomputed overlap scores (build-time) for deterministic canonical decisions.
- * City×Industry hubs are always noindex,follow and excluded from sitemaps.
+ * 
+ * GOVERNANCE RULE: City×Industry hubs are ALWAYS noindex,follow and excluded from sitemaps.
+ * Rationale: These pages have high content overlap with parent City and Industry pages.
+ * They serve as navigation hubs only, aggregating City×Industry×Service pages.
+ * Indexing them would create duplicate content penalties. Canonical rules determine
+ * whether to canonicalize to City page, Industry page, or self based on overlap scores.
  */
 
 import { citySlugs } from '../cities'
@@ -273,6 +278,10 @@ export function getCanonicalForCityIndustryHub(
 
 /**
  * Get robots directives for City×Industry hub (always noindex,follow)
+ * 
+ * GOVERNANCE RULE: City×Industry hubs are ALWAYS noindex,follow.
+ * This is enforced at the index-policy level and cannot be overridden by hard-pass triggers.
+ * Rationale: Navigation-only pages with high content overlap should not be indexed.
  */
 export function getCityIndustryHubRobots(): { index: boolean; follow: boolean } {
   return {
