@@ -10,14 +10,15 @@
     "a11y:lint": "next lint",
     "seed:cis": "ts-node scripts/seed-cis-pages.ts",
     "index-pages": "node scripts/index-pages-simple.js",
-    "generate-favicon": "node scripts/generate-favicon-from-image.js"
+    "generate-favicon": "node scripts/generate-favicon-from-image.js",
+    "release:check": "node ci/release-check.js"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",
     "@portabletext/react": "^4.0.3",
     "@radix-ui/react-slot": "^1.2.4",
-    "@sanity/client": "^6.12.0",
-    "@sanity/image-url": "^1.0.2",
+    "@sanity/client": "^6.29.1",
+    "@sanity/image-url": "^1.2.0",
     "@sanity/vision": "^4.6.0",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -32,7 +33,7 @@
     "lighthouse": "^12.8.2",
     "lucide-react": "^0.294.0",
     "next": "^14.2.35",
-    "next-sanity": "^7.0.0",
+    "next-sanity": "^7.1.4",
     "node-html-parser": "^7.0.1",
     "nodemailer": "^7.0.12",
     "postcss": "^8",
