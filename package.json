@@ -15,7 +15,7 @@
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",
     "@portabletext/react": "^4.0.3",
-    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-slot": "^1.2.4",
     "@sanity/client": "^6.12.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^4.6.0",
@@ -23,7 +23,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "axios": "^1.12.2",
+    "axios": "^1.13.2",
     "cheerio": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -34,7 +34,7 @@
     "next": "^14.2.35",
     "next-sanity": "^7.0.0",
     "node-html-parser": "^7.0.1",
-    "nodemailer": "^7.0.6",
+    "nodemailer": "^7.0.12",
     "postcss": "^8",
     "puppeteer": "^24.22.0",
     "react": "^18",
@@ -47,7 +47,7 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-    "@axe-core/react": "^4.8.4",
+    "@axe-core/react": "^4.11.0",
     "@next/bundle-analyzer": "^15.5.3",
     "@types/nodemailer": "^7.0.1",
     "eslint": "^8",
