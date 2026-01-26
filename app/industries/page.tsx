@@ -128,7 +128,7 @@ export default function IndustriesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('page', { title: 'Industries' })} 
+            items={generateBreadcrumbs('/industries', { title: 'Industries' })} 
             className="mb-8"
           />
           <div className="mx-auto max-w-2xl text-center">

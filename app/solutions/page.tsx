@@ -143,7 +143,7 @@ export default function SolutionsPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('page', { title: 'Solutions' })} 
+            items={generateBreadcrumbs('/solutions', { title: 'Solutions' })} 
             className="mb-8"
           />
           <div className="mx-auto max-w-2xl text-center">

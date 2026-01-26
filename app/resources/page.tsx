@@ -131,7 +131,7 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('page', { title: 'Resources' })} 
+            items={generateBreadcrumbs('/resources', { title: 'Resources' })} 
             className="mb-8"
           />
           <div className="mx-auto max-w-2xl text-center">
