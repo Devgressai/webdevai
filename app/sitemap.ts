@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
 import { citySlugs } from '../lib/cities'
-import { industrySlugs } from '../lib/industries'
 import { getBlogPosts } from '../lib/get-blog-posts'
+import { IndexPolicyService, getSeoDirectives } from '../lib/seo/index-policy'
+import { cityDataSlugs } from '../lib/data/city-data'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.webvello.com'
@@ -259,10 +260,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'wyoming'
   ]
 
-  // Use ALL cities for comprehensive coverage
-  const allCities = citySlugs
-  
-  // Key services for city+service combinations
+  // Key services for city+service (Tier 1 only; must match IndexPolicy TIER1_SERVICES)
   const keyServices = [
     'website-design',
     'web-development',
@@ -282,29 +280,42 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error('Error fetching blog posts for sitemap:', error)
   }
 
-  // Generate core page entries
-  const coreEntries = corePages.map((page) => ({
-    url: `${baseUrl}${page}`,
-    lastModified: new Date(),
-    changeFrequency: page === '' ? 'daily' as const : 'monthly' as const,
-    priority: page === '' ? 1.0 : 0.7,
-  }))
+  // Core + solutions: IndexPolicy routeType 'core' with path
+  // GOVERNANCE: All core pages are always-index, but we still check directives.inSitemap
+  // to ensure governance system has final say
+  const corePaths = corePages.map((p) => (p === '' ? '' : p.replace(/^\//, '')))
+  const solutionPaths = solutionsPages.map((s) => `solutions/${s}`)
+  const hawaiiPaths = hawaiiLocationPages.map((p) => p.replace(/^\//, ''))
+  const allCorePaths = [...corePaths, ...solutionPaths, ...hawaiiPaths]
+  const coreEntries: MetadataRoute.Sitemap = []
+  for (const path of allCorePaths) {
+    const url = path ? `${baseUrl}/${path}` : baseUrl
+    const directives = getSeoDirectives(url, { routeType: 'core', path })
+    // GOVERNANCE: Only include if directives.inSitemap === true
+    if (!directives.inSitemap) continue
+    coreEntries.push({
+      url: directives.canonical,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1.0,
+    })
+  }
 
-  // Generate solutions page entries - ensure all solutions pages are included
-  const solutionsEntries = solutionsPages.map((solution) => ({
-    url: `${baseUrl}/solutions/${solution}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }))
-
-  // Generate service page entries
-  const serviceEntries = standaloneServices.map((service) => ({
-    url: `${baseUrl}/services/${service}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // Service pages: IndexPolicy routeType 'service'
+  // GOVERNANCE: All service pages are always-index, but we still check directives.inSitemap
+  const serviceEntries: MetadataRoute.Sitemap = []
+  for (const service of standaloneServices) {
+    const url = `${baseUrl}/services/${service}`
+    const directives = getSeoDirectives(url, { routeType: 'service', service })
+    // GOVERNANCE: Only include if directives.inSitemap === true
+    if (!directives.inSitemap) continue
+    serviceEntries.push({
+      url: directives.canonical,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    })
+  }
 
   // Generate blog post entries with error handling for date parsing
   const blogEntries = blogPosts.map((post) => {
@@ -323,76 +334,70 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   })
 
-  // Generate city hub page entries
-  const cityEntries = allCities.map((city) => ({
-    url: `${baseUrl}/${city}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // City hub pages: IndexPolicy routeType 'city' (use citySlugs)
+  const cityEntries: MetadataRoute.Sitemap = []
+  for (const city of citySlugs) {
+    const url = `${baseUrl}/${city}`
+    const directives = getSeoDirectives(url, { routeType: 'city', city })
+    if (!directives.inSitemap) continue
+    cityEntries.push({
+      url: directives.canonical,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    })
+  }
 
-  // Generate city+service combination entries
+  // City+service: IndexPolicy routeType 'city-service'; cityDataSlugs × keyServices only
+  // 
+  // GOVERNANCE NOTE: Sitemap generation intentionally passes empty blocks.
+  // This is correct behavior because:
+  // 1. Sitemap is a crawl surface generator, not a page renderer
+  // 2. getSeoDirectives() will treat missing blocks as non-indexable for programmatic routes
+  // 3. Pages with missing blocks will be noindex at page generation time (where blocks are fetched)
+  // 4. Sitemap should reflect actual indexability, not potential indexability
+  // 5. Only pages that pass quality gates at render time will be indexed
+  //
+  // Result: Sitemap includes only:
+  // - Pre-approved always-index routes (core, service, city)
+  // - Programmatic routes that pass quality gates when rendered (blocks present and valid)
+  // - Programmatic routes with missing blocks are automatically excluded (directives.inSitemap === false)
   const cityServiceEntries: MetadataRoute.Sitemap = []
-  for (const city of allCities) {
+  for (const city of cityDataSlugs) {
     for (const service of keyServices) {
+      const url = `${baseUrl}/${city}/${service}`
+      // Empty blocks - governance will noindex if blocks are actually missing at render time
+      const directives = getSeoDirectives(url, { 
+        routeType: 'city-service', 
+        city, 
+        service,
+        blocks: {} // Empty blocks - page generation will pass actual blocks
+      })
+      // GOVERNANCE: Only include if directives.inSitemap === true
+      // This ensures sitemap reflects actual indexability from governance system
+      if (!directives.inSitemap) continue
       cityServiceEntries.push({
-        url: `${baseUrl}/${city}/${service}`,
+        url: directives.canonical,
         lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
+        changeFrequency: 'weekly',
         priority: 0.7,
       })
     }
   }
 
-  // Generate city-industry hub page entries
-  // Format: /[city]/industry/[industry]
-  const cityIndustryEntries: MetadataRoute.Sitemap = []
-  for (const city of allCities) {
-    for (const industry of industrySlugs) {
-      cityIndustryEntries.push({
-        url: `${baseUrl}/${city}/industry/${industry}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.6,
-      })
-    }
-  }
-
-  // Generate city-industry-service combination entries
-  // Format: /[city]/industry/[industry]/[service]
-  // Services: web-development, seo, website-design (as defined in generateStaticParams)
-  const cityIndustryServiceEntries: MetadataRoute.Sitemap = []
-  const cityIndustryServices = ['web-development', 'seo', 'website-design']
-  for (const city of allCities) {
-    for (const industry of industrySlugs) {
-      for (const service of cityIndustryServices) {
-        cityIndustryServiceEntries.push({
-          url: `${baseUrl}/${city}/industry/${industry}/${service}`,
-          lastModified: new Date(),
-          changeFrequency: 'monthly' as const,
-          priority: 0.6,
-        })
-      }
-    }
-  }
-
-  // Generate Hawaii location page entries
-  const hawaiiLocationEntries = hawaiiLocationPages.map((page) => ({
-    url: `${baseUrl}${page}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // City-industry hubs: Tier 3 noindex — excluded from sitemap.
+  // GOVERNANCE: City×Industry hubs are always noindex,follow and excluded from sitemap
+  // per canonical governance rules (see lib/seo/canonical-rules.ts)
+  //
+  // City-industry-service: Phase 1 excluded (no reliable CMS list).
+  // GOVERNANCE: City×Industry×Service pages require blocks to be indexed.
+  // They are handled at page generation time, not in sitemap generation.
 
   return [
     ...coreEntries,
-    ...solutionsEntries,
     ...serviceEntries,
     ...blogEntries,
-    ...hawaiiLocationEntries,
     ...cityEntries,
     ...cityServiceEntries,
-    ...cityIndustryEntries,
-    ...cityIndustryServiceEntries
   ]
 }
