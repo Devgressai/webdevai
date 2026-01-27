@@ -10,7 +10,8 @@
     "a11y:lint": "next lint",
     "seed:cis": "ts-node scripts/seed-cis-pages.ts",
     "index-pages": "node scripts/index-pages-simple.js",
-    "generate-favicon": "node scripts/generate-favicon-from-image.js"
+    "generate-favicon": "node scripts/generate-favicon-from-image.js",
+    "seo:audit": "ts-node scripts/seo-readiness-audit.ts"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",

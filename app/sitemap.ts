@@ -2,9 +2,36 @@ import { MetadataRoute } from 'next'
 import { citySlugs } from '../lib/cities'
 import { industrySlugs } from '../lib/industries'
 import { getBlogPosts } from '../lib/get-blog-posts'
+import {
+  determineRouteType,
+  isAlwaysIndexableRoute,
+  shouldIncludeInSitemap,
+  logSitemapExclusion,
+  type RouteType
+} from '../lib/sitemap-governance'
 
+/**
+ * Sitemap Generation with Governance Gates
+ * 
+ * GOVERNANCE PRINCIPLES:
+ * 1. Only include URLs that are ALWAYS indexable OR explicitly pass governance gates
+ * 2. Programmatic routes (city×service, city×industry×service) are conditional
+ * 3. Cannot assume blocks exist at sitemap generation time (build-time vs runtime)
+ * 
+ * WHY WE CAN'T ASSUME BLOCKS EXIST:
+ * - Sitemap generation happens at build time
+ * - Content blocks may be loaded at runtime (e.g., from CMS, API)
+ * - Empty/missing blocks would create thin pages that hurt SEO
+ * - We validate route eligibility based on known entity lists (cities, services, industries)
+ * 
+ * SAFEGUARDS:
+ * - Unknown route types => excluded by default
+ * - Conditional routes require: inSitemap=true AND (hasRequiredBlocks OR eligibilityPrecomputed)
+ * - Always-indexable routes are validated but always included
+ */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.webvello.com'
+  const isDev = process.env.NODE_ENV === 'development'
   
   // NOTE: Admin routes (/admin/*) are explicitly excluded from sitemap
   // They are also blocked in robots.txt and have noindex meta tags
@@ -274,6 +301,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'ui-ux-design'
   ]
 
+  // Prepare entity lists once for governance functions (performance optimization)
+  // This avoids repeated dynamic imports in getSeoDirectives
+  const entityLists = {
+    citySlugs: allCities,
+    industrySlugs: industrySlugs,
+    validServiceSlugs: [...new Set([...keyServices, 'web-development', 'seo', 'website-design'])]
+  }
+
   // Get all blog posts with error handling
   let blogPosts: Awaited<ReturnType<typeof getBlogPosts>> = []
   try {
@@ -283,31 +318,87 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Generate core page entries
-  const coreEntries = corePages.map((page) => ({
-    url: `${baseUrl}${page}`,
-    lastModified: new Date(),
-    changeFrequency: page === '' ? 'daily' as const : 'monthly' as const,
-    priority: page === '' ? 1.0 : 0.7,
-  }))
+  // These are always-indexable routes - validated but always included
+  const coreEntries: MetadataRoute.Sitemap = []
+  for (const page of corePages) {
+    const pathname = page || '/'
+    const routeType = determineRouteType(pathname)
+    
+    // Validate that it's actually an always-indexable route
+    if (!isAlwaysIndexableRoute(routeType, pathname)) {
+      logSitemapExclusion(pathname, routeType, 'Expected always-indexable but failed check', isDev)
+      continue
+    }
+    
+    // Safeguard: if routeType is unknown, exclude
+    if (routeType === 'unknown') {
+      logSitemapExclusion(pathname, routeType, 'Unknown route type - excluded by default', isDev)
+      continue
+    }
+    
+    coreEntries.push({
+      url: `${baseUrl}${pathname}`,
+      lastModified: new Date(),
+      changeFrequency: page === '' ? 'daily' as const : 'monthly' as const,
+      priority: page === '' ? 1.0 : 0.7,
+    })
+  }
 
   // Generate solutions page entries - ensure all solutions pages are included
-  const solutionsEntries = solutionsPages.map((solution) => ({
-    url: `${baseUrl}/solutions/${solution}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }))
+  // These are always-indexable routes
+  const solutionsEntries: MetadataRoute.Sitemap = []
+  for (const solution of solutionsPages) {
+    const pathname = `/solutions/${solution}`
+    const routeType = determineRouteType(pathname)
+    
+    // Validate that it's actually an always-indexable route
+    if (!isAlwaysIndexableRoute(routeType, pathname)) {
+      logSitemapExclusion(pathname, routeType, 'Expected always-indexable but failed check', isDev)
+      continue
+    }
+    
+    solutionsEntries.push({
+      url: `${baseUrl}${pathname}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })
+  }
 
   // Generate service page entries
-  const serviceEntries = standaloneServices.map((service) => ({
-    url: `${baseUrl}/services/${service}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // These are always-indexable routes
+  const serviceEntries: MetadataRoute.Sitemap = []
+  for (const service of standaloneServices) {
+    const pathname = `/services/${service}`
+    const routeType = determineRouteType(pathname)
+    
+    // Validate that it's actually an always-indexable route
+    if (!isAlwaysIndexableRoute(routeType, pathname)) {
+      logSitemapExclusion(pathname, routeType, 'Expected always-indexable but failed check', isDev)
+      continue
+    }
+    
+    serviceEntries.push({
+      url: `${baseUrl}${pathname}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })
+  }
 
   // Generate blog post entries with error handling for date parsing
-  const blogEntries = blogPosts.map((post) => {
+  // These are always-indexable routes
+  const blogEntries: MetadataRoute.Sitemap = []
+  for (const post of blogPosts) {
+    const pathname = `/blog/${post.slug}`
+    const routeType = determineRouteType(pathname)
+    
+    // Validate that it's actually an always-indexable route
+    if (!isAlwaysIndexableRoute(routeType, pathname)) {
+      logSitemapExclusion(pathname, routeType, 'Expected always-indexable but failed check', isDev)
+      continue
+    }
+    
     let lastModified: Date
     try {
       lastModified = post.date ? new Date(post.date) : new Date()
@@ -315,74 +406,137 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified = new Date()
     }
     
-    return {
-      url: `${baseUrl}/blog/${post.slug}`,
+    blogEntries.push({
+      url: `${baseUrl}${pathname}`,
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
-    }
-  })
+    })
+  }
 
   // Generate city hub page entries
-  const cityEntries = allCities.map((city) => ({
-    url: `${baseUrl}/${city}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // IMPORTANT: These are conditional routes - must pass governance gates
+  const cityEntries: MetadataRoute.Sitemap = []
+  for (const city of allCities) {
+    const pathname = `/${city}`
+    const routeType = determineRouteType(pathname)
+    
+    // Only include if it passes governance gates
+    const shouldInclude = await shouldIncludeInSitemap(routeType, pathname, { city }, entityLists)
+    
+    if (shouldInclude) {
+      cityEntries.push({
+        url: `${baseUrl}${pathname}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      })
+    } else {
+      logSitemapExclusion(pathname, routeType, 'Failed governance gates', isDev)
+    }
+  }
 
   // Generate city+service combination entries
+  // IMPORTANT: These are conditional routes - must pass governance gates
+  // We cannot assume blocks exist, so we only include if eligibility is precomputed
   const cityServiceEntries: MetadataRoute.Sitemap = []
   for (const city of allCities) {
     for (const service of keyServices) {
-      cityServiceEntries.push({
-        url: `${baseUrl}/${city}/${service}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.7,
-      })
+      const pathname = `/${city}/${service}`
+      const routeType = determineRouteType(pathname)
+      
+      // Only include if it passes governance gates
+      const shouldInclude = await shouldIncludeInSitemap(routeType, pathname, { city, service }, entityLists)
+      
+      if (shouldInclude) {
+        cityServiceEntries.push({
+          url: `${baseUrl}${pathname}`,
+          lastModified: new Date(),
+          changeFrequency: 'weekly' as const,
+          priority: 0.7,
+        })
+      } else {
+        logSitemapExclusion(pathname, routeType, 'Failed governance gates', isDev)
+      }
     }
   }
 
   // Generate city-industry hub page entries
   // Format: /[city]/industry/[industry]
+  // IMPORTANT: These are conditional routes - must pass governance gates
+  // We cannot assume blocks exist, so we only include if eligibility is precomputed
   const cityIndustryEntries: MetadataRoute.Sitemap = []
   for (const city of allCities) {
     for (const industry of industrySlugs) {
-      cityIndustryEntries.push({
-        url: `${baseUrl}/${city}/industry/${industry}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.6,
-      })
+      const pathname = `/${city}/industry/${industry}`
+      const routeType = determineRouteType(pathname)
+      
+      // Only include if it passes governance gates
+      const shouldInclude = await shouldIncludeInSitemap(routeType, pathname, { city, industry }, entityLists)
+      
+      if (shouldInclude) {
+        cityIndustryEntries.push({
+          url: `${baseUrl}${pathname}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly' as const,
+          priority: 0.6,
+        })
+      } else {
+        logSitemapExclusion(pathname, routeType, 'Failed governance gates', isDev)
+      }
     }
   }
 
   // Generate city-industry-service combination entries
   // Format: /[city]/industry/[industry]/[service]
   // Services: web-development, seo, website-design (as defined in generateStaticParams)
+  // IMPORTANT: These are conditional routes - must pass governance gates
+  // We cannot assume blocks exist, so we only include if eligibility is precomputed
   const cityIndustryServiceEntries: MetadataRoute.Sitemap = []
   const cityIndustryServices = ['web-development', 'seo', 'website-design']
   for (const city of allCities) {
     for (const industry of industrySlugs) {
       for (const service of cityIndustryServices) {
-        cityIndustryServiceEntries.push({
-          url: `${baseUrl}/${city}/industry/${industry}/${service}`,
-          lastModified: new Date(),
-          changeFrequency: 'monthly' as const,
-          priority: 0.6,
-        })
+        const pathname = `/${city}/industry/${industry}/${service}`
+        const routeType = determineRouteType(pathname)
+        
+        // Only include if it passes governance gates
+        const shouldInclude = await shouldIncludeInSitemap(routeType, pathname, { city, industry, service }, entityLists)
+        
+        if (shouldInclude) {
+          cityIndustryServiceEntries.push({
+            url: `${baseUrl}${pathname}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.6,
+          })
+        } else {
+          logSitemapExclusion(pathname, routeType, 'Failed governance gates', isDev)
+        }
       }
     }
   }
 
   // Generate Hawaii location page entries
-  const hawaiiLocationEntries = hawaiiLocationPages.map((page) => ({
-    url: `${baseUrl}${page}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // These are always-indexable routes (location pages)
+  const hawaiiLocationEntries: MetadataRoute.Sitemap = []
+  for (const page of hawaiiLocationPages) {
+    const pathname = page
+    const routeType = determineRouteType(pathname)
+    
+    // Validate that it's actually an always-indexable route
+    if (!isAlwaysIndexableRoute(routeType, pathname)) {
+      logSitemapExclusion(pathname, routeType, 'Expected always-indexable but failed check', isDev)
+      continue
+    }
+    
+    hawaiiLocationEntries.push({
+      url: `${baseUrl}${pathname}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })
+  }
 
   return [
     ...coreEntries,
