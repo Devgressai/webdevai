@@ -3,6 +3,7 @@ import { ArrowRight, Search, TrendingUp, BarChart3, Target, Zap, Globe, Users, F
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
+import { BOFULeadForm } from '@/components/forms/bofu-lead-form'
 
 export const metadata: Metadata = {
   title: 'Traditional SEO: Technical, On-Page & Link Building Experts | Webvello',
@@ -634,23 +635,106 @@ export default function TraditionalSEOPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary-600 to-primary-500">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build Your SEO Foundation?
+      {/* Resources & Tools Section */}
+      <section className="py-24 bg-secondary-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-12 text-center">
+            SEO Resources & Tools
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Let's implement proven Traditional SEO strategies that create sustainable organic growth. 
-            Get started with a free SEO audit and discover your optimization opportunities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Get Free SEO Audit</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600" asChild>
-              <Link href="/case-studies">View Case Studies</Link>
-            </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <Link 
+              href="/resources/what-is-local-seo" 
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <FileText className="h-8 w-8 text-primary-600 mb-4" />
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">What is Local SEO?</h3>
+              <p className="text-secondary-600 text-sm">Complete guide to local search optimization and Google Business Profile.</p>
+            </Link>
+            <Link 
+              href="/resources/local-seo-cost" 
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <FileText className="h-8 w-8 text-primary-600 mb-4" />
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Local SEO Cost Guide</h3>
+              <p className="text-secondary-600 text-sm">Understanding local SEO pricing and service tiers.</p>
+            </Link>
+            <Link 
+              href="/resources/local-seo-checklist" 
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <FileText className="h-8 w-8 text-primary-600 mb-4" />
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Local SEO Checklist</h3>
+              <p className="text-secondary-600 text-sm">Complete optimization checklist for 2024.</p>
+            </Link>
+            <Link 
+              href="/compare/local-seo-vs-national-seo" 
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <FileText className="h-8 w-8 text-primary-600 mb-4" />
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Local vs National SEO</h3>
+              <p className="text-secondary-600 text-sm">Compare strategies and choose the right approach.</p>
+            </Link>
+            <Link 
+              href="/tools/seo-audit" 
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <FileText className="h-8 w-8 text-primary-600 mb-4" />
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Free SEO Audit Tool</h3>
+              <p className="text-secondary-600 text-sm">Get a comprehensive SEO analysis of your website.</p>
+            </Link>
+            <Link 
+              href="/contact" 
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <FileText className="h-8 w-8 text-primary-600 mb-4" />
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Contact Us</h3>
+              <p className="text-secondary-600 text-sm">Get a custom SEO strategy for your business.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* BOFU Form Section */}
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
+                Ready to Build Your SEO Foundation?
+              </h2>
+              <p className="text-lg text-secondary-600 mb-6">
+                Let's implement proven Traditional SEO strategies that create sustainable organic growth. Get started with a free consultation and discover your optimization opportunities.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-secondary-900 mb-1">Comprehensive SEO Audit</h3>
+                    <p className="text-secondary-600 text-sm">Complete analysis of your current SEO performance and opportunities.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-secondary-900 mb-1">Custom Strategy Development</h3>
+                    <p className="text-secondary-600 text-sm">Tailored SEO roadmap based on your business goals and competitive landscape.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-secondary-900 mb-1">Ongoing Optimization</h3>
+                    <p className="text-secondary-600 text-sm">Continuous improvement and monitoring to ensure sustainable growth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <BOFULeadForm 
+                serviceInterest="seo"
+                ctaTrackingId="seo-service-page-bofu"
+              />
+            </div>
           </div>
         </div>
       </section>

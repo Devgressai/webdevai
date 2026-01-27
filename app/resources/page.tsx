@@ -46,6 +46,42 @@ export const metadata: Metadata = {
 
 const resources = [
   {
+    title: "What is Local SEO?",
+    type: "Guide",
+    category: "Local SEO",
+    href: "/resources/what-is-local-seo",
+    description: "Complete guide to understanding local SEO, how it works, and why it matters for local businesses.",
+    readTime: "10 min read",
+    author: "Web Vello Team",
+    date: "2024",
+    featured: true,
+    icon: BookOpen
+  },
+  {
+    title: "Local SEO Cost Guide",
+    type: "Guide",
+    category: "Local SEO",
+    href: "/resources/local-seo-cost",
+    description: "Understanding local SEO pricing, service tiers, and what to expect when investing in local SEO.",
+    readTime: "8 min read",
+    author: "Web Vello Team",
+    date: "2024",
+    featured: true,
+    icon: BookOpen
+  },
+  {
+    title: "Local SEO Checklist",
+    type: "Checklist",
+    category: "Local SEO",
+    href: "/resources/local-seo-checklist",
+    description: "Complete optimization checklist for 2024. Step-by-step guide to improve your local search visibility.",
+    readTime: "12 min read",
+    author: "Web Vello Team",
+    date: "2024",
+    featured: false,
+    icon: FileText
+  },
+  {
     title: "Complete Guide to Local SEO in 2024",
     type: "Guide",
     category: "Local SEO",
@@ -53,7 +89,7 @@ const resources = [
     readTime: "15 min read",
     author: "Emily Rodriguez",
     date: "March 2024",
-    featured: true,
+    featured: false,
     icon: BookOpen
   },
   {
@@ -229,8 +265,8 @@ export default function ResourcesPage() {
                     {resource.category}
                   </span>
                   <Button variant="outline" size="sm" asChild>
-                    <Link href="/contact">
-                      Download Now
+                    <Link href={resource.href || "/contact"}>
+                      {resource.href ? "Read More" : "Download Now"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -299,8 +335,8 @@ export default function ResourcesPage() {
                     {resource.category}
                   </span>
                   <Button variant="outline" size="sm" asChild>
-                    <Link href="/contact">
-                      Access
+                    <Link href={resource.href || "/contact"}>
+                      {resource.href ? "Read More" : "Access"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>

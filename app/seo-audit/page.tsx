@@ -1,6 +1,11 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { SEOAuditTool } from '@/components/lead-magnets/seo-audit-tool'
 import { SchemaMarkup } from '@/components/seo/schema-markup'
+import { BOFULeadForm } from '@/components/forms/bofu-lead-form'
+import { Button } from '@/components/ui/button'
+import { FileText, AlertCircle, CheckCircle } from 'lucide-react'
+// Note: trackCTA removed - server components can't use onClick handlers
 
 export const metadata: Metadata = {
   title: 'Free SEO Audit Tool | Website SEO Analysis & Optimization',
@@ -27,7 +32,7 @@ export const metadata: Metadata = {
     images: ['https://www.webvello.com/og-seo-audit-tool.jpg']
   },
   alternates: {
-    canonical: 'https://www.webvello.com/seo-audit'
+    canonical: 'https://www.webvello.com/tools/seo-audit'
   }
 }
 
@@ -229,21 +234,115 @@ export default function SEOAuditPage() {
               </div>
             </div>
 
-            {/* CTA Section */}
-            <div className="mt-20 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Ready to Improve Your SEO?
+            {/* Methodology Section */}
+            <div className="mt-20 bg-white rounded-lg shadow-lg p-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+                Our SEO Audit Methodology
               </h2>
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Get started with our free SEO audit tool and discover how to boost your search rankings.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
-                  Start Free SEO Audit
-                </button>
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors">
-                  Learn More About SEO
-                </button>
+              <div className="max-w-4xl mx-auto space-y-8">
+                <div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">How We Analyze Your Website</h3>
+                  <p className="text-gray-700 mb-6">
+                    Our SEO audit tool uses a comprehensive methodology to evaluate your website across multiple dimensions. We analyze technical infrastructure, content quality, user experience, and search engine optimization factors to provide actionable insights.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-blue-50 p-6 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-3">Technical Analysis</h4>
+                      <p className="text-sm text-gray-700">
+                        We check crawlability, site structure, mobile optimization, page speed, and Core Web Vitals to ensure search engines can effectively index and rank your content.
+                      </p>
+                    </div>
+                    <div className="bg-green-50 p-6 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-3">Content Evaluation</h4>
+                      <p className="text-sm text-gray-700">
+                        We assess content quality, keyword optimization, internal linking, and content depth to identify opportunities for improvement.
+                      </p>
+                    </div>
+                    <div className="bg-purple-50 p-6 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-3">On-Page Optimization</h4>
+                      <p className="text-sm text-gray-700">
+                        We review title tags, meta descriptions, header structure, schema markup, and other on-page elements that impact search visibility.
+                      </p>
+                    </div>
+                    <div className="bg-yellow-50 p-6 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-3">User Experience</h4>
+                      <p className="text-sm text-gray-700">
+                        We evaluate mobile responsiveness, page load times, navigation structure, and overall user experience signals that influence rankings.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
+                  <div className="flex items-start">
+                    <AlertCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-700">
+                        <strong>Methodology Disclaimer:</strong> Our SEO audit tool provides automated analysis based on publicly available data and industry best practices. Results are estimates and should be used as a starting point for optimization. Actual search rankings depend on many factors including competition, algorithm updates, and ongoing optimization efforts. For comprehensive analysis, consider a professional SEO audit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Conversion Section with BOFU Form */}
+            <div className="mt-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Get Expert Help With Your SEO
+                  </h2>
+                  <p className="text-lg text-gray-700 mb-6">
+                    While our free audit tool provides valuable insights, a comprehensive SEO strategy requires expert analysis and ongoing optimization. Our team can help you:
+                  </p>
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Develop a customized SEO strategy based on your business goals</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Implement technical SEO improvements and fixes</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Create and optimize content for better rankings</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Build authority through strategic link building</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Monitor performance and continuously improve results</span>
+                    </li>
+                  </ul>
+                  <div className="space-y-4">
+                    <Link 
+                      href="/services/seo"
+                    >
+                      <Button variant="outline" className="w-full">
+                        <FileText className="h-5 w-5 mr-2" />
+                        Learn About Our SEO Services
+                      </Button>
+                    </Link>
+                    <Link 
+                      href="/resources/what-is-local-seo"
+                    >
+                      <Button variant="outline" className="w-full">
+                        <FileText className="h-5 w-5 mr-2" />
+                        Browse SEO Resources
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+                <div>
+                  <BOFULeadForm 
+                    serviceInterest="seo"
+                    ctaTrackingId="seo-audit-tool-bofu"
+                  />
+                </div>
               </div>
             </div>
           </div>
