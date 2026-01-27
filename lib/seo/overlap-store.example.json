@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Precomputed overlap scores for City×Industry hub pages",
+  "type": "object",
+  "patternProperties": {
+    "^/[^/]+/industry/[^/]+$": {
+      "type": "object",
+      "properties": {
+        "cityOverlap": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Content overlap with City page (0.0 = no overlap, 1.0 = identical)"
+        },
+        "industryOverlap": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Content overlap with Industry page (0.0 = no overlap, 1.0 = identical)"
+        },
+        "downstreamPages": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of City×Industry×Service pages that exist"
+        },
+        "computedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when overlap was computed"
+        }
+      },
+      "required": ["cityOverlap", "industryOverlap", "downstreamPages", "computedAt"]
+    }
+  },
+  "additionalProperties": false
+}

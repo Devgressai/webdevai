@@ -21,6 +21,12 @@ import { getCity, citySlugs } from '../../../../lib/cities'
 import { getIndustry, industrySlugs } from '../../../../lib/industries'
 import { SchemaMarkup } from '../../../../components/seo/schema-markup'
 import { generateCityIndustryContent, generateIndustryInsights } from '../../../../lib/city-industry-content'
+import { 
+  getCanonicalForCityIndustryHub, 
+  getCityIndustryHubRobots,
+  loadOverlapStore 
+} from '../../../../lib/seo/canonical-rules'
+import { overlapStore } from '../../../../lib/seo/overlap-store'
 
 interface CityIndustryPageProps {
   params: {
@@ -28,6 +34,9 @@ interface CityIndustryPageProps {
     industry: string
   }
 }
+
+// Load overlap store at module initialization
+loadOverlapStore(overlapStore)
 
 // Generate static paths for all city-industry combinations
 export async function generateStaticParams() {
@@ -76,6 +85,17 @@ export async function generateMetadata({ params }: CityIndustryPageProps): Promi
   
   if (!city || !industry) return { title: 'Page Not Found' }
 
+  // Get canonical decision using precomputed overlap scores
+  // Note: In production, downstreamServicePages would be fetched from page index
+  const canonicalDecision = getCanonicalForCityIndustryHub(
+    params.city,
+    params.industry
+    // downstreamServicePages would be passed here if available
+  )
+  
+  // Get robots directives (always noindex,follow for City×Industry hubs)
+  const robots = getCityIndustryHubRobots()
+
   const title = `${industry.name} Digital Marketing & Web Design in ${city.fullName} | Web Vello`
   const description = `Leading digital agency for ${industry.name.toLowerCase()} businesses in ${city.fullName}. Custom web design, SEO, and development solutions that drive measurable growth. 3x ROI guaranteed.`
 
@@ -111,11 +131,11 @@ export async function generateMetadata({ params }: CityIndustryPageProps): Promi
       description,
     },
     alternates: {
-      canonical: `https://www.webvello.com/${params.city}/industry/${params.industry}`,
+      canonical: canonicalDecision.canonical,
     },
     robots: {
-      index: true,
-      follow: true,
+      index: robots.index,
+      follow: robots.follow,
       'max-image-preview': 'large',
       'max-snippet': -1,
       'max-video-preview': -1

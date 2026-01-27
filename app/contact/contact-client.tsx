@@ -216,7 +216,7 @@ export function ContactPageClient() {
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <Breadcrumb items={generateBreadcrumbs('page', { title: 'Contact' })} />
+          <Breadcrumb items={generateBreadcrumbs('/contact', { title: 'Contact' })} />
         </div>
       </div>
 

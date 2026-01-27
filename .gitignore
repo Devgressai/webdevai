@@ -98,3 +98,6 @@ jspm_packages/
 
 # Raffle data storage
 data/
+
+# TypeScript build info
+tsconfig.tsbuildinfo

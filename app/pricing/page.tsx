@@ -32,7 +32,7 @@ export default function PricingPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('page', { title: 'Pricing' })} 
+            items={generateBreadcrumbs('/pricing', { title: 'Pricing' })} 
             className="mb-8"
           />
           <div className="mx-auto max-w-2xl text-center">

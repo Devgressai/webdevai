@@ -102,7 +102,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('page', { title: 'About' })} 
+            items={generateBreadcrumbs('/about', { title: 'About' })} 
             className="mb-8"
           />
           <div className="mx-auto max-w-2xl text-center">

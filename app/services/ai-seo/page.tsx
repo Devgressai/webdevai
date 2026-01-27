@@ -174,7 +174,7 @@ export default function AISeOPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('service', { title: 'AI SEO' })} 
+            items={generateBreadcrumbs('/services/ai-seo', { title: 'AI SEO' })} 
             className="mb-8"
           />
           

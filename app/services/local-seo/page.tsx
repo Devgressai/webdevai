@@ -121,7 +121,7 @@ export default function LocalSeOPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumb 
-            items={generateBreadcrumbs('service', { title: 'Local/GEO SEO' })} 
+            items={generateBreadcrumbs('/services/local-seo', { title: 'Local/GEO SEO' })} 
             className="mb-8"
           />
           <div className="mx-auto max-w-4xl text-center">

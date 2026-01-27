@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { getCity, citySlugs } from '../../../../../lib/cities'
 import { getIndustry, industrySlugs } from '../../../../../lib/industries'
 import { getService, serviceSlugs } from '../../../../../lib/services'
@@ -8,6 +9,15 @@ import { fetchCisDoc } from '../../../../../lib/cis-content'
 import { PortableText } from '@portabletext/react'
 import { getStaticCisDoc } from '../../../../../lib/cis-static'
 import { ensureMinimumWords, generateSeoPadding } from '../../../../../lib/seo-content'
+import { getSeoDirectives } from '../../../../../lib/seo/index-policy'
+import { 
+  getLocalDataCard, 
+  StubLocalDataProvider,
+  getIndustryKpiMap,
+  StubIndustryKpiProvider,
+  getProofSlot,
+  StubProofProvider
+} from '../../../../../lib/blocks'
 
 interface Params {
   city: string
@@ -36,6 +46,50 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const service = getService(params.service)
 
   if (!city || !industry || !service) return { title: 'Page Not Found' }
+
+  const cms = await fetchCisDoc(params.city, params.industry, params.service)
+  const hasCmsContent = !!(cms && cms.status && cms.status !== 'draft')
+
+  // GOVERNANCE: Fetch required uniqueness blocks for programmatic quality gates
+  // Using Stub providers - in production, replace with configured providers (LocalJson, CMS, etc.)
+  // If blocks are missing/invalid, getSeoDirectives() will return noindex
+  const localDataProvider = new StubLocalDataProvider()
+  const industryKpiProvider = new StubIndustryKpiProvider()
+  const proofProvider = new StubProofProvider()
+
+  // Fetch blocks (errors are handled gracefully - returns null data with invalid validation)
+  const localDataResult = await getLocalDataCard(
+    { city: params.city, state: city.state, service: params.service },
+    localDataProvider
+  ).catch(() => ({ data: null, validation: { valid: false, errors: [] }, fromCache: false }))
+
+  const industryKpiResult = await getIndustryKpiMap(
+    { industry: params.industry, service: params.service },
+    industryKpiProvider
+  ).catch(() => ({ data: null, validation: { valid: false, errors: [] }, fromCache: false }))
+
+  const proofResult = await getProofSlot(
+    { city: params.city, service: params.service, industry: params.industry },
+    proofProvider
+  ).catch(() => ({ data: null, validation: { valid: false, errors: [] }, fromCache: false }))
+
+  // GOVERNANCE: Get SEO directives with blocks - single source of truth for index/robots/canonical
+  const url = `https://www.webvello.com/${params.city}/industry/${params.industry}/${params.service}`
+  const directives = getSeoDirectives(url, {
+    routeType: 'city-industry-service',
+    city: params.city,
+    industry: params.industry,
+    service: params.service,
+    hasCmsContent,
+    blocks: {
+      LOCAL_DATA_CARD: localDataResult.data || undefined,
+      INDUSTRY_KPI_MAP: industryKpiResult.data || undefined,
+      PROOF_SLOT: proofResult.data || undefined
+    },
+    metadata: {
+      hasCmsContent
+    }
+  })
 
   const title = `${service.name} in ${city.fullName} for ${industry.name} Companies | Web Vello`
   const description = `Expert ${service.name.toLowerCase()} for ${industry.name.toLowerCase()} companies in ${city.fullName}. Custom software solutions, scalable architectures, and cutting-edge technologies. 300%+ organic traffic growth guaranteed.`
@@ -71,15 +125,19 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       'lead generation',
       'conversion optimization'
     ],
-    alternates: { canonical: `https://www.webvello.com/${params.city}/industry/${params.industry}/${params.service}` },
+    alternates: { canonical: directives.canonical },
     openGraph: {
       title,
       description,
-      url: `https://www.webvello.com/${params.city}/industry/${params.industry}/${params.service}`,
+      url: directives.canonical,
       siteName: 'Web Vello',
       type: 'website'
     },
-    robots: { index: true, follow: true }
+    // GOVERNANCE: Robots meta from directives - ensures conditional indexing is fully governed
+    robots: {
+      index: directives.index,
+      follow: directives.follow
+    }
   }
 }
 
@@ -90,15 +148,7 @@ export default async function CityIndustryServicePage({ params }: { params: Para
   const staticDoc = getStaticCisDoc(params.city, params.industry, params.service)
   const cms = await fetchCisDoc(params.city, params.industry, params.service)
 
-  if (!city || !industry || !service) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold">Page Not Found</h1>
-        </div>
-      </div>
-    )
-  }
+  if (!city || !industry || !service) notFound()
 
   // If CMS content exists and is published/in-review, prefer CMS content
   if (cms && cms.status && cms.status !== 'draft') {
