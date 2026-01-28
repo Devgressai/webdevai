@@ -367,7 +367,7 @@ export function NewHeader() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="group flex items-center rounded-lg px-2 py-1.5 transition-all duration-200 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="group flex items-center transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <span className="sr-only">Web Vello</span>
               <Logo size={40} className="transition-transform duration-200 group-hover:scale-105" />

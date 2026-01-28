@@ -13,8 +13,8 @@ export function Logo({ className = '', size = 64 }: LogoProps) {
   return (
     <div className={`flex items-center ${className}`} style={{ height: `${height}px` }}>
       <Image
-        src="/webvello_logo.jpg"
-        alt="Webvello"
+        src="/webvello-logo.png"
+        alt="Web Vello"
         width={height * 3}
         height={height}
         className="h-full w-auto object-contain"
