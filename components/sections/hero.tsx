@@ -147,13 +147,6 @@ export function Hero() {
       {/* Content Container - Left-aligned for better readability */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <div className="max-w-3xl">
-          {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary-500/90 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-white mb-6 sm:mb-8 ring-1 ring-white/20">
-            <Award className="h-4 w-4" />
-            <span className="hidden sm:inline">Trusted by 500+ businesses nationwide</span>
-            <span className="sm:hidden">500+ Businesses</span>
-          </div>
-
           {/* Headline Options - Using Option 1 (AI-powered positioning) */}
           {/* Option 1: AI-powered SEO/GEO/AEO positioning */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
