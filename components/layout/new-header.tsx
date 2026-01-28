@@ -362,7 +362,7 @@ export function NewHeader() {
 
       {/* Main Navigation */}
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
-        <div className="flex items-center justify-between min-h-[100px] py-4 lg:py-5">
+        <div className="flex items-center justify-between min-h-[180px] py-4 lg:py-5">
           {/* Logo - Far Left */}
           <div className="flex-shrink-0 flex items-center">
             <Link
@@ -370,7 +370,7 @@ export function NewHeader() {
               className="group flex items-center transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <span className="sr-only">Web Vello</span>
-              <Logo size={80} className="transition-transform duration-200 group-hover:scale-105" />
+              <Logo size={160} className="transition-transform duration-200 group-hover:scale-105" />
             </Link>
           </div>
           
