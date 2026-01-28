@@ -362,9 +362,9 @@ export function NewHeader() {
 
       {/* Main Navigation */}
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
-        <div className="flex items-center py-2 lg:py-3">
+        <div className="flex items-center justify-between min-h-[100px] py-4 lg:py-5">
           {/* Logo - Far Left */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center">
             <Link
               href="/"
               className="group flex items-center transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -375,7 +375,7 @@ export function NewHeader() {
           </div>
           
           {/* Desktop Navigation - Center */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-1 xl:gap-x-1.5 lg:flex-1 lg:justify-center lg:mx-8">
+          <div className="hidden lg:flex lg:items-center lg:gap-x-2 xl:gap-x-3 lg:flex-1 lg:justify-center lg:mx-12">
              {navigation.map((item, idx) => (
                <div key={item.name} className="relative">
                  {item.children ? (
@@ -387,7 +387,7 @@ export function NewHeader() {
                      <button
                        type="button"
                        className={cn(
-                         "flex items-center gap-1 rounded-lg px-3.5 py-2 text-sm font-semibold tracking-tight transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
+                         "flex items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 text-sm font-semibold tracking-tight transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 whitespace-nowrap",
                          openDropdown === item.name ? "bg-blue-50 text-blue-700 shadow-sm" : "text-slate-700"
                        )}
                        aria-expanded={openDropdown === item.name}
@@ -395,7 +395,7 @@ export function NewHeader() {
                        onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
                      >
                        {item.name}
-                       <ChevronDown className={cn("h-3.5 w-3.5 text-slate-500 transition-transform duration-200", openDropdown === item.name && "rotate-180 text-blue-600")} />
+                       <ChevronDown className={cn("h-4 w-4 text-slate-500 transition-transform duration-200", openDropdown === item.name && "rotate-180 text-blue-600")} />
                      </button>
                      
                      {openDropdown === item.name && (
@@ -452,7 +452,7 @@ export function NewHeader() {
                  ) : (
                    <Link
                      href={item.href}
-                     className="px-3.5 py-2 text-sm font-semibold leading-6 text-slate-700 hover:text-blue-600 transition-colors rounded-lg hover:bg-blue-50"
+                     className="flex items-center justify-center px-4 py-2.5 text-sm font-semibold leading-6 text-slate-700 hover:text-blue-600 transition-colors rounded-lg hover:bg-blue-50 whitespace-nowrap"
                    >
                      {item.name}
                    </Link>
@@ -462,7 +462,7 @@ export function NewHeader() {
            </div>
           
           {/* CTA Buttons - Far Right */}
-          <div className="hidden lg:flex lg:flex-shrink-0 lg:ml-auto lg:items-center lg:gap-3">
+          <div className="hidden lg:flex lg:flex-shrink-0 lg:items-center lg:gap-3">
             <Button
               variant="outline"
               className="rounded-xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-5 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
