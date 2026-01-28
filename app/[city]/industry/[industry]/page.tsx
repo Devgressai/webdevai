@@ -21,6 +21,7 @@ import { getCity, citySlugs } from '../../../../lib/cities'
 import { getIndustry, industrySlugs } from '../../../../lib/industries'
 import { SchemaMarkup } from '../../../../components/seo/schema-markup'
 import { generateCityIndustryContent, generateIndustryInsights } from '../../../../lib/city-industry-content'
+import { Breadcrumbs, generateCityIndustryBreadcrumbs } from '../../../../components/seo/breadcrumbs'
 import { 
   getCanonicalForCityIndustryHub, 
   getCityIndustryHubRobots,
@@ -160,6 +161,8 @@ export default function CityIndustryPage({ params }: CityIndustryPageProps) {
       </div>
     )
   }
+  
+  const breadcrumbs = generateCityIndustryBreadcrumbs(params.city, params.industry)
 
   // Generate dynamic content
   const contentSections = generateCityIndustryContent(
@@ -352,6 +355,10 @@ export default function CityIndustryPage({ params }: CityIndustryPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
       {/* Schema Markup */}
       <SchemaMarkup schema={organizationSchema} />
       <SchemaMarkup schema={serviceSchema} />

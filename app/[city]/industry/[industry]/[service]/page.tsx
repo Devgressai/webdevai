@@ -18,6 +18,7 @@ import {
   getProofSlot,
   StubProofProvider
 } from '../../../../../lib/blocks'
+import { Breadcrumbs, generateCityIndustryServiceBreadcrumbs } from '../../../../../components/seo/breadcrumbs'
 
 interface Params {
   city: string
@@ -150,10 +151,16 @@ export default async function CityIndustryServicePage({ params }: { params: Para
 
   if (!city || !industry || !service) notFound()
 
+  const breadcrumbs = generateCityIndustryServiceBreadcrumbs(params.city, params.industry, params.service)
+
   // If CMS content exists and is published/in-review, prefer CMS content
   if (cms && cms.status && cms.status !== 'draft') {
     return (
       <div className="min-h-screen bg-white">
+        {/* Breadcrumbs */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
         <section className="py-16 px-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">{cms.title}</h1>
@@ -215,6 +222,10 @@ export default async function CityIndustryServicePage({ params }: { params: Para
   if (staticDoc) {
     return (
       <div className="min-h-screen bg-white">
+        {/* Breadcrumbs */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
         <section className="py-16 px-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">{staticDoc.title}</h1>

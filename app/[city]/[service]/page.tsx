@@ -9,6 +9,7 @@ import {
   getProofSlot,
   StubProofProvider
 } from '../../../lib/blocks'
+import { Breadcrumbs, generateCityServiceBreadcrumbs } from '../../../components/seo/breadcrumbs'
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -41,6 +42,19 @@ import {
 import { cityData, cityDataSlugs } from '../../../lib/data/city-data'
 import { serviceData, serviceDataSlugs } from '../../../lib/data/service-data'
 import type { LucideIcon } from 'lucide-react'
+
+// Tier 1 services (always indexable for city+service combinations)
+// Must match IndexPolicy TIER1_SERVICES and sitemap.ts keyServices
+const TIER1_SERVICES = [
+  'website-design',
+  'web-development',
+  'seo',
+  'local-seo',
+  'digital-marketing',
+  'ai-seo',
+  'ai-consulting',
+  'ui-ux-design'
+]
 
 interface CityServicePageProps {
   params: {
@@ -269,11 +283,13 @@ const SERVICE_ICON_MAP: Record<string, LucideIcon> = {
   'enterprise-geo-services': BarChart3,
 }
 
-// Generate static params for city+service (source: lib/data)
+// Generate static params for city+service (Tier 1 services only)
+// Matches sitemap inclusion: only Tier 1 services are included in sitemap
+// Non-Tier 1 services are still accessible but not pre-rendered
 export async function generateStaticParams() {
   const params: { city: string; service: string }[] = []
   for (const city of cityDataSlugs) {
-    for (const service of serviceDataSlugs) {
+    for (const service of TIER1_SERVICES) {
       params.push({ city, service })
     }
   }
@@ -368,8 +384,14 @@ export default function CityServicePage({ params }: CityServicePageProps) {
     secondaryName: 'SEO services'
   }
 
+  const breadcrumbs = generateCityServiceBreadcrumbs(params.city, params.service)
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

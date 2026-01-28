@@ -2,13 +2,16 @@ import { Metadata } from 'next'
 import { Button } from '../../../components/ui/button'
 import { CheckCircle, Heart, Users, Award, TrendingUp, Phone, Mail, Clock, Star, Shield, Target, Search, Calendar, MapPin, ArrowRight, Stethoscope, Activity } from 'lucide-react'
 import Link from 'next/link'
+import { getServicePageCanonical } from '@/lib/seo/service-page-canonical'
+
+const canonical = getServicePageCanonical('/services/seo-doctors-kansas-city') || 'https://www.webvello.com/services/seo-doctors-kansas-city'
 
 export const metadata: Metadata = {
   title: 'SEO for Doctors Kansas City | Medical Practice SEO',
   description: 'Specialized SEO services for doctors and medical practices in Kansas City. Get more patients through local search. HIPAA compliant strategies that work.',
   keywords: 'seo for doctors kansas city, medical practice seo kansas city, doctor seo services, healthcare seo kansas city, physician marketing',
   alternates: {
-    canonical: 'https://www.webvello.com/services/seo-doctors-kansas-city',
+    canonical,
   },
   openGraph: {
     title: 'SEO for Doctors Kansas City | Medical Practice SEO',

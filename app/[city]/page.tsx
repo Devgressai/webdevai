@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { Button } from '../../components/ui/button'
 import { 
   ArrowRight, 
@@ -17,6 +18,98 @@ import {
 } from 'lucide-react'
 import { SchemaMarkup } from '../../components/seo/schema-markup'
 import { generateCityPageSchema } from '../../lib/advanced-schema-generator'
+import { citySlugs, getCity } from '../../lib/cities'
+import { Breadcrumbs, generateCityBreadcrumbs } from '../../components/seo/breadcrumbs'
+
+// Tier 1 services (always indexable for city+service combinations)
+// Must match IndexPolicy TIER1_SERVICES
+const TIER1_SERVICES = [
+  'website-design',
+  'web-development',
+  'seo',
+  'local-seo',
+  'digital-marketing',
+  'ai-seo',
+  'ai-consulting',
+  'ui-ux-design'
+]
+
+// Service name mappings for display
+const SERVICE_NAMES: Record<string, string> = {
+  'website-design': 'Website Design',
+  'web-development': 'Web Development',
+  'seo': 'SEO',
+  'local-seo': 'Local SEO',
+  'digital-marketing': 'Digital Marketing',
+  'ai-seo': 'AI SEO',
+  'ai-consulting': 'AI Consulting',
+  'ui-ux-design': 'UI/UX Design'
+}
+
+/**
+ * Map state code (e.g., "CA", "NY") to state page slug (e.g., "california", "new-york")
+ * Returns null if no reliable mapping exists
+ */
+function getStateSlugFromStateCode(stateCode: string): string | null {
+  const stateCodeUpper = stateCode.toUpperCase()
+  
+  // Mapping of state codes to state page slugs (based on actual state page directories)
+  const stateCodeToSlug: Record<string, string> = {
+    'AL': 'alabama',
+    'AK': 'alaska',
+    'AZ': 'arizona',
+    'AR': 'arkansas',
+    'CA': 'california',
+    'CO': 'colorado',
+    'CT': 'connecticut',
+    'DE': 'delaware',
+    'FL': 'florida',
+    'GA': 'georgia',
+    'HI': 'hawaii',
+    'ID': 'idaho',
+    'IL': 'illinois',
+    'IN': 'indiana',
+    'IA': 'iowa',
+    'KS': 'kansas',
+    'KY': 'kentucky',
+    'LA': 'louisiana',
+    'ME': 'maine',
+    'MD': 'maryland',
+    'MA': 'massachusetts',
+    'MI': 'michigan',
+    'MN': 'minnesota',
+    'MS': 'mississippi',
+    'MO': 'missouri',
+    'MT': 'montana',
+    'NE': 'nebraska',
+    'NV': 'nevada',
+    'NH': 'new-hampshire',
+    'NJ': 'new-jersey',
+    'NM': 'new-mexico',
+    'NY': 'new-york',
+    'NC': 'north-carolina',
+    'ND': 'north-dakota',
+    'OH': 'ohio',
+    'OK': 'oklahoma',
+    'OR': 'oregon',
+    'PA': 'pennsylvania',
+    'RI': 'rhode-island',
+    'SC': 'south-carolina',
+    'SD': 'south-dakota',
+    'TN': 'tennessee',
+    'TX': 'texas',
+    'UT': 'utah',
+    'VT': 'vermont',
+    'VA': 'virginia',
+    'WA': 'washington',
+    'WV': 'west-virginia',
+    'WI': 'wisconsin',
+    'WY': 'wyoming',
+    // DC is not a state but has a city page; no state page exists
+  }
+  
+  return stateCodeToSlug[stateCodeUpper] || null
+}
 
 interface CityPageProps {
   params: {
@@ -24,46 +117,12 @@ interface CityPageProps {
   }
 }
 
-// City data mapping
-const cityData: Record<string, { name: string; state: string; fullName: string }> = {
-  'new-york-ny': { name: 'New York', state: 'NY', fullName: 'New York, NY' },
-  'los-angeles-ca': { name: 'Los Angeles', state: 'CA', fullName: 'Los Angeles, CA' },
-  'chicago-il': { name: 'Chicago', state: 'IL', fullName: 'Chicago, IL' },
-  'houston-tx': { name: 'Houston', state: 'TX', fullName: 'Houston, TX' },
-  'phoenix-az': { name: 'Phoenix', state: 'AZ', fullName: 'Phoenix, AZ' },
-  'philadelphia-pa': { name: 'Philadelphia', state: 'PA', fullName: 'Philadelphia, PA' },
-  'san-antonio-tx': { name: 'San Antonio', state: 'TX', fullName: 'San Antonio, TX' },
-  'san-diego-ca': { name: 'San Diego', state: 'CA', fullName: 'San Diego, CA' },
-  'dallas-tx': { name: 'Dallas', state: 'TX', fullName: 'Dallas, TX' },
-  'san-jose-ca': { name: 'San Jose', state: 'CA', fullName: 'San Jose, CA' },
-  'austin-tx': { name: 'Austin', state: 'TX', fullName: 'Austin, TX' },
-  'jacksonville-fl': { name: 'Jacksonville', state: 'FL', fullName: 'Jacksonville, FL' },
-  'fort-worth-tx': { name: 'Fort Worth', state: 'TX', fullName: 'Fort Worth, TX' },
-  'columbus-oh': { name: 'Columbus', state: 'OH', fullName: 'Columbus, OH' },
-  'indianapolis-in': { name: 'Indianapolis', state: 'IN', fullName: 'Indianapolis, IN' },
-  'charlotte-nc': { name: 'Charlotte', state: 'NC', fullName: 'Charlotte, NC' },
-  'san-francisco-ca': { name: 'San Francisco', state: 'CA', fullName: 'San Francisco, CA' },
-  'seattle-wa': { name: 'Seattle', state: 'WA', fullName: 'Seattle, WA' },
-  'denver-co': { name: 'Denver', state: 'CO', fullName: 'Denver, CO' },
-  'washington-dc': { name: 'Washington', state: 'DC', fullName: 'Washington, D.C.' },
-  'nashville-tn': { name: 'Nashville', state: 'TN', fullName: 'Nashville, TN' },
-  'oklahoma-city-ok': { name: 'Oklahoma City', state: 'OK', fullName: 'Oklahoma City, OK' },
-  'el-paso-tx': { name: 'El Paso', state: 'TX', fullName: 'El Paso, TX' },
-  'boston-ma': { name: 'Boston', state: 'MA', fullName: 'Boston, MA' },
-  'portland-or': { name: 'Portland', state: 'OR', fullName: 'Portland, OR' },
-  'las-vegas-nv': { name: 'Las Vegas', state: 'NV', fullName: 'Las Vegas, NV' },
-  'detroit-mi': { name: 'Detroit', state: 'MI', fullName: 'Detroit, MI' },
-  'memphis-tn': { name: 'Memphis', state: 'TN', fullName: 'Memphis, TN' },
-  'louisville-ky': { name: 'Louisville', state: 'KY', fullName: 'Louisville, KY' },
-  'baltimore-md': { name: 'Baltimore', state: 'MD', fullName: 'Baltimore, MD' },
-  'milwaukee-wi': { name: 'Milwaukee', state: 'WI', fullName: 'Milwaukee, WI' },
-  'albuquerque-nm': { name: 'Albuquerque', state: 'NM', fullName: 'Albuquerque, NM' },
-  'tucson-az': { name: 'Tucson', state: 'AZ', fullName: 'Tucson, AZ' },
-  'fresno-ca': { name: 'Fresno', state: 'CA', fullName: 'Fresno, CA' },
-  'sacramento-ca': { name: 'Sacramento', state: 'CA', fullName: 'Sacramento, CA' },
-  'kansas-city-mo': { name: 'Kansas City', state: 'MO', fullName: 'Kansas City, MO' },
-  'mesa-az': { name: 'Mesa', state: 'AZ', fullName: 'Mesa, AZ' }
+// Generate static params for all city pages
+export async function generateStaticParams() {
+  return citySlugs.map((city) => ({ city }))
 }
+
+export const dynamicParams = false
 
 // All 28 services
 const allServices = [
@@ -106,7 +165,7 @@ const servicesByCategory = allServices.reduce((acc, service) => {
 }, {} as Record<string, typeof allServices>)
 
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
-  const city = cityData[params.city]
+  const city = getCity(params.city)
   if (!city) return { title: 'City Not Found' }
 
   return {
@@ -142,20 +201,10 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 }
 
 export default function CityPage({ params }: CityPageProps) {
-  const city = cityData[params.city]
+  const city = getCity(params.city)
   
   if (!city) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">City Not Found</h1>
-          <p className="text-gray-600 mb-8">The requested city page could not be found.</p>
-          <Button asChild>
-            <a href="/">Return Home</a>
-          </Button>
-        </div>
-      </div>
-    )
+    notFound()
   }
 
   // City-specific FAQs for rich snippets
@@ -192,12 +241,18 @@ export default function CityPage({ params }: CityPageProps) {
     cityFAQs
   )
 
+  const breadcrumbs = generateCityBreadcrumbs(params.city)
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Enhanced LocalBusiness Schema for this city */}
       {citySchema.map((schema, index) => (
         <SchemaMarkup key={index} schema={schema} />
       ))}
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -302,6 +357,59 @@ export default function CityPage({ params }: CityPageProps) {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Services in City Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Services in {city.name}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore our top services tailored for {city.name} businesses. Each service is designed to help local companies grow and succeed.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {TIER1_SERVICES.map((service) => (
+              <Link
+                key={service}
+                href={`/${params.city}/${service}`}
+                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 hover:from-blue-100 hover:to-indigo-100 transition-all duration-200 border border-blue-100 hover:border-blue-300 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-base font-semibold text-gray-900">
+                    {SERVICE_NAMES[service]}
+                  </h3>
+                  <ArrowRight className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                </div>
+                <p className="text-sm text-gray-600">
+                  Professional {SERVICE_NAMES[service].toLowerCase()} services in {city.fullName}
+                </p>
+              </Link>
+            ))}
+          </div>
+          
+          {/* State Page Link */}
+          {(() => {
+            const stateSlug = getStateSlugFromStateCode(city.state)
+            if (stateSlug) {
+              return (
+                <div className="mt-8 text-center">
+                  <Link
+                    href={`/services/${stateSlug}`}
+                    className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    <MapPin className="h-4 w-4 mr-2" />
+                    View all services in {city.state}
+                  </Link>
+                </div>
+              )
+            }
+            return null
+          })()}
         </div>
       </section>
 

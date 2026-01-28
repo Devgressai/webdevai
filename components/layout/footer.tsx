@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { MapPin, Mail, Phone, Globe } from 'lucide-react'
+import { citySlugs, cities } from '@/lib/cities'
 
 // Facebook icon component
 const FacebookIcon = ({ className }: { className?: string }) => (
@@ -16,45 +17,14 @@ const LinkedInIcon = ({ className }: { className?: string }) => (
 )
 
 export function Footer() {
-  const cities = [
-    { name: 'New York, NY', slug: 'new-york-ny' },
-    { name: 'Los Angeles, CA', slug: 'los-angeles-ca' },
-    { name: 'Chicago, IL', slug: 'chicago-il' },
-    { name: 'Houston, TX', slug: 'houston-tx' },
-    { name: 'Phoenix, AZ', slug: 'phoenix-az' },
-    { name: 'Philadelphia, PA', slug: 'philadelphia-pa' },
-    { name: 'San Antonio, TX', slug: 'san-antonio-tx' },
-    { name: 'San Diego, CA', slug: 'san-diego-ca' },
-    { name: 'Dallas, TX', slug: 'dallas-tx' },
-    { name: 'San Jose, CA', slug: 'san-jose-ca' },
-    { name: 'Austin, TX', slug: 'austin-tx' },
-    { name: 'Jacksonville, FL', slug: 'jacksonville-fl' },
-    { name: 'Fort Worth, TX', slug: 'fort-worth-tx' },
-    { name: 'Columbus, OH', slug: 'columbus-oh' },
-    { name: 'Indianapolis, IN', slug: 'indianapolis-in' },
-    { name: 'Charlotte, NC', slug: 'charlotte-nc' },
-    { name: 'San Francisco, CA', slug: 'san-francisco-ca' },
-    { name: 'Seattle, WA', slug: 'seattle-wa' },
-    { name: 'Denver, CO', slug: 'denver-co' },
-    { name: 'Washington, DC', slug: 'washington-dc' },
-    { name: 'Nashville, TN', slug: 'nashville-tn' },
-    { name: 'Oklahoma City, OK', slug: 'oklahoma-city-ok' },
-    { name: 'El Paso, TX', slug: 'el-paso-tx' },
-    { name: 'Boston, MA', slug: 'boston-ma' },
-    { name: 'Portland, OR', slug: 'portland-or' },
-    { name: 'Las Vegas, NV', slug: 'las-vegas-nv' },
-    { name: 'Detroit, MI', slug: 'detroit-mi' },
-    { name: 'Memphis, TN', slug: 'memphis-tn' },
-    { name: 'Louisville, KY', slug: 'louisville-ky' },
-    { name: 'Baltimore, MD', slug: 'baltimore-md' },
-    { name: 'Milwaukee, WI', slug: 'milwaukee-wi' },
-    { name: 'Albuquerque, NM', slug: 'albuquerque-nm' },
-    { name: 'Tucson, AZ', slug: 'tucson-az' },
-    { name: 'Fresno, CA', slug: 'fresno-ca' },
-    { name: 'Sacramento, CA', slug: 'sacramento-ca' },
-    { name: 'Kansas City, MO', slug: 'kansas-city-mo' },
-    { name: 'Mesa, AZ', slug: 'mesa-az' }
-  ]
+  // Get top 24 cities deterministically from citySlugs (first 24)
+  // citySlugs order is deterministic based on lib/cities.ts object key order
+  const topCities = citySlugs.slice(0, 24).map(slug => ({
+    slug,
+    name: cities[slug]?.fullName || cities[slug]?.name || slug,
+  }))
+  
+  const totalCityCount = citySlugs.length
 
   return (
     <footer className="bg-slate-950/95 border-t border-slate-800/70 text-slate-100">
@@ -196,10 +166,10 @@ export function Footer() {
           {/* Locations */}
           <div>
             <h4 className="text-xs sm:text-sm font-semibold tracking-wide text-slate-200 uppercase mb-3">
-              Serving
+              Top Cities
             </h4>
             <div className="space-y-2">
-              {cities.slice(0, 6).map((city) => (
+              {topCities.map((city) => (
                 <Link 
                   key={city.slug}
                   href={`/${city.slug}`} 
@@ -216,7 +186,7 @@ export function Footer() {
                 className="inline-flex items-center text-sm font-medium text-sky-300 hover:text-sky-200 transition-colors"
               >
                 <MapPin className="h-4 w-4 mr-2" />
-                View All {cities.length}+ Locations →
+                View All {totalCityCount}+ Locations →
               </Link>
               <div className="text-xs text-slate-400">
                 Nationwide coverage available

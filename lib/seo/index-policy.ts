@@ -23,6 +23,7 @@ import {
   ProofSlot
 } from '../blocks'
 import { checkDirectivesForViolations } from './governance-monitor'
+import { getServicePageCanonical } from './service-page-canonical'
 
 export type RouteType = 
   | 'core'
@@ -547,6 +548,14 @@ function getCanonicalUrl(params: IndexPolicyParams): string {
     return `${BASE_URL}/${seg(city)}`
   }
   if (routeType === 'service') {
+    // Check if this service page should canonicalize to a city or city-service page
+    const servicePath = seg(service) || seg(path ?? '')
+    if (servicePath) {
+      const canonical = getServicePageCanonical(`/services/${servicePath}`)
+      if (canonical) {
+        return canonical
+      }
+    }
     return `${BASE_URL}/services/${seg(service)}`
   }
   if (routeType === 'core') {
