@@ -15,17 +15,53 @@ import { cityData } from '../data/city-data'
 const BASE_URL = 'https://www.webvello.com'
 
 /**
+ * Industry geo pages that should NOT map to cities
+ * These are industry-specific pages, not city pages
+ */
+const INDUSTRY_GEO_PAGES = new Set([
+  'auto-repair',
+  'ecommerce',
+  'electricians',
+  'financial-services',
+  'healthcare',
+  'home-services',
+  'hvac',
+  'landscaping',
+  'legal',
+  'plumbing',
+  'professional-services',
+  'real-estate',
+  'restaurants',
+  'roofing',
+  'saas-technology',
+  'services'
+])
+
+/**
+ * Check if a geo page name is an industry page (not a city)
+ */
+function isIndustryGeoPage(geoCityName: string): boolean {
+  return INDUSTRY_GEO_PAGES.has(geoCityName.toLowerCase().trim())
+}
+
+/**
  * Normalize city name from geo-* slug to city-slug format
  * Examples:
  * - "new-york" → "new-york-ny"
  * - "los-angeles" → "los-angeles-ca"
  * - "kansas-city" → "kansas-city-mo"
+ * - "palo-alto" → "palo-alto-ca" (if exists)
+ * - "oklahoma-city" → "oklahoma-city-ok"
  */
 function normalizeGeoCityToCitySlug(geoCityName: string): string | null {
-  // Try exact match first (e.g., "new-york" might match "new-york-ny")
   const normalized = geoCityName.toLowerCase().trim()
   
-  // Direct lookup: check if any city slug starts with this name
+  // Skip industry pages
+  if (isIndustryGeoPage(normalized)) {
+    return null
+  }
+  
+  // Try exact match first: city name (e.g., "new-york" matches "New York")
   for (const citySlug of Object.keys(cities)) {
     const cityName = cities[citySlug].name.toLowerCase().replace(/\s+/g, '-')
     if (cityName === normalized) {
@@ -33,7 +69,7 @@ function normalizeGeoCityToCitySlug(geoCityName: string): string | null {
     }
   }
   
-  // Try matching city name without state (e.g., "new-york" matches "new-york-ny")
+  // Try matching city slug without state (e.g., "new-york" matches "new-york-ny")
   for (const citySlug of Object.keys(cities)) {
     const cityNamePart = citySlug.split('-').slice(0, -1).join('-') // Remove state part
     if (cityNamePart === normalized) {
@@ -42,7 +78,7 @@ function normalizeGeoCityToCitySlug(geoCityName: string): string | null {
   }
   
   // Try fuzzy matching for multi-word cities (e.g., "kansas-city" → "kansas-city-mo")
-  const normalizedParts = normalized.split('-')
+  // This handles cases where the geo slug matches the city slug prefix
   for (const citySlug of Object.keys(cities)) {
     const slugParts = citySlug.split('-')
     // Match if all parts except last (state) match
@@ -66,43 +102,46 @@ function extractCityAndService(serviceSlug: string): { city: string | null; serv
   const slug = serviceSlug.toLowerCase()
   
   // Service prefix mappings: prefix → actual service slug
+  // Order matters: longer prefixes should be checked first
   const servicePrefixMap: Record<string, string> = {
-    'seo': 'seo',
-    'web-development': 'web-development',
-    'web-design': 'website-design',
-    'website-design': 'website-design',
-    'website-redesign': 'website-redesign',
-    'wordpress': 'wordpress-development',
-    'wordpress-development': 'wordpress-development',
-    'wordpress-developers': 'wordpress-development',
-    'web-application': 'web-development',
-    'web-application-development': 'web-development',
-    'medical-website': 'website-design',
-    'medical-website-design': 'website-design',
-    'surgeon-web': 'website-design',
-    'surgeon-web-design': 'website-design',
-    'biotech-website': 'website-design',
-    'biotech-website-design': 'website-design',
-    'auto-repair-website': 'website-design',
-    'auto-repair-website-design': 'website-design',
-    'dairy-industry-website': 'website-design',
+    // Longest prefixes first
     'dairy-industry-website-design': 'website-design',
-    'educational-website': 'website-design',
-    'educational-website-development': 'web-development',
-    'freight-forwarder-web': 'website-design',
+    'auto-repair-website-design': 'website-design',
+    'biotech-website-design': 'website-design',
+    'medical-website-design': 'website-design',
+    'surgeon-web-design': 'website-design',
     'freight-forwarder-web-design': 'website-design',
-    'retail-development': 'web-development',
-    'energy-seo': 'seo',
-    'real-estate-seo': 'seo',
-    'portland-web': 'digital-marketing',
+    'educational-website-development': 'web-development',
+    'web-application-development': 'web-development',
+    'wordpress-development': 'wordpress-development',
+    'website-redesign': 'website-redesign',
+    'website-design': 'website-design',
     'portland-web-marketing': 'digital-marketing',
-    'jacksonville-ai': 'ai-seo',
     'jacksonville-ai-seo': 'ai-seo',
+    'real-estate-seo': 'seo',
+    'energy-seo': 'seo',
+    'seo-doctors': 'seo',
     'seo-company': 'seo',
     'seo-consulting': 'seo',
     'seo-services': 'seo',
-    'seo-doctors': 'seo',
-    'seo-geo': 'generative-engine-optimization'
+    'seo-geo': 'generative-engine-optimization',
+    // Medium prefixes
+    'dairy-industry-website': 'website-design',
+    'auto-repair-website': 'website-design',
+    'biotech-website': 'website-design',
+    'medical-website': 'website-design',
+    'surgeon-web': 'website-design',
+    'freight-forwarder-web': 'website-design',
+    'retail-development': 'web-development',
+    'web-application': 'web-development',
+    'wordpress-developers': 'wordpress-development',
+    'portland-web': 'digital-marketing',
+    'jacksonville-ai': 'ai-seo',
+    // Short prefixes
+    'web-development': 'web-development',
+    'web-design': 'website-design',
+    'wordpress': 'wordpress-development',
+    'seo': 'seo'
   }
   
   // Try to find service prefix at the start (longest match first)
@@ -121,7 +160,28 @@ function extractCityAndService(serviceSlug: string): { city: string | null; serv
     }
   }
   
-  // Try reverse: city at start (e.g., "jacksonville-ai-seo")
+  // Try reverse: city at start (e.g., "jacksonville-ai-seo", "website-design-louisville")
+  // First try city slug format (e.g., "oklahoma-city" matches "oklahoma-city-ok")
+  for (const citySlug of Object.keys(cityData)) {
+    const cityNamePart = citySlug.split('-').slice(0, -1).join('-') // Remove state
+    if (slug.startsWith(cityNamePart + '-')) {
+      const servicePart = slug.slice(cityNamePart.length + 1)
+      // Try direct match first
+      if (serviceData[servicePart]) {
+        return { city: citySlug, service: servicePart }
+      }
+      // Try prefix mapping
+      for (const [prefix, mappedService] of Object.entries(servicePrefixMap)) {
+        if (servicePart === prefix || servicePart.startsWith(prefix + '-')) {
+          if (serviceData[mappedService]) {
+            return { city: citySlug, service: mappedService }
+          }
+        }
+      }
+    }
+  }
+  
+  // Also try city name format (e.g., "louisville" matches "Louisville")
   for (const citySlug of Object.keys(cityData)) {
     const cityName = cities[citySlug].name.toLowerCase().replace(/\s+/g, '-')
     if (slug.startsWith(cityName + '-')) {
@@ -163,6 +223,12 @@ export function getServicePageCanonical(pathname: string): string | null {
   // Pattern 1: /services/geo-{city} → /{city-slug}
   if (serviceSlug.startsWith('geo-')) {
     const geoCityName = serviceSlug.replace('geo-', '')
+    
+    // Skip industry pages (they shouldn't canonicalize to cities)
+    if (isIndustryGeoPage(geoCityName)) {
+      return null
+    }
+    
     const citySlug = normalizeGeoCityToCitySlug(geoCityName)
     
     if (citySlug && cityData[citySlug]) {
