@@ -6,8 +6,9 @@
  * Normalizes a URL string:
  * - Trims whitespace
  * - Adds https:// if protocol is missing
- * - Lowercases the hostname
+ * - Lowercases the hostname (if it's a valid URL)
  * - Removes trailing slashes (except for root)
+ * - Handles cases where input is just a name without TLD
  */
 export function normalizeUrl(url: string): string {
   if (!url || typeof url !== 'string') {
@@ -21,32 +22,42 @@ export function normalizeUrl(url: string): string {
     return ''
   }
 
-  // Add protocol if missing
-  if (!normalized.match(/^https?:\/\//i)) {
-    normalized = `https://${normalized}`
-  }
-
-  try {
-    const urlObj = new URL(normalized)
-    
-    // Lowercase hostname
-    urlObj.hostname = urlObj.hostname.toLowerCase()
-    
-    // Remove trailing slash (except for root)
-    if (urlObj.pathname !== '/' && urlObj.pathname.endsWith('/')) {
-      urlObj.pathname = urlObj.pathname.slice(0, -1)
+  // Remove protocol if present (we'll add it back if needed)
+  const withoutProtocol = normalized.replace(/^https?:\/\//i, '').trim()
+  
+  // If it looks like it might be a valid domain (has a dot), try to normalize as URL
+  if (withoutProtocol.includes('.')) {
+    // Add protocol if missing
+    if (!normalized.match(/^https?:\/\//i)) {
+      normalized = `https://${withoutProtocol}`
     }
 
-    return urlObj.toString()
-  } catch {
-    // If URL parsing fails, return the normalized string with https://
-    return normalized
+    try {
+      const urlObj = new URL(normalized)
+      
+      // Lowercase hostname
+      urlObj.hostname = urlObj.hostname.toLowerCase()
+      
+      // Remove trailing slash (except for root)
+      if (urlObj.pathname !== '/' && urlObj.pathname.endsWith('/')) {
+        urlObj.pathname = urlObj.pathname.slice(0, -1)
+      }
+
+      return urlObj.toString()
+    } catch {
+      // If URL parsing fails, return the normalized string with https://
+      return normalized
+    }
+  } else {
+    // No dot found - likely just a name/identifier
+    // Return as-is (lowercased for consistency) without adding protocol
+    return withoutProtocol.toLowerCase()
   }
 }
 
 /**
- * Validates if a string looks like a valid domain/URL
- * Basic validation - checks for domain-like patterns
+ * Validates if a string is acceptable as a website URL/identifier
+ * Very lenient - accepts any non-empty text input
  */
 export function validateUrl(url: string): boolean {
   if (!url || typeof url !== 'string') {
@@ -54,50 +65,8 @@ export function validateUrl(url: string): boolean {
   }
 
   const trimmed = url.trim()
-  if (!trimmed) {
-    return false
-  }
-
-  // Basic domain pattern: at least one dot, valid characters
-  // Allows: example.com, www.example.com, https://example.com, etc.
-  const domainPattern = /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/
-  const urlPattern = /^https?:\/\/([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}/
-
-  // Check if it's a valid domain (with or without protocol)
-  const withoutProtocol = trimmed.replace(/^https?:\/\//i, '')
   
-  // Must have at least one dot
-  if (!withoutProtocol.includes('.')) {
-    return false
-  }
-
-  // Must not contain spaces
-  if (withoutProtocol.includes(' ')) {
-    return false
-  }
-
-  // Must match domain pattern
-  if (!domainPattern.test(withoutProtocol)) {
-    return false
-  }
-
-  // Block obviously invalid patterns
-  const invalidPatterns = [
-    /^localhost/i,
-    /^127\.0\.0\.1/,
-    /^192\.168\./,
-    /^10\./,
-    /^172\.(1[6-9]|2[0-9]|3[0-1])\./,
-    /\.local$/i,
-    /\.internal$/i,
-  ]
-
-  for (const pattern of invalidPatterns) {
-    if (pattern.test(withoutProtocol)) {
-      return false
-    }
-  }
-
-  return true
+  // Accept any non-empty text
+  return trimmed.length > 0
 }
 
