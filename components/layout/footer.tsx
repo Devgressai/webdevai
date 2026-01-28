@@ -29,9 +29,9 @@ export function Footer() {
   return (
     <footer className="bg-slate-950/95 border-t border-slate-800/70 text-slate-100">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10 py-10 sm:py-12 lg:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12">
           {/* Company Info */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="md:col-span-2 lg:col-span-2 space-y-4">
             <h3 className="text-xl sm:text-2xl font-semibold text-slate-50">Web Vello</h3>
             <p className="text-sm sm:text-[15px] text-slate-300 leading-relaxed max-w-md">
               Professional digital marketing services that drive real results. 
@@ -163,12 +163,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Locations */}
-          <div>
+          {/* Locations - Split into 3 columns */}
+          <div className="md:col-span-2 lg:col-span-2">
             <h4 className="text-xs sm:text-sm font-semibold tracking-wide text-slate-200 uppercase mb-3">
               Top Cities
             </h4>
-            <div className="space-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-2">
               {topCities.map((city) => (
                 <Link 
                   key={city.slug}
