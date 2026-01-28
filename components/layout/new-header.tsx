@@ -370,7 +370,7 @@ export function NewHeader() {
               className="group flex items-center transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <span className="sr-only">Web Vello</span>
-              <Logo size={160} className="transition-transform duration-200 group-hover:scale-105" />
+              <Logo size={40} className="transition-transform duration-200 group-hover:scale-105" />
             </Link>
           </div>
           
