@@ -362,7 +362,7 @@ export function NewHeader() {
 
       {/* Main Navigation */}
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
-        <div className="flex items-center justify-between min-h-[180px] py-4 lg:py-5">
+        <div className="flex items-center justify-between py-2 lg:py-3">
           {/* Logo - Far Left */}
           <div className="flex-shrink-0 flex items-center">
             <Link
