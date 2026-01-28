@@ -4,13 +4,13 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 
+import { getServicePageAlternates } from '@/lib/seo/service-metadata'
+
 export const metadata: Metadata = {
   title: 'Webvello Services in California | SEO & Digital Marketing',
   description: 'Professional SEO, GEO, and web development for California businesses. Remote services across Los Angeles, San Francisco, San Diego, and statewide.',
   keywords: ['california seo', 'california digital marketing', 'geo california', 'web development california'],
-  alternates: {
-    canonical: 'https://www.webvello.com/services/california',
-  },
+  alternates: getServicePageAlternates('/services/california'),
   openGraph: {
     title: 'Webvello Services in California | SEO & Digital Marketing',
     description: 'Professional SEO, GEO, and web development for California businesses. Remote services across Los Angeles, San Francisco, San Diego, and statewide.',

@@ -1,12 +1,13 @@
 import { Metadata } from 'next'
 import { Button } from '../../../components/ui/button'
 import { CheckCircle, Code, TrendingUp, Phone, Mail, Clock, Shield, ArrowRight, Globe, BarChart3, Target, Users, Award, Star } from 'lucide-react'
+import { getServicePageAlternates } from '@/lib/seo/service-metadata'
 
 export const metadata: Metadata = {
   title: 'WordPress Developers Denver | Expert WP Development',
   description: 'Top WordPress developers in Denver, CO. Custom themes, plugins, e-commerce & enterprise WordPress solutions.',
   keywords: 'wordpress developers denver, denver wordpress development, wordpress agency denver, custom wordpress denver',
-  alternates: { canonical: 'https://www.webvello.com/services/wordpress-developers-denver' },
+  alternates: getServicePageAlternates('/services/wordpress-developers-denver'),
   openGraph: {
     title: 'WordPress Developers Denver | Expert WP Development',
     description: 'Top WordPress developers in Denver, CO. Custom themes, plugins, e-commerce & enterprise WordPress solutions.',

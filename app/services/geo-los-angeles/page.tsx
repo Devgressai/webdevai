@@ -3,14 +3,13 @@ import { ArrowRight, CheckCircle, MapPin, Building2, TrendingUp, Zap, Target, Gl
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
+import { getServicePageAlternates } from '@/lib/seo/service-metadata'
 
 export const metadata: Metadata = {
   title: 'LA Enterprise Complexity: Segmented GEO Positioning',
   description: 'Navigate LA\'s fragmented business universes. Entertainment, tech, real estate positioned distinctly through AI citations.',
   keywords: ['geo los angeles', 'generative engine optimization los angeles', 'ai seo los angeles', 'chatgpt optimization la'],
-  alternates: {
-    canonical: 'https://www.webvello.com/services/geo-los-angeles',
-  },
+  alternates: getServicePageAlternates('/services/geo-los-angeles'),
   openGraph: {
     title: 'GEO Services in Los Angeles, California | AI Search',
     description: 'Get your LA business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for greater Los Angeles.',

@@ -4,14 +4,14 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
 import { BOFULeadForm } from '@/components/forms/bofu-lead-form'
+import { Breadcrumbs, generateServiceBreadcrumbs } from '@/components/seo/breadcrumbs'
+import { getServicePageAlternates } from '@/lib/seo/service-metadata'
 
 export const metadata: Metadata = {
   title: 'Traditional SEO: Technical, On-Page & Link Building Experts | Webvello',
   description: 'Traditional SEO builds search visibility through technical optimization, on-page strategy, and authority building. Expert SEO services from Webvello.',
   keywords: ['traditional seo services', 'technical seo', 'on-page seo', 'seo optimization', 'seo foundation'],
-  alternates: {
-    canonical: 'https://www.webvello.com/services/seo',
-  },
+  alternates: getServicePageAlternates('/services/seo'),
   openGraph: {
     title: 'Traditional SEO Services | Technical & On-Page Experts',
     description: 'Traditional SEO builds search visibility through technical optimization, on-page strategy, and authority building. Expert SEO services from Webvello.',
@@ -191,6 +191,8 @@ const faqs = [
 ]
 
 export default function TraditionalSEOPage() {
+  const breadcrumbs = generateServiceBreadcrumbs('seo')
+  
   const pageSchema = generatePageSchema({
     pageType: 'service',
     url: 'https://www.webvello.com/services/seo',
@@ -211,6 +213,10 @@ export default function TraditionalSEOPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

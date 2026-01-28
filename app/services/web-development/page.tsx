@@ -3,13 +3,13 @@ import { ArrowRight, Code, Smartphone, Zap, TrendingUp, Users, Shield, BarChart3
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
+import { getServicePageAlternates } from '@/lib/seo/service-metadata'
+
 export const metadata: Metadata = {
   title: 'Custom React + Tailwind Web Development | Webvello',
   description: 'Custom web development using React and Tailwind CSS. Performance-optimized, SEO-ready websites built for visibility and conversions. Expert team.',
   keywords: ['custom web development', 'React development', 'Tailwind CSS websites', 'custom React websites', 'performance web development', 'SEO-ready web development'],
-  alternates: {
-    canonical: 'https://www.webvello.com/services/web-development',
-  },
+  alternates: getServicePageAlternates('/services/web-development'),
   openGraph: {
     title: 'Custom React + Tailwind Web Development | Webvello',
     description: 'Custom web development using React and Tailwind CSS. Performance-optimized, SEO-ready websites built for visibility and conversions.',

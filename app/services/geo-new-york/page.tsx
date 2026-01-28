@@ -3,17 +3,13 @@ import { ArrowRight, CheckCircle, MapPin, Building2, TrendingUp, Zap, Target, Gl
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { generatePageSchema } from '@/lib/clean-schema-generator'
-import { getServicePageCanonical } from '@/lib/seo/service-page-canonical'
-
-const canonical = getServicePageCanonical('/services/geo-new-york') || 'https://www.webvello.com/services/geo-new-york'
+import { getServicePageAlternates } from '@/lib/seo/service-metadata'
 
 export const metadata: Metadata = {
   title: 'NYC Hyperlocal GEO: Borough-Specific Authority',
   description: 'Dominate NYC hyperlocal AI search across all five boroughs. Manhattan, Brooklyn positioning reflects neighborhood sophistication.',
   keywords: ['geo new york', 'generative engine optimization nyc', 'ai seo new york', 'chatgpt optimization nyc'],
-  alternates: {
-    canonical,
-  },
+  alternates: getServicePageAlternates('/services/geo-new-york'),
   openGraph: {
     title: 'GEO Services in New York, NY | AI Search Optimization',
     description: 'Get your NYC business cited by ChatGPT, Perplexity & Google AI. Remote GEO services for all five boroughs.',

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, DollarSign, TrendingUp, BarChart3, Target, Users, CheckCircle, Calculator, Lightbulb, Shield, Clock, Zap, Globe, Smartphone, Mail, Phone, Calendar, Star, Award, Building2, Eye, Search, Filter, PieChart, Activity, TrendingDown, AlertTriangle, CheckCircle2, XCircle, Info, HelpCircle, BookOpen, FileText, Play, Pause, RotateCcw, ChevronDown, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
-import { Breadcrumb, generateBreadcrumbs } from '../../../components/ui/breadcrumb'
+import { Breadcrumbs } from '../../../components/seo/breadcrumbs'
 
 const roiMetrics = [
   {
@@ -248,13 +248,13 @@ export default function WebsiteROIPage() {
         
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           {/* Breadcrumbs */}
-          <Breadcrumb 
-            items={[
-              { label: 'Solutions', href: '/solutions' },
-              { label: 'Website ROI', current: true }
-            ]} 
-            className="mb-8"
-          />
+          <div className="mb-8">
+            <Breadcrumbs items={[
+              { label: 'Home', href: '/', canonical: 'https://www.webvello.com/' },
+              { label: 'Solutions', href: '/solutions', canonical: 'https://www.webvello.com/solutions' },
+              { label: 'Website ROI', href: '/solutions/website-roi', canonical: 'https://www.webvello.com/solutions/website-roi' }
+            ]} />
+          </div>
           <div className="mx-auto max-w-4xl text-center">
             <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-6 py-3 text-sm font-semibold mb-8 shadow-lg">
               <DollarSign className="w-5 h-5 mr-2" />

@@ -3,6 +3,7 @@ import { LocationLandingTemplate } from '@/components/templates/LocationLandingT
 import { konaConfig } from '@/lib/location-configs/kona'
 import { generateLocationPageSchema } from '@/lib/location-schema-generator'
 import { SchemaMarkup } from '@/components/seo/schema-markup'
+import { Breadcrumbs, generateLocationBreadcrumbs } from '@/components/seo/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Kona SEO & Web Design | AI-Powered Digital Marketing',
@@ -51,12 +52,19 @@ export default function KonaPage() {
     konaConfig.services
   )
 
+  const breadcrumbs = generateLocationBreadcrumbs(['hawaii', 'kona'])
+  
   return (
     <>
       {/* Schema Markup */}
       {locationSchema.map((schema, index) => (
         <SchemaMarkup key={index} schema={schema} />
       ))}
+      
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
       
       {/* Page Content */}
       <LocationLandingTemplate config={konaConfig} />

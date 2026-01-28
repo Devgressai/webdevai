@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { MapPin, ArrowLeft, Globe, Users, TrendingUp } from 'lucide-react'
 import { cities as cityMap } from '../../lib/cities'
 import { Button } from '../../components/ui/button'
+import { Breadcrumbs, generateLocationBreadcrumbs } from '../../components/seo/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Service Locations | Web Vello Digital Marketing',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 
 export default function LocationsPage() {
   const cityList = Object.values(cityMap)
+  const breadcrumbs = generateLocationBreadcrumbs([])
 
   const toIndustrySlug = (name: string | undefined) =>
     (name || '').toLowerCase().replace(/\s+/g, '')
@@ -34,6 +36,10 @@ export default function LocationsPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Breadcrumbs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
       {/* Header */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">

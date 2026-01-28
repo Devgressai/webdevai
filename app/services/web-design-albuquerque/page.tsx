@@ -2,11 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 import { ArrowRight, Calendar, User, Clock, CheckCircle, ExternalLink, Monitor, Smartphone, Palette, Code, Zap, Target, MapPin, Phone, Mail, Star, Award, Users, DollarSign } from 'lucide-react'
+import { getServicePageAlternates } from '@/lib/seo/service-metadata'
 
 export const metadata: Metadata = {
   title: 'Web Design in Albuquerque: Professional Website Design Services NM | Web Vello',
   description: 'Professional web design services in Albuquerque, NM. Expert web designers create custom, responsive websites for Albuquerque businesses. Free consultation available.',
   keywords: 'web design albuquerque, albuquerque web designer, website design new mexico, albuquerque web design company, custom web design albuquerque',
+  alternates: getServicePageAlternates('/services/web-design-albuquerque'),
   openGraph: {
     title: 'Web Design in Albuquerque: Professional Website Design Services NM',
     description: 'Professional web design services in Albuquerque, NM. Expert web designers create custom, responsive websites for Albuquerque businesses.',

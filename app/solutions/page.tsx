@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, TrendingUp, Globe, Code, Users, Star, Target, Zap, BarChart3, Building2, FileText, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
-import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+import { Breadcrumbs } from '../../components/seo/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Business Solutions That Deliver Results | Web Vello',
@@ -142,10 +142,12 @@ export default function SolutionsPage() {
       <section className="py-24 bg-gradient-to-br from-primary-50 to-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <Breadcrumb 
-            items={generateBreadcrumbs('/solutions', { title: 'Solutions' })} 
-            className="mb-8"
-          />
+          <div className="mb-8">
+            <Breadcrumbs items={[
+              { label: 'Home', href: '/', canonical: 'https://www.webvello.com/' },
+              { label: 'Solutions', href: '/solutions', canonical: 'https://www.webvello.com/solutions' }
+            ]} />
+          </div>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-6xl">
               Business{" "}

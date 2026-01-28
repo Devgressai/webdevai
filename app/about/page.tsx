@@ -126,7 +126,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">What is Web Vello?</h2>
           <p className="text-lg text-secondary-700 mb-4">
-            Web Vello is a professional digital marketing agency and technology partner for B2B organizations in the
+            Web Vello is a professional digital marketing agency and technology partner for B2B and B2C organizations in the
             United States. We specialize in AI‑powered SEO, Local SEO, website design, and custom web development.
             Our methodology blends data, experimentation, and creative strategy to deliver measurable growth.
           </p>

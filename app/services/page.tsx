@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Button } from '../../components/ui/button'
 import { ArrowRight, Zap, Globe, Code, Users, BarChart3, TrendingUp, Target, Brain, Sparkles } from 'lucide-react'
 import Link from 'next/link'
-import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+import { Breadcrumbs, generateServiceBreadcrumbs } from '../../components/seo/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Digital Marketing Services | GEO, AI SEO, Web Development | Web Vello',
@@ -102,10 +102,12 @@ export default function ServicesPage() {
       <section className="py-24 bg-gradient-to-br from-primary-50 to-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <Breadcrumb 
-            items={generateBreadcrumbs('/services', { title: 'Services' })} 
-            className="mb-8"
-          />
+          <div className="mb-8">
+            <Breadcrumbs items={[
+              { label: 'Home', href: '/', canonical: 'https://www.webvello.com/' },
+              { label: 'Services', href: '/services', canonical: 'https://www.webvello.com/services' }
+            ]} />
+          </div>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-6xl">
               Digital Marketing Services That{" "}

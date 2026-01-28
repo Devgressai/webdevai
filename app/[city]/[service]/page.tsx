@@ -296,7 +296,9 @@ export async function generateStaticParams() {
   return params
 }
 
-export const dynamicParams = false
+// Allow non-Tier1 services to render (they will be noindex via governance)
+// Governance system handles noindex for non-Tier1 services in generateMetadata
+export const dynamicParams = true
 
 // Generate metadata for the page
 export async function generateMetadata({ params }: CityServicePageProps): Promise<Metadata> {
