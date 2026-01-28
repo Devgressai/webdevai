@@ -25,7 +25,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/blog',
     '/seo-audit',
     '/website-speed-test',
-    '/enhanced-demo'
+    '/enhanced-demo',
+    '/privacy',
+    '/terms'
   ]
 
   // Hawaii location pages - high priority for local SEO
