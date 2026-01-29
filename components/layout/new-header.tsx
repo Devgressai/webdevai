@@ -290,12 +290,15 @@ const navigation = [
         description: "Guides, tools, and templates",
         icon: Target,
         color: "from-purple-500 to-pink-600"
+      },
+      {
+        name: "Blog",
+        href: "/blog",
+        description: "Latest insights, tips, and industry news",
+        icon: MessageSquare,
+        color: "from-indigo-500 to-blue-600"
       }
     ]
-  },
-  {
-    name: "Blog",
-    href: "/blog"
   },
 ]
 
