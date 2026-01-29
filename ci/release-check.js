@@ -90,6 +90,12 @@ function main() {
       command: 'node ci/validate-ctas.js',
       description: 'CTA Governance Validation',
       optional: false
+    },
+    {
+      step: 5,
+      command: 'npx tsx lib/sitemap-validation.ts',
+      description: 'Sitemap Validation',
+      optional: false
     }
   ]
 

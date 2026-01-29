@@ -11,7 +11,9 @@
     "seed:cis": "ts-node scripts/seed-cis-pages.ts",
     "index-pages": "node scripts/index-pages-simple.js",
     "generate-favicon": "node scripts/generate-favicon-from-image.js",
-    "release:check": "node ci/release-check.js"
+    "release:check": "node ci/release-check.js",
+    "validate:sitemap": "npx tsx lib/sitemap-validation.ts",
+    "test:sitemap": "npx tsx lib/__tests__/sitemap-validation.test.ts && npx tsx lib/__tests__/sitemap-dedupe.test.ts && npx tsx lib/__tests__/sitemap-lastmod.test.ts && npx tsx lib/__tests__/sitemap-split.test.ts"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",

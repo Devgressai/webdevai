@@ -36,11 +36,47 @@ export type SitemapEntry = MetadataRoute.Sitemap[number]
 /** Sitemap category identifiers */
 export type SitemapCategory = 'core' | 'services' | 'blog' | 'locations'
 
-/** Maximum URLs per sitemap file (protocol limit is 50k) */
+/** 
+ * Maximum URLs per sitemap file for chunking purposes.
+ * Protocol limit is 50,000, but we use 45,000 with a 5k buffer
+ * to leave room for any last-minute additions without re-chunking.
+ */
 export const MAX_URLS_PER_SITEMAP = 45000
 
 /** Base URL for the site */
 export const BASE_URL = 'https://www.webvello.com'
+
+// ============================================================================
+// CHANGEFREQ & PRIORITY CONFIGURATION
+// ============================================================================
+/**
+ * CHANGEFREQ VALUES - How often the page content actually changes
+ * 
+ * These values should reflect REALITY, not aspirations:
+ * - 'weekly'  → Page content is updated at least once per week
+ * - 'monthly' → Page content is updated roughly once per month
+ * - 'yearly'  → Page content is rarely updated (legal pages, old blog posts)
+ * 
+ * Google largely ignores changefreq, but it helps other crawlers and
+ * serves as internal documentation of our content update cadence.
+ */
+
+/**
+ * PRIORITY VALUES - Relative importance within this site (0.0 to 1.0)
+ * 
+ * Priority is a HINT to crawlers about relative importance. It does NOT
+ * affect ranking - it only suggests crawl priority within your own site.
+ * 
+ * Our priority tiers:
+ * - 1.0: Homepage only (the single most important page)
+ * - 0.8: High-value pages (pricing, main service pages, location hubs)
+ * - 0.7: Standard pages (about, contact, solutions, tools)
+ * - 0.6: Content pages (blog posts, case studies)
+ * - 0.5: Programmatic pages (city+service combinations)
+ * 
+ * If all pages have the same priority, it provides no signal. Differentiation
+ * matters more than absolute values.
+ */
 
 // ============================================================================
 // PAGE LISTS (same as original sitemap.ts)
@@ -323,7 +359,13 @@ export const KEY_SERVICES = [
 
 /**
  * Generate core sitemap entries (homepage, about, contact, pricing, legal, hubs).
- * These are high-priority static pages.
+ * 
+ * CHANGEFREQ: 'weekly' - Core pages are updated periodically but not daily.
+ * PRIORITY: 
+ *   - Homepage: 1.0 (single highest priority page)
+ *   - Pricing: 0.8 (high-value conversion page)
+ *   - Other core pages: 0.7 (standard importance)
+ *   - Legal pages (privacy, terms): 0.5 (rarely visited, low priority)
  */
 export function generateCoreEntries(): SitemapEntry[] {
   const entries: SitemapEntry[] = []
@@ -340,11 +382,38 @@ export function generateCoreEntries(): SitemapEntry[] {
     if (!directives.inSitemap) continue
     
     const { date: lastMod } = getCorePageLastMod(path)
+    
+    // Determine priority based on page type
+    let priority: number
+    let changeFrequency: 'weekly' | 'monthly' | 'yearly'
+    
+    if (path === '') {
+      // Homepage - highest priority, updated weekly with fresh content
+      priority = 1.0
+      changeFrequency = 'weekly'
+    } else if (path === 'pricing') {
+      // Pricing - high-value conversion page
+      priority = 0.8
+      changeFrequency = 'monthly'
+    } else if (path === 'privacy' || path === 'terms') {
+      // Legal pages - rarely change, low crawl priority
+      priority = 0.5
+      changeFrequency = 'yearly'
+    } else if (path === 'blog') {
+      // Blog landing - updates when new posts are added
+      priority = 0.7
+      changeFrequency = 'weekly'
+    } else {
+      // Standard core pages (about, contact, hubs)
+      priority = 0.7
+      changeFrequency = 'monthly'
+    }
+    
     entries.push({
       url: directives.canonical,
       lastModified: lastMod,
-      changeFrequency: 'daily',
-      priority: 1.0,
+      changeFrequency,
+      priority,
     })
   }
   
@@ -357,11 +426,17 @@ export function generateCoreEntries(): SitemapEntry[] {
  * NOTE: Service pages that canonicalize to city/city-service pages are EXCLUDED
  * from this sitemap. They will be included in the locations sitemap instead
  * via their canonical target. This prevents duplicates across sitemaps.
+ * 
+ * CHANGEFREQ: 'monthly' - Service descriptions don't change frequently.
+ * PRIORITY:
+ *   - Tools (seo-audit, speed-test): 0.7 (interactive utilities)
+ *   - Solutions pages: 0.7 (value-proposition pages)
+ *   - Service pages: 0.8 (core offering pages, high conversion value)
  */
 export function generateServicesEntries(): SitemapEntry[] {
   const entries: SitemapEntry[] = []
   
-  // Tool pages
+  // Tool pages - interactive utilities, moderate priority
   for (const page of TOOL_PAGES) {
     const path = page.replace(/^\//, '')
     const url = `${BASE_URL}/${path}`
@@ -372,12 +447,12 @@ export function generateServicesEntries(): SitemapEntry[] {
     entries.push({
       url: directives.canonical,
       lastModified: lastMod,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      changeFrequency: 'monthly', // Tools don't change often
+      priority: 0.7,
     })
   }
   
-  // Solutions pages
+  // Solutions pages - problem/solution oriented landing pages
   for (const solution of SOLUTIONS_PAGES) {
     const path = `solutions/${solution}`
     const url = `${BASE_URL}/${path}`
@@ -388,12 +463,12 @@ export function generateServicesEntries(): SitemapEntry[] {
     entries.push({
       url: directives.canonical,
       lastModified: lastMod,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      changeFrequency: 'monthly', // Solutions content is relatively stable
+      priority: 0.7,
     })
   }
   
-  // Service pages
+  // Service pages - core offerings, higher priority
   // Skip services that canonicalize to non-/services/ URLs (they belong in other sitemaps)
   for (const service of STANDALONE_SERVICES) {
     const url = `${BASE_URL}/services/${service}`
@@ -411,8 +486,8 @@ export function generateServicesEntries(): SitemapEntry[] {
     entries.push({
       url: directives.canonical,
       lastModified: lastMod,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      changeFrequency: 'monthly', // Service descriptions are updated infrequently
+      priority: 0.8, // Core service pages are high-value for conversion
     })
   }
   
@@ -421,6 +496,13 @@ export function generateServicesEntries(): SitemapEntry[] {
 
 /**
  * Generate blog sitemap entries (/blog/*).
+ * 
+ * CHANGEFREQ: 'yearly' - Blog posts are rarely updated after publication.
+ *   If you actively update posts (add sections, refresh stats), use 'monthly'.
+ * PRIORITY: 0.6 - Content pages, valuable for SEO but lower conversion priority.
+ *   
+ * Note: Blog post lastmod comes from frontmatter/CMS date, so crawlers
+ * will see the actual publication date, not a fake "updated" timestamp.
  */
 export async function generateBlogEntries(): Promise<SitemapEntry[]> {
   let blogPosts: Awaited<ReturnType<typeof getBlogPosts>> = []
@@ -435,8 +517,8 @@ export async function generateBlogEntries(): Promise<SitemapEntry[]> {
     return {
       url: `${BASE_URL}/blog/${post.slug}`,
       lastModified: lastMod,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
+      changeFrequency: 'yearly' as const, // Blog posts rarely change after publication
+      priority: 0.6, // Content pages - valuable but not primary conversion pages
     }
   })
   
@@ -445,11 +527,21 @@ export async function generateBlogEntries(): Promise<SitemapEntry[]> {
 
 /**
  * Generate locations sitemap entries (city hubs, city+service, location pages).
+ * 
+ * CHANGEFREQ: 'monthly' - Programmatic geo pages don't change often.
+ *   City data (population, stats) is updated periodically, not weekly.
+ * PRIORITY:
+ *   - Location hub pages (/locations, /locations/hawaii): 0.7 (navigation hubs)
+ *   - City hub pages (/new-york-ny): 0.6 (geo landing pages)
+ *   - City+service pages (/new-york-ny/seo): 0.5 (programmatic combinations)
+ * 
+ * Note: Programmatic pages have lower priority than hand-crafted pages because
+ * they're generated from templates. Crawlers should prioritize unique content.
  */
 export function generateLocationsEntries(): SitemapEntry[] {
   const entries: SitemapEntry[] = []
   
-  // Location hub pages
+  // Location hub pages - navigation/index pages for locations
   for (const page of LOCATION_HUB_PAGES) {
     const path = page.replace(/^\//, '')
     const url = `${BASE_URL}/${path}`
@@ -460,12 +552,12 @@ export function generateLocationsEntries(): SitemapEntry[] {
     entries.push({
       url: directives.canonical,
       lastModified: lastMod,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      changeFrequency: 'monthly', // Hub pages don't change often
+      priority: 0.7, // Navigation hubs, moderate importance
     })
   }
   
-  // City hub pages
+  // City hub pages - main landing page for each city
   for (const city of citySlugs) {
     const url = `${BASE_URL}/${city}`
     const directives = getSeoDirectives(url, { routeType: 'city', city })
@@ -475,12 +567,12 @@ export function generateLocationsEntries(): SitemapEntry[] {
     entries.push({
       url: directives.canonical,
       lastModified: lastMod,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      changeFrequency: 'monthly', // City data updates infrequently
+      priority: 0.6, // Programmatic geo pages, lower than hand-crafted
     })
   }
   
-  // City+service pages
+  // City+service pages - programmatic combinations
   for (const city of cityDataSlugs) {
     for (const service of KEY_SERVICES) {
       const url = `${BASE_URL}/${city}/${service}`
@@ -496,8 +588,8 @@ export function generateLocationsEntries(): SitemapEntry[] {
       entries.push({
         url: directives.canonical,
         lastModified: lastMod,
-        changeFrequency: 'weekly',
-        priority: 0.7,
+        changeFrequency: 'monthly', // Template-based, rarely changes
+        priority: 0.5, // Lowest tier - programmatic combinations
       })
     }
   }
@@ -574,23 +666,26 @@ export const SITEMAP_IDS: Record<number, SitemapCategory> = {
  * Handles chunking for locations if needed.
  */
 export async function getEntriesForSitemapId(id: number): Promise<SitemapEntry[]> {
-  const category = SITEMAP_IDS[id]
-  
-  switch (category) {
-    case 'core':
+  switch (id) {
+    case 0:
       return generateCoreEntries()
-    case 'services':
+    case 1:
       return generateServicesEntries()
-    case 'blog':
+    case 2:
       return await generateBlogEntries()
-    case 'locations':
-      // For now, locations fit in one chunk. If they exceed the limit,
-      // we'd need to use id >= 3 for additional chunks.
-      return generateLocationsEntries()
-    default:
-      // Handle additional location chunks (id >= 4)
-      // For now, we only have 4 sitemaps (0-3)
+    default: {
+      // IDs 3+ are for locations (chunked if needed)
+      const allLocationEntries = generateLocationsEntries()
+      const chunks = chunkEntries(allLocationEntries, MAX_URLS_PER_SITEMAP)
+      const chunkIndex = id - 3
+      
+      if (chunkIndex >= 0 && chunkIndex < chunks.length) {
+        return chunks[chunkIndex]
+      }
+      
+      // Invalid ID - return empty array
       return []
+    }
   }
 }
 

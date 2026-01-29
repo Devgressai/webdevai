@@ -184,21 +184,33 @@ export function getCityServicePageLastMod(_city: string, _service: string): Last
  * This is a debug/sanity check to catch accidental "stamp everything with now()" regressions.
  */
 export function validateLastModDistribution(
-  entries: Array<{ url: string; lastModified: Date | string }>
+  entries: Array<{ url: string; lastModified?: Date | string }>
 ): { valid: boolean; warning?: string; distribution: Map<string, number> } {
   const distribution = new Map<string, number>()
+  let entriesWithValidDates = 0
   
   for (const entry of entries) {
-    // Normalize to date string (YYYY-MM-DD) for comparison
-    const dateStr = entry.lastModified instanceof Date
-      ? entry.lastModified.toISOString().split('T')[0]
-      : new Date(entry.lastModified).toISOString().split('T')[0]
+    if (!entry.lastModified) continue
     
-    distribution.set(dateStr, (distribution.get(dateStr) || 0) + 1)
+    try {
+      // Normalize to date string (YYYY-MM-DD) for comparison
+      const date = entry.lastModified instanceof Date
+        ? entry.lastModified
+        : new Date(entry.lastModified)
+      
+      // Skip invalid dates
+      if (isNaN(date.getTime())) continue
+      
+      const dateStr = date.toISOString().split('T')[0]
+      distribution.set(dateStr, (distribution.get(dateStr) || 0) + 1)
+      entriesWithValidDates++
+    } catch {
+      // Skip entries with unparseable dates
+      continue
+    }
   }
   
-  const total = entries.length
-  if (total === 0) {
+  if (entriesWithValidDates === 0) {
     return { valid: true, distribution }
   }
   
@@ -212,13 +224,13 @@ export function validateLastModDistribution(
     }
   }
   
-  const percentage = (maxCount / total) * 100
+  const percentage = (maxCount / entriesWithValidDates) * 100
   const threshold = 30
   
   if (percentage > threshold) {
     return {
       valid: false,
-      warning: `[sitemap] Warning: ${percentage.toFixed(1)}% of URLs (${maxCount}/${total}) share lastmod=${maxDate}. ` +
+      warning: `[sitemap] Warning: ${percentage.toFixed(1)}% of URLs (${maxCount}/${entriesWithValidDates}) share lastmod=${maxDate}. ` +
         `This exceeds the ${threshold}% threshold. Ensure meaningful timestamps are being used.`,
       distribution,
     }

@@ -15,6 +15,7 @@ This command runs:
 2. **Lint** - `npm run lint` (ESLint validation)
 3. **Index Governance** - `node ci/validate-index-governance.js` (validates SEO governance compliance)
 4. **CTA Governance** - `node ci/validate-ctas.js` (validates CTA governance compliance)
+5. **Sitemap Validation** - `npx tsx lib/sitemap-validation.ts` (validates sitemap integrity)
 
 ### Behavior
 
@@ -38,6 +39,11 @@ node ci/validate-index-governance.js
 
 # CTA governance only
 node ci/validate-ctas.js
+
+# Sitemap validation only
+npm run validate:sitemap
+# or
+node ci/validate-sitemap.js
 ```
 
 ### CI/CD Integration
@@ -82,6 +88,22 @@ Validates CTA governance compliance:
 **Exit Code**: `0` on success, `1` on violations
 
 **Note**: Requires TypeScript to be compiled or use `ts-node` for `lib/cta/` modules.
+
+### `validate-sitemap.js`
+
+Validates sitemap integrity and compliance:
+- No duplicate `<loc>` URLs within or across sitemaps
+- All `<loc>` values are absolute HTTPS URLs
+- All `<lastmod>` values are valid ISO 8601 UTC dates
+- No sitemap exceeds 50,000 URLs (protocol limit)
+- Sitemap index references all child sitemaps
+- Warning (non-blocking) if >30% of URLs share identical lastmod
+
+**Exit Code**: `0` on success, `1` on validation errors
+
+**Performance**: Runs in <100ms for typical sites (~1000 URLs)
+
+**Alternative**: `npm run validate:sitemap` (same check via npm script)
 
 ## Troubleshooting
 
