@@ -21,7 +21,8 @@ export async function GET(request: NextRequest) {
     const locationChunks = chunkEntries(locationEntries, MAX_URLS_PER_SITEMAP)
 
     const sitemapIndex = []
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://webvello.com'
+    // Use www.webvello.com to match actual domain and ensure all pages are discoverable
+    const baseUrl = 'https://www.webvello.com'
 
     // Core sitemap
     sitemapIndex.push({
