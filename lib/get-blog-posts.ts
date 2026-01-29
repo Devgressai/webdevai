@@ -34,11 +34,11 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       try {
         const content = fs.readFileSync(pagePath, 'utf-8')
         
-        // Extract metadata from the file
+        // Extract metadata from the export const metadata object
         const titleMatch = content.match(/title:\s*['"`]([^'"`]+)['"`]/)
         const descMatch = content.match(/description:\s*['"`]([^'"`]+)['"`]/)
+        // Look for publishedTime in openGraph or as standalone
         const dateMatch = content.match(/publishedTime:\s*['"`]([^'"`]+)['"`]/)
-        const tagsMatch = content.match(/tags:\s*\[([^\]]+)\]/)
         
         // Extract title (remove " | Web Vello" suffix if present)
         let title = titleMatch ? titleMatch[1].replace(/\s*\|\s*Web Vello$/, '') : slug
@@ -46,15 +46,27 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
         // Extract description
         const description = descMatch ? descMatch[1] : 'Read more about this topic'
         
-        // Extract date
-        const date = dateMatch ? dateMatch[1].split('T')[0] : '2024-01-01'
+        // Extract date - use current date if not found
+        let date = '2024-01-01'
+        if (dateMatch) {
+          date = dateMatch[1].split('T')[0]
+        } else {
+          // Fallback: use file modification time
+          try {
+            const stats = fs.statSync(pagePath)
+            date = new Date(stats.mtime).toISOString().split('T')[0]
+          } catch {
+            // Keep default date
+          }
+        }
         
-        // Extract tags and create category from first tag
+        // Extract keywords as tags
+        const keywordsMatch = content.match(/keywords:\s*\[([^\]]+)\]/)
         let tags: string[] = []
         let category = 'Web Development'
         
-        if (tagsMatch) {
-          tags = tagsMatch[1]
+        if (keywordsMatch) {
+          tags = keywordsMatch[1]
             .split(',')
             .map(tag => tag.trim().replace(/['"`]/g, ''))
           category = tags[0] || 'Web Development'
@@ -73,7 +85,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
           category,
           tags,
           readTime: `${readTime} min read`,
-          featured: false // You can add logic to mark certain posts as featured
+          featured: false
         })
       } catch (error) {
         console.error(`Error processing blog post ${slug}:`, error)
