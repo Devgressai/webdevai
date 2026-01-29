@@ -88,7 +88,8 @@ ${entries
       status: 200,
       headers: {
         'Content-Type': 'application/xml; charset=UTF-8',
-        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600',
+        'CDN-Cache-Control': 'max-age=300',
       },
     })
   } catch (error) {
