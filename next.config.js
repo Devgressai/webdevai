@@ -253,6 +253,41 @@ const nextConfig = {
     ]
   },
   
+  // Rewrites for sitemap routes (WebFX-style)
+  async rewrites() {
+    return [
+      // Main sitemap index
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+      // Child sitemaps
+      {
+        source: '/core-sitemap.xml',
+        destination: '/api/core-sitemap',
+      },
+      {
+        source: '/services-sitemap.xml',
+        destination: '/api/services-sitemap',
+      },
+      {
+        source: '/blog-sitemap.xml',
+        destination: '/api/blog-sitemap',
+      },
+      // Locations sitemap (first chunk or only chunk)
+      {
+        source: '/locations-sitemap.xml',
+        destination: '/api/locations-sitemap',
+      },
+      // Chunked locations sitemaps - handle up to 10 chunks
+      // We'll create explicit rewrites for each potential chunk
+      ...Array.from({ length: 9 }, (_, i) => ({
+        source: `/locations-sitemap${i + 2}.xml`,
+        destination: `/api/locations-sitemap?chunk=${i + 2}`,
+      })),
+    ]
+  },
+  
   // Redirects for SEO and 404 fixes
   async redirects() {
     return [
