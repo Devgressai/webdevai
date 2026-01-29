@@ -86,7 +86,7 @@ const team = [
 ]
 
 const milestones = [
-  { year: "2018", title: "Company Founded", description: "Started with a vision to deliver real results in digital marketing" },
+  { year: "2024", title: "Company Founded", description: "Started with a vision to deliver real results in digital marketing" },
   { year: "2019", title: "First Major Client", description: "Proved our methodology works with early success stories" },
   { year: "2020", title: "AI Integration", description: "Began incorporating AI into our SEO strategies" },
   { year: "2021", title: "100+ Clients", description: "Reached a major milestone in client success" },
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 and we have the proven methodology to make it happen.
               </p>
               <p className="text-lg text-secondary-600">
-                Since 2018, we’ve helped over 100 businesses achieve remarkable growth, generating 
+                Since 2024, we've helped over 100 businesses achieve remarkable growth, generating 
                 more than $1 million in additional revenue through our comprehensive digital 
                 marketing solutions.
               </p>
