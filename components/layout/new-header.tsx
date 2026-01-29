@@ -375,7 +375,7 @@ export function NewHeader() {
           </div>
           
           {/* Desktop Navigation - Center */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-2 xl:gap-x-3 lg:flex-1 lg:justify-center lg:mx-12">
+          <div className="hidden lg:flex lg:items-center lg:gap-x-1 xl:gap-x-1.5 lg:flex-1 lg:justify-center lg:mx-6">
              {navigation.map((item, idx) => (
                <div key={item.name} className="relative">
                  {item.children ? (
@@ -387,7 +387,7 @@ export function NewHeader() {
                      <button
                        type="button"
                        className={cn(
-                         "flex items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 text-sm font-semibold tracking-tight transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 whitespace-nowrap",
+                         "flex items-center justify-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold tracking-tight transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 whitespace-nowrap",
                          openDropdown === item.name ? "bg-blue-50 text-blue-700 shadow-sm" : "text-slate-700"
                        )}
                        aria-expanded={openDropdown === item.name}
@@ -452,7 +452,7 @@ export function NewHeader() {
                  ) : (
                    <Link
                      href={item.href}
-                     className="flex items-center justify-center px-4 py-2.5 text-sm font-semibold leading-6 text-slate-700 hover:text-blue-600 transition-colors rounded-lg hover:bg-blue-50 whitespace-nowrap"
+                     className="flex items-center justify-center px-3 py-2 text-sm font-semibold leading-6 text-slate-700 hover:text-blue-600 transition-colors rounded-lg hover:bg-blue-50 whitespace-nowrap"
                    >
                      {item.name}
                    </Link>
@@ -462,10 +462,10 @@ export function NewHeader() {
            </div>
           
           {/* CTA Buttons - Far Right */}
-          <div className="hidden lg:flex lg:flex-shrink-0 lg:items-center lg:gap-3">
+          <div className="hidden lg:flex lg:flex-shrink-0 lg:items-center lg:gap-2">
             <Button
               variant="outline"
-              className="rounded-xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-5 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
+              className="rounded-xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-4 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
               data-cta="header-contact"
               aria-label="Contact Us"
               asChild
@@ -477,7 +477,7 @@ export function NewHeader() {
                 e.preventDefault()
                 openCalendlyPopup()
               }}
-              className="rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
+              className="rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2"
               data-cta="header-book-discovery-call"
               aria-label="Book a Discovery Call"
             >
