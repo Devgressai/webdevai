@@ -400,7 +400,7 @@ export function NewHeader() {
                      
                      {openDropdown === item.name && (
                        <div 
-                         className={`${idx < 2 ? 'absolute left-0 -translate-x-0' : 'absolute left-1/2 -translate-x-1/2'} z-[9999] mt-2 flex w-screen max-w-5xl px-4`}
+                         className={`${idx < 2 ? 'absolute left-0 -translate-x-0' : 'absolute left-1/2 -translate-x-1/2'} z-[9999] mt-2 flex max-w-5xl px-4`}
                          onMouseEnter={() => handleMouseEnter(item.name)}
                          onMouseLeave={handleMouseLeave}
                        >
