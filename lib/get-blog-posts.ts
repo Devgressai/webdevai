@@ -17,7 +17,9 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   const blogDir = path.join(process.cwd(), 'app', 'blog')
   
   try {
+    console.log('[getBlogPosts] Reading from:', blogDir)
     const entries = fs.readdirSync(blogDir, { withFileTypes: true })
+    console.log('[getBlogPosts] Found', entries.length, 'entries in blog directory')
     
     const blogPosts: BlogPost[] = []
     
@@ -92,6 +94,8 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
         continue
       }
     }
+    
+    console.log('[getBlogPosts] Found', blogPosts.length, 'blog posts')
     
     // Sort by date (newest first)
     blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
