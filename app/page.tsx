@@ -131,13 +131,13 @@ export default function HomePage() {
           __html: JSON.stringify(pageSchema)
         }}
       />
-      <div className="min-h-screen">
+      <div className="min-h-screen w-full max-w-full overflow-x-hidden">
         <Suspense fallback={<div className="h-screen bg-gradient-to-br from-primary-800 via-primary-900 to-secondary-900" />}>
           <Hero />
         </Suspense>
         
         {/* Entity Definition Section - AEO Optimized */}
-        <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden">
+        <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden w-full max-w-full">
           {/* Subtle background pattern */}
           <div className="absolute inset-0 opacity-40">
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full blur-3xl"></div>
@@ -172,7 +172,7 @@ export default function HomePage() {
       
       {/* Global Results & Trust Section */}
       <LazySection>
-        <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+        <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden w-full max-w-full">
           {/* Space-themed background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/80 to-slate-800/90"></div>

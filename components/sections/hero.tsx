@@ -120,7 +120,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-slate-900">
+    <section className="relative overflow-hidden bg-slate-900 w-full max-w-full">
       {/* Background image - decorative */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <Image

@@ -310,7 +310,7 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_ENABLE_PERF_MONITOR === 'true' ? <PerformanceMonitor /> : null}
         <Header />
         <MobileHeader />
-        <main id="main-content" tabIndex={-1} className="pb-20 md:pb-0">
+        <main id="main-content" tabIndex={-1} className="pb-20 md:pb-0 w-full max-w-full overflow-x-hidden">
           {children}
         </main>
         <Footer />
