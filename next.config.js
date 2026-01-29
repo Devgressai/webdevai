@@ -252,6 +252,24 @@ const nextConfig = {
       },
     ]
   },
+
+  // Rewrites to serve sitemaps via API routes
+  async rewrites() {
+    return {
+      beforeFiles: [
+        // Rewrite /sitemap.xml to /api/sitemap
+        {
+          source: '/sitemap.xml',
+          destination: '/api/sitemap',
+        },
+        // Rewrite /sitemap/[id].xml to /sitemap/[id]
+        {
+          source: '/sitemap/:id.xml',
+          destination: '/sitemap/:id',
+        },
+      ],
+    }
+  },
   
   // Redirects for SEO and 404 fixes
   async redirects() {
