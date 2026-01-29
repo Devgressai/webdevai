@@ -252,19 +252,6 @@ const nextConfig = {
       },
     ]
   },
-
-  // Rewrites to serve the sitemap index
-  async rewrites() {
-    return {
-      beforeFiles: [
-        // Rewrite /sitemap.xml to /api/sitemap
-        {
-          source: '/sitemap.xml',
-          destination: '/api/sitemap',
-        },
-      ],
-    }
-  },
   
   // Redirects for SEO and 404 fixes
   async redirects() {

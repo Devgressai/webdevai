@@ -29,7 +29,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-950/95 border-t border-slate-800/70 text-slate-100">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10 py-10 sm:py-12 lg:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 md:gap-10 lg:gap-12">
           {/* Company Info */}
           <div className="md:col-span-2 lg:col-span-2 space-y-4">
             <h3 className="text-xl sm:text-2xl font-semibold text-slate-50">Web Vello</h3>
@@ -146,6 +146,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/founder"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  Founder
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/accessibility"
                   className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
@@ -158,6 +166,47 @@ export function Footer() {
                   className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
                 >
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Authority */}
+          <div>
+            <h4 className="text-xs sm:text-sm font-semibold tracking-wide text-slate-200 uppercase mb-3">
+              Authority Hubs
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/ai-search-optimization"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  AI Search Optimization
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/entity-seo"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  Entity SEO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/programmatic-seo"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  Programmatic SEO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/index-governance"
+                  className="text-sm text-slate-300 hover:text-slate-100 transition-colors"
+                >
+                  Index Governance
                 </Link>
               </li>
             </ul>

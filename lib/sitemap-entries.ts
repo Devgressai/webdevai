@@ -86,10 +86,15 @@ export const BASE_URL = 'https://www.webvello.com'
 export const CORE_PAGES = [
   '', // Homepage
   '/about',
+  '/founder',
   '/contact',
   '/pricing',
   '/privacy',
   '/terms',
+  '/ai-search-optimization',
+  '/entity-seo',
+  '/programmatic-seo',
+  '/index-governance',
 ]
 
 /** Tool pages - included in services sitemap */

@@ -27,9 +27,16 @@ export function generateOrganizationSchema() {
       "width": 2048,
       "height": 2048
     },
-    "description": "Webvello is a digital marketing agency specializing in SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and custom web development. The agency helps businesses improve visibility in both traditional search engines and AI-powered search platforms.",
+    "description": "Webvello is an AI Search Optimization and Index Engineering company specializing in building discoverability systems for traditional search, AI-powered platforms (ChatGPT, Perplexity), and knowledge graphs. Founded by George Shvaya with background in information security and systems engineering.",
     "slogan": "Design. Develop. Dominate.",
     "foundingDate": "2024",
+    "founder": {
+      "@type": "Person",
+      "@id": "https://www.webvello.com/founder#person",
+      "name": "George Shvaya",
+      "url": "https://www.webvello.com/founder",
+      "email": "george@webvello.com"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
@@ -51,15 +58,17 @@ export function generateOrganizationSchema() {
       "https://twitter.com/webvello"
     ],
     "knowsAbout": [
-      "Search Engine Optimization",
+      "AI Search Optimization",
+      "Index Engineering",
+      "Entity SEO",
+      "Semantic Architecture",
       "Generative Engine Optimization",
       "Answer Engine Optimization",
-      "Local SEO",
+      "Search Engine Optimization",
+      "Programmatic SEO",
       "Web Development",
-      "React",
-      "Tailwind CSS",
-      "AI Search Optimization",
-      "Digital Marketing"
+      "Information Security",
+      "Knowledge Graphs"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
