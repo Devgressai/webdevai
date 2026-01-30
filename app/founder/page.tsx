@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
-import { Code, Network, Shield, Database, Search, GitBranch } from 'lucide-react'
+import { Code, Network, Shield, Database, Search, GitBranch, Linkedin } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'George Shvaya | Founder of Webvello — AI Search Systems & Index Engineering',
@@ -62,7 +63,7 @@ const personSchema = {
     "infrastructure engineering"
   ],
   "sameAs": [
-    "https://linkedin.com/in/georgeshvaya"
+    "https://www.linkedin.com/in/georgewebvello/"
   ]
 }
 
@@ -105,13 +106,35 @@ export default function FounderPage() {
             Identity
           </h2>
           <div className="prose prose-lg max-w-none text-secondary-700">
-            <p className="text-xl font-semibold text-secondary-900 mb-4">
-              George Shvaya
-            </p>
+            <div className="flex items-center gap-4 mb-6 flex-wrap">
+              <div className="flex items-center gap-4 flex-1 min-w-0">
+                <Image
+                  src="/images/george-shvaya.jpg"
+                  alt="George Shvaya"
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover flex-shrink-0"
+                />
+                <div>
+                  <p className="text-xl font-semibold text-secondary-900 mb-0">
+                    George Shvaya
+                  </p>
+                  <p className="text-sm text-secondary-600 mt-1 mb-0">
+                    Founder & CEO, Webvello
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/georgewebvello/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 font-medium transition-colors text-sm whitespace-nowrap flex-shrink-0"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
             <p className="mb-4">
-              <strong>Role:</strong> Founder & CEO, Webvello
-            </p>
-            <p>
               <strong>Domain Focus:</strong> AI search systems, index engineering, infrastructure architecture for search and AI discovery platforms.
             </p>
           </div>
