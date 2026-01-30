@@ -248,7 +248,7 @@ export function Footer() {
         <div className="mt-10 pt-6 border-t border-slate-800/70">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <p className="text-xs sm:text-sm text-slate-400">
-              © 2025 Web Vello. All rights reserved.
+              © 2026 Webvello. All Rights Reserved
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
