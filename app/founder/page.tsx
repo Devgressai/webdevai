@@ -102,9 +102,6 @@ export default function FounderPage() {
       {/* Identity Section */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
-            Identity
-          </h2>
           <div className="prose prose-lg max-w-none text-secondary-700">
             <div className="flex items-center gap-4 mb-6 flex-wrap">
               <div className="flex items-center gap-4 flex-1 min-w-0">
