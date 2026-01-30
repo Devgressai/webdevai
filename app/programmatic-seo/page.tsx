@@ -202,7 +202,7 @@ export default function ProgrammaticSEOPage() {
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-secondary-900 mb-2">Route Generation Logic</h3>
-                <p className="text-secondary-700">Systematic generation of URL routes based on data combinations (e.g., /{city}/{service}, /{industry}/{service}). Route generation logic ensures consistent, predictable URL structures that support indexing and internal linking.</p>
+                <p className="text-secondary-700">Systematic generation of URL routes based on data combinations (e.g., {'/{city}/{service}'}, {'/{industry}/{service}'}). Route generation logic ensures consistent, predictable URL structures that support indexing and internal linking.</p>
               </div>
             </div>
             <div className="flex items-start">
