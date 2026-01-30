@@ -4,6 +4,9 @@
  * Returns a sitemap index XML that points to all child sitemaps.
  * Similar to WebFX's structure: https://webfx.com/sitemap.xml
  * 
+ * When accessed in a browser, returns a human-readable HTML page with clickable links.
+ * When accessed by search engines, returns standard XML sitemap index.
+ * 
  * Structure:
  * - /sitemap.xml (this route) → sitemap index
  * - /core-sitemap.xml → core pages (homepage, about, contact, etc.)
@@ -12,7 +15,7 @@
  * - /locations-sitemap.xml → location pages (chunked if needed)
  */
 
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import {
   generateCoreEntries,
   generateServicesEntries,
@@ -27,7 +30,13 @@ import {
 export const dynamic = 'force-dynamic'
 export const revalidate = 3600 // Revalidate every hour
 
-async function generateSitemapIndex(): Promise<string> {
+interface SitemapInfo {
+  loc: string
+  lastmod: Date
+  name: string
+}
+
+async function getSitemapList(): Promise<SitemapInfo[]> {
   // Get all entries to determine chunking
   const coreEntries = generateCoreEntries()
   const servicesEntries = generateServicesEntries()
@@ -37,13 +46,14 @@ async function generateSitemapIndex(): Promise<string> {
   // Check if locations need chunking
   const locationChunks = chunkEntries(locationEntries, MAX_URLS_PER_SITEMAP)
   
-  const sitemaps: Array<{ loc: string; lastmod: Date }> = []
+  const sitemaps: SitemapInfo[] = []
   
   // Core sitemap
   if (coreEntries.length > 0) {
     sitemaps.push({
       loc: `${BASE_URL}/core-sitemap.xml`,
       lastmod: getNewestLastMod(coreEntries),
+      name: 'Core Pages',
     })
   }
   
@@ -52,6 +62,7 @@ async function generateSitemapIndex(): Promise<string> {
     sitemaps.push({
       loc: `${BASE_URL}/services-sitemap.xml`,
       lastmod: getNewestLastMod(servicesEntries),
+      name: 'Services',
     })
   }
   
@@ -60,6 +71,7 @@ async function generateSitemapIndex(): Promise<string> {
     sitemaps.push({
       loc: `${BASE_URL}/blog-sitemap.xml`,
       lastmod: getNewestLastMod(blogEntries),
+      name: 'Blog Posts',
     })
   }
   
@@ -69,6 +81,7 @@ async function generateSitemapIndex(): Promise<string> {
     sitemaps.push({
       loc: `${BASE_URL}/locations-sitemap.xml`,
       lastmod: getNewestLastMod(locationEntries),
+      name: 'Locations',
     })
   } else {
     // Multiple location sitemaps (chunked)
@@ -78,11 +91,15 @@ async function generateSitemapIndex(): Promise<string> {
       sitemaps.push({
         loc: `${BASE_URL}/locations-sitemap${chunkNumber}.xml`,
         lastmod: getNewestLastMod(locationChunks[i]),
+        name: i === 0 ? 'Locations' : `Locations (Part ${i + 1})`,
       })
     }
   }
   
-  // Generate XML
+  return sitemaps
+}
+
+function generateSitemapIndexXML(sitemaps: SitemapInfo[]): string {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemaps
@@ -98,15 +115,172 @@ ${sitemaps
   return xml
 }
 
-export async function GET() {
+function generateSitemapIndexHTML(sitemaps: SitemapInfo[]): string {
+  const formatDate = (date: Date): string => {
+    return date.toISOString().replace('T', ' ').replace(/\.\d{3}Z$/, ' +00:00')
+  }
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XML Sitemap - ${BASE_URL.replace('https://', '')}</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+    .intro {
+      margin-bottom: 30px;
+      color: #666;
+    }
+    .intro p {
+      margin-bottom: 10px;
+    }
+    .intro strong {
+      color: #d32f2f;
+      font-weight: 600;
+    }
+    .intro a {
+      color: #d32f2f;
+      text-decoration: none;
+    }
+    .intro a:hover {
+      text-decoration: underline;
+    }
+    .sitemap-count {
+      font-weight: 600;
+      color: #333;
+      margin-top: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    thead {
+      background-color: #f8f9fa;
+      border-bottom: 2px solid #dee2e6;
+    }
+    th {
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+      color: #495057;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #dee2e6;
+    }
+    tbody tr:hover {
+      background-color: #f8f9fa;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .lastmod {
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>XML Sitemap</h1>
+    <div class="intro">
+      <p>This is an XML Sitemap, meant for consumption by search engines.</p>
+      <p>You can find more information about XML sitemaps on <a href="https://www.sitemaps.org" target="_blank" rel="noopener noreferrer"><strong>sitemaps.org</strong></a>.</p>
+      <p class="sitemap-count">This XML Sitemap Index file contains ${sitemaps.length} sitemap${sitemaps.length !== 1 ? 's' : ''}.</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Sitemap</th>
+          <th>Last Modified</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${sitemaps
+          .map(
+            (sitemap) => `        <tr>
+          <td><a href="${sitemap.loc}">${sitemap.name}</a><br><small style="color: #999;">${sitemap.loc.replace(BASE_URL, '')}</small></td>
+          <td class="lastmod">${formatDate(sitemap.lastmod)}</td>
+        </tr>`
+          )
+          .join('\n')}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>`
+
+  return html
+}
+
+export async function GET(request: NextRequest) {
   try {
-    const xml = await generateSitemapIndex()
-    return new NextResponse(xml, {
-      headers: {
-        'Content-Type': 'application/xml',
-        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-      },
-    })
+    const sitemaps = await getSitemapList()
+    
+    // Check if the request is from a browser (Accept header contains text/html)
+    // or explicitly requests XML
+    const acceptHeader = request.headers.get('accept') || ''
+    const isBrowserRequest = 
+      acceptHeader.includes('text/html') && 
+      !acceptHeader.includes('application/xml') &&
+      !acceptHeader.includes('text/xml')
+    
+    if (isBrowserRequest) {
+      // Return HTML for browsers
+      const html = generateSitemapIndexHTML(sitemaps)
+      return new NextResponse(html, {
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+        },
+      })
+    } else {
+      // Return XML for search engines
+      const xml = generateSitemapIndexXML(sitemaps)
+      return new NextResponse(xml, {
+        headers: {
+          'Content-Type': 'application/xml; charset=utf-8',
+          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+        },
+      })
+    }
   } catch (error) {
     console.error('Error generating sitemap index:', error)
     return new NextResponse('Error generating sitemap', { status: 500 })
