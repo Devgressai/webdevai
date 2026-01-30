@@ -114,7 +114,7 @@ export default function MobileHeader() {
             <div className="flex items-center justify-between h-14">
               {/* Logo */}
               <Link href="/" className="flex items-center group">
-                <Logo size={36} className="transition-transform duration-200 group-hover:scale-105" />
+                <Logo size={28} className="transition-transform duration-200 group-hover:scale-105" />
               </Link>
 
               {/* Mobile Menu Button - INCREASED TAP TARGET */}

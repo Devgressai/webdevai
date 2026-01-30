@@ -11,7 +11,7 @@ export function Logo({ className = '', size = 64 }: LogoProps) {
   const height = size || 64
   
   return (
-    <div className={`flex items-center ${className}`} style={{ height: `${height}px` }}>
+    <div className={`flex items-center bg-white ${className}`} style={{ height: `${height}px` }}>
       <Image
         src="/webvello-logo.png"
         alt="Web Vello"
