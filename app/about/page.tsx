@@ -1,16 +1,15 @@
 import { Metadata } from 'next'
-import { Button } from '../../components/ui/button'
-import { Users, Target, TrendingUp, Award, Globe, Zap, CheckCircle, Star } from 'lucide-react'
 import Link from 'next/link'
 import { Breadcrumb, generateBreadcrumbs } from '../../components/ui/breadcrumb'
+import { Search, Database, GitBranch, Code, Network, Shield, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Web Vello | Digital Marketing Agency Story',
-  description: 'Learn about Web Vello\'s mission to drive business growth through data-driven digital marketing. Our team of experts delivers results with AI-powered strategies, helping 100+ businesses achieve 300%+ traffic growth.',
-  keywords: 'about Web Vello, digital marketing agency story, marketing team, company mission, marketing expertise, agency background, marketing philosophy, AI SEO experts',
+  title: 'About Webvello | AI Search Optimization, Entity SEO & Index Engineering',
+  description: 'Webvello is an AI Search Optimization and Index Engineering company founded in 2024. We build discoverability systems for Google and AI search (ChatGPT, Perplexity, AI Overviews) using entity SEO, index governance, programmatic SEO, and modern web infrastructure.',
+  keywords: 'Webvello, AI search optimization, entity SEO, index engineering, programmatic SEO, generative engine optimization, answer engine optimization, knowledge graphs, semantic architecture',
   openGraph: {
-    title: 'About Web Vello | Digital Marketing Agency',
-    description: 'Learn about Web Vello\'s mission to drive business growth through data-driven digital marketing. Expert team delivering 300%+ traffic growth.',
+    title: 'About Webvello | AI Search Optimization, Entity SEO & Index Engineering',
+    description: 'Webvello is an AI Search Optimization and Index Engineering company founded in 2024. We build discoverability systems for Google and AI search platforms.',
     url: 'https://webvello.com/about',
     siteName: 'Web Vello',
     locale: 'en_US',
@@ -20,14 +19,14 @@ export const metadata: Metadata = {
         url: 'https://webvello.com/og-about.jpg',
         width: 1200,
         height: 630,
-        alt: 'About Web Vello - Digital Marketing Agency',
+        alt: 'About Webvello - AI Search Optimization & Index Engineering',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Web Vello | Digital Marketing Agency',
-    description: 'Learn about Web Vello\'s mission to drive business growth through data-driven digital marketing.',
+    title: 'About Webvello | AI Search Optimization, Entity SEO & Index Engineering',
+    description: 'Webvello is an AI Search Optimization and Index Engineering company founded in 2024. We build discoverability systems for Google and AI search platforms.',
     images: ['https://webvello.com/og-about.jpg'],
   },
   alternates: {
@@ -35,68 +34,72 @@ export const metadata: Metadata = {
   },
 }
 
-const values = [
-  {
-    icon: Target,
-    title: "Results-Driven",
-    description: "We don’t just promise results—we guarantee them. Every strategy is designed to deliver measurable business growth."
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ProfessionalService"],
+  "@id": "https://www.webvello.com/#organization",
+  "name": "Webvello",
+  "alternateName": "Web Vello",
+  "url": "https://www.webvello.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.webvello.com/logo.png",
+    "width": 2048,
+    "height": 2048
   },
-  {
-    icon: TrendingUp,
-    title: "Data-First",
-    description: "Our decisions are backed by data, not guesswork. We analyze, optimize, and iterate based on real performance metrics."
+  "description": "Webvello is an AI Search Optimization and Index Engineering company specializing in building discoverability systems for traditional search, AI-powered platforms (ChatGPT, Perplexity), and knowledge graphs. Founded by George Shvaya with background in information security and systems engineering.",
+  "foundingDate": "2024",
+  "founder": {
+    "@type": "Person",
+    "@id": "https://www.webvello.com/founder#person",
+    "name": "George Shvaya",
+    "url": "https://www.webvello.com/founder"
   },
-  {
-    icon: Users,
-    title: "Client Partnership",
-    description: "We become an extension of your team, working collaboratively to achieve your business goals and exceed expectations."
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
   },
-  {
-    icon: Zap,
-    title: "Innovation",
-    description: "We stay ahead of the curve with cutting-edge technology and strategies that give you a competitive advantage."
-  }
-]
-
-const team = [
-  {
-    name: "George S.",
-    position: "CEO & Founder",
-    bio: "Visionary leader with extensive experience in digital marketing and business strategy, driving Web Vello’s mission to deliver exceptional results.",
-    expertise: ["Strategic Planning", "Business Development", "Client Relations"]
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
   },
-  {
-    name: "Rueben G.",
-    position: "CTO & AI Specialist",
-    bio: "Leading our AI-powered SEO initiatives and technical innovation across all digital marketing solutions with cutting-edge technology.",
-    expertise: ["AI/ML", "Technical SEO", "Data Analytics"]
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-530-553-8883",
+    "contactType": "sales",
+    "email": "hello@webvello.com",
+    "areaServed": "US",
+    "availableLanguage": "English"
   },
-  {
-    name: "Irina I.",
-    position: "Head of Local SEO",
-    bio: "Expert in local search optimization with proven strategies for businesses in competitive markets, specializing in Austin and Texas markets.",
-    expertise: ["Local SEO", "Google My Business", "Review Management"]
-  },
-  {
-    name: "Mark S.",
-    position: "Lead Web Developer",
-    bio: "Creating conversion-focused websites that not only look great but drive real business results with modern development practices.",
-    expertise: ["Web Development", "Conversion Optimization", "Performance"]
-  }
-]
-
-const milestones = [
-  { year: "2024", title: "Company Founded", description: "Started with a vision to deliver real results in digital marketing" },
-  { year: "2019", title: "First Major Client", description: "Proved our methodology works with early success stories" },
-  { year: "2020", title: "AI Integration", description: "Began incorporating AI into our SEO strategies" },
-  { year: "2021", title: "100+ Clients", description: "Reached a major milestone in client success" },
-  { year: "2022", title: "$1M+ Revenue", description: "Generated over $1 million for our clients" },
-  { year: "2024", title: "Industry Leader", description: "Recognized as the premier digital marketing agency" }
-]
+  "sameAs": [
+    "https://www.linkedin.com/company/webvello"
+  ],
+  "knowsAbout": [
+    "AI search optimization",
+    "entity SEO",
+    "index governance",
+    "programmatic SEO",
+    "generative engine optimization",
+    "answer engine optimization",
+    "knowledge graphs",
+    "semantic architecture",
+    "technical SEO",
+    "web performance",
+    "web security"
+  ]
+}
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema)
+        }}
+      />
+
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-primary-50 to-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -105,379 +108,201 @@ export default function AboutPage() {
             items={generateBreadcrumbs('/about', { title: 'About' })} 
             className="mb-8"
           />
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl">
             <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-6xl">
-              About{" "}
-              <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
-                Web Vello
-              </span>
+              Webvello — AI Search Optimization & Index Engineering
             </h1>
             <p className="mt-6 text-lg leading-8 text-secondary-600">
-              We’re not just another digital marketing agency. We’re the team that transforms 
-              businesses through data-driven strategies, AI-powered insights, and unwavering 
-              commitment to results.
+              Technical systems company building discoverability architectures for traditional search, AI-powered platforms, and knowledge graphs.
             </p>
           </div>
         </div>
       </section>
 
-      {/* What is Web Vello? entity copy */}
-      <section className="py-24 bg-gray-50">
+      {/* What Webvello Is */}
+      <section className="py-16 bg-white">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">What is Web Vello?</h2>
-          <p className="text-lg text-secondary-700 mb-4">
-            Web Vello is a professional digital marketing agency and technology partner for B2B and B2C organizations in the
-            United States. We specialize in AI‑powered SEO, Local SEO, website design, and custom web development.
-            Our methodology blends data, experimentation, and creative strategy to deliver measurable growth.
-          </p>
-          <p className="text-secondary-700">
-            Clients choose us for transparent reporting, a senior expert team, and proven results—often 300%+ traffic
-            growth within 6 months. We operate nationwide with deep experience across regulated and competitive
-            industries.
-          </p>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg text-secondary-600 mb-6">
-                To empower businesses with digital marketing strategies that don’t just promise 
-                growth—they deliver it. We believe every business deserves to dominate their market, 
-                and we have the proven methodology to make it happen.
-              </p>
-              <p className="text-lg text-secondary-600">
-                Since 2024, we've helped over 100 businesses achieve remarkable growth, generating 
-                more than $1 million in additional revenue through our comprehensive digital 
-                marketing solutions.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl p-12 text-center">
-              <div className="text-6xl font-bold text-primary-600 mb-4">$1M+</div>
-              <div className="text-xl text-primary-700">Revenue Generated for Clients</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-24 bg-secondary-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Our Core Values
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              These principles guide everything we do and ensure we deliver exceptional results 
-              for every client.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value) => (
-              <div key={value.title} className="bg-white p-8 rounded-3xl shadow-soft ring-1 ring-secondary-900/5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 mb-6">
-                  <value.icon className="h-6 w-6 text-primary-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-secondary-600">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Meet Our Team
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              The experts behind every successful campaign. Our team combines deep expertise 
-              with innovative thinking to deliver results that exceed expectations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="text-center">
-                <div className="mx-auto h-32 w-32 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 mb-6 flex items-center justify-center">
-                  <Users className="h-16 w-16 text-primary-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-secondary-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-primary-600 font-medium mb-3">
-                  {member.position}
-                </p>
-                <p className="text-sm text-secondary-600 mb-4">
-                  {member.bio}
-                </p>
-                <div className="space-y-2">
-                  {member.expertise.map((skill) => (
-                    <div key={skill} className="flex items-center justify-center text-sm text-secondary-600">
-                      <CheckCircle className="mr-2 h-4 w-4 text-primary-600" />
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-24 bg-secondary-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">
-              Our Journey
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-secondary-600">
-              From startup to industry leader, here’s how we’ve grown and evolved over the years.
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-primary-200"></div>
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={milestone.year} className={`relative flex items-center ${
-                  index % 2 === 0 ? 'justify-start' : 'justify-end'
-                }`}>
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="text-2xl font-bold text-primary-600 mb-2">
-                      {milestone.year}
-                    </div>
-                    <div className="text-lg font-semibold text-secondary-900 mb-2">
-                      {milestone.title}
-                    </div>
-                    <div className="text-secondary-600">
-                      {milestone.description}
-                    </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Expertise & Services Section */}
-      <section className="py-24 bg-gradient-to-br from-secondary-50 to-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-4">
-              Team Expertise & Services
-            </h2>
-            <p className="text-lg leading-8 text-secondary-600">
-              Our team members are specialists in their fields. Discover which services each expert 
-              leads and how their expertise translates into results for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* George S. - Strategic Services */}
-            <div className="group bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-blue-100 group-hover:bg-blue-200 transition-colors mr-4">
-                  <Users className="h-8 w-8 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-secondary-900 group-hover:text-blue-600 transition-colors">
-                    George S.
-                  </h3>
-                  <p className="text-blue-600 font-medium">CEO & Strategic Planning Expert</p>
-                </div>
-              </div>
-              <p className="text-secondary-600 mb-6">
-                Visionary leader with extensive experience in digital marketing and business strategy, 
-                driving Web Vello’s mission to deliver exceptional results for clients nationwide.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Strategic Planning</span>
-                  <Link href="/services/ai-consulting" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Business Development</span>
-                  <Link href="/services/digital-marketing" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Client Relations</span>
-                  <Link href="/contact" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-              <div className="text-sm text-secondary-500">
-                <span className="font-medium">Specializes in:</span> Strategic Planning, Business Development, Client Relations
-              </div>
-            </div>
-
-            {/* Rueben G. - AI & Technical Services */}
-            <div className="group bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-purple-100 group-hover:bg-purple-200 transition-colors mr-4">
-                  <Zap className="h-8 w-8 text-purple-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-secondary-900 group-hover:text-purple-600 transition-colors">
-                    Rueben G.
-                  </h3>
-                  <p className="text-purple-600 font-medium">CTO & AI Specialist</p>
-                </div>
-              </div>
-              <p className="text-secondary-600 mb-6">
-                Leading our AI-powered SEO initiatives and technical innovation across all digital marketing solutions. 
-                Expert in machine learning, data analytics, and cutting-edge technology implementation.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">AI-Powered SEO</span>
-                  <Link href="/services/ai-seo" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Technical SEO</span>
-                  <Link href="/services/seo" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Data Analytics</span>
-                  <Link href="/services/ai-consulting" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-              <div className="text-sm text-secondary-500">
-                <span className="font-medium">Specializes in:</span> AI/ML, Technical SEO, Data Analytics
-              </div>
-            </div>
-
-            {/* Irina I. - Local SEO Services */}
-            <div className="group bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-green-100 group-hover:bg-green-200 transition-colors mr-4">
-                  <Globe className="h-8 w-8 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-secondary-900 group-hover:text-green-600 transition-colors">
-                    Irina I.
-                  </h3>
-                  <p className="text-green-600 font-medium">Head of Local SEO</p>
-                </div>
-              </div>
-              <p className="text-secondary-600 mb-6">
-                Expert in local search optimization with proven strategies for businesses in competitive markets. 
-                Specializes in Austin and Texas markets, Google My Business, and review management.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Local SEO</span>
-                  <Link href="/services/local-seo" className="text-green-600 hover:text-green-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Austin Market</span>
-                  <Link href="/austin-tx" className="text-green-600 hover:text-green-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Google My Business</span>
-                  <Link href="/services/local-seo" className="text-green-600 hover:text-green-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-              <div className="text-sm text-secondary-500">
-                <span className="font-medium">Specializes in:</span> Local SEO, Google My Business, Review Management
-              </div>
-            </div>
-
-            {/* Mark S. - Web Development Services */}
-            <div className="group bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-orange-100 group-hover:bg-orange-200 transition-colors mr-4">
-                  <Target className="h-8 w-8 text-orange-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-secondary-900 group-hover:text-orange-600 transition-colors">
-                    Mark S.
-                  </h3>
-                  <p className="text-orange-600 font-medium">Lead Web Developer</p>
-                </div>
-              </div>
-              <p className="text-secondary-600 mb-6">
-                Creating conversion-focused websites that not only look great but drive real business results. 
-                Expert in modern development practices, performance optimization, and user experience.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Web Development</span>
-                  <Link href="/services/web-development" className="text-orange-600 hover:text-orange-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">UI/UX Design</span>
-                  <Link href="/services/ui-ux-design" className="text-orange-600 hover:text-orange-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-secondary-600">Conversion Optimization</span>
-                  <Link href="/services/cro-lead-generation" className="text-orange-600 hover:text-orange-700 text-sm font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-              <div className="text-sm text-secondary-500">
-                <span className="font-medium">Specializes in:</span> Web Development, Conversion Optimization, Performance
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary-600 to-primary-500">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Work with Our Team?
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
+            What Webvello Is
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Join over 100 businesses that have already transformed their digital presence 
-            with our proven methodology and expert team.
+          <div className="prose prose-lg max-w-none text-secondary-700">
+            <p className="text-xl font-semibold text-secondary-900 mb-4">
+              Webvello is an AI Search Optimization and Index Engineering company.
+            </p>
+            <p className="mb-4">
+              We combine <strong>AI Search Optimization</strong>—building discoverability across all search modes—with <strong>Index Engineering</strong>—strategic control of indexation, crawl directives, and semantic architecture.
+            </p>
+            <p className="mb-4">
+              Webvello is <strong>not a generic SEO agency</strong>. We are a specialized technical systems company focused on AI-era search visibility, entity authority, and knowledge graph integration.
+            </p>
+            <p>
+              Founded in 2024 by George Shvaya, Webvello operates as a remote-first technical consultancy with expertise in information security, systems engineering, and search infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Build */}
+      <section className="py-16 bg-secondary-50">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
+            What We Build
+          </h2>
+          <p className="text-lg text-secondary-700 mb-6">
+            Webvello builds discoverability systems for three primary platforms:
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Get Free Strategy Session</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600" asChild>
-              <Link href="/case-studies">View Our Work</Link>
-            </Button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-secondary-200">
+              <div className="flex items-center mb-4">
+                <Search className="h-6 w-6 text-primary-600 mr-3" />
+                <h3 className="text-xl font-semibold text-secondary-900">Google</h3>
+              </div>
+              <p className="text-secondary-600">
+                Traditional search engine optimization with technical SEO, content architecture, and authority building.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-secondary-200">
+              <div className="flex items-center mb-4">
+                <Zap className="h-6 w-6 text-primary-600 mr-3" />
+                <h3 className="text-xl font-semibold text-secondary-900">AI Search</h3>
+              </div>
+              <p className="text-secondary-600">
+                AI-powered search experiences including ChatGPT, Perplexity, Google AI Overviews, and similar platforms.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-secondary-200">
+              <div className="flex items-center mb-4">
+                <Database className="h-6 w-6 text-primary-600 mr-3" />
+                <h3 className="text-xl font-semibold text-secondary-900">Knowledge Graphs</h3>
+              </div>
+              <p className="text-secondary-600">
+                Entity relationships, structured data, and semantic architecture for knowledge graph systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Capabilities */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
+            Core Capabilities
+          </h2>
+          <p className="text-lg text-secondary-700 mb-6">
+            Webvello's service taxonomy:
+          </p>
+          <ul className="space-y-4 text-secondary-700">
+            <li className="flex items-start">
+              <span className="font-semibold text-secondary-900 mr-2">AI Search Optimization:</span>
+              <span>Building discoverability across all search modes—traditional search engines and AI-powered platforms.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold text-secondary-900 mr-2">Entity SEO:</span>
+              <span>Establishing clear entity signals for AI systems and search engines through structured data and semantic architecture.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold text-secondary-900 mr-2">Generative Engine Optimization (GEO):</span>
+              <span>Optimizing for AI-generated responses in ChatGPT, Perplexity, and AI Overviews.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold text-secondary-900 mr-2">Answer Engine Optimization (AEO):</span>
+              <span>Structuring content for featured snippets and zero-click search results.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold text-secondary-900 mr-2">Index Governance:</span>
+              <span>Strategic control of indexation policies, crawl directives, and robots.txt management.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold text-secondary-900 mr-2">Programmatic SEO:</span>
+              <span>Systematic, scalable page generation and content architecture for large-scale visibility.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="font-semibold text-secondary-900 mr-2">React/Next.js Web Development:</span>
+              <span>Performance-first websites built with modern React frameworks, optimized for search and AI discovery.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Systems Approach */}
+      <section className="py-16 bg-secondary-50">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
+            Systems Approach
+          </h2>
+          <div className="prose prose-lg max-w-none text-secondary-700">
+            <p className="mb-4">
+              Webvello's methodology emphasizes:
+            </p>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li><strong>Entity-first architecture:</strong> Designing information structures that align with how AI systems and knowledge graphs process entities and relationships.</li>
+              <li><strong>Semantic structure:</strong> Using structured data, JSON-LD, and semantic HTML to create machine-readable content hierarchies.</li>
+              <li><strong>Index governance controls:</strong> Strategic use of robots.txt, meta directives, and canonical URLs to control what gets indexed and how.</li>
+              <li><strong>Performance + security as trust signals:</strong> Fast, secure websites that signal quality to both search engines and AI systems.</li>
+            </ul>
+            <p>
+              This systems-oriented approach distinguishes Webvello from traditional marketing agencies that focus primarily on content creation and link building.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
+            Founder
+          </h2>
+          <div className="prose prose-lg max-w-none text-secondary-700">
+            <p className="mb-4">
+              Webvello was founded in 2024 by <Link href="/founder" className="text-primary-600 hover:text-primary-700 font-medium">George Shvaya</Link>, a technical founder with background in IT networking, information security, and cybersecurity engineering.
+            </p>
+            <p>
+              This technical foundation informs Webvello's systems-oriented approach to search and AI discovery, emphasizing infrastructure engineering, entity architecture, and algorithmic analysis over traditional marketing tactics.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Authority Links */}
+      <section className="py-16 bg-secondary-50">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-secondary-900 mb-6">
+            Core Service Pages
+          </h2>
+          <p className="text-lg text-secondary-700 mb-6">
+            Explore Webvello's core capabilities:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link 
+              href="/ai-search-optimization" 
+              className="block p-4 bg-white rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors"
+            >
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">AI Search Optimization</h3>
+              <p className="text-sm text-secondary-600">Discoverability systems for AI-powered search platforms.</p>
+            </Link>
+            <Link 
+              href="/entity-seo" 
+              className="block p-4 bg-white rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors"
+            >
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Entity SEO</h3>
+              <p className="text-sm text-secondary-600">Entity signals and authority for AI systems and search engines.</p>
+            </Link>
+            <Link 
+              href="/index-governance" 
+              className="block p-4 bg-white rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors"
+            >
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Index Governance</h3>
+              <p className="text-sm text-secondary-600">Strategic control of indexation and crawl directives.</p>
+            </Link>
+            <Link 
+              href="/programmatic-seo" 
+              className="block p-4 bg-white rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors"
+            >
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Programmatic SEO</h3>
+              <p className="text-sm text-secondary-600">Systematic, scalable page generation and content architecture.</p>
+            </Link>
           </div>
         </div>
       </section>
