@@ -275,6 +275,14 @@ export function Footer() {
               >
                 Contact
               </Link>
+              <a
+                href="https://www.designrush.com/agency/profile/webvello"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs sm:text-sm text-slate-400 hover:text-slate-200 transition-colors"
+              >
+                As seen on DesignRush
+              </a>
             </div>
           </div>
         </div>
