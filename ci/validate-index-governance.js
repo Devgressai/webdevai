@@ -82,15 +82,17 @@ if (fs.existsSync(cityIndustryPagePath)) {
   }
 }
 
-// Check sitemap uses directives.inSitemap
-const sitemapPath = path.join(__dirname, '../app/sitemap.ts')
-if (fs.existsSync(sitemapPath)) {
-  const sitemapContent = fs.readFileSync(sitemapPath, 'utf8')
-  
-  if (!sitemapContent.includes('directives.inSitemap')) {
+// Check sitemap entry generator uses directives.inSitemap
+// NOTE: In the current architecture, sitemap governance lives in lib/sitemap-entries.ts,
+// not in app/sitemap.ts. We validate that implementation file instead of the route.
+const sitemapEntriesPath = path.join(__dirname, '../lib/sitemap-entries.ts')
+if (fs.existsSync(sitemapEntriesPath)) {
+  const sitemapEntriesContent = fs.readFileSync(sitemapEntriesPath, 'utf8')
+
+  if (!sitemapEntriesContent.includes('directives.inSitemap')) {
     violations.push({
-      file: 'app/sitemap.ts',
-      issue: 'Sitemap not using directives.inSitemap for inclusion check',
+      file: 'lib/sitemap-entries.ts',
+      issue: 'Sitemap entries not using directives.inSitemap for inclusion check',
       severity: 'error'
     })
   }

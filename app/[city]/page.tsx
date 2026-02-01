@@ -20,6 +20,7 @@ import { SchemaMarkup } from '../../components/seo/schema-markup'
 import { generateCityPageSchema } from '../../lib/advanced-schema-generator'
 import { citySlugs, getCity } from '../../lib/cities'
 import { Breadcrumbs, generateCityBreadcrumbs } from '../../components/seo/breadcrumbs'
+import { getSeoDirectives } from '../../lib/seo/index-policy'
 
 // Tier 1 services (always indexable for city+service combinations)
 // Must match IndexPolicy TIER1_SERVICES
@@ -168,6 +169,13 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   const city = getCity(params.city)
   if (!city) return { title: 'City Not Found' }
 
+  // Centralize robots + canonical through index policy for city hubs
+  const url = `https://www.webvello.com/${params.city}`
+  const directives = getSeoDirectives(url, {
+    routeType: 'city',
+    city: params.city,
+  })
+
   return {
     title: `Web Vello in ${city.fullName} | Web Design, SEO, & AI Growth`,
     description: `Partner with Web Vello in ${city.fullName} for high-converting web design, SEO, and AI-powered marketing programs that help ${city.name} businesses scale revenue.`,
@@ -175,7 +183,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     openGraph: {
       title: `Web Vello | Digital Growth Partner in ${city.fullName}`,
       description: `Full-funnel web design and SEO agency serving ${city.fullName}. Schedule a strategy session with Web Vello to accelerate growth.`,
-      url: `https://www.webvello.com/${params.city}`,
+      url: directives.canonical,
       siteName: 'Web Vello',
       locale: 'en_US',
       type: 'website',
@@ -195,7 +203,11 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       images: [`https://www.webvello.com/og-${city.name.toLowerCase().replace(/\s+/g, '-')}.jpg`],
     },
     alternates: {
-      canonical: `https://www.webvello.com/${params.city}`,
+      canonical: directives.canonical,
+    },
+    robots: {
+      index: directives.index,
+      follow: directives.follow,
     },
   }
 }
